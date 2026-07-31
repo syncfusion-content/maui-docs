@@ -10,6 +10,8 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Display View Customization
 
+The display view of the [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) is the header area that shows the currently selected color, a drop-down button that opens the picker, and optional icons. This section explains how to customize that header - its icon, template, dimensions, and border.
+
 ## Prerequisites
 
 Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -18,11 +20,15 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
 
-The display view of the .NET MAUI Color Picker (`SfColorPicker`) is the header area that shows the currently selected color, a drop-down button that opens the picker, and optional icons. This topic explains how to customize that header — its icon, template, dimensions, and border.
-
 ## Selected color customization
 
-Use the properties in this section to customize how the currently selected color is presented in the display view.
+Use the following properties to customize how the currently selected color is displayed in the color picker's display view:
+
+- [SelectedColorIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorIcon)
+- [SelectedColorIconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorIconSize)
+[SelectedColorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorTemplate)
+
+These properties allow you to customize the appearance of the selected color by configuring the icon, its size, or providing a custom template to display the selected color according to your application's design requirements.
 
 ### Selected color icon
 
@@ -183,7 +189,12 @@ this.Content = colorPicker;
 
 ## Drop-down icon customization
 
-Use the properties in this section to customize the drop-down button that opens the color picker.
+Use the following properties to customize the drop-down button that opens the color picker:
+
+- [DropDownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DropDownButtonTemplate)
+- [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DropDownWidth)
+
+These properties allow you to customize the appearance and size of the drop-down button. You can define a custom button template using `DropDownButtonTemplate` and control the button width with `DropDownWidth` to align the color picker with your application's design.
 
 ### Drop-down icon
 
@@ -200,7 +211,8 @@ The drop-down icon of the Color Picker can be customized using the [DropDownButt
                    FontFamily="MauiMaterialAssets" 
                    FontSize="14" 
                    TextColor="Black" 
-                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" />
         </DataTemplate>
     </inputs:SfColorPicker.DropDownButtonTemplate>
 </inputs:SfColorPicker>
@@ -262,6 +274,10 @@ this.Content = colorPicker;
 ## Display view appearance
 
 Use the properties in this section to control the size and border of the display view.
+
+- [DisplayViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewHeight)
+- [DisplayViewStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewStroke)
+- [DisplayViewStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewStrokeThickness)
 
 ### Display view height
 
@@ -344,5 +360,3 @@ this.Content = colorPicker;
 * [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
 * [Events and Commands](https://help.syncfusion.com/maui/colorpicker/events)
 * [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
-* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
-* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)

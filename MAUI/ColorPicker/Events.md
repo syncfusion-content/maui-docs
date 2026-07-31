@@ -8,7 +8,14 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, color palette, spectrum, palette.
 ---
 
-# Events and Commands in .NET MAUI Color Picker
+# Events and Commands in .NET MAUI Color Picker (SfColorPicker)
+
+The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
+
+* [ColorChanging](#colorchanging-event) - raised while the color is being changed (cancelable).
+* [ColorChanged](#colorchanged-event) - raised when the user commits a color.
+* [ColorSelected](#colorselected-event) - raised when the user clicks/taps the selected-color display area.
+* [ColorChangedCommand](#commands) - `ICommand` invoked when `SelectedColor` changes.
 
 ## Prerequisites
 
@@ -18,24 +25,15 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
 
-The `SfColorPicker`control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
-
-* [ColorChanging](#colorchanging-event) — raised while the color is being changed (cancelable).
-* [ColorChanged](#colorchanged-event) — raised when the user commits a color.
-* [ColorSelected](#colorselected-event) — raised when the user clicks/taps the selected-color display area.
-* [ColorChangedCommand](#commands) — `ICommand` invoked when `SelectedColor` changes.
-
 ## ColorChanging event
 
 The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging) event is raised continuously while the user is changing the color. The event arguments are of type [ColorChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html):
 
-| Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| [CurrentColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_CurrentColor) | `Color` | — | The color value before the change. |
-| [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_NewColor) | `Color` | — | The newly selected color. |
-| `Cancel` | `bool` | `false` | Set to `true` to veto the change and keep `CurrentColor`. |
-
-### Cancel a color change
+| Property | Type | Description |
+| --- | --- | --- |
+| [CurrentColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_CurrentColor) | `Color` | The color value before the change. |
+| [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_NewColor) | `Color` | The newly selected color. |
+| `Cancel` | `bool` | Set to `true` to veto the change and keep `CurrentColor`. |
 
 {% tabs %}
 
@@ -75,10 +73,10 @@ private void OnColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event is raised when the user commits a color. Its exact timing depends on the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property:
+The [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event is raised when the user commits a color. Its behavior depends on the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property:
 
 * When `IsActionButtonsVisible` is `false`, the event is raised immediately while the user selects a color.
-* When `IsActionButtonsVisible` is `true`, the event is raised only after the user clicks **OK** (the picker shows OK/Cancel action buttons).
+* When `IsActionButtonsVisible` is `true`, the event is raised only after the user clicks **Apply** (the picker shows Apply/Cancel action buttons).
 
 The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html):
 
@@ -86,8 +84,6 @@ The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.
 | --- | --- | --- |
 | [OldColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_OldColor) | `Color` | The previously selected color. |
 | [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_NewColor) | `Color` | The newly selected color. |
-
-### Wire up a code-behind handler
 
 {% tabs %}
 
@@ -113,62 +109,12 @@ The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.
 
 {% highlight c# %}
 
-private SfColorPicker colorPicker;
-private Label label;
-
-public MainPage()
-{
-    // Create Grid with ColumnDefinitions
-    var grid = new Grid
-    {
-        ColumnDefinitions = new ColumnDefinitionCollection
-        {
-            new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
-            new ColumnDefinition { Width = GridLength.Auto }
-        }
-    };
-
-    // Create SfColorPicker
-    colorPicker = new SfColorPicker();
-    Grid.SetColumn(colorPicker, 0);
-    colorPicker.ColorChanged += OnColorChanged;
-
-    // Create Label
-    label = new Label
-    {
-        Text = "Selected Color",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        TextColor = Colors.Black,
-        BackgroundColor = Colors.LightGray
-    };
-    Grid.SetColumn(label, 1);
-
-    // Add controls to grid
-    grid.Add(colorPicker);
-    grid.Add(label);
-
-    // Set content
-    Content = grid;
-
-    InitializeComponent();
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The `ColorChanged` event can be handled in C# as follows:
-
-{% tabs %} 
-
-{% highlight c# %}
-
 private void OnColorChanged(object sender, ColorChangedEventArgs e)
 {
     label.BackgroundColor = e.NewColor;
     label.Text = e.NewColor.ToHex();
 }
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -180,8 +126,6 @@ The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 | Property | Type | Description |
 | --- | --- | --- |
 | [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html#Syncfusion_Maui_Inputs_ColorSelectedEventArgs_SelectedColor) | `Color` | The color currently selected by the user. |
-
-### Wire up a code-behind handler
 
 {% tabs %}
 
@@ -207,57 +151,6 @@ The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 
 {% highlight c# %}
 
-private SfColorPicker colorPicker;
-private Label label;
-
-public MainPage()
-{
-    // Create Grid with ColumnDefinitions
-    var grid = new Grid
-    {
-        ColumnDefinitions = new ColumnDefinitionCollection
-        {
-            new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
-            new ColumnDefinition { Width = GridLength.Auto }
-        }
-    };
-
-    // Create SfColorPicker
-    colorPicker = new SfColorPicker();
-    Grid.SetColumn(colorPicker, 0);
-    colorPicker.ColorSelected += OnColorSelected;
-
-    // Create Label
-    label = new Label
-    {
-        Text = "Selected Color",
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        TextColor = Colors.Black,
-        BackgroundColor = Colors.LightGray
-    };
-    Grid.SetColumn(label, 1);
-
-    // Add controls to grid
-    grid.Add(colorPicker);
-    grid.Add(label);
-
-    // Set content
-    Content = grid;
-
-    InitializeComponent();
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The `ColorSelected` event can be handled in C# as follows:
-
-{% tabs %} 
-
-{% highlight c# %}
-
 private void OnColorSelected(object sender, ColorSelectedEventArgs e)
 {
     label.BackgroundColor = e.SelectedColor;
@@ -270,9 +163,7 @@ private void OnColorSelected(object sender, ColorSelectedEventArgs e)
 
 ## Commands
 
-The [ColorChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChangedCommand) is an `ICommand` that is invoked when the `SelectedColor` property of the color picker changes. The command parameter is the new `Color`.
-
-N> Only `ColorChangedCommand` is exposed by the color picker. `ColorChanging` and `ColorSelected` are available only as events.
+The [ColorChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChangedCommand) is an `ICommand` that is invoked when the `SelectedColor` property of the color picker changes. 
 
 ### Assign a command in code
 
@@ -288,7 +179,6 @@ SfColorPicker colorPicker = new SfColorPicker();
 colorPicker.ColorChangedCommand = new Command<Color>(color =>
 {
     // Perform actions based on the selected color, e.g., update other UI.
-    System.Diagnostics.Debug.WriteLine($"Selected: {color.ToHex()}");
 });
 
 Content = colorPicker;
@@ -340,5 +230,3 @@ public class ColorPickerViewModel
 * [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
 * [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
 * [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
-* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
-* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)

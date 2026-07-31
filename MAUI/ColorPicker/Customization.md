@@ -10,6 +10,8 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Customization in .NET MAUI Color Picker (SfColorPicker)
 
+This section explains how to customize the appearance and behavior of the [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control, including the default selected color, the visibility of UI elements, action button appearance, palette layout, label styles, slider thumb, and popup placement. 
+
 ## Prerequisites
 
 Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html), ensure the following NuGet package is installed in your .NET MAUI project:
@@ -18,13 +20,9 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
 
-This section explains how to customize the appearance and behavior of the `SfColorPicker` control, including the default selected color, the visibility of UI elements, action button appearance, palette layout, label styles, slider thumb, and popup placement. 
-
 ## Selected color
 
-The [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor) property is two-way bindable. Bind it to a `Color` property in your view model to react to user selections via the [ColorChanged](https://help.syncfusion.com/maui/colorpicker/events#colorchanged-event) event.
-
-The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
+The [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor) property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
 
 {% tabs %}
 
@@ -118,7 +116,7 @@ this.Content = stackLayout;
 
 ## Show input area
 
-You can show or hide the input area (HEX/RGBA/HSV editors) of the Color Picker by adjusting the [ShowInputArea](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowInputArea) property. By default, it is set to `True`. This property is only effective in [HSV](Mode.md) mode.
+You can show or hide the input area (HEX/RGBA/HSV editors) of the Color Picker by adjusting the [ShowInputArea](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowInputArea) property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -174,7 +172,7 @@ this.Content = colorPicker;
 
 You can remove the Apply and Cancel buttons to apply the selected color immediately on selection. To enable this, set the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property to `False`. By default, this property is set to `True`.
 
-N> When hosted inside a popup container (for example, as the dropdown content of a [SfComboBox](https://help.syncfusion.com/maui/combobox/getting-started) or in a `SfPopup`), hiding the action buttons causes the popup to close automatically when a color is selected. For the standalone `SfColorPicker` control, the action buttons only affect the in-place Apply/Cancel behavior.
+N> When the action buttons are hidden, the color picker popup automatically closes after a color is selected.
 
 {% tabs %}
 
@@ -201,7 +199,7 @@ this.Content = colorPicker;
 
 ## Customize action buttons
 
-You can customize the background color for the action buttons by specifying a suitable color for the [ApplyButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ApplyButtonBackground) and [CancelButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_CancelButtonBackground) properties. Both properties are of type `Color`; the default value is `White`.
+You can customize the background color for the action buttons by specifying a suitable color for the [ApplyButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ApplyButtonBackground) and [CancelButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_CancelButtonBackground) properties.
 
 {% tabs %}
 
@@ -490,7 +488,7 @@ this.Content = colorPicker;
 
 ### PaletteCellSize
 
-You can control the width and height (in device-independent pixels) of each color cell in the palette by setting the [PaletteCellSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellSize) property. The default value is `24`.
+You can control the width and height (in device-independent pixels) of each color cell in the palette by setting the [PaletteCellSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellSize) property. The default value is `30`.
 
 {% tabs %}
 
@@ -515,7 +513,7 @@ this.Content = colorPicker;
 
 ### PaletteColors
 
-You can define a custom collection of `Color` values displayed in the palette view by using the [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors) property. The `PaletteColors` collection is only rendered when [ColorPickerMode](Mode.md) is set to `Palette`.
+You can define a custom collection of `Color` values displayed in the palette view by using the [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors) property. The `PaletteColors` collection is only rendered when [ColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorMode) is set to `Palette`.
 
 {% tabs %}
 
@@ -525,7 +523,7 @@ SfColorPicker colorPicker = new SfColorPicker();
 
 // Set custom palette colors
 colorPicker.ColorMode = ColorPickerMode.Palette;
-colorPicker.PaletteColumnCount = 7;
+colorPicker.PaletteColumnCount = 6;
 colorPicker.PaletteRowCount = 3;
 colorPicker.PaletteColors = new List<Color>
 {
@@ -546,13 +544,11 @@ this.Content = colorPicker;
 
 {% endtabs %}
 
-N> The number of entries in `PaletteColors` should not exceed `PaletteColumnCount * PaletteRowCount`. Additional colors are ignored.
-
 ## Selection indicator customization
 
 ### SelectionIndicatorRadius
 
-You can customize the corner radius of the selection indicator by setting the [SelectionIndicatorRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorRadius) property. The default value is `4`.
+You can customize the corner radius of the selection indicator by setting the [SelectionIndicatorRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorRadius) property. The default value is `8`.
 
 {% tabs %}
 
@@ -577,7 +573,7 @@ this.Content = colorPicker;
 
 ### SelectionIndicatorStroke
 
-You can specify the stroke color of the selection indicator using the [SelectionIndicatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke) property. The default value is `White`.
+You can specify the stroke color of the selection indicator using the [SelectionIndicatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke) property.
 
 {% tabs %}
 
@@ -608,7 +604,7 @@ You can modify the thickness of the selection outline by adjusting the [Selectio
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker SelectionIndicatorStrokeThickness="2" />
+<inputs:SfColorPicker SelectionIndicatorStrokeThickness="3" />
 
 {% endhighlight %}
 
@@ -616,7 +612,7 @@ You can modify the thickness of the selection outline by adjusting the [Selectio
 
 SfColorPicker colorPicker = new SfColorPicker()
 {
-    SelectionIndicatorStrokeThickness = 2
+    SelectionIndicatorStrokeThickness = 3
 };
 
 this.Content = colorPicker;
@@ -629,10 +625,14 @@ this.Content = colorPicker;
 
 The Slider thumb represents the `Hue` and `Alpha` Sliders in the Color Picker. You can customize its appearance using the following properties.
 
+- [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill)
+- [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius)
+- [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke)
+- [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness)
+
 ### SliderThumbFill
 
-You can customize the fill brush of the Slider thumb by setting the [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill) property. The property is of type `Brush`; in XAML you can pass a color name (converted to a `SolidColorBrush`) or a `SolidColorBrush` instance in code. The default value is `White`.
-
+You can customize the fill brush of the Slider thumb by setting the [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill) property.
 {% tabs %}
 
 {% highlight xaml %}
@@ -656,7 +656,7 @@ this.Content = colorPicker;
 
 ### SliderThumbRadius
 
-You can control the size and roundness of the Slider thumb by adjusting the [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius) property. The default value is `10`.
+You can control the size and roundness of the Slider thumb by adjusting the [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius) property. The default value is `8`.
 
 {% tabs %}
 
@@ -681,7 +681,7 @@ this.Content = colorPicker;
 
 ### SliderThumbStroke
 
-You can customize the stroke color of the Slider thumb by adjusting the [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke) property. The default value is `Black`.
+You can customize the stroke color of the Slider thumb by adjusting the [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke) property.
 
 {% tabs %}
 
@@ -706,7 +706,7 @@ this.Content = colorPicker;
 
 ### SliderThumbStrokeThickness
 
-You can control the thickness of the Slider thumb's outline by adjusting the [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness) property. The default value is `1`.
+You can control the thickness of the Slider thumb's outline by adjusting the [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness) property. The default value is `2`.
 
 {% tabs %}
 
@@ -733,7 +733,7 @@ this.Content = colorPicker;
 
 ### IsOpen
 
-The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsOpen) property in the Color Picker control allows you to programmatically open the popup by setting it to `True`. By default, this property is set to `False`. Set `IsOpen = true` after the control has been added to the visual tree (for example, in `OnAppearing` or a user-action handler) to ensure the popup is displayed correctly.
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsOpen) property in the Color Picker control allows you to programmatically open the popup by setting it to `True`. By default, this property is set to `False`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -794,7 +794,7 @@ this.Content = stackLayout;
 
 ### Popup background
 
-The [PopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PopupBackground) property specifies the background color of the popup panel in the Color Picker control. The default value is `White`.
+The [PopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PopupBackground) property specifies the background color of the popup panel in the Color Picker control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -859,5 +859,3 @@ this.Content = colorPicker;
 * [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
 * [Events and Commands](https://help.syncfusion.com/maui/colorpicker/events)
 * [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)
-* [Localization](https://help.syncfusion.com/maui/colorpicker/localization)
-* [Liquid Glass Support](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)

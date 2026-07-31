@@ -8,7 +8,9 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, color picker, color palette, localization
 ---
 
-# Localization in .NET MAUI Color Picker
+# Localization in .NET MAUI Color Picker (SfColorPicker)
+
+Localization is the process of translating application resources into different languages for specific cultures. The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) ships with a default `SfColorPickerResources` resource manager that exposes a set of localizable strings. You can override those strings for any culture by adding a culture-specific `.resx` file and pointing the resource manager at it.
 
 ## Prerequisites
 
@@ -17,8 +19,6 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 - `Syncfusion.Maui.Inputs`
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
-
-Localization is the process of translating application resources into different languages for specific cultures. The `SfColorPicker` ships with a default `SfColorPickerResources` resource manager that exposes a set of localizable strings. You can override those strings for any culture by adding a culture-specific `.resx` file and pointing the resource manager at it.
 
 ## Set the UI culture
 
@@ -104,25 +104,16 @@ To localize the color picker based on `CurrentUICulture` using `.resx` files, fo
 
    ![resources-folder](Images/Localization/resource-file.png)
 
-5. Select the new `.resx` file in **Solution Explorer**, open the **Properties** window, and set:
-   - **Build Action** to `EmbeddedResource`
-   - **Custom Tool** to `PublicResXFileCodeGenerator`
-   - **Access Modifier** to `Public`
-
-6. Add Name/Value pairs in the resource designer. Use the same `Name` values that `SfColorPickerResources` exposes, and set the `Value` column to the translated string.
+5. Add Name/Value pairs in the resource designer. Use the same `Name` values that `SfColorPickerResources` exposes, and set the `Value` column to the translated string.
 
    ![resource-file-name-value-pair](Images/Localization/add-name-value-pair.png)
-
-   Example for `SfColorPicker.fr-FR.resx`:
-
-   | Name | Value (en-US default) | Value (fr-FR) |
-   | --- | --- | --- |
-   | `Red` | Red | Rouge |
-   | `Green` | Green | Vert |
-   | `Blue` | Blue | Bleu |
-   | `OK` | OK | OK |
-   | `Cancel` | Cancel | Annuler |
 
 7. Rebuild the project so the resource generator emits the strongly-typed `SfColorPicker` (or your custom) resource class.
 
 8. Run the app. The color picker reads strings from the `.resx` that matches `CurrentUICulture`. If no match is found, the neutral `SfColorPicker.resx` is used.
+
+## See also
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)

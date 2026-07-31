@@ -8,7 +8,14 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control
 ---
 
-# Mode and Value in .NET MAUI Color Picker
+# Mode and Value in .NET MAUI Color Picker (SfColorPicker)
+
+The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control exposes its color editor in one of two visual modes - **Palette** or **Spectrum** - and lets you choose which mode the user sees first. You can also show or hide the mode switcher so that the user cannot change the mode at runtime.
+
+| Mode | Description |
+| --- | --- |
+| [Spectrum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Spectrum) | A continuous color spectrum with hue and saturation sliders. The default mode. |
+| [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Palette) | A grid of predefined color swatches from which the user picks a color. |
 
 ## Prerequisites
 
@@ -18,22 +25,9 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
 
-The `SfColorPicker` control exposes its color editor in one of two visual modes — **Palette** or **Spectrum** — and lets you choose which mode the user sees first. You can also show or hide the mode switcher so that the user cannot change the mode at runtime.
+## Rendering palette at initial load
 
-## Color modes
-
-The [ColorPickerMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html) enum defines the available modes:
-
-| Mode | Description |
-| --- | --- |
-| [Spectrum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Spectrum) | A continuous color spectrum with hue and saturation sliders. The default mode. |
-| [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Palette) | A grid of predefined color swatches from which the user picks a color. |
-
-## Configure the initial color mode
-
-Set the [ColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorMode) property to choose which mode the picker shows when it opens. The default is [Spectrum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Spectrum).
-
-### Palette mode
+To display the Color Picker in palette mode, Set the [ColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorMode) property to `Palette`. By default, it is configured as `Spectrum`.
 
 {% tabs %}
 
@@ -58,32 +52,9 @@ this.Content = colorPicker;
 
 ![Palette mode](Images/Mode/Palette.png)
 
-### Spectrum mode
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<inputs:SfColorPicker ColorMode="Spectrum" />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfColorPicker colorPicker = new SfColorPicker()
-{
-    ColorMode = ColorPickerMode.Spectrum
-};
-
-this.Content = colorPicker;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Show or hide the color mode switcher
 
-The mode switcher is the in-picker UI (typically a tab strip) that lets the user toggle between Palette and Spectrum at runtime. Set the [IsColorModeSwitcherVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsColorModeSwitcherVisible) property to `false` to lock the picker to the mode set by `ColorMode`. The default is `true`.
+The mode switcher is the in-picker UI (typically a tab strip) that lets the user toggle between `Palette` and `Spectrum` at runtime. Set the [IsColorModeSwitcherVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsColorModeSwitcherVisible) property to `false` to lock the picker to the mode set by `ColorMode`. The default is `true`.
 
 {% tabs %}
 
@@ -109,3 +80,7 @@ this.Content = colorPicker;
 {% endtabs %}
 
 ![Color mode switcher hidden](Images/Customization/HideSwitchColorMode.png)
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
+* [Inline Rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering)

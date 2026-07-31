@@ -8,7 +8,9 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker inline, maui color picker inline
 ---
 
-# Inline Rendering in .NET MAUI Color Picker
+# Inline Rendering in .NET MAUI Color Picker (SfColorPicker)
+
+The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports an inline rendering mode that embeds the color editor directly within the page layout, rather than opening it in a pop-up or flyout. By default, `IsInline` is `false`, so the picker is shown inside a pop-up triggered from the drop-down button.
 
 ## Prerequisites
 
@@ -18,15 +20,13 @@ Before using the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/colorpicker/getting-started) documentation.
 
-The `.NET MAUI Color Picker` supports an inline rendering mode that embeds the color editor directly within the page layout, rather than opening it in a pop-up or flyout. By default, `IsInline` is `false`, so the picker is shown inside a pop-up triggered from the drop-down button.
-
 ## Behavior
 
 When [IsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsInline) is set to `true`, the color editor is rendered as part of the page layout. The following changes apply:
 
 - The drop-down button and selected-color display view are **not** shown.
 - The color editor (palette, spectrum, sliders, and so on) takes up the space allocated to the picker in the layout.
-- The [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property has no effect in inline mode (OK/Cancel buttons are only meaningful in pop-up mode).
+- The [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property has no effect in inline mode (Apply/Cancel buttons are only meaningful in pop-up mode).
 
 ## Enable inline rendering
 
@@ -120,3 +120,9 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+* [Customization in .NET MAUI Color Picker](https://help.syncfusion.com/maui/colorpicker/customization)
+* [Mode and Value](https://help.syncfusion.com/maui/colorpicker/mode)
+* [Display View Customization](https://help.syncfusion.com/maui/colorpicker/display-view)
