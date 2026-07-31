@@ -15,4 +15,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Extension for Visual Studio simplifies the
 
 The Syncfusion<sup>®</sup> .NET MAUI extensions provide the following add-ins in Visual Studio:
 
-[Project-Template](template-studio):  Creates Syncfusion<sup>®</sup> .NET MAUI applications with the required Syncfusion<sup>®</sup> components and configurations for development.
+* [Project Template](template-studio): Creates Syncfusion<sup>®</sup> .NET MAUI applications with the required Syncfusion<sup>®</sup> components and configurations for development.
+
+* [Toolbox Control](Toolbox-Control): Adds Syncfusion<sup>®</sup> .NET MAUI components into your project by dragging and dropping them from the Visual Studio Toolbox.
+
+* [Essential UI Kit](Essential-UI-Kit): Provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications.
+
+* [Notifications](Syncfusion-Notifications): Displays notifications about trial applications, newer Syncfusion<sup>®</sup> NuGet package versions, and new Essential Studio<sup>®</sup> releases.

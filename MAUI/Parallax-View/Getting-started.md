@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Parallax View control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-parallax-view"
 description: Learn about getting started with Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
@@ -108,7 +109,7 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Initialize the view model
 
-Now, let us define a simple data model and view model.
+Now let us define simple data model and view model.
 
 {% tabs %}
 {% highlight c# %}
@@ -147,7 +148,7 @@ public class ParallaxViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Import the Parallax View namespace
+## Step 4: Import the Parallax View namespace
  
 Add the following namespace in your XAML or C#.
  
@@ -164,9 +165,9 @@ using Syncfusion.Maui.ParallaxView;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Add a parallax view component
+## Step 5: Add a parallax view component
 
-Initialize the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content), it represents the background view of a parallax view. Set any view, such as an Image or StackLayout, to the Content property.
+Initialize the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content), it represents the background view of a parallax view. Set any kind of view to the Content property, such as Image and StackLayout.
 
 The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) represents the foreground view of the parallax view. The value of the Source should be a scrollable content or the view which implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface.
 
@@ -176,30 +177,28 @@ The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> L
 
 {% highlight xaml %}
 
-<ContentPage.BindingContext>
-    <local:ParallaxViewModel />
-</ContentPage.BindingContext>
-
 <Grid>
-    <parallaxView:SfParallaxView Source="{x:Reference Name=listview}" x:Name="parallaxview" >
-        <parallaxView:SfParallaxView.Content>
+    <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
+        <parallax:SfParallaxView.Content>
             <Image BackgroundColor="Transparent" Source="{Binding Image}" Aspect="AspectFill" />
-        </parallaxView:SfParallaxView.Content>
-    </parallaxView:SfParallaxView> 
+        </parallax:SfParallaxView.Content>
+    </parallax:SfParallaxView> 
         <list:SfListView x:Name="listview" ItemsSource="{Binding Items}">
             <list:SfListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image BackgroundColor="Transparent" Source="{Binding ItemImage}" Grid.Column="0" Aspect="AspectFit" />
-                        <StackLayout BackgroundColor="Transparent" Grid.Column="1">
-                            <Label TextColor="White" Text="{Binding Name}"/>
-                            <Label Text="{Binding Author}" TextColor="White"/>
-                        </StackLayout>
-                    </Grid>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image BackgroundColor="Transparent" Source="{Binding ItemImage}" Grid.Column="0" Aspect="AspectFit" />
+                            <StackLayout BackgroundColor="Transparent" Grid.Column="1">
+                                <Label TextColor="White" Text="{Binding Name}"/>
+                                <Label Text="{Binding Author}" TextColor="White"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
             </list:SfListView.ItemTemplate>
         </list:SfListView>
@@ -249,7 +248,10 @@ listView.ItemTemplate = new DataTemplate(() =>
     grid.Add(image, 0, 0);
     grid.Add(stackLayout, 1, 0);
 
-    return grid;
+    return new ViewCell
+    {
+        View = grid
+    };
 });
 
     var parallaxView = new SfParallaxView
@@ -268,15 +270,14 @@ listView.ItemTemplate = new DataTemplate(() =>
     var rootGrid = new Grid();
     rootGrid.Children.Add(parallaxView);
     rootGrid.Children.Add(listView);
-    this.Content = rootGrid;
 
 {% endhighlight %}
 {% endtabs %}
 
-T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically stretch to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.
+T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically be stretched to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.
 
 ![Syncfusion .NET MAUI Parallax View](ParallaxView_Images/maui_parallaxview.gif)
 
 You can download the Parallax View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).
 
-N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel dimensions cannot match to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without degradation in image quality.
+N> [\#11230](https://github.com/dotnet/maui/issues/11230) In Android, when an image's pixel size cannot stretch to fit the Parallax View Source control during loading, it results in a Java.Lang.RuntimeException. It is necessary to use the image as Parallax View Content without degradation in image quality.

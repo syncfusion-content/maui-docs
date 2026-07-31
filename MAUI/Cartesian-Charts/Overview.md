@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart in .net maui, exploring sfCartesianChart in .net maui.
 ---
 
-# Overview of .NET MAUI Cartesian Chart
+# .NET MAUI Cartesian Chart Overview
 
 The Syncfusion® [.NET MAUI Cartesian chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
 
@@ -300,12 +300,12 @@ Search KB's
 <!-- Card 5 -->
 <div class="form-card" target="_blank">
   <div class="form-content">
-   <div class="card-header">
-    <div class="icon-circle">
-    <span class="card-icon card-blogs"></span>
+    <div class="card-header">
+          <div class="icon-circle">
+          <span class="card-icon card-blogs"></span>
+          </div>
+      <h3 class="form-title">Blogs</h3>
     </div>
-    <h3 class="form-title">Blogs</h3>
-</div>
     <div class="form-description">
       Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
@@ -315,7 +315,6 @@ Read Blogs
 </a>
   </div>
 </div>
-
 <!-- Card 6 -->
 <div class="form-card" target="_blank">
   <div class="form-content">

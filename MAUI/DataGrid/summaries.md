@@ -20,9 +20,9 @@ The data grid supports to display the concise information about the bound data o
 
 Summary rows are represented by using the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) that hold summary information of columns in the [SummaryColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_SummaryColumns) property . The `SummaryColumns` contains the collection of [DataGridSummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html) which carries name, format, and summary aggregate type of the column.
 
-Derive additional information from the data like sum, average, maximum, minimum, and count using summaries in the data grid. These summary values can be computed for groups or for the entire control using `DataGridSummaryRow` and `DataGridSummaryColumn` that implements [ISummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryRow.html) and [ISummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryColumn.html) interfaces.
+Calculate derived metrics such as sum, average, maximum, minimum, and count using summaries in the data grid. These summary values can be computed for groups or for the entire control using `DataGridSummaryRow` and `DataGridSummaryColumn` that implement [ISummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryRow.html) and [ISummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryColumn.html) interfaces.
 
-N> The Summary does not refresh with data. To update the summary for the newly added row, or for the modified summary column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html) to `LiveDataUpdateMode.AllowDataShaping` or `LiveDataUpdateMode.AllowSummaryUpdate`.
+> **Note:** The Summary does not refresh with data. To update the summary for the newly added row, or for the modified summary column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html) to `LiveDataUpdateMode.AllowDataShaping` or `LiveDataUpdateMode.AllowSummaryUpdate`.
 
 ## Caption summaries
 
@@ -112,7 +112,7 @@ this.Content = dataGrid;
 
 The following screenshot shows the outcome of the previous code:
 
-<img src="Images\group-summary\maui-datagrid-display-name.png" width="404" alt="DataGrid with DisplayName in group caption summary text">
+<img src="Images/group-summary/maui-datagrid-display-name.png" width="404" alt="DataGrid with DisplayName in group caption summary text">
 
 ### Displaying summary for a row
 
@@ -155,7 +155,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Count}",
     SummaryType = SummaryType.CountAggregate
 });
-dataGridid.CaptionSummaryRow= summaryRow;
+dataGrid.CaptionSummaryRow= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
@@ -175,7 +175,7 @@ The DataGrid control provides several predefined aggregates, such as `CountAggre
 
 The [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html#Syncfusion_Maui_DataGrid_DataGridSummaryColumn_Format) property defines a string property that formats the summary value and displays it. The Format property can have two parts separated by a colon (:). The first part denotes the aggregate function name, and the second part denotes the display format of the summary value.
 
-Please refer to the [Formatting Summary](#_Formatting_Summary) section for more information on how to format the summary, and the `Aggregate Types` section to learn about the different summary types.
+Refer to the [Formatting Summary](#formatting-summary) section for more information on how to format the summary, and the [Aggregate Types](#aggregate-types) section to learn about the different summary types.
 
 In the following code snippet, a summary is defined for the `Salary` column:
 
@@ -204,13 +204,13 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:c}",
     SummaryType = SummaryType.DoubleAggregate
 });
-dataGridid.CaptionSummaryRow= summaryRow;
+dataGrid.CaptionSummaryRow= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
 <img alt="DataGrid with caption summary cells customized" src="Images/caption-summary/maui-datagrid-show-summary-in-column.png" width="404"/>
 
-N> The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.TextAlignment`.
+> **Note:** The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.TextAlignment`.
 
 ### Caption summary template
 
@@ -220,7 +220,7 @@ The data grid allows you to host any view(s) inside a caption summary for the en
 
 The template for a caption summary row can be customized by using the [SfDataGrid.CaptionSummaryTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CaptionSummaryTemplate) property. This allows you to define a custom template according to your requirements.
 
-Please refer to the code example below, where a label is loaded in the `caption summary template` of the `caption summary row`:
+Refer to the code example below, where a label is loaded in the `caption summary template` of the `caption summary row`:
 
 {% tabs %}
 {% highlight xaml %}
@@ -294,7 +294,7 @@ public class GroupCaptionConverter : IValueConverter
 
 <img alt="DataGrid with template loaded for entire caption summary row" src="Images/caption-summary/maui-datagrid-template-row.png" width="404"/>
 
-N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
+> **Note:** The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 
 ### Displaying template for a column
@@ -719,13 +719,13 @@ public class GroupSummaryConverter : IValueConverter
 
 <img alt="DataGrid with template loaded for entire group summary row" src="Images/group-summary/maui-datagrid-row-template.png" width="404"/>
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
+> **Note:** The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Displaying template for a column
 
 The template for a group summary column can be customized by using the `GridSummaryColumn.Template`  property. This allows you to define a custom template according to your requirements.
 
-Please refer to the code example below, which demonstrates how to load a label in the template of a group summary column:
+Refer to the code example below, which demonstrates how to load a label in the template of a group summary column:
 
 {% tabs %}
 {% highlight xaml %}
@@ -983,7 +983,7 @@ summaryRow1.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Count}",
     SummaryType = SummaryType.CountAggregate
 });
-dataGridid.TableSummaryRows.Add(summaryRow1);
+dataGrid.TableSummaryRows.Add(summaryRow1);
 
 DataGridTableSummaryRow summaryRow2 = new DataGridTableSummaryRow();
 summaryRow2.ShowSummaryInRow = false;
@@ -995,7 +995,7 @@ summaryRow2.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-dataGridid.TableSummaryRows.Add(summaryRow2);
+dataGrid.TableSummaryRows.Add(summaryRow2);
 {% endhighlight %}
 {% endtabs %}
 
@@ -1042,7 +1042,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Count}",
     SummaryType = SummaryType.CountAggregate
 });
-dataGridid.TableSummaryRows.Add(summaryRow);
+dataGrid.TableSummaryRows.Add(summaryRow);
 {% endhighlight %}
 {% endtabs %}
 
@@ -1097,7 +1097,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-dataGridid.TableSummaryRows.Add(summaryRow);
+dataGrid.TableSummaryRows.Add(summaryRow);
 {% endhighlight %}
 {% endtabs %}
 
@@ -1149,7 +1149,7 @@ topSummaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-dataGridid.TableSummaryRows.Add(topSummaryRow);
+dataGrid.TableSummaryRows.Add(topSummaryRow);
 
 DataGridTableSummaryRow bottomSummaryRow = new DataGridTableSummaryRow();
 bottomSummaryRow.Position = SummaryRowPosition.Bottom;
@@ -1169,7 +1169,7 @@ bottomSummaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Count}",
     SummaryType = SummaryType.CountAggregate
 });
-dataGridid.TableSummaryRows.Add(bottomSummaryRow);
+dataGrid.TableSummaryRows.Add(bottomSummaryRow);
 {% endhighlight %}
 {% endtabs %}
 
@@ -1278,7 +1278,7 @@ public class TableSummaryConverter : IValueConverter
 
 The template for a table summary column can be set by using `DataGridSummaryColumn.Template` and it can be customized based on the requirement.
 
-Refer the below code example in which a label is loaded in the template of table summary column.
+Refer to the code example below, which demonstrates how to load a label in the template of a table summary column:
 
 {% tabs %}
 {% highlight xaml %}
@@ -1370,7 +1370,7 @@ public class TableSummaryConverter : IValueConverter
 
 <img alt="Table summary template in a column" src="Images/table-summary/maui-datagrid-template-column.png" width="404"/>
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
+> **Note:** The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Displaying column summary with title
 
@@ -1516,7 +1516,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     Format = "{Sum:C0}",
     SummaryType = SummaryType.DoubleAggregate
 });
-dataGridid.TableSummaryRows.Add(summaryRow);
+dataGrid.TableSummaryRows.Add(summaryRow);
 {% endhighlight %}
 {% endtabs %}
 
@@ -1700,7 +1700,7 @@ dataGrid.TableSummaryRows = summaryRow;
 
 <img alt="DataGrid with custom aggregate" src="Images/table-summary/maui-datagrid-custom-aggregate.png" width="404"/>
 
-N> The above custom summaries section is explained using `TableSummary`.
+> **Note:** The above custom summaries section is explained using `TableSummary`.
 
 ## Overriding summary renderer
 
