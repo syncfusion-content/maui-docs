@@ -12,11 +12,11 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides the built-in support to sort one or more columns by using the [SfDataGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) property. When sorting is applied, the data grid automatically rearranges the data to match the current sort criteria. Sort the data by tapping the column header. Once sorting is applied, the data grid shows a sort icon in the respective column header indicating the sort direction.
 
-To get start quickly with sorting in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
+To get started quickly with sorting in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/5PhyEYLbGT4'></iframe>
 
-N>
+> **Note:**
 * To ensure that the sorting is updated when a row is added or removed, set `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
 
 ## Programmatic sorting
@@ -152,8 +152,8 @@ this.Content = dataGrid;
 
 The data grid provides the following events for the sorting functionality:
 
-* [SortColumnsChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging): This event is invoked while sorting the column at execution time before the column gets sorted. It helps to `cancel` the sorting action by setting the Cancel property of the [DataGridSortColumnsChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortColumnsChangingEventArgs.html).
-* [SortColumnsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanged): This event is invoked after the column is sorted.
+* [SortColumnsChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanging): This event is invoked while sorting the column at execution time before the column gets sorted. It helps to `cancel` the sorting action by setting the Cancel property of the [DataGridSortColumnsChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortColumnsChangingEventArgs.html).
+* [SortColumnsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanged): This event is invoked after the column is sorted.
 These two events are triggered with the `DataGridSortColumnsChangingEventArgs` and [DataGridSortColumnsChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortColumnsChangedEventArgs.html) that contains the following properties:
 
 **AddedItems**: Gets the collection of the `SortColumnDescription` objects that are added to the `SortColumnDescriptions` collection for sorting.
@@ -205,7 +205,7 @@ private void sfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 
 ## Disable sorting for manually defined columns
 
-The `SfDataGrid` disables sorting for an individual column by setting the [DataGridColumn.AllowSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowSorting) property to false. The default value of this property is true.
+To disable sorting for an individual column, set the [DataGridColumn.AllowSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowSorting) property to false. The default value of this property is true.
 
 {% tabs %}
 {% highlight xaml %}
@@ -256,10 +256,9 @@ The following example shows how to sort the columns based on the length of their
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage
-    xmlns:comparer="clr-namespace:GettingStarted.Comparer"
-    xmlns:data="clr-namespace:Syncfusion.Maui.Data;assembly=Syncfusion.Maui.Data"
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
+<ContentPage xmlns:comparer="clr-namespace:GettingStarted.Comparer"
+             xmlns:data="clr-namespace:Syncfusion.Maui.Data;assembly=Syncfusion.Maui.Data"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -287,6 +286,11 @@ The following example shows how to sort the columns based on the length of their
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+using System;
+using System.Collections;
+using System.ComponentModel;
+using Syncfusion.Maui.Data;
+
 public class CustomSortComparer : IComparer<object>, ISortDirection
 {
     private int nameX;
@@ -480,7 +484,7 @@ public class SortIconTemplate : DataTemplateSelector
 
 <img alt="DataGrid with sort template selector" src="Images\sorting\maui-datagrid-sort-template-selector.png" width="404">
 
-N>
+> **Note:**
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Customize the size of sort icon

@@ -89,17 +89,17 @@ Before proceeding, ensure the following are set up:
 {% endtabcontents %}
 
 ## Step 3: Register Syncfusion handler
- 
+
 Make sure to add the namespace.
- 
+
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
- 
+
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
- 
+
 {% tabs %}
 {% highlight c# %}
 builder.ConfigureSyncfusionCore();
@@ -276,12 +276,15 @@ item2.Content = contentGrid2;
 
 accordion.Items.Add(item1);
 accordion.Items.Add(item2);
+
+// Add the accordion to your page content
+mainPage.Content = accordion;
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
 
-<img alt="Syncfuion Maui Accordion defining the items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png"/> 
+![Syncfusion Maui Accordion defining the items](Images/getting-started/maui-accordion-with-defining-accordion-items.png)
 
 You can download the Accordion Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 

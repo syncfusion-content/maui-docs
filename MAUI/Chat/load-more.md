@@ -532,7 +532,7 @@ public class InverseBoolConverter : IValueConverter
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="12" %}
 public partial class MainPage : ContentPage
 {
 

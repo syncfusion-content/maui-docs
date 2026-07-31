@@ -7,9 +7,11 @@ control: SfShimmer
 documentation: ug
 ---
 
-# Overview of .NET MAUI Shimmer (SfShimmer)
+# Overview of .NET MAUI Shimmer
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer)) control can increase an application's responsiveness by displaying a shimmer effect while the content is loading or processing in the background.
+
+![Multiple Shimmer View in .NET MAUI.](images/overview/maui-multiple-shimmer-views.gif)
 
 ## Business use cases
 
@@ -22,15 +24,9 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion
 
 - **Multiple shimmer view types** allows displaying predefined layouts such as persona or content placeholders for different scenarios.
 
-    ![Multiple Shimmer View in .NET MAUI.](images/overview/maui-multiple-shimmer-views.gif)
-
 - **Wave direction customization** allows controlling animation flow direction for enhanced visual effects. 
 
-    ![Multiple Shimmer Wave Directions in .NET MAUI.](images/overview/maui-multiple-shimmer-wave-directions.gif)
-
 - **Custom shimmer view** allows defining custom shapes using different shape types such as rectangle or circle.
-
-    ![Shimmer Custom view in .NET MAUI.](images/overview/maui-custom-view.gif) 
 
 ## Related controls
 

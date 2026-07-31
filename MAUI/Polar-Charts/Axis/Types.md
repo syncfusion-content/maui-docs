@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Axis types in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about axis types and their features in Syncfusion® .NET MAUI Chart (SfPolarChart) control and more.
+title: Axis types in .NET MAUI Polar Chart Control | Syncfusion
+description: Learn here all about axis types and their features in Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control and more.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Types of Axis in .NET MAUI Chart
+# Types of axis in .NET MAUI Polar Chart
 
-Polar chart supports the following types of chart axis.
+Polar chart supports the following types of chart axis:
 
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
 * DateTimeCategoryAxis
 
-## Numerical Axis
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
+## Numerical axis
 
 [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) is used to plot numerical values to the chart. [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) can be defined for both [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_SecondaryAxis).
 
@@ -25,7 +27,7 @@ Polar chart supports the following types of chart axis.
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfPolarChart.PrimaryAxis>
@@ -40,7 +42,7 @@ Polar chart supports the following types of chart axis.
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
 
@@ -53,20 +55,20 @@ this.Content = chart;
 
 {% endtabs %}
 
-![NumericalAxis interval support in MAUI Chart](Axis_Images/MAUI_numerical_axis.png)
+![NumericalAxis interval support in .NET MAUI Polar Chart](Axis_Images/MAUI_numerical_axis.png)
 
 ### Interval
 
-Axis interval can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Interval) property. By default, interval will be calculated based on the minimum and maximum value of the provided data.
+Axis interval can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Interval) property. By default, the interval is calculated based on the minimum and maximum value of the provided data.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:NumericalAxis Interval="10"/>
+        <chart:NumericalAxis Interval = "10"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -79,7 +81,7 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     Interval = 10 
@@ -97,18 +99,18 @@ this.Content = chart;
 
 ### Customizing the Range
 
-[Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Maximum) and [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Minimum) properties of axis is used for setting the maximum and minimum value of the axis range respectively.
+The [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Maximum) and [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Minimum) properties of the axis are used to set the maximum and minimum values of the axis range, respectively.
 
-N> If  minimum or maximum value is set, the other value is calculated by default internally.
+N> If either the minimum or maximum value is set, the other value is calculated internally by default.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis Maximum="100" Minimum="0" Interval="20"/>
+        <chart:NumericalAxis Maximum = "100" Minimum = "0" Interval = "20"/>
     </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
@@ -117,7 +119,7 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     Maximum = 100,
@@ -132,16 +134,16 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Category Axis
+## Category axis
 
-The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) is an indexed based axis that plots values based on the index of the data point collection. The points are equally spaced here.
+The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) is an index-based axis that plots values based on the index of the data point collection. The points are equally spaced along the axis.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
         <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
@@ -152,7 +154,7 @@ The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Ca
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 
@@ -162,20 +164,20 @@ this.Content = chart;
 
 {% endtabs %}
 
-![CategoryAxis support in MAUI Chart](Axis_Images/MAUI_category_axis.png)
+![CategoryAxis support in .NET MAUI Polar Chart](Axis_Images/MAUI_category_axis.png)
 
 ### Interval
 
-By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) axis labels are display with fixed interval 1. It can customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_Interval) property of axis.
+By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) labels are displayed with a fixed interval of `1`. This can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_Interval) property of the axis.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis Interval="2"/>
+        <chart:CategoryAxis Interval = "2"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -188,7 +190,7 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 CategoryAxis primaryAxis = new CategoryAxis()
 {
     Interval = 2
@@ -204,7 +206,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-## DateTime Axis
+## Date time axis
 
 [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is used to plot `DateTime` values. The [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is widely used to make financial charts in places like the Stock Market, where index plotting is done every day.
 
@@ -213,7 +215,7 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
         <chart:DateTimeAxis/>
     </chart:SfPolarChart.PrimaryAxis>
@@ -224,7 +226,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 DateTimeAxis primaryAxis = new DateTimeAxis();
 chart.PrimaryAxis = primaryAxis;
 
@@ -234,7 +236,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![DateTimeAxis support in MAUI Chart](Axis_Images/MAUI_datetime_axis.png)
+![DateTimeAxis support in .NET MAUI Polar Chart](Axis_Images/MAUI_datetime_axis.png)
 
 ### Interval
 
@@ -245,9 +247,9 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
+        <chart:DateTimeAxis Interval = "6" IntervalType = "Months"/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -260,10 +262,10 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
-    Interval = 6, 
+    Interval = 6,
     IntervalType = DateTimeIntervalType.Months
 };
 chart.PrimaryAxis = primaryAxis;
@@ -277,18 +279,18 @@ this.Content = chart;
 
 {% endtabs %}
 
-### Customizing the Range
+### Customizing the range
 
-[Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Maximum) properties behavior is same as in [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) instead of setting numerical value, have to set date time values.
+The [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Maximum) properties behave the same way as in [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) except that date time values are used instead of numerical values.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
+        <chart:DateTimeAxis Minimum = "2021/05/10" Maximum = "2021/11/01"/>
     </chart:SfPolarChart.PrimaryAxis>
 </chart:SfPolarChart>
 
@@ -297,11 +299,11 @@ this.Content = chart;
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
-    Minimum = new DateTime(2021,05,10),
-    Maximum = new DateTime(2021,11,01)
+    Minimum = new DateTime(2021, 05, 10),
+    Maximum = new DateTime(2021, 11, 01)
 };
 chart.PrimaryAxis = primaryAxis;
 
@@ -311,7 +313,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-## DateTimeCategoryAxis
+## DateTime category axis
 
 The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). There are no visual gaps between points, even if the difference between two points exceeds a year.
 
@@ -320,80 +322,78 @@ The `DateTimeCategoryAxis` is a specialized type of axis primarily used with fin
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.PrimaryAxis>
         <chart:DateTimeCategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
-    . . .
+    <!-- code omitted for brevity -->
 </chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfPolarChart chart = new SfPolarChart(); 
-. . . 
-// Create an instance of the DateTimeCategoryAxis, used for displaying DateTime values as categories 
-DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis(); 
-// Add the DateTimeCategoryAxis instance to the chart's XAxes collection 
-chart.PrimaryAxis.Add(primaryAxis);
-. . .
-this.Content = chart; 
+SfPolarChart chart = new SfPolarChart();
+// code omitted for brevity
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+// code omitted for brevity
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![DateTimeCategory Axis support in MAUI Chart](Axis_Images/maui_dateTimeCategory_axis.png)
+![DateTimeCategory Axis support in .NET MAUI Polar Chart](Axis_Images/maui_dateTimeCategory_axis.png)
 
 ### Interval
 
-In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). For example, setting `Interval` as 3 and `IntervalType` as `Months` will consider 3 months as interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart> 
-    . . .
-        <chart:SfPolarChart.PrimaryAxis>
-            <chart:DateTimeCategoryAxis Interval="3" 
-                                        IntervalType="Months"/> 
-        </chart:SfPolarChart.PrimaryAxis> 
-    . . .
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart(); 
-. . .
-DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis() 
-{ 
-    Interval = 3, 
-    IntervalType = DateTimeIntervalType.Months 
-}; 
-chart.PrimaryAxis.Add(primaryAxis);
-. . .
-this.Content = chart; 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Inversed
-
-Axis can be inverted using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsInversed) property. The default value of this property is `False`.
+In `DateTimeCategoryAxis`, intervals can be customized by using the `Interval` and `IntervalType` properties, similar to [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). For example, setting `Interval` to `3` and `IntervalType` to `Months` will consider 3 months as the interval.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
+    <!-- code omitted for brevity -->
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:DateTimeCategoryAxis Interval = "3"
+                                    IntervalType = "Months"/>
+    </chart:SfPolarChart.PrimaryAxis>
+    <!-- code omitted for brevity -->
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+// code omitted for brevity
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis()
+{
+    Interval = 3,
+    IntervalType = DateTimeIntervalType.Months
+};
+chart.PrimaryAxis = primaryAxis;
+// code omitted for brevity
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Inversed axis
+
+The axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsInversed) property. The default value of this property is `false`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <!-- code omitted for brevity -->
     <chart:SfPolarChart.SecondaryAxis>
-        <chart:NumericalAxis IsInversed="True"/>
+        <chart:NumericalAxis IsInversed = "True"/>
     </chart:SfPolarChart.SecondaryAxis>
 </chart:SfPolarChart>
 
@@ -402,10 +402,10 @@ Axis can be inverted using the [IsInversed](https://help.syncfusion.com/cr/maui/
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-. . .
+// code omitted for brevity
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
-    IsInversed = true,
+    IsInversed = true
 };
 chart.SecondaryAxis = secondaryAxis;
 
@@ -428,6 +428,6 @@ The [ActualRangeChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 The [LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered when the axis label is created. The argument contains the following information:
 
-* [Label](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Label) - Used to get or set the text of axis label.
-* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Position) - Used to get the position of label.
-* [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) - Used to customize the appearance of axis labels.
+* [Label](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Label) - used to get or set the text of the axis label.
+* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Position) - used to get the position of the label.
+* [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) - used to customize the appearance of the axis labels.

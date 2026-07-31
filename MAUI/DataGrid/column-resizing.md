@@ -12,6 +12,12 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The `SfDataGrid` allows you to resize the columns by tapping and dragging the right border of the column headers. Resizing can be enabled or disabled by setting the [SfDataGrid.AllowResizingColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumns) property. A resizing indicator is displayed while resizing a column.
 
+## Width Constraints
+
+Resizing respects the `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumWidth` properties. The column will not resize beyond these constraints. By default, columns have no minimum or maximum width limits.
+
+To hide a column interactively, set `DataGridColumn.MinimumWidth` to zero, then drag the column border to zero width.
+
 N> Resizing considers `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumWidth` of the column and will not exceed the minimum and maximum width constraints.
 
 {% tabs %}
@@ -39,10 +45,10 @@ To hide a column interactively, set the `DataGridColumn.MinimumWidth` property t
 
 ## Resizing Modes
 
-The `SfDataGrid` allows two modes of resizing by setting the [SfDataGrid.ColumnResizeMode]() property. The resizing modes are as follows:
+The `SfDataGrid` allows two modes of resizing by setting the [SfDataGrid.ColumnResizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnResizeMode) property. The resizing modes are as follows:
 
-* **OnMoved**: The resizing indicator is moved based on the touch point. The width of the column is updated as the resizing indicator moves.
-* **OnTouchUp**: The resizing indicator is moved based on the touch point. However, the width of the column is updated only on a touch up operation.
+* **OnMoved**: The resizing indicator is moved based on the touch point. The width of the column is updated as the resizing indicator moves. Use this mode for real-time visual feedback during resizing.
+* **OnTouchUp**: The resizing indicator is moved based on the touch point. However, the width of the column is updated only on a touch up operation. Use this mode for better performance when resizing large datasets.
 
 N> The default resizing mode is `OnTouchUp`.
 
@@ -79,14 +85,12 @@ The `SfDataGrid.ColumnResizing` event provides the following properties through 
 
 * `Index` - Returns the index of the column currently being resized.
 * `NewValue` - Returns the current width of the column being resized.
-* `ResizingState` - Returns the current state of the user interaction through a value from the `DataGridProgressState` enum.
+* `ResizingState` - Returns the current state of the user interaction through a value from the `DataGridProgressState` enum. Possible values are: `Started`, `Progressing`, and `Completed`.
 * `Cancel` - A Boolean property to cancel the resizing operation.
 
 ## Cancel resizing for a column
 
-To cancel resizing a specific column, use the `SfDataGrid.ColumnResizing` event. Based on the various arguments provided in the `DataGridColumnResizingEventArgs`, the resizing operation of a column can be canceled.
-
-To prevent resizing a column using the `SfDataGrid.ColumnResizing` event and the `Index` value, refer to the following code example:
+To prevent resizing a specific column, use the `SfDataGrid.ColumnResizing` event and set the `Cancel` property to `true` based on your requirements:
 
 {% tabs %}
 {% highlight xaml %}
@@ -113,48 +117,24 @@ this.Content = dataGrid;
 {% highlight c# %}
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
-    //Code to end resizing if ColumnIndex is 2
+    // Cancel resizing for specific column by Index
     if (e.Index == 2)
         e.Cancel = true;
-}
-{% endhighlight %}
-{% endtabs %}
-
-To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the `NewValue` value, refer to the following code example:
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:OrderInfoViewModel />
-</ContentPage.BindingContext>
-
-<syncfusion:SfDataGrid  x:Name = "dataGrid"
-                        AllowResizingColumns = "True"
-                        ColumnResizing = "DataGrid_ColumnResizing"
-                        ItemsSource = "{Binding Orders}" />
-{% endhighlight %}
-{% highlight c# %}
-SfDataGrid dataGrid = new SfDataGrid();
-OrderInfoViewModel viewModel = new OrderInfoViewModel();
-dataGrid.ItemsSource = viewModel.Orders;
-dataGrid.AllowResizingColumns = true;
-dataGrid.ColumnResizing += DataGrid_ColumnResizing;
-this.Content = dataGrid;
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
-{
-    //Code to end resizing if Column's Width is > 100
+    
+    // Cancel resizing if column width exceeds maximum
     if (e.NewValue > 100)
+        e.Cancel = true;
+    
+    // Cancel resizing only while the user is actively dragging
+    if (e.ResizingState == Syncfusion.Maui.DataGrid.DataGridProgressState.Progressing)
         e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
 
-To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the [DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html) value, refer to the code example below:
+## Setting column width constraints
+
+To restrict column resizing within minimum and maximum width bounds, use the `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumWidth` properties:
 
 {% tabs %}
 {% highlight xaml %}

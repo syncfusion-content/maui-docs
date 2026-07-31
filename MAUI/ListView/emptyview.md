@@ -9,14 +9,14 @@ documentation: ug
 
 # Empty view in .NET MAUI ListView (SfListView)
 
-The `SfListView` allows to display and customize empty view content when there is no data available to display using the following properties,
+The `SfListView` allows you to display and customize empty view content when there is no data available, using the following properties:
 
- * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView) object can be set to a string or view when `SfListView` has no items. The default value is null.
- * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyViewTemplate) is used to customize the appearance of `EmptyView`. The default value is null.
+ * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView) is of type `object` and can be set to a `string`, a `View`, or a custom type. It is displayed when `SfListView` has no items. The default value is `null`.
+ * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyViewTemplate) is of type `DataTemplate`. It is applied to the value of `EmptyView` to produce the final visual content, so the binding context of the template is the `EmptyView` value itself. The default value is `null`.
 
 ## Display a string when ListView has no items
 
-The `EmptyView` property can be set to a string, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or when the collection specified by the `ItemsSource` property is null or empty.
+The empty view is displayed whenever the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or whenever the collection assigned to the `ItemsSource` property is null or empty. In this section, the `EmptyView` property is set to a string.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -35,7 +35,7 @@ listView.EmptyView = "No Items";
 
 ## Display views when ListView has no items
 
-The `EmptyView` property can be set to a view, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
+The `EmptyView` property can be set to a view, which is displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -44,24 +44,24 @@ The `EmptyView` property can be set to a view, which will be displayed when the 
                          ItemsSource="{Binding Items}"
                          ItemSize="56">
     <syncfusion:SfListView.EmptyView>
-      <StackLayout VerticalOptions="CenterAndExpand" >
+      <VerticalStackLayout VerticalOptions="Center">
         <Label Text="&#xe725;" FontSize="40" HorizontalTextAlignment="Center"
-                               FontFamily="{OnPlatform iOS=ListViewFontIcons, MacCatalyst=ListViewFontIcons, Android=ListViewFontIcons.ttf#, UWP=ListViewFontIcons.ttf#ListViewFontIcons}" />                      
+                               FontFamily="{OnPlatform iOS=ListViewFontIcons.ttf#ListViewFontIcons, MacCatalyst=ListViewFontIcons.ttf#ListViewFontIcons, Android=ListViewFontIcons.ttf#ListViewFontIcons, UWP=ListViewFontIcons.ttf#ListViewFontIcons}" />
         <Label Text="No Items" FontSize="16" FontFamily="Roboto-Regular" HorizontalTextAlignment="Center" />
-      </StackLayout>                    
-    </syncfusion:SfListView.EmptyView>                       
+      </VerticalStackLayout>
+    </syncfusion:SfListView.EmptyView>
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-StackLayout stackLayout = new StackLayout() { VerticalOptions = LayoutOptions.CenterAndExpand };
+VerticalStackLayout stackLayout = new VerticalStackLayout() { VerticalOptions = LayoutOptions.Center };
 
 var label1 = new Label()
 {
   Text = "\ue725",
   FontSize = 40,
   HorizontalTextAlignment = TextAlignment.Center,
-  FontFamily = "ListViewFontIcons.ttf#"
+  FontFamily = "ListViewFontIcons.ttf#ListViewFontIcons"
 };
 var label2 = new Label()
 {
@@ -83,9 +83,9 @@ N> View displayed by the `EmptyView` can be a single view or a view that contain
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
-## Display a templated custom type when ListView has no items
+## Display a custom type as the empty view
 
-The `EmptyView` can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+The `EmptyView` property can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -107,11 +107,11 @@ The `EmptyView` can be set to a custom type, which is used to display when the `
       </syncfusion:SfListView.EmptyView>
       <syncfusion:SfListView.EmptyViewTemplate>
         <DataTemplate>
-          <Label Text="{Binding Filter,StringFormat='{0} is not found'}" HorizontalTextAlignment="Center"     
-                 VerticalOptions="CenterAndExpand"
+          <Label Text="{Binding Filter,StringFormat='{0} is not found'}" HorizontalTextAlignment="Center"
+                 VerticalOptions="Center"
                  FontSize="18" FontFamily="Roboto-Regular"/>
         </DataTemplate>
-      </syncfusion:SfListView.EmptyViewTemplate>                         
+      </syncfusion:SfListView.EmptyViewTemplate>
     </syncfusion:SfListView>
   </Grid>
 </ContentPage>
@@ -122,10 +122,10 @@ listView.EmptyView = new FilterItem() { Filter = filterText.Text};
 listView.EmptyViewTemplate = new DataTemplate(() =>
 {
   Label label = new Label()
-  {					
+  {
     FontSize = 18,
     FontFamily = "Roboto-Regular",
-    VerticalOptions = LayoutOptions.CenterAndExpand,
+    VerticalOptions = LayoutOptions.Center,
     HorizontalTextAlignment = TextAlignment.Center
   };
   label.SetBinding(Label.TextProperty, new Binding("Filter", stringFormat : "{0} is not found"));
@@ -134,7 +134,7 @@ listView.EmptyViewTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-The `FilterItem` type defines a `Filter` property.
+The `FilterItem` type defines a `Filter` property. It inherits from `BindableObject` so that the `Filter` property can be backed by a `BindableProperty` and notify the template when the value changes, which keeps the `EmptyViewTemplate` in sync with the `SearchBar.Text` value at run time:
 
 {% tabs %}
 {% highlight c# tabtitle="FilterItem.cs" %}
@@ -151,7 +151,7 @@ public class FilterItem : BindableObject
 {% endhighlight %}
 {% endtabs %}
 
-FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.  
+FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When the `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.
 
 ![Syncfusion .NET MAUI ListView EmptyView Template](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
 
@@ -159,25 +159,29 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Change an empty view at runtime
 
-The `EmptyView` can be changed to a specific view at run time and views that can be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
+The `EmptyView` can be changed to a specific view at run time. Views can also be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:local="clr-namespace:EmptyViewDemo">
+             xmlns:local="clr-namespace:EmptyViewTemplate">
   <ContentPage.Resources>
     <ResourceDictionary>
       <ContentView x:Key="SingleView">
-        <Label Text="No Items" FontSize="18" FontFamily="Roboto-Regular" 
-               HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
+        <ContentView.Content>
+          <Label Text="No Items" FontSize="18" FontFamily="Roboto-Regular"
+                 HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        </ContentView.Content>
       </ContentView>
       <ContentView x:Key="MultiView">
-        <StackLayout VerticalOptions="CenterAndExpand">
-          <Label Text="&#xe725;" FontSize="40"
-                 FontFamily="{OnPlatform iOS=ListViewFontIcons, MacCatalyst=ListViewFontIcons, Android=ListViewFontIcons.ttf#, UWP=ListViewFontIcons.ttf#ListViewFontIcons}"
-                 HorizontalTextAlignment="Center" />
-          <Label TextColor="#666666" Text="No Items" FontSize="16" FontFamily="Roboto-Regular" HorizontalTextAlignment="Center" />
-        </StackLayout>
+        <ContentView.Content>
+          <VerticalStackLayout VerticalOptions="Center">
+            <Label Text="&#xe725;" FontSize="40"
+                   FontFamily="{OnPlatform iOS=ListViewFontIcons.ttf#ListViewFontIcons, MacCatalyst=ListViewFontIcons.ttf#ListViewFontIcons, Android=ListViewFontIcons.ttf#ListViewFontIcons, UWP=ListViewFontIcons.ttf#ListViewFontIcons}"
+                   HorizontalTextAlignment="Center" />
+            <Label TextColor="#666666" Text="No Items" FontSize="16" FontFamily="Roboto-Regular" HorizontalTextAlignment="Center" />
+          </VerticalStackLayout>
+        </ContentView.Content>
       </ContentView>
     </ResourceDictionary>
   </ContentPage.Resources>
@@ -210,16 +214,16 @@ checkBox.CheckedChanged += CheckBox_CheckedChanged;
 {% endhighlight %}
 {% endtabs %}
 
-`EmptyView` is changed based on value of [CheckBox.IsChecked](vhttps://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
+`EmptyView` is changed based on the value of the [CheckBox.IsChecked](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 {
   if(e.Value)
-    listView.EmptyView = Resources["MultiView"];
+    listView.EmptyView = this.Resources["MultiView"];
   else
-    listView.EmptyView = Resources["SingleView"];
+    listView.EmptyView = this.Resources["SingleView"];
 }
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +236,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Change an empty view template at runtime
 
-The `EmptyView` appearance can be changed at run time based on its value using the `EmptyViewTemplate` property.
+The `EmptyView` appearance can be changed at run time based on the value of `EmptyView` by using the `EmptyViewTemplate` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -241,21 +245,21 @@ The `EmptyView` appearance can be changed at run time based on its value using t
   <ContentPage.Resources>
     <ResourceDictionary>          
       <DataTemplate x:Key="BasicTemplate">
-        <Label Text="{Binding .,StringFormat='{0} is not found'}" 
-               HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"
+        <Label Text="{Binding .,StringFormat='{0} is not found'}"
+               HorizontalTextAlignment="Center" VerticalOptions="Center"
                FontSize="18" FontFamily="Roboto-Regular"/>
       </DataTemplate>
       <DataTemplate  x:Key="AdvancedTemplate">
-        <StackLayout VerticalOptions="CenterAndExpand">
-          <Label Text="&#xe725;" 
+        <VerticalStackLayout VerticalOptions="Center">
+          <Label Text="&#xe725;"
                  FontSize="40"
                  FontFamily="{OnPlatform iOS=ListViewFontIcons, MacCatalyst=ListViewFontIcons, Android=ListViewFontIcons.ttf#, UWP=ListViewFontIcons.ttf#ListViewFontIcons}"
                  HorizontalTextAlignment="Center"/>
-          <Label Text="{Binding .,StringFormat='{0} is not found'}" 
-                 FontSize="16" 
-                 FontFamily="Roboto-Regular" 
+          <Label Text="{Binding .,StringFormat='{0} is not found'}"
+                 FontSize="16"
+                 FontFamily="Roboto-Regular"
                  HorizontalTextAlignment="Center"/>
-        </StackLayout>
+        </VerticalStackLayout>
       </DataTemplate>
       <local:EmptyViewDataTemplateSelector x:Key="DataTemplateSelector" 
                                            BasicTemplate="{StaticResource BasicTemplate}" 
@@ -303,7 +307,7 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 
   protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
   {
-    if(item.ToString().Count() > 10)
+    if (((string)item).Length > 10)
         return AdvancedTemplate;
     else
         return BasicTemplate;
@@ -312,10 +316,10 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 {% endhighlight %}
 {% endtabs %}
 
-Template for `EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set it to BasicTemplate.
+The template for `EmptyView` is set to `AdvancedTemplate` when the `SearchBar.Text` length is greater than 10; otherwise, it is set to `BasicTemplate`.
 
-![Syncfusion .NET MAUI ListView SingleView EmptyView Template](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
+![Syncfusion .NET MAUI ListView BasicTemplate EmptyView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
 
-![Syncfusion .NET MAUI ListView MultiView EmptyView Template](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
+![Syncfusion .NET MAUI ListView AdvancedTemplate EmptyView](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-template-at-run-time-in-.net-maui-listview).

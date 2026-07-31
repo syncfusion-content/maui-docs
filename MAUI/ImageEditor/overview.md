@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
 ---
 
-# Overview of .NET MAUI Image Editor (SfImageEditor)
+# Overview of .NET MAUI Image Editor
 
 The **[.NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor)** (SfImageEditor) lets you edit images by annotating them with freehand drawing paths, text, and built-in shapes, and by cropping and flipping them. A built-in toolbar provides quick access to the editing operations.
 

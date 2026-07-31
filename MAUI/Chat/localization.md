@@ -11,7 +11,7 @@ documentation: ug
 
 `Localization` is the process of translating the application resources into different languages for specific cultures. The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) can be localized by adding a `resource` file.
 
-## Setting the application's `CurrentUICulture`
+## Setting the application's CurrentUICulture
 
 Application culture can be changed by setting the `CurrentUICulture` in the `App.xaml.cs` file.
 

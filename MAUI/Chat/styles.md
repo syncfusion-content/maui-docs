@@ -151,7 +151,7 @@ public partial class MainPage : ContentPage
 You can set a `LinearGradientBrush` as the `Background` of `SfChat` by setting the `SfChat.Background` property to the gradient colors. However, if you want the gradient to be applied to the message input view area, also set the message input view's background to Transparent as shown in the code sample below.
 
 {% tabs %}
-{% highlight xaml hl_lines="29 30" %}
+{% highlight xaml %}
     
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -195,7 +195,7 @@ You can set a `LinearGradientBrush` as the `Background` of `SfChat` by setting t
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="12 18" %}
+{% highlight c# %}
 
 public partial class MainPage : ContentPage
 {
