@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Expander control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-expander"
 description: Learn here about getting started with Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI
 control: SfExpander

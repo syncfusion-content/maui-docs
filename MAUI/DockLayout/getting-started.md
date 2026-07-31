@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI DockLayout control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-docklayout"
 description: Learn how to get started with Syncfusion® .NET MAUI DockLayout (SfDockLayout) control and explore layout capabilities using various options.
 platform: MAUI
 control: SfDockLayout
