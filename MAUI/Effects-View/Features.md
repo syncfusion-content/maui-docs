@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Features in .NET MAUI Effects View Control | Syncfusion®
-description: Learn about Features support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+description: Learn about the features available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
@@ -9,57 +9,201 @@ documentation: UG
 
 # Features in .NET MAUI Effects View (SfEffectsView)
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features to enhance the effects:
+The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features that complement the built-in effects.
+
+## Prerequisites
+
+Before using the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), ensure the following NuGet package is installed in your .NET MAUI project:
+
+- `Syncfusion.Maui.Core`
+
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/effects-view/getting-started) documentation.
 
 ## FadeOutRipple
 
-By enabling the [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the expandable circle will lose its opacity to 0 as it grows.
+When `FadeOutRipple` is `true`, the ripple fades to opacity 0 as it grows, producing a softer animation. The optional `RippleAnimationDuration` property controls how long the ripple animation runs, in milliseconds.
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="15" %}
 
-    <syncEffectsView:SfEffectsView
-    FadeOutRipple="True"
-    RippleAnimationDuration="1000">
+<Border HorizontalOptions="Center" 
+        VerticalOptions="Center">
+    <Border.StrokeShape>
+        <RoundRectangle CornerRadius="18" />
+    </Border.StrokeShape>
+    <Border.Background>
+        <LinearGradientBrush EndPoint="1,0">
+            <GradientStop Color="#FFCDCDD2" 
+                          Offset="0.0" />
+            <GradientStop Color="#FFCDCDD2" 
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Border.Background>
+    <syncEffectsView:SfEffectsView FadeOutRipple="True"
+                                   RippleAnimationDuration="1000">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="laura.png" 
+                   Margin="7" 
+                   VerticalOptions="Center"
+                   WidthRequest="72" 
+                   HeightRequest="72" />
+                <StackLayout Grid.Column="1" 
+                             VerticalOptions="Center">
+                    <Label Text="Laura Steffi" 
+                           Margin="10,0,10,0" 
+                           FontSize="18" />
+                    <Label Text="Data Science Analyst" 
+                           Margin="10,0,10,0" 
+                           FontSize="12"/>
+                </StackLayout>
+        </Grid>
     </syncEffectsView:SfEffectsView>
+</Border>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="45" %}
 
-     var effectsView = new SfEffectsView
+var grid = new Grid
+{
+    ColumnDefinitions =
     {
+        new ColumnDefinition { Width = 90 },
+        new ColumnDefinition { Width = GridLength.Star }
+    }
+};
+
+var image = new Image
+{
+    Source = "laura.png",
+    Margin = new Thickness(7),
+    VerticalOptions = LayoutOptions.Center,
+    WidthRequest = 72,
+    HeightRequest = 72
+};
+
+var nameLabel = new Label
+{
+    Text = "Laura Steffi",
+    Margin = new Thickness(10, 0),
+    FontSize = 18
+};
+
+var roleLabel = new Label
+{
+    Text = "Data Science Analyst",
+    Margin = new Thickness(10, 0),
+    FontSize = 12
+};
+
+var stackLayout = new StackLayout
+{
+    VerticalOptions = LayoutOptions.Center,
+    Children = { nameLabel, roleLabel }
+};
+
+grid.Add(image);
+grid.Add(stackLayout, 1, 0);
+
+var effectsView = new SfEffectsView
+{
     FadeOutRipple = true,
-    RippleAnimationDuration = 1000
-    };
-            
+    RippleAnimationDuration = 1000,
+    Content = grid
+};
+
+var border = new Border
+{
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    StrokeShape = new RoundRectangle
+    {
+        CornerRadius = 18
+    },
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 0),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FFCDCDD2"), 0.0f),
+            new GradientStop(Color.FromArgb("#FFCDCDD2"), 1.0f)
+        }
+    },
+    Content = effectsView
+};
+
+this.Content = border;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![FadeOutRipple](Features_images/EffectsView_Fadeout_Ripple.gif)
+![Ripple fading out as it grows](Features_images/EffectsView_Fadeout_Ripple.gif)
 
 ## IsSelected
 
-Enabling the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_IsSelected) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) sets the view state as selected.
+Setting `IsSelected` to `true` marks the `Effects View` as selected. The `Selection` effect reads this property and applies the `SelectionBackground` brush.
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="5" %}
 
-    <syncEffectsView:SfEffectsView
-    IsSelected="true">
-    </syncEffectsView:SfEffectsView>
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               IsSelected="True">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="24" %}
 
-    var effectsView = new SfEffectsView
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
     {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
     IsSelected = true,
-    };
+    Content = grid
+};
+
+this.Content = effectsView;
 
 {% endhighlight %}
 
@@ -67,23 +211,65 @@ Enabling the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 
 ## ShouldIgnoreTouches
 
-Enabling the [ShouldIgnoreTouches](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ShouldIgnoreTouches) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) cancels the direct interaction of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
+When `ShouldIgnoreTouches` is `true`, the `Effects View` does not handle touches itself. Use it when the view is hosted inside a scroll view, carousel, or other container that needs to receive the gesture, while still allowing the visual effects to fire.
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml hl_lines="5" %}
 
-     <syncEffectsView:SfEffectsView ShouldIgnoreTouches="true">
-     </syncEffectsView:SfEffectsView>
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               ShouldIgnoreTouches="True">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</syncEffectsView:SfEffectsView>
+<syncEffectsView:SfEffectsView ShouldIgnoreTouches="True">
+</syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight c# hl_lines="24" %}
 
-    var effectsView = new SfEffectsView
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
     {
-      ShouldIgnoreTouches = true
-    };
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
+
+var effectsView = new SfEffectsView
+{
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    ShouldIgnoreTouches = true,
+    Content = grid
+};
+
+this.Content = effectsView;
 
 {% endhighlight %}
 
@@ -91,26 +277,70 @@ Enabling the [ShouldIgnoreTouches](https://help.syncfusion.com/cr/maui/Syncfusio
 
 ## AutoResetEffects
 
-The [AutoResetEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AutoResetEffects) property controls whether certain visual effects are automatically reset based on touch interactions.
+`AutoResetEffects` is a flags enum that selects which effects automatically return to their rest state when the touch ends. By default, all supported effects auto-reset. Pass a combination of values to limit the auto-reset behavior to specific effects.
 
-{% tabs %}
+{% tabs %} 
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="5" %}
 
-    <syncEffectsView:SfEffectsView
-            AutoResetEffects="Highlight">
-    </syncEffectsView:SfEffectsView>
+<syncEffectsView:SfEffectsView x:Name="effectsView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               AutoResetEffects="Highlight,Ripple">
+    <Grid Padding="12" 
+          WidthRequest="350" 
+          HeightRequest="150"
+          HorizontalOptions="Center" 
+          VerticalOptions="Center">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStop Color="#FF6B6B" 
+                              Offset="0.0" />
+                <GradientStop Color="#4ECDC4" 
+                              Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# hl_lines="24" %}
+
+var grid = new Grid
+{
+    Padding = new Thickness(12),
+    WidthRequest = 350,
+    HeightRequest = 150,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Background = new LinearGradientBrush
+    {
+        EndPoint = new Point(1, 1),
+        GradientStops = new GradientStopCollection
+        {
+            new GradientStop(Color.FromArgb("#FF6B6B"), 0.0f),
+            new GradientStop(Color.FromArgb("#4ECDC4"), 1.0f)
+        }
+    }
+};
 
 var effectsView = new SfEffectsView
 {
-    AutoResetEffects = AutoResetEffects.Highlight,
-
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    AutoResetEffects = AutoResetEffects.Highlight | AutoResetEffects.Ripple,,
+    Content = grid
 };
+
+this.Content = effectsView;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+- [Customization](https://help.syncfusion.com/maui/effects-view/customization)
+- [Effects](https://help.syncfusion.com/maui/effects-view/effects/overview) 
+- [Interaction](https://help.syncfusion.com/maui/effects-view/interaction)

@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in .NET MAUI Calendar (SfCalendar)
 
-By default, the calendar control supports US English localizations. You can change to other languages by adding the `Globalization` namespace to your application.
+By default, the calendar control supports US English localization. You can change to other languages by adding the `Globalization` namespace to your application.
 
 ## Setting CurrentUICulture to the application
 
-The application culture can be changed by setting `CurrentUICulture`. in the `App.xaml.cs` file.
+The application culture can be changed by setting `CurrentUICulture` in the `App.xaml.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 13 14" %}
@@ -50,17 +50,17 @@ To localize the `Calendar` based on `CurrentUICulture` using `resource` files, f
 
    1. Create new folder, named as `Resources` in the application.
 
-   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+   2. Right-click on the `Resources` folder, select `Add` and then `NewItem`.
 
-   3. In Add New Item wizard, select the Resource File option and name the filename as `SfCalendar.<culture name>.resx.` For example, give the name as `SfCalendar.ja-JP.resx` for French culture.
+   3. In the Add New Item wizard, select the Resource File option and name the filename as `SfCalendar.<culture name>.resx.` For example, give the name as `SfCalendar.ja-JP.resx` for the Japanese culture.
 
    4. The culture name indicates the name of the language and country.
 
 		![shows-the-name-of-resource-file-to-be-added-for-maui-calendar](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-calendar.png)
 
-   5. Now, select `Add` option to add the resource file in **Resources** folder.
+   5. Now, select the `Add` option to add the resource file in the **Resources** folder.
 
-		![shows-the-added-resource-file-for-french-language-in-maui-calendar](images/localization/shows-the-added-resource-file-for-french-language-in-maui-calendar.png)
+		![shows-the-added-resource-file-for-japanese-language-in-maui-calendar](images/localization/shows-the-added-resource-file-for-japanese-language-in-maui-calendar.png)
 
    6. Add the Name/Value pair in Resource Designer of `SfCalendar.ja-JP.resx` file and change its corresponding value to corresponding culture.
 

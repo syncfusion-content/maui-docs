@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's .NET MAUI component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/clients) to enhance your development workflow when building .NET MAUI applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-assistant) is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) server that provides intelligent assistance for developers using Syncfusion's .NET MAUI component libraries. This tool seamlessly integrates with compatible [MCP clients](https://modelcontextprotocol.io/docs/2026-07-28/learn/client-concepts) to enhance your development workflow when building .NET MAUI applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Key Benefits
 
@@ -24,7 +24,7 @@ The [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-ass
 Before using [SyncfusionMAUIAssistant](https://www.npmjs.com/package/@syncfusion/maui-assistant), ensure you have:
 
 * Required [node](https://nodejs.org/en/) version >= 18
-* A [compatible MCP client](https://modelcontextprotocol.io/clients) (VS Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
+* A [compatible MCP client](https://modelcontextprotocol.io/docs/2026-07-28/learn/client-concepts) (VS Code with GitHub Copilot, [Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
 * An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)

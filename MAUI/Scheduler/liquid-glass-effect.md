@@ -32,13 +32,12 @@ To achieve a glass like background in the Scheduler control, set the `Background
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
 <ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="SchedulePage">
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+
     <Grid>
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
         <core:SfGlassEffectView CornerRadius="9"
@@ -53,10 +52,12 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23 24" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Scheduler;
+
+. . .
 
 var backgroundImage = new Image
 {

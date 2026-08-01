@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Populating with .NET MAUI Picker Control | Syncfusion
+title: Populating Items with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Populating Items in MAUI Picker (SfPicker)
+# Populating Items in .NET MAUI Picker (SfPicker)
 
-In .NET MAUI, you can bind a Picker control to an external data source by setting its ItemsSource property to an ObservableCollection. This enables the Picker to display and update data from the collection.
+In .NET MAUI, you can bind the SfPicker control to an external data source by setting its `ItemsSource` property to an `ObservableCollection`. This enables the picker to display and update data from the collection.
 
-Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
+Set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -49,11 +49,11 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 
 ## Multi-column items
 
-The picker populates the items as Multi-column based on the columns value.
+The picker populates items as multi-column data based on the number of `Columns`.
 
-Collection of items can be created and assigned to a Collection based on index value, and each index is a column of picker.
+A collection of items can be created and assigned to a Collection based on the index value, where each index represents a column in the picker.
 
-The following code example encapsulate how to populate Country and Cities in each column of picker.
+The following sample code demonstrates how to populate `Countries` and `Cities` in each column of the picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -107,11 +107,9 @@ The following code example encapsulate how to populate Country and Cities in eac
 
    ![Picker multi column items in .NET MAUI Picker.](images/populating-items/maui-multi-column-items.png)
 
-## Set items text style customization
+## Customizing text style of items
 
-The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
-
-The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
+The .NET MAUI Picker control allows customization of the selected and unselected item appearance, including `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes`, as shown in the following code.
 
 ### Selected item customization
 
@@ -167,7 +165,7 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 ## Adding custom view to items
 
-In picker control, the items can be customized with a custom view of all items by the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate) and assign a custom view to the `ItemTemplate`.
+In the picker control, items can be customized with a custom view for all items by using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate) property and assigning a custom view to it.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -207,7 +205,7 @@ In picker control, the items can be customized with a custom view of all items b
         grid.Children.Add(label);
         return grid;
     });
-    
+
     this.picker.ItemTemplate = customView;
 
 {% endhighlight %}

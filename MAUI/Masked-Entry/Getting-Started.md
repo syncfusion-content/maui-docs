@@ -94,7 +94,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
  
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +102,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
  
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
@@ -112,12 +112,12 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
  
 xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
  
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Inputs; 
 
@@ -129,7 +129,7 @@ using Syncfusion.Maui.Inputs;
 Initialize the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) and set its `MaskType` property to define a mask format
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <editors:SfMaskedEntry WidthRequest="200" 
                        ClearButtonVisibility="WhileEditing" 

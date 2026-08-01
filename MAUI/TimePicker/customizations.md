@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Time Picker Control | Syncfusion
-description: Learn about customizations in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
+title: Customizations in .NET MAUI Time Picker Control | Syncfusion®
+description: Learn about customizations in Syncfusion® .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug
@@ -23,30 +23,37 @@ The SfTimePicker control allows you to add the header text by setting the [Text]
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView Height="40" Text="Time Picker"/>
-    </picker:SfTimePicker.HeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Time Picker"/>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.HeaderView = new PickerHeaderView()
+timePicker.HeaderView = new PickerHeaderView()
 {
     Height = 40,
     Text = "Time Picker"
 };
 
-this.Content = TimePicker;
+this.Content = timePicker;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-text.png)
+![Set header text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-text.png)
 
 ### Set the divider color
 
@@ -56,18 +63,25 @@ The SfTimePicker control allows you to customize the header divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView DividerColor="Red" />
-    </picker:SfTimePicker.HeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView DividerColor="Red" />
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.HeaderView = new PickerHeaderView()
+timePicker.HeaderView = new PickerHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -78,29 +92,36 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set header divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-divider-color.png)
+![Set header divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-divider-color.png)
 
 ### Customization of the header
 
-Customize the header text style and background color of the `Time picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+Customize the header text style and background color of the `Time Picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HeaderView >
-        <picker:PickerHeaderView Background="#D3D3D3">
-            <picker:PickerHeaderView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
-            </picker:PickerHeaderView.TextStyle>
-        </picker:PickerHeaderView>
-    </picker:SfTimePicker.HeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.HeaderView>
+            <picker:PickerHeaderView Background="#D3D3D3">
+                <picker:PickerHeaderView.TextStyle>
+                    <picker:PickerTextStyle FontSize="15" TextColor="Black"/>
+                </picker:PickerHeaderView.TextStyle>
+            </picker:PickerHeaderView>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.HeaderView = new PickerHeaderView()
@@ -119,9 +140,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-header.png)
+![Custom header in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-header.png)
 
-### Custom Header Appearance using Datatemplate
+### Custom Header Appearance using DataTemplate
 
 You can customize the time picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -129,21 +150,34 @@ You can customize the time picker header appearance by using the [HeaderTemplate
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HeaderTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="#BB9AB1">
-                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="White"/>
-            </Grid>
-        </DataTemplate>
-    </picker:SfTimePicker.HeaderTemplate>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.HeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#BB9AB1">
+                    <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="White"/>
+                </Grid>
+            </DataTemplate>
+        </picker:SfTimePicker.HeaderTemplate>
+    </picker:SfTimePicker>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+SfTimePicker timePicker = new SfTimePicker();
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-template.png)
+![Set header template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-header-template.png)
 
 N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
@@ -155,25 +189,32 @@ You can customize the time picker header appearance by using the [HeaderTemplate
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="currentTimeTemplate">
-        <Grid Background = "#987D9A" >
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Red"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="futureTimeTemplate">
-        <Grid Background = "LightGreen" >
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Orange"/>
-        </Grid>
-    </DataTemplate>
-    <local:TimeTemplateSelector x:Key="headerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="currentTimeTemplate">
+            <Grid Background = "#987D9A" >
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Red"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="futureTimeTemplate">
+            <Grid Background = "LightGreen" >
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Orange"/>
+            </Grid>
+        </DataTemplate>
+        <local:TimeTemplateSelector x:Key="headerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    </ContentPage.Resources>
     <picker:SfTimePicker x:Name="timePicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
     </picker:SfTimePicker>
-</Grid.Resources>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class TimeTemplateSelector : DataTemplateSelector
 {
@@ -204,25 +245,32 @@ Customize the time picker column header by using the `ColumnHeaderView` property
 
 ### Set the custom column header
 
-The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) provides a custom text to its column header by setting the [ColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_ColumnHeaderView) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). It contains [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) properties of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The default value of the [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText) property is "Hour", [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText) is "Minute", [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText) is "Second", [MilliSecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MilliSecondHeaderText) is "MilliSecond", and [MerdiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) is "string.Empty".
+The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) provides a custom text to its column header by setting the [ColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_ColumnHeaderView) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). It contains [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) properties of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The default value of the [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_HourHeaderText) property is "Hour", [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MinuteHeaderText) is "Minute", [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_SecondHeaderText) is "Second", [MilliSecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MilliSecondHeaderText) is "MilliSecond", and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_MeridiemHeaderText) is "string.Empty".
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView HourHeaderText="Hour Column"
-                                           MinuteHeaderText="Minute Column"
-                                           SecondHeaderText="Second Column"
-                                           MilliSecondHeaderText="MilliSecond Column"
-                                           MeridiemHeaderText="Meridiem Column"/>
-    </picker:SfTimePicker.ColumnHeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.ColumnHeaderView >
+            <picker:TimePickerColumnHeaderView HourHeaderText="Hour Column"
+                                               MinuteHeaderText="Minute Column"
+                                               SecondHeaderText="Second Column"
+                                               MilliSecondHeaderText="MilliSecond Column"
+                                               MeridiemHeaderText="Meridiem Column"/>
+        </picker:SfTimePicker.ColumnHeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
@@ -230,7 +278,7 @@ timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
     HourHeaderText = "Hour Column",
     MinuteHeaderText = "Minute Column",
     SecondHeaderText = "Second Column",
-    MilliSecondHeaderText = "MilliSecond Column"
+    MilliSecondHeaderText = "MilliSecond Column",
     MeridiemHeaderText = "Meridiem Column"
 };
 
@@ -240,7 +288,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set Column header text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-text.png)
+![Set column header text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-column-header-text.png)
 
 ### Set the divider color
 
@@ -250,18 +298,25 @@ The SfTimePicker control allows you to customize the column header divider color
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView DividerColor="Red" />
-    </picker:SfTimePicker.ColumnHeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.ColumnHeaderView >
+            <picker:TimePickerColumnHeaderView DividerColor="Red" />
+        </picker:SfTimePicker.ColumnHeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.ColumnHeaderView = new TimePickerColumnHeaderView()
+timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -272,7 +327,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set column header divider in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-column-header-divider-color.png)
+![Set column header divider in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -282,19 +337,26 @@ Customize the column header view text style and background color of the `Time Pi
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.ColumnHeaderView >
-        <picker:TimePickerColumnHeaderView Background="#D3D3D3">
-            <picker:TimePickerColumnHeaderView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
-            </picker:TimePickerColumnHeaderView.TextStyle>
-        </picker:TimePickerColumnHeaderView>
-    </picker:SfTimePicker.ColumnHeaderView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.ColumnHeaderView>
+            <picker:TimePickerColumnHeaderView Background="#D3D3D3">
+                <picker:TimePickerColumnHeaderView.TextStyle>
+                    <picker:PickerTextStyle FontSize="15" TextColor="Black"/>
+                </picker:TimePickerColumnHeaderView.TextStyle>
+            </picker:TimePickerColumnHeaderView>
+        </picker:SfTimePicker.ColumnHeaderView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
@@ -313,9 +375,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom column header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-column-header.png)
+![Custom column header in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-column-header.png)
 
-### Custom Column Header Appearance using Datatemplate
+### Custom Column Header Appearance using DataTemplate
 
 You can customize the time picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -323,28 +385,32 @@ You can customize the time picker column header appearance by using the [ColumnH
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.ColumnHeaderTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="#BB9AB1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Hour" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Label Text="Minute" Grid.Column="1" TextColor="White"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Label Text="Second" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </Grid>
-        </DataTemplate>
-    </picker:SfTimePicker.ColumnHeaderTemplate>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.ColumnHeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#BB9AB1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Hour" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Minute" Grid.Column="1" TextColor="White"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label Text="Second" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </Grid>
+            </DataTemplate>
+        </picker:SfTimePicker.ColumnHeaderTemplate>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set column header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-header-template.png)
+![Set column header template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor).
 
@@ -356,39 +422,46 @@ You can customize the time picker column header appearance by using the [ColumnH
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="currentTimeTemplate">
-        <Grid Background="LightBlue">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Hour" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Minute" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Second" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="futureTimeTemplate">
-        <Grid Background="LightGreen">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Hour" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Minute" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            <Label Text="Second" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-        </Grid>
-    </DataTemplate>
-    <local:TimeTemplateSelector x:Key="columnHeaderTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="currentTimeTemplate">
+            <Grid Background="LightBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hour" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Minute" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Second" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="futureTimeTemplate">
+            <Grid Background="LightGreen">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hour" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Minute" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Second" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        <local:TimeTemplateSelector x:Key="columnHeaderTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    </ContentPage.Resources>
     <picker:SfTimePicker x:Name="timePicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
     </picker:SfTimePicker>
-</Grid.Resources>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class TimeTemplateSelector : DataTemplateSelector
 {
@@ -426,16 +499,23 @@ The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Save"
-                                 CancelButtonText="Exit"/>
-    </picker:SfTimePicker.FooterView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.FooterView >
+            <picker:PickerFooterView Height="40" OkButtonText="Save"
+                                     CancelButtonText="Exit"/>
+        </picker:SfTimePicker.FooterView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.FooterView = new PickerFooterView()
@@ -451,7 +531,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set footer text in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-text.png)
+![Set footer text in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-text.png)
 
 ### Set the divider color
 
@@ -461,18 +541,25 @@ The SfTimePicker control allows you to customize the footer divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView DividerColor="Red" />
-    </picker:SfTimePicker.FooterView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.FooterView >
+            <picker:PickerFooterView DividerColor="Red" />
+        </picker:SfTimePicker.FooterView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
-timepicker.FooterView = new PickerFooterView()
+timePicker.FooterView = new PickerFooterView()
 {
     DividerColor = Colors.Red,
 };
@@ -483,7 +570,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Set divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-divider-color.png)
+![Set divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -493,19 +580,26 @@ Customize the footer text style and background color of the `Time Picker` using 
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.FooterView >
-        <picker:PickerFooterView Background="#D3D3D3">
-            <picker:PickerFooterView.TextStyle >
-                <picker:PickerTextStyle FontSize="15" TextColor="Black" />
-            </picker:PickerFooterView.TextStyle>
-        </picker:PickerFooterView>
-    </picker:SfTimePicker.FooterView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.FooterView >
+            <picker:PickerFooterView Background="#D3D3D3">
+                <picker:PickerFooterView.TextStyle >
+                    <picker:PickerTextStyle FontSize="15" TextColor="Black" />
+                </picker:PickerFooterView.TextStyle>
+            </picker:PickerFooterView>
+        </picker:SfTimePicker.FooterView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.FooterView = new PickerFooterView()
@@ -524,9 +618,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom footer .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-footer.png)
+![Custom footer in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-footer.png)
 
-### Custom Footer Appearance using Datatemplate
+### Custom Footer Appearance using DataTemplate
 
 You can customize the time picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
@@ -534,26 +628,30 @@ You can customize the time picker footer appearance by using the [FooterTemplate
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker">
-    <picker:SfTimePicker.FooterTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="#BB9AB1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent"/>
-                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent"/>
-            </Grid>
-        </DataTemplate>
-    </picker:SfTimePicker.FooterTemplate>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.FooterTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#BB9AB1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent"/>
+                    <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent"/>
+                </Grid>
+            </DataTemplate>
+        </picker:SfTimePicker.FooterTemplate>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set footer template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-template.png)
+![Set footer template in .NET MAUI Time Picker.](images/customizations/maui-time-picker-set-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
@@ -565,35 +663,42 @@ You can customize the time picker footer appearance by using the [FooterTemplate
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid.Resources>
-    <DataTemplate x:Key="currentTimeTemplate">
-        <Grid Background="LightBlue">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent"/>
-            <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent"/>
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="futureTimeTemplate">
-        <Grid Background="LightGreen">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent"/>
-            <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent"/>
-        </Grid>
-    </DataTemplate>
-    <local:TimeTemplateSelector x:Key="footerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="currentTimeTemplate">
+            <Grid Background="LightBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent"/>
+                <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="futureTimeTemplate">
+            <Grid Background="LightGreen">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent"/>
+                <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent"/>
+            </Grid>
+        </DataTemplate>
+        <local:TimeTemplateSelector x:Key="footerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    </ContentPage.Resources>
     <picker:SfTimePicker x:Name="timePicker" FooterTemplate="{StaticResource footerTemplateSelector}">
     </picker:SfTimePicker>
-</Grid.Resources>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 public class TimeTemplateSelector : DataTemplateSelector
 {
@@ -620,18 +725,25 @@ public class TimeTemplateSelector : DataTemplateSelector
 
 ## Set height and width to the Time Picker
 
-The SfTimePicker control allows you to change the height and width by using the [HeightRequest] and [WidthRequest] properties in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The `SfTimePicker` control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties on the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6" %}
 
-<picker:SfTimePicker x:Name="picker" 
-                    HeightRequest="280" 
-                    WidthRequest="300">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="picker"
+                        HeightRequest="280"
+                        WidthRequest="300">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+{% highlight c# tabtitle="C#" hl_lines="6 7" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker picker = new SfTimePicker()
 {
@@ -644,7 +756,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Set height and width in .NET MAUI Time picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
+![Set height and width in .NET MAUI Time Picker.](images/getting-started/maui-time-picker-set-height-and-width.png)
 
 ## Selection View Customization
 
@@ -658,22 +770,29 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.SelectionView >
-        <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
-    </picker:SfTimePicker.SelectionView>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.SelectionView >
+            <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
+        </picker:SfTimePicker.SelectionView>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 
@@ -683,7 +802,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom selection shape in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-shape.png)
+![Custom selection shape in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-selection-shape.png)
 
 ### Customization of the selected item
 
@@ -693,24 +812,28 @@ Customize the selected view text style of the `Time Picker` using the [SelectedT
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.SelectedTextStyle >
-        <picker:PickerTextStyle FontSize="15" TextColor="White"/>
-    </picker:SfTimePicker.SelectedTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.SelectedTextStyle >
+            <picker:PickerTextStyle FontSize="15" TextColor="White"/>
+        </picker:SfTimePicker.SelectedTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SelectedTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 15,
-    }
+    TextColor = Colors.White,
+    FontSize = 15,
 };
 
 this.Content = timePicker;
@@ -719,7 +842,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom Selection view in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-selection-view.png)
+![Custom selection view in .NET MAUI Time Picker.](images/customizations/maui-time-picker-custom-selection-view.png)
 
 ## Column divider color
 
@@ -728,21 +851,28 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     ColumnDividerColor="Red">
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         ColumnDividerColor="Red">
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+. . .
+
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.ColumnDividerColor = Colors.Red;
-this.Content = picker;
+this.Content = timePicker;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+![Time picker column divider color in .NET MAUI Time Picker.](images/customizations/maui-time-picker-column-divider-color.png)
 
 ## CloseButtonIcon
 
@@ -754,21 +884,25 @@ You can enable or disable the close button in the [SfTimePicker](https://help.sy
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True">
-        <picker:SfTimePicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
-        </picker:SfTimePicker.HeaderView>
-    </picker:SfTimePicker>
-    <Button Text="Open Picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="true">
+            <picker:SfTimePicker.HeaderView >
+                <picker:PickerHeaderView Height="40" Text="Time Picker"/>
+            </picker:SfTimePicker.HeaderView>
+        </picker:SfTimePicker>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -776,7 +910,7 @@ You can enable or disable the close button in the [SfTimePicker](https://help.sy
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    timePicker.IsOpen = true;
+    this.timePicker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -785,7 +919,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ![Enable CloseButton in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebutton.png)
 
-N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+N> For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
 
 ### Close Button Icon
 
@@ -795,21 +929,25 @@ You can customize the close button icon in the [SfTimePicker](https://help.syncf
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Grid>
-    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
-        <picker:SfTimePicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
-        </picker:SfTimePicker.HeaderView>
-    </picker:SfTimePicker>
-    <Button Text="Open Picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
+            <picker:SfTimePicker.HeaderView >
+                <picker:PickerHeaderView Height="40" Text="Time Picker"/>
+            </picker:SfTimePicker.HeaderView>
+        </picker:SfTimePicker>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150">
+        </Button>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -826,7 +964,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ![Enable CloseButtonIcon in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebuttonicon.png)
 
-N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+N> The `ShowCloseButton` property must be set to `true` for the close button icon to be displayed.
 
 ## Column Customization
 
@@ -841,15 +979,22 @@ N>
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HourColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
-    </picker:SfTimePicker.HourColumnTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.HourColumnTextStyle>
+            <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
+        </picker:SfTimePicker.HourColumnTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.HourColumnTextStyle = new PickerTextStyle()
@@ -875,15 +1020,22 @@ N>
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.MinuteColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
-    </picker:SfTimePicker.MinuteColumnTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.MinuteColumnTextStyle>
+            <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
+        </picker:SfTimePicker.MinuteColumnTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MinuteColumnTextStyle = new PickerTextStyle()
@@ -909,15 +1061,22 @@ N>
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.SecondColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
-    </picker:SfTimePicker.SecondColumnTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.SecondColumnTextStyle>
+            <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
+        </picker:SfTimePicker.SecondColumnTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SecondColumnTextStyle = new PickerTextStyle()
@@ -943,15 +1102,22 @@ N>
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.MeridiemColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
-    </picker:SfTimePicker.MeridiemColumnTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.MeridiemColumnTextStyle>
+            <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+        </picker:SfTimePicker.MeridiemColumnTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MeridiemColumnTextStyle = new PickerTextStyle()
@@ -977,15 +1143,22 @@ N>
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.MilliSecondColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
-    </picker:SfTimePicker.MilliSecondColumnTextStyle>
-</picker:SfTimePicker>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" >
+        <picker:SfTimePicker.MilliSecondColumnTextStyle>
+            <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+        </picker:SfTimePicker.MilliSecondColumnTextStyle>
+    </picker:SfTimePicker>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MilliSecondColumnTextStyle = new PickerTextStyle()
@@ -1010,11 +1183,18 @@ Customize the hour column width of the [SfTimePicker](https://help.syncfusion.co
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" HourColumnWidth="150"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" HourColumnWidth="150"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.HourColumnWidth = 150;
@@ -1033,11 +1213,18 @@ Customize the minute column width of the [SfTimePicker](https://help.syncfusion.
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" MinuteColumnWidth="150"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" MinuteColumnWidth="150"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MinuteColumnWidth = 150;
@@ -1056,11 +1243,18 @@ Customize the second column width of the [SfTimePicker](https://help.syncfusion.
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" SecondColumnWidth="150"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" SecondColumnWidth="150"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SecondColumnWidth = 150;
@@ -1079,11 +1273,18 @@ Customize the meridiem column width of the [SfTimePicker](https://help.syncfusio
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" MeridiemColumnWidth="150"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" MeridiemColumnWidth="150"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MeridiemColumnWidth = 150;
@@ -1102,11 +1303,18 @@ Customize the millisecond column width of the [SfTimePicker](https://help.syncfu
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="timePicker" MilliSecondColumnWidth="150"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker" MilliSecondColumnWidth="150"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MilliSecondColumnWidth = 150;

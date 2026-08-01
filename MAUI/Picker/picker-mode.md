@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Picker Mode in .NET MAUI Picker Control | Syncfusion
+title: Picker Mode in .NET MAUI Picker Control | Syncfusion®
 description: Learn about the picker mode in Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Picker mode in .NET MAUI Picker (SfPicker)
 
-The picker mode is specified in the picker property enumeration, which is used to display the picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+Picker mode determines how the picker is displayed. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 ## Dialog Mode
 
@@ -163,9 +163,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode2.png)
 
-### Custom Popup Size
+## Custom popup size
 
-SfPicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
+Use the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties to set the popup to any size. The properties apply to both `Dialog` and `RelativeDialog` modes.
 
 {% tabs %}
 
@@ -200,9 +200,9 @@ SfPicker allows the display of the Popup to render at any desired size by settin
 
 private void pickerButton_Clicked(object sender, System.EventArgs e)
 {
-    this.picker.IsOpen = true;
     this.picker.PopupWidth = 300;
     this.picker.PopupHeight = 440;
+    this.picker.IsOpen = true;
 }
 
 {% endhighlight %} 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in .NET MAUI Scheduler (SfScheduler)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. The SfScheduler allows you to localize the following built-in strings to suit your application’s language and culture:
+Localization is the process of translating the application resources into different languages for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. The SfScheduler allows you to localize the following built-in strings to suit your application’s language and culture:
 
 * Day
 * Week
@@ -26,12 +26,13 @@ Localization is the process of translating the application resources into differ
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+Application culture can be changed by setting `CurrentUICulture` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 10 15" %}
 
 using Syncfusion.Maui.Scheduler;
+using System.Globalization;
 using System.Resources;
 
 public partial class App : Application
@@ -40,10 +41,11 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      //// ResXPath => Full path of the resx file; For example : //SfScheduleResources.ResourceManager = new ResourceManager
-      // ("MauiSchedulerDemo.Resources.SfScheduler", Application.Current.GetType().Assembly);
+		// ResXFilePath => Full path of the resx file; For example :
+		// SfSchedulerResources.ResourceManager = new ResourceManager
+		// ("MauiSchedulerDemo.Resources.SfScheduler", Application.Current.GetType().Assembly);
 
-		SfScheduleResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
+		SfSchedulerResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
 	   MainPage = new MainPage();
 	}
 }

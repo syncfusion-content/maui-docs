@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion
+title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about header, footer and selection view with Syncfusion .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dealing with Header, Footer and Selection in MAUI Picker (SfPicker)
 
-This section explains the header, footer and selection view customization of picker control.
+This section explains the customization of the header, footer, and selection views in the picker control.
 
 ## Enable or disable header
 
@@ -34,7 +34,7 @@ SfPicker enables or disables the header section by setting the `SfPicker.HeaderV
 
    ![Enable header in .NET MAUI Picker.](images/custom-views/maui-picker-enable-header.png)
 
-## CloseButtonIcon
+## Close button
 
 ### Show Close Button
 
@@ -75,7 +75,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ![Enable CloseButton in the .NET MAUI Picker](images/custom-views/maui-picker-enable-closebutton.png)
 
-N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+N> For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
 
 ### Close Button Icon
 
@@ -86,17 +86,17 @@ You can customize the close button icon in the [SfPicker](https://help.syncfusio
 {% highlight xaml tabtitle="XAML" %}
 
 <Grid>
-    <picker:SfTimePicker x:Name="timePicker" ShowCloseButton="True" Mode="Dialog" CloseButtonIcon="closeicon.png">
-        <picker:SfTimePicker.HeaderView >
-            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
-        </picker:SfTimePicker.HeaderView>
-    </picker:SfTimePicker>
-    <Button Text="Open Picker" 
+    <picker:SfPicker x:Name="picker" ShowCloseButton="True" Mode="Dialog" CloseButtonIcon="closeicon.png">
+        <picker:SfPicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Picker"/>
+        </picker:SfPicker.HeaderView>
+    </picker:SfPicker>
+    <Button Text="Open Picker"
             x:Name="pickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            HeightRequest="50" 
+            HeightRequest="50"
             WidthRequest="150">
     </Button>
 </Grid>
@@ -107,7 +107,7 @@ You can customize the close button icon in the [SfPicker](https://help.syncfusio
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    timePicker.IsOpen = true;
+    picker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -308,7 +308,7 @@ SfPicker allows customizing the background, text, and text style of the `ok` and
 
 ### Background
 
-The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) color can be customized by setting the `SfPicker.HeaderView.Background` property.
+The Footer's [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) color can be customized by setting the `SfPicker.FooterView.Background` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -338,9 +338,9 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
 
 <sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.FooterView>
-        <sfPicker:PickerFooterView 
-            ShowOkButton="False" 
-            OkButtonText="Done" 
+        <sfPicker:PickerFooterView
+            ShowOkButton="False"
+            OkButtonText="Done"
             CancelButtonText="Exit"/>
     </sfPicker:SfPicker.FooterView>
 </sfPicker:SfPicker>
@@ -459,15 +459,15 @@ You can customize the picker footer appearance by using the [FooterTemplate](htt
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
-                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" /> 
-        </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="nonSelectedItemTemplate">
-        <Grid Background="LightGreen" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="nonSelectedItemTemplate">
+            <Grid Background="LightGreen" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
                 <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
             </Grid>

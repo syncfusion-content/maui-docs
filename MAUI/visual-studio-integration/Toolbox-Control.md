@@ -11,9 +11,9 @@ documentation: ug
 
 The Syncfusion<sup>®</sup> Visual Studio Toolbox for the .NET MAUI platform is a valuable resource for developers looking to seamlessly integrate Syncfusion<sup>®</sup> .NET MAUI components into their applications. Compatible with Visual Studio 2022, it streamlines the workflow by simplifying the integration and configuration of Syncfusion<sup>®</sup> components.
 
-I> The Syncfusion<sup>®</sup> .NET MAUI Toolbox supports Visual Studio 2022 and is available from Essential Studio<sup>®</sup> 2023 Volume 2(v22.1.34) onwards.
+I> The Syncfusion<sup>®</sup> .NET MAUI Toolbox supports Visual Studio 2022 and is available from Essential Studio<sup>®</sup> 2023 Volume 2 (v22.1.34) onwards.
 
-> To check whether the **.NET MAUI Extensions - Syncfusion<sup>®</sup>** extension is installed or not in Visual Studio Extension Manager by navigating to **Extension > Manage Extensions > Installed** for Visual Studio 2022. If this extension is not installed, follow the steps outlined in the [download and installation](download-and-installation) help topic to install the extension.
+> To check whether the **.NET MAUI Extensions - Syncfusion<sup>®</sup>** extension is installed or not in the Visual Studio Extension Manager, navigate to **Extensions > Manage Extensions > Installed** for Visual Studio 2022. If this extension is not installed, follow the steps outlined in the [download and installation](download-and-installation) help topic to install the extension.
 
 ## Launching Syncfusion<sup>®</sup> .NET MAUI Toolbox from the Syncfusion<sup>®</sup> menu
 
@@ -23,9 +23,10 @@ To launch the Syncfusion<sup>®</sup> .NET MAUI Toolbox from the Syncfusion<sup>
 3. Click on **Syncfusion<sup>®</sup>** within the **Extensions** menu. 
 4. In the Syncfusion<sup>®</sup> submenu, locate and click on **Essential Studio<sup>®</sup> for .NET MAUI**. 
 5. From the **Essential Studio<sup>®</sup> for .NET MAUI** submenu, select **Launch .NET MAUI Toolbox**.
-This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
 
-   ![Syncfusion .NET MAUI Custom Toolbox via Syncfusion<sup>®</sup> menu](images/ToolboxSyncfusionMenu.png)
+   This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
+
+   ![Syncfusion .NET MAUI Custom Toolbox via Syncfusion menu](images/ToolboxSyncfusionMenu.png)
 
 ## Launching Syncfusion<sup>®</sup> .NET MAUI Toolbox from the View menu
 
@@ -34,7 +35,8 @@ To launch the Syncfusion<sup>®</sup> .NET MAUI Toolbox from the View menu in Vi
 2. At the top menu, click on **View**.
 3. From the drop-down menu, select **Other Windows**.
 4. In the sub-menu that appears, click on **Syncfusion<sup>®</sup> .NET MAUI Toolbox**.
-This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
+
+   This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
 
    ![Syncfusion .NET MAUI Custom Toolbox view menu](images/ToolboxViewMenu.png)
 

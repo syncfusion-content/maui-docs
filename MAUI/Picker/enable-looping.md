@@ -11,7 +11,7 @@ documentation: ug
 
 The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property allows you to enable looping support in the picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
 
-To enable the looping in picker by setting the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property as `true`. The default value is `false`.
+To enable looping in the picker, set the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property to `true`. The default value is `false`.
 
 {% tabs %}
 
@@ -26,7 +26,7 @@ To enable the looping in picker by setting the [EnableLooping](https://help.sync
 
 SfPicker picker = new SfPicker()
 {
-    EnableLooping = True,
+    EnableLooping = true,
 };
 
 this.Content = picker;

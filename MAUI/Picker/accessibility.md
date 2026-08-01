@@ -1,41 +1,41 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Picker Control | Syncfusion
-description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
-platform: maui
+title: Accessibility with .NET MAUI Picker Control | Syncfusion®
+description: Learn here more about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 control: SfPicker
 documentation: ug
 ---
 
 # Accessibility in .NET MAUI Picker (SfPicker)
 
-The [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) control has interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
+The [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) control interacts with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 
 ## Header Layout
 
-The SfPicker control has interact [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) with localization of header layout.
+The SfPicker control interacts with [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) for header layout localization.
 
 ![Header Layout in .NET MAUI Picker.](images/accessibility/maui-accessibility-header.png)
 
 ## Column Header Layout
 
-The SfPicker control has interact [Column Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderTextProperty) with localization of column header layout.
+The SfPicker control interacts with [Column Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_HeaderTextProperty) for column header layout localization.
 
 ![Column Header Layout in .NET MAUI Picker.](images/accessibility/maui-accessibility-columnheader.png)
 
 ## Footer Layout
 
-The SfPicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
+The SfPicker control interacts with the validation buttons (OK and Cancel) for footer layout localization. The default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and the [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
 
 ![Footer Layout in .NET MAUI Picker.](images/accessibility/maui-accessibility-footer.png)
 
 ## Picker Items
 
-The SfPicker control has interact with the [Item Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) in picker items.
+The SfPicker control interacts with the [Item Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSourceProperty) in the picker items.
 
 ![Picker Items in .NET MAUI Picker.](images/accessibility/maui-accessibility-pickeritems.png)
 
-## Keyboard
+## Keyboard navigation
+
 `SfPicker` supports selection using keyboard interactions.
 
 <table>

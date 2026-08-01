@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource View in MAUI Scheduler Control | Syncfusion®
-description: Learn here all about resource view feature of Syncfusion<sup>&reg;</sup> .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
+description: Learn here all about resource view feature of Syncfusion<sup>&reg;</sup> .NET MAUI SfScheduler in day, week and workweek of timeline views and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -9,74 +9,114 @@ documentation: ug
 
 # Resource View in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, month, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, month, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi-resource appointment sharing, and UI customization features.
 
-## Create resources to Scheduler by using SchedulerResource
-You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
+## Create resources to the Scheduler by using the SchedulerResource
+You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_DataItem) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
-In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
+In the **Day**, **Week**, **Work Week**, and **Month** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week, and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="TimelineWeek">
-    <schedule:SfScheduler.ResourceView>
-        <schedule:SchedulerResourceView Resources="{Binding Resources}" />
-    </schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
-// Adding schedule resource in the scheduler resource collection.
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
-   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = Resources;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="TimelineWeek">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        // Adding schedule resource in the scheduler resource collection.
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+           new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+        };
+
+        // Adding the scheduler resource collection to the schedule resources of SfScheduler.
+        this.Scheduler.ResourceView.Resources = Resources;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Assigning Scheduler resources to appointments
 
-Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources), will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds).
+Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler" View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
-    <schedule:SfScheduler.ResourceView>
-        <schedule:SchedulerResourceView Resources="{Binding Resources}" />
-    </schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
-// Adding schedule resource in the scheduler resource collection.
-var Resources = new ObservableCollection<SchedulerResource>()
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
-   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
-   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
-};
+    public MainPage()
+    {
+        InitializeComponent();
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = Resources;
+        // Adding schedule resource in the scheduler resource collection.
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+           new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+        };
 
-var appointment = new ObservableCollection<SchedulerAppointment>();
+        // Adding the scheduler resource collection to the schedule resources of SfScheduler.
+        this.Scheduler.ResourceView.Resources = Resources;
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-appointment.Add(new SchedulerAppointment()
-{
-	StartTime = DateTime.Today.AddHours(9),
-	EndTime = DateTime.Today.AddHours(11),
-	Subject = "Client Meeting",
-	Location = "Hutchison road",
-	ResourceIds = new ObservableCollection<object>() { "1000" }
-});
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+            ResourceIds = new ObservableCollection<object>() { "1000" }
+        });
+
+        //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,29 +124,49 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Multiple resource sharing using Scheduler resources
 
-Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
+Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
-</schedule:SfScheduler>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="11" %}
-var appointment = new ObservableCollection<SchedulerAppointment>();
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
-//Adding scheduler appointment in the scheduler appointment collection. 
-appointment.Add(new SchedulerAppointment()
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
-	StartTime = DateTime.Today.AddHours(9),
-	EndTime = DateTime.Today.AddHours(11),
-	Subject = "Client Meeting",
-	Location = "Hutchison road",
-	//Multi resource share same event
-	ResourceIds = new ObservableCollection<object>() { "1000", "1001","1002" }
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        var appointment = new ObservableCollection<SchedulerAppointment>();
 
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+        //Adding scheduler appointment in the scheduler appointment collection. 
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+            //Multi resource share same event
+            ResourceIds = new ObservableCollection<object>() { "1000", "1001","1002" }
+        });
+
+        //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,23 +183,43 @@ In the Day, Week, WorkWeek, and Month views, you can control whether dates are g
 The [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Resource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Resource) by default. In this mode, the scheduler arranges the dates under each resource.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day">
-    <scheduler:SfScheduler.ResourceView>
-        <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
-    </scheduler:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-   new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+           new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,23 +230,43 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resou
 In [Month]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html)) View, grouping is supported only by Resource (ResourceGroupType="Resource"), where each resource is rendered with its own independent month calendar layout to clearly display appointments and availability; for example, if three resources are defined, the view will show three distinct monthly calendars side by side, each containing only the appointments assigned to that specific resource.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Month">
-    <scheduler:SfScheduler.ResourceView>
-        <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
-    </scheduler:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
-var resources = new ObservableCollection<SchedulerResource>()
-{
-        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
-        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
-        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Month">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+                new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+                new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+                new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,23 +277,43 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resou
 When the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) is set to [`Date`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceGroupType.html#Syncfusion_Maui_Scheduler_SchedulerResourceGroupType_Date), the scheduler arranges the resources under each date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day">
-    <scheduler:SfScheduler.ResourceView>
-        <scheduler:SchedulerResourceView ResourceGroupType="Date"/>
-    </scheduler:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-   new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView ResourceGroupType="Date"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+           new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -211,17 +331,37 @@ In Day view, resources are presented through an adaptive resource panel on mobil
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day"/>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day"/>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-var resources = new ObservableCollection<SchedulerResource>()
-{
-        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
-        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
-        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
-};
 
-this.Scheduler.ResourceView.Resources = Resources;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+                new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+                new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+                new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -233,17 +373,37 @@ In Month view, resources are presented through an adaptive resource panel on mob
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Month"/>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Month"/>
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-var resources = new ObservableCollection<SchedulerResource>()
-{
-        new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
-        new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
-        new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
-};
 
-this.Scheduler.ResourceView.Resources = Resources;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+                new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+                new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+                new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,25 +414,42 @@ this.Scheduler.ResourceView.Resources = Resources;
 The hamburger icon color can be customized by using the [HamburgerIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HamburgerIconColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="7" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
-     <syncfusion:SfScheduler.ResourceView>
-         <syncfusion:SchedulerResourceView HamburgerIconColor="Red" />
-     </syncfusion:SfScheduler.ResourceView>
- </syncfusion:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView HamburgerIconColor="Red" />
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
-   new SchedulerResource() { Name = "James William", Id = "1002" },
-};
+{% highlight C# hl_lines="18" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+           new SchedulerResource() { Name = "James William", Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -284,25 +461,42 @@ this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
 The drawer resource selection color can be customized by using the [DrawerResourceSelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceSelectionColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="7" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
-     <syncfusion:SfScheduler.ResourceView>
-         <syncfusion:SchedulerResourceView DrawerResourceSelectionColor="DodgerBlue" />
-     </syncfusion:SfScheduler.ResourceView>
- </syncfusion:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView DrawerResourceSelectionColor="DodgerBlue" />
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
-   new SchedulerResource() { Name = "James William", Id = "1002" },
-};
+{% highlight C# hl_lines="18" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+           new SchedulerResource() { Name = "James William", Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -314,25 +508,42 @@ this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
 The drawer background can be customized by using the [DrawerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerBackground) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="3" %}
+{% highlight XAML hl_lines="7" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
-     <syncfusion:SfScheduler.ResourceView>
-         <syncfusion:SchedulerResourceView DrawerBackground="LightGoldenrodYellow" />
-     </syncfusion:SfScheduler.ResourceView>
- </syncfusion:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView DrawerBackground="LightGoldenrodYellow" />
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight C# hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-   new SchedulerResource() { Name = "Sophia", Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
-   new SchedulerResource() { Name = "James William", Id = "1002" },
-};
+{% highlight C# hl_lines="18" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.DrawerBackground = Brush.LightGoldenrodYellow;
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+           new SchedulerResource() { Name = "James William", Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.DrawerBackground = Brush.LightGoldenrodYellow;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -346,92 +557,108 @@ The adaptive header appearance customization can be achieved by using the [Adapt
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<schedule:SfScheduler x:Name="Scheduler" View="Day">
-    <schedule:SfScheduler.ResourceView>
-        <schedule:SchedulerResourceView>
-            <schedule:SchedulerResourceView.AdaptiveHeaderTemplate>
-                <DataTemplate>
-                    <Grid Padding="8" BackgroundColor="PaleGreen">
-                        <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
-                            <Label Text="☰"
-                                    FontSize="16"
-                                    VerticalTextAlignment="Center"
-                                    HorizontalTextAlignment="Center"
-                                    TextColor="Red"
-                                    Margin="0,0,12,0">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnTapped" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            <Label Text="{Binding Resource.Name}"
-                                    FontAttributes="Bold"
-                                    FontSize="14" 
-                                    TextColor="DarkViolet" />
-                        </HorizontalStackLayout>
-                    </Grid>
-                </DataTemplate>
-            </schedule:SchedulerResourceView.AdaptiveHeaderTemplate>
-        </schedule:SchedulerResourceView>
-    </schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView>
+                <scheduler:SchedulerResourceView.AdaptiveHeaderTemplate>
+                    <DataTemplate>
+                        <Grid Padding="8" BackgroundColor="PaleGreen">
+                            <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                                <Label Text="☰"
+                                       FontSize="16"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="Red"
+                                       Margin="0,0,12,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="{Binding Resource.Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="14" 
+                                       TextColor="DarkViolet" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </scheduler:SchedulerResourceView.AdaptiveHeaderTemplate>
+            </scheduler:SchedulerResourceView>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-var Resources = new ObservableCollection<SchedulerResource>()
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
 {
-   new SchedulerResource() { Name = "Sophia", Id = "1000" },
-   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
-   new SchedulerResource() { Name = "James William", Id = "1002" },
-};
-
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.AdaptiveHeaderTemplate = new DataTemplate(() =>
-{
-    var grid = new Grid
+    public MainPage()
     {
-        Padding = 8,
-        BackgroundColor = Colors.PaleGreen
-    };
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+           new SchedulerResource() { Name = "Sophia", Id = "1000" },
+           new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+           new SchedulerResource() { Name = "James William", Id = "1002" },
+        };
 
-    var stack = new HorizontalStackLayout
-    {
-        Spacing = 8,
-        VerticalOptions = LayoutOptions.Center
-    };
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.AdaptiveHeaderTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid
+            {
+                Padding = 8,
+                BackgroundColor = Colors.PaleGreen
+            };
 
-    var menuLabel = new Label
-    {
-        Text = "☰",
-        FontSize = 16,
-        TextColor = Colors.Red,
-        VerticalTextAlignment = TextAlignment.Center,
-        HorizontalTextAlignment = TextAlignment.Center,
-        Margin = new Thickness(0, 0, 12, 0)
-    };
+            var stack = new HorizontalStackLayout
+            {
+                Spacing = 8,
+                VerticalOptions = LayoutOptions.Center
+            };
 
-    var tap = new TapGestureRecognizer();
-    tap.Tapped += OnTapped;
-    menuLabel.GestureRecognizers.Add(tap);
-    var nameLabel = new Label
-    {
-        FontAttributes = FontAttributes.Bold,
-        FontSize = 14,
-        TextColor = Colors.DarkViolet
-    };
-    
-    nameLabel.SetBinding(Label.TextProperty, "Resource.Name");
-    stack.Add(menuLabel);
-    stack.Add(nameLabel);
-    grid.Add(stack);
-    return grid;
-});
+            var menuLabel = new Label
+            {
+                Text = "☰",
+                FontSize = 16,
+                TextColor = Colors.Red,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                Margin = new Thickness(0, 0, 12, 0)
+            };
 
-private void OnTapped(object sender, TappedEventArgs e)
-{
-    if (sender is Label label && label.BindingContext is SchedulerAdaptiveResource resource)
+            var tap = new TapGestureRecognizer();
+            tap.Tapped += OnTapped;
+            menuLabel.GestureRecognizers.Add(tap);
+            var nameLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                FontSize = 14,
+                TextColor = Colors.DarkViolet
+            };
+            
+            nameLabel.SetBinding(Label.TextProperty, "Resource.Name");
+            stack.Add(menuLabel);
+            stack.Add(nameLabel);
+            grid.Add(stack);
+            return grid;
+        });
+    }
+
+    private void OnTapped(object sender, TappedEventArgs e)
     {
-        resource.ToggleResourceDrawerView();
+        if (sender is Label label && label.BindingContext is SchedulerAdaptiveResource resource)
+        {
+            resource.ToggleResourceDrawerView();
+        }
     }
 }
 
@@ -451,31 +678,40 @@ The drawer resource appearance customization can be achieved by using the [Drawe
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<ContentPage.Resources>
-    <DataTemplate x:Key="drawerResourceTemplate">
-        <Grid Background="{Binding DataItem.BackgroundBrush}">
-            <Label Margin="10" FontAttributes="Bold"  Text="{Binding DataItem.Name}" TextColor="{Binding DataItem.ForegroundBrush}"/>
-        </Grid>
-    </DataTemplate>
-</ContentPage.Resources>
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
-<scheduler:SfScheduler x:Name="scheduler">
-    <scheduler:SfScheduler.ResourceView>
-        <scheduler:SchedulerResourceView DrawerResourceTemplate="{StaticResource drawerResourceTemplate}">
-            <scheduler:SchedulerResourceView.Mapping>
-                <scheduler:SchedulerResourceMapping
-                     Id = "Id"
-                     Name="Name"
-                     Background="BackgroundColor"
-                     Foreground="ForegroundColor"/>
-            </scheduler:SchedulerResourceView.Mapping>
-        </scheduler:SchedulerResourceView>
-    </scheduler:SfScheduler.ResourceView>
-</scheduler:SfScheduler>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="drawerResourceTemplate">
+            <Grid Background="{Binding DataItem.BackgroundBrush}">
+                <Label Margin="10" FontAttributes="Bold"  Text="{Binding DataItem.Name}" TextColor="{Binding DataItem.ForegroundBrush}"/>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <scheduler:SfScheduler x:Name="scheduler">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView DrawerResourceTemplate="{StaticResource drawerResourceTemplate}">
+                <scheduler:SchedulerResourceView.Mapping>
+                    <scheduler:SchedulerResourceMapping
+                         Id = "Id"
+                         Name="Name"
+                         Background="BackgroundColor"
+                         Foreground="ForegroundColor"/>
+                </scheduler:SchedulerResourceView.Mapping>
+            </scheduler:SchedulerResourceView>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
 public class Employee
 {
     public string Name { get; set; }
@@ -484,14 +720,21 @@ public class Employee
     public Brush ForegroundBrush { get; set; }
 }
 
-var Resources = new ObservableCollection<Employee>()
+public partial class MainPage : ContentPage
 {
-    new Employee() { Name = "Sophia", Id = "1000", BackgroundBrush = Brush.PaleGreen, ForegroundBrush = Brush.Black },
-    new Employee() { Name = "Zoey Addison", Id = "1001", BackgroundBrush = Brush.SkyBlue, ForegroundBrush = Brush.Black },
-    new Employee() { Name = "James William", Id = "1002", BackgroundBrush = Brush.LightPink, ForegroundBrush = Brush.Black },
-};
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<Employee>()
+        {
+            new Employee() { Name = "Sophia", Id = "1000", BackgroundBrush = Brush.PaleGreen, ForegroundBrush = Brush.Black },
+            new Employee() { Name = "Zoey Addison", Id = "1001", BackgroundBrush = Brush.SkyBlue, ForegroundBrush = Brush.Black },
+            new Employee() { Name = "James William", Id = "1002", BackgroundBrush = Brush.LightPink, ForegroundBrush = Brush.Black },
+        };
 
-this.scheduler.ResourceView.Resources = Resources;
+        this.scheduler.ResourceView.Resources = Resources;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -507,30 +750,50 @@ The number of resources shown in the day, week, work week, month, timelineday, t
 ### Days View 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Day" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView VisibleResourceCount="6"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource { Name = "Sophia",         Foreground = Colors.White, Background = Colors.LightGreen,  Id = "1000" },
-    new SchedulerResource { Name = "Zoey Addison",   Foreground = Colors.White, Background = Colors.Gold,        Id = "1001" },
-    new SchedulerResource { Name = "Aiden Clark",    Foreground = Colors.White, Background = Colors.LightSkyBlue,Id = "1002" },
-    new SchedulerResource { Name = "Mia Johnson",    Foreground = Colors.White, Background = Colors.Tomato,      Id = "1003" },
-    new SchedulerResource { Name = "Liam Parker",    Foreground = Colors.White, Background = Colors.Orchid,      Id = "1004" },
-    new SchedulerResource { Name = "Olivia Bennett", Foreground = Colors.White, Background = Colors.SlateBlue,   Id = "1005" },
-    new SchedulerResource { Name = "Noah Ramirez",   Foreground = Colors.White, Background = Colors.SeaGreen,    Id = "1006" },
-    new SchedulerResource { Name = "Ava Thompson",   Foreground = Colors.White, Background = Colors.Coral,       Id = "1007" },
-    new SchedulerResource { Name = "Ethan Davis",    Foreground = Colors.White, Background = Colors.DodgerBlue,  Id = "1008" },
-    new SchedulerResource { Name = "Isabella Moore", Foreground = Colors.White, Background = Colors.MediumOrchid,Id = "1009" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.VisibleResourceCount = 6;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Day" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView VisibleResourceCount="6"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="25" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource { Name = "Sophia",         Foreground = Colors.White, Background = Colors.LightGreen,  Id = "1000" },
+            new SchedulerResource { Name = "Zoey Addison",   Foreground = Colors.White, Background = Colors.Gold,        Id = "1001" },
+            new SchedulerResource { Name = "Aiden Clark",    Foreground = Colors.White, Background = Colors.LightSkyBlue,Id = "1002" },
+            new SchedulerResource { Name = "Mia Johnson",    Foreground = Colors.White, Background = Colors.Tomato,      Id = "1003" },
+            new SchedulerResource { Name = "Liam Parker",    Foreground = Colors.White, Background = Colors.Orchid,      Id = "1004" },
+            new SchedulerResource { Name = "Olivia Bennett", Foreground = Colors.White, Background = Colors.SlateBlue,   Id = "1005" },
+            new SchedulerResource { Name = "Noah Ramirez",   Foreground = Colors.White, Background = Colors.SeaGreen,    Id = "1006" },
+            new SchedulerResource { Name = "Ava Thompson",   Foreground = Colors.White, Background = Colors.Coral,       Id = "1007" },
+            new SchedulerResource { Name = "Ethan Davis",    Foreground = Colors.White, Background = Colors.DodgerBlue,  Id = "1008" },
+            new SchedulerResource { Name = "Isabella Moore", Foreground = Colors.White, Background = Colors.MediumOrchid,Id = "1009" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.VisibleResourceCount = 6;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -539,23 +802,43 @@ this.Scheduler.ResourceView.VisibleResourceCount = 6;
 ### Month View
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="Month" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView VisibleResourceCount="2"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.VisibleResourceCount = 2;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="Month" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView VisibleResourceCount="2"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.MediumAquamarine, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Salmon, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.MediumOrchid, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.VisibleResourceCount = 2;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -564,26 +847,46 @@ this.Scheduler.ResourceView.VisibleResourceCount = 2;
 ### Timeline View 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="TimelineDay" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView VisibleResourceCount="4"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-    new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.LightSkyBlue, Id = "1003" },
-    new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
-    new SchedulerResource() { Name = "Elena",  Foreground = Colors.White, Background = Colors.Pink, Id = "1005" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.VisibleResourceCount = 4;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="TimelineDay" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView VisibleResourceCount="4"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+            new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.LightSkyBlue, Id = "1003" },
+            new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
+            new SchedulerResource() { Name = "Elena",  Foreground = Colors.White, Background = Colors.Pink, Id = "1005" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.VisibleResourceCount = 4;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -598,25 +901,45 @@ N>
 In the day, week, work week, and month views, resources are arranged horizontally. The height of the resource headers can be customized using the [`ResourceHeaderHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderHeight) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" 
-                      View="Day"
-                      AllowedViews="Day,Week,WorkWeek,Month" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView ResourceHeaderHeight="100"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Day"
+                           AllowedViews="Day,Week,WorkWeek,Month" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView ResourceHeaderHeight="100"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -626,26 +949,46 @@ this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
 
 ## Resource Header Width in Vertical Resource Views
  
-In the timelineday, timelineweek, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+In the timeline day, timeline week, and timeline work week views, resources are arranged vertically. The width of the resource headers can be customized using the [ResourceHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceHeaderWidth) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler" View="TimelineDay" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView ResourceHeaderWidth="250"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceHeaderWidth = 250;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler" View="TimelineDay" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView ResourceHeaderWidth="250"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.ResourceView.ResourceHeaderWidth = 250;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -656,24 +999,41 @@ this.Scheduler.ResourceView.ResourceHeaderWidth = 250;
 You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
-                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView MinimumRowHeight="90"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.AllowedViews = SchedulerViews.TimelineDay | SchedulerViews.TimelineMonth | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek;
-scheduler.ResourceView.MinimumRowHeight = 100;
-this.Content = scheduler;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                           AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView MinimumRowHeight="90"/>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
 
 {% endhighlight %}
-{% endtabs %} 
+{% highlight C# hl_lines="12" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.TimelineWeek;
+        scheduler.AllowedViews = SchedulerViews.TimelineDay | SchedulerViews.TimelineMonth | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek;
+        scheduler.ResourceView.MinimumRowHeight = 100;
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 N>
 * By default, if the viewport height is greater than 400 then each resource height will be calculated by viewport size divided by the minimum value of scheduler resources count and 4 (default resource count). 
@@ -692,35 +1052,55 @@ In the timeline views (timeline day, timeline week, and timeline work week), spe
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
-                      AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
-</schedule:SfScheduler>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                           AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
+    public MainPage()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+    }
+
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
+        };
+        timeRegions.Add(timeRegion);
+        return timeRegions;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -732,35 +1112,55 @@ In Days View (day, week, and work week) special time regions can be applied to v
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="Day"
-                      AllowedViews="Day,Week,WorkWeek" >
-</schedule:SfScheduler>
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"  View="Day"
+                           AllowedViews="Day,Week,WorkWeek" >
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-var Resources = new ObservableCollection<SchedulerResource>()
-{
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-};
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
-this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+. . .
+public partial class MainPage : ContentPage
 {
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
+    public MainPage()
     {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
+        InitializeComponent();
+        var Resources = new ObservableCollection<SchedulerResource>()
+        {
+            new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+            new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+            new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+        };
+
+        this.Scheduler.ResourceView.Resources = Resources;
+        this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
+    }
+
+    private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+    {
+        var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+        var timeRegion = new SchedulerTimeRegion()
+        {
+            StartTime = DateTime.Today.Date.AddHours(13),
+            EndTime = DateTime.Today.Date.AddHours(14),
+            Text = "Lunch",
+            EnablePointerInteraction = false,
+            ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
+        };
+        timeRegions.Add(timeRegion);
+        return timeRegions;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -805,33 +1205,50 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 
 
 {% tabs %}
-{% highlight XAML hl_lines="5 6 7 8" %}
-<scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView>
-        <schedule:SchedulerResourceView.Mapping>
-            <schedule:SchedulerResourceMapping Name="Name"
-                                            Id="Id"
-                                            Background="Background"
-                                            Foreground="Foreground"/>
-        </schedule:SchedulerResourceView.Mapping>
-    </schedule:SchedulerResourceView>
-</schedule:SfScheduler.ResourceView>
-</scheduler:SfScheduler>
+{% highlight XAML hl_lines="8 9 10 11 12 13" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
+        <scheduler:SfScheduler.ResourceView>
+            <scheduler:SchedulerResourceView>
+                <scheduler:SchedulerResourceView.Mapping>
+                    <scheduler:SchedulerResourceMapping Name="Name"
+                                                        Id="Id"
+                                                        Background="Background"
+                                                        Foreground="Foreground"/>
+                </scheduler:SchedulerResourceView.Mapping>
+            </scheduler:SchedulerResourceView>
+        </scheduler:SfScheduler.ResourceView>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight C# hl_lines="5 10" %}
+{% highlight C# hl_lines="13 18" %}
 
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
+using Syncfusion.Maui.Scheduler;
 
- // Schedule data mapping for custom resource.
-SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
-resourceMapping.Name = "Name";
-resourceMapping.Id = "Id";
-resourceMapping.Background = "BackgroundColor";
-resourceMapping.Foreground = "ForegroundColor";
-scheduler.ResourceView.Mapping = resourceMapping;
-this.Content = scheduler;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        scheduler.View = SchedulerView.TimelineWeek;
+
+        // Schedule data mapping for custom resource.
+        SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
+        resourceMapping.Name = "Name";
+        resourceMapping.Id = "Id";
+        resourceMapping.Background = "BackgroundColor";
+        resourceMapping.Foreground = "ForegroundColor";
+        scheduler.ResourceView.Mapping = resourceMapping;
+        this.Content = scheduler;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -841,24 +1258,44 @@ this.Content = scheduler;
 Add the resources of `Employee` collection that can be assigned  to the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) in the `SchedulerResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
-<scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
-    <scheduler:SfScheduler.ResourceMapping>
-       <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundColor" Foreground="ForegroundColor"/>
-    </scheduler:SfScheduler.ResourceMapping>
-</scheduler:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
-// Creating and Adding custom resource in scheduler resource collection.
-var Resources = new ObservableCollection<Employee>()
-{
-   new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
-   new Employee () {Name = "Zoey Addison", Background=Colors.Blue, Id = "1001", Foreground = Colors.Green},
-   new Employee () {Name = "James William", Background=Colors.Blue, Id = "1002", Foreground = Colors.Green},
-};
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8" %}
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = Resources;
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
+        <scheduler:SfScheduler.ResourceMapping>
+            <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundColor" Foreground="ForegroundColor"/>
+        </scheduler:SfScheduler.ResourceMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        // Creating and Adding custom resource in scheduler resource collection.
+        var Resources = new ObservableCollection<Employee>()
+        {
+           new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
+           new Employee () {Name = "Zoey Addison", Background=Colors.Blue, Id = "1001", Foreground = Colors.Green},
+           new Employee () {Name = "James William", Background=Colors.Blue, Id = "1002", Foreground = Colors.Green},
+        };
+
+        // Adding the scheduler resource collection to the schedule resources of SfSchedule.
+        this.Scheduler.ResourceView.Resources = Resources;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -885,12 +1322,17 @@ public class Meeting
 Map those properties of the `Meeting` class to schedule appointments by using the `SchedulerAppointmentMapping` properties.
 
 {%tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11 12 13 14" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
-                            AppointmentsSource="{Binding Events}"
-                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
-        <schedule:SfScheduler.AppointmentMapping>
-            <schedule:SchedulerAppointmentMapping
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 9 10 11 12 13 14 15 16 17 18" %}
+
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                           AppointmentsSource="{Binding Events}"
+                           AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+        <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:SchedulerAppointmentMapping
                 Subject="EventName"
                 StartTime="From"
                 EndTime="To"
@@ -899,18 +1341,32 @@ Map those properties of the `Meeting` class to schedule appointments by using th
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"
                 ResourceIds="Resources"/>
-        </schedule:SfScheduler.AppointmentMapping>
-</schedule:SfScheduler>
+        </scheduler:SfScheduler.AppointmentMapping>
+    </scheduler:SfScheduler>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPAge.xaml.cs" hl_lines="2 8" %}
-//Schedule data mapping for custom appointments
-SchedulerAppointmentMapping dataMapping = new SchedulerAppointmentMapping();
-dataMapping.Subject = "EventName";
-dataMapping.StartTime = "From";
-dataMapping.EndTime = "To";
-dataMapping.Background = "Color";
-dataMapping.ResourceIds = "Resources";
-this.Scheduler.AppointmentMapping = dataMapping;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 16" %}
+
+using Syncfusion.Maui.Scheduler;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        //Schedule data mapping for custom appointments
+        SchedulerAppointmentMapping dataMapping = new SchedulerAppointmentMapping();
+        dataMapping.Subject = "EventName";
+        dataMapping.StartTime = "From";
+        dataMapping.EndTime = "To";
+        dataMapping.Background = "Color";
+        dataMapping.ResourceIds = "Resources";
+        this.Scheduler.AppointmentMapping = dataMapping;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -918,14 +1374,27 @@ Schedule meetings for a resource by setting `From,` `To,` and `Resources` of the
 
 {%tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-Meeting meeting = new Meeting ();
-meeting.From = new DateTime(2020, 07, 01, 10, 0, 0);
-meeting.To = meeting.From.AddHours(1);
-meeting.EventName = "Meeting";
-meeting.Resources = new ObservableCollection<object> { (Resources[0] as Employee).Id, (Resources[1] as Employee).Id };
-var Meetings = new ObservableCollection<Meeting> ();
-Meetings.Add(meeting);
-this.Schedule.ItemsSource = Meetings;
+
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
+
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        Meeting meeting = new Meeting ();
+        meeting.From = new DateTime(2020, 07, 01, 10, 0, 0);
+        meeting.To = meeting.From.AddHours(1);
+        meeting.EventName = "Meeting";
+        meeting.Resources = new ObservableCollection<object> { (Resources[0] as Employee).Id, (Resources[1] as Employee).Id };
+        var Meetings = new ObservableCollection<Meeting> ();
+        Meetings.Add(meeting);
+        this.Schedule.ItemsSource = Meetings;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -943,79 +1412,85 @@ The resource header text style can be customized by using the [TextStyle](https:
 The resource appearance customization can be achieved by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HeaderTemplate) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15 36" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19 40" %}
 
-<ContentPage.Behaviors>
-    <local:ResourceViewBehavior/>
-</ContentPage.Behaviors>
-    
-<Grid>
-    <schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth"
-                                AppointmentsSource="{Binding Events}"
-                                AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+<ContentPage
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
-        <schedule:SfScheduler.Resources>
-            <local:SfImageSourceConverter x:Key="imageConverter"/>
-        </schedule:SfScheduler.Resources>
-        <schedule:SfScheduler.ResourceView>
-            <schedule:SchedulerResourceView Resources="{Binding Resources}">
-                <schedule:SchedulerResourceView.HeaderTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Fill">
-                            <Border StrokeThickness="5"
+    <ContentPage.Behaviors>
+        <local:ResourceViewBehavior/>
+    </ContentPage.Behaviors>
+        
+    <Grid>
+        <scheduler:SfScheduler x:Name="Scheduler"  View="TimelineMonth"
+                               AppointmentsSource="{Binding Events}"
+                               AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+
+            <scheduler:SfScheduler.Resources>
+                <local:SfImageSourceConverter x:Key="imageConverter"/>
+            </scheduler:SfScheduler.Resources>
+            <scheduler:SfScheduler.ResourceView>
+                <scheduler:SchedulerResourceView Resources="{Binding Resources}">
+                    <scheduler:SchedulerResourceView.HeaderTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Fill">
+                                <Border StrokeThickness="5"
                                         Stroke="{Binding Background}"
                                         HorizontalOptions="Center"
                                         HeightRequest="{OnIdiom Desktop = 70, Phone = 65}"
                                         WidthRequest="{OnIdiom Desktop= 70, Phone=65}">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="150"/>
-                                </Border.StrokeShape>
-                                <Image WidthRequest="{OnIdiom Desktop = 55, Phone = 50}"
-                                            HeightRequest="{OnIdiom Desktop = 55, Phone = 50}"
-                                            HorizontalOptions="Center"
-                                            Source="{Binding DataItem.ImageName,Converter={StaticResource imageConverter}}" 
-                                            VerticalOptions="Center"
-                                    Aspect="Fill"/>
-                            </Border>
-                            <Label Text="{Binding Name}" TextColor="Black" FontSize="{OnIdiom Desktop= 12, Phone=10}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </schedule:SchedulerResourceView.HeaderTemplate>
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="150"/>
+                                    </Border.StrokeShape>
+                                    <Image WidthRequest="{OnIdiom Desktop = 55, Phone = 50}"
+                                           HeightRequest="{OnIdiom Desktop = 55, Phone = 50}"
+                                           HorizontalOptions="Center"
+                                           Source="{Binding DataItem.ImageName,Converter={StaticResource imageConverter}}" 
+                                           VerticalOptions="Center"
+                                           Aspect="Fill"/>
+                                </Border>
+                                <Label Text="{Binding Name}" TextColor="Black" FontSize="{OnIdiom Desktop= 12, Phone=10}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </scheduler:SchedulerResourceView.HeaderTemplate>
 
-                <schedule:SchedulerResourceView.Mapping>
-                    <schedule:SchedulerResourceMapping Name="Name"
-                                                    Id="Id"
-                                                    Background="Background"
-                                                    Foreground="Foreground"/>
-                </schedule:SchedulerResourceView.Mapping>
-            </schedule:SchedulerResourceView>
-        </schedule:SfScheduler.ResourceView>
+                    <scheduler:SchedulerResourceView.Mapping>
+                        <scheduler:SchedulerResourceMapping Name="Name"
+                                                            Id="Id"
+                                                            Background="Background"
+                                                            Foreground="Foreground"/>
+                    </scheduler:SchedulerResourceView.Mapping>
+                </scheduler:SchedulerResourceView>
+            </scheduler:SfScheduler.ResourceView>
 
-        <schedule:SfScheduler.AppointmentMapping>
-            <schedule:SchedulerAppointmentMapping
-                Subject="EventName"
-                StartTime="From"
-                EndTime="To"
-                Background="Background"
-                IsAllDay="IsAllDay"
-                StartTimeZone="StartTimeZone"
-                EndTimeZone="EndTimeZone"
-                ResourceIds="Resources"/>
-        </schedule:SfScheduler.AppointmentMapping>
+            <scheduler:SfScheduler.AppointmentMapping>
+                <scheduler:SchedulerAppointmentMapping
+                    Subject="EventName"
+                    StartTime="From"
+                    EndTime="To"
+                    Background="Background"
+                    IsAllDay="IsAllDay"
+                    StartTimeZone="StartTimeZone"
+                    EndTimeZone="EndTimeZone"
+                    ResourceIds="Resources"/>
+            </scheduler:SfScheduler.AppointmentMapping>
 
-        <schedule:SfScheduler.TimelineView>
-            <schedule:SchedulerTimelineView
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView
                     StartHour="8"
                     EndHour="20"/>
-        </schedule:SfScheduler.TimelineView>
+            </scheduler:SfScheduler.TimelineView>
 
-        <schedule:SfScheduler.BindingContext>
-            <local:ResourceViewViewModel/>
-        </schedule:SfScheduler.BindingContext>
+            <scheduler:SfScheduler.BindingContext>
+                <local:ResourceViewViewModel/>
+            </scheduler:SfScheduler.BindingContext>
 
-    </schedule:SfScheduler>
+        </scheduler:SfScheduler>
 
-</Grid>
+    </Grid>
+</ContentPage>
+
 {% endhighlight %}
 {% endtabs %}
 {% tabs %}

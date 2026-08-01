@@ -27,11 +27,11 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI smart Scheduler  NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.html) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+2. Search for [Syncfusion.Maui.SmartScheduler](https://www.nuget.org/packages/Syncfusion.Maui.SmartScheduler) and install the latest version.
+3. Verify that the package and its dependencies are installed correctly.
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -77,8 +77,8 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart Scheduler NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.html) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+2. Search for [Syncfusion.Maui.SmartScheduler](https://www.nuget.org/packages/Syncfusion.Maui.SmartScheduler) and install the latest version.
+3. Verify that the package and its dependencies are installed correctly.
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -108,8 +108,6 @@ Make sure to add the namespace.
 {% tabs %}
 {% highlight c# %}
 using Syncfusion.Maui.SmartComponents.Hosting;
-using Azure.AI.OpenAI;
-using Azure;
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,7 +147,7 @@ using Syncfusion.Maui.SmartScheduler;
 
 ## Step 6: Add the Smart Scheduler component
 
-Initialize [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.html) component.
+Initialize [SfSmartScheduler](https://www.syncfusion.com/scheduler-sdk/maui-smart-scheduler) component.
 
 {% tabs %}
 {% highlight XAML %}

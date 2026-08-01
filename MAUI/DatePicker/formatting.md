@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formatting in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about formatting support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Formatting in .NET MAUI Date Picker Control | Syncfusion®
+description: Learn how to customize the date format in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) using the Format property and PickerDateFormat enum.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in .NET MAUI Date Picker (SfDatePicker)
 
-Format is a way to represent the date in a different string format. You can customize the date format using the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_Format) property in [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html). The default format is `yyyy_MM_dd`.
+Format is a way to represent the date in a different string format. You can customize the date format using the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_Format) property of type [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html). The default format is `yyyy_MM_dd`.
 
 The different types of formats are:
 
@@ -61,15 +61,21 @@ The following example demonstrates the Date Picker with the custom format [Picke
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="4" %}
 
-<picker:SfDatePicker x:Name="datepicker"
-                     Format="MM_dd_yyyy"/>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="datepicker" Format="MM_dd_yyyy"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight C# tabtitle="C#" hl_lines="6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     Format = PickerDateFormat.MM_dd_yyyy,
@@ -81,4 +87,4 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Formatting in .NET MAUI Date picker.](images/formatting/maui-date-picker-formatting.png)
+![Formatting in .NET MAUI Date Picker.](images/formatting/maui-date-picker-formatting.png)

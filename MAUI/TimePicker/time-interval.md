@@ -7,14 +7,14 @@ control: SfTimePicker
 documentation: ug
 ---
 
-# Time Interval in .NET MAUI Time Picker(SfTimePicker)
+# Time Interval in .NET MAUI Time Picker (SfTimePicker)
 
-The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
+The `SfTimePicker` provides four intervals in [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker).
 
- * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval)
- * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval)
- * [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval)
-  * [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval)
+* [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval).
+* [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval).
+* [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval).
+* [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval).
 
 ## Hour interval
 
@@ -22,14 +22,21 @@ Time Picker provides an option to give an interval between hours using the [Hour
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     HourInterval="2"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         HourInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="6" %}  
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -42,7 +49,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Hour interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-hour-interval.png)
+![Hour interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-hour-interval.png)
 
 ## Minute interval
 
@@ -50,14 +57,21 @@ Time Picker provides an option to give an interval between minutes using the [Mi
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     MinuteInterval="2"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         MinuteInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="6" %}  
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -70,7 +84,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Minute interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-minute-interval.png)
+![Minute interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-minute-interval.png)
 
 ## Second interval
 
@@ -78,14 +92,21 @@ Time Picker provides an option to give an interval between seconds using the [Se
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     SecondInterval="2"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         SecondInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="6" %}  
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -98,7 +119,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Second interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-second-interval.png)
+![Second interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-second-interval.png)
 
 ## MilliSecond interval
 
@@ -106,14 +127,21 @@ Time Picker provides an option to give an interval between milliseconds using th
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfTimePicker x:Name="timePicker"
-                     MilliSecondInterval="2"/>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfTimePicker x:Name="timePicker"
+                         MilliSecondInterval="2"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}  
+{% highlight c# tabtitle="C#" hl_lines="6" %}  
+
+using Syncfusion.Maui.Picker;
+. . .
 
 SfTimePicker timePicker = new SfTimePicker()
 {
@@ -126,4 +154,4 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![MilliSecond interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-millisecond-interval.png)
+![MilliSecond interval in .NET MAUI Time picker.](images/intervals/maui-time-picker-millisecond-interval.png)

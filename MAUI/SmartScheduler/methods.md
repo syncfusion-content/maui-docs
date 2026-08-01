@@ -9,26 +9,42 @@ documentation: ug
 
 # Methods in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
-The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) supports the [ResetAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_ResetAssistView), [CloseAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_CloseAssistView) and [OpenAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_OpenAssistView) methods to reset, close or open assist view programmatically.
+The [SfSmartScheduler](https://www.syncfusion.com/scheduler-sdk/maui-smart-scheduler) control provides three methods for programmatically managing the AI assistant view:
 
-## Reset assist view
+- **[ResetAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.SfSmartScheduler.html#Syncfusion_Maui_SmartScheduler_SfSmartScheduler_ResetAssistView)** — Clears the assistant view and resets it to its initial state (`void`)
+- **[CloseAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.SfSmartScheduler.html#Syncfusion_Maui_SmartScheduler_SfSmartScheduler_CloseAssistView)** — Hides the AI assistant panel (`void`)
+- **[OpenAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.SfSmartScheduler.html#Syncfusion_Maui_SmartScheduler_SfSmartScheduler_OpenAssistView)** — Displays the AI assistant panel (`void`)
 
-The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [ResetAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_ResetAssistView) method to reset assist view programmatically.
+All methods are synchronous and do not require parameters or throw exceptions under normal conditions.
+
+## Reset AI Assistant View
+
+The `ResetAssistView` method clears the AI assistant view and resets it to its initial state. Use this to start a new conversation or clear previous assistant interactions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition Height="50"/>
-    </Grid.RowDefinitions>
-    <smartScheduler:SfSmartScheduler x:Name="smartScheduler"/>
-    <Button Grid.Row="1" Text="Reset assistant" Clicked="Button_Clicked"/>
-</Grid>
+
+<ContentPage   
+    . . .
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <smartScheduler:SfSmartScheduler x:Name="smartScheduler" Grid.Row="0"/>
+        <Button Grid.Row="1" Text="Reset Assistant" Clicked="OnResetClicked"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
-private void Button_Clicked(object sender, EventArgs e)
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
+
+using Syncfusion.Maui.SmartScheduler;
+. . .
+
+private void OnResetClicked(object sender, EventArgs e)
 {
     this.smartScheduler.ResetAssistView();
 }
@@ -36,24 +52,33 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Close assist view
+## Close AI Assistant View
 
-The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [CloseAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_CloseAssistView) method to close assist view programmatically.
+The `CloseAssistView` method hides the AI assistant panel while preserving its state. The assistant view can be reopened later without losing the current conversation.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition Height="50"/>
-    </Grid.RowDefinitions>
-    <smartScheduler:SfSmartScheduler x:Name="smartScheduler"/>
-    <Button Grid.Row="1" Text="Close assistant" Clicked="Button_Clicked"/>
-</Grid>
+
+<ContentPage   
+    . . .
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <smartScheduler:SfSmartScheduler x:Name="smartScheduler" Grid.Row="0"/>
+        <Button Grid.Row="1" Text="Close Assistant" Clicked="OnCloseClicked"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
-private void Button_Clicked(object sender, EventArgs e)
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
+
+using Syncfusion.Maui.SmartScheduler;
+. . .
+
+private void OnCloseClicked(object sender, EventArgs e)
 {
     this.smartScheduler.CloseAssistView();
 }
@@ -61,24 +86,33 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Open assist view
+## Open AI Assistant View
 
-The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [OpenAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_OpenAssistView) method to open assist view programmatically.
+The `OpenAssistView` method displays the AI assistant panel. Use this after calling `CloseAssistView` to reopen the assistant, or to programmatically trigger the assistant display in response to user actions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition Height="50"/>
-    </Grid.RowDefinitions>
-    <smartScheduler:SfSmartScheduler x:Name="smartScheduler"/>
-    <Button Grid.Row="1" Text="Open assistant" Clicked="Button_Clicked"/>
-</Grid>
+
+<ContentPage   
+    . . .
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <smartScheduler:SfSmartScheduler x:Name="smartScheduler" Grid.Row="0"/>
+        <Button Grid.Row="1" Text="Open Assistant" Clicked="OnOpenClicked"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
-private void Button_Clicked(object sender, EventArgs e)
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6"  %}
+
+using Syncfusion.Maui.SmartScheduler;
+. . .
+
+private void OnOpenClicked(object sender, EventArgs e)
 {
     this.smartScheduler.OpenAssistView();
 }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Picker control | Syncfusion
+title: Getting started with .NET MAUI Picker control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
@@ -107,12 +107,14 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Add picker items to the picker
 
-The .NET MAUI Picker control is a data-bound control. Hence, you must create a data collection and bind it to the picker control.
+The .NET MAUI Picker control is a data-bound control. Create a data collection and bind it to the picker control.
 
-Create a simple Observable Collection of data for the picker,
+Create a simple `ObservableCollection` for the picker.
 
 {% tabs %}
 {% highlight c# %}
+
+using System.Collections.ObjectModel;
 
 public class ItemInfo
 {

@@ -10,14 +10,17 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Load More in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid enables the load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true and [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption) property is set. When the load more feature is enabled, an interactive load more view will be displayed on the datagrid only when the datagrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
+To enable load more functionality in SfDataGrid, set the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property to `true` and specify a [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption). When enabled, an interactive load more button appears when the user scrolls to the end of the list. Users can tap this button (or the grid automatically loads more data, depending on the option) to load additional items from your data source.
 
 ## Load more command
-The datagrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property and [SfDataGrid.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommandParameter) property. It will be executed when the user taps the load more view manually or when the user reaches the end.
 
-Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the datagrid that more items are about to be loaded. Set the property to false after successfully loading items into the datagrid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
+The [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) is an `ICommand` that executes when the user triggers a load more action. Use [SfDataGrid.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommandParameter) to pass the DataGrid instance or other context to your command.
 
-To enable and load items at runtime, follow the code example:
+**Managing the loading state:**
+Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy) property to `true` before loading items — this displays a loading indicator and prevents duplicate load requests. Set it to `false` after the load completes (success or failure). The loading indicator remains visible until `IsBusy` is set to `false`.
+
+
+**Example: Basic load more with command:**
 
 {% tabs %}
 {% highlight c# %}
@@ -40,7 +43,7 @@ public partial class MainPage : ContentPage
     private async void ExecuteLoadMoreCommand()
     {
         this.dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
+        await Task.Delay(new TimeSpan(0, 0, 5)); // Simulate network delay
         viewModel.LoadMoreItems();
         this.dataGrid.IsBusy = false;
     }
@@ -48,97 +51,73 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridLoadMoreView" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
+<img alt="DataGrid showing load more button at bottom with activity indicator" src="Images\loadmore\maui-datagrid-loadmoreview.gif" width="404"/>
 
 You can download the complete project from [GitHub](https://github.com/SyncfusionExamples/Load-More-.net-maui-datagrid/tree/master).
 
 ## Load More Option
 
-The `SfDataGrid.LoadMoreOption` property contains the following three different modes of operations:
+The `SfDataGrid.LoadMoreOption` property determines when the load more action is triggered. The default option is **Manual**.
 
- * [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Manual): Displays the load more button when reaching the end of the list and execute `SfDataGrid.LoadMoreCommand` when tapping the button.
- * [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Auto): Automatically execute the `SfDataGrid.LoadMoreCommand` when reaching end of the list.
- * [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_AutoOnScroll): Executes `SfDataGrid.LoadMoreCommand` when users interact with the datagrid and reach the end of list.
+| Option | Behavior |
+|--------|----------|
+| [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Manual) | Displays a "Load More" button at the end. User must tap to trigger `LoadMoreCommand`. |
+| [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Auto) | Automatically executes `LoadMoreCommand` when the list reaches the end (even before user interaction). |
+| [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_AutoOnScroll) | Executes `LoadMoreCommand` only when the user scrolls to the end (not on initial load). |
 
-### Load more automatically
+### Configure load more options
 
-Set the [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption) property as `Auto` to automatically load more items using the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) and [SfDataGrid.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommandParameter) when reaching end of the list.
+All three options use the same command pattern. Here are examples for each:
 
+#### Auto (automatic loading at end)
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        AllowLoadMore="True"
                        LoadMoreOption="Auto"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommand="{Binding LoadMoreCommand}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+DataGrid.AllowLoadMore = true;
+DataGrid.LoadMoreOption = DataGridLoadMoreOption.Auto;
 DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 
 private async void ExecuteLoadMoreCommand()
 {
     DataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
     ViewModel.LoadMoreItems();
     DataGrid.IsBusy = false;
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Load more manually
-
-Set the `SfDataGrid.LoadMoreOption` property as `Manual` to load more items manually using the `SfDataGrid.LoadMoreCommand` and `SfDataGrid.LoadMoreCommandParameter` when tapping the load more button at end of the list.
-
+#### Manual (button appears at end)
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        AllowLoadMore="True"
                        LoadMoreOption="Manual"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommand="{Binding LoadMoreCommand}">
 </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-
-private async void ExecuteLoadMoreCommand()
-{
-    DataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
-}
 {% endhighlight %}
 {% endtabs %}
 
-### Load more when user interacts
-
-To load more items only when users interact with the datagrid and reach to the end of list using `SfDataGrid.LoadMoreCommand` and `SfDataGrid.LoadMoreCommandParameter`, set the `SfDataGrid.LoadMoreOption` property to [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_AutoOnScroll).
-
-The `SfDataGrid.LoadMoreCommand` will not execute when the datagrid is initially loaded. The `SfDataGrid.LoadMoreCommand` will execute only when users interact and reach to the end of list.
-
+#### AutoOnScroll (automatic when user scrolls to end)
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        AllowLoadMore="True"
                        LoadMoreOption="AutoOnScroll"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommand="{Binding LoadMoreCommand}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-
-private async void ExecuteLoadMoreCommand()
-{
-    DataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
-}
-{% endhighlight %}
 {% endtabs %}
+
+> **Note:** `LoadMoreCommand` is not executed on initial page load with `AutoOnScroll`. It only triggers after user scrolling.
 
 ## Customization
 
@@ -208,10 +187,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridLoadMore with top position" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
+<img alt="DataGrid with load more button positioned at top of list" src="Images\loadmore\maui-datagrid-loadmoreview-loadmoreposition-top.png" width="404"/>
 
 ### Appearance
-The appearance of the built-in load more view can be personalized through the following properties:
+Customize the load more view appearance using the following `DataGridStyle` properties:
 
 <table>
 <tr>
@@ -241,8 +220,7 @@ The appearance of the built-in load more view can be personalized through the fo
 <syncfusion:SfDataGrid x:Name="DataGrid"
                        ItemsSource="{Binding Orders}"
                        AllowLoadMore="True"
-                       LoadMoreOption="Manual"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreOption="Manual">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle LoadMoreBackground="#FFF1F6"
                                   LoadMoreButtonBackground="#FFAFCC"
@@ -252,23 +230,44 @@ The appearance of the built-in load more view can be personalized through the fo
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 
-private async void ExecuteLoadMoreCommand()
+public partial class MainPage : ContentPage
 {
-    DataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
+
+    public MainPage()
+    {
+        InitializeComponent();
+
+        viewModel = new OrderInfoViewModel();
+
+        dataGrid = new SfDataGrid
+        {
+            ItemsSource = viewModel.Orders,
+            AllowLoadMore = true,
+            LoadMoreOption = DataGridLoadMoreOption.Manual,
+            DefaultStyle = new DataGridStyle
+            {
+                LoadMoreBackground = Color.FromArgb("#FFF1F6"),
+                LoadMoreButtonBackground = Color.FromArgb("#FFAFCC"),
+                LoadMoreButtonTextColor = Color.FromArgb("#C1121F"),
+                LoadMoreIndicatorColor = Color.FromArgb("#CDB4DB")
+            }
+        };
+
+        this.Content = dataGrid;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
+<img alt="DataGrid load more button with custom pink and red color scheme" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
 ## Change load more view size
 
-The data grid allows to customize the size of the load more view by setting the `HeightRequest` and `WidthRequest` properties. Refer the below code example to customize the width and height of the load more view and its button.
+You can customize the load more view size by setting the `HeightRequest` and `WidthRequest` properties on the load more view and button. See the following example:
 
 {% tabs %}
 {% highlight c# %}
@@ -302,13 +301,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridLoadMore with customized text and size" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-text-and-size.png" width="404"/>
+<img alt="DataGrid with resized load more button displaying custom text" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-text-and-size.png" width="404"/>
 
 ## Custom load more view
 
-The datagrid offers built-in support for configuring a custom load more view to meet your specific requirements.
+You can replace the built-in load more view with a custom view to match your app's design. Create a class that inherits from `DataGridLoadMoreView` and override the required methods.
 
-The following code snippets demonstrate how to enable a custom load more view in the datagrid:
+**When to use:** When the built-in load more button doesn't match your UI design or you need custom behavior (e.g., displaying a progress ring instead of a button).
 
 {% tabs %}
 {% highlight c# %}
@@ -332,12 +331,12 @@ public partial class MainPage : ContentPage
     private async void ExecuteLoadMoreCommand()
     {
         dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
         viewModel.LoadMoreItems();
         dataGrid.IsBusy = false;
     }
 }
 
+// Custom load more view implementation
 public class CustomLoadMoreView : DataGridLoadMoreView
 {
     private Label? loadMoreView;
@@ -381,4 +380,4 @@ public class CustomLoadMoreView : DataGridLoadMoreView
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGrid with custom load more view" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>
+<img alt="DataGrid with custom load more view displaying custom label" src="Images\loadmore\maui-datagrid-custom-loadmoreview.png" width="404"/>

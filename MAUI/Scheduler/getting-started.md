@@ -33,7 +33,7 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Scheduler NuGet package
+## Step 2: Install the Syncfusion® MAUI Scheduler NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) and install the latest version.
@@ -58,7 +58,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Scheduler NuGet package
+## Step 2: Install the Syncfusion® MAUI Scheduler NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -82,7 +82,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Scheduler NuGet package
+## Step 2: Install the Syncfusion® MAUI Scheduler NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) and install the latest version.
@@ -135,32 +135,42 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 {% tabs %}
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                       View="Week"
-                       DisplayDate="{Binding DisplayDate}"
-                       AppointmentsSource="{Binding Events}"
-                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
-        <scheduler:SfScheduler.BindingContext>
-            <local:SchedulerViewModel />
-        </scheduler:SfScheduler.BindingContext>
-    </scheduler:SfScheduler>
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+ 
+    <scheduler:SfScheduler />
+</ContentPage>
+
 {% endhighlight %}
 {% highlight c# %}
 
-var appointment = new ObservableCollection<SchedulerAppointment>();
-appointment.Add(new SchedulerAppointment()
-{
-    StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(11),
-    Subject = "Client Meeting",
-    Location = "Hutchison road",
-});
+using Syncfusion.Maui.Scheduler;
+using System.Collections.ObjectModel;
 
-this.Scheduler.AppointmentsSource = appointment;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        var appointment = new ObservableCollection<SchedulerAppointment>();
+        appointment.Add(new SchedulerAppointment()
+        {
+            StartTime = DateTime.Today.AddHours(9),
+            EndTime = DateTime.Today.AddHours(11),
+            Subject = "Client Meeting",
+            Location = "Hutchison road",
+        });
+
+        this.Scheduler.AppointmentsSource = appointment;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
 
-You can download the Scheduler Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted).
+You can download the Scheduler Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted). Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) page.

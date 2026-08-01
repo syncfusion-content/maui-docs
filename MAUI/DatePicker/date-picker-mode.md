@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about the date picker mode in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion®
+description: Learn about the date picker mode in Syncfusion® .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -11,21 +11,28 @@ documentation: ug
 
 The date picker mode is specified in the picker property enumeration, which is used to display the date picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
-## Dialog Mode
+## Dialog mode
 
 The dialog mode is used to display the date picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`Dialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog) in [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
-<picker:SfDatePicker x:Name="datePicker"
-                     Mode="Dialog"/>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="datePicker"
+                         Mode="Dialog"/>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 SfDatePicker datePicker = new SfDatePicker()
 {
     Mode = PickerMode.Dialog
@@ -37,34 +44,40 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-The Date Picker can be opened programmatically by setting the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
+Open the dialog programmatically by setting the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The default value is `false`.
 
-Note: This property is automatically changed to `false` when you close the dialog by clicking outside of it.
+N> The `IsOpen` property is automatically reset to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfDatePicker x:Name="datepicker"
-                         Mode="Dialog"/>
-    <Button Text="Open Picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDatePicker x:Name="datePicker"
+                             Mode="Dialog"/>
+        <Button Text="Open Picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.datepicker.IsOpen = true;
+    this.datePicker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -73,7 +86,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
   ![Dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-dialog-mode.gif)
 
-## Relative Dialog Mode
+## Relative dialog mode
 
 The relative dialog mode displays the date picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
@@ -84,37 +97,42 @@ The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 The Date Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
 
-Note: This property is automatically changed to `false` when you close the dialog by clicking outside of it.
+N> The `IsOpen` property is automatically reset to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <picker:SfDatePicker x:Name="datePicker" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft">
-    </picker:SfDatePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDatePicker x:Name="datePicker"
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft"/>
+        <Button Text="Open picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.datepicker.IsOpen = true;
+    this.datePicker.IsOpen = true;
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -127,32 +145,37 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
 
-<Grid>
-    <picker:SfDatePicker x:Name="datePicker" 
-                         Mode="RelativeDialog"
-                         RelativePosition="AlignTopLeft"
-                         RelativeView = "{x:Reference pickerButton}">
-    </picker:SfDatePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
-            Clicked="Button_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="50" 
-            WidthRequest="150">
-    </Button>
-</Grid>
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <Grid>
+        <picker:SfDatePicker x:Name="datePicker"
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft"
+                             RelativeView="{x:Reference pickerButton}"/>
+        <Button Text="Open picker"
+                x:Name="pickerButton"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"/>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="7" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.datepicker.IsOpen = true;
-    this.datepicker.RelativeView = pickerButton;
+    this.datePicker.IsOpen = true;
+    this.datePicker.RelativeView = this.pickerButton;
 }
 
 {% endhighlight %}
@@ -163,7 +186,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
    ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode2.png)
 
-### Custom Popup Size
+### Custom popup size
 
 SfDatePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
 
@@ -171,18 +194,25 @@ SfDatePicker allows the display of the Popup to render at any desired size by se
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfdatePicker x:Name="datePicker" 
+<ContentPage
+             . . .
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+    <picker:SfDatePicker x:Name="datePicker"
                          Mode="Dialog"
                          PopupWidth="300"
                          PopupHeight="400"/>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
+using Syncfusion.Maui.Picker;
+
+. . .
 this.datePicker.PopupWidth = 300;
 this.datePicker.PopupHeight = 400;
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
