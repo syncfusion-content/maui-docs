@@ -13,7 +13,7 @@ This document provides information about the changes and new features included i
 
 ## MCP Server
 
-**(v1.0.0) - July 31, 2026**
+**(v1.0.0) - August 3, 2026**
 
 **Breaking Changes**
 
