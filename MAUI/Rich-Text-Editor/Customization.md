@@ -7,7 +7,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# Customization in .NET MAUI Rich Text Editor (SfRichTextEditor)
+# Customization in .NET MAUI Rich Text Editor
 
 The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/maui-controls/maui-rich-text-editor) control provides extensive options for customizing its appearance and functionality, from the editor area to programmatic formatting and hyperlink management.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Xamarin to MAUI Rich Text Editor control | Syncfusion®
+title: Migrating from Xamarin to .NET MAUI Rich Text Editor control | Syncfusion®
 description: Learn about Migrating from Syncfusion® Xamarin Rich Text Editor to Syncfusion® .NET MAUI Rich Text Editor control and more.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
 ---
 
-# Migrating from Xamarin RichTextEditor to .NET MAUI RichTextEditor
+# Migrating from Xamarin Rich Text Editor to .NET MAUI Rich Text Editor
 
 To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.html) to [`.NET MAUI SfRichTextEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.html), we kept all the APIs from Xamarin SfRichTextEditor in MAUI SfRichTextEditor. However, to maintain the consistency of API naming in MAUI, we renamed some of the APIs. The APIs that have been changed in MAUI SfRichTextEditor from Xamarin SfRichTextEditor are detailed as follows.
 
