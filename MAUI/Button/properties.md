@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Button control | Syncfusion®
-description: This section explains the properties and events with Syncfusion® MAUI Button (SfButton) control.
+description: This section explains the properties and events with Syncfusion<sup>&reg;</sup> MAUI Button (SfButton) control.
 platform: maui
 control: SfButton
 documentation: ug
