@@ -9,24 +9,9 @@ documentation: UG
 
 # Visual State Manager in .NET MAUI Tab View (SfTabView)
 
-## Prerequisites
+Use the `Visual State Manager (VSM)` to change `SfTabItem` properties based on the tab's visual state. The applicable visual states are `Selected`, `Normal`, and `Disabled`.
 
-Before using the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), ensure the following NuGet package is installed in your .NET MAUI project:
-
-- `Syncfusion.Maui.TabView`
-
-For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) documentation.
-
-
-## Visual State Manager
-
-Use the `Visual State Manager (VSM)` to change `SfTabItem` properties declaratively in XAML or programmatically in code-behind, based on the tab's visual state. The applicable visual states are `Selected`, `Normal`, and `Disabled`.
-
-Use VSM when you need to apply different appearance values to the same tab depending on its current state—for example, a different `TextColor` when the tab is selected vs. when it is not. For simple, single-state appearance changes, set the properties directly on the `SfTabItem` (see [Tab Item Customization](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)).
-
-## Minimal VSM example
-
-Use the visual state manager to change the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are `Selected`, `Normal`, and `Disable`.
+Use VSM when you need to apply different appearance values to the same tab depending on its current state-for example, a different `TextColor` when the tab is selected vs. when it is not.
 
 {% tabs %}
 {% highlight xaml %}
@@ -256,11 +241,11 @@ public class CustomTabItem : SfTabItem
 
 ![Visual state manager applied to the .NET MAUI Tab View](images/Visual-state-manager.png)
 
-> **Note** View the [VisualStateManagerTabView sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) on GitHub.
+> **Note** View the [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) on GitHub.
 
 ## See also
 
+* [How to customize the text color of the header in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
 * [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
-* [Tab bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
-* [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)
+* [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
