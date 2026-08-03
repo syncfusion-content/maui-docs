@@ -43,11 +43,6 @@ documentation: ug
 		<td>Defines the animation state.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FlowDirection">FlowDirection</a></td>
-		<td>FlowDirection</td>
-		<td>Defines the text flow direction.</td>
-	</tr>
-	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes">FontAttributes</a></td>
 		<td>FontAttributes</td>
 		<td>Defines the font style.</td>

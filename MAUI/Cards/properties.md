@@ -53,7 +53,7 @@ documentation: ug
 		<th>Description</th>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardLayout.html#Syncfusion_Maui_Cards_CardLayout_Tapped">Tapped</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped">Tapped</a></td>
 		<td>EventHandler&lt;TappedEventArgs&gt;</td>
 		<td>Raised when the layout is tapped.</td>
 	</tr>
