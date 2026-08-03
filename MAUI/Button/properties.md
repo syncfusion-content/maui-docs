@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Button control | Syncfusion®
-description: This section explains about the properties and events with Syncfusion® MAUI Button (SfButton) control and more.
+description: This section explains the properties and events with Syncfusion<sup>&reg;</sup> MAUI Button (SfButton) control.
 platform: maui
 control: SfButton
 documentation: ug
@@ -9,104 +9,132 @@ documentation: ug
 
 # .NET MAUI Button API Reference
 
-The Syncfusion® .NET MAUI Button (SfButton) is a highly interactive UI control that can display text, icons, or custom content and supports checkable behavior, styling, and commands.
-
-## API Reference
-
-### Properties
+## Properties
 
 <table>
 	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Type<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Background">Background</a></td>
-		<td>Brush</td>
-		<td>Sets the button background brush.</td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource">BackgroundImageSource</a></td>
+		<td>ImageSource</td>
+		<td>Defines the background image.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Content">Content</a></td>
 		<td>DataTemplate</td>
-		<td>Displays a custom view inside the button.</td>
+		<td>Defines the custom button content.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_CornerRadius">CornerRadius</a></td>
 		<td>CornerRadius</td>
-		<td>Rounds the button corners.</td>
+		<td>Defines the corner radius.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_DashArray">DashArray</a></td>
 		<td>float[]</td>
-		<td>Defines the dashed border pattern for the button.</td>
+		<td>Defines the border dash pattern.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_EnableLiquidGlassEffect">EnableLiquidGlassEffect</a></td>
 		<td>bool</td>
-		<td>Enables the liquid glass effect on the button.</td>
+		<td>Defines whether the liquid glass effect is enabled.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable">IsCheckable</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAttributes">FontAttributes</a></td>
+		<td>FontAttributes</td>
+		<td>Defines the font style.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAutoScalingEnabled">FontAutoScalingEnabled</a></td>
 		<td>bool</td>
-		<td>Allows the button to toggle between checked and unchecked states.</td>
+		<td>Defines whether font auto scaling is enabled.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked">IsChecked</a></td>
-		<td>bool</td>
-		<td>Indicates whether the button is checked.</td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontFamily">FontFamily</a></td>
+		<td>string</td>
+		<td>Defines the font family.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_LineBreakMode">LineBreakMode</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontSize">FontSize</a></td>
+		<td>double</td>
+		<td>Defines the font size.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_HorizontalTextAlignment">HorizontalTextAlignment</a></td>
+		<td>TextAlignment</td>
+		<td>Defines the horizontal text alignment.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageAlignment">ImageAlignment</a></td>
+		<td>Alignment</td>
+		<td>Defines the image alignment.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSize">ImageSize</a></td>
+		<td>double</td>
+		<td>Defines the image size.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource">ImageSource</a></td>
+		<td>ImageSource</td>
+		<td>Defines the button image.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_LineBreakMode">LineBreakMode</a></td>
 		<td>LineBreakMode</td>
-		<td>Controls how button text wraps or truncates.</td>
+		<td>Defines the text line break mode.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Padding">Padding</a></td>
+		<td>Thickness</td>
+		<td>Defines the inner padding.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon">ShowIcon</a></td>
+		<td>bool</td>
+		<td>Defines whether the image is shown.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke">Stroke</a></td>
+		<td>Brush</td>
+		<td>Defines the border brush.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_StrokeThickness">StrokeThickness</a></td>
 		<td>double</td>
-		<td>Sets the button border thickness.</td>
+		<td>Defines the border thickness.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Text">Text</a></td>
+		<td>string</td>
+		<td>Defines the button text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextColor">TextColor</a></td>
 		<td>Color</td>
-		<td>Sets the button text color.</td>
+		<td>Defines the text color.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextTransform">TextTransform</a></td>
-		<td>TextTransform</td>
-		<td>Transforms the button text capitalization.</td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment">VerticalTextAlignment</a></td>
+		<td>TextAlignment</td>
+		<td>Defines the vertical text alignment.</td>
 	</tr>
 </table>
 
-### Events
+## Events
 
 <table>
 	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Type<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
 	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Clicked">Clicked</a> <br/>
-		</td>
-		<td>
-		  EventHandler
-		</td>
-		<td>
-		  Fires when the button is tapped or clicked.
-		</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Clicked">Clicked</a></td>
+		<td>EventHandler&lt;EventArgs&gt;</td>
+		<td>Raised when the button is tapped.</td>
 	</tr>
 </table>
