@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Smart DataGrid control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-smart-datagrid"
 description: Learn about the Syncfusion® .NET MAUI Smart DataGrid (SfSmartDataGrid) control and its AI-assisted features.
 platform: MAUI
 control: SfSmartDataGrid
