@@ -24,7 +24,7 @@ The [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview)
 The `SfListView` allows selecting items on different gestures such as tap, double tap, and hold by setting the [SfListView.SelectionGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionGesture). The default value for the `SelectionGesture` is [TouchGesture.Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html#Syncfusion_Maui_ListView_TouchGesture_Tap).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                         ItemsSource="{Binding MusicInfo}"
@@ -32,7 +32,7 @@ The `SfListView` allows selecting items on different gestures such as tap, doubl
                         SelectionGesture="LongPress"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView;
 // ...
 
@@ -50,7 +50,7 @@ When the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusi
 When the selection mode is `Single`, programmatically select an item by setting the underlying object to the `SfListView.SelectedItem` property. 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 //Perform selection using selected item
 listView.SelectedItem = viewModel.Items[5];
 {% endhighlight %}
@@ -59,7 +59,7 @@ listView.SelectedItem = viewModel.Items[5];
 When the selection mode is `Multiple`, programmatically select more than one item by adding the underlying object to the `SfListView.SelectedItems` property. 
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 //Perform multiple selection using selected items
 public class SelectionViewModel : INotifyPropertyChanged
@@ -113,10 +113,10 @@ N> The `SfListView.SelectedItems` property is of type `ObservableCollection<Obje
 To programmatically select more than one item at runtime, add the underlying objects to the `SfListView.SelectedItems` collection. The following example performs the selection inside a button click handler, after the page's `BindingContext` has been set, so that `viewModel` is available:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <Button Text="Select items" Clicked="OnSelectItemsClicked"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void OnSelectItemsClicked(object sender, EventArgs e)
 {
   // Ensure the BindingContext (ViewModel) is set before this runs,
@@ -132,7 +132,7 @@ N> Adding to `SelectedItems` directly is only valid when `SelectionMode` is `Mul
 To bind the `SelectedItems` property to a ViewModel, use `Mode=TwoWay` so the ViewModel is updated when the user changes the selection through the UI:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView"
                        ItemsSource="{Binding MusicInfo}"
                        SelectedItems="{Binding SelectedItems, Mode=TwoWay}">
@@ -145,7 +145,7 @@ N> Use `Mode=TwoWay` (the default for `SelectedItems`) so that selection changes
 All items of the `SfListView` can be selected using the [SelectAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectAll) method.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %} 
+{% highlight c# tabtitle="C#" %} 
 listView.SelectAll();
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +164,7 @@ The `SfListView` gets all the selected items using the [SfListView.SelectedItems
 The selected items can be cleared by calling the `SelectedItems.Clear()` method.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.SelectedItems.Clear();
 {% endhighlight %}
 {% endtabs %}
@@ -182,7 +182,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 N> `SelectedItemTemplate` is a separate `DataTemplate` that is applied **only to the currently selected item(s)** in addition to (not in place of) the `ItemTemplate`. The `ItemTemplate` continues to render the unselected items, so the selected item is rendered using `SelectedItemTemplate` and the rest are rendered using `ItemTemplate`. This means the selected template must be self-contained; it does not inherit the layout or bindings from `ItemTemplate`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15 16" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}">
    <syncfusion:SfListView.SelectedItemTemplate>
@@ -202,7 +202,7 @@ N> `SelectedItemTemplate` is a separate `DataTemplate` that is applied **only to
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
  listView.SelectedItemTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
@@ -236,7 +236,7 @@ N> `SelectedItemTemplate` is a separate `DataTemplate` that is applied **only to
 To customize the appearance of the selected item or items, use the appearance of [SfListView.SelectedItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate). The following customizations should give you an idea to customize the appearance of selected items in the control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}">
    <syncfusion:SfListView.SelectedItemTemplate>
@@ -270,7 +270,7 @@ To customize the appearance of the selected item or items, use the appearance of
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.SelectedItemTemplate = new DataTemplate(() =>
 {
   var grid1 = new Grid();
@@ -318,12 +318,12 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 The `SfListView` allows you to change the selection background color for the selected items by using the [SfListView.SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
  <syncfusion:SfListView x:Name="listView" 
                         ItemsSource="{Binding MusicInfo}"
                         SelectionBackground="Khaki"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.SelectionBackground = Colors.Khaki;
 {% endhighlight %}
 {% endtabs %}
@@ -339,11 +339,11 @@ The SfListView allows programmatic animation of the selection at runtime by over
 - `SelectionController` and `ListViewItem` are exposed as public types starting with Syncfusion MAUI ListView v21.1.35. In earlier versions these types may be marked `internal`; if you target a version where they are not publicly accessible, you will not be able to subclass `SelectionController` and you will need to either upgrade the NuGet package or use a different mechanism such as the [`SfListView.SelectionBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding Items}"
              SelectionBackground="#f5e8d5">
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView;
 // ...
 
@@ -386,7 +386,7 @@ The `SelectionChanging` event is used for the following use case:
  * Disable selection for a particular item based on the underlying data.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.SelectionChanging += ListView_SelectionChanging;  
 
 private void ListView_SelectionChanging(object sender, ItemSelectionChangingEventArgs e)
@@ -411,7 +411,7 @@ The `SelectionChanged` event is used for the following use cases:
   * Gets the index of the selected item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.SelectionChanged += ListView_OnSelectionChanged;  
 
 private void ListView_OnSelectionChanged(object sender, ItemSelectionChangedEventArgs e)
@@ -430,7 +430,7 @@ N> [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommand) will be triggered when the selection is changed and the [SelectionChangedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommandParameterProperty) is passed as a parameter. The default value of `SelectionChangedCommandParameter` is `null`. If `SelectionChangedCommandParameter` is not defined then `ItemSelectionChangedEventArgs` will be passed as argument.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
 
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
@@ -479,7 +479,7 @@ public class CommandViewModel
 The selection of a particular set of items can be disabled based on the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) of the underlying collections. 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
   public MainPage()
@@ -511,7 +511,7 @@ To bring the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncf
 In linear layout, you can get the row index of `SfListView.SelectedItem` and  resolve if header and group header are used.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16" %}
+{% highlight c# tabtitle="C#" hl_lines="16" %}
 public partial class MainPage : ContentPage
 {
   public MainPage()
@@ -541,7 +541,7 @@ public partial class MainPage : ContentPage
 When performing selection, you can get the index of the selected item by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event from the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DisplayItems.html). 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11 12 13 14" %}
+{% highlight c# tabtitle="C#" hl_lines="9 10 11 12 13 14" %}
 public partial class MainPage : ContentPage
 {
   public MainPage()
@@ -568,7 +568,7 @@ public partial class MainPage : ContentPage
 When [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) contains only images, then the selection color will not be visible in the view when an image is selected. To see selection, add any layout such as `Grid` or `StackLayout` above the image, and set margin or padding to it.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7 8 9" %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView
    ItemsSource="{Binding BookInfo}"
@@ -583,7 +583,7 @@ When [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 </syncfusion:SfListView>  
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13 14 15 16" %}
+{% highlight c# tabtitle="C#" hl_lines="12 13 14 15 16" %}
 public partial class MainPage : ContentPage
 {
     SfListView listView;

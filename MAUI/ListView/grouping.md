@@ -27,7 +27,7 @@ The SfListView allows programmatic grouping by defining the [GroupDescriptor](ht
 * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_Comparer) — `IComparer<object>`: Describes the comparer applied when sorting the group keys returned by `PropertyName` or `KeySelector`. If both `Comparer` and `KeySelector` are set, the `Comparer` is used to sort the groups produced by the `KeySelector`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 7 8" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
@@ -41,7 +41,7 @@ The SfListView allows programmatic grouping by defining the [GroupDescriptor](ht
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 {
   PropertyName = "ContactName",
@@ -58,7 +58,7 @@ ListView supports grouping the items based on custom logic for each [GroupDescri
 The SfListView supports grouping the items based on first character of the value assigned to the property name in [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector). 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7 8" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5 6 7 8" %}
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 {
   PropertyName = "ContactName",
@@ -70,7 +70,7 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
   Comparer = new CustomGroupComparer()
 });
 {% endhighlight %}
-{% highlight c# tabtitle="CustomGroupComparer.cs" %}
+{% highlight c# tabtitle="C#" %}
 using System.Collections.Generic;
 using Syncfusion.Maui.DataSource.Extensions;
 
@@ -94,7 +94,7 @@ The following screenshot shows the output when grouping based on first character
 Group the items by binding multiple properties to the property name of `GroupDescriptor` by using `KeySelector`, in which the group header items can be created with multiple data model objects effectively.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7 8" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5 6 7 8" %}
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 {
   PropertyName = "Designation",
@@ -116,7 +116,7 @@ The following screenshot shows the output when grouping based on more than one p
 Group the items by ignoring case sensitivity using the `KeySelector` property in the `GroupDescriptor`. When returning the `KeySelector`, convert the required property name in the data model to either upper or lower case. The items will be grouped based on the `KeySelector` with the returned value (case-insensitive).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7" %}
+{% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor() 
 { 
   PropertyName = "ContactName", 
@@ -143,7 +143,7 @@ The SfListView allows you to sort the groups based on custom logic applied to ei
 In a custom group comparer, the groups are sorted based on the number of items in each group. Groups are compared using the item count and ordered according to the comparer logic.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9 10 11 12 13" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7 8 9 10 11 12 13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
             xmlns:dataSource="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"
              xmlns:local="clr-namespace:CustomGrouping">
@@ -165,7 +165,7 @@ In a custom group comparer, the groups are sorted based on the number of items i
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="CustomGroupComparer.cs" %}
+{% highlight c# tabtitle="C#" %}
 public class CustomGroupComparer : IComparer<GroupResult>
 {
   public int Compare(GroupResult x, GroupResult y)
@@ -192,7 +192,7 @@ public class CustomGroupComparer : IComparer<GroupResult>
 Add [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) and [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_SortDescriptors) with required properties to group and sort the items of the underlying collection.
 
 {% tabs %}
-{% highlight c# tabtitle="GroupingPage.cs" %}
+{% highlight c# tabtitle="C#" %}
 using System.ComponentModel;
 using Syncfusion.Maui.DataSource;
 using Syncfusion.Maui.ListView;
@@ -222,7 +222,7 @@ public GroupingPage()
 For each group, display the sum of the values of the property from the model object in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) by using converter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+{% highlight xaml tabtitle="XAML" hl_lines="12" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}">
@@ -242,7 +242,7 @@ For each group, display the sum of the values of the property from the model obj
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11 12" %}
+{% highlight c# tabtitle="C#" hl_lines="11 12" %}
 listView.GroupHeaderTemplate = new DataTemplate(() =>
 {
    var grid = new Grid();
@@ -307,7 +307,7 @@ The following screenshot shows grouping by property value sum.
 The total number of items in each group will be displayed in the group header by binding the [Count](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Count) property in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding EmployeeInfo}">
@@ -334,7 +334,7 @@ The total number of items in each group will be displayed in the group header by
  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.GroupHeaderTemplate = new DataTemplate(() => 
 {
   var grid = new Grid();
@@ -387,7 +387,7 @@ The SfListView supports multiple level grouping by adding multiple [GroupDescrip
 N> Multi-level grouping is only applicable for `LinearLayout` in the SfListView.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 13 14" %}
+{% highlight xaml tabtitle="XAML" hl_lines="11 12 13 14" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"
              xmlns:local="clr-namespace:CustomGrouping">
@@ -418,7 +418,7 @@ N> Multi-level grouping is only applicable for `LinearLayout` in the SfListView.
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 4 5 6 7 8 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4 5 6 7 8 9 10" %}
 
 listView.ItemsSource = viewModel.EmployeeInfo;
 listView.ItemSize = 60;
@@ -483,11 +483,11 @@ The following screenshot shows the output for multi-level grouping.
 By default, the groups will be in expanded state in the SfListView. You can expand or collapse the group at runtime by setting the [SfListView.AllowGroupExpandCollapse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AllowGroupExpandCollapse) to `true`. So, when tapping the group header, the group collapses if it is in the expand state and vice-versa.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemSize="70" AllowGroupExpandCollapse="True" 
                      ItemsSource="{Binding contactsInfo}" />          
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.AllowGroupExpandCollapse = true;
 {% endhighlight %}
 {% endtabs %}
@@ -503,7 +503,7 @@ The following screenshot shows the output when the groups are collapsed.
 Expand or collapse all the groups programmatically at runtime by using the [SfListView.ExpandAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandAll) and [SfListView.CollapseAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseAll) methods.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.ExpandAll();
 listView.CollapseAll();
 {% endhighlight %}	
@@ -514,7 +514,7 @@ listView.CollapseAll();
 Expand or collapse a specific group by using the [SfListView.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandGroup_Syncfusion_DataSource_Extensions_GroupResult_) and [SfListView.CollapseGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseGroup_Syncfusion_DataSource_Extensions_GroupResult_) methods.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 var group = listView.DataSource.Groups[0];
 listView.ExpandGroup(group);
 listView.CollapseGroup(group);
@@ -526,7 +526,7 @@ listView.CollapseGroup(group);
 Expand or collapse all the groups by default using the [SfListView.Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView;
 listView.Loaded += ListView_Loaded;
   
@@ -544,7 +544,7 @@ private void ListView_Loaded(object sender, ListViewLoadedEventArgs e)
 To keep any one specific group alone in the expanded state, use the [SfListView.GroupExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanding) event. The particular selected group can be obtained from [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html), which allows you to compare and collapse all other groups while expanding the particular selected group.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private GroupResult expandedGroup;
 
 private void ListView_GroupExpanding(object sender, GroupExpandCollapseChangingEventArgs e)
@@ -578,7 +578,7 @@ The following screenshot shows the output when one group is expanded state.
 You can expand all the groups while grouping by setting the [DataSource.AutoExpandGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_AutoExpandGroups) to `true`. So, when grouping any item, all the groups will be automatically expanded.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}"> 
     <syncfusion:SfListView.DataSource> 
         <data:DataSource AutoExpandGroups="true"> 
@@ -589,7 +589,7 @@ You can expand all the groups while grouping by setting the [DataSource.AutoExpa
     </syncfusion:SfListView.DataSource> 
 </syncfusion:SfListView> 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.DataSource.AutoExpandGroups = true;
 {% endhighlight %}
 {% endtabs %}
@@ -612,17 +612,17 @@ The `GroupExpanding` event is used in the following use case.
 You can cancel the group expansion by setting `GroupExpandCollapseChangingEventArgs.Cancel` to `true`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsInfo}" 
                        GroupExpanding="ListView_GroupExpanding" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.GroupExpanding += ListView_GroupExpanding;
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void ListView_GroupExpanding(object sender, GroupExpandCollapseChangingEventArgs e)
 {
   if (e.Groups[0] == listView.DataSource.Groups[0])
@@ -651,7 +651,7 @@ The [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/S
 You can cancel the group collapsing by setting the `GroupExpandCollapseChangingEventArgs.Cancel` to `true`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsInfo}" 
                        GroupCollapsing="ListView_GroupCollapsing" />
 {% endhighlight %}
@@ -661,7 +661,7 @@ listView.GroupCollapsing += ListView_GroupCollapsing;
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void ListView_GroupCollapsing(object sender, GroupExpandCollapseChangingEventArgs e)
 {
   if (e.Groups[0] == listView.DataSource.Groups[0])
@@ -687,11 +687,11 @@ I> If the sticky group header is enabled and [SfListView.AutoFitMode](https://he
 N> When the `IsStickyGroupHeader` is set to `true`, the `IsStickyHeader` property will be changed to `true` because the header item cannot be scrolled. When the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) is set to `false`, if `IsStickyGroupHeader` is set to `true`, it will be changed to false because the group header item cannot be sticky.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+{% highlight xaml tabtitle="XAML" hl_lines="1" %}
 <syncfusion:SfListView x:Name="listView" ItemSize="70" IsStickyGroupHeader="True" 
                        ItemsSource="{Binding contactsInfo}" />          
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}  
+{% highlight c# tabtitle="C#" %}  
 listView.IsStickyGroupHeader = true;
 {% endhighlight %}
 {% endtabs %}
@@ -705,7 +705,7 @@ The User Interface (UI) for the group header items can be customized by using th
 To customize the view for group header items and bind the [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key) to it, follow the code example.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
   <syncfusion:SfListView.GroupHeaderTemplate>
@@ -723,7 +723,7 @@ To customize the view for group header items and bind the [Key](https://help.syn
  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.GroupHeaderTemplate = new DataTemplate(() =>
 {
   var grid = new Grid { BackgroundColor = Color.FromHex("#E4E4E4") };
@@ -751,7 +751,7 @@ Expand and collapse the group when tapping icon in the group header item by cust
 N> The `BoolToImageConverter` resource used in the XAML below must be declared in a page-level `ResourceDictionary`. Replace `YourAppNamespace` with the namespace where you placed the converter class, and add the `GroupExpand.png` / `GroupCollapse.png` images to your project as embedded resources.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="26" %}
+{% highlight xaml tabtitle="XAML" hl_lines="26" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:CustomGrouping">
     <ContentPage.Resources>
@@ -783,7 +783,7 @@ N> The `BoolToImageConverter` resource used in the XAML below must be declared i
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView = new SfListView();
 viewModel = new ContactsViewModel();
 listView.ItemsSource = viewModel.contactsInfo;
@@ -827,7 +827,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 You can switch the expand or collapse group icon based on [IsExpand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_IsExpand) property using the converter.
 
 {% tabs %}
-{% highlight c# tabtitle="BoolToImageConverter.cs" %}
+{% highlight c# tabtitle="C#" %}
 public class BoolToImageConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -857,10 +857,10 @@ N> The image resources such as `ListViewSample.Images.GroupExpand.png`, `ListVie
 The size of the group header items can be customized by setting the [SfListView.GroupHeaderSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderSize) property. The default value of this property is `40`. This property responds to runtime changes.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}" GroupHeaderSize="60" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.GroupHeaderSize = 60;
 {% endhighlight %}
 {% endtabs %}
@@ -874,7 +874,7 @@ ListView supports selecting each group and items in the group like a CheckBox se
 N> The `opacityConverter` and `GroupingSelectionConverter` resources used in the XAML below must be declared in a page-level `ResourceDictionary` (or in `App.xaml`). Replace `YourAppNamespace` with the namespace where you placed the converter classes.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
     <syncfusion:SfListView.GroupHeaderTemplate>
@@ -899,7 +899,7 @@ N> The `opacityConverter` and `GroupingSelectionConverter` resources used in the
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.GroupHeaderTemplate = new DataTemplate(() => 
 {
   var grid = new Grid();
@@ -936,7 +936,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 The checkBox state in the `GroupHeaderTemplate` will be updated whenever items are selected and deselected by using converter.
 
 {% tabs %}
-{% highlight c# tabtitle="Converter.cs" %}
+{% highlight c# tabtitle="C#" %}
 public class GroupingSelectionConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -986,7 +986,7 @@ public class GroupingSelectionConverter : IValueConverter
 Follow the code example to select and deselect all the group items by tapping the checkbox in the group header.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {
     var image = (sender as Image);
@@ -1040,7 +1040,7 @@ The following screenshot shows the output when checking items in group header.
 You can change the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) appearance like `BackgroundColor` of view while expanding the particular group using the Converter. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"
              xmlns:local="clr-namespace:CustomGrouping">
@@ -1070,7 +1070,7 @@ You can change the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/
  </syncfusion:SfListView> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
  {
@@ -1120,7 +1120,7 @@ N> The binding context for `GroupHeaderTemplate` is `GroupResult`.
 ListView allows you to provide space between the group header items by using the [Margin](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.view.margin?view=xamarin-forms) property of parent view in the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. For example, in the following code snippet, StackLayout is considered as parent view and spacing is provided by setting its margin.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 <syncfusion:SfListView x:Name="listView" ItemSize="90" AllowGroupExpandCollapse="True" 
                      ItemSpacing="2" ItemsSource="{Binding Items}">
 <syncfusion:SfListView.GroupHeaderTemplate> 
@@ -1141,7 +1141,7 @@ ListView allows you to provide space between the group header items by using the
 To select only one item in a group at a time, use the [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html) event. If more than one item in the same group gets selected, already selected item will be removed from `ListView.SelectedItems`. 
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using System.ComponentModel;
 using Syncfusion.Maui.DataSource.Extensions;
 
@@ -1210,7 +1210,7 @@ The following screenshot shows the output when only one item in a group gets sel
 The SfListView allows adding an item at the specific index in a group by finding the group with the help of [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key) value of the group.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.DataSource;
 
 internal void GetGroupResult(object ItemData)
@@ -1248,7 +1248,7 @@ To add an item at a specific index in a group, follow the code example:
 N> The following example relies on `SfListView.GetVisualContainer()` and the internal `ListViewGroupHeaderItem` type. These APIs are intended for advanced scenarios and may change in future releases without being part of the public API contract. Prefer the supported `DataSource` operations whenever possible.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void AddItem_Clicked(object sender, EventArgs e)
 {
   var contact = new Contacts();

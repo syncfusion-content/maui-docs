@@ -33,7 +33,7 @@ N> In the following samples, `ItemSize="120"` is set to use a fixed item size fo
 Set the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto) property to `Auto` to automatically load more items using the [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) and [SfListView.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommandParameter) when the end of the list is reached.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                  ItemSize="120"
@@ -43,7 +43,7 @@ Set the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusi
                  ItemsSource="{Binding Products}"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 listView.LoadMoreOption = LoadMoreOption.Auto;
 listView.LoadMoreCommand = viewModel.LoadMoreItemsCommand;
 
@@ -91,7 +91,7 @@ private void AddProducts(int index, int count)
 Set the `SfListView.LoadMoreOption` property as Manual to load more items manually using the `SfListView.LoadMoreCommand` and `SfListView.LoadMoreCommandParameter` when tapping the load more button at end of the list.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                  ItemSize="120"
@@ -148,7 +148,7 @@ private void AddProducts(int index, int count)
 To load more items only when users interact with the ListView and reach the end of the list, set `SfListView.LoadMoreOption` to [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_AutoOnScroll) and wire up `SfListView.LoadMoreCommand` and `SfListView.LoadMoreCommandParameter`. The `SfListView.LoadMoreCommand` does not execute and the `SfListView.LoadMoreTemplate` is not displayed when the ListView is initially loaded; both are deferred until the user interacts and reaches the end of the list, at which point the visibility of `LoadMoreTemplate` is driven by the command's `CanExecute` method.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                  ItemSize="120"
@@ -158,7 +158,7 @@ To load more items only when users interact with the ListView and reach the end 
                  ItemsSource="{Binding Products}"/>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.LoadMoreOption = LoadMoreOption.AutoOnScroll;
 listView.LoadMoreCommand = viewModel.LoadMoreItemsCommand;
 
@@ -220,7 +220,7 @@ The [SfListView.LoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusio
 By using the [SfListView.IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading) property, you can interchange the visibility of the button and busy indicator when creating the load more view. You can set the value of the `SfListView.IsLazyLoading` property to `true` before adding items to the list and set it to `false`, after adding the items. You can also bind the `IsLazyLoading` property using ViewModel.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private async void LoadMoreItems(object obj)
 {
     var listView = obj as Syncfusion.Maui.ListView.SfListView;
@@ -252,7 +252,7 @@ The SfListView allows customizing the User Interface (UI) of the `Load More` vie
 To customize the load more button, add the custom UI in the [SfListView.LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreTemplate) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoadMore.MainPage"
@@ -283,7 +283,7 @@ To customize the load more button, add the custom UI in the [SfListView.LoadMore
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -307,7 +307,7 @@ listView.LoadMoreTemplate = new DataTemplate(() =>
 To customize the loading indicator, add the custom UI in the [SfListView.LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreTemplate) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoadMore.MainPage"
@@ -339,7 +339,7 @@ To customize the loading indicator, add the custom UI in the [SfListView.LoadMor
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -369,7 +369,7 @@ listView.LoadMoreTemplate = new DataTemplate(() =>
 `SfListView` allows customizing both the height of the load more row and the size of the indicator rendered inside it. Use the [SfListView.QueryItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_QueryItemSize) event to size the row, and assign `HeightRequest` / `WidthRequest` on the elements inside the `LoadMoreTemplate` to size the indicator.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 this.listView.QueryItemSize += ListView_QueryItemSize;
 
 private void ListView_QueryItemSize(object sender,Syncfusion.Maui.ListView.QueryItemSizeEventArgs e)
@@ -386,7 +386,7 @@ private void ListView_QueryItemSize(object sender,Syncfusion.Maui.ListView.Query
 To customize the size of the loading indicator, add the custom UI to the [SfListView.LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreTemplate) property and assign the height and width for the grid and loading indicator.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="23" %}
+{% highlight xaml tabtitle="XAML" hl_lines="23" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoadMore.MainPage"
@@ -419,7 +419,7 @@ To customize the size of the loading indicator, add the custom UI to the [SfList
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -457,7 +457,7 @@ The `totalItems` field is the size of the data source the view model is paging t
 The following snippet shows the **only** changes required to disable load more at runtime relative to the [Load more automatically](#load-more-automatically) sample. Everything else (the SfListView XAML, the `AddProducts` helper, the `LoadMoreItems` method) stays the same and is not repeated here.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="C#" %}
 //New: the upper bound on the number of items in the data source.
 public int totalItems = 22;
 
@@ -495,7 +495,7 @@ This section covers advanced recipes that build on the [Auto](#load-more-automat
 Use this pattern when the data source is paged (the server returns a fixed-size window) and the user can keep scrolling indefinitely. This section focuses on the view-model wiring that backs the infinite-scroll behavior; for the XAML setup see [Load more automatically](#load-more-automatically) (use `LoadMoreOption="Auto"` together with the view model below).
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="C#" %}
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -547,7 +547,7 @@ public class LoadMoreViewModel : INotifyPropertyChanged
 The `SfListView` allows loading more items automatically when reaching the top of the list by showing the busy indicator by loading in the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
    <syncfusion:SfListView x:Name="ListView" 
                         IsLazyLoading="True" 
@@ -566,7 +566,7 @@ The `SfListView` allows loading more items automatically when reaching the top o
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
   MainPageViewModel ViewModel;
@@ -596,7 +596,7 @@ public partial class MainPage : ContentPage
 
 Insert each new item in the 0th position of the underlying collection bound to the `SfListView.ItemsSource` property.
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -670,7 +670,7 @@ public partial class MainPage : ContentPage
 The `SfListView` allows loading more items when tapping the button loaded in the `HeaderTemplate` when reaching the top of the list and shows the busy indicator until the items are added to the collection.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
 <syncfusion:SfListView x:Name="ListView"
                        IsLazyLoading="True"
@@ -690,7 +690,7 @@ The `SfListView` allows loading more items when tapping the button loaded in the
 </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
   MainPageViewModel ViewModel;
@@ -733,7 +733,7 @@ public partial class MainPage : ContentPage
 Insert each new item in the 0th position of the underlying collection bound to the `SfListView.ItemsSource` property.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
   MainPageViewModel ViewModel;
@@ -793,7 +793,7 @@ The recommended way to disable `LoadMoreCommand` is to return `false` from the `
 A guard inside `Execute` is still useful as a safety net (for example, when the underlying collection is mutated from another thread), but it should not be the primary mechanism for disabling load more.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="C#" %}
 LoadMoreItemsCommand = new Command<object>(LoadMoreItems, CanLoadMoreItems);
 
 private bool CanLoadMoreItems(object obj)
