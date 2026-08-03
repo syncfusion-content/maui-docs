@@ -591,36 +591,36 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView">CollapseAllDetailsView()</a></td>
 		<td>void</td>
-		<td>Defines the method that collapses all details views.</td>
+		<td>Collapses all details views.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView">ExpandAllDetailsView()</a></td>
 		<td>void</td>
-		<td>Defines the method that expands all details views.</td>
+		<td>Expands all details views.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells">GetSelectedCells()</a></td>
 		<td>void</td>
-		<td>Defines the method that returns the selected cells.</td>
+		<td>Returns the selected cells.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit">EndEdit()</a></td>
 		<td>void</td>
-		<td>Defines the method that ends the current editing session.</td>
+		<td>Ends the current editing session.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ClearSelection">ClearSelection()</a></td>
 		<td>void</td>
-		<td>Defines the method that clears the current selection.</td>
+		<td>Clears the current selection.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_">ScrollToColumnIndex(int)</a></td>
 		<td>void</td>
-		<td>Defines the method that scrolls to the specified column index.</td>
+		<td>Scrolls to the specified column index.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_">ScrollToRowIndex(int)</a></td>
 		<td>void</td>
-		<td>Defines the method that scrolls to the specified row index.</td>
+		<td>Scrolls to the specified row index.</td>
 	</tr>
 </table>

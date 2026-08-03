@@ -131,6 +131,6 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_OnValueChanged_System_String_System_String_">OnValueChanged(string, string)</a></td>
 		<td>void</td>
-		<td>Defines the value-changed behavior.</td>
+		<td>Invoked when the value of the control changes.</td>
 	</tr>
 </table>
