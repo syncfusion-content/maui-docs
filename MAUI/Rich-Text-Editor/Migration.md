@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Rich Text Editor control | Syncfusion®
+title: Migrating from Xamarin to MAUI Rich Text Editor control | Syncfusion®
 description: Learn about Migrating from Syncfusion® Xamarin Rich Text Editor to Syncfusion® .NET MAUI Rich Text Editor control and more.
 platform: maui 
 control: Rich Text Editor
