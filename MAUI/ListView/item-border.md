@@ -13,7 +13,7 @@ This section explains how to customize item borders in the `.NET MAUI ListView` 
 
 ## Enable Item Border
 
-The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each item by setting the [ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorderProperty) property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each item by setting the [ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorder) property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
 
 <table>
   <thead>
@@ -29,19 +29,19 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
     </tr>
     <tr>
       <td>{{'[ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty)'| markdownify }}</td>
-      <td>Sets the color of the item border.
+      <td>Sets the color of the item border.</td>
     </tr>
     <tr>
       <td>{{'[ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty)'| markdownify }}</td>
-      <td>Defines the border thickness for each side of the item (per-side <code>double</code> values).
+      <td>Defines the border thickness for each side of the item (per-side <code>double</code> values).</td>
     </tr>
     <tr>
       <td>{{'[ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty)'| markdownify }}</td>
-      <td>Sets the margin around the border within the item.
+      <td>Sets the margin around the border within the item.</td>
     </tr>
     <tr>
       <td>{{'[ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty)'| markdownify}}</td>
-      <td>Sets the corner radius of the item border.
+      <td>Sets the corner radius of the item border.</td>
     </tr>
   </tbody>
 </table>
@@ -49,7 +49,7 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
 N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView"
                        ShowItemBorder="True"
                        ItemsSource="{Binding BookInfo}">
@@ -64,7 +64,7 @@ N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform 
 </syncfusion:SfListView>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 listView.ShowItemBorder = true;
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +81,7 @@ After enabling the item border, you can customize its appearance using the follo
 - [ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty): Sets the corner radius of the border.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7" %}
 <syncfusion:SfListView x:Name="listView"
                        ItemSize="60"
                        ShowItemBorder="True"
@@ -101,7 +101,7 @@ After enabling the item border, you can customize its appearance using the follo
 </syncfusion:SfListView>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+{% highlight c# tabtitle="C#" hl_lines="1 2 3 4 5" %}
 listView.ShowItemBorder = true;
 listView.ItemBorderColor = Colors.Black;
 listView.ItemBorderThickness = new Thickness(2);
@@ -138,23 +138,23 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
   </thead>
   <tbody>
     <tr>
-      <td>{{'[ShowGroupHeaderBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowGroupHeaderBorderProperty)'| markdownify }}</td>
+      <td>{{'[ShowGroupHeaderBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowGroupHeaderBorder)'| markdownify }}</td>
       <td>Enables or disables the visibility of group header borders. <em>(Default: false)</em></td>
     </tr>
     <tr>
-      <td>{{'[GroupHeaderBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderColorProperty)'| markdownify }}</td>
+      <td>{{'[GroupHeaderBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderColor)'| markdownify }}</td>
       <td>Sets the color of the group header border. <em>(Default: <code>Colors.Black</code>)</em></td>
     </tr>
     <tr>
-      <td>{{'[GroupHeaderBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderThicknessProperty)'| markdownify }}</td>
+      <td>{{'[GroupHeaderBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderThickness)'| markdownify }}</td>
       <td>Defines the border thickness for each side of the group header (per-side <code>double</code> values). <em>(Default: <code>new Thickness(1)</code>)</em></td>
     </tr>
     <tr>
-      <td>{{'[GroupHeaderBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderMarginProperty)'| markdownify }}</td>
+      <td>{{'[GroupHeaderBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderMargin)'| markdownify }}</td>
       <td>Sets the margin around the border within the group header. <em>(Default: <code>new Thickness(0)</code>)</em></td>
     </tr>
     <tr>
-      <td>{{'[GroupHeaderBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderRadiusProperty)'| markdownify }}</td>
+      <td>{{'[GroupHeaderBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderBorderRadius)'| markdownify }}</td>
       <td>Sets the corner radius of the group header border. <em>(Default: <code>new CornerRadius(0)</code>)</em></td>
     </tr>
   </tbody>
@@ -165,7 +165,7 @@ N> `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness
 ### XAML Example
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <syncfusion:SfListView x:Name="listView"
                        GroupHeaderSize="50"
                        ShowGroupHeaderBorder="True"
@@ -183,7 +183,7 @@ N> `GroupHeaderBorderRadius` is applicable only when `GroupHeaderBorderThickness
 </syncfusion:SfListView>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="1" %}
 listView.ShowGroupHeaderBorder = true;
 {% endhighlight %}
 {% endtabs %}
@@ -200,7 +200,7 @@ After enabling the group header border, you can customize its appearance using t
 - `GroupHeaderBorderRadius`: Sets the corner radius of the border.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7" %}
 <syncfusion:SfListView x:Name="listView"
                        GroupHeaderSize="60"
                        ShowGroupHeaderBorder="True"
@@ -220,7 +220,7 @@ After enabling the group header border, you can customize its appearance using t
 </syncfusion:SfListView>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5" %}
+{% highlight c# tabtitle="C#" hl_lines="1 2 3 4 5" %}
 listView.ShowGroupHeaderBorder = true;
 listView.GroupHeaderBorderColor = Colors.Black;
 listView.GroupHeaderBorderThickness = new Thickness(2);

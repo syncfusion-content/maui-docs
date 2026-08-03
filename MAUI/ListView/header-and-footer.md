@@ -18,7 +18,7 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
 The following example defines both a header and a footer for the `SfListView`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <syncfusion:SfListView x:Name="listView"
                     ItemsSource="{Binding BookInfo}"
@@ -45,7 +45,7 @@ The following example defines both a header and a footer for the `SfListView`.
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" %}
+{% highlight c# tabtitle="C#" hl_lines="8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45" %}
 public partial class MainPage : ContentPage
 {
     SfListView listView;
@@ -114,10 +114,10 @@ public partial class MainPage : ContentPage
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows you to customize the size of the header and footer items by setting the [SfListView.HeaderSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderSize) and [SfListView.FooterSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterSize) properties. The default value is 40. These properties can be customized at runtime.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" HeaderSize="70" FooterSize="60" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.HeaderSize = 70;
 listView.FooterSize = 60;
 {% endhighlight %}
@@ -130,10 +130,10 @@ N> For vertical orientation, the header and footer size are considered as height
 The `SfListView` allows you to stick the header and footer items to view by enabling the [SfListView.IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) and [SfListView.IsStickyFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter) properties. If the `SfListView.IsStickyHeader` is `true`, the header item will stick to the top (or leading edge in horizontal orientation) of the `SfListView`. If the `SfListView.IsStickyFooter` is `true`, the footer item will stick to the bottom (or trailing edge in horizontal orientation) of the `SfListView`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyHeader="true" IsStickyFooter="true" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.IsStickyHeader = true;
 listView.IsStickyFooter = true;
 {% endhighlight %}
@@ -151,10 +151,10 @@ The `StickyFooterPosition` property accepts values of type [ListViewFooterPositi
 * [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterPosition.html#Syncfusion_Maui_ListView_ListViewFooterPosition_Default): The footer item will be positioned at the bottom of the ListView.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyFooter="True" StickyFooterPosition="Body"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.IsStickyFooter = true;
 listView.StickyFooterPosition = ListViewFooterPosition.Body;
 {% endhighlight %}
@@ -171,7 +171,7 @@ N> This API is applicable when `IsStickyFooter` is enabled.
 The `SfListView` allows you to create a tab view layout by customizing the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) to load any view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:HeaderFooterSample.ViewModels">
     <ContentPage.BindingContext>
@@ -245,7 +245,7 @@ The `SfListView` allows you to create a tab view layout by customizing the [Head
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
     // Flat collection of BookInfo items (used by the "Informations" tab).

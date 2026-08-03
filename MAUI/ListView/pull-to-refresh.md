@@ -22,13 +22,13 @@ The `SfListView` supports refreshing the data in view when performing the pull-t
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 xmlns:ListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
 xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
     
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.PullToRefresh;
@@ -46,7 +46,7 @@ The final output when hosting SfListView as pullable content is shown below.
 ![Syncfusion .NET MAUI ListView with PullToRefresh hosted with slide on top transition mode.](Images/pulltorefresh/net-maui-listview-slideontop.gif)
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 23 33 35" %}
+{% highlight xaml tabtitle="XAML" hl_lines="21 23 33 35" %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -93,7 +93,7 @@ The final output when hosting SfListView as pullable content is shown below.
 </ContentPage>
     
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.PullToRefresh;
