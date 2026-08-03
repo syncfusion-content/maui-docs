@@ -7,7 +7,7 @@ control: Rotator
 documentation: ug
 ---
 
-# .NET MAUI Rotator (SfRotator) Overview
+# Overview of .NET MAUI Rotator
 
 The Syncfusion® [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) is a data control used to display image data and navigate through them. The images can be selected either by [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or by [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) support.
 

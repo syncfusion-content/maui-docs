@@ -8,7 +8,7 @@ control: Rating
 documentation: ug
 
 ---
-# .NET MAUI Rating (SfRating) Overview
+# Overview of .NET MAUI Rating
 
 The Syncfusion® [.NET MAUI Rating](https://www.syncfusion.com/maui-controls/maui-rating) (SfRating) control provides the number of stars that represents a rating. Also used to configure the item size, item spacing and the number of displayed items in the SfRating control. Essential .NET MAUI Rating control can be used in various scenarios like movie rating, rating the application etc.
 

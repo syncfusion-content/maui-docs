@@ -7,7 +7,7 @@ control: SfRadialMenu
 documentation: UG
 ---
 
-# .NET MAUI Radial Menu (SfRadialMenu) Overview
+# Overview of .NET MAUI Radial Menu
 
  The Syncfusion<sup>&reg;</sup> [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu) control displays a hierarchical menu in a circular layout, optimized for touch-enabled devices. It is typically used as a context menu and can expose more menu items in the same space than traditional menus.
 

@@ -7,9 +7,11 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Overview of .NET MAUI Calendar (SfCalendar)
+# Overview of .NET MAUI Calendar
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Calendar ([SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar)) is a calendar control that allows users to select a Single date, Multiple dates, or a Range of dates. It provides various view options such as a Month, Year, Decade, and Century, which allow users to quickly navigate to the desired date. It also supports minimum dates, maximum dates, enable past dates, and disabled dates to restrict the date selection.
+
+![Multiple views in .NET MAUI Calendar.](images/overview/maui-multiple-views.png)
 
 ## Business use cases
 
@@ -22,43 +24,23 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Calendar ([SfCalendar](https://www.syncfusi
 
 - **Multiple calendar view modes** allow switching between Month, Year, Decade, and Century views for easy navigation.
 
-   ![Multiple views in .NET MAUI Calendar.](images/overview/maui-multiple-views.png)
-
 - **Quick navigation** enables moving across different date levels efficiently using hierarchical calendar views.
 
 - **Enable and disable built-in view switching** allows enabling or restricting navigation between calendar views based on interaction.
 
-   ![Single selection in .NET MAUI Calendar.](images/overview/maui-single-selection.png)
-
 - **Date selection** support selecting single, multiple, range, or multiple range of dates programmatically or through user interaction.
-
-   ![Selection Modes in .NET MAUI Calendar.](images/overview/maui-selection-modes.png)
 
 - **Limit date selection** allows limiting selectable dates using minimum and maximum range values.
 
-   ![Limit date selection in .NET MAUI Calendar.](images/overview/maui-min-max-date.png)
-
 - **Change first day of week** allows setting the starting day of the week based on regional or application requirements.
-
-   ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.png)
 
 - **Selectable day predicate** allows disabling specific dates such as weekends or holidays to control user interaction.
 
-   ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.png)
-
 - **Highlight weekends and special dates** enables highlighting weekends and special dates using custom styles and colors.
-
-   ![Weekend days highlighted in .NET MAUI Calendar.](images/overview/maui-weekends-dates.png)
-
-   ![Special dates highlighted in .NET MAUI Calendar.](images/overview/maui-special-dates.png)
 
 - **Right to left (RTL)** allows adapting the layout for RTL languages such as Arabic and Hebrew.
 
-   ![Right-to-left rendering in .NET MAUI Calendar.](images/overview/maui-rtl.png)
-
-- **Globalization** ensure that date and time values are displayed based on regional and cultural settings.
-
-   ![Globalization for month view in .NET MAUI Calendar.](images/overview/maui-month-view-globalization.png)
+- **Globalization** ensures that date and time values are displayed based on regional and cultural settings.
 
 ## Globalization
 
