@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPopupLayout to .NET MAUI SfPopup | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin Popup to Syncfusion® .NET MAUI Popup control and more.
+title: Migrate from Xamarin SfPopupLayout to .NET MAUI SfPopup | Syncfusion®
+description: Learn here all about Migrating from Syncfusion® Xamarin SfPopupLayout to Syncfusion® .NET MAUI SfPopup control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
----  
+---
 
 # Migrate from Xamarin.Forms SfPopupLayout to .NET MAUI SfPopup
 
-To migrate easier from Xamarin.Forms SfPopupLayout to .NET MAUI Popup, we kept most of the APIs from Xamarin SfPopupLayout in MAUI SfPopup. However, to maintain the consistency of API naming in MAUI SfPopup, we renamed some of the APIs. The APIs that have been changed in MAUI SfPopup from Xamarin SfPopupLayout are detailed as follows.
+To make migration easier from Xamarin.Forms SfPopupLayout to .NET MAUI SfPopup, we kept most of the APIs from Xamarin SfPopupLayout in .NET MAUI SfPopup. However, to maintain the consistency of API naming in .NET MAUI SfPopup, we renamed some of the APIs. The APIs that have been changed in .NET MAUI SfPopup from Xamarin SfPopupLayout are detailed as follows.
 
 ## Namespaces 
 
@@ -68,17 +68,21 @@ public partial class MainPage : ContentPage
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">            
-    <StackLayout>
-            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-        Clicked="ClickToShowPopup_Clicked"/>
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"
+                VerticalOptions="Start" HorizontalOptions="Fill"
+                Clicked="ClickToShowPopup_Clicked"/>
             <syncfusion:SfPopup x:Name="popup"/>
         </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
+using Syncfusion.Maui.Popup;
+
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -107,7 +111,7 @@ public partial class MainPage : ContentPage
 <tr>
 <td>SfPopupLayout</td>
 <td>SfPopup</td>
-<td>Displays an alert message with customizable buttons or loads a desired view within a pop-up window.</td></tr>
+<td>Displays an alert message with customizable buttons or loads a desired view within a popup window.</td></tr>
 <tr>
 <td>PopupView</td>
 <td>Nil</td>
@@ -116,7 +120,7 @@ public partial class MainPage : ContentPage
 
 ## Properties
 
-N> All the properties from the Xamarin.Forms PopupView class is moved to the MAUI SfPopup class itself.
+N> All the properties from the Xamarin.Forms PopupView class are moved to the .NET MAUI SfPopup class itself.
 
 <table>
 <tr>
@@ -150,15 +154,15 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <tr>
 <td>{{'[PopupStyle.BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderColor)'| markdownify }}</td>
 <td>{{'[PopupStyle.Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_Stroke)'| markdownify }}</td>
-<td>Gets or sets the border color for the PopupView</td></tr>
+<td>Gets or sets the border color for the PopupView.</td></tr>
 <tr>
 <td>{{'[PopupStyle.BorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderThickness)'| markdownify }}</td>
 <td>{{'[PopupStyle.StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_StrokeThickness)'| markdownify }}</td>
-<td>Gets or sets the border thickness for the PopupView</td></tr>
+<td>Gets or sets the border thickness for the PopupView.</td></tr>
 <tr>
 <td>{{'[PopupStyle.OverlayOpacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_OverlayOpacity)'| markdownify }}</td>
 <td>{{'[PopupStyle.OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor)'| markdownify }}</td>
-<td>You can achieve by setting value using rgba value like below,
+<td>You can achieve this by setting the value using a color with alpha, as shown below.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -171,21 +175,21 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 
 </td></tr>
 <tr>
-<td>SfPopuplayoutResources.Title</td>
+<td>SfPopupLayoutResources.Title</td>
 <td>SfPopupResource.Title</td>
-<td>Gets the TitleLabelText.</td></tr>
+<td>Resource key for the popup title text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.Popup_message</td>
+<td>SfPopupLayoutResources.Popup_message</td>
 <td>SfPopupResource.Message</td>
-<td>Gets the MessageView text.</td></tr>
+<td>Resource key for the popup message text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.ACCEPT</td>
+<td>SfPopupLayoutResources.ACCEPT</td>
 <td>SfPopupResource.AcceptButtonText</td>
-<td>Gets the Accept button text.</td></tr>
+<td>Resource key for the accept button text.</td></tr>
 <tr>
-<td>SfPopuplayoutResources.DECLINE</td>
+<td>SfPopupLayoutResources.DECLINE</td>
 <td>SfPopupResource.DeclineButtonText</td>
-<td>Gets the Decline button text.</td></tr>
+<td>Resource key for the decline button text.</td></tr>
 </table>
 
 ## Enums 
@@ -198,7 +202,7 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <tr>
 <td>{{'[AutoSizeMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AutoSizeMode.html)'| markdownify }}</td>
 <td>{{'[PopupAutoSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAutoSizeMode.html)'| markdownify }}</td>
-<td>Defines constant that specify how the PopupView is Sized.</td></tr>
+<td>Defines constants that specify how the popup is sized.</td></tr>
 <tr>
 <td>{{'[AppearanceMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AppearanceMode.html)'| markdownify }}</td>
 <td>{{'[PopupButtonAppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html)'| markdownify }}</td>
@@ -206,11 +210,11 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <tr>
 <td>{{'[BlurIntensity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.BlurIntensity.html)'| markdownify }}</td>
 <td>{{'[PopupBlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html)'| markdownify }}</td>
-<td>Defines constants that specifies the intensity of the blur effect applied to the overlay.</td></tr>
+<td>Defines constants that specify the intensity of the blur effect applied to the overlay.</td></tr>
 <tr>
 <td>{{'[OverlayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.OverlayMode.html)'| markdownify }}</td>
 <td>{{'[PopupOverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOverlayMode.html)'| markdownify }}</td>
-<td>Defines constants that specifies whether the overlay should be transparent or blurred.</td></tr>
+<td>Defines constants that specify whether the overlay should be transparent or blurred.</td></tr>
 <tr>
 <td>{{'[RelativePosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.RelativePosition.html)'| markdownify }}</td>
 <td>{{'[PopupRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html)'| markdownify }}</td>
@@ -219,4 +223,4 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 
 ## Upcoming Features
 
-* Popup position - ShowAtTouchPoint()
+* Popup position - `ShowAtTouchPoint()`: A new method to display the popup at the point where the user touched the screen.

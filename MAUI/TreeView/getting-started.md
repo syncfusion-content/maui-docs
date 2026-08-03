@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI TreeView Control | Syncfusion®
+canonical_url: "https://www.syncfusion.com/maui-controls/maui-treeview"
 description: Learn here about getting started with the Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
 platform: MAUI
 control: SfTreeView
@@ -108,7 +109,7 @@ Add the following namespace to your XAML or C#.
 {% highlight xaml %}
 
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView
+xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView"
 
 {% endhighlight %}
 {% highlight c# %}

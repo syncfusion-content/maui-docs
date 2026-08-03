@@ -35,9 +35,11 @@ You can customize the rate of change of a parameter over time or the animation s
                         AnimationEasing="SinOut">
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="1,2" %}
+using Microsoft.Maui.EasingFunctions;
+
 var accordion = new SfAccordion();
-accordion.AnimationEasing = ExpanderAnimationEasing.SinOut;
+accordion.AnimationEasing = Easing.SinOut;
 {% endhighlight %}
 {% endtabs %}
 

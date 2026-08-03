@@ -25,7 +25,8 @@ When `ExpandActionTarget` is set to `Node`, tap input on either the content area
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfTreeView x:Name="treeView" ExpandActionTarget="Node"/>
+<syncfusion:SfTreeView x:Name="treeView" 
+                       ExpandActionTarget="Node"/>
 
 {% endhighlight %}
 {% highlight c# %}

@@ -9,7 +9,8 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Expander (SfExpander)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Expander (SfExpander) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Expander (SfExpander) control.
+
 
 ## Apply liquid glass effect
 
@@ -21,13 +22,19 @@ To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfExpander](https://
 
 For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
+Make sure the `SfExpander` is placed inside the `SfGlassEffectView` so the effect can tint both the header and the content.
+
 ### Step 2: Enable the liquid glass effect on Expander
 
 Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_EnableLiquidGlassEffect) property to `true` in the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control. When enabled, the effect is applied to the header and content, providing a smooth and engaging user experience.
 
+`EnableLiquidGlassEffect` works whether the expander is expanded or collapsed.
+
 ### Step 3: Customize the background
 
-To achieve a glass like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+If you use a non-transparent background, the glass effect may appear less translucent.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control:
 
@@ -528,10 +535,10 @@ this.Content = root;
 {% endhighlight %}
 {% endtabs %}
 
-This The following screenshot illustrates SfDataGrid within SfGlassEffectView.
+The following screenshot illustrates SfExpander within SfGlassEffectView.
 
-<img alt="Syncfusion .NET MAUI Expander with liquid glass support" src="Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png" Width="404" />   
+![Syncfusion .NET MAUI Expander with liquid glass support](Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png) 
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is available only in `.NET 10`.

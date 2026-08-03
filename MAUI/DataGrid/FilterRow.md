@@ -10,13 +10,12 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Filter Row in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterRowPosition) property.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterRowPosition) property. Available positions include `FixedTop`, `FixedBottom`, and `Scrollable`.
 
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        FilterRowPosition="FixedTop"
-                       AllowEditing="True"
                        SelectionMode="Single"
                        ItemsSource="{Binding Orders}" >
 {% endhighlight %}
@@ -25,7 +24,6 @@ SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.FilterRowPosition = DataGridFilterRowPosition.FixedTop;
-dataGrid.AllowEditing = true;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
 
 this.Content = dataGrid;
@@ -33,6 +31,8 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="MAUI DataGrid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-basic.png" width="404" />   
+
+## Getting the FilterRow index
 
 Retrieve the row index of the FilterRow using the [SfDataGrid.GetFilterRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Helper.GridIndexResolver.html#Syncfusion_Maui_DataGrid_Helper_GridIndexResolver_GetFilterRowIndex_Syncfusion_Maui_DataGrid_SfDataGrid_) method.
 
@@ -52,7 +52,17 @@ bool isFilterRowIndex = this.dataGrid.IsFilterRowIndex(1);
 
 ## Built-in editors
 
-The FilterRow automatically initializes editors that correspond to the underlying property type, simplifying data filtering. Customize these default editors by setting the `DataGridColumn.FilterRowEditorType` property.
+The FilterRow automatically assigns an appropriate editor based on the column's data type. The following table shows the default editor for each data type, and how to override it:
+
+**Default editor assignment:**
+- **String columns**: TextBox
+- **Numeric columns** (int, double, decimal): Numeric editor
+- **Boolean columns**: CheckBox
+- **DateTime columns**: DateTime picker
+
+You can override the default editor by explicitly setting the `FilterRowEditorType` property.
+
+The FilterRow automatically initializes editors that correspond to the underlying property type, simplifying data filtering. Customize these default editors by setting the `DataGridColumn.FilterRowEditorType` property. Both XAML and C# use string literal values (e.g., `"MultiSelectComboBox"`).
 
 {% tabs %}
 {% highlight XAML %}
@@ -65,9 +75,9 @@ The FilterRow automatically initializes editors that correspond to the underlyin
 {% highlight c# %}
 
 var countryColumn = new DataGridTextColumn();
-customerIdColumn.HeaderText = "Ship Country";
-customerIdColumn.MappingName = "Country";
-customerIdColumn.FilterRowEditorType = "MultiSelectComboBox";
+countryColumn.HeaderText = "Ship Country";
+countryColumn.MappingName = "Country";
+countryColumn.FilterRowEditorType = "MultiSelectComboBox";
 
 dataGrid.Columns.Add(countryColumn);
 
@@ -89,37 +99,37 @@ Below are the built-in FilterRow editor types supported in SfDataGrid.
 <td> TextBox </td>
 <td> SfDataGridEntry </td>
 <td> DataGridFilterRowTextBoxRenderer </td>
-<td> Enables filtering for string data. </td>
+<td> Filters string data. </td>
 </tr>
 <tr>
 <td> Numeric</td>
 <td> SfNumericEntry </td>
 <td> DataGridFilterRowNumericBoxRenderer </td>
-<td> Facilitates filtering for numeric data.</td>
+<td> Filters numeric data (int, double, decimal, etc.).</td>
 </tr>
 <tr>
 <td> ComboBox </td>
 <td> SfComboBox </td>
 <td> DataGridFilterRowComboBoxRenderer </td>
-<td> Allows selection of a single value for filtering from a dropdown. </td>
+<td> Selects a single value for filtering from a dropdown. </td>
 </tr>
 <tr>
 <td> MultiSelectComboBox </td>
 <td> SfComboBox </td>
 <td> DataGridFilterRowMultiSelectRenderer </td>
-<td> Permits selection of multiple values for filtering from a dropdown. </td>
+<td> Selects multiple values for filtering from a dropdown. </td>
 </tr>
 <tr>
 <td> CheckBox </td>
 <td> SfCheckBox </td>
 <td> DataGridFilterRowCheckBoxRenderer </td>
-<td> Supports filtering of Boolean data. </td>
+<td> Filters Boolean data. </td>
 </tr>
 <tr>
 <td> DateTime </td>
 <td> DatePicker </td>
 <td> DataGridFilterRowDateRenderer </td>
-<td> Provides filtering capabilities for DateTime data. </td>
+<td> Filters DateTime data. </td>
 </tr>
 </table>
 
@@ -209,7 +219,7 @@ Below are the filter conditions supported by different filter row editors in SfD
 </tr>
 </table>
 
-Modify the default FilterRow condition for any specific column using the `DataGridColumn.FilterRowCondition` property.
+Customize the default FilterRow condition for any specific column by setting the `DataGridColumn.FilterRowCondition` property using the `FilterRowCondition` enum (e.g., `FilterRowCondition.LessThan`, `FilterRowCondition.Contains`).
 
 {% tabs %}
 {% highlight XAML %}
@@ -328,6 +338,18 @@ You can customize the basic styling of the FilterRow in SfDataGrid using the Def
                               FilterRowFontSize="10" />
 </syncfusion:SfDataGrid.DefaultStyle>
 {% endhighlight %}
+{% highlight c# %}
+var style = new DataGridStyle
+{
+    FilterRowFontAttributes = FontAttributes.Bold,
+    FilterIconHoverBackground = Colors.AliceBlue,
+    FilterRowBackground = Colors.Yellow,
+    FilterRowTextColor = Colors.CadetBlue,
+    FilterRowFontSize = 10
+};
+
+dataGrid.DefaultStyle = style;
+{% endhighlight %}
 {% endtabs %}
 
 ### Filter row style
@@ -344,8 +366,9 @@ Customize the appearance of the filter row by defining a style with TargetType [
 
 <img alt="Customizing Filter Row Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-style.png" width="404" />  
 
-### Customizing filter row cell
-Further customize the filter row cell's appearance through the `FilterRowCellStyle` property.
+### Styling filter row cells
+
+Customize individual filter row cell appearance through the `FilterRowCellStyle` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -366,10 +389,15 @@ Further customize the filter row cell's appearance through the `FilterRowCellSty
 
 ## Customizing filter row editors
 
+SfDataGrid provides several approaches for customizing filter row editors based on your needs:
+- Override the default renderer to modify existing editor behavior
+- Create a custom renderer for completely new filter logic
+- Override the MultiSelectRenderer to display editors immediately on load
+
 ### Customizing the filter row renderer
 
-[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to customize the filter row renderer behavior by overriding the corresponding renderer associated with the filter row cell. Each renderer have a set of virtual methods for handling the filter row behaviors. You can also create new renderers instead of overriding the existing renderer.
-You can customize the default TextBox editor behavior by overriding `DataGridFilterRowTextBoxRenderer` class and add the custom renderer to `FilterRowCellRenderers`.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to customize the filter row renderer behavior by overriding the corresponding renderer associated with the filter row cell. Each renderer has a set of virtual methods for handling the filter row behaviors. You can also create new renderers instead of overriding the existing renderer.
+You can customize the default TextBox editor behavior by overriding `DataGridFilterRowTextBoxRenderer` class and add the custom renderer to `FilterRowCellRenderers`. Override methods such as `OnInitializeDisplayView`, `OnInitializeEditView` to customize rendering and filter behavior.
 
 {% tabs %}
 {% highlight xaml %}
@@ -389,7 +417,13 @@ public class CustomDataGridFilterRowTextBoxRenderer : DataGridFilterRowTextBoxRe
 {
     public CustomDataGridFilterRowTextBoxRenderer(): base() 
     {
+    }
 
+    // Example: Override to customize the display view
+    protected override void OnInitializeDisplayView(DataColumnBase dataColumn, SfDataGridContentView? view)
+    {
+        base.OnInitializeDisplayView(dataColumn, view);
+        // Add custom logic here
     }
 }
 {% endhighlight %}
@@ -413,12 +447,9 @@ public MainPage()
     this.dataGrid.FilterRowCellRenderers.Add("CustomComboBox", new CustomDataGridFilterRowComboBoxRenderer());
 }
 
-public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBoxRenderer , INotifyPropertyChanged
+public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBoxRenderer
 {
     private List<string>? numericComboBoxItems;
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-
     private string selectedText = string.Empty;
 
     public CustomDataGridFilterRowComboBoxRenderer() 
@@ -427,10 +458,8 @@ public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBox
     }
 
     /// <summary>
-    /// Generate the Items for NumericComboBox
+    /// Generate custom filter interval items for the ComboBox
     /// </summary>
-    /// <returns></returns>
-
     public void SetNumericComboBoxItemsList()
     {
         numericComboBoxItems = new List<string>();
@@ -594,12 +623,15 @@ public class CustomDataGridMultiSelectComboBoxRenderer : DataGridFilterRowMultiS
 {
     public CustomDataGridMultiSelectComboBoxRenderer() 
     {
+        // SupportsRenderOptimization: Set to false to disable optimization and always render the ComboBox
         SupportsRenderOptimization = false;
+        // IsEditable: Set to true to make the filter row cell editable by default
         IsEditable = true;
     }
 
     /// <summary>
     /// Initialize the filter-row display with a live MultiSelect ComboBox instead of a label.
+    /// This method is called when initializing the display view in edit mode.
     /// </summary>
     protected override void OnInitializeDisplayView(DataColumnBase dataColumn, SfDataGridContentView? view)
     {

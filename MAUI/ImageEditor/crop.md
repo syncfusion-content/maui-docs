@@ -30,7 +30,7 @@ The [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfIma
 The following code crops the image to the desired size.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -41,7 +41,7 @@ The following code crops the image to the desired size.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -56,7 +56,7 @@ private void OnCropImageClicked(object sender, EventArgs e)
 After the cropping area has been selected, call the [SaveEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_SaveEdits) method to crop the selected region and display the cropped image in the image editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -67,7 +67,7 @@ After the cropping area has been selected, call the [SaveEdits](https://help.syn
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -82,7 +82,7 @@ private void OnSaveEditsClicked(object sender, EventArgs e)
 To cancel the cropping and revert to the original image, use the [CancelEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_CancelEdits) method. This discards the changes and restores the image to its initial state.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -93,7 +93,7 @@ To cancel the cropping and revert to the original image, use the [CancelEdits](h
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -110,7 +110,7 @@ private void OnCancelEditsClicked(object sender, EventArgs e)
 The selection region can be customized by dragging and resizing the selection handles.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -121,7 +121,7 @@ The selection region can be customized by dragging and resizing the selection ha
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -140,7 +140,7 @@ private void OnFreeCropClicked(object sender, EventArgs e)
 Crops the image to its original dimensions, preserving the original aspect ratio.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -151,7 +151,7 @@ Crops the image to its original dimensions, preserving the original aspect ratio
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -170,7 +170,7 @@ private void OnOriginalClicked(object sender, EventArgs e)
 Crops the image into a square shape.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -181,7 +181,7 @@ Crops the image into a square shape.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -200,7 +200,7 @@ private void OnSquareCropClicked(object sender, EventArgs e)
 Crops the image to a specific aspect ratio by specifying the width and height values. The default ratio is 4:3 when using the [ImageCropType.Ratio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageCropType.html#Syncfusion_Maui_ImageEditor_ImageCropType_Ratio), but you can change it by using the Crop method with the ratio parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -211,7 +211,7 @@ Crops the image to a specific aspect ratio by specifying the width and height va
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -232,7 +232,7 @@ Crops the image into a circle shape with a 1:1 ratio using the [ImageCropType.Ci
 The following code crops an image in a circular format.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -243,7 +243,7 @@ The following code crops an image in a circular format.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -264,7 +264,7 @@ Crops the image into an elliptical shape using the [ImageCropType.Ellipse](https
 The following code crops an image in an elliptical format.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -275,7 +275,7 @@ The following code crops an image in an elliptical format.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
@@ -294,7 +294,7 @@ private void OnEllipseCropClicked(object sender, EventArgs e)
 To manually enter the cropping area, use the [Crop(Rect rect)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Microsoft_Maui_Graphics_Rect_System_Boolean_) method by defining a rectangle and passing it to the [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) method. When the `isEllipse` parameter is `true`, the crop is performed in an elliptical shape. The default value of the `isEllipse` parameter is `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -305,7 +305,7 @@ To manually enter the cropping area, use the [Crop(Rect rect)](https://help.sync
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;
@@ -322,7 +322,7 @@ private void OnBoundsClicked(object sender, EventArgs e)
 * To crop an image in an ellipse with a specific rectangle, use [Crop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Crop_Syncfusion_Maui_ImageEditor_ImageCropType_) with a rectangle value and the `isEllipse` parameter set to `true`, which specifies whether the cropping panel is added in an elliptical or rectangular shape.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -333,7 +333,7 @@ private void OnBoundsClicked(object sender, EventArgs e)
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.ImageEditor;
@@ -354,7 +354,7 @@ You can select a cropping ratio programmatically by specifying the corresponding
 The following code sample adds the cropping preview to the image in a square shape.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid RowDefinitions="0.9*, 0.1*">
     <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -365,7 +365,7 @@ The following code sample adds the cropping preview to the image in a square sha
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 

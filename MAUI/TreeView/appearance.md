@@ -44,7 +44,7 @@ The `SfTreeView` allows you to customize the appearance of the content view and 
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="15" %}
+{% highlight c# hl_lines="17" %}
 using Syncfusion.Maui.TreeView;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui;
@@ -112,7 +112,7 @@ For Bound Mode, you can change the binding context of the treeview items using t
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="14" %}
+{% highlight c# hl_lines="16" %}
 using Syncfusion.Maui.TreeView;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui;
@@ -244,7 +244,7 @@ The following code example illustrates how to load different templates for treev
 N> When the `DataTemplateSelector` accesses node-level properties such as `Level`, set `ItemTemplateContextType="Node"` so the binding context passed to the selector is a `TreeViewNode`.
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="14" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -262,7 +262,7 @@ N> When the `DataTemplateSelector` accesses node-level properties such as `Level
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="3 4 5" %}
+{% highlight c# hl_lines="11" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -297,7 +297,7 @@ The `SfTreeView` allows you to customize the indent spacing of items by setting 
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" Indentation="40">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -321,7 +321,7 @@ The `SfTreeView` allows you to customize the width of the expander view by setti
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ExpanderWidth="40">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -348,7 +348,7 @@ The `SfTreeView` allows you to change the position of the expander view by setti
 {% highlight xaml %}
 <syncfusion:SfTreeView x:Name="treeView" ExpanderPosition="End">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -438,7 +438,7 @@ N> The default value of the `IsAnimationEnabled` property is `false`.
 <syncfusion:SfTreeView x:Name="treeView" 
                        IsAnimationEnabled="true">
 {% endhighlight %}
-{% highlight c# hl_lines="2" %}
+{% highlight c# hl_lines="10" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage
@@ -465,7 +465,7 @@ When `IsAnimationEnabled` is `true`, the expand and collapse operations animate 
 To disable the ripple effect when clicking a `TreeViewItem`, set the color value `Transparent` for the built-in theme key `SfTreeViewRippleBackground` within a `SyncfusionThemeDictionary`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"

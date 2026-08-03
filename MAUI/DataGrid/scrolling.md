@@ -12,9 +12,9 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Programmatic scrolling
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows scrolling to a particular row and column index programmatically. It also enables and disables the scrolling animation when changing the view. By default, the scrolling will be animated.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows scrolling to a particular row and column index programmatically. It also enables and disables the scrolling animation when changing the view. By default, scrolling is animated.
 
-You can set position of item in view while scrolling by passing [ScrollToPosition](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.scrolltoposition?view=net-maui-6.0) to [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_), [ScrollToColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) and [ScrollToRowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowColumnIndex_System_Int32_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method. Below are four different types of positions:
+You can set position of item in view while scrolling by passing [ScrollToPosition](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.scrolltoposition?view=net-maui-6.0) to [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_), [ScrollToColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) and [ScrollToRowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowColumnIndex_System_Int32_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method. The following are the four different types of positions with guidelines on when to use each:
 
 * `MakeVisible`: Scrolls a specific item to make visible in the view. If the item is already in view, scrolling will not occur.
 * `Start`: Scrolls a specific item to be positioned at the begin of the view.
@@ -27,6 +27,8 @@ You can scroll programmatically to a particular row and column using the `SfData
 
 {% tabs %}
 {% highlight C# %}
+using Syncfusion.Maui.DataGrid;
+
 public partial class MainPage : ContentPage
 {
     SfDataGrid dataGrid = new SfDataGrid();
@@ -56,6 +58,7 @@ public partial class MainPage : ContentPage
 
     private void Button_Clicked(object? sender, EventArgs e)
     {
+        // Scroll to row 15, column 4, positioning both at the start of view with animation
         dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosition.Start, true);
     }
 }
@@ -121,7 +124,7 @@ private void ScrollToColumnIndex_Mothod(object sender, EventArgs e)
 {% endtabs %}
 
 ### Scrolling to the row
-You can scroll programmatically to a particular row using the [SfDataGrid.ScrollToRow]() method by passing the RowData.
+You can scroll programmatically to a particular row using the [SfDataGrid.ScrollToRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRow_System_Object_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method by passing a row data object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,7 +136,7 @@ You can scroll programmatically to a particular row using the [SfDataGrid.Scroll
 
     <Button Text="Scroll To Row"
             Grid.Row="0"
-            Clicked="ScrollToRow_Mothod"/>
+            Clicked="ScrollToRow_Method"/>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            Grid.Row="1"
@@ -141,16 +144,20 @@ You can scroll programmatically to a particular row using the [SfDataGrid.Scroll
 </Grid>
 {% endhighlight %}
 {% highlight C# %}
-private void ScrollToRow_Mothod(object sender, EventArgs e)
-{
-    var row = viewModel.EmployeesDetails.FirstOrDefault(e => e.OrderID == "25");
-    dataGrid.ScrollToRow( row, ScrollToPosition.Start, true);
-}
+private void ScrollToRow_Method(object sender, EventArgs e)
+    {
+        // Find the order with OrderID "1002" and scroll to it
+        var order = viewModel.Orders.FirstOrDefault(o => o.OrderID == "1002");
+        if (order != null)
+        {
+            dataGrid.ScrollToRow(order, ScrollToPosition.Start, true);
+        }
+    }
 {% endhighlight %}
 {% endtabs %}
 
 ### Scrolling to the column
-You can scroll programmatically to a particular column using the [SfDataGrid.ScrollToColumn]() method by passing the DataGridColumn.
+You can scroll programmatically to a particular column using the [SfDataGrid.ScrollToColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumn_Syncfusion_Maui_DataGrid_DataGridColumn_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method by passing a DataGridColumn object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -162,7 +169,7 @@ You can scroll programmatically to a particular column using the [SfDataGrid.Scr
 
     <Button Text="Scroll To Column"
             Grid.Row="0"
-            Clicked="ScrollToColumn_Mothod"/>
+            Clicked="ScrollToColumn_Method"/>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            Grid.Row="1"
@@ -170,15 +177,18 @@ You can scroll programmatically to a particular column using the [SfDataGrid.Scr
 </Grid>
 {% endhighlight %}
 {% highlight C# %}
-private void ScrollToColumn_Mothod(object sender, EventArgs e)
+private void ScrollToColumn_Method(object sender, EventArgs e)
 {
     var column = dataGrid.Columns.FirstOrDefault(col => col.MappingName == "UnitPrice");
-    dataGrid.ScrollToColumn(column, ScrollToPosition.Start, true);
+    if (column != null)
+    {
+        dataGrid.ScrollToColumn(column, ScrollToPosition.Start, true);
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Scrolling mode
+## Scrolling Mode
 
 The `SfDataGrid` allows you to customize three different scrolling modes using the [SfDataGrid.ScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollingMode) property. By default, the control scrolls content based on pixel values. The `ScrollingMode` property supports both vertical and horizontal scrolling. The available scrolling modes are:
 
@@ -198,6 +208,8 @@ In the `DataGridScrollingMode.Pixel` mode, users can scroll through the data bas
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -209,7 +221,7 @@ this.Content = dataGrid;
 <img alt="ScrollingMode-Pixel" src="Images\scrolling\maui-datagrid-ScrollingMode-Pixel.gif" width="404" />
 
 ### Line
-The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's contents by lines. The view updates only when the offset values reach the origin of a row or column in the bound collection.
+The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's contents by lines. The view updates only when the offset values reach the origin of a row or column in the bound collection. This mode ensures complete rows and columns are always visible.
 
 {% tabs %}
 {% highlight xaml %}
@@ -220,6 +232,8 @@ The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's cont
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -231,7 +245,7 @@ this.Content = dataGrid;
 <img alt="ScrollingMode-Pixel" src="Images\scrolling\maui-datagrid-ScrollingMode-Line.gif" width="404"/>
 
 ### PixelLine
-The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents like an Excel sheet. If a row or column is clipped at the top, it will automatically scroll to display the entire row or column.
+The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents like an Excel sheet. If a row or column is clipped at the top, it will automatically scroll to display the entire row or column. This mode combines smooth pixel-based scrolling with automatic alignment to row and column boundaries.
 
 {% tabs %}
 {% highlight xaml %}
@@ -242,6 +256,8 @@ The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents l
 {% endhighlight %}
 
 {% highlight C# %}
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -260,7 +276,7 @@ The `ScrollingMode` has certain limitations that should be considered:
  - The `DataGridScrollingMode.Line` does not support master details view.
  - The `DataGridScrollingMode.Line` will not be worked as expected when row height is customized through [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event and width is customized through [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) property.
 
-## Diagonal scrolling
+## Diagonal Scrolling
 
 By default, the `SfDataGrid` allows both vertical and horizontal scrolling simultaneously (diagonal scrolling). By setting [SfDataGrid.AllowDiagonalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling) to false, you ensure that scrolling happens in only one direction at a time, either horizontally or vertically.
 
@@ -275,6 +291,8 @@ The following code snippets demonstrate how to disable diagonal scrolling:
 {% endhighlight %}
 
 {% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -299,6 +317,8 @@ The following code snippets demonstrate how to hide the vertical and horizontal 
 {% endhighlight %}
 
 {% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -308,20 +328,20 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
+> **Note:** These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
 
 
-## Over Scroll Mode
-The `SfDataGrid` supports over-scroll behavior that controls the bounce effect when the user scrolls past the edges of its content. Use the `VerticalOverScrollMode` and `HorizontalOverScrollMode` properties to enable or disable bounce effects independently for each axis.
+## Over-Scroll Mode
+The `SfDataGrid` supports over-scroll behavior that controls the bounce effect when the user scrolls past the edges of its content. Use the `VerticalOverScrollMode` and `HorizontalOverScrollMode` properties to enable or disable bounce effects independently for each axis. Over-scroll behavior is platform-specific: iOS uses `Bounce` by default, while Android uses `None`.
 
-### Vertical Over Scroll Mode
+### Vertical Over-Scroll Mode
 
 The [SfDataGrid.VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property customizes the vertical scrolling behavior in the data grid by controlling the bouncing effect when the user scrolls beyond the grid's boundaries. This property defines whether users experience a smooth, elastic pull effect or a strict stop when reaching the start or end of the scrollable content.
 
-The [VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property is of the type `DataGridVerticalScrollMode` and offers the following two modes:
+The [VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property is of the type `DataGridVerticalOverScrollMode` and offers the following two modes:
 
-- **Bounce**: This mode enables the grid to apply a bounce effect when the user scrolls beyond the boundaries. It is the default value for the iOS platform.
-- **None**: This mode prevents the grid from applying the bounce effect. It is the default value for the Android platform.
+- **Bounce**: Enables a bounce effect when the user scrolls beyond the boundaries. Users will see an elastic rebound animation.
+- **None**: Prevents the bounce effect; scrolling stops immediately at content edges.
 
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
@@ -333,6 +353,8 @@ To customize the bouncing effect in the data grid, follow the code example:
 {% endhighlight %}
 
 {% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -343,14 +365,14 @@ this.Content = dataGrid;
 
 <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404"/>
 
-### Horizontal Over Scroll Mode
+### Horizontal Over-Scroll Mode
 
-The [SfDataGrid.HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property customizes the horizontal scrolling behavior of the data grid by controlling the bounce effect when users scroll past the left or right edges of the grid. This setting determines whether the grid provides an elastic over‑scroll experience or stops strictly at the content boundary.
+The [SfDataGrid.HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property customizes the horizontal scrolling behavior of the data grid by controlling the bounce effect when users scroll past the left or right edges of the grid. This setting determines whether the grid provides an elastic over-scroll experience or stops strictly at the content boundary.
 
-The [HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property is of type `DataGridHorizontalScrollMode` and includes the following modes:
+The [HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property is of type `DataGridHorizontalOverScrollMode` and includes the following modes:
 
- - **Bounce**: Enables a bounce‑back animation when the user scrolls beyond the horizontal limits of the grid. This is the default mode on the iOS platform.
- - **None**: Disables the bounce effect, causing scrolling to stop immediately at the content edges. This is the default mode on the Android platform.
+ - **Bounce**: Enables a bounce-back animation when the user scrolls beyond the horizontal limits of the grid (default on iOS). Users will see an elastic rebound animation.
+ - **None**: Disables the bounce effect, causing scrolling to stop immediately at the content edges (default on Android).
 
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
@@ -362,6 +384,8 @@ To customize the bouncing effect in the data grid, follow the code example:
 {% endhighlight %}
 
 {% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
@@ -372,9 +396,9 @@ this.Content = dataGrid;
 
 <img alt="Horizontal-OverScroll-Mode" src="Images\scrolling\maui-datagrid-Horizontal-overscroll-Mode.gif" width="404"/>
 
-## Identifying scroll state changes
+## Identifying Scroll State Changes
 
-The `SfDataGrid` raises the [ScrollStateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollStateChanged) event whenever its scrolling state is changed.
+The `SfDataGrid` raises the [ScrollStateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollStateChanged) event whenever its scrolling state is changed. This event is useful for monitoring user interactions and triggering actions based on scroll behavior.
 
 The following current states are indicated by the [ScrollState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridScrollStateChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridScrollStateChangedEventArgs_ScrollState) property in the event argument.
 
@@ -391,11 +415,24 @@ The following current states are indicated by the [ScrollState](https://help.syn
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
 private void dataGrid_ScrollStateChanged(object sender, DataGridScrollStateChangedEventArgs e)
 {
-    if (e.ScrollState == DataGridScrollState.Idle)
+    switch (e.ScrollState)
     {
-        DisplayAlert("ScrollState", "Scrolling has stopped", "OK");
+        case DataGridScrollState.Idle:
+            DisplayAlert("ScrollState", "Scrolling has stopped", "OK");
+            break;
+        case DataGridScrollState.Dragging:
+            // Handle user dragging
+            break;
+        case DataGridScrollState.Fling:
+            // Handle fling/momentum scrolling
+            break;
+        case DataGridScrollState.Programmatic:
+            // Handle programmatic scrolling
+            break;
     }
 }
 {% endhighlight %}
