@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download and Installation in .NET MAUI Extension | Syncfusion®
+title: Download and Setup in .NET MAUI Extension | Syncfusion®
 description: Learn here more about how to download and install in the Syncfusion® .NET MAUI Extension for JetBrains Rider and much more.
 platform: MAUI
 component: Common
 documentation: ug
 ---
 
-# Download and Installation Guide 
+# Download and Setup Guide 
 
 [Essential MAUI](#essential-maui)
 

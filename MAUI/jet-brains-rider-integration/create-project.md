@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create Projects using Project Templates via Extensions | Syncfusion® 
+title: Building Projects with Extension Templates | Syncfusion® 
 description: Learn here about how to create Syncfusion® .NET MAUI application using Syncfusion® .NET MAUI Extension for JetBrains Rider.
 platform: MAUI
 component: Common
