@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Button Control | Syncfusion®
-description: Learn about the Clicked event in the Syncfusion® .NET MAUI Button (SfButton) control and how to handle it.
+title: Events in .NET MAUI Button | Syncfusion®
+description: Learn about the clicked event in the Syncfusion® .NET MAUI Button (SfButton) control and how to handle it.
 platform: maui
 control: SfButton
 documentation: ug
 ---
 
-# Events in .NET MAUI Button (SfButton)
+# Events in .NET MAUI Button
 
 The [.NET MAUI Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) raises event when the user taps or clicks.
 

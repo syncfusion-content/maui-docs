@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Header in .NET MAUI Busy Indicator | Syncfusion®
-description: Learn here all about set header support in Syncfusion® .NET MAUI Busy Indicator control and more.
+description: Learn here all about set header support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG

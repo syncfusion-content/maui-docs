@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Button control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Button (SfButton) control and more.
+title: Customization in .NET MAUI Button | Syncfusion®
+description: Learn here all about customization support in Syncfusion® .NET MAUI Button (SfButton) control and more.
 platform: maui
 control: SfButton
 documentation: ug
 ---
 
-# Customization in .NET MAUI Button (SfButton)
+# Customization in .NET MAUI Button
 
 The [.NET MAUI Button](https://www.syncfusion.com/maui-controls/maui-button) control supports customizing the border color, image size, corner radius, background color, and more.
 
