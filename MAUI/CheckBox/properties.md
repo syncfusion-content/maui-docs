@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI CheckBox control | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® MAUI CheckBox (SfCheckBox) control.
+title: Properties in .NET MAUI CheckBox | Syncfusion®
+description: This section explains the properties, events, and methods with Syncfusion® .NET MAUI CheckBox (SfCheckBox) control.
 platform: maui
 control: SfCheckBox
 documentation: ug
 ---
 
-# .NET MAUI CheckBox API Reference
-
+# API Reference in .NET MAUI CheckBox
 ## Properties
 
 <table>

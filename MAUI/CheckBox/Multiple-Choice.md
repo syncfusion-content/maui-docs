@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Choice with .NET MAUI CheckBox Control | Syncfusion®
-description: Learn how to achieve Multiple Choice with Syncfusion® Essential Studio® .NET MAUI CheckBox control and more.
+title: Multiple Choice in .NET MAUI CheckBox | Syncfusion®
+description: Learn Prerequisites in MAUI  using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
 platform: MAUI
 control: SfCheckBox
 documentation: UG
 ---
 
-# Multiple Choice with .NET MAUI CheckBox (SfCheckBox)
+# Multiple Choice in .NET MAUI CheckBox | Syncfusion®
 
 The [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be used as a single or as a group. A single CheckBox is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 
