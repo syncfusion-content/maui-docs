@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Agenda view in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about the Agenda view feature of Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
+description: Display appointments in chronological order grouped by date using the agenda view in the .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Agenda view in .NET MAUI Scheduler (SfScheduler)
+# Agenda view in .NET MAUI Scheduler
 
 The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) is `null`, the agenda view will show only the month, week, and date headers for mobile view and responsive UI, and for desktop UI it will display only the date header of display date.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Month View in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about how to customize the appearance and change the date format for month view in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Customize appearance and date format for month view display in the .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui month view, .net maui month cell, .net maui month cell apperance, .net maui view header.
 ---
 
-# Month View in .NET MAUI Scheduler (SfScheduler)
+# Month View in .NET MAUI Scheduler
 
 By default, the Month view displays the entire days of a particular month and current month initially. The current date color is differentiated from other dates of the current month, and also the color differentiation for dates will be applicable for the previous and next month dates.
 

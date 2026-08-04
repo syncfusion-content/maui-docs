@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Timeline Views in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about how to customize the timeline views settings in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
+description: Display dates along horizontal time axis with customizable settings in timeline day, week, and month views of the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui timelineview, .net maui timeline day view, .net maui timeline week view, .net maui timeline work week view, .net maui timeline month view.
 ---
 
-# Timeline Views in .NET MAUI Scheduler (SfScheduler)
+# Timeline Views in .NET MAUI Scheduler
 
 The timeline view displays the dates along the horizontal time axis with the desired number of days. See the past or future dates by scrolling to the right or left. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 
