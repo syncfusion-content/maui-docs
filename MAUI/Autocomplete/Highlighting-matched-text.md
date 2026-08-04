@@ -7,7 +7,7 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-# Highlighting matched text in .NET MAUI Autocomplete (SfAutocomplete)
+# Highlighting matched text in .NET MAUI Autocomplete
 
 ## Prerequisites
 
