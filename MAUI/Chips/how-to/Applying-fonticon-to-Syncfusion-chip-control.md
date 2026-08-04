@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to apply a font icon to .NET MAUI Chip | Syncfusion®
-description: Learn how to display a font icon inside the Syncfusion® .NET MAUI Chip control by setting a FontImageSource on the ImageSource property.
+title: How to Apply a Font Icon in .NET MAUI Chips | Syncfusion®
+description: Learn how to display a font icon inside the Syncfusion® .NET MAUI Chips control by setting a FontImageSource on the ImageSource property.
 platform: maui
 control: SfChip
 documentation: ug
 keywords: .net maui sfchip font icon, syncfusion chip fontimage maui, sfchip imagesource font maui, .net maui sfchip showicon, sfchip segoe mdl2 assets maui, .net maui chip icon glyph
 ---
 
-# Setting a font icon on SfChip
+# How to Set a Font Icon in .NET MAUI Chips
 
 [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) supports displaying a font icon by assigning a [FontImageSource](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontimagesource) to its [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property.
 

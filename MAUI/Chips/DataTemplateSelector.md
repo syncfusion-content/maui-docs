@@ -1,14 +1,14 @@
 ---
 layout: post
 title: DataTemplateSelector in .NET MAUI Chips | Syncfusion®
-description: Learn how to display different chip templates based on data using DataTemplateSelector with the Syncfusion® .NET MAUI Chips (SfChipGroup) control.
+description: Learn how to display different chip templates based on data using DataTemplateSelector with the Syncfusion® .NET MAUI Chips control.
 platform: maui
 control: Chips
 documentation: ug
 keywords: .net maui sfchipgroup datatemplateselector, syncfusion chips template selector maui, sfchipgroup itemtemplate maui, .net maui datatemplate selector, sfchipgroup template binding maui, .net maui chip data template
 ---
 
-# DataTemplateSelector in .NET MAUI SfChipGroup
+# DataTemplateSelector in .NET MAUI Chips
 
 Use a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) to choose a different `DataTemplate` for each item rendered by [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). This is useful when each chip needs to render different visuals based on the underlying data.
 

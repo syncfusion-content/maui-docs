@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Chip (SfChip & SfChipGroup) | Syncfusion®
-description: Learn how to customize the Syncfusion® .NET MAUI Chips controls, including SfChip and SfChipGroup, in code and XAML.
+title: Customization in .NET MAUI Chips | Syncfusion®
+description: Learn how to customize Syncfusion® .NET MAUI Chips, including SfChip and SfChipGroup, to create interactive and visually appealing chip experiences
 platform: maui
 control: Chips
 documentation: ug
 ---
 
-# Customization in .NET MAUI Chips (SfChip and SfChipGroup)
+# Customization in .NET MAUI Chips
 
 The [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) controls support customizing the background color, border color, close button color, selection indicator, text, icons, and more. This page documents the customization properties for both [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) and [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html).
 
