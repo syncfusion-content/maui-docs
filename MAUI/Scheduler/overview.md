@@ -1,15 +1,15 @@
 ---
 layout: post
-title: About .NET MAUI Scheduler control | Syncfusion
+title: About Syncfusion .NET MAUI Scheduler Control | Syncfusion
 canonical_url: "https://www.syncfusion.com/scheduler-sdk/maui-scheduler"
-description: Learn here all about introduction of Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features and functionalities of scheduler.
+description: Learn about introduction of Syncfusion Essential Studio .NET MAUI Scheduler control and more details.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, maui appointment scheduling, .net maui agenda view.
 ---
 
-# Overview of .NET MAUI Scheduler (SfScheduler)
+# About Syncfusion .NET MAUI Scheduler Control
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) has nine different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 

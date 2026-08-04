@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Scheduler control | Syncfusion®
+title: Getting Started with .NET MAUI Scheduler | Syncfusion®
 canonical_url: "https://www.syncfusion.com/scheduler-sdk/maui-scheduler"
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
+description: Learn how to get started with the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui horizontal scheduler, maui appointment scheduling.
 ---
 
-# Getting Started with the .NET MAUI Scheduler
+# Getting Started with .NET MAUI Scheduler
 
 This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario. Follow the steps below to add a .NET Scheduler control to your project.
 

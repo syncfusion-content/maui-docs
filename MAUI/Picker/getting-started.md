@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Picker control | Syncfusion®
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
+title: Getting Started with .NET MAUI Picker | Syncfusion®
+description: Learn how to get started with the Syncfusion<sup>&reg;</sup> .NET MAUI Picker control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Picker
+# Getting Started with .NET MAUI Picker
 This section explains how to add the [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) control. It covers only the basic features needed to get started with the Syncfusion Picker. Follow the steps below to add a .NET MAUI Picker control to your project.
 
 To get start quickly with our .NET MAUI Picker, you can check the below video.

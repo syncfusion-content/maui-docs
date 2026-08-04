@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Date Picker control | Syncfusion
-description: Learn about the overview of Syncfusion .NET MAUI Date Picker (SfDatePicker) control, its basic features, and date picker functionalities.
+title: About Syncfusion .NET MAUI Date Picker Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio .NET MAUI Date Picker control and more details.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Overview of .NET MAUI Date Picker (SfDatePicker)
+# About Syncfusion .NET MAUI Date Picker Control
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker ([SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker)) control allows you to select a date and visualize its items inside a popup or a drop-down UI element. The Date Picker also enables you to set date ranges and formats and customize its dialog appearance by configuring its header, footer, and more.
 
