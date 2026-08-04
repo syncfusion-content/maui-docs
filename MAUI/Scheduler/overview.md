@@ -126,7 +126,7 @@ The following table summarizes the globalization support available in this contr
 - [Getting Started](https://help.syncfusion.com/maui/scheduler/getting-started) shows a step‑by‑step guide to begin using the Scheduler control.  
 - [Day Week Views](https://help.syncfusion.com/maui/scheduler/day-week-views) explains how to switch between day and week layouts for flexible scheduling.  
 - [Appointments](https://help.syncfusion.com/maui/scheduler/appointments) helps manage appointments and data binding.  
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
+- [UI Kit](https://www.syncfusion.com/essential-maui-ui-kit) provides interactive demos and ready‑made UI examples. 
 
 ## Resources
 
