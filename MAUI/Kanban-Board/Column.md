@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column in .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about Column support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+title: Column in .NET MAUI Kanban Board | Syncfusion
+description: Learn about Column support in Syncfusion® .NET MAUI Kanban Board with sizing, categories, headers, drag-and-drop, limits, and styling options.
 platform: maui
 control: Kanban
 documentation: ug
 ---
 
-# Column in .NET MAUI Kanban Board (SfKanban)
+# Column in .NET MAUI Kanban Board
 
 ## Customizing Column Size
 
