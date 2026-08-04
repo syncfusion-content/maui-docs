@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Row Drag and Drop in .NET MAUI DataGrid control | Syncfusion®
-description: Learn here all about Row Drag and Drop support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
+title: Row Drag and Drop in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to enable and customize row drag-and-drop in Syncfusion® .NET MAUI DataGrid to reorder and move records interactively.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row drag and drop, maui row drag and drop
 ---
 
-# Row Drag and Drop in MAUI DataGrid (SfDataGrid)
+# Row Drag and Drop in .NET MAUI DataGrid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to drag and drop rows by setting the [SfDataGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow) property to `true`. Dragging is enabled by long pressing and dragging a row on mobile platforms and by clicking and dragging on desktop platforms. A row drag view is displayed during the drag operation. You can handle drag-and-drop operations based on your requirements by using the [SfDataGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event.
 
