@@ -13,11 +13,11 @@ documentation: ug
 
 ## Overview
 
-The prompt composition pipeline combines the following inputs into a single prompt string that is sent to the AI backend:
+The prompt composition pipeline combines the following inputs into a single prompt string that is sent to the AI:
 
 * **SystemPrompt** - global AI instructions such as persona, safety rules, and behavior constraints.
 * **ContextPrompt** - application or workspace context such as the current document, selected text, or session metadata.
-* **PromptParts** - discrete, ordered fragments contributed by application logic, tools, or plugins. Each part exposes an `Order` and an `IsEnabled` flag.
+* **PromptParts** - discrete, ordered fragments contributed by application logic, tools, or plugin. Each part exposes an `Order` and an `IsEnabled` flag.
 * **User input** - the message typed in the request editor.
 
 The user input is always appended as the last segment. Non-empty segments are joined with a newline (`Environment.NewLine`) delimiter, and the `PromptComposing` event is raised immediately before the request is sent.
@@ -90,7 +90,7 @@ public MainPage()
 
 ## PromptParts collection
 
-The [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection holds discrete, dynamically added prompt fragments contributed by application logic, tools, or plugins. The collection is an `IList<AssistPromptPart>` that supports data binding, so parts can be added, removed, or reordered from a view model.
+The [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection holds discrete, dynamically added prompt fragments contributed by application logic, tools, or plugin. The collection is an `IList<AssistPromptPart>` that supports data binding, so parts can be added, removed, or reordered from a view model.
 
 ### AssistPromptPart model
 
@@ -116,17 +116,6 @@ Each item in the `PromptParts` collection is an [AssistPromptPart](https://help.
 Add an [AssistPromptPart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistPromptPart.html) to the [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection to contribute a discrete fragment to the composed prompt.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
-    <syncfusion:SfAIAssistView.PromptParts>
-        <syncfusion:AssistPromptPart Content="Available tools: Calculator, Search, Translate."
-                                     Order="10"
-                                     IsEnabled="True"/>
-    </syncfusion:SfAIAssistView.PromptParts>
-</syncfusion:SfAIAssistView>
-
-{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 
 SfAIAssistView sfAIAssistView;
@@ -171,46 +160,17 @@ this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistProm
 Set [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistPromptPart.html#Syncfusion_Maui_AIAssistView_AssistPromptPart_IsEnabled) to `false` to exclude a part from composition without removing it from the collection. The default value is `true`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 
-var verbosePart = new AssistPromptPart
+this.sfAIAssistView.PromptPartsthis.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>()
 {
-    Content = "Include detailed citations in every response.",
-    Order = 50,
-    IsEnabled = false
-};
-this.sfAIAssistView.PromptParts.Add(verbosePart);
-
-{% endhighlight %}
-{% endtabs %}
-
-### Modifying parts at runtime
-
-Because `PromptParts` supports data binding, parts can be added, removed, or replaced at runtime from a view model. The control picks up the change on the next request that is sent.
-
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="14" %}
-
-public class PromptViewModel : INotifyPropertyChanged
-{
-    public ObservableCollection<AssistPromptPart> PromptParts { get; }
-        = new ObservableCollection<AssistPromptPart>();
-
-    public PromptViewModel()
+    new AssistPromptPart
     {
-        PromptParts.Add(new AssistPromptPart { Content = "Language: English.", Order = 1 });
-        PromptParts.Add(new AssistPromptPart { Content = "Style: formal.", Order = 2 });
-
-        // Toggle inclusion at runtime
-        PromptParts[1].IsEnabled = false;
-    }
-}
-
-{% endhighlight %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           PromptParts="{Binding PromptParts}"/>
+        Content = "Include detailed citations in every response.",
+        Order = 50,
+        IsEnabled = false
+    },
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +179,7 @@ public class PromptViewModel : INotifyPropertyChanged
 
 The [PromptComposing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptComposing) event is raised after all prompt sources have been merged and just before the request is sent. It provides a read-only view of the final composed prompt and the enabled parts that contributed to it. The [PromptComposingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html) exposes the following members:
 
- * [ComposedPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_ComposedPrompt) - The fully composed prompt string that will be sent to the AI backend.
+ * [ComposedPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_ComposedPrompt) - The fully composed prompt string that will be sent to the AI.
  * [Parts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_Parts) - The enabled prompt parts in composition order.
 
 {% tabs %}
@@ -235,8 +195,7 @@ sfAIAssistView.PromptComposing += SfAIAssistView_PromptComposing;
 
 private void SfAIAssistView_PromptComposing(object sender, PromptComposingEventArgs e)
 {
-    System.Diagnostics.Debug.WriteLine($"Composed prompt length: {e.ComposedPrompt.Length}");
-    System.Diagnostics.Debug.WriteLine($"Enabled parts: {e.Parts.Count}");
+    
 }
 
 {% endhighlight %}
@@ -249,100 +208,6 @@ The composition is performed by the internal `PromptComposer` class, which is a 
 ### ComposePrompt method
 
 The `ComposePrompt` method merges `SystemPrompt`, the selected agent context, `ContextPrompt`, the enabled `PromptParts`, and the user input. Null or empty segments are skipped, and parts with `IsEnabled = false` are excluded. All included segments are joined with `Environment.NewLine`.
-
-{% tabs %}
-{% highlight c# tabtitle="PromptComposer.cs" %}
-
-internal static class PromptComposer
-{
-    public static (string ComposedPrompt, IList<AssistPromptPart> EnabledParts) ComposePrompt(
-        string systemPrompt,
-        string contextPrompt,
-        IList<AssistPromptPart> promptParts,
-        string userPrompt,
-        AssistAgent? assistAgent = null)
-    {
-        int estimatedCapacity = 4 + (promptParts?.Count ?? 0);
-        List<string> segments = new List<string>(estimatedCapacity);
-        List<AssistPromptPart> enabledParts = new List<AssistPromptPart>(promptParts?.Count ?? 0);
-
-        // 1. Add system prompt (if not null/empty)
-        if (!string.IsNullOrEmpty(systemPrompt))
-        {
-            segments.Add(systemPrompt);
-        }
-
-        // 2. Add agent context (if agent and its instructions are set)
-        if (assistAgent != null)
-        {
-            string? agentContext = assistAgent.GetAgentContext();
-            if (!string.IsNullOrEmpty(agentContext))
-            {
-                segments.Add(agentContext);
-            }
-        }
-
-        // 3. Add context prompt (if not null/empty)
-        if (!string.IsNullOrEmpty(contextPrompt))
-        {
-            segments.Add(contextPrompt);
-        }
-
-        // 4. Add enabled prompt parts sorted by Order (single filtering pass)
-        if (promptParts != null && promptParts.Count > 0)
-        {
-            enabledParts = promptParts
-                .Where(p => p.IsEnabled && !string.IsNullOrEmpty(p.Content))
-                .OrderBy(p => p.Order)
-                .ToList();
-
-            foreach (var part in enabledParts)
-            {
-                segments.Add(part.Content);
-            }
-        }
-
-        // 5. Add user prompt (if not null/empty)
-        if (!string.IsNullOrEmpty(userPrompt))
-        {
-            segments.Add(userPrompt);
-        }
-
-        // Join with newline delimiter and return both composed prompt and enabled parts
-        string composedPrompt = string.Join(Environment.NewLine, segments);
-        return (composedPrompt, enabledParts.AsReadOnly());
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Parameters
-
-The `ComposePrompt` method accepts the following parameters:
-
-<table>
-<tr>
-<td>systemPrompt</td>
-<td>The global system instructions. Can be null or empty.</td>
-</tr>
-<tr>
-<td>contextPrompt</td>
-<td>The application context. Can be null or empty.</td>
-</tr>
-<tr>
-<td>promptParts</td>
-<td>The collection of dynamic prompt parts. Cannot be null, but can be empty.</td>
-</tr>
-<tr>
-<td>userPrompt</td>
-<td>The user's input message. Can be null or empty.</td>
-</tr>
-<tr>
-<td>assistAgent</td>
-<td>The selected agent information. Can be null.</td>
-</tr>
-</table>
 
 ### Return value
 
