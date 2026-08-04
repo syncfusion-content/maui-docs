@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Properties of .NET MAUI Calendar control | Syncfusion®
-description: This section explains the properties and events with Syncfusion® MAUI Calendar (SfCalendar) control.
+description: Learn about properties and events in Syncfusion .NET MAUI Calendar control API reference.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# .NET MAUI Calendar API Reference
+# Properties in .NET MAUI Calendar control
 
 ## Properties
 
