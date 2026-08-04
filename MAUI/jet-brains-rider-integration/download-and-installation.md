@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Download and Installation Guide
+# Download and Installation Guide 
 
 [Essential MAUI](#essential-maui)
 
@@ -21,7 +21,7 @@ The following software prerequisites must be installed to use the Syncfusion® .
 
 * [JetBrains Rider](https://www.jetbrains.com/rider/download/)
 
-* [C# support for Rider](https://www.jetbrains.com/help/rider/CSharp.html)
+* [C# support for Rider](https://www.jetbrains.com/products/?type=team&lang=csharp)
 
 * [.NET 8.0 SDK or later](https://dotnet.microsoft.com/en-us/download) with the .NET MAUI workload (`dotnet workload install maui`)
 
@@ -30,7 +30,7 @@ The following instructions outline the process of installing the Syncfusion® .N
 
 1. Open JetBrains Rider.
 
-2. Open the Plugins dialog from **Settings/Preferences > Plugins**.
+2. Open the Plugin dialog from **Settings/Preferences > Plugin**.
 
 3. Search for **Syncfusion® .NET MAUI** in the JetBrains Marketplace tab.
 
@@ -60,7 +60,7 @@ The following instructions detail the manual installation process of the Syncfus
 
 1. Download the plugin package from the JetBrains Marketplace.
 
-2. In JetBrains Rider, open **Settings/Preferences > Plugins**.
+2. In JetBrains Rider, open **Settings/Preferences > Plugin**.
 
 3. Click the gear icon and choose **Install Plugin from Disk**.
 
@@ -76,7 +76,7 @@ The following instructions outline the process of installing the Essential UI Ki
 
 1. Open JetBrains Rider.
 
-2. Open the Plugins dialog from **Settings/Preferences > Plugins**.
+2. Open the Plugin dialog from **Settings/Preferences > Plugin**.
 
 3. Search for **Syncfusion® .NET MAUI UI Kit** in the JetBrains Marketplace tab.
 
@@ -102,7 +102,7 @@ The following instructions detail the manual installation process of the Essenti
 
 1. Download the plugin package from the JetBrains Marketplace.
 
-2. In JetBrains Rider, open **Settings/Preferences > Plugins**.
+2. In JetBrains Rider, open **Settings/Preferences > Plugin**.
 
 3. Click the gear icon and choose **Install Plugin from Disk**.
 
