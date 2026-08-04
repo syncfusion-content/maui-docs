@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns with .NET MAUI Picker Control | Syncfusion®
-description: Learn here all about the picker columns and its customization with Syncfusion .NET MAUI Picker (SfPicker) control.
+title: Columns in .NET MAUI Picker control | Syncfusion®
+description: Learn about columns in Syncfusion .NET MAUI Picker control for customization and configuration.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Dealing with Columns in .NET MAUI Picker (SfPicker)
+# Columns in .NET MAUI Picker control
 
 This section explains the customization of picker columns.
 

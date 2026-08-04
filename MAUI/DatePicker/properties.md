@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Date Picker control | Syncfusion®
-description: Learn about properties and events in Syncfusion .NET MAUI Date Picker control API reference.
+description: Learn about properties and events in Syncfusion .NET MAUI Date Picker control.
 platform: maui
 control: SfDatePicker
 documentation: ug

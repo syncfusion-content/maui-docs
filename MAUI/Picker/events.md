@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events with .NET MAUI Picker Control | Syncfusion®
-description: Learn here all about events with Syncfusion Essential .NET MAUI Picker (SfPicker) control, it's elements and more details.
+title: Events in .NET MAUI Picker control | Syncfusion®
+description: Learn about events in Syncfusion .NET MAUI Picker control for user interactions and state changes.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Events in .NET MAUI Picker (SfPicker)
+# Events in .NET MAUI Picker control
 
 Six events are available for a [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) when it is in Dialog mode:
 
