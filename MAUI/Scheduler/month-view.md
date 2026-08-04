@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Month View in .NET MAUI Scheduler control | Syncfusion®
-description: Customize appearance and date format for month view display in the .NET MAUI Scheduler control.
+description: Learn how to customize the appearance, date format, navigation, and display settings of the month view in the Syncfusion .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug

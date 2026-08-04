@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI Scheduler control | Syncfusion®
-description: Translate built-in strings to different languages and cultures in the .NET MAUI Scheduler control.
+description: Learn how to translate built-in strings and adapt localization settings for different languages and cultures in the Syncfusion .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug

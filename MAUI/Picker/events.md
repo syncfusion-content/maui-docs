@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Picker control | Syncfusion®
-description: Learn about events in Syncfusion .NET MAUI Picker control for user interactions and state changes.
+description: Learn about events in the Syncfusion .NET MAUI Picker control, including user interactions, state changes, and event handling.
 platform: maui
 control: SfPicker
 documentation: ug
