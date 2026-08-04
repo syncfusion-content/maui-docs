@@ -134,7 +134,7 @@ else
 
 ## Events
 
-Events allow you to intercept and customize behavior at specific points in the AssistView lifecycle. All events support cancellation through a `Cancel` property to prevent default actions.
+Events allow you to intercept and customize behavior at specific points in the AssistView life cycle. All events support cancellation through a `Cancel` property to prevent default actions.
 
 **Event Execution Order:**
 1. `AssistViewOpening` — Before popup displays
