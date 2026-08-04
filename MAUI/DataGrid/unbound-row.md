@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Unbound Row in .NET MAUI DataGrid control | Syncfusion®
-description: Learn here all about Unbound Row support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Unbound Row in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to use unbound rows in Syncfusion® .NET MAUI DataGrid to display custom information, summaries, and additional data independent of the data source.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 ---
 
 
-# Unbound Row in .NET MAUI DataGrid (SfDataGrid)
+# Unbound Row in .NET MAUI DataGrid
 
 The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to add **additional rows** at top and also bottom of the DataGrid which are **not bound with data object** of underlying data source. You can add unbound rows using [SfDataGrid.UnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_UnboundRows) collection property. You can add any number of unbound rows to the DataGrid. Unbound rows can also be exported to PDF and Excel documents.
 
