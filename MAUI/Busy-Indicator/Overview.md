@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About .NET MAUI Busy Indicator Control | Syncfusion®
-description: Learn here all about introduction of the Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements and more.
+title: About Syncfusion® .NET MAUI Busy Indicator Control | Syncfusion®
+description: Learn here all about introduction of the Syncfusion® .NET MAUI Busy Indicator control, its elements and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator, maui busy indicator, maui loading indicator
 ---
 
-# .NET MAUI Busy Indicator (SfBusyIndicator) Overview
+# About Syncfusion® .NET MAUI Busy Indicator Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) control provides an indication of app loading, data processing, and more. It can be customized in terms of indicator size, color, speed and additional options.
 
