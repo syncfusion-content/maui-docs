@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, palette, spectrum
 ---
 
-# .NET MAUI Color Picker (SfColorPicker) Overview
+# Overview of .NET MAUI Color Picker
 
 The [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) is a UI component that enables users to select a color from various color palettes or a spectrum. It is particularly useful in design, drawing, or customization scenarios within .NET MAUI applications.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrate from Xamarin SfListView to .NET MAUI SfListView | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin ListView to Syncfusion® .NET MAUI ListView control and more.
 platform: MAUI
 control: SfListView
+description: Learn here all about Migrating from Syncfusion® Xamarin SfListView to Syncfusion® .NET MAUI SfListView control.
 documentation: ug
 ---  
 
 # Migrate from Xamarin.Forms SfListView to .NET MAUI SfListView 
 
-To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-listview) to [.NET MAUI SfListView](https://www.syncfusion.com/maui-controls/maui-listview), we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
+To make migration easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-listview) to [.NET MAUI SfListView](https://www.syncfusion.com/maui-controls/maui-listview), we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
 
 ## Namespaces 
 
@@ -41,7 +41,7 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[HoldCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_HoldCommand)'| markdownify }}</td>
 <td>{{'[LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand)'| markdownify }}</td>
-<td>Gets or sets System.Windows.Input.ICommand which will be executed when hold on the ListViewItem.</td></tr>
+<td>Gets or sets the System.Windows.Input.ICommand which is executed on long-pressing a SfListView item.</td></tr>
 <tr>
 <td>{{'[HoldCommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_HoldCommandParameter)'| markdownify }}</td>
 <td>{{'[LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter)'| markdownify }}</td>
@@ -53,7 +53,7 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_IsBusy)'| markdownify }}</td>
 <td>{{'[IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether list view is busy in loading more items. If it is true, the load more indicators will be displayed until it sets to false.</td>
+<td>Behavioral change: Xamarin <code>IsBusy</code> was a general busy indicator, while MAUI <code>IsLazyLoading</code> is specific to the load-more operation. Gets or sets a value indicating whether the SfListView is busy loading more items. If it is true, the load more indicators will be displayed until it is set to false.</td>
 </tr>
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemTappedEventArgs.html#Syncfusion_ListView_XForms_ItemTappedEventArgs_ItemData)'| markdownify }}</td>
@@ -73,12 +73,12 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemAppearingEventArgs.html#Syncfusion_ListView_XForms_ItemAppearingEventArgs_ItemData)'| markdownify }}</td>
 <td>{{'[ItemAppearingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_DataItem)'| markdownify }}</td>
-<td>Gets the underlying data object of the ListViewItem when item appearing from the bound data source.</td>
+<td>Gets the underlying data object of the SfListView item when the item appears from the bound data source.</td>
 </tr>
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDisappearingEventArgs.html#Syncfusion_ListView_XForms_ItemDisappearingEventArgs_ItemData)'| markdownify }}</td>
 <td>{{'[ItemDisappearingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_DataItem)'| markdownify }}</td>
-<td>Gets the underlying data object of the ListViewItem when item disappearing from the bound data source.</td>
+<td>Gets the underlying data object of the SfListView item when the item disappears from the bound data source.</td>
 </tr>
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.QueryItemSizeEventArgs.html#Syncfusion_ListView_XForms_QueryItemSizeEventArgs_ItemData)'| markdownify }}</td>
@@ -89,19 +89,19 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDraggingEventArgs.html#Syncfusion_ListView_XForms_ItemDraggingEventArgs_ItemData)'| markdownify }}</td>
 <td>{{'[ItemDraggingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html#Syncfusion_Maui_ListView_ItemDraggingEventArgs_DataItem)'| markdownify }}</td>
-<td>Gets the underlying data object of the ListViewItem that is currently being dragged from the bound data source.</td>
+<td>Gets the underlying data object of the SfListView item currently being dragged from the data source.</td>
 </tr>
 
 <tr>
 <td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.DragDropController.html#Syncfusion_ListView_XForms_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
 <td>{{'[CanAdjustDragItemAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragDropController.html#Syncfusion_Maui_ListView_DragDropController_CanAdjustDragItemAxis)'| markdownify }}</td>
-<td>A property that Gets or sets a value that determines whether to adjust the X position of the drag item for vertical orientation and the Y position for horizontal orientation.</td>
+<td>A property that gets or sets a value that determines whether to adjust the X position of the drag item for vertical orientation and the Y position for horizontal orientation.</td>
 </tr>
 
 <tr>
 <td>{{'[LayoutManager](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_LayoutManager)'| markdownify }}</td>
 <td>{{'[ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout)'| markdownify }}</td>
-<td>A property that Gets or sets the layout definition for SfListView. The default layout is LinearLayout.</td>
+<td>A property that gets or sets the layout definition for SfListView. The default layout is <code>LinearItemsLayout</code> (vertical orientation).</td>
 </tr>
 </table> 
 
@@ -122,7 +122,7 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[TouchGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html)'| markdownify }}</td>
 <td>Hold</td>
 <td>LongPress</td>
-<td>Describes the possible values of touch operation. These values are used when updating selection in the SfListView control.</td></tr>
+<td>Describes the possible values of a touch gesture used to trigger gesture-based interactions (such as long press) on SfListView items.</td></tr>
 </table>
 
 ## Events
@@ -151,11 +151,11 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>Represents the footer item of data in the SfListView control.</td></tr>
 <tr> 
 <td>{{'[FooterPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.FooterPosition.html)'| markdownify }}</td>
-<td>{{'[ListViewFooterPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterItem.html)'| markdownify }}</td>
-<td>Defines the position of the footer when IsStickyFooter is enabled.</td></tr> 
+<td>{{'[ListViewFooterPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterPosition.html)'| markdownify }}</td>
+<td>Defines the position of the footer when IsStickyFooter is enabled.</td></tr>
 <tr>
 <td>{{'[GroupHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.GroupHeaderItem.html)'| markdownify}}</td>
-<td>{{'[ListViewGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewGroupHeaderItem.html)'| markdownify }}</td>
+<td>{{'[ListViewGroupHeaderItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewGroupHeaderItem.html)'| markdownify }}</td>
 <td>Represents the group header item in a SfListView control.</td></tr>
 <tr>
 <td>{{'[HeaderItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.HeaderItem.html)'| markdownify }}</td>

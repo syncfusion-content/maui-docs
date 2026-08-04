@@ -9,14 +9,7 @@ documentation: ug
 
 # .NET MAUI DateTime Range Slider API Reference
 
-The Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) is an interactive control that makes selecting a range of dates or times simple and intuitive.
-
-
-This page provides a comprehensive reference for all available APIs of the SfDateTimeRangeSlider control.
-
-## SfDateTimeRangeSlider
-
-### Constructors
+## Properties
 
 <table>
 	<tr>
@@ -24,294 +17,7 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 			Name<br/>
 		</th>
 		<th>
-			Description<br/>
-		</th>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html">SfDateTimeRangeSlider()</a> <br/>
-		</td>
-		<td>
-        Initializes a new instance of the SfDateTimeRangeSlider class.
-		</td>
-	</tr>	
-</table>
-
-### Fields
-
-<table>
-	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
-	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormatProperty">DateFormatProperty</a> <br/>
-		</td>
-		<td>
-        The backing store for the DateFormat field.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalTypeProperty">IntervalTypeProperty</a><br/>
-		</td>
-		<td>
-		 The backing store for the IntervalType field.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDurationProperty">StepDurationProperty</a><br/>
-		</td>
-		<td>
-		 The backing store for the StepDuration field.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_OrientationProperty">OrientationProperty</a><br/>
-		</td>
-		<td>
-		 The backing store for the Orientation field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_ThumbIconProperty">ThumbIconProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ThumbIcon field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_ValueProperty">ValueProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the Value field.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelayProperty">DeferredUpdateDelayProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DeferredUpdateDelay field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyleProperty">DividerStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DividerStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameterProperty">DragCompletedCommandParameterProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DragCompletedCommandParameter field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandProperty">DragCompletedCommandProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DragCompletedCommand field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameterProperty">DragStartedCommandParameterProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DragStartedCommandParameter field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandProperty">DragStartedCommandProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the DragStartedCommand field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacementProperty">EdgeLabelsPlacementProperty</a> <br/>
-		</td>
-		<td>
-		 Identifies the EdgeLabelsPlacement bindable property.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdateProperty">EnableDeferredUpdateProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the EnableDeferredUpdate field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffectProperty">EnableLiquidGlassEffectProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the EnableLiquidGlassEffect field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IntervalProperty">IntervalProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the Interval field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversedProperty">IsInversedProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the IsInversed field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacementProperty">LabelsPlacementProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the LabelsPlacement field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyleProperty">LabelStyleProperty</a> <br/>
-		</td>
-		<td>
-		The backing store for the LabelStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyleProperty">MajorTickStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the MajorTickStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MaximumProperty">MaximumProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the Maximum field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinimumProperty">MinimumProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the Minimum field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerIntervalProperty">MinorTicksPerIntervalProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the MinorTicksPerInterval field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyleProperty">MinorTickStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the MinorTickStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividersProperty">ShowDividersProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ShowDividers field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabelsProperty">ShowLabelsProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ShowLabels field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicksProperty">ShowTicksProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ShowTicks field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbOverlayStyleProperty">ThumbOverlayStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ThumbOverlayStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyleProperty">ThumbStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the ThumbStyle field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TooltipProperty">TooltipProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the Tooltip field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtentProperty">TrackExtentProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the TrackExtent field.
-		</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyleProperty">TrackStyleProperty</a> <br/>
-		</td>
-		<td>
-		 The backing store for the TrackStyle field.
-		</td>
-	</tr>
-</table>
-
-### Properties
-
-<table>
-	<tr>
-		<th>
-			Name<br/>
+			Type<br/>
 		</th>
 		<th>
 			Description<br/>
@@ -322,256 +28,288 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat">DateFormat</a> <br/>
 		</td>
 		<td>
-        Gets or sets the value to format the date.
+			string
 		</td>
+		<td>Formats the date text.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
 		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType">IntervalType</a><br/>
 		</td>
 		<td>
-		 Gets or sets the type of the date interval.
+			SliderDateIntervalType
 		</td>
+		<td>Sets the date interval type.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
 		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration">StepDuration</a><br/>
 		</td>
 		<td>
-		 Gets or set the value indication whether to select the discrete date value.
+			SliderStepDuration
 		</td>
+		<td>Defines the step used for discrete date selection.</td>
 	</tr>
 	<tr valign="top">	
 		<td>
 		<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation">Orientation</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the orientation of the SfSlider and SfDateTimeSlider.
+			SliderOrientation
 		</td>
+		<td>Sets the slider orientation.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_ThumbIcon">ThumbIcon</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the value for the thumb of the of the SfSlider and SfDateTimeSlider.
+			ImageSource
 		</td>
+		<td>Sets the thumb icon.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Value">Value</a><br/>
 		</td>
 		<td>
-		 Gets or sets the current value of the SfSlider and SfDateTimeSlider.
+			DateTime
 		</td>
+		<td>Stores the current date value.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay">DeferredUpdateDelay</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the DeferredUpdateDelay, expressed in milliseconds, at which to update the deferred values.
+			double
 		</td>
+		<td>Sets the deferred update delay in milliseconds.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle">DividerStyle</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the divider shape.
+			SliderDividerStyle
 		</td>
+		<td>Customizes the divider appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand">DragCompletedCommand</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the command that will be executed when we completed moving the thumb.
+			ICommand
 		</td>
+		<td>Runs when thumb movement completes.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter">DragCompletedCommandParameter</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the parameter for the DragCompletedCommandParameter.
+			object
 		</td>
+		<td>Supplies the drag completed command parameter.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand">DragStartedCommand</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the command that will be executed when we start moving the thumb.
+			ICommand
 		</td>
+		<td>Runs when thumb movement starts.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter">DragStartedCommandParameter</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the parameter for the DragStartedCommandParameter.
+			object
 		</td>
+		<td>Supplies the drag started command parameter.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement">EdgeLabelsPlacement</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the first and last label either inside the track bounds or on the intervals.
+			SliderEdgeLabelsPlacement
 		</td>
+		<td>Controls the placement of edge labels.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate">EnableDeferredUpdate</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether to defer a selection.
+			bool
 		</td>
+		<td>Enables deferred selection updates.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect">EnableLiquidGlassEffect</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether the liquid glass visual effect is enabled for the control.
+			bool
 		</td>
+		<td>Enables the liquid glass effect.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval">Interval</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating the interval between the slider elements in the track.
+			double
 		</td>
+		<td>Sets the interval between track elements.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed">IsInversed</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether to inverse the slider.
+			bool
 		</td>
+		<td>Reverses the slider direction.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement">LabelsPlacement</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the value indicating whether to place the labels either between the major ticks or on the major ticks.
+			SliderLabelsPlacement
 		</td>
+		<td>Controls where labels appear relative to ticks.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle">LabelStyle</a> <br/>
 		</td>
 		<td>
-		Gets or sets a value to customize the appearance of the labels.
+			SliderLabelStyle
 		</td>
+		<td>Customizes the label appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle">MajorTickStyle</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the major tick shape.
+			SliderTickStyle
 		</td>
+		<td>Customizes the major tick appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum">Maximum</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the maximum value of the track. The track ends at this value.
+			DateTime
 		</td>
+		<td>Sets the upper limit of the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum">Minimum</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the minimum value of the track. The track starts from this value.
+			DateTime
 		</td>
+		<td>Sets the lower limit of the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval">MinorTicksPerInterval</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the value indicating the number of smaller ticks between two major ticks.
+			int
 		</td>
+		<td>Sets the number of minor ticks between major ticks.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle">MinorTickStyle</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the minor tick shape.
+			SliderTickStyle
 		</td>
+		<td>Customizes the minor tick appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers">ShowDividers</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether to show or hide the dividers.
+			bool
 		</td>
+		<td>Shows or hides dividers.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels">ShowLabels</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether to show or hide the labels.
+			bool
 		</td>
+		<td>Shows or hides labels.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks">ShowTicks</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value indicating whether to show or hide the ticks.
+			bool
 		</td>
+		<td>Shows or hides ticks.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbOverlayStyle">ThumbOverlayStyle</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the thumb overlay shape.
+			SliderThumbOverlayStyle
 		</td>
+		<td>Customizes the thumb overlay appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyle">ThumbStyle</a> <br/>
 		</td>
 		<td>
-		Gets or sets a value to customize the appearance of the thumb shape.
+			SliderThumbStyle
 		</td>
+		<td>Customizes the thumb appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip">Tooltip</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the tooltip shape.
+			SliderTooltip
 		</td>
+		<td>Customizes the tooltip appearance.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent">TrackExtent</a> <br/>
 		</td>
 		<td>
-		 Gets or sets the value in pixel for extending track edges.
+			double
 		</td>
+		<td>Sets the track edge extension in pixels.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle">TrackStyle</a> <br/>
 		</td>
 		<td>
-		 Gets or sets a value to customize the appearance of the track shape.
+			SliderTrackStyle
 		</td>
+		<td>Customizes the track appearance.</td>
 	</tr>
 </table>
 
@@ -583,6 +321,9 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 			Name<br/>
 		</th>
 		<th>
+			Type<br/>
+		</th>
+		<th>
 			Description<br/>
 		</th>
 	</tr>
@@ -591,85 +332,44 @@ This page provides a comprehensive reference for all available APIs of the SfDat
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanged">ValueChanged</a>  <br/>
 		</td>
 		<td>
-        Represents the ValueChanged event, which occurs when the user is done selecting a new value for the slider.
+			EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;
 		</td>
+		<td>Fires when value selection ends.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanging">ValueChanging</a>  <br/>
 		</td>
 		<td>
-		 Represents the ValueChanging event, which occurs when the user is selecting a new value for the Slider by dragging the thumb.
+			EventHandler&lt;DateTimeRangeSliderValueChangingEventArgs&gt;
 		</td>
+		<td>Fires while the thumb is dragged to a new value.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated">LabelCreated</a>  <br/>
 		</td>
 		<td>
-		 Represents the LabelCreated event, which occurs when a slider label is created. It is used to format or change the label text.
+			EventHandler&lt;SliderLabelCreatedEventArgs&gt;
 		</td>
+		<td>Fires when a slider label is created for formatting or text changes.</td>
 	</tr>
     <tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd">ValueChangeEnd</a>  <br/>
 		</td>
 		<td>
-		 Represents the ValueChangeEnd event, which occurs when the user completed selecting a new value by tap/mouse up in the thumb.
+			EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;
 		</td>
+		<td>Fires when range selection ends.</td>
 	</tr>
-    <tr valign="top">		
+	<tr valign="top">		
 		<td>
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart">ValueChangeStart</a>  <br/>
+		<td>Fires when range selection starts.</td>
 		</td>
 		<td>
 		 Represents the ValueChangeStart event, which occurs when the user is selecting a new value by tap/mouse down in the thumb.
-		</td>
-	</tr>
-</table>
-
-### Explicit Interface Implementations
-
-<table>
-	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Syncfusion_Maui_Sliders_IDateTimeElement_OnDateFormatChanged_System_String_System_String_">IDateTimeElement.OnDateFormatChanged(String, String)</a> <br/>
-		</td>
-		<td>
-		A method invoked to handle updates when the date format of an element changes from the old value to the new value.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Syncfusion_Maui_Sliders_IDateTimeElement_OnIntervalTypeChanged_Syncfusion_Maui_Sliders_SliderDateIntervalType_Syncfusion_Maui_Sliders_SliderDateIntervalType_">IDateTimeElement.OnIntervalTypeChanged(SliderDateIntervalType, SliderDateIntervalType)</a><br/>
-		</td>
-		<td>
-		A method invoked to handle updates when the interval type of an element changes from the old value to the new value.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Syncfusion_Maui_Sliders_IDateTimeElement_OnStepChanged">IDateTimeElement.OnStepChanged()</a><br/>
-		</td>
-		<td>
-		 A method invoked to handle updates when the step value of an element changes.
-		</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Syncfusion_Maui_Sliders_IOrientationElement_OnOrientationChanged_Syncfusion_Maui_Sliders_SliderOrientation_">IOrientationElement.
-          OnOrientationChanged(SliderOrientation)</a><br/>
-		</td>
-		<td>
-		 Invoked when the SfSlider’s orientation changes, allowing the control to update its layout based on the new orientation.
 		</td>
 	</tr>
 </table>

@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Description in .NET MAUI Step ProgressBar Control | Syncfusion
-description: Learn here all about Description support in Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control and more.
+title: Description in .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn all about description support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Description in .NET MAUI StepProgressBar (Step Progress Bar)
-Each step in a multi-step process has a different operation. To display information about a step's status can be shown on either side. A primary description will be on the right or bottom of the step, and a secondary description will be on the left or top of the step.
+# Description in .NET MAUI StepProgressBar (SfStepProgressBar)
+
+Each step in a multi-step process performs a different operation. You can display information about a step's status on either side. A primary description is shown on the right or bottom of the step, and a secondary description is shown on the left or top of the step.
 
 ## ActiveStepIndex
-The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
+
+The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex) property is used to represent the index of the currently active step within the sequence of steps. The [ActiveStepProgressValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue) property is used to add the progress value of the currently active step within a sequence.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3 4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="3 4" %}
 
 <stepProgressBar:SfStepProgressBar
                     x:Name="stepProgress"
@@ -23,7 +25,7 @@ The [ActiveStepIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Progre
 </stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3 4" %}
+{% highlight C# tabtitle="C#" hl_lines="3 4" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
@@ -34,12 +36,13 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {% endhighlight %}
 {% endtabs %}
 
-N> If `ActiveStepIndex` value is less than 0, first step will be marked as `NotStarted` step status. If `ActiveStepIndex` value is greater than the step count, all the steps will be marked as `Completed` step status.
+N> If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
 
-## Text 
+## Text
+
 The primary and secondary descriptions for a step view can be set using the [PrimaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryText) and [SecondaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryText) properties, as demonstrated in the following code example.
 
-* Create a simple Observable Collection that contain the `PrimaryText` and `SecondaryText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
+* Create a simple `ObservableCollection` that contains the `PrimaryText` and `SecondaryText` by using the `StepProgressBarItem` collection, which is bound to the `ItemsSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
@@ -115,12 +118,13 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-text.png)
- 
-## Formatted text
-[PrimaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryFormattedText) and [SecondaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryFormattedText) can be used to customize the description with different formatting style. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` to a step view.
+![Text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-text.png)
 
-* Create a simple Observable Collection that contain the `PrimaryFormattedText` and `SecondaryFormattedText` by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
+## Formatted text
+
+[PrimaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryFormattedText) and [SecondaryFormattedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryFormattedText) can be used to customize the description with different formatting styles. The following code example explains how to set `PrimaryFormattedText` and `SecondaryFormattedText` for a step view.
+
+* Create a simple `ObservableCollection` that contains the `PrimaryFormattedText` and `SecondaryFormattedText` by using the `StepProgressBarItem` collection, which is bound to the `ItemsSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="9" %}
@@ -218,22 +222,23 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Formatted text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-formattedtext.png)
+![Formatted text in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-formattedtext.png)
 
 N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryFormattedText` will be displayed. This precedence is same as for the `SecondaryText` and `SecondaryFormattedText`.
 
 ## Customize label spacing
-You can customize the space between the step and primary or secondary text of the step progress bar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar`. The default value of `LabelSpacing` property is `5`.
+
+You can customize the space between the step and the primary or secondary text of the step progress bar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar` control. The default value of the `LabelSpacing` property is `5`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
-<stepProgressBar:SfStepProgressBar                                                                              
+<stepProgressBar:SfStepProgressBar
                         LabelSpacing="28">
-</stepProgressBar:SfStepProgressBar> 
+</stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight C# tabtitle="C#" hl_lines="3" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
@@ -245,26 +250,27 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
- ![Label spacing in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelspacing.png)
- 
+![Label spacing in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelspacing.png)
+
 ## Customize label position
-You can customize the position of primary or secondary text of the step progress bar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar`. It can be positioned at the `Start`, `End`, `Bottom` or `Top`. 
+
+You can customize the position of the primary or secondary text of the step progress bar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar` control. It can be positioned at the `Start`, `End`, `Bottom`, or `Top`.
 
 The default value of the `LabelPosition` property in the horizontal direction is `Bottom`, and in the vertical direction, it is `End`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
-<stepProgressBar:SfStepProgressBar                                                                              
+<stepProgressBar:SfStepProgressBar
                         LabelPosition="Bottom">
-</stepProgressBar:SfStepProgressBar> 
+</stepProgressBar:SfStepProgressBar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
+{% highlight C# tabtitle="C#" hl_lines="3" %}
 
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {
-    LabelPosition = LabelPosition.Bottom,
+    LabelPosition = StepLabelPosition.Bottom,
 };
 
 this.Content = stepProgressBar;
@@ -272,33 +278,32 @@ this.Content = stepProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
- ![Label position in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelposition.png)
+![Label position in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-labelposition.png)
 
 N> The `LabelPosition` property will be considered only if either `PrimaryText` or `SecondaryText`, and either `PrimaryFormattedText` or `SecondaryFormattedText`, is provided.
 
-## StepProgressBar Image Customization
+## StepProgressBar image customization
 
-The [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control provides support for adding images as the content of the step. You can add the images by giving an image path and font icons.
+The [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control provides support for adding images as the content of the step. You can add the images by providing an image path and font icons.
 
-### Customization using Image
+### Customization using image
 
-You can add the images by giving image path to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+You can add the images by providing an image path to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar` control. The following code example explains how to set an image in a step view.
 
-* Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
+* Create a simple `ObservableCollection` that contains the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemsSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="8" %}
 
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"                                                                                       
-                    LabelSpacing="12"
-                    LabelPosition="Bottom"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="50"    
-                    ItemsSource="{Binding StepProgressItem}">
+<stepProgressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"   
+                                    Orientation="Horizontal"               
+                                    LabelSpacing="12"
+                                    LabelPosition="Bottom"
+                                    ActiveStepIndex="2"
+                                    ActiveStepProgressValue="50"    
+                                    ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>                                                                                              
 
 <ContentPage.BindingContext>
@@ -361,25 +366,24 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Customization using image in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-image.png){:width="500" height="127"}
- 
+![Customization using image in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-image.png){:width="500" height="127"}
+
 ### Customization using Font icon
 
-You can add the images with font icons to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar`. The following code example explains how to set an image in step view.
+You can add the images with font icons to the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ImageSource) property in `SfStepProgressBar` control. The following code example explains how to set an image in a step view.
 
-* Create a simple Observable Collection that contain the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemSource` property.
+* Create a simple `ObservableCollection` that contains the provided images by using the `StepProgressBarItem` collection, which is bound to the `ItemsSource` property.
 
 {% tabs %}
 {% highlight XAML hl_lines="8" %}
 
-<stepProgressBar:SfStepProgressBar
-                    x:Name="stepProgress"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"                                        
-                    Orientation="Horizontal"
-                    ActiveStepIndex="2"
-                    ActiveStepProgressValue="50"    
-                    ItemsSource="{Binding StepProgressItem}">
+<stepProgressBar:SfStepProgressBar  x:Name="stepProgress"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Orientation="Horizontal"
+                                    ActiveStepIndex="2"
+                                    ActiveStepProgressValue="50"    
+                                    ItemsSource="{Binding StepProgressItem}">
 </stepProgressBar:SfStepProgressBar>                                                                                            
 
 <ContentPage.BindingContext>
@@ -439,4 +443,4 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
- ![Customization using font in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-fonticon.png){:width="500" height="127"}
+![Customization using font in .NET MAUI SfStepProgressBar.](images/description/maui-stepprogressbar-custom-fonticon.png){:width="500" height="127"}

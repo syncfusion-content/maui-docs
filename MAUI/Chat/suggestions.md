@@ -129,7 +129,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 ![Suggestions support in Syncfusion .NET MAUI Chat](images/suggestions/maui-chat-suggestion-text.png)
 
 N>
-Before using images in suggestion items, add the required image files (for example, Flight1.png, Flight2.png, and so on) to your .NET MAUI application's image resources and ensure they are available for all target platforms.
+Before using images in suggestion items, add the required image files (for example, `Flight1.png`, `Flight2.png`, and so on) to your .NET MAUI application's image resources and ensure they are available for all target platforms.
 
 ### Add an image in suggestion item
 
@@ -192,7 +192,7 @@ public class SuggestionsViewModel : INotifyPropertyChanged
 
 ![Syncfusion .NET MAUI Chat Suggestions with image](images/suggestions/maui-chat-suggestion-image.png)
 
-N> To display the configured ChatSuggestions in the SfChat control, bind the ViewModel's ChatSuggestions property to the SfChat.Suggestions property.
+N> To display the configured ChatSuggestions in the SfChat control, bind the ViewModel's ChatSuggestions property to the `SfChat.Suggestions` property.
 
 ### Change the orientation of suggestions
 
@@ -386,7 +386,7 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -454,7 +454,7 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 **SuggestionItemSelectedCommand command**
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
+{% highlight xaml hl_lines="16" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -478,7 +478,7 @@ private void SfChat_SuggestionItemSelected(object sender, SuggestionItemSelected
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI TreeMap | Syncfusion®
+description: Learn about getting started with Syncfusion® .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with the .NET MAUI TreeMap
 
-This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) for .NET MAUI and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add .NET MAUI TreeMap control to your project.
+This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add the .NET MAUI TreeMap control to your project.
 
-To get start quickly with our .NET MAUI TreeMap, you can check the below video.
+To get started quickly with our .NET MAUI TreeMap, you can check the below video.
 
 {% youtube
 "youtube:https://youtu.be/ZqorS_FjHxg?si=ojSLI-inAq9_1-aI"%}
@@ -57,9 +57,8 @@ Before proceeding, ensure the following are set up:
 
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Open the Terminal and run `dotnet add package Syncfusion.Maui.TreeMap` to install the latest version.
+2. Ensure the necessary dependencies are installed correctly, and the project is restored by running `dotnet restore`.
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -70,19 +69,18 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, select .NET (C#), and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeMap NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+1. In the **NuGet** window, search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
+2. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -105,17 +103,17 @@ builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Create a data model for treemap 
+## Step 4: Create a data model for TreeMap 
 
 Create a simple data model in a new class file as shown in the following example code.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
-public class AirportDetails
+public class PopulationDetails
 {
     public string State { get; set; }
-    public string Count { get; set; }
+    public double Population { get; set; }
 }
 
 {% endhighlight %}
@@ -126,26 +124,26 @@ public class AirportDetails
 Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
-public class ViewModel
+public class PopulationViewModel
 {
-    public ViewModel()
+    public PopulationViewModel()
     {
-        this.AirportDetails = new ObservableCollection<AirportDetails>()
+        this.PopulationDetails = new ObservableCollection<PopulationDetails>()
         {
-            new AirportDetails { State = "Ecuador", Count = 7 },
-            new AirportDetails { State = "Chile", Count = 5 },
-            new AirportDetails { State = "Peru", Count = 3 },             
-            new AirportDetails { State = "Falkland", Count = 1 },
-            new AirportDetails { State = "French", Count = 1 },
-            new AirportDetails { State = "German", Count = 3 },
-            new AirportDetails { State = "Islands", Count = 1 },
-            new AirportDetails { State = "Guiana", Count = 1 },
+            new PopulationDetails { State = "Ecuador", Population = 7 },
+            new PopulationDetails { State = "Chile", Population = 5 },
+            new PopulationDetails { State = "Peru", Population = 3 },             
+            new PopulationDetails { State = "Falkland", Population = 1 },
+            new PopulationDetails { State = "French", Population = 1 },
+            new PopulationDetails { State = "German", Population = 3 },
+            new PopulationDetails { State = "Islands", Population = 1 },
+            new PopulationDetails { State = "Guiana", Population = 1 },
         };
     }
 
-    public ObservableCollection<AirportDetails> AirportDetails
+    public ObservableCollection<PopulationDetails> PopulationDetails
     {
         get;
         set;
@@ -155,45 +153,34 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Import the TreeMap namespace
+## Step 6: Add the TreeMap Component
 
-Add the following namespace in your XAML or C#.
+Initialize the `TreeMap` control and configure its properties to represent hierarchical data using a compact, space-efficient visualization. The TreeMap organizes data into nested rectangles, where each item's size and color can reflect specific values. To populate the TreeMap items, utilize the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Additionally, ensure that the [PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_PrimaryValuePath) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) is mapped from the corresponding property in the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) while initializing the TreeMap control.
 
 {% tabs %}
 {% highlight xaml %}
 
-xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:treemap="clr-namespace:Syncfusion.Maui.TreeMap;assembly=Syncfusion.Maui.TreeMap"
+             xmlns:local="clr-namespace:TreeMapSample">
+    <ContentPage.BindingContext>
+        <local:PopulationViewModel />
+    </ContentPage.BindingContext>
+    <treemap:SfTreeMap DataSource="{Binding PopulationDetails}"
+                       PrimaryValuePath="Population">
+        <treemap:SfTreeMap.LeafItemBrushSettings>
+           <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
+        </treemap:SfTreeMap.LeafItemBrushSettings>
+    </treemap:SfTreeMap>
+</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-using Syncfusion.Maui.TreeMap;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 7: Add the TreeMap Component
-
-Initialize the `TreeMap` control and configure its properties to represent hierarchical data using a compact, space-efficient visualization. The TreeMap organizes data into nested rectangles, where each item’s size and color can reflect specific values. To populate the treemap items, utilize the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) property of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html). Additionally, ensure that the following properties of [SfTreeMap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html) are mapped from corresponding properties in the [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DataSource) while initializing the treemap control.
-
-{% tabs %}
-{% highlight XAML %}
-
-<treemap:SfTreeMap DataSource="{Binding PopulationDetails}"
-                   PrimaryValuePath="Population">
-    <treemap:SfTreeMap.BindingContext>
-        <local:PopulationViewModel />
-    </treemap:SfTreeMap.BindingContext>
-    <treemap:SfTreeMap.LeafItemBrushSettings>
-       <treemap:TreeMapUniformBrushSettings Brush="Orange"/>
-    </treemap:SfTreeMap.LeafItemBrushSettings>
-</treemap:SfTreeMap>
-
-{% endhighlight %}
-{% highlight C# %}
-
 SfTreeMap treeMap = new SfTreeMap();
 PopulationViewModel viewModel = new PopulationViewModel();
+treeMap.BindingContext = viewModel;
 treeMap.DataSource = viewModel.PopulationDetails;
 treeMap.PrimaryValuePath = "Population";
 treeMap.LeafItemBrushSettings = new TreeMapUniformBrushSettings() { Brush = Brush.Orange };
@@ -202,9 +189,9 @@ this.Content = treeMap;
 {% endhighlight %}
 {% endtabs %}
 
-N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain treemap binding.
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to retain model bindings during AOT compilation.
 
-![getting-started-with-maui-tree-map](images/getting-started/treemap-view.png)
+![.NET MAUI TreeMap getting started](images/getting-started/treemap-view.png)
 
 You can download the TreeMap Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-treemap-examples/tree/master/GettingStarted).
 
