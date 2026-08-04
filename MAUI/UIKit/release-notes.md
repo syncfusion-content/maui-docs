@@ -7,7 +7,7 @@ control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Release Notes
+# Essential UI Kit for .NET MAUI Release Notes
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI offers elegantly designed XAML pages for MAUI apps, compatible with Windows, Android, iOS, and macOS. These pages uses the MVVM design pattern for seamless integration.
 
