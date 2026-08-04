@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin to .NET MAUI SfTimePicker
-description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin TimePicker to Syncfusion<sup>&reg;</sup> .NET MAUI TimePicker control.
+title: Migrate from Xamarin SfTimePicker to .NET MAUI Time Picker control | Syncfusion
+description: Migrate from Xamarin SfTimePicker to .NET MAUI Time Picker with API mapping and guidance on renamed properties.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfTimePicker to .NET MAUI SfTimePicker 
+# Migrate from Xamarin SfTimePicker to .NET MAUI SfTimePicker 
 
 To make the migration from the [Xamarin SfTimePicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html) to [.NET MAUI SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker) easier, most of the APIs from the Xamarin SfTimePicker are kept in the .NET MAUI SfTimePicker. However, to maintain the consistency of API naming in the .NET MAUI SfTimePicker, some of the APIs have been renamed. Please find the difference in the following topics.
 
