@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date restriction in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about date restriction in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Date Restriction in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about date restriction in Syncfusion .NET MAUI Date Time Picker control to manage selectable date and time ranges.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Date Restriction in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Date Restriction in .NET MAUI Date Time Picker control
 
 Restrict which dates and times a user can select using the following options: `MinimumDate` and `MaximumDate` define an allowed range, and `BlackoutDateTimes` disables specific dates or time slots within that range.
 
