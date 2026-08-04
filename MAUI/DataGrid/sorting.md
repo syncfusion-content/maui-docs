@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in .NET MAUI DataGrid control | Syncfusion®
-description: Learn here all about Sorting support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Sorting in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to sort data in Syncfusion® .NET MAUI DataGrid including single-column, multi-column, and custom sorting options.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui sorting, maui sorting
 ---
 
-# Sorting in MAUI DataGrid (SfDataGrid)
+# Sorting in .NET MAUI DataGrid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides the built-in support to sort one or more columns by using the [SfDataGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) property. When sorting is applied, the data grid automatically rearranges the data to match the current sort criteria. Sort the data by tapping the column header. Once sorting is applied, the data grid shows a sort icon in the respective column header indicating the sort direction.
 
