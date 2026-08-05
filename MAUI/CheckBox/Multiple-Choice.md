@@ -7,7 +7,7 @@ control: SfCheckBox
 documentation: UG
 ---
 
-# Multiple Choice in .NET MAUI CheckBox | Syncfusion®
+# Multiple Choice in .NET MAUI CheckBox
 
 The [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be used as a single or as a group. A single CheckBox is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 

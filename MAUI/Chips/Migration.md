@@ -48,15 +48,15 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 <tr>
 <td>{{'[ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_ImageSource)'| markdownify }}<br/> {{'[Image](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfButton.html#Syncfusion_XForms_Buttons_SfButton_Image)'| markdownify }}</td>
 <td>{{'[ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource)'| markdownify }}</td>
-<td>Gets or sets the imagesource in chip.</td></tr>
+<td>Gets or sets the image source in chip.</td></tr>
 <tr>
 <td> {{'[ChipImageWidth ](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfChipGroup.html#Syncfusion_XForms_Buttons_SfChipGroup_ChipImageWidth)'| markdownify }}</td>
 <td> {{'[ChipImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipImageSize)'| markdownify }}</td>
-<td>Gets or sets chipgroup image size.</td></tr>
+<td>Gets or sets chip group image size.</td></tr>
 <tr>
 <td> {{'[Type](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfChipGroup.html#Syncfusion_XForms_Buttons_SfChipGroup_Type)'| markdownify }}</td>
 <td> {{'[ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipType)'| markdownify }} </td>
-<td>Gets or sets the chip type in chipgroup.</td></tr>
+<td>Gets or sets the chip type in chip group.</td></tr>
 <tr>
 <td>{{'[SelectedItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfChipGroup.html#Syncfusion_XForms_Buttons_SfChipGroup_SelectedItems)'| markdownify }}<br/> {{'[SelectedItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.SfChipGroup.html#Syncfusion_XForms_Buttons_SfChipGroup_SelectedItem)'| markdownify }}</td>
 <td>{{'[SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectedItem)'| markdownify }}</td>
@@ -90,7 +90,7 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 <td> {{'[ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved)'| markdownify }}</td>
 <td>{{'[ItemRemovedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.Buttons.XForms.SfChip.ItemRemovedEventArgs.html)'| markdownify }}<br/> <ul><li> {{'[RemovedItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.Buttons.XForms.SfChip.ItemRemovedEventArgs.html#Syncfusion_Buttons_XForms_SfChip_ItemRemovedEventArgs_RemovedItem)'| markdownify }}</li></ul></td>
 <td>{{'[SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html)'| markdownify }}<br/> <ul> <li> {{'[AddedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html#Syncfusion_Maui_Core_Chips_SelectionChangedEventArgs_AddedItem)'| markdownify }} </li> <li>  {{'[RemovedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html#Syncfusion_Maui_Core_Chips_SelectionChangedEventArgs_RemovedItem)'| markdownify }}</li> </ul></td>
-<td>Raises when an item is removed from chipgroup. Returns the currently removed item.</td></tr>
+<td>Raises when an item is removed from chip group. Returns the currently removed item.</td></tr>
 </table> 
 
 

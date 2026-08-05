@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header and Footer in .NET MAUI ComboBox control | Syncfusion®
-description: Learn about the Header and Footer support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+title: Header and Footer in .NET MAUI ComboBox | Syncfusion®
+description: Learn about the header and footer support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Header and Footer support in .NET MAUI ComboBox
+# Header and Footer in .NET MAUI ComboBox
 
 The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports adding custom header and footer views to the drop-down. Use the header to display content such as a title or filter above the items, and the footer to display content such as an action button below the items.
 

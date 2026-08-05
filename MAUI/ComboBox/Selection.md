@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection in .NET MAUI ComboBox control | Syncfusion®
+title: Selection in .NET MAUI ComboBox | Syncfusion®
 description: Learn how to configure single and multiple selection and related APIs in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
