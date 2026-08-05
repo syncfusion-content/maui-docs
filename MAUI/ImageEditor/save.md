@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save image .NET MAUI Image Editor Control | Syncfusion
-description: Learn about save support and various other features in the Syncfusion .NET MAUI ImageEditor(SfImageEditor) control.
+title: Save in .NET MAUI Image Editor | Syncfusion®
+description: Learn about saving edited images in various formats (PNG, JPG, JPEG, BMP) in Syncfusion® .NET MAUI Image Editor control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Save image using .NET MAUI Image Editor (SfImageEditor)
+# Save in .NET MAUI Image Editor
 
 The Image Editor control in .NET MAUI allows you to save the edited image as PNG, JPG, JPEG, and BMP.
 
