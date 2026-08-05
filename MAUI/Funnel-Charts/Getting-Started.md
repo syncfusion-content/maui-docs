@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Funnel Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) control, its elements, and more.
+title: Getting Started with .NET MAUI Funnel Chart | Syncfusion
+description: Learn how to get started with the Syncfusion .NET MAUI Funnel Chart control. Explore setup, customization, data labels, and visualization features.
 keywords: maui funnel chart, getting started, setup, project creation, initialization
 platform: maui
 control: SfFunnelChart

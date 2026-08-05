@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Funnel Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) for stunning UI.
+title: Liquid Glass Effect in .NET MAUI Funnel Chart | Syncfusion
+description: Liquid Glass Effect in .NET MAUI Funnel Chart applies a sleek glass-like visual style to chart segments, enhancing chart appearance and visual appeal.
 platform: maui
 control: SfFunnelChart
 documentation: ug

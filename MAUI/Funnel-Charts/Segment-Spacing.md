@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segment spacing in .NET MAUI Funnel Chart control Syncfusion
-description: Learn how to set the gap between segments in .NET MAUI Funnel Chart (SfFunnelChart) using the GapRatio property.
+title: Segment Spacing in .NET MAUI Funnel Chart | Syncfusion
+description: Segment spacing in .NET MAUI Funnel Chart controls the gap between funnel segments, improving readability and enhancing visual clarity.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# Segment spacing in .NET MAUI Funnel Chart
+# Segment Spacing in .NET MAUI Funnel Chart
 
 The gap between each segment in the funnel chart can be set using the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property. The default value of the [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_GapRatio) property is `0`, and its value ranges from `0` to `1`. This ratio represents the spacing relative to the segment height; a value of `0.2` means the gap is 20% of the segment's height.
 
