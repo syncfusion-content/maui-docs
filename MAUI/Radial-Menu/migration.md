@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI Radial Menu | Syncfusion®
-description: Learn about migrating from the Syncfusion® Xamarin Radial Menu to the  Syncfusion® .NET MAUI Radial Menu control.
+description: Learn about migrating from the Syncfusion® Xamarin Radial Menu to the Syncfusion® .NET MAUI Radial Menu control.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Main Content in .NET MAUI Navigation Drawer | Syncfusion®
-description: 	Learn how to set the main content of the Syncfusion® .NET MAUI Navigation Drawer control and how it relates to the side pane.
+description: Learn how to set the main content of the Syncfusion® .NET MAUI Navigation Drawer control and how it relates to the side pane.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
