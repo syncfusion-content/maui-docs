@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Rotation Effect | Effects View Control | Syncfusion®
+title: Rotation Effect in .NET MAUI Effects View  | Syncfusion®
 description: Learn about the rotation effect in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Rotation Effect in .NET MAUI Effects View (SfEffectsView)
+# Rotation Effect in .NET MAUI Effects View
 
 The [SfEffects.Rotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Rotation) effect rotates the `Effects View` around its center by the specified [Angle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Angle). Positive angles rotate clockwise; negative angles rotate counter-clockwise.
 
