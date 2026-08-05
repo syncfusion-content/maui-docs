@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Histogram Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Histogram Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about the Histogram chart and its type in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

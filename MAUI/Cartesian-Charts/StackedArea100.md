@@ -1,6 +1,6 @@
 ---
 layout: post
-title: StackedArea100 Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Stacked Area 100 Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about StackedArea100 chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui stacked area 100 chart, maui stacked area 100 chart, stacked area 100 chart customization .net maui, syncfusion maui stacked area 100 chart, cartesian stacked area 100 chart maui, .net maui chart stacked area 100 visualization, .net maui 100% stacked area chart
 ---
 
-# StackedArea100 Chart in .NET MAUI Cartesian Chart
+# Stacked Area 100 Chart in .NET MAUI Cartesian Chart
 
 The stacked area 100% chart enables users to visually represent data points vertically, one above the other, to indicate the cumulative value of the data points at 100%.
 

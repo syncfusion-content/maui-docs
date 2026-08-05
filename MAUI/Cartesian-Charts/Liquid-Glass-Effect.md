@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Cartesian Chart control | Syncfusion
+title: Liquid Glass Effect in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) for stunning UI.
 platform: maui
 control: SfCartesianChart

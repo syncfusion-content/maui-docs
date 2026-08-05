@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range Column Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Range Column Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about range column and range bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

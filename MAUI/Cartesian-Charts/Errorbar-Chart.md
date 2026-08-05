@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Error Bar Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Error Bar Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about error bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

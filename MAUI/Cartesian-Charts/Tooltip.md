@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Cartesian Chart control | Syncfusion
+title: Tooltip in .NET MAUI Cartesian Chart | Syncfusion
 description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

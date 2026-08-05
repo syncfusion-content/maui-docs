@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Cartesian Chart control | Syncfusion
+title: Getting started with .NET MAUI Cartesian Chart | Syncfusion
 description: This section explains how to get started with the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

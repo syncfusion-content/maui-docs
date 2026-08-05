@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crosshair in .NET MAUI Cartesian Chart control | Syncfusion
+title: Crosshair in .NET MAUI Cartesian Chart | Syncfusion
 description: This section explains how to enable the crosshair and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

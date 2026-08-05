@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI powered stock forecasting in .NET MAUI Cartesian Chart | Syncfusion
+title: AI Powered Stock Forecasting in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here how to implement AI-powered smart stock data forecasting using .NET MAUI Syncfusion® Cartesian Chart Candle series.
 platform: maui
 control: SfCartesianChart
