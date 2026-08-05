@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rotation Effect in .NET MAUI Effects View  | Syncfusion®
+title: Rotation Effect in .NET MAUI Effects View | Syncfusion®
 description: Learn about the rotation effect in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView

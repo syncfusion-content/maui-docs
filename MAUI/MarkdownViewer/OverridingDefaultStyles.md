@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prerequisites in MAUI  | Syncfusion
+title: Apply CSS Style Rules in .NET MAUI Markdown Viewer | Syncfusion®
 description: Learn how to override the default appearance of markdown content using custom CSS in the Syncfusion® .NET MAUI Markdown Viewer control.
 platform: MAUI
 control: SfMarkdownViewer
