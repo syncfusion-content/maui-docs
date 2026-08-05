@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Summaries in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to use summaries in Syncfusion® .NET MAUI DataGrid to calculate and display aggregate values for rows, groups, and columns.
+title: Summaries in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Summaries support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui summaries, maui summaries
 ---
 
-# Summaries in .NET MAUI DataGrid
+# Summaries in MAUI DataGrid (SfDataGrid)
 
 The data grid supports to display the concise information about the bound data objects using summaries. The control provides the following summary types:
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI Rich Text Editor Control | Syncfusion®
+title: About .NET MAUI Rich Text Editor control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-rich-text-editor"
 description: Learn here all about introduction of Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
@@ -8,7 +8,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# About Syncfusion .NET MAUI Rich Text Editor Control 
+# Overview of .NET MAUI Rich Text Editor
 
 The [.NET MAUI Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/maui-rich-text-editor) provides a simple yet powerful editor interface to compose richly formatted text with all the common formatting options like bold and italics. The Rich Text Editor is used to create messaging applications, email composers, blog editors, forum post text boxes, feedback and review sections, notes sections, and more. It has a variety of tools to edit and format rich content and returns valid HTML markup content.
 

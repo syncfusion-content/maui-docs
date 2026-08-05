@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about data binding in Syncfusion® .NET MAUI DataGrid, including binding data sources, data updates, and customization options.
+title: Data Binding in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Data Binding support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui data binding, maui data binding
 ---
 
-# Data Binding in .NET MAUI DataGrid
+# Data Binding in MAUI DataGrid (SfDataGrid)
 
 The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in a tabular format. It supports data sources such as List, IEnumerable, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with a collection of objects.
 

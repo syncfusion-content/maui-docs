@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Columns in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about columns in Syncfusion® .NET MAUI DataGrid, including column configuration, customization options, supported types, and key features.
+title: Columns in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Columns support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column, maui column
 ---
 
-# Columns in .NET MAUI DataGrid
+# Columns in MAUI DataGrid (SfDataGrid)
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows a user to create and add columns in the following two ways:
 

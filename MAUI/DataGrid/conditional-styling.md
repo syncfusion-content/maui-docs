@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Conditional Styling in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to apply conditional styling in Syncfusion® .NET MAUI DataGrid to dynamically customize cell and row appearances based on data values.
+title: Conditional Styling in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Conditional Styling support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui conditional styling, maui conditional styling
 ---
 
-# Conditional Styling in .NET MAUI DataGrid
+# Conditional Styling in .NET MAUI DataGrid (SfDataGrid)
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to customize the style of the individual cells and rows based on the requirements. 
 
 To get started quickly with applying conditional styling in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:

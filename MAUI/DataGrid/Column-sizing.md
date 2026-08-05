@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column Sizing in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about column sizing support in Syncfusion® .NET MAUI DataGrid, including auto-sizing modes, customization options, and usage examples.
+title: Column Sizing in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Column Sizing support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: maui
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui sizing, maui column sizing
 ---
 
-# Column Sizing in .NET MAUI DataGrid
+# Column Sizing in .NET MAUI DataGrid (SfDataGrid)
 
 The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to set the column widths based on certain logics using the [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) or [DataGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ColumnWidthMode) property. 
 

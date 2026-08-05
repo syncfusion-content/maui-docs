@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styling in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to customize the appearance of Syncfusion® .NET MAUI DataGrid using styling options for rows, cells, headers, and other grid elements.
+title: Styling in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Styling support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui styling, maui styling
 ---
 
-# Styling in .NET MAUI DataGrid
+# Styling in .NET MAUI DataGrid (SfDataGrid)
 
 The [DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) applies style for all of its elements by setting desired values to the style properties in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty). This property has all the required styling properties for each element in the DataGrid.
 

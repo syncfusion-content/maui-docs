@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Advanced Features in .NET MAUI Rich Text Editor | Syncfusion®
+title: Basic Features in .NET MAUI Rich Text Editor | Syncfusion®
 description: Learn about the basic features of the .NET MAUI Rich Text Editor (SfRichTextEditor) such as handling content, events, and other core functionalities.
 platform: maui
 control: Rich Text Editor
 documentation: ug
 ---
 
-# Advanced Features in .NET MAUI Rich Text Editor
+# Advanced Features in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
 This section covers the essential properties, methods, and events of the .NET MAUI [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) for handling content and user interactions.
 

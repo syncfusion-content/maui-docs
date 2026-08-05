@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Filter Row in .NET MAUI DataGrid | Syncfusion
-description: Learn how to use FilterRow in Syncfusion® .NET MAUI DataGrid to filter data directly within the DataGrid and quickly find relevant records.
+description: Learn here all about FilterRow support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui filterrow, maui filterrow
 ---
 
-# Filter Row in .NET MAUI DataGrid
+# Filter Row in MAUI DataGrid (SfDataGrid)
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterRowPosition) property. Available positions include `FixedTop`, `FixedBottom`, and `Scrollable`.
 
