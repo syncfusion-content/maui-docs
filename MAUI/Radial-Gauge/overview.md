@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Radial Gauge(SfRadialGauge) control with key features and more.
+title: About Syncfusion® .NET MAUI Radial Gauge Control | Syncfusion®
+description: Learn about the overview of Syncfusion® .NET MAUI Radial Gauge control, including axes, pointers, ranges, annotations, and customization features.
 platform: maui
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Overview of .NET MAUI Radial Gauge
+# About Syncfusion® .NET MAUI Radial Gauge Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Radial Gauge](https://www.syncfusion.com/maui-controls/maui-radial-gauge) is a multi-purpose data visualization control, that displays numerical values on a circular scale. It has a rich set of features such as axes, ranges, pointers, and annotations that are fully customizable and extendable. Use it to create speedometers, temperature monitors, dashboards, meter gauges, multi axis clocks, watches, progress indicators, compasses, and more.
 
