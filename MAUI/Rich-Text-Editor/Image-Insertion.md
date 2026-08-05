@@ -7,7 +7,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# Image Insertion in .NET MAUI Rich Text Editor 
+# Image Insertion in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) supports inserting images (JPEG, PNG) into the content area. Images can be added by the end-user through the toolbar or programmatically from various sources like a stream or a file path.
 

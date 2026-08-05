@@ -7,7 +7,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# Toolbar in .NET MAUI Rich Text Editor 
+# Toolbar in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
 ## Toolbar position
 

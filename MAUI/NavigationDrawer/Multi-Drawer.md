@@ -108,7 +108,7 @@ Call the [ToggleSecondaryDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight x#aml %}
 
 <Grid>
     <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">

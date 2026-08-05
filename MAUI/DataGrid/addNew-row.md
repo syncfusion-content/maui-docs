@@ -1,14 +1,14 @@
 ---
 layout: post
-title: AddNewRow in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to add new rows in the Syncfusion® .NET MAUI DataGrid with step-by-step guidance, examples, and customization options.
+title: AddNewRow in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about how to add new row in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui addnewrow, maui add new row
 ---
 
-# Add New Row in .NET MAUI DataGrid
+# Add New Row in MAUI DataGrid (SfDataGrid)
 
 The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides a built-in row (called AddNewRow) that allows users to add new records to the underlying collection. The built-in add new row can be enabled or disabled by setting the [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property. The AddNewRowPosition property also denotes the position of the add new row in the DataGrid.
 

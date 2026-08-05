@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Serialization and Deserialization in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to serialize and deserialize columns in Syncfusion® .NET MAUI DataGrid to save, restore, and persist column settings across sessions.
+title: Serialization and Deserialization in MAUI DataGrid | Syncfusion®
+description: Learn all about column serialization and deserialization support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui serialization and deserialization, maui serialization and deserialization
 ---
 
-# Serialization and Deserialization in .NET MAUI DataGrid
+# Serialization and Deserialization in .NET MAUI DataGrid (SfDataGrid)
 
 SfDataGrid allows you to serialize and deserialize the SfDataGrid settings using [DataContractSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractserializer?view=net-9.0&redirectedfrom=MSDN).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Validation in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about data validation in Syncfusion® .NET MAUI DataGrid, including validation rules, error handling, and data input customization.
+title: Data Validation in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Data Validation support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui data validation, maui data validation
 ---
 
-# Data Validation in .NET MAUI DataGrid
+# Data Validation in MAUI DataGrid (SfDataGrid)
 
 [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to validate data and display hints when validation fails. When invalid data is detected, an error icon is displayed at the top right corner of the DataGridCell. When you hover over the error icon, error information is displayed in an error tip.
 

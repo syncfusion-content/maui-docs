@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in .NET MAUI SmartDataGrid control | Syncfusion®
-description: Learn how to customize the appearance of Syncfusion® .NET MAUI SmartDataGrid including styling options, themes, colors, and visual enhancements.
+title: Appearance in MAUI SmartDataGrid control | Syncfusion®
+description: Learn here all about how to customize the appearance of Syncfusion® .NET MAUI SmartDataGrid (SfSmartDataGrid) control and more.
 platform: MAUI
 control: SfSmartDataGrid
 documentation: UG
 keywords : maui datagrid, appearance, styling, assistview, toolbar, templates
 ---
 
-# Appearance in .NET MAUI SmartDataGrid
+# Appearance in MAUI SmartDataGrid (SfSmartDataGrid)
 
 The [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) provides options to customize the appearance of its toolbar, AssistView button, and AssistView popup. You can style elements such as background, stroke, and thickness, or replace default visuals with templates for complete control over the layout and design.
 
