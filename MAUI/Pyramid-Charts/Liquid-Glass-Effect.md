@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Pyramid Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) for stunning UI.
+title: Liquid Glass Effect in .NET MAUI Pyramid Chart | Syncfusion
+description: Liquid Glass Effect in .NET MAUI Pyramid Chart applies a sleek glass-like visual style to chart segments, enhancing chart appearance and user experience.
 platform: maui
 control: SfPyramidChart
 documentation: ug

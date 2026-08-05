@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in .NET MAUI Pyramid Chart control | Syncfusion
-description: Learn how to configure, customize, and format data labels in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) control.
+title: Data Labels in .NET MAUI Pyramid Chart | Syncfusion
+description: Data Labels in .NET MAUI Pyramid Chart display values directly on chart segments, helping users understand and interpret data more effectively.
 platform: maui
 control: SfPyramidChart
 documentation: ug

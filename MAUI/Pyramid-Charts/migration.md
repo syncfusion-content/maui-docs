@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Pyramid Chart control | Syncfusion
-description: This section explains the features available in the .NET MAUI Pyramid Chart (SfPyramidChart) control over Xamarin SfChart.
+title: Migrate Xamarin.Forms SfChart to .NET MAUI Pyramid Chart | Syncfusion
+description: Migrate from Xamarin.Forms SfChart to .NET MAUI Pyramid Chart with updated APIs, improved performance, and modern features for pyramid data visualization.
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfChart to .NET MAUI SfPyramidChart
+# Migrate from Xamarin.Forms SfChart to .NET MAUI Pyramid Chart
 
 The Pyramid Chart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, minor code changes are required. Additionally, the single [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) control has been split into five specialized chart controls in .NET MAUI for improved user experience and clarity.
 
