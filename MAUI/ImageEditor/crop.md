@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Crop in .NET MAUI Image Editor Control | Syncfusion®
-description: Learn here all about crop support in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
+title: Crop in .NET MAUI Image Editor | Syncfusion®
+description: Learn about cropping images with selection options, aspect ratios, and manual cropping in Syncfusion® .NET MAUI Image Editor.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 ---
 
-# Crop in .NET MAUI Image Editor (SfImageEditor)
+# Crop in .NET MAUI Image Editor
 
 Using the .NET MAUI Image Editor's cropping tool, you can select and crop a section of an image.
 

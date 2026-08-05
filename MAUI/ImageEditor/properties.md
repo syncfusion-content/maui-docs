@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI ImageEditor control | Syncfusion®
-description: This section explains about the properties and events with Syncfusion® MAUI ImageEditor (SfImageEditor) control and more.
-platform: maui
+title: Properties in .NET MAUI Image Editor | Syncfusion®
+description: Learn about all properties and events in Syncfusion® .NET MAUI Image Editor (SfImageEditor) control for comprehensive API reference.
+platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# .NET MAUI ImageEditor API Reference
+# Properties in .NET MAUI Image Editor
 
 ## Properties
 
