@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populating Items in .NET MAUI Chips control | Syncfusion®
+title: Populating Items in .NET MAUI Chips | Syncfusion®
 description: Learn how to populate the Syncfusion® .NET MAUI SfChipGroup control with business objects (via ItemsSource) or with SfChip instances (via Items).
 platform: maui
 control: SfChip
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui sfchipgroup populating items, syncfusion chips itemssource maui, sfchipgroup items maui, .net maui sfchip list binding, .net maui chip displaymemberpath, sfchipgroup chip type maui
 ---
 
-# Populating Items in .NET MAUI Chips (SfChipGroup)
+# Populating Items in .NET MAUI Chips
 
 [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports two ways to populate its items:
 

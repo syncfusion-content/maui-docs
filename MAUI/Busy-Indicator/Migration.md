@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfBusyIndicator | Syncfusion® 
+title: Migrating from Xamarin to .NET MAUI Busy Indicator | Syncfusion®
 description: Learn here all about migrating from Syncfusion® Xamarin Busy Indicator to Syncfusion® .NET MAUI Busy Indicator control and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 ---  
 
-# Migrating from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator 
+# Migrating from Xamarin Busy Indicator to .NET MAUI Busy Indicator
 
 To facilitate an easier migration from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), we have retained most of the APIs from Xamarin SfBusyIndicator in the MAUI SfBusyIndicator. However, to maintain the consistency of API naming in the MAUI SfBusyIndicator, some APIs have been renamed. The changes in the MAUI SfBusyIndicator from the Xamarin SfBusyIndicator are detailed as follows.
 

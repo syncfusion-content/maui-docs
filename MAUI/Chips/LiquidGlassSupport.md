@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Chips | Syncfusion®
+title: Liquid Glass Effect in .NET MAUI Chips | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 platform: MAUI
 control: chips
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui sfchipgroup liquid glass effect, syncfusion chips glass effect maui, sfchipgroup enableliquidglasseffect maui, .net maui sfchip translucent background, sfchipgroup ios 26 macos 26 maui
 ---
 
-# Liquid Glass Effect in .NET MAUI Chips (SfChip)
+# Liquid Glass Effect in .NET MAUI Chips
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This page explains how to enable and customize the effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 

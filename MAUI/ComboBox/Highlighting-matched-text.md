@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Highlighting matched text in .NET MAUI ComboBox | Syncfusion®
+title: Highlighting Matched Text in .NET MAUI ComboBox | Syncfusion®
 description: Learn about highlighting matched text in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Highlighting matched text in .NET MAUI ComboBox
+# Highlighting Matched Text in .NET MAUI ComboBox
 
 The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control can highlight the characters that match the text typed into the editor, making items in the drop-down easier to identify. Highlighting is enabled through the [TextHighlightMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextHighlightMode) property and is applied only when `IsEditable` and `IsFilteringEnabled` are `true`.
 
