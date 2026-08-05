@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Overview | .NET MAUI Radio Button | Syncfusion®
+title: About Syncfusion® .NET MAUI Radio Button Control | Syncfusion®
 platform: maui
-description: Learn about the overall key features in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control, its elements, and more.
+description: Learn about the introduction of the Syncfusion® Essential Studio .NET MAUI Radio Button control, its elements, and more.
 control: SfRadioButton
 ---
 
-# .NET MAUI Radio Button (SfRadioButton) Overview
+# About Syncfusion® .NET MAUI Radio Button Control
 
 The Syncfusion<sup>®</sup> [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button) is a selection control that allows users to select one option from a set. The two states of the Radio Button are checked and unchecked.
 

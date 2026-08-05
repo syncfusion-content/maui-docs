@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell selection in the .NET MAUI Scheduler | Syncfusion<sup>&reg;</sup>
-description: Learn how to customize the cell selection in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control here.
+title: Cell selection in .NET MAUI Scheduler control | Syncfusion®
+description: Customize month and timeslot cell selection appearance and behavior in the .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Cell Selection View in .NET MAUI Scheduler (SfScheduler)
+# Cell selection in .NET MAUI Scheduler
 
 The Scheduler provides the capability to customize the selection of month and timeslot cells using the [CellSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellSelectionView).
 

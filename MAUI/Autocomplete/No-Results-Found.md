@@ -1,13 +1,13 @@
 ---
 layout: post
-title: No Results Found in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to customize the no-results-found message in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+title: No Results Found in .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to customize the no-results-found message in the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# No Results Found in .NET MAUI Autocomplete (SfAutocomplete)
+# No Results Found in .NET MAUI Autocomplete
 
 ## Prerequisites
 

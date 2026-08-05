@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfEffectsView | Syncfusion® 
+title: Migrating from Xamarin to .NET MAUI Effects View | Syncfusion®
 description: Learn here all about migrating from Syncfusion® Xamarin Effects View to Syncfusion® .NET MAUI Effects View control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---  
 
-# Migrating from Xamarin SfEffectsView to .NET MAUI SfEffectsView 
+# Migrating from Xamarin Effects View to .NET MAUI Effects View
 
 To ease the migration from Xamarin SfEffectsView to .NET MAUI SfEffectsView, most APIs from Xamarin SfEffectsView have been retained in MAUI SfEffectsView. However, to maintain API naming consistency in MAUI SfEffectsView, some APIs have been renamed. The changes in MAUI SfEffectsView from Xamarin SfEffectsView are detailed as follows.
 

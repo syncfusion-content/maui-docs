@@ -19,7 +19,10 @@ timestamps
 			 
 
 
-			def branchCommit = 'https://api.github.com/repos/syncfusion-content/'+env.githubSourceRepoHttpUrl.split('/')[env.githubSourceRepoHttpUrl.split('/').size() - 1]+'/pulls/' + env.pullRequestId + '/files'
+			def page = 1
+			 while(true)
+            {  
+			 def branchCommit = 'https://api.github.com/repos/syncfusion-content/'+env.githubSourceRepoHttpUrl.split('/')[env.githubSourceRepoHttpUrl.split('/').size() - 1]+'/pulls/' + env.pullRequestId + '/files?per_page=100^&page='+ page
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
             def ChangeFiles= branchCommitDetails.split('"filename": ');
@@ -29,6 +32,14 @@ timestamps
             def ChangeFile= ChangeFiles[i].split(',')[0].replace('"', '')
             Content += env.WORKSPACE + "\\Spell-Checker\\" + ChangeFile + "\r\n";
             }
+
+           // Last page
+           if((ChangeFiles.size() - 1) < 100)
+           {
+             break
+           }
+           page++
+           }
 
 		    
 		      if (Content) {  

@@ -7,7 +7,7 @@ control: DigitalGauge
 documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
 ---
-# .NET MAUI Digital Gauge (SfDigitalGauge) Overview
+# Overview of .NET MAUI Digital Gauge
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control is used to display alphanumeric characters in digital (LED display) mode. This control displays a range of values that use characters in combination with numbers.
 

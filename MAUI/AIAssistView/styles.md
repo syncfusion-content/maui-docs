@@ -16,7 +16,7 @@ You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/c
 To set a solid color as the background for the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control, assign a color to the `SfAIAssistView.Background` property. For the solid color to be visible, also set the background to transparent, as shown in the code sample below.
 
 {% tabs %}
-{% highlight xaml hl_lines="7 13" %}
+{% highlight xaml hl_lines="6 13" %}
 
 <ContentPage.Resources>
     <syncTheme:SyncfusionThemeDictionary>
@@ -54,7 +54,7 @@ public partial class MainPage : ContentPage
 To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistView.Background` to `Colors.Transparent` and place the image below the `SfAIAssistView` control.
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="6 13" %}
 
 <ContentPage.Resources>
     <syncTheme:SyncfusionThemeDictionary>
@@ -74,7 +74,7 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
 </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="8 9 10" %}
+{% highlight c# hl_lines="8 9 10 12" %}
 
 public partial class MainPage : ContentPage
 {

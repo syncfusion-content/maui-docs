@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
+title: Accessibility in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about accessibility in Syncfusion .NET MAUI Date Time Picker control for inclusive design and user interactions.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Accessibility in .NET MAUI Date Time Picker control
 
 The [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) allows users to interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 

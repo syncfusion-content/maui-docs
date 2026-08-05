@@ -7,7 +7,7 @@ control: Toolbar (SfToolbar)
 documentation: ug
 ---
  
-# Overview of .NET MAUI Toolbar (SfToolbar)
+# Overview of .NET MAUI Toolbar
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Toolbar](https://www.syncfusion.com/maui-controls/maui-toolbar) control is a customizable UI control that provides quick access to actions or commands through buttons, icons, or menus, enhancing usability and efficiency. It offers a structured, customizable, and user-friendly layout that supports multiple orientations, item alignments, and overflow handling.
 

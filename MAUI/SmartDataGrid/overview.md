@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About .NET MAUI Smart DataGrid control | Syncfusion®
-description: Learn about the Syncfusion® .NET MAUI Smart DataGrid (SfSmartDataGrid) control and its AI-assisted features.
+title: About Syncfusion .NET MAUI SmartDataGrid Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI SmartDataGrid control and more details.
 platform: MAUI
 control: SfSmartDataGrid
 documentation: ug
 keywords: maui smart datagrid, ai datagrid maui, smart grid maui, ai gridview maui, .net maui smart datagrid, .net maui ai grid
 ---
 
-# .NET MAUI Smart DataGrid (SfSmartDataGrid) Overview
+# About Syncfusion® .NET MAUI SmartDataGrid Control
 
 The Syncfusion<sup>&reg;</sup> .NET MAUI Smart DataGrid ([SfSmartDataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid)) is an AI-assisted data grid control that enhances how users interact with data. It enables natural language–driven operations for sorting, filtering, grouping, and highlighting, helping users perform complex tasks more intuitively and efficiently.
 

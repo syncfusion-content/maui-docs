@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in .NET MAUI Date Time Picker Control | Syncfusion
-description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Formatting in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker control to customize date and time display.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Formatting in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Formatting in .NET MAUI Date Time Picker control
 Format is a way to represent the date and time value in a different string format. The columns shown in the picker are controlled by the [PickerMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html) property; `DateFormat` and `TimeFormat` apply only to their respective columns. The available values are defined by the [PickerDateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) and [PickerTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html) enums in the `Syncfusion.Maui.Picker` namespace.
 
 > The XAML snippets below require `xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"` in the parent element, and the C# snippets require `using Syncfusion.Maui.Picker;`.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI CheckBox | Syncfusion®
-description: Learn about setting up and configuring the Syncfusion® .NET MAUI CheckBox (SfCheckBox) control, its elements, and more.
+description: Learn about setting up and configuring the Syncfusion® .NET MAUI CheckBox control, its elements, and more.
 platform: MAUI
 control: SfCheckBox
 documentation: UG

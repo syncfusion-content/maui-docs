@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion .NET MAUI Web Installer | Syncfusion
+title: Installing Syncfusion .NET MAUI web installer | Syncfusion
 description: Learn how to install the Syncfusion .NET MAUI web installer after downloading it from the Syncfusion website.
 platform: MAUI
 control: Installation and Deployment
 documentation: UG
 ---
 
-# Installing Syncfusion<sup>®</sup> .NET MAUI Web Installer
+# Installing Syncfusion<sup>®</sup> .NET MAUI web installer
 
 **Applies to:** Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Web Installer on Windows.
 

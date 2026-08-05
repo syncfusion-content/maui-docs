@@ -21,15 +21,13 @@ The following steps below will assist you to create your **Syncfusion<sup>®</su
 
 2.	Select **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** and press **Enter**. This will open the Template Studio wizard for configuring your Syncfusion<sup>®</sup> .NET MAUI application. Enter a unique **Project Name** to identify your app, then specify the **Project Location**—the directory where your project files will be saved. Make sure the selected location meets your project requirements.
 
-    ![CreateProject](images/TemplateStudioWizard.png)
+    ![TemplateStudioWizard](images/TemplateStudioWizard.png)
 
 3.	To select a component, click the **Next** button or the **Components** tab. From there, you can add the desired Syncfusion<sup>®</sup> .NET MAUI components to your application. Simply choose the necessary Syncfusion<sup>®</sup> .NET MAUI components for your project.
 
     ![SelectComponents](images/MAUIControlSelection.gif)
 
     Select the required component(s) by clicking on the corresponding checkbox.
-
-    Choose the required component(s) by clicking the corresponding component box.
 
     To unselect the added component(s), use either one of the following options:
 
@@ -51,13 +49,13 @@ The following steps below will assist you to create your **Syncfusion<sup>®</su
 
 5.	Click the **Create** button to generate the Syncfusion<sup>®</sup> .NET MAUI application. The created application includes the necessary Syncfusion<sup>®</sup> NuGet packages and rendering code for the selected Syncfusion<sup>®</sup>components.
 
-6.  To view the Syncfusion<sup>®</sup> components in your application, run it by pressing **F5** or selecting **Run > Start Debugging**. Then, search for **.NET MAUI** and select it to launch the application.
+6.  To view the Syncfusion<sup>®</sup> components in your application, run it by pressing **F5** or selecting **Run > Start Debugging**. In the debugger dropdown that appears, search for **.NET MAUI** and select it to launch the application.
 
     ![Debug](images/Debug.gif)
 
-    N> **Note:** If the .NET MAUI extension is a preview version, the debugger will be listed as **.NET MAUI**. However, if the .NET MAUI extension is stable, this configuration will be replaced with **C#**.
+    N> **Note:** If the .NET MAUI extension (Microsoft) is a preview version, the debugger will be listed as **.NET MAUI**. However, if the .NET MAUI extension is stable, this configuration will be replaced with **C#**.
 
 7.	The Syncfusion<sup>®</sup> .NET MAUI application is configured with the latest NuGet package versions, namespaces, and component rendering code for Syncfusion<sup>®</sup> components.
 
-8.	If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup>®</sup> license key to your application since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.
+8.	If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup>®</sup> license key to your application since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion<sup>®</sup> license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Autocomplete control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion® .NET MAUI Autocomplete control, its features, and more.
+title: About Syncfusion .NET MAUI Autocomplete Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Autocomplete  control and more details.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# .NET MAUI Autocomplete (SfAutocomplete) Overview
+# About Syncfusion .NET MAUI Autocomplete Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. It allows users to select an item from the suggestion list. It displays the selected item in the input view with the text and clear button.
 

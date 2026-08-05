@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Searching and Filtering in .NET MAUI Autocomplete | Syncfusion®
-description: Learn how to configure searching, filtering, custom filter logic, and asynchronous loading in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+description: Learn how to configure searching, filtering, custom filter logic, and asynchronous loading in the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Searching and Filtering in .NET MAUI Autocomplete (SfAutocomplete)
+# Searching and Filtering in .NET MAUI Autocomplete
 
 ## Prerequisites
 

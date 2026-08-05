@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Time Picker Control | Syncfusion®
-description: Learn about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control.
+title: Accessibility in .NET MAUI Time Picker control | Syncfusion®
+description: Provide accessibility support with screen readers and keyboard navigation in the .NET MAUI Time Picker control.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Time Picker (SfTimePicker)
+# Accessibility in .NET MAUI Time Picker
 
 The [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) control exposes accessibility for the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 

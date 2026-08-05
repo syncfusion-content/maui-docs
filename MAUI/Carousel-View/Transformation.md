@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Transformation in .NET MAUI Carousel View control | Syncfusion®
-description: Learn about the transformation options available in the Syncfusion® .NET MAUI Carousel View (SfCarousel) control.
+title: Transformation in .NET MAUI Carousel | Syncfusion®
+description: Learn about the transformation options available in the Syncfusion® .NET MAUI Carousel (SfCarousel) control.
 platform: maui
 control: Carousel
 documentation: ug
 ---
 
-# Transformation in .NET MAUI Carousel View (SfCarousel)
+# Transformation in .NET MAUI Carousel
 
 ## Overview
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About .NET MAUI Color Picker Control | Syncfusion®
-description: Learn all about introduction of the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control, its elements and more.
+title: About Syncfusion® .NET MAUI Color Picker Control | Syncfusion®
+description: Learn all about introduction of the Syncfusion® Essential Studio .NET MAUI Color Picker (SfColorPicker) control, its elements and more.
 platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, palette, spectrum
 ---
 
-# .NET MAUI Color Picker (SfColorPicker) Overview
+# About Syncfusion® .NET MAUI Color Picker Control
 
 The [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) is a UI component that enables users to select a color from various color palettes or a spectrum. It is particularly useful in design, drawing, or customization scenarios within .NET MAUI applications.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AutoSizing in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn about auto sizing support in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control, which lets the input area grow to fit the selected tokens.
+title: Auto Sizing in .NET MAUI Autocomplete | Syncfusion®
+description: Learn about auto sizing support in the Syncfusion® .NET MAUI Autocomplete, which lets the input area grow to fit the selected tokens.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Auto Sizing in .NET MAUI Autocomplete (SfAutocomplete)
+# Auto Sizing in .NET MAUI Autocomplete
 
 ## Prerequisites
 

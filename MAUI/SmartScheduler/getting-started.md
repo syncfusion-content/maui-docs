@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI AI-Powered Scheduler | Syncfusion®
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
+description: Learn how to get started with the Syncfusion .NET MAUI AI-Powered Scheduler control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
 keywords : .net maui smart scheduler  
 ---
 
-# Getting Started with the .NET MAUI AI-Powered Scheduler
+# Getting Started with .NET MAUI AI-Powered Scheduler
 
 This section explains how to add the smart scheduler as well as the essential aspects for getting started with the smart Scheduler and also provides a walk-through to configure the [.NET MAUI Smart Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartScheduler.html) control in a real-time scenario. Follow the steps below to add a .NET Smart Scheduler control to your project.
 

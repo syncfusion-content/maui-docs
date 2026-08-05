@@ -148,7 +148,7 @@ The `NodeSizeMode` property supports the following values:
  * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewNodeSizeMode.html#Syncfusion_Maui_TreeView_TreeViewNodeSizeMode_None): Uses [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight) to layout the nodes
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="9" %}
 <ContentPage>
     <ContentPage.BindingContext>
         <local:FileManagerViewModel x:Name="viewModel"/>
@@ -161,7 +161,7 @@ The `NodeSizeMode` property supports the following values:
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# hl_lines="13" %}
 using Syncfusion.Maui.TreeView;
 
 public class MainPage : ContentPage

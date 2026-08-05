@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI-powered Smart .NET MAUI Scheduler | Syncfusion®
-description: Learn here all about the AI-Powered smart appointment booking app using .NET MAUI SfScheduler and SfAIAssistView controls by integrating Azure OpenAI.
+title: AI-powered Appointment Booking in .NET MAUI Scheduler | Syncfusion®
+description: Build smart scheduling with Azure OpenAI integration using the .NET MAUI Scheduler and AI AssistView for intelligent appointment booking.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# AI-powered Appointment Booking with .NET MAUI Scheduler (SfScheduler)
+# AI-powered Appointment Booking in .NET MAUI Scheduler
 
 This guide walks you through building a smart scheduling interface using [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
 

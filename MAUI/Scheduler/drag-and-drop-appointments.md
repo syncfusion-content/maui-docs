@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appointment Drag and Drop in .NET MAUI Scheduler Control | Syncfusion®
-description: Learn here all about Appointment drag and drop support in the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control.
+title: Appointment Drag and Drop in .NET MAUI Scheduler control | Syncfusion®
+description: Reschedule appointments using drag-and-drop operations to adjust timing and duration in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -459,4 +459,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/DragAndDropSample)
+N> [View sample in GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler/SampleBrowser.Maui.Scheduler/Samples/Scheduler/DragAndDrop)

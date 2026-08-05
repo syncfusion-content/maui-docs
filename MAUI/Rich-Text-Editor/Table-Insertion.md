@@ -7,7 +7,7 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-# Table Insertion in .NET MAUI Rich Text Editor (SfRichTextEditor)
+# Table Insertion in .NET MAUI Rich Text Editor 
 
 The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) allows users to organize content in a structured format by creating, editing, and formatting tables. Tables can be added by the end-user through the toolbar or programmatically.
 

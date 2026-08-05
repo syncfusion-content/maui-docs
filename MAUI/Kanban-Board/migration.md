@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Kanban Board control | Syncfusion
-description: This section explains the features available in the NET MAUI Kanban Board (SfKanban) control over Xamarin SfKanban.
+title: Migration from Xamarin to .NET MAUI Kanban Board | Syncfusion
+description: Learn how to migrate from Xamarin.Forms SfKanban to the Syncfusion® .NET MAUI Kanban Board, including API changes and migration guidance.
 platform: maui
 control: SfKanban
 documentation: ug
 keywords: migrate from xamarin.Forms SfKanban to .net maui SfKanban, transitioning from xamarin.Forms SfKanban to .net maui SfKanban, move from xamarin.Forms SfKanban to .net maui SfKanban, upgrading xamarin.Forms to .net maui SfKanban.
 ---
 
-# Migrate from Xamarin.Forms SfKanban to .NET MAUI SfKanban
+# Migration from Xamarin to .NET MAUI Kanban Board
 
-The Kanban Board was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), we renamed some of the APIs. The APIs changed in MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) from Xamarin [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) are detailed as follows:
+The Kanban Board was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. To maintain consistency in API naming, some Xamarin APIs have been renamed in MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The following table lists the API changes from Xamarin [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html):
 
 ## API migration
 
-To initialize the control, import the Kanban namespace and Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) as shown in the following code sample. 
+Import the Kanban namespace and initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) as shown in the following code sample.
 
 <table>
 <tr>
@@ -113,8 +113,8 @@ The following table illustrates the API migration for the kanban.
 
 ## Known issue
 
-* **Smooth Drag Transition:** Drag transitions will be smoother on mobile devices.
-* **Memory Optimization:** Control loading will be optimized for mobile devices.
+* **Smooth Drag Transition:** Drag transitions are smoother on mobile devices.
+* **Memory Optimization:** Control loading is optimized for mobile devices.
 
 ## Upcoming features
 

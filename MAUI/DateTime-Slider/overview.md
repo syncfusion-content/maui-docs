@@ -7,7 +7,7 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# .NET MAUI DateTime Slider Overview
+# Overview of .NET MAUI DateTime Slider
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a lightweight, interactive control that makes choosing a date or time quickly.
 

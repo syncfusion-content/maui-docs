@@ -1,13 +1,13 @@
 ---
 layout : post
-title: Linear Arrangement in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about Linear Arrangement support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title: Linear Arrangement in .NET MAUI Carousel | Syncfusion®
+description: Learn here all about linear arrangement support in Syncfusion® .NET MAUI Carousel (SfCarousel) control and more.
 platform : maui
 control : Carousel
 documentation : ug
 ---
 
-# Linear Arrangement in .NET MAUI Carousel View (SfCarousel)
+# Linear Arrangement in .NET MAUI Carousel
 
 ## Prerequisites
 
