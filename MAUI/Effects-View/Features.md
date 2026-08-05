@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Features in .NET MAUI Effects View Control | Syncfusion®
+title: Features in .NET MAUI Effects View | Syncfusion®
 description: Learn about the features available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Features in .NET MAUI Effects View (SfEffectsView)
+# Features in .NET MAUI Effects View
 
 The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features that complement the built-in effects.
 

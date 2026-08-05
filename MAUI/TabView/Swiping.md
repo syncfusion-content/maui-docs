@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Swiping in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Swiping in .NET MAUI Tab View | Syncfusion®
 description: Learn all about enabling swipe support in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Swiping in .NET MAUI Tab View (SfTabView)
+# Swiping in .NET MAUI Tab View
 
 Set the [EnableSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableSwiping) property of `Tab View` to allow users to switch between tab contents by swiping horizontally. The property is of type `bool` and defaults to `false`. When enabled, swiping left or right on the tab content moves to the adjacent tab; tapping a tab header or programmatically setting `SelectedIndex` also continues to work.
 

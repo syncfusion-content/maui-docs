@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in .NET MAUI Effects View Control | Syncfusion®
+title: Methods in .NET MAUI Effects View | Syncfusion®
 description: Learn about the methods available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Methods in .NET MAUI Effects View (SfEffectsView)
+# Methods in .NET MAUI Effects View
 
 `Effects` can be applied and removed programmatically using the [ApplyEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) and [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_Reset) methods.
 

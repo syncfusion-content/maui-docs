@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Effects View Control | Syncfusion®
+title: Events in .NET MAUI Effects View | Syncfusion®
 description: Learn about the events available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Events in .NET MAUI Effects View (SfEffectsView)
+# Events in .NET MAUI Effects View
 
 This section provides information about the events available in the [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control. Events are typically subscribed in the page constructor or in code-behind, and are raised on the UI thread.
 

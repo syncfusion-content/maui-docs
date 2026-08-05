@@ -1,15 +1,15 @@
 ---
 
 layout: post
-title: Restrict user Selection in .NET MAUI Rating control | Syncfusion®
-description: Learn here all about Restrict User Selection support in Syncfusion® .NET MAUI Rating (SfRating) control and more.
+title: Restrict User Selection in .NET MAUI Rating | Syncfusion®
+description: Learn here all about Restrict User Selection support in Syncfusion® .NET MAUI Rating control and more.
 platform: maui
 control: Rating
 documentation: ug
 
 ---
 
-# Restrict user selection in .NET MAUI Rating (SfRating)
+# Restrict User Selection in .NET MAUI Rating
 
 ## Prerequisites
 
