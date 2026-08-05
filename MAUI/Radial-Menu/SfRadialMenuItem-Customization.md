@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SfRadialMenuItem Customization in .NET MAUI Radial Menu | Syncfusion®
-description: Learn how to customize SfRadialMenuItem in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control.
+title: Radial Menu Item Customization in .NET MAUI Radial Menu | Syncfusion®
+description: Learn how to customize Radial Menu Item in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# SfRadialMenuItem Customization in .NET MAUI Radial Menu (SfRadialMenu)
+# Radial Menu Item Customization in .NET MAUI Radial Menu
 
 The [SfRadialMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) class provides various options to customize items with `Custom Views`, `FontIcons`, and `Images`. You can add Radial Menu items by hierarchy. To add a `SfRadialMenuItem` to a `SfRadialMenu`, create an instance of `SfRadialMenuItem`, and add it to the `Items` property.
 

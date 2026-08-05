@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formatting Value in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn how to format the value in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control by including or excluding prompts and literals.
+title: Formatting Value in .NET MAUI Masked Entry | Syncfusion®
+description: Learn how to format the value in the Syncfusion® .NET MAUI Masked Entry control by including or excluding prompts and literals.
 platform: maui
 control: SfMaskedEntry
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populating Items in .NET MAUI Radial Menu (SfRadialMenu) | Syncfusion®
+title: Populating Items in .NET MAUI Radial Menu | Syncfusion®
 description: Learn about item population support in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# Populating Items in .NET MAUI Radial Menu (SfRadialMenu)
+# Populating Items in .NET MAUI Radial Menu
 
 
 This section explains how to populate the menu in two ways: by adding [SfRadialMenuItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) instances directly to the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Items) collection, or by binding the menu to an [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource) and rendering each item with an [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemTemplate).

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfNumericEntry | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin NumericTextBox and NumericUpDown to Syncfusion® .NET MAUI NumericEntry control and more.
+title: Migrating from Xamarin to .NET MAUI Numeric Entry | Syncfusion®
+description: Learn about Migrating from Syncfusion® Xamarin NumericTextBox and NumericUpDown to Syncfusion® .NET MAUI Numeric Entry control and more.
 platform: maui
 control: SfNumericEntry
 documentation: ug
 ---  
 
-# Migrating from Xamarin SfNumericTextBox and SfNumericUpDown to .NET MAUI SfNumericEntry
+# Migrating from Xamarin to .NET MAUI Numeric Entry
 
 To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET MAUI SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), most of the APIs are kept from the Xamarin SfNumericTextBox and SfNumericUpDown  in MAUI SfNumericEntry. However, to maintain the consistency of API naming in MAUI SfNumericEntry, rename some of the APIs. The APIs changed in MAUI SfNumericEntry from Xamarin SfNumericTextBox and SfNumericUpDown are detailed as follows.
 
