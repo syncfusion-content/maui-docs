@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Cartesian Chart control | Syncfusion
+title: Legend in .NET MAUI Cartesian Chart | Syncfusion
 description: This section explains how to initialize the legend and customize its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

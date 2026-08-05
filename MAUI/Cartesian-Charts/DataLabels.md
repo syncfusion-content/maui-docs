@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Cartesian Chart control | Syncfusion
+title: Data labels in .NET MAUI Cartesian Chart | Syncfusion
 description: This section explains how to configure the data labels and their features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart

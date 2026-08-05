@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the touch position in Syncfusion SfCartesianChart
+title: How to Get Touch Position in .NET MAUI Cartesian  Chart | Syncfusion
 description: Learn here all about getting the touch position in SfCartesianChart in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui cartesian chart touch position, maui cartesian chart touch position, .net maui cartesian chart touch event, sfcartesianchart touch interaction in .net maui, .net maui cartesian chart touch gesture, .net maui cartesian chart touch behavior
 ---
 
-# Get the touch position in .NET MAUI Cartesian Chart
+# How to Get Touch Position in .NET MAUI Cartesian  Chart
 
 [ChartInteractiveBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartInteractiveBehavior.html) provides the following override methods to get the x and y positions when touching the [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Axis in .NET MAUI Cartesian Chart control | Syncfusion
+title: Axis in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about chart axis and its keys features of Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

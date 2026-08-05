@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in .NET MAUI Cartesian Chart control | Syncfusion
+title: Localization in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about Localization support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart

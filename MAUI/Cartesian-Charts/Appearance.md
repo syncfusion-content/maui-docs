@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Cartesian Chart control | Syncfusion
+title: Appearance in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about appearance customization in .NET MAUI Cartesian Chart (SfCartesianChart), its elements and more.
 platform: maui
 control: SfCartesianChart

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OHLC Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: OHLC Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about the OHLC chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

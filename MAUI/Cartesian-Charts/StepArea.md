@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Step Area Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Step Area Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about the Step area chart types and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

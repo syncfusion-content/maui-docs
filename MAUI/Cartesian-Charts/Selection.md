@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection in .NET MAUI Cartesian Chart control | Syncfusion
+title: Selection in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about selection and multi-selection support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

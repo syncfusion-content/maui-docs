@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Empty points in .NET MAUI Cartesian Chart control | Syncfusion
+title: Empty points in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about empty points support and their features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: StepLine Chart in .NET MAUI Cartesian Chart control | Syncfusion
+title: Step Line Chart in .NET MAUI Cartesian Chart | Syncfusion
 description: Learn here all about stepline chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
