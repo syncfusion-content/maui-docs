@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion AI Tools Prompts | Syncfusion
-description: Explore the AI Tools Prompts to enhance .NET MAUI development productivity with code generation, configuration examples, and contextual guidance.
-control: Syncfusion AI Tools Prompts
+title: Syncfusion AI Tools Prompt Library | Syncfusion
+description: Explore the AI Tools Prompt Library to enhance .NET MAUI development productivity with code generation, configuration examples, and contextual guidance.
+control: Syncfusion AI Tools Prompt Library
 platform: MAUI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prompts for Syncfusion AI Tools
+# Prompt Library for Syncfusion AI Tools
 
 Speed up .NET MAUI AI development using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
