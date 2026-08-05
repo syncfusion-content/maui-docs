@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in .NET MAUI Polar Chart Control | Syncfusion
-description: Learn here all about how to configure the data labels and their features in Syncfusion® .NET MAUI Polar Chart (SfPolarChart).
+title: Data Labels in .NET MAUI Polar Chart | Syncfusion
+description: Data Labels in .NET MAUI Polar Chart display values directly on data points, helping users understand trends and interpret chart data more effectively.
 platform: maui
 control: SfPolarChart
 documentation: ug

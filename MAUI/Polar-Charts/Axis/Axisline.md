@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis line in .NET MAUI Polar Chart control | Syncfusion
-description: Learn here all about the chart axis line and its customization in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
+title: Axis Line in .NET MAUI Polar Chart | Syncfusion
+description: Axis line in .NET MAUI Polar Chart defines the visual representation of chart axes, helping organize data and improve chart readability.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Axis line in .NET MAUI Polar Chart
+# Axis Line in .NET MAUI Polar Chart
 
 ## Customization
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Tick Line in .NET MAUI Polar Chart Control | Syncfusion
-description: Learn here all about the chart axis tick lines and their customization in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
+title: Tick Lines in .NET MAUI Polar Chart | Syncfusion
+description: Tick lines in .NET MAUI Polar Chart indicate axis intervals, helping users interpret scale values accurately and improve chart readability.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# Tick lines in .NET MAUI Polar Chart
+# Tick Lines in .NET MAUI Polar Chart
 
 Tick lines are the small lines drawn on the axis line to represent the axis labels. By default, tick lines are drawn outside of the axis.
 
