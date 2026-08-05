@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Merged Cells in .NET MAUI DataGrid control | Syncfusion®
-description: Learn all about Merged Cells support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more here.
+title: Merged Cells in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to merge cells in Syncfusion® .NET MAUI DataGrid to improve data presentation and create visually organized DataGrid layouts.
 platform: maui
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui merged cells, maui merge cells, maui cell merging
 ---
 
-# Merged Cells in .NET MAUI DataGrid (SfDataGrid)
+# Merged Cells in .NET MAUI DataGrid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to merge a range of adjacent cells using the [QueryCoveredRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_QueryCoveredRange) event to span multiple rows and columns. Merged cells can be exported to Excel and PDF.
 
