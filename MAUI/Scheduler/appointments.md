@@ -15,7 +15,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that corresponds to a specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject). Additional information like [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) and [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Stroke) can be added.
 
 {%tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -25,7 +25,7 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
+{% highlight C# tabtitle="C#" hl_lines="23" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -111,7 +111,7 @@ N> The business object class should contain two date time fields as mandatory.
 Create a business object class `Meeting` with mandatory fields `From,` `To,` and `EventName.`
 
 {% tabs %}
-{% highlight c# tabtitle="Meeting.cs" %}  
+{% highlight C# tabtitle="Meeting.cs" %}  
 
 /// <summary>    
 /// Represents the custom data properties.    
@@ -191,7 +191,7 @@ public partial class MainPage : ContentPage
 Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of the `SfScheduler.`
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
 
 using System.Collections.ObjectModel;
 
@@ -237,7 +237,7 @@ N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembe
 A spanned appointment is one that lasts longer than 24 hours. The spanned appointment does not block out timeslots in the Scheduler, but it will render in all-day appointment panel exclusively.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -260,7 +260,7 @@ A spanned appointment is one that lasts longer than 24 hours. The spanned appoin
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 14" %}
+{% highlight C# tabtitle="C#" hl_lines="12 14" %}
 
 using System.Collections.ObjectModel;
 
@@ -301,12 +301,12 @@ public partial class MainPage : ContentPage
 Appointments that are scheduled for a whole day are known as all-day appointments. The [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
+{% highlight C# tabtitle="C#" hl_lines="20" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -348,12 +348,12 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 A read-only appointment can be created with [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsReadOnly) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
+{% highlight C# tabtitle="C#" hl_lines="22" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -423,12 +423,12 @@ Example:FREQ=DAILY;INTERVAL=1;UNTIL=20200725T103059Z</td></tr>
 A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring appointment collection in a specific pattern. The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) supports setting the RRULE directly to its [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
+{% highlight C# tabtitle="C#" hl_lines="23" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -472,7 +472,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 A recurrence appointment can be created in the business object class `Meeting` by adding mandatory fields `from,` `to,` and `recurrenceRule.`
 
 {% tabs %}
-{% highlight c# tabtitle="Meeting.cs" %}
+{% highlight C# tabtitle="Meeting.cs" %}
 
 /// <summary>   
 /// Represents the business object data properties.   
@@ -564,7 +564,7 @@ public partial class MainPage : ContentPage
 The [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) class of the `Meeting` class can be used to schedule recurring meetings for daily, weekly, monthly, or yearly intervals. Then create appointments collection `Meetings` of type `ObservableCollection <Meeting>` and assign those appointments collection `Meetings` to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property, which is of type object.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 24 26 28" %}
+{% highlight C# tabtitle="C#" hl_lines="10 24 26 28" %}
 
 using System.Collections.ObjectModel;
 
@@ -611,7 +611,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_) method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the [RRULE](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight C# tabtitle="C#" hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -641,7 +641,7 @@ public partial class MainPage : ContentPage
 The [GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` retrieves the occurrences date-time list from the `RRULE.`
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
+{% highlight C# tabtitle="C#" hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -670,7 +670,7 @@ public partial class MainPage : ContentPage
 The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the occurrence appointment for the given pattern appointment at the specified date.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -694,7 +694,7 @@ public partial class MainPage : ContentPage
 The [GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the pattern appointment for the provided occurrence appointment.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -717,7 +717,7 @@ public partial class MainPage : ContentPage
 The [GenerateRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` generates the recurrence rule based on the given recurrence properties, the start date and end date of the recurrence appointments.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight C# tabtitle="C#" hl_lines="12" %}
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
@@ -755,12 +755,12 @@ The Recurrence exception appointments and recurrence exception dates can be adde
 An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). The deleted occurrence date will be considered as recurrence exception date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20 21 22 23 24" %}
+{% highlight C# tabtitle="C#" hl_lines="20 21 22 23 24" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -805,12 +805,12 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Id).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20 21 22 23 24" %}
+{% highlight C# tabtitle="C#" hl_lines="20 21 22 23 24" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -883,7 +883,7 @@ An occurrence of the recurrence pattern appointment which is an exception can be
 To add the exception dates in the recurrence series of business object, add the `RecurrenceExceptionDates,` `EventName,` `From,` `To,` `Color,` `RecurrenceRule` properties to the business object class `Meeting.`
 
 {% tabs %}
-{% highlight c# tabtitle="Meeting.cs" %}
+{% highlight C# tabtitle="Meeting.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.    
@@ -913,7 +913,7 @@ N> Implement the `INotifyPropertyChanged` interface in this class for dynamic ch
 The property `RecurrenceExceptionDates` should map with the business object class of `AppointmentMapping` class to map the exception dates to the scheduled appointment.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage 
 . . .
@@ -939,7 +939,7 @@ The property `RecurrenceExceptionDates` should map with the business object clas
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19 21 23 25 27" %}
+{% highlight C# tabtitle="C#" hl_lines="19 21 23 25 27" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -992,7 +992,7 @@ Also add an exception appointment which is changed or modified occurrence of the
 Add the created exception recurrence appointment to the SfScheduler `AppointmentsSource`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage 
 . . .
@@ -1018,7 +1018,7 @@ Add the created exception recurrence appointment to the SfScheduler `Appointment
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1081,7 +1081,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 Schedule allows you to suspend and resume the appointment UI update while performing collection changes (Add/Remove/Reset) to improve UI rendering when working with large appointment collections. [SuspendAppointmentViewUpdate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SuspendAppointmentViewUpdate) method will suspend appointment UI rendering until you resume it when large number of data added dynamically in schedule [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) to avoid each time updating UI when collection changes. After data added dynamically in schedule, you can call [ResumeAppointmentViewUpdate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ResumeAppointmentViewUpdate) to update the appointment UI rendering. 
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1140,12 +1140,12 @@ The appointment appearance customization can be achieved by using the `TextStyle
 The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13 19" %}
+{% highlight C# tabtitle="C#" hl_lines="13 19" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1177,7 +1177,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 You can customize the appointment appearance by using the [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate) properties of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html), and [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 19 22" %}
+{% highlight XAML tabtitle="XAML" hl_lines="16 19 22" %}
 
 <ContentPage 
 . . .
@@ -1207,7 +1207,7 @@ You can customize the appointment appearance by using the [AppointmentTemplate](
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
+{% highlight C# tabtitle="C#" hl_lines="14" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1238,7 +1238,7 @@ N>
 You can customize the appointment appearance by using the [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html), and [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="21 24 27" %}
+{% highlight XAML tabtitle="XAML" hl_lines="21 24 27" %}
 
 <ContentPage 
 . . .
@@ -1273,7 +1273,7 @@ You can customize the appointment appearance by using the [AppointmentTemplate](
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="AppointmentTemplateSelector.cs" %}
+{% highlight C# tabtitle="AppointmentTemplateSelector.cs" %}
 
 public class AppointmentTemplateSelector : DataTemplateSelector
 {
@@ -1293,7 +1293,7 @@ public class AppointmentTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1328,7 +1328,7 @@ N>
 The selection view of appointment can be customized by using the [SelectedAppointmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedAppointmentBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
 
 <ContentPage 
 . . .
@@ -1340,7 +1340,7 @@ The selection view of appointment can be customized by using the [SelectedAppoin
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
+{% highlight C# tabtitle="C#" hl_lines="5" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1360,12 +1360,12 @@ You can add a border to all scheduler appointments by setting the [StrokeThickne
 N> Appointment border styles are not applicable for the month view indicator mode and the `AppointmentTemplate`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21" %}
+{% highlight C# tabtitle="C#" hl_lines="21" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1399,12 +1399,12 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 The appointment border stroke can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Stroke) property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the [StrokeMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_StrokeMapping) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 19 28" %}
+{% highlight C# tabtitle="C#" hl_lines="12 19 28" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;

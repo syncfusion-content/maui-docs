@@ -34,7 +34,7 @@ N> Built-in `Add` and `Edit` commands work only when the [AppointmentEditorMode]
 The [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellContextMenu) property of the Scheduler allows users to define a set of context menu items that appear when the user performs a right tap or long press on a timeslot cell, month cell, or the all-day panel.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6 8 9 10 11 12 13 14 15 16 17 18 19" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -57,7 +57,7 @@ The [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedu
     </schedule:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="11 12 14 16 17 18 19 21 22" %}
+{% highlight C# tabtitle="C#" hl_lines="11 12 14 16 17 18 19 21 22" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -96,7 +96,7 @@ public partial class MainPage : ContentPage
 The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu) property of the Scheduler enables users to define a set of context menu items that appear when the user performs a right tap or long press on an appointment.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -131,7 +131,7 @@ The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
     </schedule:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="11 12 14 16 17 18 19 21 22 23 24 28 30 31 32 33 35 36 37" %}
+{% highlight C# tabtitle="C#" hl_lines="11 12 14 16 17 18 19 21 22 23 24 28 30 31 32 33 35 36 37" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -189,7 +189,7 @@ N> The BindingContext of each context menu item is set to a [SchedulerContextMen
 You can modify the background and text appearance of the context menu displayed for scheduler cells and appointment using the [ContextMenuBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuBackground) and [ContextMenuTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuTextStyle) properties.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 8 9 10 11" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6 8 9 10 11" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -204,7 +204,7 @@ You can modify the background and text appearance of the context menu displayed 
     </schedule:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="11 12 14 15" %}
+{% highlight C# tabtitle="C#" hl_lines="11 12 14 15" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -245,7 +245,7 @@ The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/S
 - `Cancel` – Specifies whether the context menu opening operation should be canceled.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -255,7 +255,7 @@ The [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/S
     </schedule:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9 12 14 15 16 17 18 19 20" %}
+{% highlight C# tabtitle="C#" hl_lines="9 12 14 15 16 17 18 19 20" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -287,7 +287,7 @@ public partial class MainPage : ContentPage
 The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ContextMenuOpening) event can be used to prevent a context menu from being displayed. To cancel the context menu opening operation, set the `Cancel` property of the [SchedulerContextMenuOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerContextMenuOpeningEventArgs.html) to `true`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -298,7 +298,7 @@ The [ContextMenuOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
     </schedule:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9 12 14" %}
+{% highlight C# tabtitle="C#" hl_lines="9 12 14" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -333,7 +333,7 @@ The clipboard functionality works as follows:
 The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentContextMenu) can be used to display Copy and Cut actions for appointments, while the [CellContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellContextMenu) can be used to display the paste action for scheduler cells.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight XAML tabtitle="XAML" %}
 <ContentPage   
     . . .
     xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -389,7 +389,7 @@ The [AppointmentContextMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 The clipboard operations are implemented using custom commands that implement the ICommand interface.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight C# tabtitle="C#" %}
 public static class ClipboardCommands
 {
     private static SchedulerAppointment? copiedAppointment { get; set; }

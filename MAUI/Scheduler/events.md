@@ -26,14 +26,14 @@ A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfSched
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the tapped week number value.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        Tapped="OnSchedulerTapped" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight C# tabtitle="C#" hl_lines="1" %}
 
 this.Scheduler.Tapped += this.OnSchedulerTapped;
 
@@ -71,12 +71,12 @@ The [SchedulerRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusi
 * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) – The week number value (Not applicable in `TimelineMonth` and `Agenda` views)
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 <scheduler:SfScheduler x:Name="Scheduler" 
                        RightTapped="Scheduler_RightTapped" >
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 5 6 7 8 9" %}
+{% highlight C# tabtitle="C#" hl_lines="1 3 5 6 7 8 9" %}
 this.Scheduler.RightTapped += Scheduler_RightTapped;
 
 private void Scheduler_RightTapped(object sender, SchedulerRightTappedEventArgs e)
@@ -105,14 +105,14 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the double-tapped week number value.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        DoubleTapped="OnSchedulerDoubleTapped" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight C# tabtitle="C#" hl_lines="1" %}
 
 this.Scheduler.DoubleTapped += this.OnSchedulerDoubleTapped;
 
@@ -146,14 +146,14 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the long-pressed week number value.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        LongPressed="OnSchedulerLongPressed" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight C# tabtitle="C#" hl_lines="1" %}
 
 this.Scheduler.LongPressed += this.OnSchedulerLongPressed;
 
@@ -184,14 +184,14 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sched
     * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerSelectionChangedEventArgs_OldValue) : Returns the old selected date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        SelectionChanged="OnSchedulerSelectionChanged" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight C# tabtitle="C#" hl_lines="1" %}
 
 this.Scheduler.SelectionChanged += this.OnSchedulerSelectionChanged;
 
@@ -221,14 +221,14 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
     * [OldView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_OldView) : Returns the old scheduler view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight XAML tabtitle="XAML" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        ViewChanged="OnSchedulerViewChanged" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight C# tabtitle="C#" hl_lines="1" %}
 
 this.Scheduler.ViewChanged += this.OnSchedulerViewChanged;
 
@@ -255,7 +255,7 @@ Scheduler commands allow to map Tapped event, Double tapped event, Long Pressed 
 The [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TappedCommand) will be triggered when you tap the scheduler view and passes the [SchedulerTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -267,7 +267,7 @@ The [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedule
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -293,7 +293,7 @@ public class SchedulerInteractionViewModel
 The [RightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_RightTappedCommand) will be triggered when you perform a right tap on the scheduler view in desktop platforms (Windows and macOS) and will pass the [SchedulerRightTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRightTappedEventArgs.html) as the parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
                        AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Agenda"
@@ -303,7 +303,7 @@ The [RightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
     </scheduler:SfScheduler.BindingContext>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 15 17 18 19 20 21" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 15 17 18 19 20 21" %}
 public class SchedulerInteractionViewModel
 {
     public ICommand SchedulerRightTappedCommand { get; set; }
@@ -335,7 +335,7 @@ public class SchedulerInteractionViewModel
 The [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTappedCommand) will be triggered when you double-tap the scheduler view and passes the [SchedulerDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDoubleTappedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -348,7 +348,7 @@ The [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -374,7 +374,7 @@ public class SchedulerInteractionViewModel
 The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressedCommand) will be triggered when you long-press the scheduler view and passes the [SchedulerLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerLongPressedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -387,7 +387,7 @@ The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 12" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -412,7 +412,7 @@ public class SchedulerInteractionViewModel
 The [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChangedCommand) will be triggered when the scheduler view is changed and passes the [SchedulerViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -425,7 +425,7 @@ The [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12 13 14 15" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 12 13 14 15" %}
 
 public class SchedulerInteractionViewModel
 {
@@ -453,7 +453,7 @@ public class SchedulerInteractionViewModel
 The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChangedCommand) will be triggered when the cell selection is changed in the scheduler and passes the [SchedulerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="XAML" hl_lines="4" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Month"
@@ -465,7 +465,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 7 12 13" %}
+{% highlight C# tabtitle="C#" hl_lines="3 7 12 13" %}
 
 public class SchedulerInteractionViewModel
 {

@@ -8,14 +8,14 @@ documentation: ug
 ---
 
 # Customization of .NET MAUI Scheduler
-Customization of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) lets you adjust its views, appearance, and functionality to match your application requirements.
+Customization of the [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) lets you adjust its views, appearance, and functionality to match your application requirements.
 
 ## Change different scheduler views
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control provides nine different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) property. The control is assigned to the [Day](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html#Syncfusion_Maui_Scheduler_SchedulerView_Day) view by default. The current date will be displayed initially for all the Scheduler views.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -25,7 +25,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -126,7 +126,7 @@ public partial class MainPage : ContentPage
 The vertical and horizontal line color of the Scheduler can be customized by using the [CellBorderBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellBorderBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -136,7 +136,7 @@ The vertical and horizontal line color of the Scheduler can be customized by usi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -242,7 +242,7 @@ Display the week number of the year in all Scheduler views of the [SfScheduler](
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -270,7 +270,7 @@ N> This property is not applicable when the `SchedulerView` is `Timeline Month.`
 The Week number text style of the Scheduler can be customized by using the [WeekNumberStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_WeekNumberStyle) property, which allows you to customize the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_TextStyle) and the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_Background) color in the Week number of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -280,7 +280,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 24" %}
+{% highlight C# tabtitle="C#" hl_lines="10 24" %}
 
 using Syncfusion.Maui.Scheduler;
 

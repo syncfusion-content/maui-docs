@@ -38,6 +38,12 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
 - **Appointment mapping** bind custom data objects to appointments for seamless integration
 
+- **Appointment editor** - Create, edit, and delete appointments using the built-in appointment editor.
+
+- **Appointment drag and drop** - Reschedule appointments by dragging and dropping them across date and time slots.
+
+- **Month inline view** - Display appointments inline within month cells for quick event visibility.
+
 - **Time zone support** schedule across regions with automatic daylight saving adjustments
 
 - **Agenda view** view appointments in a simple list format grouped by week
@@ -72,7 +78,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
- N> Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) page. 
+ N> Looking for the full .NET MAUI Scheduler component overview, features, pricing, and documentation? Visit the [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) page. 
 
 ## Globalization
 

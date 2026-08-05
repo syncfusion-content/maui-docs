@@ -855,7 +855,7 @@ Create appointments at different time zones using the [StartTimeZone](https://he
 Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `SchedulerAppointment` to get the exact start time and end time of an appointment. By using the [ActualStartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualStartTime) and [ActualEndTime](Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualEndTime) properties, get the exact appointment rendering time.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage
     . . .
@@ -866,7 +866,7 @@ Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedule
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17 20" %}
+{% highlight C# tabtitle="C#" hl_lines="16 17 20" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -910,7 +910,7 @@ Display the appointments based on the client’s local time zone in the schedule
 Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of the scheduler. In this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
 
 <ContentPage
     . . .
@@ -922,7 +922,7 @@ Set the specific time zone to schedule using the [TimeZone](https://help.syncfus
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5" %}
+{% highlight C# tabtitle="SchedulerViewModel.cs" hl_lines="5" %}
 
 public class SchedulerViewModel
 {
@@ -935,7 +935,7 @@ public class SchedulerViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
 using Syncfusion.Maui.Scheduler;
 

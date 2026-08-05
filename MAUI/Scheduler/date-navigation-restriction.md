@@ -90,7 +90,7 @@ The next and previous views can be accessed through swiping the control from rig
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the next immediate date using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) method. If the scheduler view is month, it moves to the next month, similarly for week and day views it moves to the next day.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -109,7 +109,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+{% highlight C# tabtitle="C#" hl_lines="9 14" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -135,7 +135,7 @@ public partial class MainPage : ContentPage
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the previous immediate date using the [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) method. If the scheduler view is month, it moves to the previous month, similarly for week and day views it moves to the previous day.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage   
     . . .
@@ -154,7 +154,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 14" %}
+{% highlight C# tabtitle="C#" hl_lines="9 14" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -433,12 +433,12 @@ public partial class MainPage : ContentPage
 The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate) functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -468,12 +468,12 @@ public partial class MainPage : ContentPage
 You can customize the background color and text style for the minimum date time, maximum date time, and selectable day predicate, by setting the [DisabledDateBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisabledDateBackground), and [DisabledDateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisabledDateTextStyle) properties of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
+{% highlight C# tabtitle="C#" hl_lines="15 16" %}
 
 using Syncfusion.Maui.Scheduler;
 

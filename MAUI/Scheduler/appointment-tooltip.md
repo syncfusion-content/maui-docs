@@ -13,7 +13,7 @@ keywords : .net maui scheduler, .net maui scheduler appointment tooltip, .net ma
 The appointment tooltip provides a quick, contextual preview of scheduled events. By default, the [IsAppointmentToolTipEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_IsAppointmentToolTipEnabled) property is set to `false`. To display appointment details such as the subject, start time, and end time when hovering over or tapping an appointment, set the `IsAppointmentToolTipEnabled` property to `true`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight XAML tabtitle="XAML" hl_lines="6" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -23,7 +23,7 @@ The appointment tooltip provides a quick, contextual preview of scheduled events
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
+{% highlight C# tabtitle="C#" hl_lines="9" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -57,7 +57,7 @@ The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.
 - **ToolTipPosition** – Determines the placement of the tooltip relative to the appointment. Supported values are defined by the [`SchedulerToolTipPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerToolTipPosition.html) enum and include Auto (default), Left, Right, Top, and Bottom.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7 8 9 10 11 12 13" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7 8 9 10 11 12 13" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -74,7 +74,7 @@ The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight C# tabtitle="C#" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21" %}
 using Syncfusion.Maui.Scheduler;
 
 . . .
@@ -108,7 +108,7 @@ public partial class MainPage : ContentPage
 The [AppointmentToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentToolTipTemplate) property lets you create a custom tooltip layout for appointments, allowing you to display additional information or change the tooltip’s appearance as needed.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="11 12 52 53" %}
+{% highlight XAML tabtitle="XAML" hl_lines="11 12 52 53" %}
 <ContentPage   
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">

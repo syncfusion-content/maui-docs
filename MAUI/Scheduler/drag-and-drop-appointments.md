@@ -8,10 +8,10 @@ documentation: ug
 ---
 
 # Appointment Drag and Drop in .NET MAUI Scheduler
-Appointments can be rescheduled using the drag-and-drop operation. To perform drag-and-drop operations within the scheduler, enable the [AllowAppointmentDrag](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowAppointmentDrag) property of `SfScheduler`. You can disable appointment drag and drop by assigning `false` to the `AllowAppointmentDrag` property. The default value is `true`.
+Appointments can be rescheduled using the drag-and-drop operation. To perform drag-and-drop operations within the scheduler, enable the [AllowAppointmentDrag](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowAppointmentDrag) property of [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). You can disable appointment drag and drop by assigning `false` to the `AllowAppointmentDrag` property. The default value is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -24,7 +24,7 @@ Appointments can be rescheduled using the drag-and-drop operation. To perform dr
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -54,7 +54,7 @@ You can get the appointment details and handle whether the appointment can be dr
 [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDragStartingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDragStartingEventArgs_Resource) - Get the resource under which the appointment is currently located.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -79,7 +79,7 @@ public partial class MainPage : ContentPage
 
 Refer to the below code to cancel the all-day appointment dragging.
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -116,7 +116,7 @@ You can handle the dragging appointment details, position, and time of the parti
 [DragResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDragOverEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDragOverEventArgs_DragResource) - Get the original resource of the appointment that is being dragged.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -150,7 +150,7 @@ Using the [AppointmentDrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 [IsDroppingToAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_IsDroppingToAllDay) - Gets a value indicating whether an appointment is being dropped into an all-day slot.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -179,7 +179,7 @@ public partial class MainPage : ContentPage
 You can prevent appointments from being dropped into the all-day panel by checking the [IsDroppingToAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_IsDroppingToAllDay) property in the [AppointmentDrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentDrop) event and canceling the operation.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -208,7 +208,7 @@ public partial class MainPage : ContentPage
 You can change the appointment of drag and drop settings in Scheduler by using the [DragDropSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DragDropSettings) property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -229,7 +229,7 @@ You can change the appointment of drag and drop settings in Scheduler by using t
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -255,7 +255,7 @@ public partial class MainPage : ContentPage
 Using the [AllowNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_AllowNavigation) property of the [DragDropSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html) you can handle whether you can navigate views while dragging the appointment or not. The default value of the `AllowNavigation` property is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -271,7 +271,7 @@ Using the [AllowNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -293,7 +293,7 @@ public partial class MainPage : ContentPage
 Using the [AutoNavigationDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_AutoNavigationDelay) property you can handle the navigation time when navigating through views while holding the dragged appointment.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -315,7 +315,7 @@ public partial class MainPage : ContentPage
 Using the [AllowScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_AllowScroll) property you can handle scrolling the time slot while dragging the appointment or not, while dragging the appointment to the endpoint of the current view in Schedule. The default value of the `AllowScroll` property is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -331,7 +331,7 @@ Using the [AllowScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -355,7 +355,7 @@ N> This is not applicable for MonthView.
 You can handle whether the drag and drop indicator should be displayed within the scheduler during appointment dragging by using the [ShowTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_ShowTimeIndicator) property which shows the dragged appointment's current position time. The default value of the `ShowTimeIndicator` property is `true`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -371,7 +371,7 @@ You can handle whether the drag and drop indicator should be displayed within th
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -397,7 +397,7 @@ N>
 You can change the drag time indicator style by using the [TimeIndicatorStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_TimeIndicatorStyle) property of [DragDropSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -415,7 +415,7 @@ You can change the drag time indicator style by using the [TimeIndicatorStyle](h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -441,7 +441,7 @@ public partial class MainPage : ContentPage
 You can change the drag time indicator format by using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_TimeIndicatorTextFormat) property of [DragDropSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html).
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 

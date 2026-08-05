@@ -43,7 +43,7 @@ N>
 Reminders can be enabled by setting the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Reminders) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -78,7 +78,7 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9 10" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7 8 9 10" %}
 
 <ContentPage
     . . .
@@ -94,7 +94,7 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ReminderViewModel.cs" %}
+{% highlight C# tabtitle="ReminderViewModel.cs" %}
  public class ReminderViewModel 
  {
     ...
@@ -159,7 +159,7 @@ Configure the appointment reminders with [SchedulerReminder](https://help.syncfu
 Create a business object class `Event` with mandatory fields `From,` `To,` and `EventName.` and also business object class `Reminder` with mandatory fields `TimeBeforeStart` and `IsDismissed`.
 
 {% tabs %}
-{% highlight c# tabtitle="Event.cs" %}
+{% highlight C# tabtitle="Event.cs" %}
 /// <summary>
 /// Represents custom data properties.
 /// </summary>
@@ -191,7 +191,7 @@ The [ReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedu
 N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain reminder binding.
 
 {% tabs %}
-{% highlight c# tabtitle="Reminder.cs" %}
+{% highlight C# tabtitle="Reminder.cs" %}
 /// <summary>
 /// Represents custom reminder properties.
 /// </summary>
@@ -215,7 +215,7 @@ public class Reminder
 Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [SchedulerAppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 23 24 25 26 27" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7 23 24 25 26 27" %}
 
 <ContentPage
     . . .
@@ -250,7 +250,7 @@ Map those properties of the `Event` class with the [SfScheduler](https://help.sy
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ReminderViewModel.cs" %}
+{% highlight C# tabtitle="ReminderViewModel.cs" %}
 public class ReminderViewModel 
 {
   ...
@@ -316,7 +316,7 @@ Scheduler notifies the appointment's reminders by [ReminderAlertOpening](https:/
 * [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Reminders): Gets a list of reminders that are used to notify the appointment reminders.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight C# tabtitle="C#" hl_lines="9" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -346,7 +346,7 @@ public partial class MainPage : ContentPage
 * If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -419,7 +419,7 @@ If Snooze time is set to 5 minutes, then the value of reminder [TimeBeforeStart]
 * For All day appointment, `TimeBeforeStart = Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight C# tabtitle="C#" hl_lines="10" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;

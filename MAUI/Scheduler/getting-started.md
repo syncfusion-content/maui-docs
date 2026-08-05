@@ -96,7 +96,7 @@ Before proceeding, ensure the following are set up:
 Make sure to add the namespace.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +104,7 @@ using Syncfusion.Maui.Core.Hosting;
 Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 builder.ConfigureSyncfusionCore();
 {% endhighlight %} 
 {% endtabs %}
@@ -114,12 +114,12 @@ builder.ConfigureSyncfusionCore();
 Add the following namespace in your XAML or C#.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -133,7 +133,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-schedule
 The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that includes the specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject), and some additional information about the appointment can be added with [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) properties.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage   
     . . .
@@ -143,7 +143,7 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;

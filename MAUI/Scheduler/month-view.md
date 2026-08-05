@@ -373,7 +373,7 @@ public partial class MainPage : ContentPage
 The scheduler allows you to define non-working days in the Month view using the [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NonWorkingDays) property. This helps highlight weekends or specific days of the week as non-working, making it easier to distinguish them from working days. By default, no days are marked as non-working. The default value of `NonWorkingDays` property is [SchedulerMonthWeekDays.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthWeekDays.html#Syncfusion_Maui_Scheduler_SchedulerMonthWeekDays_None). You can configure this property to include one or more days of the week.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="8" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -388,7 +388,7 @@ The scheduler allows you to define non-working days in the Month view using the 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="11" %}
+{% highlight C# tabtitle="C#" hl_lines="11" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -413,7 +413,7 @@ public partial class MainPage : ContentPage
 The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_HideNonWorkingDays) property is used to control the visibility of non-working days in the Month view. When `HideNonWorkingDays` is `false` (default), the specified non-working days are displayed in the MonthView. When `HideNonWorkingDays` is `true`, the specified non-working days are hidden from the MonthView.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="8" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -428,7 +428,7 @@ The [HideNonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="11 12" %}
+{% highlight C# tabtitle="C#" hl_lines="11 12" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -456,7 +456,7 @@ public partial class MainPage : ContentPage
 Non-working days in the MonthView can be customized using the [NonWorkingDaysBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysBackground) and [NonWorkingDaysTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_NonWorkingDaysTextStyle) properties of the [SchedulerMonthCellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html). These properties allow you to visually differentiate non-working days with custom background and text styles.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="8 10 11 12 13" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8 10 11 12 13" %}
 
 <ContentPage
     . . .
@@ -479,7 +479,7 @@ Non-working days in the MonthView can be customized using the [NonWorkingDaysBac
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# tabtitle="c#" hl_lines="11 13 15 16 19 21 22 25" %}
+{% highlight C# tabtitle="C#" hl_lines="11 13 15 16 19 21 22 25" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -517,10 +517,10 @@ public partial class MainPage : ContentPage
 
 ## Inline Appointments in Month View
 
-Appointments can be displayed inline within the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view using the [ShowAppointmentsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowAppointmentsInline) property. When `ShowAppointmentsInline` is `false` (default), appointments are not shown inline in the MonthView. When `ShowAppointmentsInline` is `true`, tapping a date cell displays all appointments for that date inline below the tapped row. This provides a quick way to view daily schedules without switching to another view. Inline appointments are rendered in a collection view, allowing customization of styles such as background, text color, and layout.
+Set the [ShowAppointmentsInline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowAppointmentsInline) property to `True` to display appointments inline in the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view. When enabled, selecting a date displays its appointments below the corresponding row, allowing users to quickly view daily schedules. The default value of `ShowAppointmentsInline` is `False`, so appointments are not displayed inline.
 
 {% tabs %}  
-{% highlight XAML tabtitle="xaml" hl_lines="8" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8" %}
 
 <ContentPage
     . . .
@@ -722,8 +722,7 @@ public partial class MainPage : ContentPage
 The [MonthInlineViewItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_MonthInlineViewItemTemplate) property allows you to define a custom DataTemplate to customize the appearance of appointment items displayed in the inline view of the scheduler’s [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) view.
 
 {% tabs %}  
-{% highlight XAML hl_lines="9 25" %}
-
+{% highlight XAML hl_lines="9 26" %}
 <ContentPage
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -755,6 +754,69 @@ The [MonthInlineViewItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion
     </scheduler:SfScheduler>
 </ContentPage>
 
+{% endhighlight %}
+{% highlight C# hl_lines="17" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        SfScheduler scheduler = new SfScheduler()
+        {
+            View = SchedulerView.Month
+        };
+
+        SchedulerMonthView monthView = new SchedulerMonthView()
+        {
+            ShowAppointmentsInline = true
+        };
+
+        monthView.MonthInlineViewItemTemplate = new DataTemplate(() =>
+        {
+            Grid grid = new Grid
+            {
+                BackgroundColor = Colors.MediumOrchid,
+                Padding = 8
+            };
+
+            HorizontalStackLayout stackLayout = new HorizontalStackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Spacing = 6
+            };
+
+            Label iconLabel = new Label
+            {
+                Text = "\uE71D",
+                FontFamily = "MauiMaterialAssets",
+                TextColor = Colors.White,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            Label subjectLabel = new Label
+            {
+                TextColor = Colors.White,
+                FontFamily = "Bold",
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            subjectLabel.SetBinding(Label.TextProperty, "Subject");
+
+            stackLayout.Add(iconLabel);
+            stackLayout.Add(subjectLabel);
+
+            grid.Add(stackLayout);
+
+            return grid;
+        });
+
+        scheduler.MonthView = monthView;
+        this.Content = scheduler;
+    }
+} 
+
 {% endhighlight %}  
 {% endtabs %}
 
@@ -773,7 +835,7 @@ This event provides details about the tapped appointment and the selected date t
 * [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.MonthInlineAppointmentTappedEventArgs.html#Syncfusion_Maui_Scheduler_MonthInlineAppointmentTappedEventArgs_SelectedDate): Gets the date of the month cell where the inline view was opened.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+{% highlight XAML tabtitle="MainPage.XAML" hl_lines="7" %}
 
 <ContentPage
     . . .
@@ -786,7 +848,7 @@ This event provides details about the tapped appointment and the selected date t
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 12 14 15" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" hl_lines="9 12 14 15" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -961,7 +1023,7 @@ public partial class MainPage : ContentPage
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}    
+{% highlight XAML tabtitle="MainPage.XAML" hl_lines="5 6 7 8 9 10 11" %}    
 
 <ContentPage
     . . .
@@ -993,7 +1055,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <ContentPage
     . . .
@@ -1023,7 +1085,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MonthViewHeaderTemplateSelector.cs" %}
+{% highlight C# tabtitle="MonthViewHeaderTemplateSelector.cs" %}
 
 public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 {
@@ -1052,7 +1114,7 @@ N>
 The [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) of [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) can be navigated in both horizontal and vertical directions. You can change the direction of navigation through the [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_NavigationDirection) property of [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in `SfScheduler` . By default, the navigation direction is `Horizontal`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <ContentPage
     . . .
@@ -1094,7 +1156,7 @@ The month cell appearance can be customized by using the  [CellStyle](https://he
 By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html), the month properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_Background), [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TodayBackground), [TrailingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthBackground), [LeadingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthBackground), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TextStyle), [TrailingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthTextStyle), and [LeadingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthTextStyle) can be customized.
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <ContentPage
     . . .
@@ -1106,7 +1168,7 @@ By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1160,7 +1222,7 @@ public partial class MainPage : ContentPage
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10 11 12 13 14 15" %}
+{% highlight XAML tabtitle="MainPage.XAML" hl_lines="9 10 11 12 13 14 15" %}
 
 <ContentPage
     . . .
@@ -1195,7 +1257,7 @@ N>
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="22" %}
+{% highlight XAML tabtitle="MainPage.XAML" hl_lines="22" %}
 
 <ContentPage
     . . .
@@ -1225,7 +1287,7 @@ You can customize the month cell appearance by using the [CellTemplate](https://
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MonthCellTemplateSelector.cs" %}
+{% highlight C# tabtitle="MonthCellTemplateSelector.cs" %}
 
 public class MonthCellTemplateSelector : DataTemplateSelector
 {
@@ -1245,7 +1307,7 @@ public class MonthCellTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 using Syncfusion.Maui.Scheduler;
 

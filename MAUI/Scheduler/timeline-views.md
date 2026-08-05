@@ -299,12 +299,12 @@ Watch the video below for a step-by-step guide on adding and customizing TimeReg
 You can enable or disable the touch interaction of TimeRegion using the [EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html). By default, its value is `true.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
+{% highlight C# tabtitle="C#" hl_lines="22" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -349,12 +349,12 @@ N> This property only restricts the interaction on the region and it does not re
 The recurring time region recurs on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property in [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="22" %}
+{% highlight C# tabtitle="C#" hl_lines="22" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -395,12 +395,12 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 Any occurrence that is an exception from the recurrence pattern time region can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html). The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 24 25 26 27" %}
+{% highlight C# tabtitle="C#" hl_lines="16 24 25 26 27" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -448,12 +448,12 @@ The special time region appearance customization can be achieved by using the [T
 The specialTimeRegion background and text style can be customized by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TextStyle) properties of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html), which are used to customize the background color for the time region background and the text style for the text of the specialTimeRegion.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="29" %}
+{% highlight C# tabtitle="C#" hl_lines="29" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -501,7 +501,7 @@ public partial class MainPage : ContentPage
 You can customize the time region appearance by using the [TimeRegionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegionTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8 9 10 11 12 13 14" %}
+{% highlight XAML tabtitle="XAML" hl_lines="8 9 10 11 12 13 14" %}
 
 <ContentPage
     . . .
@@ -523,7 +523,7 @@ You can customize the time region appearance by using the [TimeRegionTemplate](h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -564,7 +564,7 @@ public partial class MainPage : ContentPage
 You can customize the time region appearance by using the [TimeRegionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegionTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It allows you to choose a different data template for each time region, as well as customize the appearance of a particular time region based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="21" %}
+{% highlight XAML tabtitle="XAML" hl_lines="21" %}
 
 <ContentPage
     . . .
@@ -593,7 +593,7 @@ You can customize the time region appearance by using the [TimeRegionTemplate](h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="TimeRegionTemplateSelector.cs" %}
+{% highlight C# tabtitle="TimeRegionTemplateSelector.cs" %}
 
 public class TimeRegionTemplateSelector : DataTemplateSelector
 {
@@ -612,7 +612,7 @@ public class TimeRegionTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="C#" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -671,7 +671,7 @@ By default, the property is set to `false`, so time regions are hidden. Setting 
 This property is only applicable when the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) is set to [TimelineMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_TimelineMonth).
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="7" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
 <ContentPage
     . . .
     xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -683,7 +683,7 @@ This property is only applicable when the [View](https://help.syncfusion.com/cr/
     </scheduler:SfScheduler>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="13" %}
+{% highlight C# tabtitle="C#" hl_lines="13" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -1040,7 +1040,7 @@ The view header appearance customization can be achieved by using the `TextStyle
 The background color and text style for the labels mentioning the time can be customized by setting the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [DateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateTextStyle), and [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle) properties of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
+{% highlight XAML tabtitle="XAML" hl_lines="9" %}
 
 <ContentPage
     . . .
@@ -1058,7 +1058,7 @@ The background color and text style for the labels mentioning the time can be cu
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22" %}
+{% highlight C# tabtitle="C#" hl_lines="21 22" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1095,7 +1095,7 @@ public partial class MainPage : ContentPage
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_ViewHeaderTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}    
+{% highlight XAML tabtitle="XAML" %}    
 
 <ContentPage
     . . .
@@ -1146,7 +1146,7 @@ N>
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_ViewHeaderTemplate) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 <ContentPage
     . . .
@@ -1189,7 +1189,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewHeaderTemplateSelector.cs" %}
+{% highlight C# tabtitle="ViewHeaderTemplateSelector.cs" %}
 
 public class ViewHeaderTemplateSelector : DataTemplateSelector
 {
@@ -1209,7 +1209,7 @@ public class ViewHeaderTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -1279,12 +1279,12 @@ N>
 The text style for the labels mentioning the time can be customized by setting the [TimeRulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRulerTextStyle) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) in the [SfScheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="XAML" %}
 
 {% include_relative code-snippet/timelineview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15" %}
+{% highlight C# tabtitle="C#" hl_lines="15" %}
 
 using Syncfusion.Maui.Scheduler;
 

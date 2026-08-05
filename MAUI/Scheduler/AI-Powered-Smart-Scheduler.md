@@ -30,7 +30,7 @@ To connect your .NET MAUI app to Azure OpenAI, create a service class that handl
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 /// <summary>
 /// Represents Class to interact with Azure AI.
@@ -54,7 +54,7 @@ In this service, define a method called `GetResultsFromAI`. This method takes a 
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
     /// <summary>
     /// Represents Class to interact with Azure AI.
@@ -106,7 +106,7 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
  public abstract class AzureBaseService
  {
@@ -180,7 +180,7 @@ The Scheduler supports multiple calendar views allowing users to manage their sc
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
 
@@ -250,7 +250,7 @@ The AIAssistView provides a chat-like interface that allows users to interact wi
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 xmlns:aiassistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
 
@@ -283,7 +283,7 @@ When the user enters text in the SfAIAssistView chat panel, the request is passe
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 this.assistView.Request += this.OnAssistViewRequest;
 
@@ -315,7 +315,7 @@ The SchedulerViewModel contains logic to process the request and fetch AI-genera
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 ///<summary>
 /// Method to get the AI response.
@@ -342,7 +342,7 @@ The core logic for finding available slots is inside the `GetRecommendation` met
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 ///<summary>
 /// Method to handle the AI response and apply updates.
@@ -380,7 +380,7 @@ Once the AI returns JSON, it is parsed into usable Scheduler collections for bot
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 var jsonObj = JObject.Parse(returnMessage);
 
@@ -432,7 +432,7 @@ The parsed results are then shown to the user in natural text format via AssistV
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 ///<summary>
 /// Method to generate the final time slots.
@@ -469,7 +469,7 @@ The communication with Azure OpenAI is handled in the `GetResultsFromAI` method:
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 /// <summary>
 /// Retrieves an answer from the deployment name model using the provided user prompt.
@@ -510,7 +510,7 @@ Once the user selects or confirms a suggested slot, the AI finalizes the appoint
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 {
@@ -583,7 +583,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 
 {% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
  /// <summary>
  /// Method to book the online appointments.

@@ -34,7 +34,7 @@ To initialize the control, import the scheduler namespace and initialize SfSched
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
 xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
@@ -61,7 +61,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
 xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
@@ -278,7 +278,7 @@ The following code example, explains how to initialize the properties of the Xam
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule ScheduleView="DayView" 
                      FirstDayOfWeek="3"/>
@@ -299,7 +299,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler  View="Week"
                         FirstDayOfWeek="Tuesday"/>
@@ -375,7 +375,7 @@ this.Content = scheduler;
 
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Locale)' | markdownify }}</td>
-<td>Application culture can be changed by setting CurrentUICulture. in App.xaml.cs file.</td>
+<td>Application culture can be changed by setting CurrentUICulture. in App.XAML.cs file.</td>
 <td>To localize the schedule default strings with given language.</td></tr>
 
 <tr>
@@ -528,7 +528,7 @@ The following code example explains how to add the scheduler resource in the Xam
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <syncfusion:SfSchedule
           x:Name="schedule"
@@ -544,7 +544,7 @@ The following code example explains how to add the scheduler resource in the Xam
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 	
 // Creating an instance for the schedule resource collection.
 ObservableCollection<object> resources = new ObservableCollection<object>();
@@ -582,7 +582,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
     <scheduler:SfScheduler.ResourceView>
@@ -592,7 +592,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
@@ -609,7 +609,7 @@ Appointments.Add(new SchedulerAppointment()
     Background = Brush.LightSkyBlue,
 });
 	
-//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler).
+//Adding the scheduler appointment collection to the AppointmentsSource of the [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler).
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	
@@ -640,7 +640,7 @@ this.Scheduler.ResourceView.Resources = Resources;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
      <schedule:SfSchedule.ResourceMapping>
@@ -654,7 +654,7 @@ this.Scheduler.ResourceView.Resources = Resources;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 /// <summary>
 /// Represents custom data properties.
@@ -724,7 +724,7 @@ schedule.ScheduleResources = Employees;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" 
                             AppointmentsSource="{Binding Meetings}"
                             AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
@@ -741,7 +741,7 @@ schedule.ScheduleResources = Employees;
 </schedule:SfScheduler>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 /// <summary>
 /// Represents custom data properties.
@@ -807,13 +807,13 @@ The following code example explains how to create the scheduler appointments in 
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 public ScheduleAppointmentCollection Appointments { get; set; }
 
@@ -840,13 +840,13 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
@@ -988,7 +988,7 @@ The following code example explains how to map the custom appointments data in X
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <schedule:SfSchedule DataSource="{Binding Meetings}">
     <schedule:SfSchedule.AppointmentMapping>
@@ -1003,7 +1003,7 @@ The following code example explains how to map the custom appointments data in X
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 /// <summary>   
 /// Represents custom data properties.   
@@ -1046,7 +1046,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.XAML" %}
 
 <scheduler:SfScheduler AppointmentsSource="{Binding Meetings}">
     <scheduler:SfScheduler.AppointmentMapping>
@@ -1061,7 +1061,7 @@ this.Content = schedule;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.XAML.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.    
@@ -1208,7 +1208,7 @@ The following code example explains how to configure the month view settings in 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule ScheduleView="MonthView">
     <schedule:SfSchedule.MonthViewSettings>
@@ -1234,7 +1234,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler View="Month" 
                        ShowWeekNumber="false">			
@@ -1361,7 +1361,7 @@ The following code example explains how to configure the day view settings in Xa
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule ScheduleView="DayView" ShowCurrentTimeIndicator="false">
  <schedule:SfSchedule.DayViewSettings>
@@ -1390,7 +1390,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler View="Day">
     <scheduler:SfScheduler.DaysView>
@@ -1531,7 +1531,7 @@ The following code example explains how to configure the timeline view settings 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule ScheduleView="TimelineView" ShowCurrentTimeIndicator="False">
    <schedule:SfSchedule.TimelineViewSettings>
@@ -1560,7 +1560,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler View="TimelineWeek">
     <scheduler:SfScheduler.TimelineView>
@@ -1685,7 +1685,7 @@ The following code example, explains how to configure the special time regions i
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule ScheduleView="TimelineView">
     <schedule:SfSchedule.SpecialTimeRegions>
@@ -1723,7 +1723,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler View="Week">
     <scheduler:SfScheduler.DaysView>
@@ -1829,7 +1829,7 @@ The following code example explains how to customize the appearance of the heade
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule>
     <schedule:SfSchedule.HeaderStyle>
@@ -1858,7 +1858,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler View="Week">
     <scheduler:SfScheduler.HeaderView>
@@ -1934,7 +1934,7 @@ The following code example explains how to customize the appearance of the view 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule>
     <schedule:SfSchedule.ViewHeaderStyle>
@@ -1966,7 +1966,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler>
     <scheduler:SfScheduler.DaysView>
@@ -2078,7 +2078,7 @@ The following code example explains how to customize the appearance of the appoi
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule DataSource="{Binding Appointments}">
     <schedule:SfSchedule.AppointmentStyle>
@@ -2125,7 +2125,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfScheduler AppointmentsSource="{Binding Appointments}">
     <schedule:SfScheduler.AppointmentTextStyle>
@@ -2235,7 +2235,7 @@ The following code example explains how to customize the appearance of the month
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule 
                   ScheduleView="MonthView">
@@ -2269,7 +2269,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfScheduler View="Month">
     <schedule:SfScheduler.MonthView>
@@ -2381,7 +2381,7 @@ The following code example explains how to customize the appearance of the cell 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule>
 <schedule:SfSchedule.MonthViewSettings>
@@ -2415,7 +2415,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfScheduler
         ShowWeekNumber="True"
@@ -2486,7 +2486,7 @@ The following code example explains how to customize the drag-and-drop operation
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <schedule:SfSchedule AllowAppointmentDrag="True" >
     <schedule:SfSchedule.DragDropSettings>
@@ -2510,7 +2510,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <scheduler:SfScheduler x:Name="scheduler" View="Week" 
                         AllowAppointmentDrag="True" >

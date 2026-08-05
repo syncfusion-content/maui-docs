@@ -33,7 +33,7 @@ This [QueryAppointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
     * [VisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerQueryAppointmentsEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerQueryAppointmentsEventArgs_VisibleDates): Gets the current visible dates of scheduler that is used to load the appointments to the `AppointmentsSource` on demand which is used to reduce the appointment fetching performance to render in current visible dates from a large data source.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7" %}
 
 <ContentPage   
     . . .
@@ -46,7 +46,7 @@ This [QueryAppointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+{% highlight C# tabtitle="C#" hl_lines="12" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -151,7 +151,7 @@ A ViewModel class should implement a command and handle it by the `CanExecute` a
 The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property can be used to start and stop the loading indicator animation, before and after appointments are loaded into the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7 8 9" %}
 
 <ContentPage   
     . . .
@@ -169,7 +169,7 @@ The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="LoadOnDemandViewModel.cs" %}
+{% highlight C# tabtitle="LoadOnDemandViewModel.cs" %}
 
 using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
@@ -336,7 +336,7 @@ N>
 You can customize the busy indicator appearance by using the [BusyIndicatorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_BusyIndicatorTemplate) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9 10 11 12 13 14" %}
+{% highlight XAML tabtitle="XAML" hl_lines="7 8 9 10 11 12 13 14" %}
 
 <ContentPage   
     . . .
