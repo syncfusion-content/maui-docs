@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pie Chart in .NET MAUI Circular Chart control | Syncfusion
-description: Learn here all about the pie chart and its features in Syncfusion® .NET MAUI Circular Chart (SfCircularChart) control.
+title: Pie Chart in .NET MAUI Circular Chart | Syncfusion
+description: Pie Chart in .NET MAUI Circular Chart represents data as proportional slices, helping users visualize part-to-whole relationships clearly and effectively.
 platform: maui
 control: SfCircularChart
 documentation: ug

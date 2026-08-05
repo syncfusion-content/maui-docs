@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in .NET MAUI Circular Chart control | Syncfusion
-description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Circular Chart (SfCircularChart) control.
+title: Legend in .NET MAUI Circular Chart | Syncfusion
+description: Legend in .NET MAUI Circular Chart displays series information with customizable styles, helping users identify and interpret chart segments easily.
 platform: maui
 control: SfCircularChart
 documentation: ug
 keywords: .net maui circular chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
-# Legend in .NET MAUI Circular Chart (SfCircularChart)
+# Legend in .NET MAUI Circular Chart
 
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. This guide explains how to define and customize the legend in the circular chart.
 

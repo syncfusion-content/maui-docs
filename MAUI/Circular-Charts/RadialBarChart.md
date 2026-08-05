@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radial Bar chart in .NET MAUI Circular Chart control | Syncfusion
-description: Learn here all about radial bar chart and its features in Syncfusion® .NET MAUI Circular Chart (SfCircularChart) control.
+title: Radial Bar Chart in .NET MAUI Circular Chart | Syncfusion
+description: Radial Bar Chart in .NET MAUI Circular Chart visualizes values as radial bars in a circular layout, making it easy to compare and track data effectively.
 platform: maui
 control: SfCircularChart
 documentation: ug
