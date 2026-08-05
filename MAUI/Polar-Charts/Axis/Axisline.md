@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Line in .NET MAUI Polar Chart | Syncfusion
+title: Axis Line in .NET MAUI Polar Chart | Syncfusion®
 description: Axis line in .NET MAUI Polar Chart defines the visual representation of chart axes, helping organize data and improve chart readability.
 platform: maui
 control: SfPolarChart

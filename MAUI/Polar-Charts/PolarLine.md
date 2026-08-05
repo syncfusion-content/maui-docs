@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polar Line Chart in .NET MAUI Polar Chart | Syncfusion
+title: Polar Line Chart in .NET MAUI Polar Chart | Syncfusion®
 description: Polar Line Chart in .NET MAUI Polar Chart connects data points using lines in a polar coordinate system, helping visualize trends and patterns effectively.
 platform: maui
 control: SfPolarChart

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting in .NET MAUI Pyramid Chart | Syncfusion
+title: Exporting in .NET MAUI Pyramid Chart | Syncfusion®
 description: Exporting in .NET MAUI Pyramid Chart enables you to save charts as image files for sharing, reporting, and presentation purposes.
 platform: maui
 control: SfPyramidChart

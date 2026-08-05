@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate Xamarin.Forms SfChart to .NET MAUI Funnel Chart | Syncfusion
+title: Migrate Xamarin.Forms SfChart to .NET MAUI Funnel Chart | Syncfusion®
 description: Migrate from Xamarin.Forms SfChart to .NET MAUI Funnel Chart with updated APIs, improved performance, and modern funnel visualization features.
 platform: MAUI
 control: SfFunnelChart

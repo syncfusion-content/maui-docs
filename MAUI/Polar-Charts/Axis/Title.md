@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Title in .NET MAUI Polar Chart | Syncfusion
+title: Axis Title in .NET MAUI Polar Chart | Syncfusion®
 description: Axis title in .NET MAUI Polar Chart provides descriptive text for chart axes, helping clarify data context and improve chart understanding.
 platform: maui
 control: SfPolarChart

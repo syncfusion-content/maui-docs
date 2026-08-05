@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Line Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about stacked line chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Stacked Line Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Stacked Line Chart in .NET MAUI Cartesian Chart displays cumulative data using stacked lines, helping visualize overall trends and contributions across series.
 platform: maui
 control: SfCartesianChart
 documentation: ug

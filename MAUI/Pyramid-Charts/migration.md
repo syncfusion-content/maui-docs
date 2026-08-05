@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate Xamarin.Forms SfChart to .NET MAUI Pyramid Chart | Syncfusion
+title: Migrate Xamarin.Forms SfChart to .NET MAUI Pyramid Chart | Syncfusion®
 description: Migrate from Xamarin.Forms SfChart to .NET MAUI Pyramid Chart with updated APIs, improved performance, and modern features for pyramid data visualization.
 platform: maui
 control: SfPyramidChart

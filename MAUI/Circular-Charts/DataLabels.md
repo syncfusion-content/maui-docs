@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data label in .NET MAUI Circular Chart | Syncfusion
+title: Data label in .NET MAUI Circular Chart | Syncfusion®
 description: Data label in .NET MAUI Circular Chart displays data point values directly on chart segments, improving readability and enabling quick data interpretation.
 platform: maui
 control: SfCircularChart

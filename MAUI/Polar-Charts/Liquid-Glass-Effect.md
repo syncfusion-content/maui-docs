@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Polar Chart | Syncfusion
+title: Liquid Glass Effect in .NET MAUI Polar Chart | Syncfusion®
 description: Liquid Glass Effect in .NET MAUI Polar Chart applies a sleek glass-like visual style to chart elements, enhancing chart appearance and visual appeal.
 platform: maui
 control: SfPolarChart

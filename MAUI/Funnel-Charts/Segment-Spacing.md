@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segment Spacing in .NET MAUI Funnel Chart | Syncfusion
+title: Segment Spacing in .NET MAUI Funnel Chart | Syncfusion®
 description: Segment spacing in .NET MAUI Funnel Chart controls the gap between funnel segments, improving readability and enhancing visual clarity.
 platform: maui
 control: SfFunnelChart

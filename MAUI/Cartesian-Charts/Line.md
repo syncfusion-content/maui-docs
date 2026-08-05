@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Line Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about the line chart and its type in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Line Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Line Chart in .NET MAUI Cartesian Chart connects data points with continuous lines, making it easy to visualize trends, patterns, and changes over time.
 platform: maui
 control: SfCartesianChart
 documentation: ug

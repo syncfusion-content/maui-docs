@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Polar Chart | Syncfusion
+title: Legend in .NET MAUI Polar Chart | Syncfusion®
 description: Legend in .NET MAUI Polar Chart displays series information with customizable styles, helping users identify and interpret chart data effectively.
 platform: maui
 control: SfPolarChart

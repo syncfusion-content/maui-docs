@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Pyramid Chart | Syncfusion
-description: Learn how to get started with the Syncfusion .NET MAUI Pyramid Chart control. Explore setup, customization, data labels, and visualization features.
+title: Getting Started with .NET MAUI Pyramid Chart | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Pyramid Chart control. Explore setup, customization, data labels, and visualization features.
 keywords: maui pyramid chart, getting started, setup, project creation, initialization
 platform: maui
 control: SfPyramidChart

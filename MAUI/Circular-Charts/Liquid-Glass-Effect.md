@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Circular Chart | Syncfusion
+title: Liquid Glass Effect in .NET MAUI Circular Chart | Syncfusion®
 description: Liquid Glass Effect in .NET MAUI Circular Chart applies a sleek glass-like visual style to chart elements, enhancing the overall look and user experience.
 platform: maui
 control: SfCircularChart

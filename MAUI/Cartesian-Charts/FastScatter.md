@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fast Scatter Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about the fast scatter chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Fast Scatter Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Fast Scatter Chart in .NET MAUI Cartesian Chart renders large data sets efficiently, enabling high-performance visualization for scatter plot analysis.
 platform: maui
 control: SfCartesianChart
 documentation: ug

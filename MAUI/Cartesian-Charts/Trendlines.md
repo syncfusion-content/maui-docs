@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trendlines in .NET MAUI Cartesian Chart | Syncfusion
-description: This section explains all about trendlines support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Trendlines in .NET MAUI Cartesian Chart | Syncfusion®
+description: Trendlines in .NET MAUI Cartesian Chart display data trends and patterns using statistical analysis, helping identify relationships and forecast outcomes.
 platform: maui
 control: SfCartesianChart
 documentation: ug

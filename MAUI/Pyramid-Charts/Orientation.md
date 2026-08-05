@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Pyramid Chart | Syncfusion
+title: Orientation in .NET MAUI Pyramid Chart | Syncfusion®
 description: Orientation in .NET MAUI Pyramid Chart allows you to display the pyramid vertically or horizontally, improving layout flexibility and data presentation.
 platform: maui
 control: SfPyramidChart

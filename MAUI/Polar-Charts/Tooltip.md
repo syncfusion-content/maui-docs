@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Polar Chart | Syncfusion
+title: Tooltip in .NET MAUI Polar Chart | Syncfusion®
 description: Tooltip in .NET MAUI Polar Chart displays detailed information for data points on interaction, helping users analyze and understand chart data easily.
 platform: maui
 control: SfPolarChart

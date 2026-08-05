@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Explode Segments in .NET MAUI Circular Chart | Syncfusion
+title: Explode Segments in .NET MAUI Circular Chart | Syncfusion®
 description: Explode segments in .NET MAUI Circular Chart highlights specific data points by separating slices, making key values easier to identify and analyze.
 platform: maui
 control: SfCircularChart

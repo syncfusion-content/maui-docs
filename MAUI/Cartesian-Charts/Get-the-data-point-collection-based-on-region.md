@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Get Region Data in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn See also in MAUI Chart using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
+title: How to Get Region Data Points in .NET MAUI Chart | Syncfusion®
+description: Get region data points in Syncfusion® .NET MAUI Cartesian Chart control to identify and access chart data points within a specific region.
 platform: maui
 control: SfCartesianChart
 documentation: ug

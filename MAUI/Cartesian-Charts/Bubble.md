@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bubble chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about the bubble chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Bubble Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Bubble Chart in .NET MAUI Cartesian Chart visualizes data using bubbles of varying sizes, enabling comparison of three dimensions within a single chart.
 platform: maui
 control: SfCartesianChart
 documentation: ug

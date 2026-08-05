@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI Funnel Chart Control | Syncfusion
-description: Learn about the overview of Syncfusion .NET MAUI Funnel Chart control, including customization options, data labels, legends, and visualization features.
+title: About Syncfusion .NET MAUI Funnel Chart Control | Syncfusion®
+description: Learn about the overview of Syncfusion® .NET MAUI Funnel Chart control, including customization options, data labels, legends, and visualization features.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# About Syncfusion .NET MAUI Funnel Chart Control
+# About Syncfusion® .NET MAUI Funnel Chart Control
 
 Syncfusion® [.NET MAUI Funnel Chart](https://www.syncfusion.com/maui-controls/maui-funnel-charts) (SfFunnelChart) is used to create the beautiful funnel segments to analyze the various stages in a process, which are used in high-quality .NET MAUI applications.
 

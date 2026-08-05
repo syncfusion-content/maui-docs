@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting in .NET MAUI Circular Chart | Syncfusion
+title: Exporting in .NET MAUI Circular Chart | Syncfusion®
 description: Exporting in .NET MAUI Circular Chart enables you to save charts as image files or export them for sharing, reporting, and presentation purposes.
 platform: maui
 control: SfCircularChart

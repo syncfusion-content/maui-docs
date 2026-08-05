@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping Data Points in .NET MAUI Circular Chart | Syncfusion
+title: Grouping Data Points in .NET MAUI Circular Chart | Syncfusion®
 description: Grouping data points in .NET MAUI Circular Chart combines smaller segments into a single category, improving readability and simplifying data visualization.
 platform: maui
 control: SfCircularChart

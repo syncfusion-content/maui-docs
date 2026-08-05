@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Column 100 Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about StackedColumn100 chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Stacked Column 100 Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Stacked Column 100 Chart in .NET MAUI Cartesian Chart displays stacked columns as percentages, helping visualize proportional data across categories.
 platform: maui
 control: SfCartesianChart
 documentation: ug

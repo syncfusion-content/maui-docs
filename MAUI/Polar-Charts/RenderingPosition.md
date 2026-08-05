@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rendering Position in .NET MAUI Polar Chart | Syncfusion
+title: Rendering Position in .NET MAUI Polar Chart | Syncfusion®
 description: Rendering position in .NET MAUI Polar Chart controls how series are placed relative to axis intervals, improving data presentation and chart readability.
 platform: maui
 control: SfPolarChart

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Preserve Template Bindings in .NET MAUI Chart | Syncfusion
-description: Learn here all about displaying tooltip and datalabels in release mode in SfCartesianChart in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: How to Preserve Template Bindings in .NET MAUI Chart | Syncfusion®
+description: Preserve template bindings in Syncfusion® .NET MAUI Cartesian Chart to maintain data binding behavior and ensure proper template rendering.
 platform: maui
 control: SfCartesianChart
 documentation: ug

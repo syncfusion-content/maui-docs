@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Area Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about the area chart types and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Area Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Area Chart in .NET MAUI Cartesian Chart visualizes data trends by filling the area beneath a line series, making comparisons and patterns easier to identify.
 platform: maui
 control: SfCartesianChart
 documentation: ug

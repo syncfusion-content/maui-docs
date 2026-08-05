@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Funnel Chart | Syncfusion
+title: Orientation in .NET MAUI Funnel Chart | Syncfusion®
 description: Orientation in .NET MAUI Funnel Chart allows the funnel to be displayed vertically or horizontally, improving layout flexibility and data presentation.
 platform: maui
 control: SfFunnelChart

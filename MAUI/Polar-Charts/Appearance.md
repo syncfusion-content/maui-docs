@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Polar Chart | Syncfusion
+title: Appearance in .NET MAUI Polar Chart | Syncfusion®
 description: Appearance in .NET MAUI Polar Chart allows customization of chart visuals using colors, palettes and styling options.
 platform: maui
 control: SfPolarChart

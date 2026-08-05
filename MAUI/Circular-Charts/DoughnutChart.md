@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Doughnut chart in .NET MAUI Circular Chart | Syncfusion
+title: Doughnut chart in .NET MAUI Circular Chart | Syncfusion®
 description: Doughnut chart in .NET MAUI Circular Chart displays data as proportional segments in a circular ring, making it easy to visualize part-to-whole relationships.
 platform: maui
 control: SfCircularChart

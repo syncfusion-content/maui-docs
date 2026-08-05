@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Circular Chart | Syncfusion
-description: Learn how to get started with the Syncfusion .NET MAUI Circular Chart control. Explore setup, chart types, customization, and data visualization features.
+title: Getting Started with .NET MAUI Circular Chart | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Circular Chart control. Explore setup, chart types, customization, and data visualization features.
 platform: maui
 control: SfCircularChart
 documentation: ug

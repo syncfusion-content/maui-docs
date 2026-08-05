@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Circular Chart | Syncfusion
+title: Legend in .NET MAUI Circular Chart | Syncfusion®
 description: Legend in .NET MAUI Circular Chart displays series information with customizable styles, helping users identify and interpret chart segments easily.
 platform: maui
 control: SfCircularChart

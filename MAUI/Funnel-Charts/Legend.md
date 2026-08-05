@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Funnel Chart | Syncfusion
+title: Legend in .NET MAUI Funnel Chart | Syncfusion®
 description: Legend in .NET MAUI Funnel Chart displays chart segment information with customizable styles, helping users identify and understand data categories.
 platform: maui
 control: SfFunnelChart

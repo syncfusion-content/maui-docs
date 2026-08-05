@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Line 100 Chart in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about stacked line 100 chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Stacked Line 100 Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Stacked Line 100 Chart in .NET MAUI Cartesian Chart displays percentage contributions using stacked lines, helping visualize proportional trends across series.
 platform: maui
 control: SfCartesianChart
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Empty points in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn here all about empty points support and their features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Empty Points in .NET MAUI Cartesian Chart | Syncfusion®
+description: Empty Points in .NET MAUI Cartesian Chart handle missing or null values using configurable modes, ensuring clear and meaningful data visualization.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart empty points, .net maui empty points customization, syncfusion maui chart empty points, maui chart empty points, .net maui chart empty points visualization, cartesian empty points maui, missing data handling
 ---
 
-# Empty points in .NET MAUI Cartesian Chart
+# Empty Points in .NET MAUI Cartesian Chart
 
 Empty points are used to indicate missing or null data in a series. These empty points can occur when data is unavailable, improperly formatted, or explicitly set as null or `double.NaN`. The chart provides options to handle and customize these empty points to enhance visualization and maintain the integrity of data representation.
 

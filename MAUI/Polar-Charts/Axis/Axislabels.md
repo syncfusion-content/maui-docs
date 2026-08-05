@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Labels in .NET MAUI Polar Chart | Syncfusion
+title: Axis Labels in .NET MAUI Polar Chart | Syncfusion®
 description: Axis labels in .NET MAUI Polar Chart display category and value information along the axes, improving chart readability and data interpretation.
 platform: maui
 control: SfPolarChart

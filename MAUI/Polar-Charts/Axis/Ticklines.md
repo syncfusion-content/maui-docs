@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tick Lines in .NET MAUI Polar Chart | Syncfusion
+title: Tick Lines in .NET MAUI Polar Chart | Syncfusion®
 description: Tick lines in .NET MAUI Polar Chart indicate axis intervals, helping users interpret scale values accurately and improve chart readability.
 platform: maui
 control: SfPolarChart

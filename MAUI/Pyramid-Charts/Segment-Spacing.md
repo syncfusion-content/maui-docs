@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segment Spacing in .NET MAUI Pyramid Chart | Syncfusion
+title: Segment Spacing in .NET MAUI Pyramid Chart | Syncfusion®
 description: Segment spacing in .NET MAUI Pyramid Chart lets you control the gap between pyramid segments, improving chart readability and visual clarity.
 platform: maui
 control: SfPyramidChart
