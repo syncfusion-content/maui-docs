@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Z-Ordering in .NET MAUI Image Editor | Syncfusion®
-description: Learn about Z-ordering support to arrange annotations in Syncfusion® .NET MAUI Image Editor control.
+title: Z-Ordering in .NET MAUI Image Editor Control | Syncfusion®
+description: Learn here all about the Z-Ordering support in Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Z-Ordering in .NET MAUI Image Editor
+# Z-Ordering in .NET MAUI Image Editor (SfImageEditor)
 
 The .NET MAUI Image Editor allows you to change the position of annotations arranged over the image. This can be achieved using the following methods:
 

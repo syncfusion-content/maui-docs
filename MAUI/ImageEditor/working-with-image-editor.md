@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with .NET MAUI Image Editor | Syncfusion®
-description: Learn about working with Syncfusion® .NET MAUI Image Editor control including image streams, undo, and redo operations.
+title: Working with .NET MAUI Image Editor Control | Syncfusion®
+description: Learn here all about working with Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Working with .NET MAUI Image Editor
+# Working with .NET MAUI Image Editor (SfImageEditor)
 
 ## Get the image stream
 

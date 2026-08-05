@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image Effects in .NET MAUI Image Editor | Syncfusion®
-description: Learn about applying image effects like brightness, contrast, blur, and more in Syncfusion® .NET MAUI Image Editor.
+title: Image Effects in .NET MAUI Image Editor control | Syncfusion®
+description: Learn here all about Image Effect support in Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, .net maui image filters.
 ---
 
-# Image Effects in .NET MAUI Image Editor
+# Image Effects in .NET MAUI Image Editor (SfImageEditor)
 
 Using the .NET MAUI Image Editor control, you can apply effects such as Brightness, Hue, Saturation, Contrast, Blur, Opacity, Exposure, and Sharpen to an image. You can apply these effects by using the built-in toolbar or by calling the [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) method, which accepts two arguments: an [ImageEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEffect.html) enum value and an `EffectValue` (a `double`).
 

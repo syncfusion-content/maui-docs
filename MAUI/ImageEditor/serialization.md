@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Serialization in .NET MAUI Image Editor | Syncfusion®
-description: Learn about serializing and deserializing annotations in Syncfusion® .NET MAUI Image Editor control.
+title: Serialization in .NET MAUI Image Editor Control | Syncfusion®
+description: Learn about serialization support in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Serialization in .NET MAUI Image Editor
+# Serialization in .NET MAUI Image Editor (SfImageEditor)
 
 The Image Editor control supports serializing and deserializing the shape, text, and pen annotations along with their settings. You can save the current state of the annotations and load it back when needed.
 

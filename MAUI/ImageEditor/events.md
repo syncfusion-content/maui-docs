@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Image Editor | Syncfusion®
-description: Learn about all events supported in Syncfusion® .NET MAUI Image Editor control for image loading and annotation interactions.
+title: Events in .NET MAUI Image Editor Control | Syncfusion
+description: Learn here all about the Events support in the Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Events in .NET MAUI Image Editor
+# Events in the .NET MAUI Image Editor (SfImageEditor)
 
 The `SfImageEditor` supports the [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageLoaded) and [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) events to interact with the [.NET MAUI Image Editor](https://help.syncfusion.com/maui/imageeditor/overview).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ImageEditor | Syncfusion
-description: Learn how to get started with the Syncfusion .NET MAUI ImageEditor control. Explore setup, features, examples, and customization options.
+title: Getting Started with .NET MAUI Image Editor control | Syncfusion
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
 ---
 
-# Getting Started with .NET MAUI ImageEditor
+# Getting Started with the .NET MAUI Image Editor
 
 This section explains the steps to create and load an image in the [.NET MAUI Image Editor (SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add the .NET MAUI Image Editor control to your project.
 

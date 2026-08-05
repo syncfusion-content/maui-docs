@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Image Editor | Syncfusion®
-description: Learn about accessibility features and keyboard shortcuts in Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
+title: Accessibility in .NET MAUI Image Editor Control | Syncfusion
+description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Image Editor
+# Accessibility in .NET MAUI Image Editor (SfImageEditor)
 
 The Image Editor works effectively with the icons and sliders on its toolbar, providing voice descriptions of their names and functions.
 
