@@ -2,7 +2,7 @@
 layout: post
 title: Migrating from Xamarin to .NET MAUI Radio Button | Syncfusion®
 description: Learn about migrating from Syncfusion® Xamarin Radio Button to Syncfusion® .NET MAUI Radio Button control and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadioButton
 documentation: UG
 ---  
