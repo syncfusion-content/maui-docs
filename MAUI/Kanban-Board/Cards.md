@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cards in .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about Cards support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+title: Cards in .NET MAUI Kanban Board | Syncfusion
+description: Learn about Cards support in Syncfusion® .NET MAUI Kanban Board, including card elements, templates, custom models, and template selectors.
 platform: maui
 control: Kanban
 documentation: ug
 ---
 
-# Cards in .NET MAUI Kanban Board (SfKanban)
+# Cards in .NET MAUI Kanban Board
 
 The default elements of a card can be customized using the following properties of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html).
 

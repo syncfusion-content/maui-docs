@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfMaskedEntry | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin MaskedEdit to Syncfusion® .NET MAUI MaskedEntry control and more.
+title: Migrating from Xamarin to .NET MAUI Masked Entry | Syncfusion®
+description: Learn about Migrating from Syncfusion® Xamarin Masked Edit to Syncfusion® .NET MAUI Masked Entry control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---  
 
-# Migrating from Xamarin SfMaskedEdit to .NET MAUI SfMaskedEntry
+# Migrating from Xamarin Masked Edit to .NET MAUI Masked Entry
 
 To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most of the APIs are kept from the Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, rename some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows.
 

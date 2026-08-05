@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about localization support in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
+title: Localization in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about localization in Syncfusion .NET MAUI Date Time Picker control for multi-language and culture support.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Localization in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Localization in .NET MAUI Date Time Picker control
 
 Localization is the process of translating the application resources into different languages for specific cultures. The `SfDateTimePicker` can be localized by adding a resource file. `SfDateTimePicker` supports localizing the following strings:
 

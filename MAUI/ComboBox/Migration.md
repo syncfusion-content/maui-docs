@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfComboBox | Syncfusion® 
-description: Learn all about Migrating from Syncfusion® Xamarin ComboBox to Syncfusion® .NET MAUI ComboBox control and more here.
+title: Migrating from Xamarin to .NET MAUI ComboBox | Syncfusion®
+description: Learn all about migrating from Syncfusion® Xamarin ComboBox to Syncfusion® .NET MAUI ComboBox control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui.
 ---  
 
-# Migrating from Xamarin SfComboBox to .NET MAUI SfComboBox 
+# Migrating from Xamarin ComboBox to .NET MAUI ComboBox
 
 To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), we kept most of the APIs from Xamarin SfComboBox in MAUI SfComboBox. However, to maintain the consistency of API naming in MAUI SfComboBox, we renamed some of the APIs. The APIs that have been changed in MAUI SfComboBox from Xamarin SfComboBox are detailed as follows.
 

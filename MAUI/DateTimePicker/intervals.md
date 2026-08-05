@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Time intervals in Date Time Picker Control | Syncfusion®
-description: Learn about date time intervals in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Intervals in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about intervals in Syncfusion .NET MAUI Date Time Picker control for day, month, year, and time step configuration.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Date Time intervals in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Intervals in .NET MAUI Date Time Picker control
 The `SfDateTimePicker` provides seven intervals in [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker). Use these to control the step size shown for each date or time column.
 
  * [`DayInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DayInterval)

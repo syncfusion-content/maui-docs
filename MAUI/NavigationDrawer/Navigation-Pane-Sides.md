@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Drawer Position in .NET MAUI Navigation Drawer | Syncfusion®
-description: Learn how to configure the drawer position in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control to open from any of the four sides.
+description: Learn how to configure the drawer position in the Syncfusion® .NET MAUI Navigation Drawer control to open from any of the four sides.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Drawer Position in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Drawer Position in .NET MAUI Navigation Drawer
 
 The side pane of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) can be opened from any of the four sides of the screen. The side is controlled by the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property of `DrawerSettings`.
 

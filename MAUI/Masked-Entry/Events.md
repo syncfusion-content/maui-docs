@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn the events available in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry), including ValueChanging, ValueChanged, Completed, and ClearButtonClicked.
+title: Events in .NET MAUI Masked Entry | Syncfusion®
+description: Learn the events available in Syncfusion® .NET MAUI Masked Entry including ValueChanging, ValueChanged, Completed, and ClearButtonClicked.
 platform: maui
 control: SfMaskedEntry
 documentation: ug

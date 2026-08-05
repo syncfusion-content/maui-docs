@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Scale Effect | Effects View Control | Syncfusion®
+title: Scale Effect in .NET MAUI Effects View | Syncfusion®
 description: Learn about the scale effect in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Scale Effect in .NET MAUI Effects View (SfEffectsView)
+# Scale Effect in .NET MAUI Effects View
 
 The [SfEffects.Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Scale) effect smoothly scales the `Effects View` and its `Content` from the current size to a new size determined by the [ScaleFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ScaleFactor).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DataTemplateSelector with .NET MAUI Picker Control | Syncfusion®
-description: Learn all about the data template selector with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
+title: DataTemplateSelector in .NET MAUI Picker control | Syncfusion®
+description: Learn about DataTemplateSelector in Syncfusion .NET MAUI Picker control to customize picker item templates.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# DataTemplateSelector in .NET MAUI Picker (SfPicker)
+# DataTemplateSelector in .NET MAUI Picker control
 
 The DataTemplateSelector feature of `SfPicker` allows you to select a DataTemplate based on the data object.
 

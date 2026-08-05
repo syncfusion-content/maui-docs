@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About .NET MAUI ComboBox control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion® .NET MAUI ComboBox (SfComboBox) control, its features, and more.
+title: About Syncfusion® .NET MAUI ComboBox Control | Syncfusion®
+description: Learn here all about the introduction of Syncfusion® Essential Studio .NET MAUI ComboBox control, its features, and more.
 platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Overview of .NET MAUI ComboBox
+# About Syncfusion® .NET MAUI ComboBox Control
 
 The [.NET MAUI ComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) control is a selection component that allows users to type a value or choose an option from a list of predefined options. It has many features, such as data binding, editing, searching, clear button and dropdown button customization, and more.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding Looping and Delays in .NET MAUI Rotator control | Syncfusion®
+title: Adding Looping and Delays in .NET MAUI Rotator | Syncfusion®
 description: Learn about adding looping and delay support in the Syncfusion® .NET MAUI Rotator (SfRotator) control.
 platform: maui 
 control: Rotator
 documentation: ug
 ---
 
-# Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
+# Adding Looping and Delays in .NET MAUI Rotator
 
 Looping and delay can be enabled in the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
 

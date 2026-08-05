@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inline Support in .NET MAUI Color Picker Control | Syncfusion®
+title: Inline Support in .NET MAUI Color Picker | Syncfusion®
 description: Learn all about Inline support in the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control and more.
 platform: MAUI
 control: SfColorPicker
@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker inline, maui color picker inline
 ---
 
-# Inline Rendering in .NET MAUI Color Picker (SfColorPicker)
+# Inline Support in .NET MAUI Color Picker
 
 The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports an inline rendering mode that embeds the color editor directly within the page layout, rather than opening it in a pop-up or flyout. By default, `IsInline` is `false`, so the picker is shown inside a pop-up triggered from the drop-down button.
 

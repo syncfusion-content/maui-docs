@@ -1,13 +1,13 @@
 ---
 layout : post
-title: UIVirtualization in .NET MAUI Carousel View control | Syncfusion®
-description: Learn how to enable UI virtualization in the Syncfusion® .NET MAUI Carousel View (SfCarousel) control to improve performance with large data sets.
+title: UI Virtualization in .NET MAUI Carousel | Syncfusion®
+description: Learn how to enable UI virtualization in the Syncfusion® .NET MAUI Carousel control to improve performance with large data sets.
 platform : maui
 control : Carousel
 documentation : ug
 ---
 
-# UIVirtualization in .NET MAUI Carousel View (SfCarousel)
+# UI Virtualization in .NET MAUI Carousel
 
 UI virtualization in the [.NET MAUI Carousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
 

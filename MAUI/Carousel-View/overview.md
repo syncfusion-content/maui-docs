@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+title: About Syncfusion® .NET MAUI Carousel Control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® Essential Studio .NET MAUI Carousel (SfCarousel) control, its elements and more.
 platform: maui
 control: Carousel
 documentation: ug
 ---
 
-# .NET MAUI Carousel View (SfCarousel) Overview
+# About Syncfusion® .NET MAUI Carousel Control
 
 The Syncfusion® [.NET MAUI Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) control allows users to navigate through image data in an interactive way so that it can be viewed or selected. It provides various customization options for its item arrangements.
 

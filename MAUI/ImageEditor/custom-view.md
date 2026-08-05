@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom view annotation in .NET MAUI Image Editor control | Syncfusion®
-description: Learn here all about the custom view annotation feature of Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
+title: Custom View Annotation in .NET MAUI Image Editor | Syncfusion®
+description: Learn about adding and customizing custom view annotations in Syncfusion® .NET MAUI Image Editor control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Custom view annotation in .NET MAUI Image Editor (SfImageEditor)
+# Custom View Annotation in .NET MAUI Image Editor
 
 The .NET MAUI Image Editor allows you to add a custom view using the [AddCustomAnnotationView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddCustomAnnotationView_Microsoft_Maui_Controls_View_Syncfusion_Maui_ImageEditor_ImageEditorAnnotationSettings_) method with customizable settings.
 

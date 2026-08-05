@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about events in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Events in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about events in Syncfusion .NET MAUI Date Time Picker control for SelectionChanged and user interactions.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Events in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Events in .NET MAUI Date Time Picker control
 
 ## Selection changed event
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion®
-description: Learn about the calendar modes in Syncfusion<sup>&reg;</sup> Calendar for .NET MAUI (SfCalendar) control and its basic features.
+title: Calendar Modes in .NET MAUI Calendar control | Syncfusion®
+description: Learn about calendar modes in Syncfusion .NET MAUI Calendar control with Default, Dialog, and RelativeDialog options.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Calendar mode in .NET MAUI Calendar (SfCalendar)
+# Calendar Modes in .NET MAUI Calendar control
 
 The Calendar mode is specified in the calendar property enumeration, which is used to display the calendar based on the modes. It offers three modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_Default), [Dialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_Dialog), and [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_RelativeDialog). The default calendar mode in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_Default).
 

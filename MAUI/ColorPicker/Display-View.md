@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Display View in .NET MAUI Color Picker | Syncfusion®
+title: Display View in .NET MAUI Color Picker | Syncfusion®
 description: Learn how to customize the selected color icon, selected color template, and drop-down icon in the Syncfusion® .NET MAUI Color Picker control.
 platform: MAUI
 control: SfColorPicker
@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker customization, maui color picker customization, drop-down button, drop-down, drop-down icon, selected color, palette, spectrum, color palette.
 ---
 
-# Display View Customization
+# Display View in .NET MAUI Color Picker
 
 The display view of the [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) is the header area that shows the currently selected color, a drop-down button that opens the picker, and optional icons. This section explains how to customize that header - its icon, template, dimensions, and border.
 

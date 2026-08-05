@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about the appointments reminders support in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) appointments.
+title: Appointment reminders in .NET MAUI Scheduler control | Syncfusion®
+description: Set up appointment reminders with notifications in the .NET MAUI Scheduler using the EnableReminder property and ReminderAlertOpening event.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Appointment reminders in .NET MAUI Scheduler (SfScheduler)
+# Appointment reminders in .NET MAUI Scheduler
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) notifies an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
 

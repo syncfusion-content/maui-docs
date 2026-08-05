@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Events in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Events in .NET MAUI Navigation Drawer
 
 This section explains the built-in events of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) control and how to handle them in your application.
 

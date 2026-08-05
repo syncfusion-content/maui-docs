@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Display Mode in .NET MAUI Date Picker Control | Syncfusion®
-description: Learn about the date picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfDatePicker) control and its basic features.
+title: Text Display Mode in .NET MAUI Date Picker control | Syncfusion®
+description: Learn about text display mode in Syncfusion .NET MAUI Date Picker control with Default, Fade, Shrink options.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---
 
-# Date Picker Text display mode in .NET MAUI Date Picker (SfDatePicker)
+# Text Display Mode in .NET MAUI Date Picker control
 
 Use the text display mode to control how the date picker items appear. It offers four modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default), [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Fade), [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink), and [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink). The default text display mode is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default) in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 

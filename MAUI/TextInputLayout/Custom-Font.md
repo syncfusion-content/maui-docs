@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Font Customization in .NET MAUI Text Input Layout | Syncfusion®
-description: Learn how to customize the font (size, family, and attributes) of the hint, helper, and error labels in the Syncfusion® .NET MAUI Text Input Layout' control.
+description: Learn how to customize the font (size, family, and attributes) of the hint, helper, and error labels in the Syncfusion® .NET MAUI Text Input Layout control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout font customization, syncfusion text input layout font maui, sftextinputlayout hintlabelstyle maui, sftextinputlayout helperlabelstyle maui, sftextinputlayout errorlabelstyle maui, .net maui labelstyle fontfamily
 ---
 
-# Font Customization in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Font Customization in .NET MAUI Text Input Layout
 
 The [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control allows to customize the appearance (size, attributes, and family) of the font by setting the [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontFamily), [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontSize), and [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_FontAttributes) properties of the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html) class.
 

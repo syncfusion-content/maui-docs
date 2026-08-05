@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load More in .NET MAUI ComboBox control | Syncfusion®
-description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI ComboBox (SfComboBox)
+title: Load More in .NET MAUI ComboBox | Syncfusion®
+description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI ComboBox.
 platform: maui
 control: SfComboBox
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visual States in .NET MAUI CheckBox Control | Syncfusion®
-description: Learn about Visual States support in Syncfusion® Essential Studio® .NET MAUI CheckBox (SfCheckBox) control and more.
+title: Visual States in .NET MAUI CheckBox | Syncfusion®
+description: Learn about visual states support in Syncfusion® Essential Studio .NET MAUI CheckBox (SfCheckBox) control and more.
 platform: MAUI
 control: SfCheckBox
 documentation: UG
 ---
 
-# Visual States in .NET MAUI CheckBox (SfCheckBox)
+# Visual States in .NET MAUI CheckBox
 
 The visual appearance of the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) can be customized using the **Visual State Manager** (VSM). The CheckBox control includes the following three visual states:
 

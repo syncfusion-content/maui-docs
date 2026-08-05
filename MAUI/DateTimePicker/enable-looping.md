@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Looping support in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about looping support in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
+title: Looping in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about looping in Syncfusion .NET MAUI Date Time Picker control for seamless cyclic navigation.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Looping support in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Looping in .NET MAUI Date Time Picker control
 
 The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property enables cyclic navigation in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). When enabled, supported columns wrap from the last item to the first item and vice versa during both forward and backward navigation.
 

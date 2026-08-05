@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui textinputlayout container type, syncfusion text input layout filled maui, sftextinputlayout outlined maui, .net maui text input layout none, sftextinputlayout corner radius maui, sftextinputlayout inputview padding maui
 ---
 
-# Container Types in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Container Types in .NET MAUI Text Input Layout
 
 Containers improve the discoverability of the input view by creating contrast between the input view and the surrounding assistive elements (helper text, error text, character counter, and password toggle).
 
