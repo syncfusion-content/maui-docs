@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Assistive Labels in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn how to use assistive labels in Syncfusion® .NET MAUI TextInputLayout, including helper text, error text, counters, and toggles.
+title: Assistive Labels in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to use assistive labels in Syncfusion® .NET MAUI Text Input Layout, including helper text, error text, counters, and toggles.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout assistive labels, syncfusion text input layout helper text maui, sftextinputlayout error label maui, .net maui text input layout character counter, .net maui text input layout password toggle, sftextinputlayout reserve space maui
 ---
 
-# Assistive Labels in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Assistive Labels in .NET MAUI Text Input Layout
 
 Assistive labels provide additional information about the text entered in the input view hosted by the [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control.
 
