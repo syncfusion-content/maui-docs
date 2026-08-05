@@ -1,14 +1,14 @@
 ---
 layout: post
-title: States in .NET MAUI Switch Control | Syncfusion®
-description: Learn about the available states in the Syncfusion® .NET MAUI Switch (SfSwitch) control and how to configure them programmatically.
+title: States in .NET MAUI Switch | Syncfusion®
+description: Learn about the available states in the Syncfusion® .NET MAUI Switch control and how to configure them programmatically.
 platform: MAUI
 control: SfSwitch
 documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch states, maui switch state.
 ---
 
-# States in .NET MAUI Switch (SfSwitch)
+# States in .NET MAUI Switch
 
 The [.NET MAUI Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) allows you to configure various states as explained in the following sections.
 

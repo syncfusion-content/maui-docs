@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch rtl, maui switch flow direction.
 ---
 
-# Right-to-Left in .NET MAUI Switch (SfSwitch)
+# Right-to-Left in .NET MAUI Switch
 
 The [.NET MAUI Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control supports a right-to-left (RTL) layout direction. Use the `FlowDirection` property to control the layout direction of the Switch. The following example sets `FlowDirection` directly on the Switch:
 
