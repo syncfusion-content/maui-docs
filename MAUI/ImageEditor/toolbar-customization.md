@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar Customization in .NET MAUI Image Editor Control | Syncfusion
-description: Learn about toolbar customization support in the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor (SfImageEditor) control.
+title: Toolbar Customization in .NET MAUI Image Editor | Syncfusion®
+description: Learn about customizing toolbar appearance, visibility, position, and orientation in Syncfusion® .NET MAUI Image Editor control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Toolbar customization in .NET MAUI Image Editor (SfImageEditor)
+# Toolbar Customization in .NET MAUI Image Editor
 
 Customize the built-in toolbar to adjust its appearance, visibility, position, and orientation, and add new toolbars.
 

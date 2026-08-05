@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Shape annotations in .NET MAUI Image Editor Control | Syncfusion®
-description: Learn here all about the shape annotations feature of Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
+title: Shape Annotations in .NET MAUI Image Editor | Syncfusion®
+description: Shape annotations in the Syncfusion® .NET MAUI Image Editor enable adding and customizing shapes with various styles, colors, and size options.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-keywords: .net maui imageEditor, .net maui image editing, .net maui freehand draw, .net maui image annotation.
 ---
 
-# Shape annotations in .NET MAUI Image Editor (SfImageEditor)
+# Shape Annotations in .NET MAUI Image Editor
 
 The .NET MAUI Image Editor allows you to add various shapes with customizable settings.
 
