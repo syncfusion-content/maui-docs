@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape in .NET MAUI Maps control | Syncfusion®
-description: Learn all about different shape appearance customization options of the Syncfusion® .NET MAUI Maps (SfMaps) control.
+title: Shapes in .NET MAUI Maps | Syncfusion®
+description: Shapes in .NET MAUI Maps display geographic regions using shape data, enabling interactive visualization and analysis of location-based information.
 platform: MAUI
 control: SfMaps
 documentation: ug
