@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Xamarin to .NET MAUI Sunburst Chart Migration | Syncfusion
-description: This section explains the .NET MAUI SfSunburstChart features relative to the Xamarin SfSunburstChart control.
+title: Migrate Xamarin.Forms Sunburst to .NET MAUI Sunburst | Syncfusion®
+description: Migrate from Xamarin.Forms Sunburst Chart to .NET MAUI Sunburst Chart with updated APIs, improved performance, and modern hierarchical visualization features.
 platform: MAUI
 control: SfSunburstChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SunburstChart to .NET MAUI SunburstChart
+# Migrate from Xamarin.Forms Sunburst Chart to .NET MAUI Sunburst Chart
 
 The SfSunburstChart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain API naming consistency in .NET MAUI SfSunburstChart, we renamed some of the APIs. The changes in APIs from Xamarin SfSunburstChart to .NET MAUI SfSunburstChart are detailed below.
 
