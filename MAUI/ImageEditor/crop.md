@@ -5,6 +5,7 @@ description: Learn about cropping images with selection options, aspect ratios, 
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+keywords: .net maui imageEditor, .net maui image editing, .net maui crop image.
 ---
 
 # Crop in .NET MAUI Image Editor
