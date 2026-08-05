@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Cartesian Chart
-description: Data Labels in .NET MAUI Cartesian Chart display values directly on data points, improving readability and helping users interpret chart data effectively.
+title: Data Labels in .NET MAUI Cartesian Chart | Syncfusion®
+description: Data Labels in .NET MAUI Cartesian Chart display values directly on data points, improving readability and helping interpret chart data effectively.
 platform: maui
 control: SfCartesianChart
 documentation: ug

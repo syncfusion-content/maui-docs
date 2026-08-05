@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range Column Chart in .NET MAUI Cartesian Chart
-description: Range Column Chart in .NET MAUI Cartesian Chart displays value ranges using vertical columns, making it easy to compare minimum and maximum values.
+title: Range Column Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Range Column Chart in .NET MAUI Cartesian Chart displays value ranges using vertical columns, helping compare minimum and maximum values effectively.
 platform: maui
 control: SfCartesianChart
 documentation: ug

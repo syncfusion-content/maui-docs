@@ -132,7 +132,7 @@ You can group and stack similar stacked column 100 series types using the [Group
 
 </chart:SfCartesianChart>
 
-{% endhighlight xaml %}
+{% endhighlight %}
 
 {% highlight c# %}
 

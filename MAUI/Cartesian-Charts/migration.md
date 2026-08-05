@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate Xamarin SfChart to .NET MAUI Cartesian Chart | Syncfusion®
+title: Migrate SfChart to .NET MAUI Cartesian Chart | Syncfusion®
 description: Migrate from Xamarin.Forms SfChart to .NET MAUI Cartesian Chart with updated APIs, improved performance, and modern charting features for data visualization.
 platform: maui
 control: SfCartesianChart
