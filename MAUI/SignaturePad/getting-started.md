@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with .NET MAUI SignaturePad control | Syncfusion®
-description: Learn here about getting started with .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
+title: Getting started with .NET MAUI Signature Pad | Syncfusion®
+description: Learn how to get started with .NET MAUI Signature Pad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI SignaturePad
+# Getting started with .NET MAUI Signature Pad
 
 This section guides you through setting up and configuring a [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) in your .NET MAUI application. Follow the steps below to add a basic SignaturePad to your project.
 
