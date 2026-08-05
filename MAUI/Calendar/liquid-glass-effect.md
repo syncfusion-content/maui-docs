@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Calendar | Syncfusion®
-description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Calendar using SfGlassEffectsView.
+title: Liquid Glass Effect in .NET MAUI Calendar control | Syncfusion®
+description: Learn about liquid glass effect in Syncfusion .NET MAUI Calendar control for modern translucent design appearance.
 platform: MAUI
 control: SfCalendar
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Calendar (SfCalendar)
+# Liquid Glass Effect in .NET MAUI Calendar control
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Calendar (SfCalendar) control.
 

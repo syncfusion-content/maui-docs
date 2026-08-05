@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selections in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about Selections feature in Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
+title: Selections in .NET MAUI Calendar control | Syncfusion®
+description: Learn about selections in Syncfusion .NET MAUI Calendar control with Single, Multiple, and Range selection modes.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Selections in .NET MAUI Calendar (SfCalendar)
+# Selections in .NET MAUI Calendar control
 The Selection mode is specified in the Calendar property enumeration. You can select the dates by tapping the cell in the calendar. `SfCalendar` provides three types of modes such as `Single`, `Multiple`, and `Range` Selection. The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is `Single`, which allows only one date to be selected at a time.
 
 >**NOTE** You can select the cells in the Year, Decade, and Century views in the calendar only when the `AllowViewNavigation` property is set to false.

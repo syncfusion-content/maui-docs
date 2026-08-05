@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles support .NET MAUI AI-Powered Scheduler control | Syncfusion
-description: Learn here all about Styles support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
+title: Styles in .NET MAUI AI-Powered Scheduler control | Syncfusion
+description: Learn about styles in Syncfusion .NET MAUI AI-Powered Scheduler control to customize the assist view appearance with colors, fonts, and backgrounds.
 platform: MAUI
 control: SfSmartScheduler
 documentation: ug

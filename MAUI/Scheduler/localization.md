@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn how to translate built-in strings and adapt localization settings for different languages and cultures in the Syncfusion .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Localization in .NET MAUI Scheduler (SfScheduler)
+# Localization in .NET MAUI Scheduler
 
 Localization is the process of translating the application resources into different languages for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. The SfScheduler allows you to localize the following built-in strings to suit your application’s language and culture:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Time Picker Control | Syncfusion®
-description: Learn about customizations in Syncfusion® .NET MAUI Time Picker (SfTimePicker) control and its basic features.
+title: Customizations in .NET MAUI Time Picker control | Syncfusion®
+description: Learn how to customize header, column header, footer, and selection views in the Syncfusion .NET MAUI Time Picker control.
 platform: maui
 control: SfTimePicker
 documentation: ug
 ---
 
-# Customizations in .NET MAUI Time Picker (SfTimePicker)
+# Customizations in .NET MAUI Time Picker
 
 The [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) header, column header, footer, and selection views can be customized.
 

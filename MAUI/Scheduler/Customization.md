@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize .NET MAUI SfScheduler | Syncfusion®
-description: Learn here about Customization support with the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
+title: Customization in .NET MAUI Scheduler control | Syncfusion®
+description: Adjust views, appearance, and functionality of the .NET MAUI Scheduler to match your application requirements.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Customization of .NET MAUI Scheduler
+# Customization in .NET MAUI Scheduler
 Customization of the [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) lets you adjust its views, appearance, and functionality to match your application requirements.
 
 ## Change different scheduler views

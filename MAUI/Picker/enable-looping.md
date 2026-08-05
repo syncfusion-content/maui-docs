@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Looping support in .NET MAUI Picker Control | Syncfusion®
-description: Learn about looping support in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its features.
+title: Looping in .NET MAUI Picker control | Syncfusion®
+description: Learn about looping in Syncfusion .NET MAUI Picker control for seamless cyclic navigation through items.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Looping support in .NET MAUI Picker (SfPicker)
+# Looping in .NET MAUI Picker control
 
 The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property allows you to enable looping support in the picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
 

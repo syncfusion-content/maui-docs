@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI SfScheduler control | Syncfusion®
-description: Learn here about Accessibility support with the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
+title: Accessibility in .NET MAUI Scheduler control | Syncfusion®
+description: Ensure accessibility in the .NET MAUI Scheduler with screen reader support, keyboard navigation, and assistive technology features.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Accessibility Support in .NET MAUI Scheduler (SfScheduler)
+# Accessibility in .NET MAUI Scheduler
 
 Accessibility support in `SfScheduler` is designed to provide voice descriptions of scheduler elements and scheduled events.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Dispaly Mode in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about the date time picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Text Display Mode in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about text display mode in Syncfusion .NET MAUI Date Time Picker control with Default, Fade, Shrink options.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Text display mode in .NET MAUI Picker (SfDateTimePicker)
+# Text Display Mode in .NET MAUI Date Time Picker control
 
 The [TextDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html) property controls how unselected items are rendered relative to the selected item. It offers four modes: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default), [Fade](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Fade), [Shrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Shrink), and [FadeAndShrink](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_FadeAndShrink). The default value is [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextDisplayMode.html#Syncfusion_Maui_Picker_PickerTextDisplayMode_Default).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin to .NET MAUI SfDatePicker
-description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin DatePicker to Syncfusion<sup>&reg;</sup> .NET MAUI DatePicker control.
+title: Migration from Xamarin to .NET MAUI Date Picker control | Syncfusion®
+description: Learn about migration from Syncfusion Xamarin Date Picker to .NET MAUI Date Picker control with API comparisons.
 platform: maui
 control: SfDatePicker
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfDatePicker to .NET MAUI SfDatePicker 
+# Migration from Xamarin Date Picker to .NET MAUI Date Picker control 
 
 To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
 

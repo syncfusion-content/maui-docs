@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin SfCalendar to .NET MAUI SfCalendar
-description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin calendar to Syncfusion<sup>&reg;</sup> .NET MAUI Calendar control.
+title: Migration from Xamarin to .NET MAUI Calendar control | Syncfusion®
+description: Learn about migration from Syncfusion Xamarin Calendar to .NET MAUI Calendar control with API comparisons.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfCalendar to .NET MAUI SfCalendar 
+# Migration from Xamarin Calendar to .NET MAUI Calendar control 
 
 To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-calendar) to [.NET MAUI SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar) easier, most of the APIs from the Xamarin SfCalendar were kept in the.NET MAUI SfCalendar. However, to maintain the consistency of API naming in the .NET MAUI SfCalendar, some of the APIs have been renamed. Please find the difference in the following topics.
 
