@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segmenting and Placing Items in .NET MAUI Radial Menu | Syncfusion®
+title: Prerequisites in MAUI Button | Syncfusion
 description: Learn about segmenting and placing items in the .NET MAUI Radial Menu control, its elements, and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# Segmenting and Placing Items in .NET MAUI Radial Menu (SfRadialMenu)
+# Segmenting and Placing Items in .NET MAUI Radial Menu
 
 There are two layout types available for the Radial Menu:
 
