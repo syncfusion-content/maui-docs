@@ -1,13 +1,13 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI Autocomplete | Syncfusion®
+title: Load More in .NET MAUI Autocomplete | Syncfusion®
 description: Learn how to restrict the number of items and load the remaining items with the LoadMore button in the Syncfusion® .NET MAUI Autocomplete.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# LoadMore in .NET MAUI Autocomplete
+# Load More in .NET MAUI Autocomplete
 
 ## Prerequisites
 

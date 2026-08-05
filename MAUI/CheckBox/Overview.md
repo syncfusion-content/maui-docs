@@ -1,12 +1,12 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI CheckBox  Control | Syncfusion®
+title: About Syncfusion® .NET MAUI CheckBox Control | Syncfusion®
 platform: MAUI
 description: Learn about introduction of the Syncfusion® Essential Studio .NET MAUI CheckBox control and more details.
 control: SfCheckBox
 ---
 
-# About Syncfusion® .NET MAUI CheckBox  Control 
+# About Syncfusion® .NET MAUI CheckBox Control 
 
 The Syncfusion® [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) is a selection control with UI customization features. It allows you to choose one or more options from a set and customize the appearance for different visual states using the Visual State Manager.
 

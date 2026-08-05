@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Color Picker Control | Syncfusion®
-description: Learn all about introduction of the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control, its elements and more.
+description: Learn all about introduction of the Syncfusion® Essential Studio .NET MAUI Color Picker (SfColorPicker) control, its elements and more.
 platform: MAUI
 control: SfColorPicker
 documentation: UG
