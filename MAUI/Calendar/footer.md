@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Footer in .NET MAUI Calendar control | Syncfusion | Calendar
-description: Learn here all about Footer view feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
+title: Footer in .NET MAUI Calendar control | Syncfusion®
+description: Learn about footer in Syncfusion .NET MAUI Calendar control to customize footer view properties and action buttons.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Footer in .NET MAUI Calendar (SfCalendar)
+# Footer in .NET MAUI Calendar control
 You can customize all the properties of the Footer view using [FooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_FooterView). By using this property, you can customize the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_Height), [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_DividerColor), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_TextStyle), [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_ShowActionButtons) and [ShowTodayButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html#Syncfusion_Maui_Calendar_CalendarFooterView_ShowTodayButton) of the Calendar.
 
 ## Customize the footer height

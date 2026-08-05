@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Column Types in .NET MAUI DataGrid control | Syncfusion®
-description: Learn all about Column Types support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more here.
+title: Column Types in .NET MAUI DataGrid | Syncfusion®
+description: Learn all about column types in Syncfusion® .NET MAUI DataGrid, including supported column types, customization options, and usage examples.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column types, maui column types
 ---
 
-# Column Types in .NET MAUI DataGrid (SfDataGrid)
+# Column Types in .NET MAUI DataGrid
 
 The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. Each column type serves a specific purpose and provides specialized functionality. Any of the columns can be used depending on the requirements.
 

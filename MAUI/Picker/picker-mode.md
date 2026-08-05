@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Picker Mode in .NET MAUI Picker Control | Syncfusion®
-description: Learn about the picker mode in Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
+title: Mode in .NET MAUI Picker control | Syncfusion®
+description: Learn about mode in Syncfusion .NET MAUI Picker control with Default, Dialog, and RelativeDialog options.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Picker mode in .NET MAUI Picker (SfPicker)
+# Mode in .NET MAUI Picker control
 
 Picker mode determines how the picker is displayed. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 

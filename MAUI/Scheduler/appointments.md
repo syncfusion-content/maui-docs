@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointments in .NET MAUI Scheduler | Syncfusion®
-description: Discover how to plan, configure, and manage all-day, recurring, and spanning appointments in Syncfusion® .NET MAUI Scheduler  control with ease.
+title: Appointments in .NET MAUI Scheduler control | Syncfusion®
+description: Create and manage normal, all-day, recurring, and spanning appointments in the .NET MAUI Scheduler with flexible configuration options.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui appointments planning, .net maui appointment editor, .net maui recurring events, .net maui spanned appointments, .net maui recurrence appointments.
 ---
 
-# Appointments in .NET MAUI Scheduler (SfScheduler)
+# Appointments in .NET MAUI Scheduler
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler) control can manage appointment arrangements internally by using [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource). In the scheduler, you can create normal, all-day, spanned, recurring, and recurrence exception appointments.
 

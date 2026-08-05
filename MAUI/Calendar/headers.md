@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Headers in .NET MAUI Calendar control | Syncfusion®
-description: Learn here all about Headers feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
+description: Learn about headers in Syncfusion .NET MAUI Calendar control to customize header view styling and navigation.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Headers in .NET MAUI Calendar (SfCalendar)
+# Headers in .NET MAUI Calendar control
 You can customize all the properties of the Header view using [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderView). By using this property, you can customize the Background, Height, TextFormat, TextStyle, and ShowNavigationArrows of the Calendar.
 
 ## Customize the header height

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Events in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more details.
+description: Handle events like Tapped, DoubleTapped, LongPressed, SelectionChanged, and ViewChanged in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Events in .NET MAUI Scheduler (SfScheduler)
+# Events in .NET MAUI Scheduler
 
 The Scheduler supports the `Tapped,` `DoubleTapped,` `LongPressed,` `SelectionChanged,` and `ViewChanged` events to interact with [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). 
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion®
-description: Learn how to show appointment tooltips in the Syncfusion® .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
+title: Appointment Tooltip in .NET MAUI Scheduler control | Syncfusion®
+description: Display appointment details in tooltips to provide quick preview of scheduled events in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui scheduler appointment tooltip, .net maui appointment details tooltip, .net maui scheduler tooltip customization, .net maui scheduler tooltip behavior.
 ---
 
-# Appointment Tooltip in .NET MAUI SfScheduler
+# Appointment Tooltip in .NET MAUI Scheduler
 
 The appointment tooltip provides a quick, contextual preview of scheduled events. By default, the [IsAppointmentToolTipEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_IsAppointmentToolTipEnabled) property is set to `false`. To display appointment details such as the subject, start time, and end time when hovering over or tapping an appointment, set the `IsAppointmentToolTipEnabled` property to `true`.
 

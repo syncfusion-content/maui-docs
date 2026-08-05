@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Day and Week views in .NET MAUI Scheduler Control | Syncfusion®
-description: Learn here all about customizing the Day, Week and Workweek views settings and its appearance in Syncfusion® .NET MAUI Scheduler (SfScheduler) control and more.
+title: Day and Week views in .NET MAUI Scheduler control | Syncfusion®
+description: Customize day, week, and workweek views with special time regions and appearance settings in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui week view, .net maui work week view, .net maui day view, special time regions, recurring time region.
 ---
 
-# Day and Week Views in .NET MAUI Scheduler (SfScheduler)
+# Day and Week views in .NET MAUI Scheduler
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) provides the ability to display the day, week, and workweek views, and the current day will be visible by default. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 

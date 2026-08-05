@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Zone in .NET MAUI Scheduler control | Syncfusion®
-description: Learn here all about Time Zone support in Syncfusion<sup>&reg;</sup> MAUI Scheduler (SfScheduler) control, it's elements and more.
+title: Time zone in .NET MAUI Scheduler control | Syncfusion®
+description: Create appointments in various time zones and display them in different time zones in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Time zone in .NET MAUI Scheduler (SfScheduler)
+# Time zone in .NET MAUI Scheduler
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
 

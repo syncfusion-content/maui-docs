@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with MAUI Calendar control | Syncfusion
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and its basic features.
+title: Getting Started with .NET MAUI Calendar | Syncfusion
+description: Learn how to get started with the Syncfusion .NET MAUI Calendar control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Getting Started with the .NET MAUI Calendar
+# Getting Started with .NET MAUI Calendar
 
 This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control and covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Calendar. Follow the steps below to add the .NET MAUI Calendar control to your project.
 
