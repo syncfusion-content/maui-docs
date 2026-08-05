@@ -132,7 +132,7 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
                            Attachments = "{Binding Attachments}"
                            MaxAttachmentCount = 8/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# hl_lines="12" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -203,7 +203,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
                            Attachments = "{Binding Attachments}"
                            AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# hl_lines="12" %}
 using Syncfusion.Maui.AIAssistView;
 
 public partial class MainPage : ContentPage
