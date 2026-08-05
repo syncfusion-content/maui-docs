@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visual States in .NET MAUI Radio Button Control | Syncfusion®
+title: Visual States in .NET MAUI Radio Button | Syncfusion®
 description: Learn how to use visual states to customize the .NET MAUI Radio Button (SfRadioButton) control's appearance per state.
 platform: MAUI
 control: SfRadioButton
 documentation: UG
 ---
 
-# Visual States in .NET MAUI Radio Button (SfRadioButton)
+# Visual States in .NET MAUI Radio Button
 
 The visual appearance of the [.NET MAUI Radio Button] can be customized reactively using the `VisualStateManager` and `VisualState` types. The `SfRadioButton` control exposes the following two visual states:
 
