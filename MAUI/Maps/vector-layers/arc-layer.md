@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding Arc layer in .NET MAUI Maps control | Syncfusion
-description: Learn here all about adding the Arc Layer feature of Syncfusion® .NET MAUI Maps (SfMaps) control to customize its appearance and more.
+title: Arc Layer in .NET MAUI Maps | Syncfusion®
+description: Arc Layer in .NET MAUI Maps visualizes connections between geographic locations using curved lines, enabling effective representation of spatial relationships.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Arc Layer in .NET MAUI Maps (SfMaps)
+# Arc Layer in .NET MAUI Maps
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 

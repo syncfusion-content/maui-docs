@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping data points in .NET MAUI Circular Chart control | Syncfusion
-description: This section explains about how to group data points in Syncfusion® .NET MAUI Circular Chart (SfCircularChart) control.
+title: Grouping Data Points in .NET MAUI Circular Chart | Syncfusion®
+description: Grouping data points in .NET MAUI Circular Chart combines smaller segments into a single category, improving readability and simplifying data visualization.
 platform: maui
 control: SfCircularChart
 documentation: ug
 ---
 
-# Grouping Data Points in .NET MAUI SfCircularChart
+# Grouping Data Points in .NET MAUI Circular Chart
 
 The small segments in the circular chart can be grouped into an `Others` category using the [GroupTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_GroupTo) and [GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_GroupMode) properties of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html). The [GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_GroupMode) property is used to specify the grouping type based on slice angle (`Angle`), actual data point value (`Value`), or percentage (`Percentage`). The [GroupTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_GroupTo) property is used to set the limit to group data points into a single slice. The grouped segment is labeled as `Others` in the chart legend.
 

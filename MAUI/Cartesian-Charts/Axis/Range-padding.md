@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis range padding in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about axis range padding and its types features of Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Axis Range Padding in .NET MAUI Cartesian Chart | Syncfusion®
+description: Axis Range Padding in .NET MAUI Cartesian Chart adjusts axis boundaries to improve data presentation and prevent points from appearing at chart edges.
 platform: maui
 control: SfCartesianChart
 documentation: ug

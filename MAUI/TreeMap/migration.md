@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI TreeMap (SfTreeMap) | Syncfusion®
-description: Learn about Migrating from Syncfusion® Xamarin.Forms TreeMap control to .NET MAUI TreeMap (SfTreeMap) control.
+title: Migrate Xamarin.Forms SfTreeMap to .NET MAUI SfTreeMap | Syncfusion®
+description: Migrate from Xamarin.Forms TreeMap to .NET MAUI TreeMap with updated APIs, improved performance, and modern features for hierarchical data visualization.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
  
-# Migrate from Xamarin.Forms TreeMap to .NET MAUI TreeMap (SfTreeMap)
+# Migrate from Xamarin.Forms SfTreeMap to .NET MAUI SfTreeMap 
 
 To make the migration from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) easier, most of the APIs from the [Xamarin SfTreeMap](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treemap) to the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) were kept in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map). However, to maintain the consistency of API naming in the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map), some of the APIs have been renamed. Please find the difference in the following topics.
 

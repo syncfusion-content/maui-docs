@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radial Range in .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about the Range feature of Syncfusion® .NET MAUI Radial Gauge control with customization support and more.
+title: Radial Range in .NET MAUI Radial Gauge | Syncfusion®
+description: Radial Range in .NET MAUI Radial Gauge highlights specific value intervals on the gauge axis, improving data visualization and emphasizing important thresholds.
 platform: maui
 control: SfRadialGauge
 documentation: ug

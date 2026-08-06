@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Barcode Generator control | Syncfusion®
-description: Learn here all about introduction of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
+title: About Syncfusion® .NET MAUI Barcode Generator Control | Syncfusion®
+description: Learn about the overview of Syncfusion® .NET MAUI Barcode Generator control, including barcode symbologies, customization options, and generation features.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Overview of .NET MAUI Barcode Generator
+# About Syncfusion® .NET MAUI Barcode Generator Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) is a data visualization control used to generate and display data in a machine-readable format. It provides a perfect approach to encode text using supported symbology types.
 

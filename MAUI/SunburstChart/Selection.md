@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains how to enable and customize selection in the Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control.
+title: Selection in .NET MAUI Sunburst Chart | Syncfusion®
+description: Selection in .NET MAUI Sunburst Chart allows chart segments to be highlighted on interaction, improving data analysis and visual exploration.
 platform: maui
 control: SfSunburstChart
 documentation: ug
