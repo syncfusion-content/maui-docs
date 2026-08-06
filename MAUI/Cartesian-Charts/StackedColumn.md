@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Column Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about stacked column and bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Stacked Column Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Stacked Column Chart in .NET MAUI Cartesian Chart displays stacked columns to visualize cumulative values and part-to-whole relationships across categories.
 platform: maui
 control: SfCartesianChart
 documentation: ug

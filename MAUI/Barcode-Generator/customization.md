@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI Barcodes | Syncfusion®
-description: Learn here all about Customization of Syncfusion<sup>&reg;</sup> .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
+title: Customization in .NET MAUI Barcode Generator | Syncfusion®
+description: Customization in .NET MAUI Barcode Generator allows barcode appearance to be tailored using colors, sizing, labels, margins, and styling options.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug

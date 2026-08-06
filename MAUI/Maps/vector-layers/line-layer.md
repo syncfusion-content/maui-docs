@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Lines in .NET MAUI Maps control | Syncfusion
-description: Learn here all about adding the Line Layer feature of Syncfusion® .NET MAUI Maps (SfMaps) control to customize its appearance and more.
+title: Lines Layer in .NET MAUI Maps | Syncfusion®
+description: Lines Layer in .NET MAUI Maps displays connections between geographic locations using line segments, enabling visualization of routes and spatial relationships.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Lines in .NET MAUI Maps (SfMaps)
+# Lines Layer in .NET MAUI Maps
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 

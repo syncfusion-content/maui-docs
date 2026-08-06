@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Circular Chart control | Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Circular Chart (SfCircularChart), its elements and more.
+title: Appearance in .NET MAUI Circular Chart | Syncfusion®
+description: Appearance customization in .NET MAUI Circular Chart allows you to personalize chart visuals using colors, palettes, gradients.
 platform: maui
 control: SfCircularChart
 documentation: ug

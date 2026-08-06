@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Polar Chart control | Syncfusion
-description: Learn here all about the features available in the .NET MAUI Polar Chart (SfPolarChart) control over Xamarin SfChart.
+title: Migrate Xamarin.Forms SfChart to .NET MAUI Polar Chart | Syncfusion®
+description: Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart with updated APIs, improved performance, and modern features for polar data visualization.
 platform: MAUI
 control: SfPolarChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfChart to .NET MAUI SfPolarChart
+# Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart
 
 The Polar Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 

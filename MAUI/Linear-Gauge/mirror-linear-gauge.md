@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mirroring in .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn how to use the IsMirrored property to mirror the Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control.
+title: Mirroring in .NET MAUI Linear Gauge | Syncfusion®
+description: Mirroring in .NET MAUI Linear Gauge reverses the gauge direction and element layout, enabling right-to-left orientation and flexible visual presentation.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Mirroring in .NET MAUI Linear Gauge (SfLinearGauge)
+# Mirroring in .NET MAUI Linear Gauge
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Linear Gauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 

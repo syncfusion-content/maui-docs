@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Polar Chart Control | Syncfusion
-description: This section explains about the getting started with Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
+title: Getting Started with .NET MAUI Polar Chart | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Polar Chart control. Explore setup, axis customization, chart types, and visualization features.
 platform: maui
 control: SfPolarChart
 documentation: ug

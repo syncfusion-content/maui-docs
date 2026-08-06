@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Error Bar Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about error bar chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Error Bar in .NET MAUI Cartesian Chart | Syncfusion®
+description: Error Bar in .NET MAUI Cartesian Chart displays data variability and uncertainty, helping visualize statistical deviations and measurement accuracy.
 platform: maui
 control: SfCartesianChart
 documentation: ug

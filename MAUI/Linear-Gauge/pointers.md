@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pointers and Interaction in .NET MAUI Linear Gauge | Syncfusion®
-description: Learn here all about the pointers and interactions in Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Pointers in .NET MAUI Linear Gauge | Syncfusion®
+description: Pointers in .NET MAUI Linear Gauge indicate values along the gauge scale using different pointer types, enabling clear and effective data representation.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Pointers in .NET MAUI Linear Gauge (SfLinearGauge)
+# Pointers in .NET MAUI Linear Gauge
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the [.NET MAUI Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/getting-started) control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 
