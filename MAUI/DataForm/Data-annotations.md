@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data annotations in .NET MAUI DataForm control | Syncfusion®
-description: Data annotations support in Syncfusion® Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data Annotations in .NET MAUI DataForm | Syncfusion®
+description: Learn how to use data annotations for validation in Syncfusion® .NET MAUI DataForm (SfDataForm) to enforce data quality and error handling rules.
 platform: maui
 control: SfDataForm
-documentation: UG
+documentation: ug
 ---
 
-# Data annotations in .NET MAUI DataForm (SfDataForm)
+# Data Annotations in .NET MAUI DataForm
 
 The data form supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
 
