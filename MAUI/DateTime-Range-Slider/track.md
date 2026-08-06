@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track in .NET MAUI DateTime Range Slider | Syncfusion�
+title: Track in .NET MAUI DateTime Range Slider | Syncfusion®
 description: Learn how to customize the track in the .NET MAUI DateTime Range Slider, including active/inactive fills, sizes, extent, orientation, and disabled states.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Track in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to customize the track in the DateTime Range Slider.
 
