@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data localization in .NET MAUI DataForm control | Syncfusion
-description: Learn about the data localization support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Localization in .NET MAUI DataForm | Syncfusion®
+description: Learn how to localize DataForm resources and validation messages in Syncfusion® .NET MAUI DataForm (SfDataForm) for multiple languages and cultures.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Localization in .NET MAUI DataForm (SfDataForm)
+# Localization in .NET MAUI DataForm
 
 Localization is translating the application resources into different languages for specific cultures. The `SfDataForm` can be localized by adding a `resource` file.
 

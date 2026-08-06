@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Explicit data editors of .NET MAUI DataForm control | Syncfusion
-description: Learn about the explicit data editors of Syncfusion<sup>&reg;</sup> .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
-platform: Maui
+title: Explicit Data Editors in .NET MAUI DataForm | Syncfusion®
+description: Learn how to explicitly create and configure data editors in Syncfusion® .NET MAUI DataForm (SfDataForm) for custom data form layouts.
+platform: maui
 control: SfDataForm
-documentation: UG
+documentation: ug
 ---
- 
-# Explicit Data Editors .NET MAUI DataForm (SfDataForm)
+
+# Explicit Data Editors in .NET MAUI DataForm
 
 ## Explicitly create data editors
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
-description: Learn about Right To Left support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase
+title: Right-to-Left in .NET MAUI DataForm | Syncfusion®
+description: Learn about right-to-left (RTL) flow direction support in Syncfusion® .NET MAUI DataForm (SfDataForm) for language and cultural customization.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Right To Left Flow Direction in .NET MAUI DataForm (SfDataForm)
+# Right To Left in .NET MAUI DataForm
 
 The `SfDataForm` supports changing the flow direction of the text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`.
 
