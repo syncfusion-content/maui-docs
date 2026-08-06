@@ -29,6 +29,51 @@ documentation: UG
 - **Segment customization** allows modifying colors, sizes, shapes, and positioning of menu segments.  
 - **Auto arrangement** allows automatically arranging menu items for better usability and layout consistency.
 
+## Globalization
+
+The following table summarizes globalization and accessibility support available in this control.
+
+<style>
+.img{
+  margin:0 !important;
+}
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
+</style>
+
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
+
+<table>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
+</tr>
+<tr>
+<td><a href="/maui/radial-menu/overview">Radial Menu</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+</table>
+
 ## Related controls
 
 - [Button](https://help.syncfusion.com/maui/button/overview) for triggering actions and commands in applications.  

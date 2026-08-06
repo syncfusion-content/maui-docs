@@ -54,7 +54,7 @@ The following table summarizes the globalization support available in this contr
 </span>
  
 <span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/no-support.svg" width="16"> No Support
+<img src="../Images/partial-support.svg" width="16"> Partial Support
 </span>
 </div>
 
@@ -72,7 +72,7 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
