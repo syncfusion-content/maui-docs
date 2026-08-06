@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI Image Editor | Syncfusion®
-description: Learn about migrating from Xamarin.Forms Image Editor to Syncfusion® .NET MAUI Image Editor control.
+description: Learn about migration from Syncfusion® Xamarin Image Editor to .NET MAUI Image Editor control with API comparisons.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
