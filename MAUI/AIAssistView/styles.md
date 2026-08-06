@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles customization in .NET MAUI AI AssistView control | Syncfusion®
-description: Learn about styles customization support in Syncfusion® .NET MAUI AI AssistView control.
+description: Learn about styles customization support in the Syncfusion® .NET MAUI AI AssistView control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

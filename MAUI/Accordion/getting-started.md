@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with .NET MAUI Accordion | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-accordion"
-description: Learn here about getting started with Syncfusion® .NET MAUI Accordion, its elements and more.
+description: Learn here all about getting started with the Syncfusion® .NET MAUI Accordion, its elements, and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
