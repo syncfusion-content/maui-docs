@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI-Powered Smart Paste DataForm in .NET MAUI | Syncfusion®
+title: AI-Powered Smart Paste in .NET MAUI DataForm | Syncfusion®
 description: Learn how to implement AI-powered smart paste functionality in .NET MAUI DataForm for intelligent data extraction and field population.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# AI-Powered Smart Paste DataForm in .NET MAUI
+# AI-Powered Smart Paste in .NET MAUI DataForm
 
 This guide introduces the integration of AI-powered Smart Paste functionality into the .NET MAUI [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html), enhancing user experience by automating data entry through intelligent clipboard parsing. Smart Paste is an AI-powered feature that automates data entry by intelligently pasting and organizing clipboard content into the correct fields of a form. It reduces manual errors and boosts efficiency, especially useful in scenarios like customer feedback forms, surveys, and registrations
 

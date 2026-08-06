@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI-Powered Smart DataForm in .NET MAUI | Syncfusion®
+title: AI-Powered Smart Data Entry in .NET MAUI DataForm | Syncfusion®
 description: Learn how to build AI-powered smart data entry forms in .NET MAUI SfDataForm by integrating Azure OpenAI services for intelligent field handling.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# AI-Powered Smart DataForm in .NET MAUI
+# AI-Powered Smart Data Entry in .NET MAUI DataForm
 
 This guide explains how to implement AI-powered smart data forms in a .NET MAUI application using Syncfusion® DataForm ([SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html)) and AIAssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) controls. These forms automatically generate fields, validate input, and guide users interactively using AI logic from Azure OpenAI Services.
 
