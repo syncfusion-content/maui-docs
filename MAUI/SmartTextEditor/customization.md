@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI SmartTextEditor | Syncfusion®
+title: Customization in .NET MAUI Smart Text Editor | Syncfusion®
 description: Customize the appearance and behavior of Syncfusion® .NET MAUI Smart Text Editor control with text styles, placeholder options, and suggestion settings.
 platform: maui
 control: SfSmartTextEditor

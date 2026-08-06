@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Smart Text Editor | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI SmartTextEditor control. Explore setup, features, examples, and customization options.
+description: Learn how to get started with the Syncfusion® .NET MAUI Smart Text Editor control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
