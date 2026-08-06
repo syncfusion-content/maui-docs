@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header Configuration in .NET MAUI Backdrop Page | Syncfusion®
-description: Learn how to configure and customize the header in Syncfusion® .NET MAUI Backdrop Page control.
+description: Learn how to configure and customize the header, icons, and text in the Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
