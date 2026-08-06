@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interval in .NET MAUI Slider | Syncfusion®
-description: Learn how to configure numeric and auto intervals in the Syncfusion® .NET MAUI Slider to control when labels, ticks, and dividers are rendered and how they are calculated.
+description: Learn about configurable intervals in Syncfusion® .NET MAUI Slider for precise step-based value selection and control.
 platform: maui
 control: SfSlider
 documentation: ug
