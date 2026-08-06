@@ -81,11 +81,7 @@ The `SfAIAssistView` control allows for expanding the editor view based on its `
 {% highlight xaml hl_lines="2 4" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           AllowEditorExpansion="True">
-    <syncfusion:SfAIAssistView.RequestEditor>
-        <syncfusion:RequestEditorView MaximumHeightRequest="300"/>
-    </syncfusion:SfAIAssistView.RequestEditor>
-</syncfusion:SfAIAssistView>
+                           AllowEditorExpansion="True"/>
 
 {% endhighlight %}
 {% highlight c# hl_lines="9 10" %}
