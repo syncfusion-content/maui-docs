@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI SfChat control | Syncfusion®
-description: Learn how to localize the Syncfusion® .NET MAUI Chat (SfChat) control by adding resource files for different cultures.
+title: Localization in .NET MAUI Chat control | Syncfusion®
+description: Learn how to localize the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more by adding resource files for different cultures.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Localization in .NET MAUI Chat (SfChat)
+# Localization in .NET MAUI Chat
 
 `Localization` is the process of translating the application resources into different languages for specific cultures. The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) can be localized by adding a `resource` file.
 

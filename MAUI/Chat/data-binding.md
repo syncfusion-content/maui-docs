@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in .NET MAUI Chat Control | Syncfusion®
-description: Learn here all about Data Binding support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Data binding in .NET MAUI Chat  | Syncfusion
+description: Learn here all about how to bind data in Syncfusion® .NET Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Data Binding in .NET MAUI Chat (SfChat)
+# Data Binding in .NET MAUI Chat
 
 The `SfChat` control allows you to bind any existing collection of data objects as a data collection and display them as chat messages using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSource) and [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ItemsSourceConverter) properties as follows.
 

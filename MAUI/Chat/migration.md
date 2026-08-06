@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfChat to .NET MAUI SfChat
+# Migrate from Xamarin.Forms Chat to .NET MAUI Chat
 
 To make migration easier, we have retained most of the Xamarin SfChat APIs in MAUI [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html). However, to maintain the consistency of API naming in MAUI SfChat, we renamed some of the APIs. The APIs that have changed in MAUI SfChat (compared with Xamarin SfChat) are detailed below.
 
