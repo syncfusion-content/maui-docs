@@ -389,7 +389,7 @@ N> **Template expectations:**
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="13" %}
+{% highlight c# hl_lines="17" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -443,7 +443,7 @@ namespace AttachmentButton
 
 ## Attach image from gallery in .NET MAUI Chat
 
-You can add the desired image in to the chat by opening the device’s gallery when attachment button is tapped.
+You can add the desired image into the chat by opening the device’s gallery when attachment button is tapped.
 
 ![Attach image from gallery in .NET MAUI Chat](images/attachment-button/maui-chat-attach-image-from-gallery.png)
 

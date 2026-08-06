@@ -51,7 +51,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="14 23" %}
+{% highlight c# hl_lines="13 24" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Chat;
