@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Toolbar | Syncfusion®
-description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Toolbar using the EnableLiquidGlassEffect property.
+title: Liquid Glass Effect in .NET MAUI Toolbar | Syncfusion®
+description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Toolbar (SfToolbar) for a modern, translucent design.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Toolbar (SfToolbar)
+# Liquid Glass Effect in .NET MAUI Toolbar
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Toolbar (SfToolbar) control.
 
