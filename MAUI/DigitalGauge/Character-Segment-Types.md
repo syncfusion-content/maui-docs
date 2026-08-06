@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Character Types in .NET MAUI Digital Gauge | Syncfusion
-description: Learn here all about Character Types support in Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
+title: Character Types in .NET MAUI Digital Gauge | Syncfusion®
+description: Character Types in .NET MAUI Digital Gauge support different character formats for displaying numeric and alphanumeric values in digital gauge displays.
 platform: maui
 control: DigitalGauge
 documentation: ug

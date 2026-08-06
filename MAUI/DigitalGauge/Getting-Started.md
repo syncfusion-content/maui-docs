@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with in .NET MAUI Digital Gauge | Syncfusion
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control, its elements and more.
+title: Getting Started with .NET MAUI Digital Gauge | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Digital Gauge control. Explore setup, character displays, customization, and key features.
 platform: maui
 control: DigitalGauge
 documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
 ---
-# Getting Started with the .NET MAUI DigitalGauge
+# Getting Started with .NET MAUI Digital Gauge
 
 This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
 

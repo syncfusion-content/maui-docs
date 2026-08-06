@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Plot band in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about plot band and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control and more.
+title: Plot Band in .NET MAUI Cartesian Chart | Syncfusion®
+description: Plot Band in .NET MAUI Cartesian Chart highlights specific axis ranges with custom backgrounds, making important values and regions easier to identify.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui plot band, maui plot band, .net maui chart plot band type, plot band customization .net maui, syncfusion maui plot band, cartesian plot band maui, .net maui chart plot band visualization, .net maui shaded region chart, .net maui recurrence plot band.
 ---
 
-# Plot band in .NET MAUI Cartesian Chart
+# Plot Band in .NET MAUI Cartesian Chart
 
 A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis labels in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about axis labels and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Axis Labels in .NET MAUI Cartesian Chart | Syncfusion®
+description: Axis Labels in .NET MAUI Cartesian Chart display category and value information along chart axes, improving readability and data interpretation.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart axis labels, axis labels customization .net maui, syncfusion maui chart axis labels, cartesian chart axis labels maui, customize axis labels .net maui chart, .net maui chart labels per 100 pixels.
 ---
 
-# Axis labels in .NET MAUI Cartesian Chart
+# Axis Labels in .NET MAUI Cartesian Chart
 
 Axis labels display the units, measures, or category values of an axis to help users understand the data. They are generated based on the range and the values bound to [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of the series.
 
