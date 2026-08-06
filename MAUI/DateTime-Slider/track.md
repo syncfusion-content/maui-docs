@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Track in .NET MAUI DateTime Slider control | SyncfusionÂ®
-description: Learn here all about adding and customizing the slider track in .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Track in .NET MAUI SfDateTimeSlider | Syncfusion®
+description: Learn how to customize track colors, sizes, extent, orientation, and disabled states for the Syncfusion® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
