@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conversation history in .NET MAUI AI AssistView | Syncfusion®
-description: Learn here all about conversation history support in Syncfusion .NET MAUI AI AssistView control, its elements and more.
+description: Learn here all about conversation history support in Syncfusion® .NET MAUI AI AssistView control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
