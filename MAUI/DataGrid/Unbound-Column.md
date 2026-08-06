@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unbound Columns in .NET MAUI DataGrid | Syncfusion®
+title: Unbound Column in .NET MAUI DataGrid | Syncfusion®
 description: Learn how to create and customize unbound columns in Syncfusion® .NET MAUI DataGrid to display calculated, formatted, or custom data values.
 platform: MAUI
 control: SfDataGrid
@@ -8,7 +8,7 @@ documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound column, maui unbound coulumn
 ---
 
-# Unbound column in .NET MAUI DataGrid
+# Unbound Column in .NET MAUI DataGrid
 
 The data grid allows adding additional columns that are not bound with data objects from the underlying data source. The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
 
