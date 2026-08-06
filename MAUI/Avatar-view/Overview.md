@@ -1,7 +1,5 @@
 ---
 layout: post
-meta_title: ""
-meta_description: ""
 title: About Syncfusion® .NET MAUI Avatar View Control | Syncfusion®
 description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Avatar control and more details.
 platform: MAUI
