@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with AI-Powered Text Editor control | Syncfusion®
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control and its basic features.
+title: Getting Started with .NET MAUI Smart Text Editor | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI SmartTextEditor control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Smart Text Editor
+# Getting Started with .NET MAUI Smart Text Editor
 This section explains how to add the [.NET MAUI SmartTextEditor](https://www.syncfusion.com/maui-controls/maui-smart-texteditor) control. It covers only the basic features needed to get started with the Syncfusion AI-Powered Text Editor. Follow the steps below to add a .NET MAUI AI-Powered Text Editor control to your project.
 
 N> The Smart Text Editor is distributed as part of the `Syncfusion.Maui.SmartComponents` package provides advanced AI-assisted features to enhance text editing and content management. Ensure your application has the required AI service configuration to enable these features.

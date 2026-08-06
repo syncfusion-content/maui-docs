@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in AI-Powered Text Editor control | Syncfusion®
-description: Learn here all about Customization features of Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control. 
+title: Customization in .NET MAUI SmartTextEditor | Syncfusion®
+description: Customize the appearance and behavior of Syncfusion® .NET MAUI Smart Text Editor control with text styles, placeholder options, and suggestion settings.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Customization in .NET MAUI AI-Powered Text Editor (SfSmartTextEditor)
+# Customization in .NET MAUI Smart Text Editor
 This section explains how to change the AI-Powered Text Editor’s appearance and suggestion behavior. You can set text styles, placeholder options, and customize how suggestions are shown.
 
 ## Text customization
