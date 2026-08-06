@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in .NET MAUI Linear ProgressBar control | Syncfusion®
-description: Learn all about animation support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
+title: Animation in .NET MAUI Linear ProgressBar | Syncfusion®
+description: Learn about animation support and duration customization in Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Animation in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
+# Animation in .NET MAUI Linear ProgressBar
 
 The linear progress bar provides animation support to visualize the progress value changes in an interactive way. 
 
