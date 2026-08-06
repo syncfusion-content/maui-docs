@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Track in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn how to customize the track in the Syncfusion® .NET MAUI Range Slider control with colors, size, and extent options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI Range Slider (SfRangeSlider)
+# Track in .NET MAUI Range Slider control
 
 This section helps to learn about how to customize the track in the range slider.
 

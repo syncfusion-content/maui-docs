@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Slider control | SyncfusionÂ®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Labels in .NET MAUI Range Slider | Syncfusion®
+description: Learn how to show, format, and customize labels in the .NET MAUI Range Slider control with examples and styling options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Labels in .NET MAUI Range Slider (SfRangeSlider)
+# Labels in .NET MAUI Range Slider
 
 This section explains how to add the labels in the range slider.
 
