@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Accordion control | Syncfusion®
-description: Learn here all about Appearance support in Syncfusion® Maui Accordion (SfAccordion) control and more details. 
+title: Appearance customization in .NET MAUI Accordion | Syncfusion®
+description: Learn here all about customizing the appearance of Syncfusion® MAUI Accordion control and more details.
 platform: MAUI
 control: SfAccordion
 documentation: ug   
 ---
 
-# Appearance in .NET MAUI Accordion (SfAccordion)
+# Appearance customization in .NET MAUI Accordion
 
 The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Appearance customization in .NET MAUI AI AssistView | Syncfusion®
-description: Learn how to customize the appearance of the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control to build rich, interactive chat-style user interfaces.
+description: Learn how to customize the appearance of the Syncfusion® .NET MAUI AI AssistView control to build rich, interactive chat-style user interfaces.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Customize Appearance in .NET MAUI SfAIAssistView?
+# Appearance customization in .NET MAUI AI AssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides flexible options to customize the appearance of chat interfaces. You can modify layout, styling, and visual structure to match your application's design and user experience requirements.
 
