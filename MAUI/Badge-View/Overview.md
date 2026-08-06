@@ -1,15 +1,14 @@
 ---
-
 layout: post
-title: Overview of Syncfusion® .NET MAUI Badge View
-description: This section provides a quick overview and explains the key features of the Syncfusion® .NET MAUI Badge View control.
+title: About Syncfusion® .NET MAUI Badge Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Badge control and more details.
 platform: MAUI
 control: SfBadgeView
 documentation: UG
 
 ---
 
-# Overview of .NET MAUI Badge View
+# About Syncfusion® .NET MAUI Badge Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) (SfBadgeView) is used to notify users of new or unread messages, notifications, or the status of various events within your application.
 
