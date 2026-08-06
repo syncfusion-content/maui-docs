@@ -7,7 +7,7 @@ control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Right To Left FlowDirection in .NET MAUI Segmented Control
+# Right-To-Left in .NET MAUI Segmented Control
 
 The [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
