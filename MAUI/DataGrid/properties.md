@@ -13,358 +13,357 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
 ## Properties
 
 <table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection">AllowColumnSelection</a></td>
-		<td>bool</td>
-		<td>Defines whether column selection is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDeleting">AllowDeleting</a></td>
-		<td>bool</td>
-		<td>Defines whether row deletion is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling">AllowDiagonalScrolling</a></td>
-		<td>bool</td>
-		<td>Defines whether diagonal scrolling is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingColumn">AllowDraggingColumn</a></td>
-		<td>bool</td>
-		<td>Defines whether column dragging is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow">AllowDraggingRow</a></td>
-		<td>bool</td>
-		<td>Defines whether row dragging is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing">AllowEditing</a></td>
-		<td>bool</td>
-		<td>Defines whether editing is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowGroupExpandCollapse">AllowGroupExpandCollapse</a></td>
-		<td>bool</td>
-		<td>Defines whether group expand and collapse is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowKeyboardNavigation">AllowKeyboardNavigation</a></td>
-		<td>bool</td>
-		<td>Defines whether keyboard navigation is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore">AllowLoadMore</a></td>
-		<td>bool</td>
-		<td>Defines whether load more is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowPullToRefresh">AllowPullToRefresh</a></td>
-		<td>bool</td>
-		<td>Defines whether pull-to-refresh is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumns">AllowResizingColumns</a></td>
-		<td>bool</td>
-		<td>Defines whether column resizing is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSwiping">AllowSwiping</a></td>
-		<td>bool</td>
-		<td>Defines whether swiping is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowTriStateSorting">AllowTriStateSorting</a></td>
-		<td>bool</td>
-		<td>Defines whether tri-state sorting is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AlternationRowCount">AlternationRowCount</a></td>
-		<td>int</td>
-		<td>Defines the alternation row count.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoExpandGroups">AutoExpandGroups</a></td>
-		<td>bool</td>
-		<td>Defines whether groups expand automatically.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode">AutoGenerateColumnsMode</a></td>
-		<td>AutoGenerateColumnsMode</td>
-		<td>Defines how columns are generated automatically.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType">AutoGenerateColumnsModeForCustomType</a></td>
-		<td>AutoGenerateColumnsModeForCustomType</td>
-		<td>Defines how columns are generated for custom types.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations">AutoGenerateRelations</a></td>
-		<td>bool</td>
-		<td>Defines whether relations are generated automatically.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition">AddNewRowPosition</a></td>
-		<td>DataGridAddNewRowPosition</td>
-		<td>Defines where the add new row appears.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowText">AddNewRowText</a></td>
-		<td>string</td>
-		<td>Defines the add new row text.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowRowHoverHighlighting">AllowRowHoverHighlighting</a></td>
-		<td>bool</td>
-		<td>Defines whether row hover highlighting is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanMaintainScrollPosition">CanMaintainScrollPosition</a></td>
-		<td>bool</td>
-		<td>Defines whether scroll position is maintained after data changes.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanUseViewFilter">CanUseViewFilter</a></td>
-		<td>bool</td>
-		<td>Defines whether the view filter can be used.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode">ColumnWidthMode</a></td>
-		<td>ColumnWidthMode</td>
-		<td>Defines how column widths are calculated.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCell">CurrentCell</a></td>
-		<td>RowColumnIndex</td>
-		<td>Defines the current cell position.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow">CurrentRow</a></td>
-		<td>object</td>
-		<td>Defines the current row.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataFetchSize">DataFetchSize</a></td>
-		<td>int</td>
-		<td>Defines the data fetch size.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth">DefaultColumnWidth</a></td>
-		<td>double</td>
-		<td>Defines the default column width.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewDefaultStyle">DetailsViewDefaultStyle</a></td>
-		<td>DataGridStyle</td>
-		<td>Defines the default style for details view.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewPadding">DetailsViewPadding</a></td>
-		<td>Thickness</td>
-		<td>Defines the padding used for details view.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction">EditTapAction</a></td>
-		<td>DataGridTapAction</td>
-		<td>Defines the tap action used to begin editing.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyView">EmptyView</a></td>
-		<td>object</td>
-		<td>Defines the content shown when there is no data.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyViewTemplate">EmptyViewTemplate</a></td>
-		<td>DataTemplate</td>
-		<td>Defines the template shown when there is no data.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableDataVirtualization">EnableDataVirtualization</a></td>
-		<td>bool</td>
-		<td>Defines whether data virtualization is enabled.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpanderColumnWidth">ExpanderColumnWidth</a></td>
-		<td>double</td>
-		<td>Defines the expander column width.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount">FrozenColumnCount</a></td>
-		<td>int</td>
-		<td>Defines the number of frozen columns.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount">FrozenRowCount</a></td>
-		<td>int</td>
-		<td>Defines the number of frozen rows.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GridLinesVisibility">GridLinesVisibility</a></td>
-		<td>GridLinesVisibility</td>
-		<td>Defines the visibility of grid lines.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupingMode">GroupingMode</a></td>
-		<td>GroupingMode</td>
-		<td>Defines the grouping mode.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderGridLinesVisibility">HeaderGridLinesVisibility</a></td>
-		<td>GridLinesVisibility</td>
-		<td>Defines the visibility of header grid lines.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight">HeaderRowHeight</a></td>
-		<td>double</td>
-		<td>Defines the header row height.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibility">HorizontalScrollBarVisibility</a></td>
-		<td>ScrollBarVisibility</td>
-		<td>Defines the horizontal scrollbar visibility.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidth">IndentColumnWidth</a></td>
-		<td>double</td>
-		<td>Defines the indent column width.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy">IsBusy</a></td>
-		<td>bool</td>
-		<td>Defines whether the grid is busy.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource">ItemsSource</a></td>
-		<td>object</td>
-		<td>Defines the data source.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMorePosition">LoadMorePosition</a></td>
-		<td>DataGridLoadMorePosition</td>
-		<td>Defines where load more is shown.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LostFocusBehavior">LostFocusBehavior</a></td>
-		<td>DataGridLostFocusBehavior</td>
-		<td>Defines how the current cell behaves when focus is lost.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxSwipeOffset">MaxSwipeOffset</a></td>
-		<td>double</td>
-		<td>Defines the maximum swipe offset.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode">NavigationMode</a></td>
-		<td>DataGridNavigationMode</td>
-		<td>Defines the navigation mode.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ReuseRowsOnItemsSourceChange">ReuseRowsOnItemsSourceChange</a></td>
-		<td>bool</td>
-		<td>Defines whether rows are reused when the data source changes.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth">RowHeaderWidth</a></td>
-		<td>double</td>
-		<td>Defines the row header width.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeight">RowHeight</a></td>
-		<td>double</td>
-		<td>Defines the row height.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex">SelectedIndex</a></td>
-		<td>int</td>
-		<td>Defines the selected row index.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow">SelectedRow</a></td>
-		<td>object</td>
-		<td>Defines the selected row.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows">SelectedRows</a></td>
-		<td>object</td>
-		<td>Defines the selected rows.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode">SelectionMode</a></td>
-		<td>DataGridSelectionMode</td>
-		<td>Defines the selection mode.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionUnit">SelectionUnit</a></td>
-		<td>DataGridSelectionUnit</td>
-		<td>Defines whether selection is applied to rows or cells.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowColumnWhenGrouped">ShowColumnWhenGrouped</a></td>
-		<td>bool</td>
-		<td>Defines whether grouped columns remain visible.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowDetailsViewIndentCell">ShowDetailsViewIndentCell</a></td>
-		<td>bool</td>
-		<td>Defines whether the details view indent cell is shown.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader">ShowRowHeader</a></td>
-		<td>bool</td>
-		<td>Defines whether row headers are shown.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowSortNumbers">ShowSortNumbers</a></td>
-		<td>bool</td>
-		<td>Defines whether sort order numbers are shown.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingGestureType">SortingGestureType</a></td>
-		<td>DataGridSortingGestureType</td>
-		<td>Defines the gesture used for sorting.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode">SortingMode</a></td>
-		<td>DataGridSortingMode</td>
-		<td>Defines the sorting mode.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SourceType">SourceType</a></td>
-		<td>Type</td>
-		<td>Defines the source type.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip">ShowToolTip</a></td>
-		<td>bool</td>
-		<td>Defines whether tooltips are shown.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeOffsetMode">SwipeOffsetMode</a></td>
-		<td>DataGridSwipeOffsetMode</td>
-		<td>Defines how swipe offset is calculated.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_TransitionType">TransitionType</a></td>
-		<td>PullToRefreshTransitionType</td>
-		<td>Defines the pull-to-refresh transition type.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibility">VerticalScrollBarVisibility</a></td>
-		<td>ScrollBarVisibility</td>
-		<td>Defines the vertical scrollbar visibility.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View">View</a></td>
-		<td>ICollectionViewAdv</td>
-		<td>Defines the underlying collection view.</td>
-	</tr>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection">AllowColumnSelection</a></td>
+        <td>bool</td>
+        <td>Defines whether users can select one or more columns in the data grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDeleting">AllowDeleting</a></td>
+        <td>bool</td>
+        <td>Defines whether rows can be deleted from the data grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling">AllowDiagonalScrolling</a></td>
+        <td>bool</td>
+        <td>Defines whether the grid supports diagonal scrolling during touch interactions.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingColumn">AllowDraggingColumn</a></td>
+        <td>bool</td>
+        <td>Defines whether columns can be dragged to change their position.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow">AllowDraggingRow</a></td>
+        <td>bool</td>
+        <td>Defines whether rows can be dragged to reorder them.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing">AllowEditing</a></td>
+        <td>bool</td>
+        <td>Defines whether cell editing is enabled in the data grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowGroupExpandCollapse">AllowGroupExpandCollapse</a></td>
+        <td>bool</td>
+        <td>Defines whether grouped rows can be expanded or collapsed by the user.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowKeyboardNavigation">AllowKeyboardNavigation</a></td>
+        <td>bool</td>
+        <td>Defines whether keyboard-based navigation is enabled in the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore">AllowLoadMore</a></td>
+        <td>bool</td>
+        <td>Defines whether additional records can be loaded on demand.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowPullToRefresh">AllowPullToRefresh</a></td>
+        <td>bool</td>
+        <td>Defines whether pull-to-refresh interaction is enabled for the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingColumns">AllowResizingColumns</a></td>
+        <td>bool</td>
+        <td>Defines whether users can resize columns interactively.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSwiping">AllowSwiping</a></td>
+        <td>bool</td>
+        <td>Defines whether swipe actions are enabled for rows.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowTriStateSorting">AllowTriStateSorting</a></td>
+        <td>bool</td>
+        <td>Defines whether sorting cycles through ascending, descending, and none states.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AlternationRowCount">AlternationRowCount</a></td>
+        <td>int</td>
+        <td>Defines the number of alternating row styles applied in sequence.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoExpandGroups">AutoExpandGroups</a></td>
+        <td>bool</td>
+        <td>Defines whether groups expand automatically when they are created or loaded.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode">AutoGenerateColumnsMode</a></td>
+        <td>AutoGenerateColumnsMode</td>
+        <td>Defines how columns are created automatically from the data source.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsModeForCustomType">AutoGenerateColumnsModeForCustomType</a></td>
+        <td>AutoGenerateColumnsModeForCustomType</td>
+        <td>Defines how columns are generated automatically for custom object types.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations">AutoGenerateRelations</a></td>
+        <td>bool</td>
+        <td>Defines whether related details views or nested relations are generated automatically.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition">AddNewRowPosition</a></td>
+        <td>DataGridAddNewRowPosition</td>
+        <td>Defines where the add-new-row placeholder is displayed in the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowText">AddNewRowText</a></td>
+        <td>string</td>
+        <td>Defines the text shown in the add-new-row area.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowRowHoverHighlighting">AllowRowHoverHighlighting</a></td>
+        <td>bool</td>
+        <td>Defines whether rows are highlighted when the pointer hovers over them.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanMaintainScrollPosition">CanMaintainScrollPosition</a></td>
+        <td>bool</td>
+        <td>Defines whether the scroll position is preserved after data updates.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanUseViewFilter">CanUseViewFilter</a></td>
+        <td>bool</td>
+        <td>Defines whether the grid can use a view-based filter for data operations.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode">ColumnWidthMode</a></td>
+        <td>ColumnWidthMode</td>
+        <td>Defines how column widths are measured and adjusted.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCell">CurrentCell</a></td>
+        <td>RowColumnIndex</td>
+        <td>Defines the row and column index of the currently active cell.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow">CurrentRow</a></td>
+        <td>object</td>
+        <td>Defines the row currently focused or active in the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataFetchSize">DataFetchSize</a></td>
+        <td>int</td>
+        <td>Defines the number of records fetched in each data retrieval batch.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth">DefaultColumnWidth</a></td>
+        <td>double</td>
+        <td>Defines the default width applied to columns without an explicit width.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewDefaultStyle">DetailsViewDefaultStyle</a></td>
+        <td>DataGridStyle</td>
+        <td>Defines the default visual style used for details view rows and content.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewPadding">DetailsViewPadding</a></td>
+        <td>Thickness</td>
+        <td>Defines the padding applied around details view content.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction">EditTapAction</a></td>
+        <td>DataGridTapAction</td>
+        <td>Defines the tap action used to enter edit mode.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyView">EmptyView</a></td>
+        <td>object</td>
+        <td>Defines the content shown when the grid has no data to display.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyViewTemplate">EmptyViewTemplate</a></td>
+        <td>DataTemplate</td>
+        <td>Defines the template used to render the empty-state content.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EnableDataVirtualization">EnableDataVirtualization</a></td>
+        <td>bool</td>
+        <td>Defines whether data virtualization is used to improve performance with large datasets.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpanderColumnWidth">ExpanderColumnWidth</a></td>
+        <td>double</td>
+        <td>Defines the width of the expander column used for hierarchical rows.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount">FrozenColumnCount</a></td>
+        <td>int</td>
+        <td>Defines the number of columns that stay fixed during horizontal scrolling.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount">FrozenRowCount</a></td>
+        <td>int</td>
+        <td>Defines the number of rows that stay fixed during vertical scrolling.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GridLinesVisibility">GridLinesVisibility</a></td>
+        <td>GridLinesVisibility</td>
+        <td>Defines which grid lines are visible in the main grid area.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupingMode">GroupingMode</a></td>
+        <td>GroupingMode</td>
+        <td>Defines how grouped data is organized and displayed.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderGridLinesVisibility">HeaderGridLinesVisibility</a></td>
+        <td>GridLinesVisibility</td>
+        <td>Defines which grid lines are visible in the header row.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight">HeaderRowHeight</a></td>
+        <td>double</td>
+        <td>Defines the height of the header row.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibility">HorizontalScrollBarVisibility</a></td>
+        <td>ScrollBarVisibility</td>
+        <td>Defines when the horizontal scrollbar is shown.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidth">IndentColumnWidth</a></td>
+        <td>double</td>
+        <td>Defines the width of the indent column used for grouped rows.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy">IsBusy</a></td>
+        <td>bool</td>
+        <td>Defines whether the grid is currently performing a background operation.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource">ItemsSource</a></td>
+        <td>object</td>
+        <td>Defines the collection used as the data source for the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMorePosition">LoadMorePosition</a></td>
+        <td>DataGridLoadMorePosition</td>
+        <td>Defines where the load-more row or indicator is displayed.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LostFocusBehavior">LostFocusBehavior</a></td>
+        <td>DataGridLostFocusBehavior</td>
+        <td>Defines how the current cell behaves when the grid loses focus.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxSwipeOffset">MaxSwipeOffset</a></td>
+        <td>double</td>
+        <td>Defines the maximum swipe distance allowed for row actions.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode">NavigationMode</a></td>
+        <td>DataGridNavigationMode</td>
+        <td>Defines how keyboard or touch navigation moves through the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ReuseRowsOnItemsSourceChange">ReuseRowsOnItemsSourceChange</a></td>
+        <td>bool</td>
+        <td>Defines whether existing row containers are reused when the data source changes.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth">RowHeaderWidth</a></td>
+        <td>double</td>
+        <td>Defines the width of the row header area.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeight">RowHeight</a></td>
+        <td>double</td>
+        <td>Defines the height of each data row.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex">SelectedIndex</a></td>
+        <td>int</td>
+        <td>Defines the zero-based index of the currently selected row.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow">SelectedRow</a></td>
+        <td>object</td>
+        <td>Defines the currently selected row item.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows">SelectedRows</a></td>
+        <td>object</td>
+        <td>Defines the collection of rows currently selected in the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode">SelectionMode</a></td>
+        <td>DataGridSelectionMode</td>
+        <td>Defines how row or cell selection behaves in the grid.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionUnit">SelectionUnit</a></td>
+        <td>DataGridSelectionUnit</td>
+        <td>Defines whether selection applies to rows, cells, or both.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowColumnWhenGrouped">ShowColumnWhenGrouped</a></td>
+        <td>bool</td>
+        <td>Defines whether grouped columns remain visible while grouping is active.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowDetailsViewIndentCell">ShowDetailsViewIndentCell</a></td>
+        <td>bool</td>
+        <td>Defines whether the indent cell is displayed for details view rows.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader">ShowRowHeader</a></td>
+        <td>bool</td>
+        <td>Defines whether row headers are shown alongside each row.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowSortNumbers">ShowSortNumbers</a></td>
+        <td>bool</td>
+        <td>Defines whether sort order numbers are displayed on sorted columns.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingGestureType">SortingGestureType</a></td>
+        <td>DataGridSortingGestureType</td>
+        <td>Defines the gesture used to trigger sorting actions.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode">SortingMode</a></td>
+        <td>DataGridSortingMode</td>
+        <td>Defines how sorting is applied to grid columns.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SourceType">SourceType</a></td>
+        <td>Type</td>
+        <td>Defines the source item type used by the grid for auto-generation and binding.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip">ShowToolTip</a></td>
+        <td>bool</td>
+        <td>Defines whether tooltips are shown for grid elements.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeOffsetMode">SwipeOffsetMode</a></td>
+        <td>DataGridSwipeOffsetMode</td>
+        <td>Defines how the swipe offset is calculated and applied.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_TransitionType">TransitionType</a></td>
+        <td>PullToRefreshTransitionType</td>
+        <td>Defines the transition animation used for pull-to-refresh interaction.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibility">VerticalScrollBarVisibility</a></td>
+        <td>ScrollBarVisibility</td>
+        <td>Defines when the vertical scrollbar is visible.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View">View</a></td>
+        <td>ICollectionViewAdv</td>
+        <td>Defines the underlying collection view that powers sorting, grouping, and filtering.</td>
+    </tr>
 </table>
-
 ## Events
 
 <table>
