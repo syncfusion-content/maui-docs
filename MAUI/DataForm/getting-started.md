@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI DataForm | Syncfusion®
-description: Learn about introduction of Syncfusion® .NET MAUI DataForm control, its features, image editing capabilities, and more details.
+description: Learn how to get started with the Syncfusion® .NET MAUI DataForm control. Explore setup, features, examples, and customization options
 platform: maui
 control: SfDataForm
 documentation: ug
