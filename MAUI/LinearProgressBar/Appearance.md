@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Linear ProgressBar control | Syncfusion®
-description: Learn all about appearance support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
+title: Appearance in .NET MAUI Linear ProgressBar | Syncfusion®
+description: Learn about customizing appearance of Syncfusion® .NET MAUI Linear ProgressBar control, including track colors, thickness, and corner radius styling.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
+# Appearance in .NET MAUI Linear ProgressBar
 
 ## Range colors
 
