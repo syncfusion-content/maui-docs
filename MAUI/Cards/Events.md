@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in MAUI Cards control | Syncfusion<sup>&reg;</sup>
-description: Learn about Events support in Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements, and more.
+title: Events in .NET MAUI Cards | Syncfusion®
+description: Learn about available events in Syncfusion® .NET MAUI Cards control. Explore event handling and interactive features.
 platform: MAUI
 control: Cards
 documentation: ug
 ---
 
-# Events in MAUI Cards
+# Events in .NET MAUI Cards
 
 ## Tapped
 

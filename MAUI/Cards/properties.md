@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Card Layout control | Syncfusion®
-description: This section explains the properties and events with Syncfusion® MAUI Card Layout (SfCardLayout) control.
+title: Properties in .NET MAUI Cards | Syncfusion®
+description: Learn about properties in Syncfusion® .NET MAUI Cards control. Explore configuration options and API reference.
 platform: maui
 control: SfCardLayout
 documentation: ug
 ---
 
-# .NET MAUI Card Layout API Reference
+# Properties in .NET MAUI Cards
 
 ## Properties
 

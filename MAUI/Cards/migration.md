@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfCards to .NET MAUI SfCards
-description: Learn here about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Card to Syncfusion<sup>&reg;</sup> .NET MAUI Card control.
+title: Migration to .NET MAUI Cards | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Cards control to .NET MAUI Cards control with API comparisons.
 platform: maui
 control: SfCards
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfCard to .NET MAUI SfCard 
+# Migration from Xamarin Cards to .NET MAUI Cards
 
 To make the migration from the [Xamarin SfCards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin SfCards were kept in the.NET MAUI SfCards. However, to maintain the consistency of API naming in the .NET MAUI SfCards, some of the APIs have been renamed. Please find the difference in the following topics.
 
