@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Transform axis value to pixel value and vice-versa in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn how to transform an axis value to a pixel value and vice-versa in SfCartesianChart in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: How to Convert Axis and Pixel Values in .NET MAUI Chart | Syncfusion®
+description: Convert an axis value to a pixel value and vice versa in Syncfusion® .NET MAUI Cartesian Chart for coordinate mapping and chart interactions.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart transform axis value to pixel, maui chart axis value to pixel conversion, .net maui chart axis pixel to value, syncfusion maui chart axis coordinate transformation, sfCartesianChart axis value to pixel conversion in .net maui
 ---
 
-# Transform axis value to pixel value and vice-versa in .NET MAUI Cartesian Chart
+# How to Convert Axis and Pixel Values in .NET MAUI Chart
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) offers two utility methods to transform a pixel into a chart point and vice-versa.
 

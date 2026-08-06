@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn here all about Legend in Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control, its elements, and more.
+title: Legend in .NET MAUI Sunburst Chart | Syncfusion®
+description: Legend in .NET MAUI Sunburst Chart displays chart segment information with customizable styles, helping users identify and interpret hierarchical data.
 platform: maui
 control: SfSunburstChart
 documentation: ug

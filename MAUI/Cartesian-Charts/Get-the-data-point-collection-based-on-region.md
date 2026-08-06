@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get the data point collection based on region in .NET MAUI Cartesian Chart | Syncfusion
-description: Get the data points that fall inside a given rectangular area or within specified X and Y coordinate ranges in SfCartesianChart.
+title: How to Get Region Data Points in .NET MAUI Chart | Syncfusion®
+description: Get region data points in Syncfusion® .NET MAUI Cartesian Chart control to identify and access chart data points within a specific region.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart data point collection, get data points by region, sfCartesianChart get data points rectangle, .net maui chart point collection by axis range
 ---
 
-# Get the data point collection based on region
+# How to Get Region Data Points in .NET MAUI Cartesian Chart
 
 [CartesianSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html) provides the following methods to get a collection of data under a particular region.
 

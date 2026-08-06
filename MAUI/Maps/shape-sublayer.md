@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Sublayer in .NET MAUI Maps control | Syncfusion®
-description: Learn here all about the Shape Sublayer feature of the Syncfusion® .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+title: Shape Sublayer in .NET MAUI Maps | Syncfusion®
+description: Shape Sublayer in .NET MAUI Maps overlays additional shape data on maps, enabling visualization of multiple geographic layers within a single map view.
 platform: MAUI
 control: SfMaps
 documentation: ug
