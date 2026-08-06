@@ -7,7 +7,7 @@ control: SfAvatarView
 documentation: ug
 ---
 
-# Migrating from Xamarin to .NET MAUI Avatar View 
+# Migration from Xamarin Avatar View to .NET MAUI Avatar View 
 
 To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) to .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html), most APIs from the Xamarin version have been retained in the MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html). However, to ensure consistency in API naming within the MAUI environment, some APIs have been renamed. The changes in MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) are detailed below.
 
