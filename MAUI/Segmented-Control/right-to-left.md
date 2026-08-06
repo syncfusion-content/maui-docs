@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI Segmented control | Syncfusion<sup>&reg;</sup>
-description: Learn about Right To Left support in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented control (SfSegmentedControl).
+title: Right-to-Left in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about right-to-left (RTL) flow direction support in Syncfusion® .NET MAUI Segmented Control to render segment items in reverse order
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Right To Left Flow Direction in .NET MAUI Segmented control (SfSegmentedControl)
+# Right To Left FlowDirection in .NET MAUI Segmented Control
 
 The [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 

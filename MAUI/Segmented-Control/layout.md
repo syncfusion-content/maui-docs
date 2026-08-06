@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layout in .NET MAUI Segmented Control | Syncfusion
-description: Learn about the Layout support Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
+title: Layout in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about layout support to customize width, height, and the number of visible segments in the .NET MAUI Segmented Control.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Layout in .NET MAUI Segmented control (SfSegmentedControl)
+# Layout in .NET MAUI Segmented Control
 The [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) supports changing the layout width, height and the number of visible segments displayed.
 
 ## Change the segment width
