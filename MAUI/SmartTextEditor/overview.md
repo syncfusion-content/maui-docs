@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Smart Text Editor Control | Syncfusion®
-description: Learn about introduction of Syncfusion® .NET MAUI Smart Text Editor control, its features, key capabilities, and business use cases.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Smart Text Editor control and more details.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
