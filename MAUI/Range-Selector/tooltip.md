@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Tooltip in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to enable and customize tooltips in the Syncfusion® .NET MAUI Range Selector control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Range Selector (SfRangeSelector)
+# Tooltip in .NET MAUI Range Selector
 
 This section helps to learn about how to add tooltip in the Range Selector.
 
