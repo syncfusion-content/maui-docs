@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate Xamarin SfRangeSlider to .NET MAUI SfRangeSlider | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin RangeSlider to Syncfusion® .NET MAUI RangeSlider control and more.
+title: Migration to .NET MAUI Range Slider | Syncfusion®
+description: Learn about migration from Xamarin Range Slider to the .NET MAUI Range Slider control with API comparisons.
 platform: MAUI
 control: SfRangeSlider
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider 
+# Migration from Xamarin Range Slider to .NET MAUI Range Slider
 
 To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to MAUI, use the following two controls.
 
