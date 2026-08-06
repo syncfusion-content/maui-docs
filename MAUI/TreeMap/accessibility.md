@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion®
-description: Learn here about performing actions using accessibility in Syncfusion® .NET MAUI TreeMap (SfTreeMap) control.
+title: Accessibility in .NET MAUI TreeMap | Syncfusion®
+description: Accessibility in .NET MAUI TreeMap provides support for keyboard navigation, screen readers, and assistive technologies, improving usability for all users.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI TreeMap (SfTreeMap)
+# Accessibility in .NET MAUI TreeMap
 
 The .NET MAUI TreeMap (SfTreeMap) control supports keyboard navigation and provides accessible descriptions of its items for assistive technologies such as Narrator and VoiceOver. This topic covers the keyboard shortcuts available in the control and explains how selection behavior interacts with keyboard focus.
 

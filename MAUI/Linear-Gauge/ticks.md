@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ticks in .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn here all about adding and customizing Ticks of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Ticks in .NET MAUI Linear Gauge | Syncfusion®
+description: Ticks in .NET MAUI Linear Gauge indicate scale intervals and measurement points, improving readability and helping interpret gauge values accurately.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Ticks in .NET MAUI Linear Gauge (SfLinearGauge)
+# Ticks in .NET MAUI Linear Gauge
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Linear Gauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 
