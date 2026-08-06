@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI DateTime Range Selector Control | Syncfusion®
+title: About Syncfusion® MAUI DateTime Range Selector Control | Syncfusion®
 description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DateTime Range Selector control and more details.
 platform: maui
 control: SfDateTimeRangeSelector

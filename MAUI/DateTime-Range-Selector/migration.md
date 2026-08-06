@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI DateTime Range Selector | Syncfusion®
+title: Migration to .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn about migration from Xamarin DateTime Range Navigator to the .NET MAUI DateTime Range Selector control.
 platform: maui
 control: SfDateTimeRangeSelector
