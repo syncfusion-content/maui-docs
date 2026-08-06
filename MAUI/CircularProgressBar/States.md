@@ -1,13 +1,13 @@
 ---
 layout: post
-title: States in .NET MAUI Circular Progress Bar | Syncfusion®
-description: Learn all about states support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar (SfCircularProgressBar) control.
+title: States in .NET MAUI Circular ProgressBar | Syncfusion®
+description: Learn about determinate, indeterminate, and buffer states in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# States in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
+# States in .NET MAUI Circular ProgressBar
 
 Configure the states of the circular progress bar control depending on the usage.
 

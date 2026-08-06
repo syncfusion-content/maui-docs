@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segments in .NET MAUI Circular Progress Bar | Syncfusion®
-description: Learn all about segments support in the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar control, its elements, and more.
+title: Segments in .NET MAUI Circular ProgressBar | Syncfusion®
+description: Learn about segmented progress visualization and multiple progress sections in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
+# Segments in .NET MAUI Circular ProgressBar
 
 To visualize the progress of multiple sequential tasks, split the circular progress bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 
