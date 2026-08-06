@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientation in .NET MAUI SfSlider | Syncfusion®
-description: Configure horizontal and vertical orientations for the Syncfusion® .NET MAUI SfSlider, including inversion and layout considerations.
+title: Orientation in .NET MAUI Slider | Syncfusionï¿½
+description: Configure horizontal and vertical orientations for the Syncfusionï¿½ .NET MAUI Slider, including inversion and layout considerations.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Orientation in .NET MAUI SfSlider
+# Orientation in .NET MAUI Slider
 ## Orientation
 
 The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property is `Horizontal`.

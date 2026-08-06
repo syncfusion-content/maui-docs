@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Selection in .NET MAUI SfSlider | Syncfusion®
-description: Learn how to configure value selection in the Syncfusion® .NET MAUI SfSlider, including discrete step selection and deferred updates.
+title: Value Selection in .NET MAUI Slider | SyncfusionÂ®
+description: Learn how to configure value selection in the SyncfusionÂ® .NET MAUI Slider, including discrete step selection and deferred updates.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Value Selection in .NET MAUI SfSlider
+# Value Selection in .NET MAUI Slider
 
 This section helps to learn about the value selection in the Slider.
 

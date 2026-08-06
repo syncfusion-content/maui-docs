@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in .NET MAUI SfSlider | Syncfusion®
-description: Learn how to display and customize labels in the Syncfusion® .NET MAUI SfSlider, including number formats, placement, style, offsets, and disabled-state behavior.
+title: Labels in .NET MAUI Slider | SyncfusionÂ®
+description: Learn how to display and customize labels in the SyncfusionÂ® .NET MAUI Slider, including number formats, placement, style, offsets, and disabled-state behavior.
 platform: maui
 control: SfSlider
 documentation: ug

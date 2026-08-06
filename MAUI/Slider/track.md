@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track in .NET MAUI SfSlider | Syncfusion®
-description: Learn how to customize the track in the Syncfusion® .NET MAUI SfSlider, including color, height, extent, and disabled-state styling.
+title: Track in .NET MAUI Slider | SyncfusionÂ®
+description: Learn how to customize the track in the SyncfusionÂ® .NET MAUI Slider, including color, height, extent, and disabled-state styling.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI SfSlider
+# Track in .NET MAUI Slider
 
 This section helps to learn about how to customize the track in the slider.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI SfSlider | Syncfusion®
-description: Learn how to enable and customize tooltips in the Syncfusion® .NET MAUI SfSlider, including styling, positioning, formatting, and show-always behavior.
+title: Tooltip in .NET MAUI Slider | SyncfusionÂ®
+description: Learn how to enable and customize tooltips in the SyncfusionÂ® .NET MAUI Slider, including styling, positioning, formatting, and show-always behavior.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI SfSlider
+# Tooltip in .NET MAUI Slider
 
 This section helps to learn about how to add tooltip in the slider.
 
