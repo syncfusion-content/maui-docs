@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Cards | Syncfusion®
-description: Learn about properties in Syncfusion® .NET MAUI Cards control. Explore configuration options and API reference.
+description: Learn about properties in Syncfusion® .NET MAUI Cards (SfCards) control. Explore configuration options and API reference.
 platform: maui
 control: SfCardLayout
 documentation: ug

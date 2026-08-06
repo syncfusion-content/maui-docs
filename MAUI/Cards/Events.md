@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Cards | Syncfusion®
-description: Learn about available events in Syncfusion® .NET MAUI Cards control. Explore event handling and interactive features.
+description: Learn about available events in Syncfusion® .NET MAUI Cards (SfCards) control. Explore event handling and interactive features.
 platform: MAUI
 control: Cards
 documentation: ug

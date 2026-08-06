@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BindableLayout in .NET MAUI Cards | Syncfusion®
-description: Learn about BindableLayout support in Syncfusion® .NET MAUI Cards control. Explore data binding and template features.
+description: Learn about BindableLayout support in Syncfusion® .NET MAUI Cards (SfCards) control. Explore data binding and template features.
 platform: MAUI
 control: Cards
 documentation: ug

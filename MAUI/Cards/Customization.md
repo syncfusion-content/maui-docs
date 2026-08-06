@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Cards | Syncfusion®
-description: Discover customization options for Syncfusion® .NET MAUI Cards control. Learn about styling, appearance, and configuration options.
+description: Discover customization options for Syncfusion® .NET MAUI Cards (SfCards) control. Learn about styling, appearance, and configuration options.
 platform: MAUI
 control: Cards
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Effect in .NET MAUI Cards | Syncfusion®
-description: Learn how to enable liquid glass effect in Syncfusion® .NET MAUI Cards control for modern, translucent design with adaptive color tinting.
+description: Learn how to enable liquid glass effect in Syncfusion® .NET MAUI Cards (SfCards) control for modern, translucent design with adaptive color tinting.
 platform: MAUI
 control: SfCardView
 documentation: ug
