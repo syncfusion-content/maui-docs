@@ -7,7 +7,7 @@ control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Overlay Toolbar in .NET MAUI Toolbar
+# Overlay in .NET MAUI Toolbar
 
 The toolbar control supports displaying an overlay toolbar in the view. You can add the [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [OverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button, which can be used to close the overlay toolbar.
 
