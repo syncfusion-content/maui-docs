@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Thumb and Overlay in .NET MAUI DateTime Range Selector | Syncfusion�
+description: Customize thumb and thumb overlay in the Syncfusion .NET MAUI DateTime Range Selector: size, color, stroke, overlap, and overlay styling.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Thumb and Overlay in DateTime Range Selector (SfDateTimeRangeSelector)
+# Thumb and Overlay in .NET MAUI DateTime Range Selector
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Selector.
 

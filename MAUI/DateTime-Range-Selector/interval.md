@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Interval in .NET MAUI DateTime Range Selector | Syncfusion�
+description: Learn how to configure interval values and interval types in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Interval in DateTime Range Selector (SfDateTimeRangeSelector)
+# Interval in .NET MAUI DateTime Range Selector
 
 This section explains how to add the interval in the DateTime Range Selector control.
 
