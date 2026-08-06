@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Labels in .NET MAUI SfSlider
+# Labels in .NET MAUI Slider
 
 This section explains how to add the labels in the slider.
 

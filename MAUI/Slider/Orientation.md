@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Slider | Syncfusion�
-description: Configure horizontal and vertical orientations for the Syncfusion� .NET MAUI Slider, including inversion and layout considerations.
+title: Orientation in .NET MAUI Slider | Syncfusion®
+description: Configure horizontal and vertical orientations for the Syncfusion® .NET MAUI Slider, including inversion and layout considerations.
 platform: maui
 control: SfSlider
 documentation: ug
