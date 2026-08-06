@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Slider control | SyncfusionÂ®
-description: This section explains about the properties and events with SyncfusionÂ® MAUI Slider (SfSlider) control and more.
+title: Properties in .NET MAUI SfSlider | Syncfusion®
+description: Reference for properties, methods, and events of the Syncfusion® .NET MAUI SfSlider, including styling, track, thumb, labels, ticks, and tooltip configuration.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# .NET MAUI Slider API Reference
+# Properties in .NET MAUI SfSlider
 
 ## Properties
 

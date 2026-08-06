@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Slider | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Slider (SfSlider) control.
+title: Liquid Glass Effect in .NET MAUI SfSlider | Syncfusion®
+description: Enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI SfSlider to add a translucent, adaptive glass-like thumb and track styling.
 platform: MAUI
 control: SfSlider
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Slider (SfSlider)
+# Liquid Glass Effect in .NET MAUI SfSlider
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Slider (SfSlider) control.
 

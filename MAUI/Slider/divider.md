@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Slider control | SyncfusionÂ®
-description: Learn here all about adding and customizing the slider divider feature in .NET MAUI Slider (SfSlider) control and more.
+title: Dividers in .NET MAUI SfSlider | Syncfusion®
+description: Learn how to add and customize dividers in the Syncfusion® .NET MAUI SfSlider, including radius, color, stroke, and disabled-state styling.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Dividers in .NET MAUI Slider (SfSlider)
+# Dividers in .NET MAUI SfSlider
 
 This section explains how to add the dividers in the slider.
 

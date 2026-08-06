@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Slider (SfSlider) control and more.
+title: Ticks in .NET MAUI SfSlider | Syncfusion®
+description: Learn how to add and customize major and minor ticks in the Syncfusion® .NET MAUI SfSlider, including size, color, offset, and disabled-state styling.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Tick in .NET MAUI Slider (SfSlider)
+# Ticks in .NET MAUI SfSlider
 
 This section helps to learn about how to add major and minor ticks in the slider.
 

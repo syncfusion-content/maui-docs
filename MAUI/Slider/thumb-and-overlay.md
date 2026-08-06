@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI Slider control | SyncfusionÂ®
-description: Learn here all about the Thumb and Thumb Overlay features of SyncfusionÂ® .NET MAUI Slider (SfSlider) control and more.
+title: Thumb and Overlay in .NET MAUI SfSlider | Syncfusion®
+description: Learn how to customize the thumb and thumb overlay in the Syncfusion® .NET MAUI SfSlider, including size, color, stroke, overlay radius, and disabled-state styling.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Thumb and Overlay in .NET MAUI Slider (SfSlider)
+# Thumb and Overlay in .NET MAUI SfSlider
 
 This section helps to learn about how to customize the thumb and thumb overlay in the slider.
 

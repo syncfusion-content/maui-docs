@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in.NET MAUI Slider control | SyncfusionÂ®
-description: Learn here all about adding the Interval feature of SyncfusionÂ® .NET MAUI Slider (SfSlider) control and more.
+title: Interval in .NET MAUI SfSlider | Syncfusion®
+description: Learn how to configure numeric and auto intervals in the Syncfusion® .NET MAUI SfSlider to control when labels, ticks, and dividers are rendered and how they are calculated.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Interval in .NET MAUI Slider (SfSlider)
+# Interval in .NET MAUI SfSlider
 
 This section explains how to add the interval for numeric slider.
 
