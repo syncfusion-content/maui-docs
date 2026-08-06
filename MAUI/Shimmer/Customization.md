@@ -37,7 +37,7 @@ The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="4"%}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
