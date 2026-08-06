@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn about determinate, indeterminate, and buffer states in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
+description: Learn about determinate and indeterminate states in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug

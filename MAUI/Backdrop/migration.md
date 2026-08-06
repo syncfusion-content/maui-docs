@@ -7,7 +7,7 @@ control: SfBackdropPage
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfBackdropPage to .NET MAUI SfBackdropPage
+# Migration from Xamarin Backdrop Page to .NET MAUI Backdrop Page
 
 To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-ui-controls/xamarin-backdrop) to [.NET MAUI SfBackdropPage](https://www.syncfusion.com/maui-controls/maui-backdrop) easier, most of the APIs from the Xamarin SfBackdropPage were kept in the .NET MAUI SfBackdropPage.
 
