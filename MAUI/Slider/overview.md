@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Slider Control | Syncfusion®
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Slider control and more details.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Slider control and more details.  
 platform: maui
 control: SfSlider
 documentation: ug
