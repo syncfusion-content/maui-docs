@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Badge View control | Syncfusion®
-description: This section explains the properties with Syncfusion® MAUI Badge View (SfBadgeView) control.
+description: This section explains the properties with Syncfusion<sup>&reg;</sup> MAUI Badge View (SfBadgeView) control.
 platform: MAUI
 control: SfBadgeView
 documentation: ug

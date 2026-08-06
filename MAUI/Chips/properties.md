@@ -64,9 +64,9 @@ documentation: ug
     </tr>
 </table>
 
-# Chip Group
+## Chip Group
 
-## Properties
+### Properties
 
 <table>
     <tr>
@@ -221,7 +221,7 @@ documentation: ug
     </tr>
 </table>
 
-## Events
+### Events
 
 <table>
     <tr>
