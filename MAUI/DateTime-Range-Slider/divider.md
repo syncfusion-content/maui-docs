@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Slider control | SyncfusionÂ®
-description: Learn here all about the Dividers feature of .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Dividers in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to show and customize dividers in the .NET MAUI DateTime Range Slider, covering radius, stroke, fill colors, and disabled visual states.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Dividers in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Dividers in .NET MAUI DateTime Range Slider
 
 This section explains how to add the dividers in the DateTime Range Slider.
 
