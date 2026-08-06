@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom View in .NET MAUI Shimmer | Syncfusion®
-description: Learn about custom view support in Syncfusion® .NET MAUI Shimmer control to create shimmer effects using custom layouts and framework elements.
+description: Learn about custom view support in Syncfusion® .NET MAUI Shimmer (SfShimmer) control to create shimmer effects using custom layouts and framework elements.
 platform: maui
 control: SfShimmer
 documentation: ug

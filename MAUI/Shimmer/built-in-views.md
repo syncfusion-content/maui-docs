@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Built-in Views in .NET MAUI Shimmer | Syncfusion®
-description: Learn about built-in shimmer view types in Syncfusion® .NET MAUI Shimmer control for creating predefined loading placeholder layouts.
+description: Learn about built-in shimmer view types in Syncfusion® .NET MAUI Shimmer (SfShimmer) control for creating predefined loading placeholder layouts.
 platform: maui
 control: SfShimmer
 documentation: ug

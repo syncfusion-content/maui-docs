@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Shimmer | Syncfusion®
-description: Learn about customization options in Syncfusion® .NET MAUI Shimmer control including fill color, wave color, wave direction, and animation duration.
+description: Learn about customization options in Syncfusion® .NET MAUI Shimmer (SfShimmer) control including fill color, wave color, wave direction, and animation duration.
 platform: maui
 control: SfShimmer
 documentation: ug
