@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Migration to .NET MAUI DataForm 
+# Migrate from Xamarin to .NET MAUI DataForm 
 
 To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/xamarin-dataform) to the [.NET MAUI SfDataForm](https://www.syncfusion.com/maui-controls/maui-dataform) easier, most of the APIs from the `Xamarin SfDataForm` were kept in the `.NET MAUI SfDataForm`. However, to maintain the consistency of API naming in the `.NET MAUI SfDataForm`, some of the APIs have been renamed. Please find the difference in the following topics.
 

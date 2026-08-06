@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# DataForm Settings in .NET MAUI
+# Data Editor Settings in .NET MAUI DataForm
 
 ## Auto generate data editor 
 
