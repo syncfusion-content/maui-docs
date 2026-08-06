@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Avatar View Control | Syncfusion®
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Avatar control and more details.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Avatar View control and more details.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
