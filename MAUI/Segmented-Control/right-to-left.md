@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right-to-Left in .NET MAUI Segmented Control | Syncfusion®
-description: Learn about right-to-left (RTL) flow direction support in Syncfusion® .NET MAUI Segmented Control to render segment items in reverse order
+description: Learn about right-to-left (RTL) flow direction support in Syncfusion® .NET MAUI Segmented Control to render segment items in reverse order.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
