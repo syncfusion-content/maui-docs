@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI CheckBox Control | Syncfusion®
-description: Learn about Customization support in Syncfusion® Essential Studio® .NET MAUI CheckBox control, its elements, and more.
+title: Customization in .NET MAUI CheckBox | Syncfusion®
+description: Learn about customization support in Syncfusion® Essential Studio .NET MAUI CheckBox control, its elements, and more.
 platform: MAUI
 control: SfCheckBox
 documentation: UG
 ---
 
-# Visual Customization in .NET MAUI CheckBox (SfCheckBox)
+# Visual Customization in .NET MAUI CheckBox
 
 This section covers the visual properties of [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) and how to customize them.
 

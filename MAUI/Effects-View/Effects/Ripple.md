@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Ripple Effect | Effects View Control | Syncfusion®
+title: Ripple Effect in .NET MAUI Effects View | Syncfusion®
 description: Learn about the ripple effect in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Ripple Effect in .NET MAUI Effects View (SfEffectsView)
+# Ripple Effect in .NET MAUI Effects View
 
 The [SfEffects.Ripple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Ripple) is an expandable circle that originates at the touch point and grows until the entire `Effects View` is filled. Use it to provide Material-style touch feedback on any view.
 

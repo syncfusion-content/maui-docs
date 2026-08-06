@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context Menu in .NET MAUI Scheduler | Syncfusion®
-description: Learn how to use the built-in context menu in the Syncfusion® .NET MAUI Scheduler to perform actions on appointments, cells, and other elements.
+title: Context Menu in .NET MAUI Scheduler control | Syncfusion®
+description: Use context menus for quick access to actions on appointments, cells, and elements in the .NET MAUI Scheduler control.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui scheduler context menu, .net maui scheduler right click menu, .net maui scheduler appointment context menu, .net maui scheduler cell context menu, .net maui scheduler menu actions, maui scheduler context menu.
 ---
 
-# Context Menu in .NET MAUI Scheduler (SfScheduler)
+# Context Menu in .NET MAUI Scheduler
 
 The .NET MAUI Scheduler supports context menus for timeslot cells, month cells, all-day panels, and appointments. These context menus provide quick access to common actions such as creating, editing, or deleting appointments. The Scheduler provides built-in commands that can be assigned to context menu items.
 

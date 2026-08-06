@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in .NET MAUI Color Picker Control | Syncfusion®
-description: Learn about event support in the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control, its elements, and more.
+title: Events in .NET MAUI Color Picker | Syncfusion®
+description: Learn about events and commands support in the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control.
 platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, color palette, spectrum, palette.
 ---
 
-# Events and Commands in .NET MAUI Color Picker (SfColorPicker)
+# Events and Commands in .NET MAUI Color Picker
 
 The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three events and one command that let you respond to color selection changes from XAML, code-behind, or a view model:
 

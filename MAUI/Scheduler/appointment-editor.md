@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointment Editor in .NET MAUI Scheduler | Syncfusion®
-description: Learn to use the built-in appointment editor in the Syncfusion® .NET MAUI Scheduler to create, edit, and delete appointments using an interactive popup.
+title: Appointment Editor in .NET MAUI Scheduler control | Syncfusion®
+description: Use the built-in appointment editor popup to create, edit, and delete appointments with customization options in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler, .net maui scheduler appointment editor, net maui appointment editing, .net maui create appointments, .net maui edit appointments, .net maui delete appointments, maui scheduler editor.
 ---
 
-# Appointment Editor in .NET MAUI Scheduler (SfScheduler)
+# Appointment Editor in .NET MAUI Scheduler
 
 The Appointment Editor is a popup dialog used for adding, editing, or deleting appointments in the Scheduler. It provides fields for entering detailed event information, along with options for color customization, recurrence configuration, and timezone selection. The editor can be opened by double‑tapping a time slot or an existing appointment.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization with .NET MAUI SignaturePad control | Syncfusion®
-description: Learn here about customization with .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
+title: Customization in .NET MAUI Signature Pad | Syncfusion®
+description: Learn here about customization with .NET MAUI Signature Pad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Customization of SignaturePad
+# Customization in .NET MAUI Signature Pad
 
 This section explains how to customize the appearance of the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control. The following aspects of the SignaturePad can be customized:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support in .NET MAUI Radial Menu | Syncfusion®
-description: Learn how to enable the Liquid Glass visual effect on Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) and customize its appearance.
+title: Liquid Glass Effect in .NET MAUI Radial Menu | Syncfusion®
+description: Learn how to enable the Liquid Glass visual effect on Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# Liquid Glass Support in .NET MAUI Radial Menu (SfRadialMenu)
+# Liquid Glass Effect in .NET MAUI Radial Menu
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible while maintaining readable contrast. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control.
 

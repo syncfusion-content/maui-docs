@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Restrictions in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about Date restrictions feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
+title: Date Restrictions in .NET MAUI Calendar control | Syncfusion®
+description: Learn about date restrictions in Syncfusion .NET MAUI Calendar control to disable and manage selectable date ranges.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Date Restrictions in .NET MAUI Calendar (SfCalendar)
+# Date Restrictions in .NET MAUI Calendar control
 
 ## Minimum date
 The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot swipe beyond the minimum date range.

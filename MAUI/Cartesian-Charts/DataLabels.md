@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Cartesian Chart control | Syncfusion
-description: This section explains how to configure the data labels and their features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+title: Data Labels in .NET MAUI Cartesian Chart | Syncfusion®
+description: Data Labels in .NET MAUI Cartesian Chart display values directly on data points, improving readability and helping interpret chart data effectively.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart data label, maui chart data label, .net maui data label customization, syncfusion maui chart data label, cartesian data label maui, .net maui chart data label visualization, .net maui chart value label.
 ---
 
-# Data labels in .NET MAUI Cartesian Chart
+# Data Labels in .NET MAUI Cartesian Chart
 
 Data labels are used to display values related to a chart segment. Values from data point(x, y) or other custom properties from a data source can be displayed. 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI Switch Control | Syncfusion®
+title: Customization in .NET MAUI Switch | Syncfusion®
 description: Learn about the customization support in the Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
 platform: MAUI
 control: SfSwitch
@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch customize, maui switch customize, maui switch color, maui switch size, maui switch icon.  
 ---
 
-# Customization in .NET MAUI Switch (SfSwitch)
+# Customization in .NET MAUI Switch
 
 The [.NET MAUI Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control provides options to customize its appearance, including color, sizing, and the thumb icon, across the `On`, `Off`, and `Indeterminate` states. This section describe how to customize the .NET MAUI Switch control.
 

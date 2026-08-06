@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about introduction of Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+title: About Syncfusion .NET MAUI Kanban Board control | Syncfusion
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Kanban Board control and more details.
 platform: maui
 control: Kanban
 documentation: ug
 ---
 
-# Overview of .NET MAUI Kanban Board
+# About Syncfusion .NET MAUI Kanban Board control
 
 The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/maui-controls/maui-kanban) control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at every stage of completion. It facilitates effective planning and provides a clear visualization of work progress.
 

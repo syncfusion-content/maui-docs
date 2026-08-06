@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bar Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about bar chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Bar Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Bar Chart in .NET MAUI Cartesian Chart displays data using horizontal bars, making it easy to compare values across different categories.
 platform: maui
 control: SfCartesianChart
 documentation: ug

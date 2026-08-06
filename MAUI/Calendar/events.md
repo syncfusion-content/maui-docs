@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Events in .NET MAUI Calendar control | Syncfusion®
-description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more details.
+description: Learn about events in Syncfusion .NET MAUI Calendar control including ViewChanged, SelectionChanged, and gesture events.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Events in .NET MAUI Calendar (SfCalendar)
+# Events in .NET MAUI Calendar control
 
 The Calendar has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 

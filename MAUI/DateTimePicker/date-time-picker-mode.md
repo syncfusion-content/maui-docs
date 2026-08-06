@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mode in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about date time picker mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Mode in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about mode in Syncfusion .NET MAUI Date Time Picker control with Default, Dialog, and RelativeDialog options.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Date Time picker mode in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Mode in .NET MAUI Date Time Picker control
 
 The [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property controls how the Date Time Picker is displayed. It offers three values: [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Default), [Dialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog), and [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). The default picker mode in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) is `Default`.
 

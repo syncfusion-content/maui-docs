@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CenterButton Customization in .NET MAUI Radial Menu | Syncfusion®
+title: Center Button Customization in .NET MAUI Radial Menu | Syncfusion®
 description: Learn about center button customization support in Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# CenterButton Customization in .NET MAUI Radial Menu (SfRadialMenu)
+# Center Button Customization in .NET MAUI Radial Menu
 
 The center button (or back button) in the Radial Menu is the view at the center of the menu. It performs operations such as opening and closing the menu and navigating to the next-level items. You can customize the center button / back button with a `FontIcon`, a `Custom View`, and a text `Caption`.
 

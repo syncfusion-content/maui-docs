@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Chips control | Syncfusion®
-description: Learn about events in Syncfusion® .NET MAUI SfChipGroup and SfChip controls, including selection, click, remove, and close actions.
+title: Events in .NET MAUI Chips | Syncfusion®
+description: Learn about events in Syncfusion® .NET MAUI Chips control, including selection, click, remove, and close actions.
 platform: maui
 control: Chips
 documentation: ug

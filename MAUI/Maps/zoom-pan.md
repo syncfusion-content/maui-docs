@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zooming and Panning in .NET MAUI Maps Control | Syncfusion
-description: Learn here all about the Zooming and Panning feature of the Syncfusion® .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+title: Zooming and Panning in .NET MAUI Maps | Syncfusion®
+description: Zooming and Panning in .NET MAUI Maps enable interactive navigation across map content, making it easier to explore and analyze geographic data.
 platform: MAUI
 control: SfMaps
 documentation: ug

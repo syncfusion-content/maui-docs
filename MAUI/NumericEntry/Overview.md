@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Numeric Entry Control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control, its features, and more.
+title: About Syncfusion® .NET MAUI Numeric Entry Control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® Essential Studio .NET MAUI Numeric Entry (SfNumericEntry) control, its features, and more.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
 ---
 
-# Overview of .NET MAUI Numeric Entry
+# About Syncfusion® .NET MAUI Numeric Entry Control
 
 The Syncfusion® [.NET MAUI Numeric Entry](https://www.syncfusion.com/maui-controls/maui-numeric-entry) control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentages, decimals, and more. With its key features, it enables enhanced user experience and facilitates input validation.
 

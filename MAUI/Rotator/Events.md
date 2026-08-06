@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Rotator control | Syncfusion®
+title: Events in .NET MAUI Rotator | Syncfusion®
 description: Learn about Events support in Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements, and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Events in .NET MAUI Rotator (SfRotator)
+# Events in .NET MAUI Rotator
 
 The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
 

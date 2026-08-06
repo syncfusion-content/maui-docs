@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add a Custom View to a .NET MAUI Button | Syncfusion®
-description: Learn how to add and customize a custom view within the Syncfusion® .NET MAUI Button (SfButton) control for richer UI experiences.
+title: How to Add a Custom View in .NET MAUI Button | Syncfusion®
+description: Learn how to add and customize a custom view within the Syncfusion® .NET MAUI Button control for richer UI experiences.
 platform: maui
 control: SfButton
 documentation: ug
 ---
 
-# Add a Custom View to a Button (SfButton)
+# How to Add a Custom View in .NET MAUI Button
 
 You can customize the appearance of the [.NET MAUI Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) with any custom view by setting the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Content) property. This is useful for adding spinners, icons, or any composite layout inside the button.
 

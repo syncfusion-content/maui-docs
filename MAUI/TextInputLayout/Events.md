@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui textinputlayout events, syncfusion text input layout password toggled maui, sftextinputlayout passwordvisibilitytoggled maui, .net maui text input layout eventargs, sftextinputlayout ispasswordvisible maui
 ---
 
-# Events in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Events in .NET MAUI Text Input Layout
 
 [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `Text Input Layout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [.NET MAUI Entry documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
 

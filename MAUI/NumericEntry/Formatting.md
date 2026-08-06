@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change Number Format in .NET MAUI NumericEntry | Syncfusion®
-description: Learn how to change the number format of the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
+title: Value Formatting in .NET MAUI Numeric Entry | Syncfusion®
+description: Learn how to change the number format of the Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control.
 platform: maui
 control: SfNumericEntry
 documentation: ug
 ---
 
-# Value Formatting with .NET MAUI Numeric Entry
+# Value Formatting in .NET MAUI Numeric Entry
 
 This section explains how to change the value format of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat) property and the related formatting options (`Culture`, `PercentDisplayMode`, `MaximumNumberDecimalDigits`).
 

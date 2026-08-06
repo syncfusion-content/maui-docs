@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populating Items with .NET MAUI Picker Control | Syncfusion®
-description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
+title: Populating Items in .NET MAUI Picker control | Syncfusion®
+description: Learn about populating items in Syncfusion .NET MAUI Picker control with data binding and item sources.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Populating Items in .NET MAUI Picker (SfPicker)
+# Populating Items in .NET MAUI Picker control
 
 In .NET MAUI, you can bind the SfPicker control to an external data source by setting its `ItemsSource` property to an `ObservableCollection`. This enables the picker to display and update data from the collection.
 

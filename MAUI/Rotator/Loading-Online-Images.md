@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Loading Online Images in .NET MAUI Rotator control | Syncfusion®
-description: Learn about Loading Online Images support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+title: Loading Online Images in .NET MAUI Rotator | Syncfusion®
+description: Learn about loading online images support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Loading Online Images in .NET MAUI Rotator (SfRotator)
+# Loading Online Images in .NET MAUI Rotator
 
 The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or clear text traffic on Android).
 

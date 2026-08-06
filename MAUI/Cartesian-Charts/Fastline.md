@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fast Line Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about the fast line chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Fast Line Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Fast Line Chart in .NET MAUI Cartesian Chart renders large data sets efficiently, delivering high-performance visualization for real-time and continuous data.
 platform: maui
 control: SfCartesianChart
 documentation: ug

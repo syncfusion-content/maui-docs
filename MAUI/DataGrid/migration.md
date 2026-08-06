@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migrate from Xamarin SfDataGrid to .NET MAUI SfDataGrid | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin SfDataGrid to Syncfusion® .NET MAUI SfDataGrid control and more.
+title: Migrate from Xamarin DataGrid to .NET MAUI DataGrid | Syncfusion®
+description: Learn how to migrate from Syncfusion® Xamarin DataGrid to Syncfusion® .NET MAUI DataGrid, including API changes, feature mapping, and migration guidance.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 --- 
 
-# Migrate from Xamarin.Forms SfDataGrid to .NET MAUI SfDataGrid
+# Migrate from Xamarin.Forms DataGrid to .NET MAUI DataGrid
 
 To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datagrid) to [.NET MAUI SfDataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) easier, we kept most of the APIs from Xamarin SfDataGrid in MAUI SfDataGrid. However, to maintain the consistency of API naming in MAUI SfDataGrid, we renamed some of the APIs. The APIs that have been changed in MAUI SfDataGrid from Xamarin SfDataGrid are detailed as follows.
 

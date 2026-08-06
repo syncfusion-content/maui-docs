@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appointment Resizing in .NET MAUI Scheduler | Syncfusion®
-description: Learn how to resize appointments in the Syncfusion® .NET MAUI Scheduler, change duration interactively, and customize behavior with settings and events.
+title: Appointment Resizing in .NET MAUI Scheduler control | Syncfusion®
+description: Resize appointments interactively by dragging edges to adjust start and end times in the .NET MAUI Scheduler.
 platform: maui
 control: SfScheduler
 documentation: ug
 keywords : .net maui scheduler appointments, .net maui appointment resizing, .net maui scheduler appointment duration, .net maui scheduler resize events, .net maui scheduler resize appointment.
 ---
 
-# Appointment Resizing in .NET MAUI SfScheduler
+# Appointment Resizing in .NET MAUI Scheduler
 
 Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week, All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the [AllowAppointmentResize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowAppointmentResize) property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
 

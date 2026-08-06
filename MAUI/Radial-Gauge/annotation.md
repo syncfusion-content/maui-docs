@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about Annotation feature of Syncfusion® .NET MAUI Radial Gauge control with positioning support and more.
+title: Annotation in .NET MAUI Radial Gauge | Syncfusion®
+description: Annotation in .NET MAUI Radial Gauge displays custom content within the gauge, enabling additional information and enhanced visual presentation.
 platform: maui
 control: SfRadialGauge
 documentation: ug

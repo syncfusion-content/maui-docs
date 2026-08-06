@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Radial Menu Control | Syncfusion®
+title: Events in .NET MAUI Radial Menu | Syncfusion®
 description: Learn about Events in Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control, its elements and more.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
 ---
 
-# Events in .NET MAUI Radial Menu (SfRadialMenu)
+# Events in .NET MAUI Radial Menu
 
 `.NET MAUI Radial Menu` raises a set of events that you can subscribe to in order to react to user interaction, navigation, and life cycle changes. This document describes each event, the arguments it provides, and shows how to wire it up in both XAML and C#.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Markdown Viewer control | Syncfusion®
+title: Getting Started with .NET MAUI Markdown Viewer | Syncfusion®
 description: Learn how to get started with Syncfusion® .NET MAUI Markdown Viewer control and explore its capabilities for rendering Markdown content.
 platform: MAUI
 control: SfMarkdownViewer
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui markdownviewer, syncfusion markdownviewer maui, markdown viewer .net maui, .net maui markdown rendering, sfmarkdownviewer example maui, .net maui markdown control, markdown content .net maui, markdown rendering .net maui
 ---
 
-# Getting Started with .NET MAUI Markdown Viewer (SfMarkdownViewer)
+# Getting Started with .NET MAUI Markdown Viewer
 
 This guide details the initial setup and basic usage of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control, offering insight into its ability to render Markdown content with various formatting capabilities across mobile and desktop platforms.
 

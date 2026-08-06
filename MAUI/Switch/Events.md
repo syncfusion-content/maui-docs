@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Switch Control | Syncfusion®
+title: Events in .NET MAUI Switch | Syncfusion®
 description: Learn about the events available in the Syncfusion® .NET MAUI Switch (SfSwitch) control and their arguments.
 platform: MAUI
 control: SfSwitch

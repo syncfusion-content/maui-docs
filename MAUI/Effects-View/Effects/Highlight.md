@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Highlight Effect | Effects View Control | Syncfusion®
+title: Highlight Effect in .NET MAUI Effects View | Syncfusion®
 description: Learn about the highlight effect support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Highlight Effect in .NET MAUI Effects View (SfEffectsView)
+# Highlight Effect in .NET MAUI Effects View
 
 The [SfEffects.Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Highlight) effect applies a smooth color transition to the background of the `Effects View` when the user touches the view. Use it to give users visual feedback for taps, long presses, and other interactions.
 

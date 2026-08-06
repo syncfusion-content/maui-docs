@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Validation in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn about the validation support in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control, including ValidationMode and HasError.
+title: Validation in .NET MAUI Masked Entry | Syncfusion®
+description: Learn about the validation support in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
