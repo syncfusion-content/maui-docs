@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Attachment Preview in .NET MAUI AI AssistView | Syncfusion®
+title: Attachment Preview in .NET MAUI AI AssistView | Syncfusion®
 description: Learn how to work with attachments in Syncfusion® .NET MAUI AI AssistView. It supports data operations, UI customization, and enterprise features.
 platform: MAUI
 control: SfAIAssistView
