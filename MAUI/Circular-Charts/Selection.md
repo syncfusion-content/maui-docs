@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI Circular Chart control | Syncfusion
-description: This section explains about how to configure the selection support and its features applying in .NET MAUI Circular Chart (SfCircularChart).
+title: Selection in .NET MAUI Circular Chart | Syncfusion®
+description: Selection in .NET MAUI Circular Chart allows users to highlight and interact with specific chart segments, improving data analysis and user engagement.
 platform: maui
 control: SfCircularChart
 documentation: ug

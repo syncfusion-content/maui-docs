@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Cartesian Chart (SfCartesianChart), its elements and more.
+title: Appearance in .NET MAUI Cartesian Chart | Syncfusion®
+description: Appearance in .NET MAUI Cartesian Chart allows customization of chart visuals using colors, palettes and styling options.
 platform: maui
 control: SfCartesianChart
 documentation: ug

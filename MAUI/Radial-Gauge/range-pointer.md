@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range Pointer in .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about the Range Pointer feature of Syncfusion® .NET MAUI Radial Gauge control with customization support.
+title: Range Pointer in .NET MAUI Radial Gauge | Syncfusion®
+description: Range Pointer in .NET MAUI Radial Gauge highlights values using a filled arc along the gauge axis, enabling clear progress tracking and value visualization.
 platform: maui
 control: SfRadialGauge
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI TreeMap (SfTreeMap) Control | Syncfusion®
-description: Learn here all about the Events support in the Syncfusion® .NET MAUI TreeMap (SfTreeMap) control and more.
+title: Events in .NET MAUI TreeMap | Syncfusion®
+description: Events in .NET MAUI TreeMap provide notifications for user interactions and control actions, enabling customized behavior and interactive experiences.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Events in .NET MAUI TreeMap (SfTreeMap)
+# Events in .NET MAUI TreeMap
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **TreeMap** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/treemap/getting-started)** guide.
 

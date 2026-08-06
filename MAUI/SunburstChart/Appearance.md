@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn here all about Sunburst Chart appearance customization in Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control.
+title: Appearance in .NET MAUI Sunburst Chart | Syncfusion®
+description: Appearance in .NET MAUI Sunburst Chart allows customization of chart visuals using colors, palettes and styling options.
 platform: maui
 control: SfSunburstChart
 documentation: ug
