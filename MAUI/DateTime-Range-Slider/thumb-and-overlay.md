@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI DateTime Range Slider | Syncfusion®
+title: Thumb and Overlay in .NET MAUI DateTime Range Slider | SyncfusionÂ®
 description: Learn how to customize the thumb and thumb overlay in the .NET MAUI DateTime Range Slider, including size, color, stroke, and disabled states.
 platform: maui
 control: SfDateTimeRangeSlider
@@ -22,11 +22,11 @@ Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Radius="15" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -43,7 +43,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Radius = 15;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -58,11 +58,11 @@ Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Fill="#EE3F3F" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -79,7 +79,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -94,11 +94,11 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -116,7 +116,7 @@ rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.ThumbStyle.StrokeThickness = 2;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -131,11 +131,11 @@ Change the thumb stroke color while two thumbs overlap by using the [`OverlapStr
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-  
+
   <sliders:SfDateTimeRangeSlider.ThumbStyle>
       <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
   </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -152,7 +152,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -167,11 +167,11 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
       <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
@@ -188,7 +188,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Radius = 18;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -203,11 +203,11 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
       <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
@@ -224,7 +224,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
