@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Slider control | Syncfusion® 
-description: Learn here all about adding and customizing through events and commands of Syncfusion® .NET MAUI Slider (SfSlider) control and more.
+title: Events and Commands in .NET MAUI Slider | Syncfusion®
+description: Learn how to use events and commands in the Syncfusion® .NET MAUI Slider to handle value changes, customize labels, and execute drag commands.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Events and Commands in .NET MAUI Slider (SfSlider)
+# Events and Commands in .NET MAUI Slider
 
 This section explains how to add the events and commands for slider.
 
