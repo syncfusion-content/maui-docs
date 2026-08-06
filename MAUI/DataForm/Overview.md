@@ -2,7 +2,6 @@
 layout: post
 title: About Syncfusion® .NET MAUI DataForm Control | Syncfusion®
 description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DataForm control and more details.
-title: Overview of .NET MAUI DataForm control | Syncfusion
 platform: maui
 control: SfDataForm
 documentation: ug
