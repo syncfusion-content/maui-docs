@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interval in .NET MAUI DateTime Range Selector | Syncfusion®
+title: Interval in .NET MAUI DateTime Range Selector | SyncfusionÂ®
 description: Learn how to configure interval values and interval types in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -23,26 +23,26 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
-                                     Maximum="2005-01-01"  
-                                     RangeStart="2001-01-01" 
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01"
+                                     Maximum="2005-01-01"
+                                     RangeStart="2001-01-01"
                                      RangeEnd="2004-01-01"
                                      Interval="1"
-                                     IntervalType="Years" 
-                                     DateFormat="yyyy"  
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
+                                     IntervalType="Years"
+                                     DateFormat="yyyy"
+                                     ShowLabels="True"
+                                     ShowTicks="True"
                                      ShowDividers="True">
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -53,8 +53,8 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSelector.RangeStart = new DateTime(2001, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
 rangeSelector.Interval = 1;
 rangeSelector.IntervalType = SliderDateIntervalType.Years;
 rangeSelector.DateFormat = "yyyy";
@@ -63,7 +63,7 @@ rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -72,7 +72,7 @@ rangeSelector.Content = chart;
 
 ## Auto interval
 
-If the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) or [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels), or [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) properties are `True`, but the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `0`, the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) will be calculated from the available size. If the [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) properties are not set, their values too will be calculated. 
+If the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) or [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels), or [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) properties are `True`, but the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `0`, the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) will be calculated from the available size. If the [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) properties are not set, their values too will be calculated.
 
 For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2000, 01, 01)`, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2001, 01, 01)`, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `0`, and consider the available size as 350, then the Range Selector will render the labels, major ticks, and dividers at `Jan 01, 2000`, `Jul 01, 2000`, and `Nov 01, 2000` respectively.
 
@@ -80,23 +80,23 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
-                                     Maximum="2005-01-01"  
-                                     RangeStart="2001-01-01" 
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01"
+                                     Maximum="2005-01-01"
+                                     RangeStart="2001-01-01"
                                      RangeEnd="2004-01-01"
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
+                                     ShowLabels="True"
+                                     ShowTicks="True"
                                      ShowDividers="True">
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -107,14 +107,14 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSelector.RangeStart = new DateTime(2001, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}

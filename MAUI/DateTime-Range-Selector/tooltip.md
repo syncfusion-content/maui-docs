@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI DateTime Range Selector | Syncfusion®
+title: Tooltip in .NET MAUI DateTime Range Selector | SyncfusionÂ®
 description: Learn how to enable and customize tooltip appearance in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -13,30 +13,30 @@ This section helps to learn how to add the tooltip in the DateTime Range Selecto
 
 ## Enable tooltip
 
-Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to indicate the current selection of the value during the interaction. By default, the tooltip text is formatted with either numberFormat or dateFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`. 
+Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to indicate the current selection of the value during the interaction. By default, the tooltip text is formatted with either numberFormat or dateFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01">
-         
+
          <sliders:SfDateTimeRangeSelector.Tooltip>
             <sliders:SliderTooltip />
          </sliders:SfDateTimeRangeSelector.Tooltip>
-     
+
      <charts:SfCartesianChart>
          ...
      </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -67,24 +67,24 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01">
-         
+
          <sliders:SfDateTimeRangeSelector.Tooltip>
             <sliders:SliderTooltip ShowAlways="True"/>
          </sliders:SfDateTimeRangeSelector.Tooltip>
-     
+
      <charts:SfCartesianChart>
          ...
      </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -118,16 +118,16 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01">
-         
+
          <sliders:SfDateTimeRangeSelector.Tooltip>
             <sliders:SliderTooltip Fill="#DFD8F7"
                                    Stroke="#512BD4"
@@ -137,11 +137,11 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
                                    FontAttributes="Bold"
                                    Padding="12,12" />
          </sliders:SfDateTimeRangeSelector.Tooltip>
-        
+
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 

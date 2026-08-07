@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range selection in .NET MAUI DateTime Range Selector | Syncfusion®
+title: Range selection in .NET MAUI DateTime Range Selector | SyncfusionÂ®
 description: Learn how to manage range selection behavior in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -21,27 +21,27 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
-                                     Maximum="2005-01-01" 
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01"
+                                     Maximum="2005-01-01"
                                      RangeStart="2001-01-01"
                                      RangeEnd="2004-01-01"
                                      Interval="1"
                                      IntervalType="Years"
-                                     DateFormat="yyyy"  
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
+                                     DateFormat="yyyy"
+                                     ShowLabels="True"
+                                     ShowTicks="True"
                                      ShowDividers="True"
                                      StepDuration="1">
-        
+
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -52,18 +52,18 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
+rangeSelector.RangeStart = new DateTime(2001, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
 rangeSelector.Interval = 1;
 rangeSelector.IntervalType = SliderDateIntervalType.Years;
-rangeSelector.DateFormat = "yyyy";    
+rangeSelector.DateFormat = "yyyy";
 rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;      
-rangeSelector.ShowDividers = true;    
+rangeSelector.ShowTicks = true;
+rangeSelector.ShowDividers = true;
 rangeSelector.StepDuration = new SliderStepDuration(years: 1);
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -78,16 +78,16 @@ Both the thumbs are moved to the selected interval if the [EnableIntervalSelecti
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01"
-                                     Interval="2" 
+                                     Interval="2"
                                      ShowTicks="True"
                                      ShowLabels="True"
                                      EnableIntervalSelection="True">
@@ -95,7 +95,7 @@ Both the thumbs are moved to the selected interval if the [EnableIntervalSelecti
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -107,13 +107,13 @@ SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);       
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;    
+rangeSelector.ShowTicks = true;
 rangeSelector.EnableIntervalSelection = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -130,7 +130,7 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -161,9 +161,9 @@ rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2; 
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
-rangeSelector.ShowLabels = true;  
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.OnThumb;
 SfCartesianChart chart = new SfCartesianChart();
@@ -181,16 +181,16 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01"
-                                     Interval="2" 
+                                     Interval="2"
                                      ShowTicks="True"
                                      ShowLabels="True"
                                      EdgeLabelsPlacement="Inside"
@@ -212,9 +212,9 @@ rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2; 
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
-rangeSelector.ShowLabels = true;   
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.BetweenThumbs;
 SfCartesianChart chart = new SfCartesianChart();
@@ -232,16 +232,16 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01"
-                                     Interval="2" 
+                                     Interval="2"
                                      ShowTicks="True"
                                      ShowLabels="True"
                                      EdgeLabelsPlacement="Inside"
@@ -263,9 +263,9 @@ rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2; 
-rangeSelector.ShowTicks = true; 
-rangeSelector.ShowLabels = true;  
+rangeSelector.Interval = 2;
+rangeSelector.ShowTicks = true;
+rangeSelector.ShowLabels = true;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.Both;
 SfCartesianChart chart = new SfCartesianChart();
@@ -287,16 +287,16 @@ It invokes the `ValueChanging` event when the thumb is dragged and held for the 
 
 {% highlight xaml %}
 
-<ContentPage 
+<ContentPage
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2018-01-01"
+                                     RangeStart="2012-01-01"
                                      RangeEnd="2016-01-01"
-                                     Interval="2" 
+                                     Interval="2"
                                      ShowTicks="True"
                                      ShowLabels="True"
                                      EnableDeferredUpdate="True"
@@ -305,7 +305,7 @@ It invokes the `ValueChanging` event when the thumb is dragged and held for the 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -317,15 +317,15 @@ SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);   
-rangeSelector.Interval = 2;    
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;    
+rangeSelector.ShowTicks = true;
 rangeSelector.EnableDeferredUpdate = true;
 rangeSelector.DeferredUpdateDelay = 1000;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-         
+
 {% endhighlight %}
 
 {% endtabs %}
