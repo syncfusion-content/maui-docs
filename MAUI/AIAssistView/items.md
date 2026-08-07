@@ -500,9 +500,6 @@ using System.ComponentModel;
 
 public class ViewModel : INotifyPropertyChanged
 {
-
-    ...
-
     private async void GenerateAssistItems()
     {
         AssistItem requestItem = new AssistItem()

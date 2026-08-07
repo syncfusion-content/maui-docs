@@ -15,49 +15,50 @@ documentation: ug
 
 The prompt composition pipeline combines the following inputs into a single prompt string that is sent to the AI:
 
-* **SystemPrompt** - global AI instructions such as persona, safety rules, and behavior constraints.
-* **ContextPrompt** - application or workspace context such as the current document, selected text, or session metadata.
+* **SystemPrompt** - global instructions for the AI service, such as persona, safety rules, and behavior constraints.
+* **ContextPrompt** - application or workspace context for the AI service, such as the current document, selected text, or session metadata.
 * **PromptParts** - discrete, ordered fragments contributed by application logic, tools, or plugin. Each part exposes an `Order` and an `IsEnabled` flag.
 * **User input** - the message typed in the request editor.
 
-The user input is always appended as the last segment. Non-empty segments are joined with a newline (`Environment.NewLine`) delimiter, and the `PromptComposing` event is raised immediately before the request is sent.
+The user input is always appended as the last segment. Non-empty segments are joined with a newline (`Environment.NewLine`) delimiter, and the `PromptComposing` event is raised immediately before the request is sent to the AI service.
 
 ## Composition order
 
 When the user submits a request, `SfAIAssistView` merges the available prompt sources in the following deterministic order:
 
 1. `SystemPrompt` - included if it is not null or empty.
-2. Selected agent context - included when an `AssistAgent` is selected and exposes context.
+2. Selected agent context - included when a selected `AssistAgent` provides context.
 3. `ContextPrompt` - included if it is not null or empty.
 4. `PromptParts` - only parts with `IsEnabled = true` and non-empty `Content`, sorted by `Order` in ascending order.
 5. User input - the message typed in the request editor.
 
 Null or empty segments are skipped gracefully. Disabled parts are excluded entirely.
 
-N>
-* If `SystemPrompt`, `ContextPrompt`, and `PromptParts` are all unset, the composed prompt is identical to the legacy behavior - the user's message is sent on its own.
-* Changes to `SystemPrompt`, `ContextPrompt`, or `PromptParts` only affect subsequent requests. The control does not retroactively modify the conversation history.
-
 ## SystemPrompt
 
 The [SystemPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SystemPrompt) property defines global AI instructions - persona, safety rules, and behavior constraints - that apply to every request. It is the first segment in the composed prompt. The default value is `null`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            SystemPrompt="You are a helpful, concise assistant. Always respond in Markdown."/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
-SfAIAssistView sfAIAssistView;
-public MainPage()
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.SystemPrompt = "You are a helpful, concise assistant. Always respond in Markdown.";
-    this.Content = sfAIAssistView;
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.SystemPrompt = "You are a helpful, concise assistant. Always respond in Markdown.";
+        this.Content = sfAIAssistView;
+    }
 }
 
 {% endhighlight %}
@@ -68,21 +69,26 @@ public MainPage()
 The [ContextPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextPrompt) property carries application-specific context such as the current document, workspace, or session metadata. It appears after `SystemPrompt` and before any prompt parts. The default value is `null`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            ContextPrompt="Document: Sales Report Q1 2026. Selected cell: B7."/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
-SfAIAssistView sfAIAssistView;
-public MainPage()
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.ContextPrompt = "Document: Sales Report Q1 2026. Selected cell: B7.";
-    this.Content = sfAIAssistView;
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ContextPrompt = "Document: Sales Report Q1 2026. Selected cell: B7.";
+        this.Content = sfAIAssistView;
+    }
 }
 
 {% endhighlight %}
@@ -116,23 +122,29 @@ Each item in the `PromptParts` collection is an [AssistPromptPart](https://help.
 Add an [AssistPromptPart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistPromptPart.html) to the [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection to contribute a discrete fragment to the composed prompt.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="10" %}
 
-SfAIAssistView sfAIAssistView;
-public MainPage()
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
     {
-        new AssistPromptPart
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>
         {
-            Content = "Available tools: Calculator, Search, Translate.",
-            Order = 10,
-            IsEnabled = true
-        }
-    };
-    this.Content = sfAIAssistView;
+            new AssistPromptPart
+            {
+                Content = "Available tools: Calculator, Search, Translate.",
+                Order = 10,
+                IsEnabled = true
+            }
+        };
+
+        this.Content = sfAIAssistView;
+    }
 }
 
 {% endhighlight %}
@@ -143,7 +155,7 @@ public MainPage()
 Parts are sorted by the `Order` property in ascending order before they are joined into the prompt. Lower values are placed first; parts with the same `Order` value retain their insertion order. `Order` only controls the relative position of parts within the `PromptParts` block - it does not move a part before `SystemPrompt` or after the user input.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="C#" hl_lines="3,4,5" %}
 
 this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>
 {
@@ -160,9 +172,9 @@ this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistProm
 Set [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistPromptPart.html#Syncfusion_Maui_AIAssistView_AssistPromptPart_IsEnabled) to `false` to exclude a part from composition without removing it from the collection. The default value is `true`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="7" %}
 
-this.sfAIAssistView.PromptPartsthis.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>()
+this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>()
 {
     new AssistPromptPart
     {
@@ -183,40 +195,31 @@ The [PromptComposing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
  * [Parts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_Parts) - The enabled prompt parts in composition order.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            PromptComposing="sfAIAssistView_PromptComposing" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
-sfAIAssistView.PromptComposing += SfAIAssistView_PromptComposing;
+using Syncfusion.Maui.AIAssistView;
 
-private void SfAIAssistView_PromptComposing(object sender, PromptComposingEventArgs e)
+public partial class MainPage : ContentPage
 {
-    
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.PromptComposing += SfAIAssistView_PromptComposing;
+        this.Content = sfAIAssistView;
+    }
+
+    private void SfAIAssistView_PromptComposing(object sender, PromptComposingEventArgs e)
+    {
+        // Handle the prompt composing event.
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-## PromptComposer helper
-
-The composition is performed by the internal `PromptComposer` class, which is a static helper that combines all prompt sources in a deterministic order and returns the composed string along with the enabled parts.
-
-### ComposePrompt method
-
-The `ComposePrompt` method merges `SystemPrompt`, the selected agent context, `ContextPrompt`, the enabled `PromptParts`, and the user input. Null or empty segments are skipped, and parts with `IsEnabled = false` are excluded. All included segments are joined with `Environment.NewLine`.
-
-### Return value
-
-Returns a tuple containing:
-
-* `ComposedPrompt` - the composed prompt string with all segments joined by newlines.
-* `EnabledParts` - a read-only list of the enabled `AssistPromptPart` instances in composition order.
-
-N>
-* The `PromptComposer` is an internal helper that runs synchronously on the UI thread. It is platform-agnostic - Android, iOS, Windows, and macOS produce the same composed prompt for the same input.
-* Prompt composition changes are not applied retroactively to the conversation history. They affect the next request that is sent.
-* Developers are responsible for sanitizing any content that is added to `SystemPrompt`, `ContextPrompt`, or `PromptParts` to prevent prompt injection.
