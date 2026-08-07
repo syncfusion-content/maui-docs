@@ -533,12 +533,4 @@ We are actively working on delivering brand-new .NET MAUI controls that can be s
 			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/diagram/overview"> Syncfusion<sup>®</sup> Blazor Diagram.</a> To integrate Blazor Diagram component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform?isInternalRefresh=False"> KB.</a> <br/>
 		</td>
 	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/maui/rich-text-editor/migration">SfRichTextEditor</a><br/>
-		</td>
-	</tr>
 </table>
