@@ -21,12 +21,12 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection">AllowColumnSelection</a></td>
         <td>bool</td>
-        <td>Defines whether users can select columns in the data grid.</td>
+        <td>Defines whether column selection is enabled in the DataGrid.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDeleting">AllowDeleting</a></td>
         <td>bool</td>
-        <td>Defines whether rows can be deleted from the data grid.</td>
+        <td>Defines whether rows can be deleted from the DataGrid.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling">AllowDiagonalScrolling</a></td>
