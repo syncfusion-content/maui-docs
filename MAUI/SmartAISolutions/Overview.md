@@ -13,13 +13,6 @@ Add AI features to your .NET MAUI apps without building models or services from 
 
 Each solution is a runnable sample backed by step‑by‑step guidance, so you can adapt it to your data and your domain.
 
-## Business use cases
-
-- Customer‑facing apps that need semantic search, smart location lookup, or natural‑language filtering.  
-- Internal tools that surface anomalies, forecasts, and insights from charts and tabular data.  
-- Data entry workflows that benefit from smart paste, predictive entry, and AI‑assisted completion.  
-- Scheduling and booking apps that match appointments, resolve conflicts, and recommend time slots.
-
 ## Available Smart AI Solutions
 
 Explore these AI-powered solutions for .NET MAUI and see how they can improve common app workflows.
