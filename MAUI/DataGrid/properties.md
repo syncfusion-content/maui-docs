@@ -364,6 +364,7 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
         <td>Defines the underlying collection view that powers sorting, grouping, and filtering.</td>
     </tr>
 </table>
+
 ## Events
 
 <table>
@@ -375,17 +376,17 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn">AutoGeneratingColumn</a></td>
 		<td>DataGridAutoGeneratingColumnEventArgs</td>
-		<td>Raised when a column is auto generated.</td>
+		<td>Raised when a column is automatically generated from the data source.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingRelations">AutoGeneratingRelations</a></td>
 		<td>DataGridAutoGeneratingRelationsArgs</td>
-		<td>Raised when relations are auto generated.</td>
+		<td>Raised when relations are automatically generated for the DataGrid.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped">CellDoubleTapped</a></td>
 		<td>DataGridCellDoubleTappedEventArgs</td>
-		<td>Raised when a cell is double tapped.</td>
+		<td>Raised when a cell is double-tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellEntered">CellEntered</a></td>
@@ -400,17 +401,17 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellHovered">CellHovered</a></td>
 		<td>DataGridCellHoveredEventArgs</td>
-		<td>Raised when a cell is hovered.</td>
+		<td>Raised when the pointer hovers over a cell.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress">CellLongPress</a></td>
 		<td>DataGridCellLongPressEventArgs</td>
-		<td>Raised when a cell is long pressed.</td>
+		<td>Raised when a cell is long-pressed.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellRightTapped">CellRightTapped</a></td>
 		<td>DataGridCellRightTappedEventArgs</td>
-		<td>Raised when a cell is right tapped.</td>
+		<td>Raised when a cell is right-clicked or right-tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped">CellTapped</a></td>
