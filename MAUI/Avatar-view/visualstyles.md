@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visual Style in Syncfusion® .NET MAUI Avatar View.
-description: This section explains the different visual style types available in .NET MAUI Avatar View.
-platform: MAUI
+title: Visual Styles in .NET MAUI Avatar View | Syncfusion®
+description: Learn about visual style types and shape customization options in Syncfusion® .NET MAUI Avatar View (SfAvatarView) control.
+platform: maui
 control: SfAvatarView
-documentation: UG
+documentation: ug
 ---
 
-# Visual Style in .NET MAUI Avatar View(SfAvatarView) 
+# Visual Styles in .NET MAUI Avatar View 
 
 The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control supports customization using the following built-in visual styles:
 

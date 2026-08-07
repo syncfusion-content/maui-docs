@@ -1,13 +1,13 @@
 ---
 layout: post
-title: .NET MAUI Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfSlider) control with key features and more.
+title: About Syncfusion® .NET MAUI Slider Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Slider (SfSlider) control and more details.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI Slider
+# About Syncfusion® .NET MAUI Slider Control
 
 The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 

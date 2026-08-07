@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  Linear ProgressBar | Syncfusion®
-description: Learn all about migrating from the Syncfusion® Xamarin Linear ProgressBar to the Syncfusion® .NET MAUI Linear ProgressBar control.
+title: Migration to .NET MAUI  Linear ProgressBar | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Linear ProgressBar to .NET MAUI Linear ProgressBar with API comparisons.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms to .NET MAUI SfLinearProgressBar
+# Migration to .NET MAUI Linear ProgressBar
 
 To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI SfLinearProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin SfLinearProgressBar were kept in the .NET MAUI SfLinearProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization with .NET MAUI Step Progress Bar control | Syncfusion®
-description: Learn all about customization support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
+title: Customization in .NET MAUI Step ProgressBar | Syncfusion®
+description: Learn how to customize appearance, colors, sizes, animations, and layout in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Customization in .NET MAUI StepProgressBar (SfStepProgressBar)
+# Customization in .NET MAUI Step ProgressBar
 
 You can fully customize the appearance of the step progress bar, including the background color, step size, content size, animations, and more.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Circular Progress Bar | Syncfusion®
-description: Learn all about appearance support in the Syncfusion® .NET MAUI Circular Progress Bar control, its elements, and more.
+title: Appearance in .NET MAUI Circular ProgressBar | Syncfusion®
+description: Learn about appearance customization including angles, colors, thickness in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
+# Appearance in .NET MAUI Circular ProgressBar
 
 ## Angle
 
