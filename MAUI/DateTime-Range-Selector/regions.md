@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regions in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Regions in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to customize active and inactive regions in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector

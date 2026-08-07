@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Labels in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to show and customize labels in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector

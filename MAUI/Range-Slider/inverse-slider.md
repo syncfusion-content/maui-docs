@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inverse and Orientation in .NET MAUI Range Slider | SyncfusionÂ®
+title: Inverse and Orientation in .NET MAUI Range Slider | Syncfusion®
 description: Learn how to invert and change the orientation of the .NET MAUI Range Slider control for different layouts and designs.
 platform: maui
 control: SfRangeSlider

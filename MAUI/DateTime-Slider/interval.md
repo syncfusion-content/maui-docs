@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interval in .NET MAUI DateTime Slider | SyncfusionÂ®
-description: Learn how to configure interval, date interval types, and auto interval behavior in the SyncfusionÂ® .NET MAUI DateTime Slider control.
+title: Interval in .NET MAUI DateTime Slider | Syncfusion®
+description: Learn how to configure interval, date interval types, and auto interval behavior in the Syncfusion® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

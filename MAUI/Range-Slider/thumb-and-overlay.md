@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and thumb overlay in .NET MAUI Range Slider | SyncfusionÂ®
-description: Learn how to customize the thumb and thumb overlay in the SyncfusionÂ® .NET MAUI Range Slider control with size, color, and state options.
+title: Thumb and thumb overlay in .NET MAUI Range Slider | Syncfusion®
+description: Learn how to customize the thumb and thumb overlay in the Syncfusion® .NET MAUI Range Slider control with size, color, and state options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
