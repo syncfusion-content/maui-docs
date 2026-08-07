@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Right-to-Left in .NET MAUI TreeView (SfTreeView)
+# Right-to-Left in .NET MAUI TreeView
 
 The `SfTreeView` control supports displaying its content in a right-to-left (RTL) layout for languages such as Arabic, Hebrew, and Urdu. To enable RTL, set the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0) property to `RightToLeft`. The `FlowDirection` can be set directly on the `SfTreeView` or inherited from its parent layout. By default, the `FlowDirection` is set to `LeftToRight`.
 

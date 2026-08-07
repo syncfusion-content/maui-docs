@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Data Population in .NET MAUI TreeView (SfTreeView)
+# Data Population in .NET MAUI TreeView
 
 TreeView can be populated either with the data source by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) property or by creating and adding the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) in a hierarchical structure to the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) property.
 
