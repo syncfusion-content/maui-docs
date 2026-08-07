@@ -23,20 +23,20 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01"
-                                     Maximum="2005-01-01"
-                                     RangeStart="2001-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
+                                     Maximum="2005-01-01"  
+                                     RangeStart="2001-01-01" 
                                      RangeEnd="2004-01-01"
                                      Interval="1"
-                                     IntervalType="Years"
-                                     DateFormat="yyyy"
-                                     ShowLabels="True"
-                                     ShowTicks="True"
+                                     IntervalType="Years" 
+                                     DateFormat="yyyy"  
+                                     ShowLabels="True" 
+                                     ShowTicks="True" 
                                      ShowDividers="True">
 
         <charts:SfCartesianChart>

@@ -21,16 +21,16 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
-                                     Interval="2"
+                                     Interval="2" 
                                      ShowDividers="True">
 
         <charts:SfCartesianChart>
@@ -68,23 +68,23 @@ Change the active and inactive divider radius using the [`ActiveRadius`](https:/
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
-                                     Interval="2"
+                                     Interval="2" 
                                      ShowDividers="True">
-
+        
         <sliders:SfDateTimeRangeSelector.DividerStyle>
-            <sliders:SliderDividerStyle ActiveRadius="3"
+            <sliders:SliderDividerStyle ActiveRadius="3" 
                                         InactiveRadius="5" />
         </sliders:SfDateTimeRangeSelector.DividerStyle>
-
+        
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
@@ -124,14 +124,14 @@ Also, change the active and inactive divider stroke color using the [`ActiveStro
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
                                      Interval="2"
                                      ShowDividers="True">
@@ -191,29 +191,29 @@ Change the active and inactive divider colors using the [`ActiveFill`](https://h
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
                                      Interval="2"
                                      ShowDividers="True">
 
         <sliders:SfDateTimeRangeSelector.DividerStyle>
-            <sliders:SliderDividerStyle ActiveRadius="7"
-                                        InactiveRadius="7"
-                                        ActiveFill="#EE3F3F"
+            <sliders:SliderDividerStyle ActiveRadius="7" 
+                                        InactiveRadius="7" 
+                                        ActiveFill="#EE3F3F" 
                                         InactiveFill="#F7B1AE" />
         </sliders:SfDateTimeRangeSelector.DividerStyle>
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-
+        
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
