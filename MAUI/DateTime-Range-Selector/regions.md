@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regions in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Regions in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to customize active and inactive regions in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -23,7 +23,7 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -49,13 +49,13 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
-rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));
-rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00"));
+rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
+rangeSelector.RangeEnd = new DateTime(2004, 01, 01);  
+rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));    
+rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00")); 
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-
+        
 {% endhighlight %}
 
 {% endtabs %}
@@ -74,7 +74,7 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -102,15 +102,15 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
-rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));
-rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00"));
-rangeSelector.ActiveRegionStroke = new SolidColorBrush(Color.FromArgb("#FFFF00"));
-rangeSelector.InactiveRegionStroke = new SolidColorBrush(Color.FromArgb("#B8860B"));
+rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
+rangeSelector.RangeEnd = new DateTime(2004, 01, 01);  
+rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));    
+rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00")); 
+rangeSelector.ActiveRegionStroke = new SolidColorBrush(Color.FromArgb("#FFFF00")); 
+rangeSelector.InactiveRegionStroke = new SolidColorBrush(Color.FromArgb("#B8860B"));       
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-
+         
 {% endhighlight %}
 
 {% endtabs %}
@@ -129,7 +129,7 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -159,17 +159,17 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01);
 rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
-rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));
-rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00"));
-rangeSelector.ActiveRegionStroke = new SolidColorBrush(Color.FromArgb("#A52A2A"));
-rangeSelector.InactiveRegionStroke = new SolidColorBrush(Color.FromArgb("#A52A2A"));
+rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
+rangeSelector.RangeEnd = new DateTime(2004, 01, 01);  
+rangeSelector.ActiveRegionFill = new SolidColorBrush(Color.FromArgb("#40FFFF00"));    
+rangeSelector.InactiveRegionFill = new SolidColorBrush(Color.FromArgb("#33FF8A00")); 
+rangeSelector.ActiveRegionStroke = new SolidColorBrush(Color.FromArgb("#A52A2A")); 
+rangeSelector.InactiveRegionStroke = new SolidColorBrush(Color.FromArgb("#A52A2A"));       
 rangeSelector.ActiveRegionStrokeThickness = new Thickness(3,0,3,0);
 rangeSelector.InactiveRegionStrokeThickness = new Thickness(0,3,0,3);
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-
+         
 {% endhighlight %}
 
 {% endtabs %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Track in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Track in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Configure the track in the Syncfusion .NET MAUI DateTime Range Selector: active/inactive fills, sizes, track extent, and inversion options.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -27,24 +27,24 @@ It represents the values currently selected in the DateTime Range Selector. The 
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2020-01-01"
-                                     RangeStart="2012-01-01"
-                                     RangeEnd="2018-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2020-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2018-01-01" 
                                      ShowLabels="True">
-
+        
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-
+    
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
-
+ 
 {% endhighlight %}
 
 {% highlight C# %}
@@ -76,24 +76,24 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01">
-
+        
         <sliders:SfDateTimeRangeSelector.TrackStyle>
             <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
         </sliders:SfDateTimeRangeSelector.TrackStyle>
-
+        
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-
+    
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -125,24 +125,24 @@ Change the active and inactive track height using the [`ActiveSize`](https://hel
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01">
-
+        
         <sliders:SfDateTimeRangeSelector.TrackStyle>
             <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
         </sliders:SfDateTimeRangeSelector.TrackStyle>
-
+        
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-
+    
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -174,7 +174,7 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -231,19 +231,19 @@ Invert the DateTime Range Selector using the [IsInversed](https://help.syncfusio
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
                                      Interval="2"
                                      ShowLabels="True"
-                                     ShowTicks="True"
-                                     MinorTicksPerInterval="1"
+                                     ShowTicks="True" 
+                                     MinorTicksPerInterval="1" 
                                      IsInversed="True">
 
         <charts:SfCartesianChart>

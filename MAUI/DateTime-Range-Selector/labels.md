@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Labels in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to show and customize labels in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
@@ -19,16 +19,16 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.R
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
-                                     Interval="2"
+                                     Interval="2" 
                                      ShowLabels="True"
                                      ShowTicks="True">
 
@@ -68,19 +68,19 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.I
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01T09:00:00"
-                                     Maximum="2000-01-01T17:00:00"
-                                     RangeStart="2000-01-01T11:00:00"
-                                     RangeEnd="2000-01-01T15:00:00"
-                                     ShowLabels="True"
-                                     ShowTicks="True"
-                                     IntervalType="Hours"
-                                     Interval="2"
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01T09:00:00" 
+                                     Maximum="2000-01-01T17:00:00" 
+                                     RangeStart="2000-01-01T11:00:00" 
+                                     RangeEnd="2000-01-01T15:00:00" 
+                                     ShowLabels="True" 
+                                     ShowTicks="True" 
+                                     IntervalType="Hours" 
+                                     Interval="2" 
                                      DateFormat="h tt">
 
         <charts:SfCartesianChart>
@@ -121,7 +121,7 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -170,13 +170,13 @@ N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-
 
 The [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is used to move the first and the last label either inside the track bounds or based on the intervals. The default value of the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is [`SliderEdgeLabelPlacement.Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Default).
 
-If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) > 0 and the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges.
+If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) > 0 and the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -187,9 +187,9 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
                                      RangeEnd="2002-01-11"
                                      Interval="1"
                                      IntervalType="Days"
-                                     DateFormat="ddd"
-                                     EdgeLabelsPlacement="Inside"
-                                     ShowLabels="True"
+                                     DateFormat="ddd" 
+                                     EdgeLabelsPlacement="Inside" 
+                                     ShowLabels="True" 
                                      ShowTicks="True">
 
         <charts:SfCartesianChart>
@@ -235,25 +235,25 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
-                                     Interval="2"
-                                     ShowLabels="True"
+                                     Interval="2"  
+                                     ShowLabels="True" 
                                      ShowTicks="True">
 
         <sliders:SfDateTimeRangeSelector.LabelStyle>
-            <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
-                                      InactiveTextColor="#F7B1AE"
-                                      ActiveFontAttributes="Italic"
-                                      InactiveFontAttributes="Bold"
-                                      ActiveFontSize="16"
+            <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
+                                      InactiveTextColor="#F7B1AE" 
+                                      ActiveFontAttributes="Italic" 
+                                      InactiveFontAttributes="Bold" 
+                                      ActiveFontSize="16" 
                                       InactiveFontSize="16" />
         </sliders:SfDateTimeRangeSelector.LabelStyle>
 
@@ -299,27 +299,27 @@ Adjust the space between ticks and labels using the [`Offset`](https://help.sync
 
 {% highlight xaml %}
 
-<ContentPage
+<ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
-                                     Maximum="2018-01-01"
-                                     RangeStart="2012-01-01"
+    
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
                                      RangeEnd="2016-01-01"
-                                     Interval="2"
-                                     ShowLabels="True"
+                                     Interval="2" 
+                                     ShowLabels="True" 
                                      ShowTicks="True">
-
+        
         <sliders:SfDateTimeRangeSelector.LabelStyle>
             <sliders:SliderLabelStyle Offset="10" />
         </sliders:SfDateTimeRangeSelector.LabelStyle>
-
+        
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-
+    
     </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dividers in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Dividers in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn about the Dividers feature in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) to show interval markers on the track.
 platform: maui
 control: SfDateTimeRangeSelector
