@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Expander control | Syncfusion®
-description: Learn here all about Customization in Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Expander (SfExpander) control and more.
+title: Animation duration in MAUI  | Syncfusion
+description: Learn here all about Customization in the Syncfusion® .NET MAUI Expander (SfExpander) control and more.
 platform: MAUI
 control: SfExpander
 documentation: ug
 ---
 
-# Customization in .NET MAUI Expander (SfExpander)
+# Customization in .NET MAUI Expander
 
 The SfExpander control provides various customization options to enhance the user experience and tailor the control's behavior to your application requirements. You can customize animation settings such as duration and easing, control the expand and collapse state programmatically, and respond to user interactions through built-in events. These customization features allow you to create smooth, interactive, and user-friendly expandable content sections in your .NET MAUI applications.
 
