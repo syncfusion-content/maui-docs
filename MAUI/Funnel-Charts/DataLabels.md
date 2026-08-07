@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in .NET MAUI Funnel Chart control | Syncfusion
-description: Learn how to configure, customize, and format data labels in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) control.
+title: Data Labels in .NET MAUI Funnel Chart | Syncfusion®
+description: Data Labels in .NET MAUI Funnel Chart display values directly on chart segments, helping users understand and interpret data more effectively.
 platform: maui
 control: SfFunnelChart
 documentation: ug

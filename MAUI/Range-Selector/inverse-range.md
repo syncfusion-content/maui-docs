@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Inverse in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Inverse of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Inverse Range in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to invert the Syncfusion® .NET MAUI Range Selector control to reverse the visual range direction.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Inverse the Range Selector
+# Inverse Range in .NET MAUI Range Selector
 
 Invert the Range Selector using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 

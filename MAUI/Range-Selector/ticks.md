@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick in .NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Ticks in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to show and customize major and minor ticks in the Syncfusion® .NET MAUI Range Selector control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Tick in .NET MAUI Range Selector (SfRangeSelector)
+# Ticks in .NET MAUI Range Selector
 
 This section helps to learn about how to add major and minor ticks in the Range Selector.
 

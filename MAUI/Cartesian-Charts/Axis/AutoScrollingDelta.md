@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto scrolling in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about auto scrolling and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Auto Scrolling in .NET MAUI Cartesian Chart | Syncfusion®
+description: Auto Scrolling in .NET MAUI Cartesian Chart displays the latest data points while maintaining a fixed range for continuous data visualization.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart auto scrolling, .net maui chart scrolling customization, .net maui chart auto scroll feature, syncfusion maui chart auto scrolling, cartesian chart auto scroll maui, .net maui chart dynamic scrolling, enable auto scrolling .net maui chart.
 ---
 
-# Auto scrolling in .NET MAUI Cartesian Chart
+# Auto Scrolling in .NET MAUI Cartesian Chart
 
 Auto-scrolling in .NET MAUI Cartesian Chart ensures that a specified range of data is always visible, making it ideal for real-time data feeds and streaming dashboards. The [AutoScrollingDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingDelta) property of the chart axis sets the number of data points to be always visible. As new data points are added, the visible range scrolls to keep them in view, and you can use the [AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) property to control the scroll direction.
 

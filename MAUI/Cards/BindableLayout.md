@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BindableLayout in MAUI Cards control | Syncfusion®
-description: Learn about BindableLayout support in Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements and more.
+title: BindableLayout in .NET MAUI Cards | Syncfusion®
+description: Learn about BindableLayout support in Syncfusion® .NET MAUI Cards (SfCards) control. Explore data binding and template features.
 platform: MAUI
 control: Cards
 documentation: ug
 ---
 
-# BindableLayout in MAUI Cards
+# BindableLayout in .NET MAUI Cards
 
 Layout&lt;T&gt; introduces a feature called `BindableLayout`, which works with all layouts derived from Layout&lt;T&gt;. By simply setting the ItemTemplate and ItemsSource, BindableLayout automatically generates a group of UI elements (based on the provided ItemTemplate) for each data item in the ItemsSource and adds them as children.
 

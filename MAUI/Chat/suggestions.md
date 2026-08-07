@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Suggestions in .NET MAUI Chat (SfChat)
+# Suggestions in .NET MAUI Chat
 
 The `SfChat` control allows displaying a list of options, as suggestions, either below the current message or at the bottom of the chat control. These suggestions can be presented for all the supported message types in `SfChat`. When a user selects a suggestion item, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelectedCommand) will be triggered. Both the event and the command provide the [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html) as arguments. These arguments expose the following information about the selected suggestion item.
 

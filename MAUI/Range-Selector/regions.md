@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Regions in.NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Regions and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Regions in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to customize the active and inactive regions in the Syncfusion® .NET MAUI Range Selector control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Regions in Range Selector (SfRangeSelector)
+# Regions in .NET MAUI Range Selector
 
 This section explains how to customize the active and inactive regions in the Range Selector control.
 

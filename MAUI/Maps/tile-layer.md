@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tile Layer in .NET MAUI Maps control | Syncfusion
-description: Learn here all about the Tile Layer feature of the Syncfusion® .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+title: Tile Layer in .NET MAUI Maps | Syncfusion®
+description: Tile Layer in .NET MAUI Maps displays map tiles from online or custom sources, enabling interactive and scalable map visualization.
 platform: MAUI
 control: SfMaps
 documentation: ug

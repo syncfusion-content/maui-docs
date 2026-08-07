@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Pointer in .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about Content Pointer feature of the Syncfusion® .NET MAUI Radial Gauge control, including image, text pointer support and more.
+title: Content Pointers in .NET MAUI Radial Gauge | Syncfusion®
+description: Content Pointers in .NET MAUI Radial Gauge display custom content as pointers, enabling flexible value representation and enhanced gauge visualization.
 platform: maui
 control: SfRadialGauge
 documentation: ug
