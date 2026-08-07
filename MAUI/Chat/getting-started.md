@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI Chat Control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-chat"
-description: Learn here about getting started with the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
+description: Learn here about how to get started with the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug

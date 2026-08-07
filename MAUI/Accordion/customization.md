@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customization in .NET MAUI Accordion control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® Maui Accordion (SfAccordion) control and more details. 
+description: Learn here about how to customize the Syncfusion® .NET MAUI Accordion control, its elements and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
 --- 
 
-# Customization in .NET MAUI Accordion (SfAccordion)
+# Customization in .NET MAUI Accordion
 
 ## Animation duration
 

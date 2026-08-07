@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Scrolling Features in .NET MAUI AI AssistView | Syncfusion®
-description: Learn how to manage scrolling in the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) with auto-scroll, scroll-to-bottom button, and event handling.
+description: Learn how to manage scrolling in the Syncfusion® .NET MAUI AI AssistView with auto-scroll, scroll-to-bottom button, and event handling.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Work with Scrolling Features in .NET MAUI SfAIAssistView?
+# Scrolling in .NET MAUI AI AssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides features to manage scrolling efficiently. It includes a scroll-to-bottom button for quick navigation, supports customization through templates, and allows control over auto-scrolling and scroll events to enhance user experience.
 

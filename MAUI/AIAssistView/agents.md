@@ -1,13 +1,13 @@
 ---
 layout: post 
-title: Agent in .NET MAUI AI AssistView Control | Syncfusion®
-description: Learn here all about Agent support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: Populating agent collection in .NET MAUI AI AssistView | Syncfusion®
+description: Learn here all about populating agent collection in the Syncfusion® .NET MAUI AI AssistView control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Getting Started with Agent in .NET MAUI AI AssistView
+# Working with agents in .NET MAUI AI AssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides an `Agent` feature that enables multiple AI agents to be presented within a single chat experience. Agents are useful in AI chat applications because they represent specialized assistants for different tasks and domains, allowing users to switch between capabilities seamlessly and receive more focused, context-aware responses.
 
