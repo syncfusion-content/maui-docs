@@ -274,6 +274,24 @@ Explore these AI-powered solutions for .NET MAUI and see how they can improve co
 </a>
 </div>
 
+### TreeView
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 10 -->
+<a href="/maui/TreeView/AI-powered-natural-language-file-search" class="form-card">
+<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
+<img src="../Images/AIFileSearchTreeView.png"
+                loading="lazy"
+                decoding="async"
+                class="form-image">
+</div>
+<div class="form-content">
+<h3 class="form-title">AI-powered-natural-language-file-search</h3>
+<div class="form-description">
+               AI-powered natural language file search in Syncfusion .NET MAUI TreeView using Azure OpenAI.
+</div>
+</div>
+</a>
+</div>
 
 ## See Also
 

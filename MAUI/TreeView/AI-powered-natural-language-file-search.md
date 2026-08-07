@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AI-Powered Natural Language File Search in .NET MAUI TreeView | Syncfusion®
-description: Learn how to implement AI-powered natural language file search in Syncfusion® .NET MAUI TreeView using Azure OpenAI for intelligent hierarchical data filtering and discovery.
+title: AI-Powered File Search in .NET MAUI TreeView | Syncfusion
+description: Learn how to implement AI-powered natural language file search in Syncfusion .NET MAUI TreeView using Azure OpenAI for intelligent file discovery.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -526,7 +526,7 @@ ServiceHelper.InitializeServices(app.Services);
 - **Semantic Matching**: Azure OpenAI finds relevant files beyond exact keyword matching
 - **Hierarchical Highlighting**: Matched files highlighted with automatic parent expansion
 - **Fallback Support**: Local fuzzy matching if Azure OpenAI unavailable
-- **Search Debouncing**: Optimized API calls during typing
+- **Search Debounce**: Optimized API calls during typing
 - **Cancellation Support**: Users can cancel ongoing searches
 
 ## Example Queries
@@ -537,4 +537,4 @@ ServiceHelper.InitializeServices(app.Services);
 
 The Syncfusion TreeView with Azure OpenAI provides intelligent file discovery beyond traditional browsing.
 
-For the complete sample, visit this [GitHub link](https://github.com/SyncfusionExamples/AI-Powered-File-Search-.NET-MAUI-TreeView).
+For the complete sample, visit this [GitHub link](https://github.com/SyncfusionExamples/ai-powered-natural-language-file-search-net-maui-treeview).
