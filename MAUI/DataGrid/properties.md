@@ -21,7 +21,7 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection">AllowColumnSelection</a></td>
         <td>bool</td>
-        <td>Defines whether users can select one or more columns in the data grid.</td>
+        <td>Defines whether users can select columns in the data grid.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDeleting">AllowDeleting</a></td>
