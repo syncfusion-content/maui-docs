@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Properties in .NET MAUI Range Slider | Syncfusion®
+title: Properties in .NET MAUI Range Slider | SyncfusionÂ®
 description: Learn about the key properties of the .NET MAUI Range Slider control and how to configure its behavior and appearance.
 platform: maui
 control: SfRangeSlider
