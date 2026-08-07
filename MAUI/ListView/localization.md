@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI ListView control | Syncfusion®
+title: Localization in .NET MAUI SfListView control | Syncfusion®
 description: Learn here all about Localization feature of Syncfusion® .NET MAUI ListView (SfListView) control and its elements, and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Localization in .NET MAUI ListView
+# Localization in .NET MAUI ListView (SfListView)
 
 `Localization` is the process of translating the application resources into different languages for specific cultures. The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Listview.SfListView.html) can be localized by adding a `resource` file.
 
