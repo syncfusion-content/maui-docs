@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI AI AssistView control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI AI AssistView (SfAssistView) control, its elements and more.
+title: Overview about .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about introduction to the Sncfusion® .NET MAUI AI AssistView controls, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

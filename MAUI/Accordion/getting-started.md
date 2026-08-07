@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started | SfAccordion | MAUI | Syncfusion®
+title: Getting started with .NET MAUI Accordion | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-accordion"
-description: Learn here about getting started with Syncfusion® .NET MAUI Accordion (SfAccordion) control, its elements and more.
+description: Learn here all about getting started with the Syncfusion® .NET MAUI Accordion, its elements, and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
 ---
 
-# Getting Started with MAUI Accordion
+# Getting Started with .NET MAUI Accordion
 
 This section guides you through setting up and configuring a [Accordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) in your .NET MAUI application. Follow the steps below to add a basic Accordion to your project.
 

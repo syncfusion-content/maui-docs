@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Chat (SfChat) | Syncfusion®
-description: Learn here all about Accessibility support in Syncfusion® .NET MAUI Chat (SfChat) control and its elements.
+title: Accessibility support in .NET MAUI Chat | Syncfusion®
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI Chat control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Chat (SfChat)
+# Accessibility in .NET MAUI Chat
 
 [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) provides built-in accessibility support, exposing its UI elements to assistive technologies such as screen readers. The following tables list each element along with the value announced by the screen reader.
 

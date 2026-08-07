@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Filtering in .NET MAUI TreeView (SfTreeView)
+# Filtering in .NET MAUI TreeView
 
 This section explains how to implement filtering in the TreeView control and its related operations. The TreeView provides built-in text filtering with multiple matching modes and custom predicate-based filtering capabilities that allow you to quickly locate nodes in hierarchical data.
 

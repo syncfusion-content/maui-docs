@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Features in .NET MAUI DockLayout Control | Syncfusion®
-description: Learn about features in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control, including spacing and child expansion behavior.
+description: Learn here all about features in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control, including spacing and child expansion behavior.
 platform: MAUI
 control: SfDockLayout
 documentation: ug
 ---
 
-# Features in .NET MAUI DockLayout Control
+# Features in .NET MAUI DockLayout
 
 ## Expand Last Child
 The [ShouldExpandLastChild](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_ShouldExpandLastChild) property (of type `bool`) determines whether the last docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout.

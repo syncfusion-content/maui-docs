@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Liquid Glass Effect for .NET MAUI ListView | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI ListView (SfListView) control.
+description: Learn how to apply and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI ListView (SfListView)
+# Liquid Glass Effect in .NET MAUI ListView
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI ListView (SfListView) control.
 

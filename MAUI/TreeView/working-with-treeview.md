@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with TreeView in .NET MAUI TreeView Control | Syncfusion®
-description: Learn here about Working with TreeView support in Syncfusion® .NET MAUI TreeView (SfTreeView) control and more.
+title: Working with .NET MAUI TreeView Control | Syncfusion®
+description: Learn here all about Working with Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements, and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
-# Working with TreeView in .NET MAUI TreeView (SfTreeView)
+# Working with .NET MAUI TreeView
 
 ## Interacting with TreeView items
 
