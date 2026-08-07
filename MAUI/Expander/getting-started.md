@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prerequisites in MAUI Data Grid | Syncfusion
+title: Getting Started with .NET MAUI Expander control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-expander"
 description: Learn here all about how to get started with Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI

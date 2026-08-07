@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Parallax View control | Syncfusion®
+title: Getting Started with .NET MAUI Parallax View control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-parallax-view"
-description: Learn about getting started with Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
+description: Learn here all about how to get started with Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Parallax View (SfParallaxView)
+# Getting Started with .NET MAUI Parallax View
 
 This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
