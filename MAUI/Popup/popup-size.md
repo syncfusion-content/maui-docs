@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Popup size in .NET MAUI Popup (SfPopup)
+# Sizing the .NET MAUI Popup
 
 The SfPopup allows you to display the popup at any desired width and height by setting the `SfPopup.WidthRequest` and `SfPopup.HeightRequest`. The popup size can also be changed by setting the width request and height request to the views loaded inside the templates of the popup.
 
