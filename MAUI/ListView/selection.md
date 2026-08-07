@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Selection in .NET MAUI ListView (SfListView)
+# Selection in .NET MAUI ListView
 
 This section explains how to perform selection and related operations in the `.NET MAUI ListView` (SfListView).
 

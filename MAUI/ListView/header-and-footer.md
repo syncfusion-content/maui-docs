@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Header and Footer in .NET MAUI ListView (SfListView)
+# Header and Footer in .NET MAUI ListView
 
 This section explains how to define and customize the header and footer in the SfListView.
 

@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Swiping in .NET MAUI ListView (SfListView)
+# Swiping in .NET MAUI ListView
 
 ## Overview
 
