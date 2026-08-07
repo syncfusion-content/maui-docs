@@ -20,7 +20,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AllowGroupExpandCollapse">AllowGroupExpandCollapse</a></td>
         <td>bool</td>
-        <td>Defines whether grouped items can be expanded and collapsed by the user.</td>
+        <td>Defines whether grouped items can be expanded and collapsed.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AllowSwiping">AllowSwiping</a></td>
@@ -185,7 +185,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsScrollingEnabled">IsScrollingEnabled</a></td>
         <td>bool</td>
-        <td>Defines whether the list can be scrolled by the user.</td>
+        <td>Defines whether the list can be scrolled.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter">IsStickyFooter</a></td>

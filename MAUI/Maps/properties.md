@@ -35,7 +35,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected">ShapeSelected</a></td>
         <td>EventHandler&lt;ShapeSelectedEventArgs&gt;</td>
-        <td>Raised when a map shape is selected or unselected by the user.</td>
+        <td>Raised when a map shape is selected or unselected.</td>
     </tr>
 </table>
 
