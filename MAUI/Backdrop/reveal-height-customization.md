@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reveal height customization of Backdrop Page | Syncfusion®
-description: Learn here all about how to configure and customize the reveal height in the Syncfusion<sup>&reg;</sup> backdrop page control.
+title: Reveal Height Customization in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to configure and customize the reveal height in Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Reveal Height Customization in MAUI Backdrop Page (SfBackdropPage)
+# Reveal Height Customization in .NET MAUI Backdrop Page
 
 When revealing the back layer, the front layer will be moved downwards. By setting the [`BackLayerRevealOption`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption) property of the backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
 

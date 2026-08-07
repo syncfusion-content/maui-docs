@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin SfPopupLayout to .NET MAUI SfPopup | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin SfPopupLayout to Syncfusion® .NET MAUI SfPopup control and more.
+title: Migrate from Xamarin to .NET MAUI Popup control | Syncfusion®
+description: Learn here all about Migrating from Syncfusion® Xamarin SfPopupLayout to Syncfusion® .NET MAUI Popup (SfPopup) control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfPopupLayout to .NET MAUI SfPopup
+# Migrate from Xamarin.Forms PopupLayout to .NET MAUI Popup
 
 To make migration easier from Xamarin.Forms SfPopupLayout to .NET MAUI SfPopup, we kept most of the APIs from Xamarin SfPopupLayout in .NET MAUI SfPopup. However, to maintain the consistency of API naming in .NET MAUI SfPopup, we renamed some of the APIs. The APIs that have been changed in .NET MAUI SfPopup from Xamarin SfPopupLayout are detailed as follows.
 

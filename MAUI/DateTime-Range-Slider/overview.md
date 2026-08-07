@@ -1,13 +1,13 @@
 ---
 layout: post
-title: .NET MAUI DateTime Range Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control with key features and more.
+title: Overview in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DateTime Range Slider control and more details.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI DateTime Range Slider
+# About Syncfusion® .NET MAUI DateTime Range Slider Control
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Slider ([SfDateTimeRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is an interactive control that makes selecting a range of dates or times simple and intuitive.
 
@@ -54,6 +54,10 @@ The following table summarizes the globalization support available in this contr
 </span>
 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
 </div>
@@ -71,9 +75,9 @@ The following table summarizes the globalization support available in this contr
 <td><a href="/maui/datetime-range-slider/overview">DateTimeRangeSlider</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 

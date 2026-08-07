@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Step Progress Bar Control | Syncfusion®
-description: Learn all about getting started with the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control and its basic features.
+title: Getting Started with .NET MAUI Step ProgressBar | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Step ProgressBar control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Step ProgressBar
+# Getting Started with .NET MAUI Step ProgressBar
 
 This section explains how to add the [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with the Syncfusion® Step Progress Bar. Follow the steps below to add the .NET MAUI Step Progress Bar control to your project.
 

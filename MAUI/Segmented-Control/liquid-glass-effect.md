@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Segmented control | Syncfusion®
-description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI Segmented (SfSegmentedControl) control.
+title: Liquid Glass Effect in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about the Liquid Glass Effect that provides a modern, translucent design with adaptive color tinting in the .NET MAUI Segmented Control.
 platform: maui
 control: SfSegmentedControl
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Segmented control
+# Liquid Glass Effect in .NET MAUI Segmented Control
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI Segmented control](https://www.syncfusion.com/maui-controls/maui-segmented-control) control.
 

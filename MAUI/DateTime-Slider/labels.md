@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Labels in .NET MAUI DateTime Slider | Syncfusion®
+description: Learn how to add and customize labels, label placement, format, style, offset, and edge placement for the Syncfusion® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Labels in .NET MAUI DateTime Slider (SfDateTimeSlider)
+# Labels in .NET MAUI DateTime Slider
 
 This section explains how to add the labels in the DateTime Slider.
 

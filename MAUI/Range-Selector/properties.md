@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Range Selector control | Syncfusion®
-description: This section explains about the properties and events with Syncfusion® MAUI Range Selector (SfRangeSelector) control and more.
+title: Properties in .NET MAUI Range Selector | Syncfusion®
+description: Learn about the properties and events available in the Syncfusion® .NET MAUI Range Selector control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# .NET MAUI Range Selector API Reference
+# Properties in .NET MAUI Range Selector
 
 ## Properties
 

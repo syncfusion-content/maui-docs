@@ -1,15 +1,13 @@
 ---
-
 layout: post
-title: Predefined Symbols of Syncfusion® .NET MAUI Badge View
-description: Learn how to set predefined symbols and types of badge icons in Syncfusion® .NET MAUI Badge View.
-platform: MAUI
+title: Predefined Symbols in .NET MAUI Badge View | Syncfusion®
+description: Learn how to use predefined symbols and badge icons in Syncfusion® .NET MAUI Badge View (SfBadgeView) for enhanced visual indicators.
+platform: maui
 control: SfBadgeView
-documentation: UG
-
+documentation: ug
 ---
 
-# Predefined Symbols in .NET MAUI Badge View (SfBadgeView)
+# Predefined Symbols in .NET MAUI Badge View
 
 The [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) allows you to set badge icons using the `Icon` property. Badge icons will be visible when the badge text is not set. The badge supports the following types of `Icon`:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI DataForm control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI DataForm | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI DataForm control. Explore setup, features, examples, and customization options
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Getting Started with the .NET MAUI DataForm
+# Getting Started with .NET MAUI DataForm
 
 This section provides a quick overview of how to get started with the [.NET MAUI DataForm(SfDataForm)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario. Follow the steps below to add .NET MAUI DataForm control to your project.
 

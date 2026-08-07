@@ -7,7 +7,7 @@ control: SfExpander
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Expander (SfExpander)
+# Appearance in .NET MAUI Expander
 
 The .NET MAUI SfExpander comes with built-in support for customizing the appearance of the header.
 

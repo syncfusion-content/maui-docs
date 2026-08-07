@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Track in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to customize the track in the Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Track in .NET MAUI Range Selector (SfRangeSelector)
+# Track in .NET MAUI Range Selector
 
 This section helps to learn about how to customize the track in the Range Selector.
 
