@@ -537,4 +537,6 @@ ServiceHelper.InitializeServices(app.Services);
 
 The Syncfusion TreeView with Azure OpenAI provides intelligent file discovery beyond traditional browsing.
 
+![AI-Powered Natural Language File Search in .NET MAUI TreeView](Images/ai-search-treeview.gif)
+
 For the complete sample, visit this [GitHub link](https://github.com/SyncfusionExamples/ai-powered-natural-language-file-search-net-maui-treeview).
