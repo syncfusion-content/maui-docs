@@ -47,6 +47,10 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
  
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/partial-support.svg" width="16"> Partial Support
