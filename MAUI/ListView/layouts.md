@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Layouts in .NET MAUI ListView (SfListView)
+# Layouts in .NET MAUI ListView
 
 The `SfListView` supports different layouts such as linear and grid layouts. The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout.
 
