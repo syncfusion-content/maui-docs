@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI AI AssistView Control | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control.
+title: Liquid glass effect for .NET MAUI AI AssistView Control | Syncfusion®
+description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI AI AssistView control, its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Apply Liquid Glass Effect in .NET MAUI SfAIAssistView?
+# Liquid Glass Effect in .NET MAUI AI AssistView
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible.
 

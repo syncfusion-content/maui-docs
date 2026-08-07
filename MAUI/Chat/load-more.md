@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load More in .NET MAUI Chat control | Syncfusion®
-description: Learn here all about Load More support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Load more conversations in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about how to load more conversations in Syncfusion® .NET MAUI Chat control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Load More in .NET MAUI Chat (SfChat)
+# Load More in .NET MAUI Chat
 
 In `SfChat`, scroll to the top of the message list to fetch the old messages on demand at runtime, either automatically or manually (by tapping the load more button), by setting the [LoadMoreBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreBehavior) as `LoadMoreOption.Auto` or `LoadMoreOption.Manual` respectively. You can also pass the parameter to the [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommand) using the [LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_LoadMoreCommandParameter) property. Use the [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IsLazyLoading) property to display a busy indicator while messages are loading in SfChat.
 

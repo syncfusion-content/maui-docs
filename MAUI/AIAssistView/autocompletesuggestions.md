@@ -1,13 +1,13 @@
 ---
 layout: post
 title: AutoComplete Suggestions in .NET MAUI AI AssistView | Syncfusion®
-description: Learn here all about AutoComplete Suggestions support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+description: Learn here all about AutoComplete Suggestions support in Syncfusion® .NET MAUI AI AssistView control, its elements and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Display AutoComplete Suggestions in .NET MAUI SfAIAssistView?
+# Display auto-complete suggestions in .NET MAUI AI AssistView
 
 AutoComplete suggestions in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) enable dynamic prompts as users type. They improve input efficiency and enhance the overall chat interaction experience.
 
