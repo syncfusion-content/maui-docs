@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# MVVM in .NET MAUI ListView (SfListView)
+# MVVM in .NET MAUI ListView
 
 ## Commands
 
