@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Linear Progress Bar | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
+title: Liquid Glass Effect in .NET MAUI Linear ProgressBar | Syncfusion®
+description: Learn about enabling and customizing the liquid glass effect in Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Linear Progress Bar
+# Liquid Glass Effect in .NET MAUI Linear ProgressBar
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
 

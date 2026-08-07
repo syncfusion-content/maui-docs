@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn about Orientation support in Syncfusion® .NET MAUI Toolbar (SfToolbar) to arrange toolbar items in a row or column.
+title: Orientation in .NET MAUI Toolbar | Syncfusion®
+description: Learn about horizontal and vertical orientation in Syncfusion® .NET MAUI Toolbar (SfToolbar) control.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Orientation in .NET MAUI Toolbar (SfToolbar)
+# Orientation in .NET MAUI Toolbar
 
 This his section covers support for horizontal and vertical layouts, allowing flexible arrangement via the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property . Default value is [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation).
 

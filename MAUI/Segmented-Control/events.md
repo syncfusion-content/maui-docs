@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Segmented control | Syncfusion
-description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
+title: Events in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about Tapped and SelectionChanged events that allow interaction with the .NET MAUI Segmented Control.
 platform: maui
 control: SfSegmentedControl
 documentation: ug
 ---
 
-# Events in .NET MAUI Segmented Control (SfSegmentedControl)
+# Events in .NET MAUI Segmented Control
 
 The Segmented Control supports the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_Tapped), and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) events to interact with .NET MAUI Segmented Control
 

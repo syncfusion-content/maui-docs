@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion<sup>&reg;</sup>
-description: Learn about to manage the segment content in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented control (SfSegmentedControl).
+title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about populating segment items with text, icons, or a combination of both in the .NET MAUI Segmented Control.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Create Segment Content in .NET MAUI Segmented Control (SfSegmentedControl)
+# Create Segment Content in .NET MAUI Segmented Control
 
 Depending on the application, different scenarios may require icons, text, or a combination of both for effective communication.
 

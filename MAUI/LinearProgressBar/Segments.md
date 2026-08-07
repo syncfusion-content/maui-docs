@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segments in .NET MAUI Linear ProgressBar control | Syncfusion®
-description: Learn all about segments support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
+title: Segments in .NET MAUI Linear ProgressBar | Syncfusion®
+description: Learn about segmented progress visualization and multiple progress sections in Syncfusion® .NET MAUI Linear ProgressBar control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
+# Segments in .NET MAUI Linear ProgressBar
 
 To visualize the progress of multiple sequential tasks, split the linear progress bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Toolbar (SfToolbar) control, its elements and more.
+description: Learn how to get started with the Syncfusion® .NET MAUI Toolbar control. Explore setup, features, examples, and customization options.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug

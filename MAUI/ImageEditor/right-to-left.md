@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI Image Editor | Syncfusion®
+title: Right-To-Left in .NET MAUI Image Editor | Syncfusion®
 description: Learn about Right To Left flow direction support and rendering content in Syncfusion® .NET MAUI Image Editor control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI Image Editor
+# Right-To-Left in .NET MAUI Image Editor
 
 The [SfImageEditor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports rendering content in right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 

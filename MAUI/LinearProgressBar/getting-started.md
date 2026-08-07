@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn about getting started with the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements, and more.
+description: Learn how to get started with the Syncfusion® .NET MAUI Linear ProgressBar control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Linear ProgressBar
+# Getting Started with .NET MAUI Linear ProgressBar
 
 This section explains the steps required to add the Linear ProgressBar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Linear ProgressBar. Follow the steps below to add a .NET MAUI Linear ProgressBar control to your project.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Backdrop control | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® MAUI Backdrop (SfBackdropPage) control.
+title: Properties in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn about the properties, events, and methods available in Syncfusion® .NET MAUI Backdrop Page control for customization and configuration.
 platform: maui
 control: SfBackdropPage
 documentation: ug
 ---
 
-# .NET MAUI Backdrop API Reference
+# Properties in .NET MAUI Backdrop Page
 
 ## Properties
 
