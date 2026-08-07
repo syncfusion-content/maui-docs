@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Item Separator in .NET MAUI ListView control | Syncfusion
-description: Learn all about Item Separator support in Syncfusion .NET MAUI ListView (SfListView) control and more.
+title: Item Separator in .NET MAUI ListView control | Syncfusion®
+description: Learn all about Item Separator support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Item separator customization in .NET MAUI ListView (SfListView)
+# Item separator customization in .NET MAUI ListView
 
 This section explains how to enable and customize built-in item separators in the Syncfusion .NET MAUI SfListView control. The separator feature adds optional, cross-platform divider lines between list items and group headers.
 

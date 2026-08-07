@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Markdown Viewer Control | Syncfusion®
-description: Learn about the introduction of the  Syncfusion® Essential Studio .NET MAUI Markdown Viewer control, its rendering capabilities, and key features.
+description: Learn about the introduction of the Syncfusion® Essential Studio .NET MAUI Markdown Viewer control, its rendering capabilities, and key features.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
