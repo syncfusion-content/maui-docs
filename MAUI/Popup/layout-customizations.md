@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Layout Customizations in MAUI Popup (SfPopup)
+# Layout Customizations in MAUI Popup
 
 ## Footer button appearance mode
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI PullToRefresh control | Syncfusion®
-description: Learn about the introduction of Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control, its elements and more.
+title: Overview about .NET MAUI Pull to Refresh control | Syncfusion®
+description: Learn about the introduction of Syncfusion® .NET MAUI Pull to Refresh (SfPullToRefresh) control, its elements and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---
 
-# Overview of .NET MAUI PullToRefresh
+# Overview of .NET MAUI Pull to Refresh
 
 Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that enables users to interact with and refresh content using a pull gesture. The control displays a progress indicator as the user pulls the content. Once the configured pull threshold is reached and the gesture is released, the refresh action is triggered.
 
