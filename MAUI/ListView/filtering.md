@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Filtering in .NET MAUI ListView (SfListView)
+# Filtering in .NET MAUI ListView
 
 This section explains how to filter the data and its related operations in the SfListView.
 
