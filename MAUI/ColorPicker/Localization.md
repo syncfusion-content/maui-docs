@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, color picker, color palette, localization
 ---
 
-# Localization in the .NET MAUI Color Picker
+# Localization in .NET MAUI Color Picker
 
 Localization is the process of translating application resources into different languages for specific cultures. The [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) ships with a default `SfColorPickerResources` resource manager that exposes a set of localizable strings. You can override those strings for any culture by adding a culture-specific `.resx` file and pointing the resource manager at it.
 
