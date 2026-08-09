@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI DateTime Range Slider | Syncfusion
+title: Tooltip in .NET MAUI DateTime Range Slider | Syncfusion®
 description: Learn how to enable and style the tooltip in the .NET MAUI DateTime Range Slider, including show-always, formatting, and visual styling options.
 platform: maui
 control: SfDateTimeRangeSlider
@@ -133,4 +133,3 @@ rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 {% endtabs %}
 
 ![RangeSlider tooltip style](images/tooltip/tooltip-style.png)
-

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Properties in .NET MAUI DateTime Range Slider | Syncfusion®
+title: Properties in .NET MAUI DateTime Range Slider | SyncfusionÂ®
 description: Overview of properties and events for the .NET MAUI DateTime Range Slider control, including API details and usage.
 platform: maui
 control: SfDateTimeRangeSlider
