@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Description in .NET MAUI Step Progress Bar Control | Syncfusion®
-description: Learn all about description support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
+title: Description in .NET MAUI Step ProgressBar | Syncfusion®
+description: Learn about description feature displaying primary and secondary text in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Description in .NET MAUI StepProgressBar (SfStepProgressBar)
+# Description in .NET MAUI Step ProgressBar
 
 Each step in a multi-step process performs a different operation. You can display information about a step's status on either side. A primary description is shown on the right or bottom of the step, and a secondary description is shown on the left or top of the step.
 

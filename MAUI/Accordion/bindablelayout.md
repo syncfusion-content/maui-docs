@@ -1,13 +1,13 @@
 ---
 layout: post
 title: BindableLayout in .NET MAUI Accordion control | Syncfusion®
-description: This section describes how to bind AccordionItem to Syncfusion® .NET MAUI Accordion (SfAccordion) using BindableLayout.
+description: Learn here about how to bind AccordionItem to Syncfusion® .NET MAUI Accordion control using BindableLayout.
 platform: MAUI
 control: SfAccordion
 documentation: ug
 ---
 
-# BindableLayout in .NET MAUI Accordion (SfAccordion)
+# BindableLayout in .NET MAUI Accordion
 
 The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control allows the use of [.NET MAUI BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout) to bind a data collection using `BindableLayout.ItemsSource` and `BindableLayout.ItemTemplate` properties.
 

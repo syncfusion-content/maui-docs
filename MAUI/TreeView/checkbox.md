@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Checkbox in .NET MAUI TreeView (SfTreeView)
+# Checkbox in .NET MAUI TreeView
 
 The `SfTreeView` provides built-in checkbox support for each node, enabling users to check or uncheck the corresponding node.
 

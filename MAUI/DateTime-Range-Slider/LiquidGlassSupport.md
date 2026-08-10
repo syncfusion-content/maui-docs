@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime RangeSlider | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
-platform: MAUI
+title: Liquid Glass Effect in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI DateTime Range Slider for a modern, translucent experience.
+platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI DateTimeRangeSlider
+# Liquid Glass Effect in .NET MAUI DateTime Range Slider
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
 

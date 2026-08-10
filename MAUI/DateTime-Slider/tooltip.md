@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Tooltip in .NET MAUI DateTime Slider | Syncfusion®
+description: Learn how to enable and customize tooltips in the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Slider (SfDateTimeSlider)
+# Tooltip in .NET MAUI DateTime Slider
 
 This section helps to learn about how to add tooltip in the DateTime Slider.
 

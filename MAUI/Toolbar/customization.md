@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+title: Customization in .NET MAUI Toolbar | Syncfusion®
+description: Learn how to customize the appearance and behavior of Syncfusion® .NET MAUI Toolbar (SfToolbar) control items and styling.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Customization in .NET MAUI Toolbar (SfToolbar)
+# Customization in .NET MAUI Toolbar
 
 This section explains the ways about support for customization in syncfusion .NET MAUI Toolbar (SfToolbar) control.
 

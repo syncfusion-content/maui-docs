@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Empty view in .NET MAUI ListView (SfListView)
+# Empty view in .NET MAUI ListView
 
 The `SfListView` allows you to display and customize empty view content when there is no data available, using the following properties:
 

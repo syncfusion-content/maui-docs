@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Selector control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfRangeSelector) control.
+title: Getting Started with .NET MAUI Range Selector | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Range Selector control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfRangeSelector
 documentation: ug

@@ -7,7 +7,7 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Tooltip in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to add tooltip in the DateTime Range Slider.
 
@@ -133,4 +133,3 @@ rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 {% endtabs %}
 
 ![RangeSlider tooltip style](images/tooltip/tooltip-style.png)
-
