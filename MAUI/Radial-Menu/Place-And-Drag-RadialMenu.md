@@ -7,7 +7,7 @@ control: SfRadialMenu
 documentation: UG
 ---
 
-# Placing and Dragging in .NET MAUI Radial Menu (SfRadialMenu)
+# Placing and Dragging in .NET MAUI Radial Menu
 
 You can place the Radial Menu anywhere on its parent layout and drag it within that layout. The default position is the center of the parent; set the [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Point) property to override that. Enable dragging with the [IsDragEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsDragEnabled) property and react to drag start / end with the [DragBegin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) and [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragEnd) events.
 

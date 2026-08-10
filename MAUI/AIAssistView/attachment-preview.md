@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Attachment Preview Editor in .NET MAUI AI AssistView | Syncfusion®
-description: Learn how to preview attachments in the Syncfusion .NET MAUI AI AssistView (SfAIAssistView) using the Attachments property to display files and images.
+title: Attachment Preview in .NET MAUI AI AssistView | Syncfusion®
+description: Learn how to work with attachments in Syncfusion® .NET MAUI AI AssistView. It supports data operations, UI customization, and enterprise features.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Preview Attachments in .NET MAUI SfAIAssistView Editor?
+# Working with Attachment Preview in .NET MAUI AI AssistView
 
 Previewing attachments in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) editor allows users to view files and images before sending them. This improves usability by providing a clear representation of the attached content within the chat interface.
 
@@ -132,7 +132,7 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
                            Attachments = "{Binding Attachments}"
                            MaxAttachmentCount = 8/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# hl_lines="12" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -203,7 +203,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
                            Attachments = "{Binding Attachments}"
                            AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}"/>
 {% endhighlight %}
-{% highlight c#  hl_lines="12" %}
+{% highlight c# hl_lines="12" %}
 using Syncfusion.Maui.AIAssistView;
 
 public partial class MainPage : ContentPage

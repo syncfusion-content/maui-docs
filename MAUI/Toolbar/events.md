@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events and Commands support in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn about Events and Commands support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless interactions.
+title: Events in .NET MAUI Toolbar | Syncfusion®
+description: Learn about events and commands in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless user interactions.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Events in .NET MAUI Toolbar (SfToolbar)
+# Events in .NET MAUI Toolbar
 
 The Toolbar supports the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped), [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction), [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressed), [MoreItemsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged), and [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped) events to interact with .NET MAUI Toolbar.
 

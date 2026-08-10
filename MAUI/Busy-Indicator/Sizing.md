@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sizing in .NET MAUI Busy Indicator Control | Syncfusion®
-description: Learn here all about Sizing support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Sizing in .NET MAUI Busy Indicator | Syncfusion®
+description: Learn here all about sizing support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator size, maui busy indicator size
 ---
-# Sizing in .NET MAUI Busy Indicator (SfBusyIndicator)
+# Sizing in .NET MAUI Busy Indicator
 
 The `.NET MAUI Busy Indicator` allows you customize the size of the indicator using the [SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_SizeFactor) property. It sets both the height and width of the indicator. The default value is `0.5`, and the valid range is `0` to `1` (where `0` is the smallest and `1` is the largest).
 

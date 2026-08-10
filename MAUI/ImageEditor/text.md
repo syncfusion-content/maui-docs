@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text annotation in .NET MAUI Image Editor control | Syncfusion®
-description: Learn here all about the text annotation feature of Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
+title: Text Annotations in .NET MAUI Image Editor | Syncfusion®
+description: Text annotations in the Syncfusion® .NET MAUI Image Editor enable adding and customizing text with various styles, colors, and formatting options
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Text annotation in .NET MAUI Image Editor (SfImageEditor)
+# Text Annotations in .NET MAUI Image Editor
 
 The .NET MAUI Image Editor allows you to add text using the [`AddText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddText_System_String_Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_) method with customizable settings.
 

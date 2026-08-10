@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Appearance in .NET MAUI TreeView (SfTreeView)
+# Appearance in .NET MAUI TreeView
 
 The `SfTreeView` allows customizing the appearance of the underlying data and provides different functionalities to the end user.
 

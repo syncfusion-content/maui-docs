@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in .NET MAUI Kanban control | Syncfusion
-description: Learn here all about Localization support in Syncfusion® .NET MAUI Kanban (SfKanban) control and more.
+title: Localization in .NET MAUI Kanban Board | Syncfusion
+description: Learn about Localization support in Syncfusion® .NET MAUI Kanban Board by using .resx resource files and culture-specific resources
 platform: maui
 control: Kanban
 documentation: ug
 keywords: .net maui Kanban localization, sfKanban localization in .net maui, .net maui Kanban localization support, .net maui Kanban language settings, maui Kanban language support.
 ---
 
-# Localization in .NET MAUI Kanban (SfKanban)
+# Localization in .NET MAUI Kanban Board
 
 Localization is the process of translating application resources for specific cultures. The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) can be localized by adding `.resx` resource files.
 

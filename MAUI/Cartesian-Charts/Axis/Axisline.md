@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Axis line in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about the chart axis line and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Axis Line in .NET MAUI Cartesian Chart | Syncfusion®
+description: Axis Line in .NET MAUI Cartesian Chart defines the visual representation of chart axes, helping organize data and improve chart readability.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart axis line, .net maui chart axis customization, .net maui chart axisline guide, maui chart axis line settings, syncfusion maui chart axis line, .net maui chart axis styling, customize axis line .net maui chart.
 ---
 
-# Axis line in .NET MAUI Cartesian Chart
+# Axis Line in .NET MAUI Cartesian Chart
 
 The axis line in .NET MAUI Cartesian Chart visually represents the axis itself in the chart area. You can customize its appearance, including stroke color, width, and dash patterns, using the [AxisLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AxisLineStyle) property. Additionally, you can control the spacing between the axis and the chart area using the [AxisLineOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AxisLineOffset) property.
 

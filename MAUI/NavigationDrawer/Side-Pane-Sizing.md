@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Side Pane Sizing in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Side Pane Sizing in .NET MAUI Navigation Drawer
 
 The size of the side pane is controlled by the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) and [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) properties of `DrawerSettings`. The property that takes effect depends on the drawer's `Position`.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Chat Control | Syncfusion®
-description: Learn here all about Introduction of the Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
+description: Learn here all about introduction of the Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: Chat
 documentation: ug

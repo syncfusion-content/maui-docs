@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI PullToRefresh control | Syncfusion®
-description: Learn about customization features support in Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
+title: Customization in .NET MAUI Pull to Refresh control | Syncfusion®
+description: Learn here all about customization features support in Syncfusion® .NET MAUI Pull to Refresh (SfPullToRefresh) control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---
 
-# Customization in .NET MAUI PullToRefresh (SfPullToRefresh)
+# Customization in .NET MAUI Pull to Refresh
 
 The .NET MAUI PullToRefresh control supports customization of various features, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. The control can be personalized using the following properties.
 

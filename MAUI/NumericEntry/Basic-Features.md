@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic Features in .NET MAUI NumericEntry control | Syncfusion®
-description: Learn about the basic features of the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
+title: Basic Features in .NET MAUI Numeric Entry | Syncfusion®
+description: Learn about the basic features in the Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control and more.
 platform: maui
 control: SfNumericEntry
 documentation: ug
 ---
 
-# Basic Features in .NET MAUI Numeric Entry (SfNumericEntry)
+# Basic Features in .NET MAUI Numeric Entry
 
 ## Prerequisites
 

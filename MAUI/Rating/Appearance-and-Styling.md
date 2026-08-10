@@ -1,15 +1,15 @@
 ---
 
 layout: post
-title: Appearance and Styling in .NET MAUI Rating control | Syncfusion®
-description: Learn about customizing item size, item count, item spacing, value, and rating settings in the Syncfusion® .NET MAUI Rating (SfRating) control.
+title: Appearance and Styling in .NET MAUI Rating | Syncfusion®
+description: Learn about customizing item size, item count, item spacing, value, and rating settings in the Syncfusion® .NET MAUI Rating control.
 platform: maui
 control: Rating
 documentation: ug
 
 ---
 
-# Appearance and Styling in .NET MAUI Rating (SfRating)
+# Appearance and Styling in .NET MAUI Rating
 
 ## Prerequisites
 

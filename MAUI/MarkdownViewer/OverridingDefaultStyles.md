@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apply CSS Style Rules in .NET MAUI Markdown Viewer | Syncfusion®
+title: How to Apply CSS Style in .NET MAUI Markdown Viewer | Syncfusion®
 description: Learn how to override the default appearance of markdown content using custom CSS in the Syncfusion® .NET MAUI Markdown Viewer control.
 platform: MAUI
 control: SfMarkdownViewer
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui markdownviewer css, syncfusion markdownviewer custom css maui, sfmarkdownviewer css style rules maui, .net maui markdown style override, markdownviewer webkit scrollbar maui, .net maui markdownviewer table css
 ---
 
-# Apply CSS Style in .NET MAUI Markdown Viewer (SfMarkdownViewer)
+# How to Apply CSS Style in .NET MAUI Markdown Viewer
 
 The [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control comes with a set of built-in default styles that ensure markdown content is rendered cleanly and consistently across platforms. However, in many real-world applications, developers may need to override these defaults to match their app's branding, improve readability, or create a custom visual experience.
 

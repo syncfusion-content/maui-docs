@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events and Methods in .NET MAUI SignaturePad control | Syncfusion®
-description: Learn here about Events and Methods in .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
+title: Events and Methods in .NET MAUI Signature Pad | Syncfusion®
+description: Learn here about Events and Methods in .NET MAUI Signature Pad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Events and Methods in .NET MAUI SignaturePad
+# Events and Methods in .NET MAUI Signature Pad
 
 This section covers the events and methods exposed by the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI-Powered Smart Searching in SfCombobox Control | Syncfusion®
-description: Learn about how to implement AI-powered smart search using Syncfusion® .NET MAUI Combobox control(SfCombobox). 
+title: AI-Powered Smart Searching in .NET MAUI ComboBox | Syncfusion®
+description: Learn about how to implement AI-powered smart search using Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfCombobox
 documentation: ug
 ---
 
-# Implementing AI-Powered Smart Search in .NET MAUI ComboBox
+# AI-Powered Smart Searching in .NET MAUI ComboBox 
 
 This article walks you through the implementation of an advanced search experience in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The example uses Azure OpenAI to provide an intelligent, AI-driven search experience.
 

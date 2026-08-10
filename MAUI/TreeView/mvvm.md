@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Working with MVVM in .NET MAUI TreeView (SfTreeView)
+# Working with MVVM in .NET MAUI TreeView
 
 This section explains about how to work with MVVM pattern in TreeView.
 
@@ -103,7 +103,7 @@ The TreeView supports selecting multiple items by binding the [SelectedItems](ht
                        ChildPropertyName="States"
                        ItemsSource="{Binding CountriesInfo}" />
 {% endhighlight %}
-{% highlight c#  hl_lines="11" %}
+{% highlight c# hl_lines="11" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.TreeView;
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in MAUI Cards control | Syncfusion<sup>&reg;</sup>
-description: Learn about Customization support in Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements and more.
+title: Customization in .NET MAUI Cards | Syncfusion®
+description: Discover customization options for Syncfusion® .NET MAUI Cards (SfCards) control. Learn about styling, appearance, and configuration options.
 platform: MAUI
 control: Cards
 documentation: ug
 ---
 
-# Customization in MAUI Cards
+# Customization in .NET MAUI Cards
 
 ## ShowSwipedCard
 

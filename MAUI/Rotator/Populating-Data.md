@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populating Data in .NET MAUI Rotator control | Syncfusion®
+title: Populating Data in .NET MAUI Rotator | Syncfusion®
 description: Learn about the Populating Data support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Populating Data in .NET MAUI Rotator (SfRotator)
+# Populating Data in .NET MAUI Rotator
 
 The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
 

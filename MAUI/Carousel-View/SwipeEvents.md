@@ -1,13 +1,13 @@
 ﻿---
 layout: post
-title: Swipe Events in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about Swipe Events support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title: Swipe Events in .NET MAUI Carousel | Syncfusion®
+description: Learn here all about swipe event support in Syncfusion® .NET MAUI Carousel (SfCarousel) control and more.
 platform: maui
 control: Carousel
 documentation: ug
 ---
 
-# Swipe Events in .NET MAUI Carousel View (SfCarousel)
+# Swipe Events in .NET MAUI Carousel
 
 ## Overview
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping the editors in .NET MAUI DataForm control | Syncfusion
-description: Learn about the grouping support in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Grouping in .NET MAUI DataForm | Syncfusion®
+description: Learn about grouping editor support in Syncfusion® .NET MAUI DataForm (SfDataForm) to organize related fields and enhance data entry experience.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Grouping the editors in .NET MAUI DataForm (SfDataForm)
+# Grouping in .NET MAUI DataForm
 
 The .NET MAUI DataForm supports the grouping of the editors, which are relevant to each other. Expand or collapse the group by tapping the group item.
 

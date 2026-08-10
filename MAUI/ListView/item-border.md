@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Item Border Customization in .NET MAUI ListView (SfListView)
+# Item Border Customization in .NET MAUI ListView
 
 This section explains how to customize item borders in the `.NET MAUI ListView` (SfListView) using the built-in APIs.
 

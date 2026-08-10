@@ -1,14 +1,14 @@
 ---
 layout: post
 title: States and Colors in .NET MAUI Text Input Layout | Syncfusion®
-description: Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in Text Input Layout.
+description: Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in .NET MAUI Text Input Layout.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout states and colors, syncfusion text input layout stroke maui, sftextinputlayout visual state manager maui, .net maui textinputlayout container background, sftextinputlayout isenabled maui, sftextinputlayout labelstyle textcolor maui
 ---
 
-# States and Colors in .NET MAUI Text Input Layout (SfTextInputLayout)
+# States and Colors in .NET MAUI Text Input Layout
 
 Customize the appearance of [Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting stroke and background colors, applying visual states, and styling the labels. This page covers the following customization points:
 

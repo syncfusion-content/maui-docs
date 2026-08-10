@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI AI AssistView Control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-ai-assistview"
-description: Learn here about getting started with the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+description: Learn here about getting started with the Syncfusion® .NET MAUI AI AssistView control. It supports data operations, UI customization, and enterprise features.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug

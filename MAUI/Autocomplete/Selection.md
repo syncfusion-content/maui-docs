@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to configure single and multiple selection and related APIs in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+title: Selection in .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to configure single and multiple selection and related APIs in the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Selection in .NET MAUI Autocomplete (SfAutocomplete)
+# Selection in .NET MAUI Autocomplete
 
 ## Prerequisites
 

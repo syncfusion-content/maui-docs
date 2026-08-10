@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Side Pane Content in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Side Pane Content in .NET MAUI Navigation Drawer
 
 The side pane of the [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) is only visible when the drawer is open. The side pane is composed of three regions that stack vertically from top to bottom:
 

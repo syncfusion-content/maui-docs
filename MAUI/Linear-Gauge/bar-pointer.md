@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Pointer in .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn here all about adding and customizing Bar Pointer of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Bar Pointer in .NET MAUI Linear Gauge | Syncfusion®
+description: Bar Pointer in .NET MAUI Linear Gauge represents values using a filled bar along the gauge scale, enabling clear and intuitive data visualization.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Bar Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
+# Bar Pointer in .NET MAUI Linear Gauge
 
 A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the scale track. The bar pointers always start from the minimum value of the scale and end with the specified value. Therefore, the [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearPointer.html#Syncfusion_Maui_Gauges_LinearPointer_Value) property is a required parameter for creating a bar pointer. Multiple bar pointers can be added to a single gauge.
 

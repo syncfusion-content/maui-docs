@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Swiping in .NET MAUI DataGrid control | Syncfusion®
-description: Learn here all about Swiping support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
+title: Swiping in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to enable and customize swiping in Syncfusion® .NET MAUI DataGrid to perform actions on rows using intuitive swipe gestures.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui swiping, maui swiping
 ---
 
-# Swiping in MAUI DataGrid (SfDataGrid)
+# Swiping in .NET MAUI DataGrid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables the swiping option by setting the [SfDataGrid.AllowSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSwiping) property to `true`. Swipe views are displayed when swiping left-to-right (swipe right) or right-to-left (swipe left) on a data row. The control provides customizable swipe templates for both the left and right sides. Additionally, the swipe gesture can be restricted to a certain point on the row by setting the [SfDataGrid.MaxSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxSwipeOffset) property.
 

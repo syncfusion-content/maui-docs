@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure the Appearance of Tab Item in Syncfusion® .NET MAUI Tab View
-description: Learn all about color and font customization in the Syncfusion® .NET MAUI Tab View (SfTabView) control.
+title: Customize Tab Item Appearance in .NET MAUI Tab View | Syncfusion®
+description: Learn all about the appearance customization of Tab Item in the Syncfusion® .NET MAUI Tab View control.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Configure the Appearance of a Tab Item in .NET MAUI Tab View
+# Customize the Appearance of Tab Item in .NET MAUI Tab View
 
 A tab item in the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) consists of various elements that can be customized to match your application's design requirements. The control provides extensive appearance customization options, including text color, font attributes, image position, badge appearance,and animation duration. These customization capabilities allow you to create visually appealing and interactive tab navigation experiences.
 

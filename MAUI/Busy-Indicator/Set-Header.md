@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set Header in .NET MAUI Busy Indicator Control | Syncfusion®
-description: Learn here all about Set Header support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Set Header in .NET MAUI Busy Indicator | Syncfusion®
+description: Learn here all about set header support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator title, maui busy indicator title, maui busy indicator header, maui busy indicator title placement
 ---
 
-# Set Header in .NET MAUI Busy Indicator (SfBusyIndicator)
+# Set Header in .NET MAUI Busy Indicator
 
 The Syncfusion<sup>®</sup> [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) allows you display a title and customize its font. This section covers the title, its color, placement, spacing, and font customization.
 

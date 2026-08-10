@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Liquid Glass Support for AI-Powered Text Editor | Syncfusion®
-description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI AI-Powered Text Editor using SfGlassEffectsView.
+title: Liquid Glass Effect in .NET MAUI SmartTextEditor | Syncfusion®
+description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Smart Text Editor control for modern translucent design.
 platform: MAUI
 control: SfSmartTextEditor
 documentation: ug

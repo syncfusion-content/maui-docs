@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Selection Effect | Effects View Control | Syncfusion®
+title: Selection Effect in .NET MAUI Effects View | Syncfusion®
 description: Learn about the selection effect in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Selection Effect in .NET MAUI Effects View (SfEffectsView)
+# Selection Effect in .NET MAUI Effects View
 
 The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) effect applies a smooth color transition to the background of the `Effects View` to indicate the selected or unselected state. Use it to give users clear visual feedback when an item is chosen, for example in a list or grid.
 

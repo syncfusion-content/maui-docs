@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Item Height Customization in .NET MAUI TreeView (SfTreeView)
+# Item Height Customization in .NET MAUI TreeView
 
 The TreeView offers several options for customizing the height of items. The following sections describe each option.
 

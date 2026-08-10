@@ -1,14 +1,14 @@
 ---
 
 layout: post
-title: About .NET MAUI Rating control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
+title: About Syncfusion® .NET MAUI Rating Control | Syncfusion®
+description: Learn here all about the introduction of Syncfusion® Essential Studio .NET MAUI Rating control, its elements and more.
 platform: maui
 control: Rating
 documentation: ug
 
 ---
-# .NET MAUI Rating (SfRating) Overview
+# About Syncfusion® .NET MAUI Rating Control
 
 The Syncfusion® [.NET MAUI Rating](https://www.syncfusion.com/maui-controls/maui-rating) (SfRating) control provides the number of stars that represents a rating. Also used to configure the item size, item spacing and the number of displayed items in the SfRating control. Essential .NET MAUI Rating control can be used in various scenarios like movie rating, rating the application etc.
 
@@ -49,6 +49,10 @@ The following table summarizes the globalization support available in this contr
 </span>
 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
 </div>
@@ -67,8 +71,8 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 

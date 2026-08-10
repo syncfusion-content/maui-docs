@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Sorting in .NET MAUI ListView (SfListView)
+# Sorting in .NET MAUI ListView
 
 The `SfListView` supports sorting the data either in ascending or descending order by using the [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) property or custom logic.
 

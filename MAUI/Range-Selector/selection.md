@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Range Selection in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to configure range selection behavior in the Syncfusion® .NET MAUI Range Selector control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Range selection in .NET MAUI Range Selector (SfRangeSelector)
+# Range Selection in .NET MAUI Range Selector
 
 This section helps to learn about the range selection in the Range Selector.
 

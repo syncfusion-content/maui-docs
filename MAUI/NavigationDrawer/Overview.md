@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Navigation Drawer Control | Syncfusion®
-description: Learn about introduction of the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
+title: About Syncfusion® .NET MAUI Navigation Drawer Control | Syncfusion®
+description: Learn about introduction of the Syncfusion® Essential Studio .NET MAUI Navigation Drawer control, its elements, and more.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---
 
-# .NET MAUI Navigation Drawer (SfNavigationDrawer) Overview
+# About Syncfusion® .NET MAUI Navigation Drawer Control
 
 The Syncfusion® [.NET MAUI Navigation Drawer](https://www.syncfusion.com/maui-controls/maui-navigationdrawer) is a simpler component for creating a navigation pane in your application. It consists of a content area and a sliding pane that extends from the edge of the page. The pane can be opened either by swiping from the screen edges or programmatically.
 

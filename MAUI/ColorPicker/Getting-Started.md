@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with the .NET MAUI Color Picker Control | Syncfusion®
+title: Getting Started with the .NET MAUI Color Picker | Syncfusion®
 description: Learn about getting started with the Syncfusion® .NET MAUI Color Picker (SfColorPicker) control, its elements, and more.
 platform: MAUI
 control: SfColorPicker

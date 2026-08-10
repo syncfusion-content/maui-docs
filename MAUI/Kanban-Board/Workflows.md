@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Workflows in .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about Workflows support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
+title: Workflows in .NET MAUI Kanban Board | Syncfusion
+description: Learn about Workflows support in Syncfusion® .NET MAUI Kanban Board to control card transitions and restrict drag-and-drop operations between columns.
 platform: maui
 control: Kanban
 documentation: ug
 ---
 
-# Workflows in .NET MAUI Kanban Board (SfKanban)
+# Workflows in .NET MAUI Kanban Board
 
 Use workflows to define the allowed transitions of cards between columns and to restrict invalid moves. Workflows can also prevent drag-and-drop actions on specific columns (for finer control, use [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrag) and [`AllowDrop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrop) on `KanbanColumn`; see [Column](Column.md) for details).
 

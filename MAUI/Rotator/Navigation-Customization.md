@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigation Customization in .NET MAUI Rotator control | Syncfusion®
-description: Learn about Navigation Customization support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+title: Navigation Customization in .NET MAUI Rotator | Syncfusion®
+description: Learn about navigation customization support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Navigation Customization in .NET MAUI Rotator (SfRotator)
+# Navigation Customization in .NET MAUI Rotator
 
 ## Overview
 

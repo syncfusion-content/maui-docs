@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 --- 
 
-# Styles in .NET MAUI Popup (SfPopup)
+# Styles in .NET MAUI Popup
 
 The `SfPopup` applies style to all of its elements by using the [PopupStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html) property.
 

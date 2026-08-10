@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track in .NET MAUI DateTime Range Slider control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Track in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to customize the track in the .NET MAUI DateTime Range Slider, including active/inactive fills, sizes, extent, orientation, and disabled states.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Track in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to customize the track in the DateTime Range Slider.
 
@@ -27,13 +27,13 @@ It represents the values currently selected in the DateTime Range Slider. The th
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2020-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2018-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2020-01-01"
+                               RangeStart="2012-01-01"
+                               RangeEnd="2018-01-01"
                                ShowLabels="True">
 </sliders:SfDateTimeRangeSlider>
- 
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -63,11 +63,11 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-  
+
   <sliders:SfDateTimeRangeSlider.TrackStyle>
       <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
   </sliders:SfDateTimeRangeSlider.TrackStyle>
@@ -100,11 +100,11 @@ Change the active and inactive track height using the [`ActiveSize`](https://hel
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.TrackStyle>
       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
    </sliders:SfDateTimeRangeSlider.TrackStyle>
@@ -311,14 +311,14 @@ The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sf
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01"
-                               ShowTicks="True" 
+                               ShowTicks="True"
                                ShowLabels="True"
-                               Interval="2" 
-                               MinorTicksPerInterval="1" 
+                               Interval="2"
+                               MinorTicksPerInterval="1"
                                Orientation="Vertical">
 </sliders:SfDateTimeRangeSlider>
 
@@ -351,14 +351,14 @@ Invert the DateTime Range Slider using the [IsInversed](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01"
-                               Interval="2" 
+                               Interval="2"
                                ShowTicks="True"
-                               ShowLabels="True"  
-                               MinorTicksPerInterval="1" 
+                               ShowLabels="True"
+                               MinorTicksPerInterval="1"
                                IsInversed="True">
 </sliders:SfDateTimeRangeSlider>
 

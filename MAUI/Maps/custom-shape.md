@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom Shapes in .NET MAUI Maps Control | Syncfusion®
-description: Learn here all about the custom shapes feature of Syncfusion® .NET MAUI Maps (SfMaps) control, its features, and more.
+title: Custom Shapes in .NET MAUI Maps | Syncfusion®
+description: Custom Shapes in .NET MAUI Maps enable personalized geographic visualizations using custom shape data, improving map representation and spatial analysis.
 platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui shape maps
 ---
 
-# Custom shapes in .NET MAUI Maps (SfMaps)
+# Custom Shapes in .NET MAUI Maps
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **.NET MAUI Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 
