@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Popup control | Syncfusion®
-canonical_url: "https://www.syncfusion.com/maui-controls/maui-popup"
 description: Learn here about getting started with Syncfusion® .NET MAUI Popup (SfPopup) control, its elements and more.
 platform: MAUI
 control: SfPopup
