@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Switch | Syncfusion®
-description: Learn about getting started with the Syncfusion® .NET MAUI Switch (SfSwitch) control, its elements, and more.
+description: Learn how to get started with the Syncfusion® .NET MAUI Switch (SfSwitch) control, its elements, and more.
 platform: MAUI
 control: SfSwitch
 documentation: UG

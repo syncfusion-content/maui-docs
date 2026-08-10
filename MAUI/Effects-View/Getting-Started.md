@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Effects View Control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Effects View (SfEffectsView) control, its elements, and more.
+title: Getting Started with .NET MAUI Effects View | Syncfusion®
+description: Learn how to get started with Syncfusion® .NET MAUI Effects View (SfEffectsView) control, its elements, and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG

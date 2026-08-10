@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Customization in .NET MAUI Color Picker | Syncfusion®
-description: This section explains how to customize the Syncfusion® .NET MAUI Color Picker control (SfColorPicker).
+description: This section explains how to customize the Syncfusion® .NET MAUI Color Picker control (SfColorPicker), and more.
 platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker customization, maui color picker customization
 ---
 
-# Customization in .NET MAUI Color Picker (SfColorPicker)
+# Customization in .NET MAUI Color Picker
 
 This section explains how to customize the appearance and behavior of the [.NET MAUI Color Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control, including the default selected color, the visibility of UI elements, action button appearance, palette layout, label styles, slider thumb, and popup placement. 
 

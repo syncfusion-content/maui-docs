@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chips Types in .NET MAUI Chips (SfChipGroup) control | Syncfusion®
-description: Learn about the four ChipType values (Input, Choice, Filter, Action) supported by the Syncfusion® .NET MAUI Chips (SfChipGroup) control.
+title: Chips Types in .NET MAUI Chips | Syncfusion®
+description: Learn about the four ChipType values (Input, Choice, Filter, Action) supported by the Syncfusion® .NET MAUI Chips control.
 platform: maui
 control: Chips
 documentation: ug
 ---
 
-# Chips Types in .NET MAUI Chips (SfChipGroup)
+# Chips Types in .NET MAUI Chips
 
 [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports four `ChipType` values that determine how users interact with the Chips. Use the table below to choose the type that matches your scenario.
 

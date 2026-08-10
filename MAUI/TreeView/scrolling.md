@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Scrolling in .NET MAUI TreeView (SfTreeView)
+# Scrolling in .NET MAUI TreeView
 
 The `SfTreeView` provides various options to achieve programmatic scrolling. The following sections detail each option.
 

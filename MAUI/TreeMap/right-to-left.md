@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Right to left (RTL) support in .NET MAUI TreeMap Control | Syncfusion®
-description: Learn here all about the flow direction feature of Syncfusion® .NET MAUI TreeMap (SfTreeMap) control.
+title: Right To Left in .NET MAUI TreeMap | Syncfusion®
+description: Right To Left in .NET MAUI TreeMap supports RTL layouts for hierarchical data visualization, improving usability for right-to-left language users.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI TreeMap (SfTreeMap)
+# Right To Left in .NET MAUI TreeMap
 
 SfTreeMap supports changing the flow to the right-to-left direction by setting the `FlowDirection` to RightToLeft.
 

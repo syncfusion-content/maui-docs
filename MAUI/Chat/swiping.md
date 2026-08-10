@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Swiping in .NET MAUI Chat (SfChat)
+# Swiping in .NET MAUI Chat
 
 In `SfChat`, you can enable swiping by setting the [AllowSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowSwiping) property to `true`. When you swipe a message left or right, a customizable swipe view is revealed on that side. You can also limit how far you can swipe on a message by setting the [MaxSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MaxSwipeOffset) property.
 

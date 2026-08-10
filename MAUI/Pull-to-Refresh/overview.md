@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI PullToRefresh control | Syncfusion®
-description: Learn about the introduction of Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control, its elements and more.
+title: Overview about .NET MAUI Pull to Refresh control | Syncfusion®
+description: Learn about the introduction of Syncfusion® .NET MAUI Pull to Refresh (SfPullToRefresh) control, its elements and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---
 
-# Overview of .NET MAUI PullToRefresh
+# Overview of .NET MAUI Pull to Refresh
 
 Syncfusion® [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) is a refresh control that enables users to interact with and refresh content using a pull gesture. The control displays a progress indicator as the user pulls the content. Once the configured pull threshold is reached and the gesture is released, the refresh action is triggered.
 
@@ -73,55 +73,6 @@ Display custom UI elements during pulling and refreshing operations using:
 - `RefreshingView`
 
 These template-based properties enable you to replace the default refresh visuals with custom content and branding.
-
-## Globalization
-
-The following table summarizes globalization and accessibility support available in this control.
-
-<style>
-.img{
-  margin:0 !important;
-}
-
-.legend{
-  display: inline-flex !important;
-  flex-direction: row !important; 
-  gap: 16px !important;
-}
-</style>
-
-<div class="legend">
-<span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/full-support.svg" width="16"> Full Support
-</span>
- 
-<span style="display: inline-flex; align-items: center; gap: 6px;">
-<img src="../Images/not-applicable.svg" width="16"> Not Applicable
-</span>
-</div>
-
-<table>
-<tr>
-<th align="center">Control</th>
-<th align="center">Localization</th>
-<th align="center">RTL</th>
-<th align="center">Time zone</th>
-<th align="center">Screen reader</th>
-<th align="center">Keyboard navigation</th>
-</tr>
-<tr>
-<td><a href="/maui/pull-to-refresh/overview">Pull To Refresh</a></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
-</table>
-
-### RTL Support
-
-`SfPullToRefresh` provides RTL (Right-to-Left) layout support. RTL support applies to the control's layout and interaction behavior when the application flow direction is configured for right-to-left languages.
 
 ### Accessibility testing
 

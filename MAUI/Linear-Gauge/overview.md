@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
+title: About Syncfusion® .NET MAUI Linear Gauge Control | Syncfusion®
+description: Learn about the overview of Syncfusion® .NET MAUI Linear Gauge control, including scales, pointers, ranges, labels, and customization features.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Overview of .NET MAUI Linear Gauge
+# About Syncfusion® .NET MAUI Linear Gauge Control
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the [.NET MAUI Linear Gauge](https://help.syncfusion.com/maui/linear-gauge/getting-started) control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping in .NET MAUI Radio Button Control | Syncfusion®
+title: Grouping in .NET MAUI Radio Button | Syncfusion®
 description: Learn about grouping support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control and more.
 platform: MAUI
 control: SfRadioButton
@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui radio button, maui radio button, maui radio button group, maui radio button grouping, maui radio group.
 ---
 
-# Grouping in .NET MAUI Radio Button (SfRadioButton)
+# Grouping in .NET MAUI Radio Button
 
 The [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control supports two approaches for grouping a set of Radio Buttons so that only one is selected at a time:
 

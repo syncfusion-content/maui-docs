@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Visual States in .NET MAUI Button Control | Syncfusion®
-description: Learn about visual states support in the Syncfusion® .NET MAUI Button (SfButton) control and how to customize each state.
+title: Visual States in .NET MAUI Button | Syncfusion®
+description: Learn about visual states support in the Syncfusion® .NET MAUI Button control and how to customize each state.
 platform: maui
 control: SfButton
 documentation: ug
 ---
 
-# Visual States in .NET MAUI Button (SfButton)
+# Visual States in .NET MAUI Button
 
 Visual states let you change the appearance of [.NET MAUI Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
 

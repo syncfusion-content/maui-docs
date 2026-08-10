@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Buttons | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Buttons (SfButton) control.
+title: Liquid Glass Effect in .NET MAUI Button | Syncfusion®
+description: Learn how to enable and customize the liquid glass effect in the Syncfusion® .NET MAUI Button control.
 platform: maui
 control: SfButton
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Buttons (SfButton)
+# Liquid Glass Effect in .NET MAUI Button
 
 ## Prerequisites
 

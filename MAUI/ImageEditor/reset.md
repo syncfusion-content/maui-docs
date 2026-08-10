@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reset an image in .NET MAUI Image Editor Control | Syncfusion®
-description: Learn here all about the reset support in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
+title: Reset in .NET MAUI Image Editor | Syncfusion®
+description: Learn about the reset support in Syncfusion® .NET MAUI Image Editor control to revert edited images to their original state.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Reset an image using the .NET MAUI Image Editor (SfImageEditor)
+# Reset in .NET MAUI Image Editor
 
 The .NET MAUI Image Editor allows you to reset the edited image to the originally loaded image.
 

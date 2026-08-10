@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Autocomplete | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+title: Liquid Glass Effect in .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Autocomplete (SfAutocomplete)
+# Liquid Glass Effect in .NET MAUI Autocomplete
 
 ## Prerequisites
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI DataGrid Control | Syncfusion®
-description: Learn here all about localization support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Localization in .NET MAUI DataGrid | Syncfusion®
+description: Learn how to localize Syncfusion® .NET MAUI DataGrid by translating built-in text and adapting the DataGrid for different languages and regions.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# Localization in .NET MAUI DataGrid (SfDataGrid)
+# Localization in .NET MAUI DataGrid
 
 Localization is the process of translating application resources into different languages for specific cultures. The `SfDataGrid` can be localized by adding resource files. The following strings in `SfDataGrid` can be localized:
 
@@ -98,6 +98,6 @@ public partial class App : Application
 
 ### Activation and Behavior
 
-After configuration, the DataGrid will use localized strings when the application starts. Localization applies immediately based on the `CurrentUICulture` set in the App constructor. If a translated string is missing from a culture-specific resource file, the DataGrid will fall back to the neutral culture resource (SfDataGrid.resx) or use the hardcoded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.
+After configuration, the DataGrid will use localized strings when the application starts. Localization applies immediately based on the `CurrentUICulture` set in the App constructor. If a translated string is missing from a culture-specific resource file, the DataGrid will fall back to the neutral culture resource (SfDataGrid.resx) or use the hard coded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.
 
 <img alt="DataGrid with localized 'Load More' button in French" src="Images\localization\maui-datagrid-localization.png" width="404"/>

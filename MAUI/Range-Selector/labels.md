@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Labels in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to show and customize labels in the Syncfusion® .NET MAUI Range Selector control for better value guidance.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Labels in .NET MAUI Range Selector (SfRangeSelector)
+# Labels in .NET MAUI Range Selector
 
 This section explains how to add the labels in the Range Selector.
 

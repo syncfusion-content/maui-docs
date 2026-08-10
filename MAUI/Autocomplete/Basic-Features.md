@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic Features in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn about the basic feature support in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control, including selection, text, and automation ID support.
+title: Basic Features in .NET MAUI Autocomplete | Syncfusion®
+description: Learn about the basic feature support in the Syncfusion® .NET MAUI Autocomplete, including selection, text, and automation ID support.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Basic Features with .NET MAUI Autocomplete (SfAutocomplete)
+# Basic Features in .NET MAUI Autocomplete
 
 ## Prerequisites
 

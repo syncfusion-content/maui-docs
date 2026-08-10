@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layout in .NET MAUI Segmented Control | Syncfusion
-description: Learn about the Layout support Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
+title: Layout in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about layout support to customize width, height, and the number of visible segments in the .NET MAUI Segmented Control.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Layout in .NET MAUI Segmented control (SfSegmentedControl)
+# Layout in .NET MAUI Segmented Control
 The [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) supports changing the layout width, height and the number of visible segments displayed.
 
 ## Change the segment width
@@ -60,7 +60,7 @@ public partial class MainPage : ContentPage
 You can change the width of each segment item using the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_Width) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# %}
 
 using Syncfusion.Maui.Buttons;
 . . .

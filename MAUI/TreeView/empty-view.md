@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Empty view in .NET MAUI TreeView (SfTreeView)
+# Empty view in .NET MAUI TreeView
 
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control allows you to display and customize the empty view content when no data is available. The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyView) property can be set to either a string or a view. It is shown when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) is empty or null, or when the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection is empty. Use the [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyViewTemplate) property to customize the appearance of `EmptyView`.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI NumericEntry | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
+title: Liquid Glass Effect in .NET MAUI Numeric Entry | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Numeric Entry control.
 platform: maui
 control: SfNumericEntry
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Numeric Entry (SfNumericEntry)
+# Liquid Glass Effect in .NET MAUI Numeric Entry
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control.
 

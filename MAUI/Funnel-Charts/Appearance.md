@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Funnel Chart control | Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Funnel Chart (SfFunnelChart) control, its elements and more.
+title: Appearance in .NET MAUI Funnel Chart | Syncfusion®
+description: Appearance in .NET MAUI Funnel Chart allows you to customize visuals using colors, palettes and styling options.
 keywords: maui funnel chart, appearance, palette, gradient, title, customization
 platform: maui
 control: SfFunnelChart

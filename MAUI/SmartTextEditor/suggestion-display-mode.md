@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Suggestion Mode in AI-Powered Text Editor | Syncfusion®
-description: Learn about suggestion mode with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control and its basic features.
+title: Suggestion Display Mode in .NET MAUI SmartTextEditor | Syncfusion®
+description: Explore suggestion display modes in Syncfusion® .NET MAUI Smart Text Editor control with inline and popup modes for text completion display.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Choose how suggestions are displayed
+# Suggestion Display Mode in .NET MAUI Smart Text Editor
 
 The AI-Powered Text Editor supports two display modes for showing completions as you type: `Inline` and `Popup`.
 - [Inline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SuggestionDisplayMode.html#Syncfusion_Maui_SmartComponents_SuggestionDisplayMode_Inline): Renders the predicted text in place after the caret, matching your text style.

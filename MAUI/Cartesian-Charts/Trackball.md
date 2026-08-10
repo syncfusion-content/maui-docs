@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Trackball in .NET MAUI Cartesian Chart control | Syncfusion
-description: This section explains about how to enable trackball and its customization in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Trackball in .NET MAUI Cartesian Chart | Syncfusion®
+description: Trackball in .NET MAUI Cartesian Chart displays detailed information across series at a specific position, enabling precise data analysis and comparison.
 platform: maui
 control: SfCartesianChart
 documentation: ug

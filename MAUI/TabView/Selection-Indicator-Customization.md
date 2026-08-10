@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Indicator in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Customize Indicator in .NET MAUI Tab View | Syncfusion®
 description: Learn all about selection indicator customization support in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Customize the Selection Indicator in .NET MAUI Tab View (SfTabView)
+# Customize Indicator in .NET MAUI Tab View 
 
 The selection indicator in the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) highlights the currently selected tab header. It supports customizing the tab header selection indicator through properties such as [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement), [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground), [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode), [IndicatorCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorCornerRadius), and [IndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorStrokeThickness).
 

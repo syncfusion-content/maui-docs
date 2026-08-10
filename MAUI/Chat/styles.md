@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in .NET MAUI Chat control | Syncfusion®
-description: Learn here all about Styles support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
+title: Styles customization in .NET MAUI Chat control | Syncfusion®
+description: Learn here all about styles customization in Syncfusion® .NET MAUI Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Styles in .NET MAUI Chat (SfChat)
+# Styles in .NET MAUI Chat
 
 You can style the elements of the `SfChat` control by creating resource dictionaries and assigning values to the built-in keys assigned for each individual element.
 

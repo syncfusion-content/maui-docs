@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Kanban Board control | Syncfusion
-description: Learn about Events support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements, and more.
+title: Events in .NET MAUI Kanban Board | Syncfusion
+description: Learn about Events support in Syncfusion® .NET MAUI Kanban Board, including card tap interactions and drag-and-drop lifecycle events.
 platform: maui
 control: Kanban
 documentation: ug
 ---
 
-# Events in .NET MAUI Kanban Board (SfKanban)
+# Events in .NET MAUI Kanban Board
 
 ## CardTapped
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation Type in .NET MAUI Busy Indicator Control | Syncfusion®
-description: Learn here all about AnimationType support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Animation Type in .NET MAUI Busy Indicator | Syncfusion®
+description: Learn here all about animation type support in Syncfusion® .NET MAUI Busy Indicator control and more.
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator animation type, maui busy indicator animation type, maui busy indicator animation.
 ---
-# Animation Type in .NET MAUI Busy Indicator (SfBusyIndicator)
+# Animation Type in .NET MAUI Busy Indicator
 
 The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) allows users to set one of the built-in animations. By default, the animation type is `CircularMaterial`. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial), [SingleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_SingleCircle), [DoubleCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_DoubleCircle), [Globe](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Globe) and [HorizontalPulsingBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_HorizontalPulsingBox).
 

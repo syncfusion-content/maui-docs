@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Circular Progress Bar | Syncfusion®
-description: Learn all about the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar (SfCircularProgressBar) control, its features, and elements.
+title: About Syncfusion® .NET MAUI Circular ProgressBar Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Circular ProgressBar control and more details.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Overview of .NET MAUI Circular ProgressBar
+# About Syncfusion® .NET MAUI Circular ProgressBar Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displays progress in a circular shape, supports determinate and indeterminate states, segments, smooth animation, and customizable content. You can also define ranges with different colors.
 

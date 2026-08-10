@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Corner shape customization of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
-description: This section explains how to customize the corners of the front layer of the backdrop to flat and curve shapes. 
+title: Corner Shape Customization in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to customize the corners of the front layer to flat and curve shapes in Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Corner Shape Customization in .NET MAUI Backdrop Page (SfBackdropPage)
+# Corner Shape Customization in .NET MAUI Backdrop Page
 
 The backdrop allows you to customize the shapes on the top corners of the front layer. Curved and cut (flat) shape options are available. It can be switched by setting the [`EdgeShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_EdgeShape) property of the front layer.
 

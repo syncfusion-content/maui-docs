@@ -6,7 +6,7 @@ platform: MAUI
 control: Chat
 documentation: ug
 ---
-# Time Break in .NET MAUI Chat (SfChat)
+# Time Break in .NET MAUI Chat
 
 Use the `Chat` control to display a time break between messages based on their creation date and time. Set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true` to display a time break between messages.
 

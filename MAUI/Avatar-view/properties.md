@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Avatar View control | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® MAUI Avatar View (SfAvatarView) control.
+title: Properties in .NET MAUI Avatar View | Syncfusion®
+description: Learn about properties, events, and methods available in Syncfusion® .NET MAUI Avatar View (SfAvatarView) API reference documentation.
 platform: maui
 control: SfAvatarView
 documentation: ug
 ---
 
-# .NET MAUI Avatar View API Reference
+# Properties in .NET MAUI Avatar View
 
 ## Properties
 

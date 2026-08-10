@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header and Footer in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to add a header and footer view to the drop-down in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
+title: Header and Footer in .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to add a header and footer view to the drop-down in the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Header and Footer in .NET MAUI Autocomplete (SfAutocomplete)
+# Header and Footer in .NET MAUI Autocomplete
 
 ## Prerequisites
 

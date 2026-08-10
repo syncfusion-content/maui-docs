@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Orientation in .NET MAUI Step Progress Bar Control | Syncfusion®
-description: Learn all about orientation support in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
+title: Orientation in .NET MAUI Step ProgressBar | Syncfusion®
+description: Learn about horizontal and vertical orientation in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Orientation in .NET MAUI StepProgressBar (SfStepProgressBar)
+# Orientation in .NET MAUI Step ProgressBar
 
 The StepProgressBar control provides options to change the default orientation, so a multi-step process can be visualized in horizontal or vertical orientation.
 

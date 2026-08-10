@@ -1,13 +1,13 @@
 ---
 layout: post
-title: NestedTab in .NET MAUI Tab View (SfTabView) Control | Syncfusion®
+title: Nested Tab in .NET MAUI Tab View | Syncfusion®
 description: Learn all about the nested tab support in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Nested Tab in .NET MAUI Tab View (SfTabView)
+# Nested Tab in .NET MAUI Tab View
 
 A nested tab is a tab item whose `Content` is itself another `Tab View`. Use this pattern when you need to group related sub-categories under a parent tab-for example, a "Photos" tab that contains a nested tab view with "Camera", "Video", "Screenshots", and "Wallpaper" sub-tabs.
 

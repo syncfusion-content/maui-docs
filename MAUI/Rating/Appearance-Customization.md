@@ -1,15 +1,15 @@
 ---
 
 layout: post
-title: Appearance Customization in .NET MAUI Rating control | Syncfusion®
-description: Learn here all about Appearance Customization support in Syncfusion® .NET MAUI Rating (SfRating) control and more.
+title: Appearance Customization in .NET MAUI Rating | Syncfusion®
+description: Learn here all about appearance customization support in Syncfusion® .NET MAUI Rating control and more.
 platform: maui
 control: Rating
 documentation: ug
 
 ---
 
-# Appearance Customization in .NET MAUI Rating (SfRating)
+# Appearance Customization in .NET MAUI Rating
 
 ## Prerequisites
 

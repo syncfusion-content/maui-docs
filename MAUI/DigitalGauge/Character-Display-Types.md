@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Character Display Types in .NET MAUI Digital Gauge | Syncfusion
-description: Learn here all about Display Types support in Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
+title: Character Display Types in .NET MAUI Digital Gauge | Syncfusion®
+description: Character Display Types in .NET MAUI Digital Gauge support various segment styles for rendering characters, enabling flexible and customizable digital displays.
 platform: maui
 control: DigitalGauge
 documentation: ug

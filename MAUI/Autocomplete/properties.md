@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI AutoComplete control | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® MAUI AutoComplete (SfAutocomplete) control.
+title: Properties in .NET MAUI Autocomplete control | Syncfusion®
+description: This section explains the properties, events, and methods with Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# .NET MAUI AutoComplete API Reference
+#  API Reference in .NET MAUI Autocomplete control
 
 ## Properties
 

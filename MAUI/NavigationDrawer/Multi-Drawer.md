@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Multi Drawer in .NET MAUI Navigation Drawer | Syncfusion®
-description: Configure primary and secondary drawers on the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control to expose content on multiple sides.
+description: Configure primary and secondary drawers on the Syncfusion® .NET MAUI Navigation Drawer control to expose content on multiple sides.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Multi Drawer in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Multi Drawer in .NET MAUI Navigation Drawer
 
 The [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) allows users to open the drawer on multiple sides with different toggle methods. The [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) class and its properties need to be used when users need to provide multiple drawers. The multiple drawers can be implemented using the following drawer settings.
 
@@ -108,7 +108,7 @@ Call the [ToggleSecondaryDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% tabs %}
 
-{% highlight x#aml %}
+{% highlight xaml %}
 
 <Grid>
     <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">

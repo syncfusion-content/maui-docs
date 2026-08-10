@@ -1,13 +1,13 @@
 ---
 layout: post
-title: One-dimensional symbology in .NET MAUI Barcodes | Syncfusion®
-description: Learn here all about one dimensional symbology of Syncfusion<sup>&reg;</sup> .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
+title: One-Dimensional Symbology in .NET MAUI Barcode Generator | Syncfusion®
+description: One-Dimensional Symbology in .NET MAUI Barcode Generator supports linear barcode formats, enabling accurate encoding and scanning of business data.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# One-dimensional symbology in .NET MAUI Barcode Generator
+# One-Dimensional Symbology in .NET MAUI Barcode Generator
 
 The one-dimensional [.NET MAUI Barcode Generator](https://www.syncfusion.com/maui-controls/maui-barcodes) represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion<sup>&reg;</sup> .NET MAUI barcode generator supports the following one-dimensional barcode types:
 

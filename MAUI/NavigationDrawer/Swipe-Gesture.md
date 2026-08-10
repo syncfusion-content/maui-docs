@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: UG
 ---
 
-# Swipe Gesture in .NET MAUI Navigation Drawer (SfNavigationDrawer)
+# Swipe Gesture in .NET MAUI Navigation Drawer
 
 The [.NET MAUI Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) supports a swipe gesture for both opening and closing the side pane. The gesture is enabled by default and can be customized to fit the layout of your app.
 

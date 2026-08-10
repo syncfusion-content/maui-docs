@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Navigation Drawer Control | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, including its elements and features.
+title: Getting Started with .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Navigation Drawer control, including its elements and features.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG

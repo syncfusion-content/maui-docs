@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in .NET MAUI Effects View Control | Syncfusion®
-description: Learn about the customization options available in the Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+title: Customization in .NET MAUI Effects View | Syncfusion®
+description: Learn about the customization options available in the Syncfusion® .NET MAUI Effects View control and more.
 platform: MAUI
 control: SfEffectsView
 documentation: UG
 ---
 
-# Customization in .NET MAUI Effects View (SfEffectsView)
+# Customization in .NET MAUI Effects View
 
 The [.NET MAUI Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control exposes properties that customize the duration, size, color, and angle of each effect.
 

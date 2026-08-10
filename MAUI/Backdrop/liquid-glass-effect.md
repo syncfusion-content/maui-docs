@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Backdrop Page | Syncfusion®
-description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Backdrop Page using the EnableLiquidGlassEffect property.
+title: Liquid Glass Effect in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to enable and customize the liquid glass effect in Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Backdrop Page (SfBackdropPage)
+# Liquid Glass Effect in .NET MAUI Backdrop Page
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in .NET MAUI Backdrop Page's Front or Back layer.
 
