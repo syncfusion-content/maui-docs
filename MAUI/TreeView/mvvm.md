@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Working with MVVM in .NET MAUI TreeView (SfTreeView)
+# Working with MVVM in .NET MAUI TreeView
 
 This section explains about how to work with MVVM pattern in TreeView.
 

@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Working with MVVM in MAUI Popup (SfPopup)
+# Working with MVVM in MAUI Popup
 
 `SfPopup` can be easily used in MVVM-based applications. In the following example, the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed.
 

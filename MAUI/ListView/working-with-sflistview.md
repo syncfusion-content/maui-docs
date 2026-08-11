@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with SfListView in .NET MAUI | Syncfusion®
-description: Learn here all about Working with ListView support in Syncfusion® .NET MAUI ListView control and more.
+title: Working with .NET MAUI ListView control | Syncfusion®
+description: Learn here all about Working with the Syncfusion® .NET MAUI ListView control, its elements, and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Working with ListView in .NET MAUI ListView (SfListView)
+# Working with .NET MAUI ListView
 
 ## Interacting with ListView Items
 

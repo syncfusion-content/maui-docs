@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value selection in .NET MAUI DateTime Slider | Syncfusion®
-description: Learn how to control value selection, discrete steps, deferred updates, and related properties for the Syncfusion® .NET MAUI DateTime Slider control.
+title: Value selection in .NET MAUI DateTime Slider | SyncfusionÂ®
+description: Learn how to control value selection, discrete steps, deferred updates, and related properties for the SyncfusionÂ® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

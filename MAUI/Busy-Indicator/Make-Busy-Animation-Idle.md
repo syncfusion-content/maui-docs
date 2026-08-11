@@ -13,7 +13,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 ## Prerequisites
 
-Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Core`
 
@@ -27,7 +27,7 @@ Use `IsRunning="False"` to stop the animation and hide the indicator.
 
 {% highlight xaml %}
 
-<core:SfBusyIndicator x:Name="busyindicator"
+<core:SfBusyIndicator x:Name="busyIndicator"
                       AnimationType="CircularMaterial"
                       IsRunning="False" />
 
@@ -55,7 +55,7 @@ Set `IsRunning="True"` to display the indicator and start the animation.
 
 {% highlight xaml %}
 
-<core:SfBusyIndicator x:Name="busyindicator"
+<core:SfBusyIndicator x:Name="busyIndicator"
                       AnimationType="CircularMaterial"
                       IsRunning="True" />
 

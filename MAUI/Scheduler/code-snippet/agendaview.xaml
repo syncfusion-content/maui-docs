@@ -1,7 +1,0 @@
-﻿<ContentPage   
-    . . .
-    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-    <scheduler:SfScheduler  x:Name="Scheduler" 
-                            View="Agenda">
-    </scheduler:SfScheduler>
-</ContentPage>

@@ -154,7 +154,7 @@ public class CarouselViewModel
 
 N> The images used in the above view model should be added in the Resources folder of the Application.
 
-## Step 5: Import the Carousel View namespace
+## Step 5: Import the Carousel namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -167,9 +167,9 @@ using Syncfusion.Maui.Carousel;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Add the Carousel View component
+## Step 6: Add the Carousel component
 
-Create an instance for the Carousel View control. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
+Create an instance for the Carousel control. Set the `CarouselViewModel` instance as the `BindingContext` of your page to bind `CarouselViewModel` properties.
 
 [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemHeight) and [ItemWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_ItemWidth) properties are used to change the height and width of carouselItem in carousel panel.
 
@@ -266,6 +266,6 @@ The following screenshot illustrates the result of the above code.
 
 ![OverView image for Carousel](images/gettingstarted.png)
 
-You can download the Carousel View Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel).
+You can download the Carousel Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfCarousel).
 
 N> You can also explore our [.NET MAUI Carousel Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Carousel) that shows you how to render and configure the Carousel in .NET MAUI.

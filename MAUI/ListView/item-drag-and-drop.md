@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Item Reordering in .NET MAUI ListView (SfListView)
+# Item Reordering in .NET MAUI ListView
 
 The `SfListView` allows reordering by dragging and dropping items. It supports displaying the customized view in a template while dragging the item. Drag-and-drop reordering can be enabled by setting the [SfListView.DragStartMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DragStartMode) property to `OnHold`. The drag-and-drop options are listed as follows:
 

@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Pull To Refresh in .NET MAUI ListView (SfListView)
+# Pull To Refresh in .NET MAUI ListView
 
 The [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) control allows users to refresh the loaded view by performing a pull-to-refresh action. When SfListView is placed inside the `SfPullToRefresh`, it refreshes the items on the pull-to-refresh action.
 

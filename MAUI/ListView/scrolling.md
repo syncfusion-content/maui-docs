@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Scrolling in .NET MAUI ListView (SfListView)
+# Scrolling in .NET MAUI ListView
 
 This section explains how to perform scrolling and its related operations in the `.NET MAUI ListView` (SfListView).
 

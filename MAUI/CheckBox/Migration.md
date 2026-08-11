@@ -9,14 +9,14 @@ documentation: UG
 
 # Migrating from Xamarin CheckBox to .NET MAUI CheckBox
 
-To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we have retained most of the APIs from Xamarin SfCheckBox in the MAUI SfCheckBox. However, to ensure consistency in API naming, some APIs have been renamed. The changes in the MAUI SfCheckBox from Xamarin SfCheckBox are detailed below:
+To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we have retained most of the APIs from Xamarin CheckBox in the .NET MAUI CheckBox. However, to ensure consistency in API naming, some APIs have been renamed. The changes in the .NET MAUI CheckBox from Xamarin CheckBox are detailed below:
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfCheckBox</th>
-<th>.NET MAUI SfCheckBox</th></tr>
+<th>Xamarin CheckBox</th>
+<th>.NET MAUI CheckBox</th></tr>
 <tr>
 <td>Syncfusion.Xamarin.Buttons</td>
 <td>Syncfusion.Maui.Buttons</td></tr>
@@ -26,8 +26,8 @@ To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https:
 
 <table> 
 <tr>
-<th>Xamarin SfCheckBox</th>
-<th>.NET MAUI SfCheckBox</th>
+<th>Xamarin CheckBox</th>
+<th>.NET MAUI CheckBox</th>
 <th>Description</th></tr>
 <tr>
 <td> {{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_BorderWidth)'| markdownify }}</td>

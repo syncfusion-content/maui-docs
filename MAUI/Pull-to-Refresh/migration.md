@@ -7,7 +7,7 @@ control: SfPullToRefresh
 documentation: ug
 ---  
 
-# Migrate from Xamarin SfPullToRefresh to .NET MAUI SfPullToRefresh
+# Migrate from Xamarin to .NET MAUI Pull to Refresh
 
 To make migration easier from `Xamarin.Forms SfPullToRefresh` to `.NET MAUI SfPullToRefresh`, we kept most of the APIs from Xamarin `SfPullToRefresh` in `.NET MAUI SfPullToRefresh`. However, to maintain the consistency of API naming in .NET MAUI , we renamed some of the APIs.
 
