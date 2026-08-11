@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Merged Cells in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to merge cells in Syncfusion® .NET MAUI DataGrid to improve data presentation and create visually organized DataGrid layouts.
+title: Merged Cells in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to merge cells in Syncfusion® .NET MAUI Data Grid to improve data presentation and create visually organized DataGrid layouts.
 platform: maui
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui merged cells, maui merge cells, maui cell merging
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui merged cells, maui merge cells, maui cell merging
 ---
 
-# Merged Cells in .NET MAUI DataGrid
+# Merged Cells in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to merge a range of adjacent cells using the [QueryCoveredRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_QueryCoveredRange) event to span multiple rows and columns. Merged cells can be exported to Excel and PDF.
 
@@ -78,7 +78,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Horizontally merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-horizontal-merged-cells.png" width="404"/>
+<img alt="Horizontally merged cells in .NET MAUI Data Grid" src="Images\mergedcell\maui-datagrid-horizontal-merged-cells.png" width="404"/>
 
 ### Merging cells vertically
 
@@ -102,7 +102,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Vertically merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-vertical-merged-cells.png" width="404"/>
+<img alt="Vertically merged cells in .NET MAUI Data Grid" src="Images\mergedcell\maui-datagrid-vertical-merged-cells.png" width="404"/>
 
 ### Merging rows and columns
 
@@ -123,7 +123,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Merged range of cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-range-of-cells.png" width="404"/>
+<img alt="Merged range of cells in .NET MAUI Data Grid" src="Images\mergedcell\maui-datagrid-merge-range-of-cells.png" width="404"/>
 
 ## Merging cells based on content
 
@@ -266,7 +266,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Merged cells based on content in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-based-on-content.png" width="404"/>
+<img alt="Merged cells based on content in .NET MAUI Data Grid" src="Images\mergedcell\maui-datagrid-merge-cells-based-on-content.png" width="404"/>
 
 ## Merge cells in Master-Details view
 
@@ -308,7 +308,7 @@ private void FirstLevelNestedGrid_QueryCoveredRange(object sender, DataGridQuery
 
 > **Note**: The `x:Name` attribute on the nested grid is required to reference the event handler in code-behind.
 
-<img alt="Merged cells in Master-Details view in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-master-details-view.png" width="404"/>
+<img alt="Merged cells in Master-Details view in .NET MAUI Data Grid" src="Images\mergedcell\maui-datagrid-merge-cells-master-details-view.png" width="404"/>
 
 ### Merging range of parent cells
 

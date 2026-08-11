@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Sorting in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to sort data in Syncfusion® .NET MAUI DataGrid including single-column, multi-column, and custom sorting options.
+title: Sorting in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to sort data in Syncfusion® .NET MAUI Data Grid including single-column, multi-column, and custom sorting options.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui sorting, maui sorting
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui sorting, maui sorting
 ---
 
-# Sorting in .NET MAUI DataGrid
+# Sorting in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides the built-in support to sort one or more columns by using the [SfDataGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) property. When sorting is applied, the data grid automatically rearranges the data to match the current sort criteria. Sort the data by tapping the column header. Once sorting is applied, the data grid shows a sort icon in the respective column header indicating the sort direction.
 
-To get started quickly with sorting in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
+To get started quickly with sorting in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/5PhyEYLbGT4'></iframe>
 
@@ -48,7 +48,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Programmatical sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-programmatic-sorting.png" width="404">
+<img alt="Programmatical sorting .NET MAUI Data Grid" src="Images\sorting\maui-datagrid-programmatic-sorting.png" width="404">
 
 ## Different modes of sorting
 
@@ -76,7 +76,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Multi sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-multi-sorting.gif" width="404">
+<img alt="Multi sorting .NET MAUI Data Grid" src="Images\sorting\maui-datagrid-multi-sorting.gif" width="404">
 
 ## Tri-state sorting
 
@@ -100,7 +100,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Tri-state sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-tristate-sorting.gif" width="404">
+<img alt="Tri-state sorting .NET MAUI Data Grid" src="Images\sorting\maui-datagrid-tristate-sorting.gif" width="404">
 
 ## Show sort number
 
@@ -124,7 +124,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Sort with sequence numbers .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-show-sort-numbers.png" width="404">
+<img alt="Sort with sequence numbers .NET MAUI Data Grid" src="Images\sorting\maui-datagrid-show-sort-numbers.png" width="404">
 
 ## Sort column in double tap
 
@@ -369,7 +369,7 @@ this.Content = dataGrid;
 {% endtabs %}
 
 
-<img alt="Sort icon customization in MAUI DataGrid" src="Images\sorting\maui-datagrid-sort-icon-color.png" width="404">
+<img alt="Sort icon customization in MAUI Data Grid" src="Images\sorting\maui-datagrid-sort-icon-color.png" width="404">
 
 
 ## Load sort icon through template

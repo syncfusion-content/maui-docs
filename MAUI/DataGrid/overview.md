@@ -1,19 +1,19 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI DataGrid control | Syncfusion®
+title: About Syncfusion .NET MAUI Data Grid control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-datagrid"
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DataGrid control and more details.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Data Grid control and more details.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
-# About Syncfusion .NET MAUI DataGrid Control
+# About Syncfusion .NET MAUI Data Grid Control
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-<img alt="MAUI DataGrid" src="Images/overview/maui-datagrid.png" width="567"/>
+<img alt="MAUI Data Grid" src="Images/overview/maui-datagrid.png" width="567"/>
 
 ## Business use cases
 
