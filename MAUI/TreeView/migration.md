@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfTreeView to .NET MAUI SfTreeView 
+# Migrate from Xamarin.Forms TreeView to .NET MAUI TreeView
 
 To make it easier to migrate from [Xamarin SfTreeView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-treeview) to [.NET MAUI SfTreeView](https://www.syncfusion.com/maui-controls/maui-treeview), we retained most of the APIs from the Xamarin SfTreeView in the .NET MAUI SfTreeView. To keep API naming consistent in the .NET MAUI SfTreeView, however, we renamed some APIs. The APIs that have changed from the Xamarin SfTreeView to the .NET MAUI SfTreeView are detailed as follows.
 

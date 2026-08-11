@@ -1,13 +1,13 @@
 ---
 layout : post
-title: About MAUI Cards Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements and more.
+title: About Syncfusion® .NET MAUI Cards Control | Syncfusion®
+description: Learn about introduction of Syncfusion® .NET MAUI Cards control. Explore key features, elements, and component details.
 platform : maui
 control : Cards
 documentation : ug
 ---
 
-# Overview of .NET MAUI Cards  
+# About Syncfusion® .NET MAUI Cards Control  
 
 The Syncfusion® .NET MAUI Cards ([SfCards](https://www.syncfusion.com/maui-controls/maui-cards)) control empowers you to generate either a removable card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 
@@ -70,7 +70,7 @@ The following table summarizes the globalization support available in this contr
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 </table>
 

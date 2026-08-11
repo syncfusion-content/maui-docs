@@ -67,7 +67,7 @@ StackLayout stackLayout = new StackLayout
     Padding = new Thickness(30)
 };
 
-SfAutocomplete autoComplete = new SfAutocomplete
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     ShowDropdownHeaderView = true,
     ItemsSource = new SocialMediaViewModel().SocialMedias,
@@ -90,8 +90,8 @@ Label searchLabel = new Label
     TextColor = Color.FromHex("#006bcd")
 };
 dropDownHeaderView.Children.Add(searchLabel);
-autoComplete.DropdownHeaderView = dropDownHeaderView;
-stackLayout.Children.Add(autoComplete);
+autocomplete.DropdownHeaderView = dropDownHeaderView;
+stackLayout.Children.Add(autocomplete);
 this.Content = stackLayout;
 
 {% endhighlight %}
@@ -179,7 +179,7 @@ StackLayout stackLayout = new StackLayout
     Padding = new Thickness(30)
 };
 
-SfAutocomplete autoComplete = new SfAutocomplete
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     ShowDropdownFooterView = true,
     ItemsSource = new SocialMediaViewModel().SocialMedias,
@@ -202,8 +202,8 @@ Label footerLabel = new Label
     TextColor = Color.FromHex("#006bcd")
 };
 footerLayout.Children.Add(footerLabel);
-autoComplete.DropdownFooterView = footerLayout;
-stackLayout.Children.Add(autoComplete);
+autocomplete.DropdownFooterView = footerLayout;
+stackLayout.Children.Add(autocomplete);
 this.Content = stackLayout;
 
 {% endhighlight %}

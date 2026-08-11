@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Track in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Track in .NET MAUI DateTime Range Selector
 
 This section helps to learn about how to customize the track in the DateTime Range Selector.
 

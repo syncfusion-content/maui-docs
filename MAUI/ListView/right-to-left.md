@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Right To Left in .NET MAUI ListView control | Syncfusion®
-description: Learn about Right To Left support in Syncfusion® .NET MAUI ListView (SfListView) control, including layout behavior and item alignment.
+description: Learn here all about Right To Left support in Syncfusion® .NET MAUI ListView (SfListView) control, including layout behavior and item alignment.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI ListView (SfListView)
+# Right To Left in .NET MAUI ListView
 
 `Syncfusion® SfListView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. RTL can be applied explicitly on the `SfListView` by setting the `FlowDirection` property, or inherited from a parent visual element or the device's system flow direction.
 

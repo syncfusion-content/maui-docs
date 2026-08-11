@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection Mode in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Selection mode support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+title: Selection Mode in .NET MAUI Toolbar | Syncfusion®
+description: Learn about selection modes in Syncfusion® .NET MAUI Toolbar (SfToolbar) control for toolbar item selection.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Selection Mode in .NET MAUI Toolbar (SfToolbar)
+# Selection Mode in .NET MAUI Toolbar
 
 The Selection mode is specified in the Toolbar property enumeration. You can select the toolbar item by tapping the item in the toolbar. [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) provides three types of modes such as `Single`, `SingleDeselect`, and `Multiple`. The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode) is [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Single), which allows the user to select only one item at a time.
 

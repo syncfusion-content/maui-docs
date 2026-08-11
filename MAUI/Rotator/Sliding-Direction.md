@@ -9,7 +9,7 @@ documentation: ug
 
 # Sliding Direction in .NET MAUI Rotator
 
-The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is `Horizontal`. When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
+The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is `Horizontal`. When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
 
 The following `NavigationDirection` values are available:
 

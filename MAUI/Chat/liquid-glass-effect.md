@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Liquid Glass Effect for .NET MAUI Chat Control | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Chat (SfChat) control.
+description: Learn here all about how to apply and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Chat (SfChat)
+# Liquid Glass Effect in .NET MAUI Chat
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Chat (SfChat) control.
 

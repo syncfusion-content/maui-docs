@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Events and Commands in .NET MAUI AI AssistView Control | Syncfusion®
-description: Learn here all about Events and Commands support in Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and more.
+description: Learn here all about the Events and Commands available in Syncfusion® .NET MAUI AI AssistView control.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Use Events and Commands in .NET MAUI SfAIAssistView?
+# Events and Commands in .NET MAUI AI AssistView
 
 Events and commands in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) enable handling user interactions and executing actions, allowing you to customize and control chat behavior effectively.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Messages in .NET MAUI Chat control | Syncfusion®
-description: Learn here all about Message support in Syncfusion® .NET Maui Chat (SfChat) control, its elements, and more.
+description: Learn here all about working with messages Syncfusion® .NET Maui Chat (SfChat) control, its elements, and more.
 platform: MAUI
 control: SfChat
 documentation: ug
 ---
 
-# Messages in .NET MAUI Chat (SfChat)
+# Messages in .NET MAUI Chat
 
 ## Configuring common settings for the message
 
