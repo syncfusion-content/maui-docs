@@ -1482,39 +1482,6 @@ This page lists the dependencies (NuGet packages) required for each XAML page in
 <!-- Card 1 -->
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">Settings Page</h3>
-<div class="section-title">Packages</div>
-<div class="chips">
-<span class="chip">Syncfusion.Maui.Buttons</span>
-<span class="chip">Syncfusion.Maui.Toolkit</span>
-<span class="chip">Syncfusion.Maui.ListView</span>
-<span class="chip">Syncfusion.Maui.Core</span>
-<span class="chip">Syncfusion.Maui.Inputs</span>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div class="form-content">
-<h3 class="form-title">Help Page</h3>
-<div class="section-title">Packages</div>
-<div class="chips">
-<span class="chip">Syncfusion.Maui.Buttons</span>
-<span class="chip">Syncfusion.Maui.Toolkit</span>
-<span class="chip">Syncfusion.Maui.ListView</span>
-<span class="chip">Syncfusion.Maui.Core</span>
-<span class="chip">Syncfusion.Maui.Inputs</span>
-</div>
-</div>
-</div>
-</div>
-
-## Notification
-
-<div class="container">
-<!-- Card 1 -->
-<div class="form-card">
-<div class="form-content">
 <h3 class="form-title">Walk-Through Page</h3>
 <div class="section-title">Packages</div>
 <div class="chips">
