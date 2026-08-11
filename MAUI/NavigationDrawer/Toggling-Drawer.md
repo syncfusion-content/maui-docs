@@ -125,7 +125,6 @@ Toggling drawer by swipe gesture is explained in the [Swipe Gesture and Sensitiv
 
 ## See also
 
-- [Toggle Methods in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/Navigation Drawer/toggling-drawer)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Side Pane Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
 - [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)
