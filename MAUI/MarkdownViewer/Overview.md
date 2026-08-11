@@ -9,7 +9,7 @@ documentation: ug
 
 # About Syncfusion® .NET MAUI Markdown Viewer Control
 
-The [.NET MAUI SfMarkdownViewer](https://www.syncfusion.com/maui-controls/maui-markdown-viewer) is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
+The [.NET MAUI Markdown Viewer](https://www.syncfusion.com/maui-controls/maui-markdown-viewer) is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
 
 ![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
 

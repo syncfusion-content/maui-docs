@@ -309,7 +309,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the NavigationDrawer.
+Explore a real-world application that demonstrates the practical use of the Navigation Drawer.
     </div>
     <a href="https://github.com/syncfusion/maui-aisalesdashboard" class="explore-link">
     View Sample

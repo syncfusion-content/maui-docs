@@ -10,7 +10,7 @@ keywords: .net maui text input layout, syncfusion text input layout, text input 
 
 # About Syncfusion® .NET MAUI Text Input Layout Control
 
-The Syncfusion® .NET MAUI text input layout ([SfTextInputLayout](https://www.syncfusion.com/maui-controls/maui-textinputlayout)) adds decorative elements like floating labels, icons, and assistive labels on top of input views such as [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [`SfAutocomplete`](https://help.syncfusion.com/maui/autocomplete/overview), [`SfComboBox`](https://help.syncfusion.com/maui/combobox/overview) controls.
+The Syncfusion® [.NET MAUI Text Input Layout](https://www.syncfusion.com/maui-controls/maui-textinputlayout)) adds decorative elements like floating labels, icons, and assistive labels on top of input views such as [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [`SfAutocomplete`](https://help.syncfusion.com/maui/autocomplete/overview), [`SfComboBox`](https://help.syncfusion.com/maui/combobox/overview) controls.
 
 ![The customizable text input layout control for .NET MAUI](images/Overview/net_maui_text_input_layout.gif)
 
