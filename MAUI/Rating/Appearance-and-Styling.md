@@ -100,7 +100,7 @@ SfRating rating = new SfRating()
 
 ## Set Value
 
-The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the `Rating` control determines the Rating selected among the items. The following code example sets a display value of three with five Rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/Rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
+The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the `Rating` control determines the Rating selected among the items. The following code example sets a display value of three with five Rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
 
 N> The default value of this property is 0. The valid range is 0 to `ItemCount`.
 

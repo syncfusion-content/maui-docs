@@ -31,7 +31,7 @@ The `Rating` control supports five built-in Rating shapes through the [`RatingSh
 
 The default Rating shape of the `Rating` control is `Star`.
 
-![SfRating Rating shapes](images/Rating-shapes.png)
+![Rating shapes](images/Rating-shapes.png)
 
 The `Star`, `Heart`, `Diamond`, and `Circle` shapes are built-in and require no additional configuration. The `Custom` shape lets you supply your own SVG path data.
 
