@@ -50,7 +50,7 @@ SfRating rating = new SfRating()
 
 ## Set Number of Items
 
-The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of rating items to be displayed. The value must be an integer greater than zero. The default value of this property is 5.
+The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of Rating items to be displayed. The value must be an integer greater than zero. The default value of this property is 5.
 
 {% tabs %}
 
@@ -71,11 +71,11 @@ SfRating rating = new SfRating()
 
 {% endtabs %}
 
-![Set number of rating items](images/item-count.png)
+![Set number of Rating items](images/item-count.png)
 
 ## Set Space between Items
 
-The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the rating items, in device-independent units (DIU). The value must be greater than or equal to zero. The default value of this property is 5.
+The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the Rating items, in device-independent units (DIU). The value must be greater than or equal to zero. The default value of this property is 5.
 
 {% tabs %}
 
@@ -100,7 +100,7 @@ SfRating rating = new SfRating()
 
 ## Set Value
 
-The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the `Rating` control determines the rating selected among the items. The following code example sets a display value of three with five rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
+The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property of the `Rating` control determines the Rating selected among the items. The following code example sets a display value of three with five Rating items. The [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Value) property accepts a `double`, so it also supports half and other fractional values when used with the [Precision](https://help.syncfusion.com/maui/Rating/precision-mode) mode. The property is two-way bindable and fires the [`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ValueChanged) event when the value changes.
 
 N> The default value of this property is 0. The valid range is 0 to `ItemCount`.
 
@@ -125,7 +125,7 @@ SfRating rating = new SfRating()
 
 ## Rating Settings
 
-This section explains the rating settings available in the `Rating` control. Use the [`RatingSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html) class to customize the fill, stroke, and stroke thickness of the rated and unrated items.
+This section explains the Rating settings available in the `Rating` control. Use the [`RatingSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html) class to customize the fill, stroke, and stroke thickness of the rated and unrated items.
 
 {% tabs %}
 
