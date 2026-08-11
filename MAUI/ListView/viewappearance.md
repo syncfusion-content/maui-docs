@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Appearance in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Appearance support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
+description: Learn here all about Appearance support in Syncfusion® .NET MAUI ListView (SfListView) control, its elements, and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Appearance in .NET MAUI ListView (SfListView)
+# Appearance in .NET MAUI ListView
 
 The `SfListView` allows customizing the appearance of the underlying data, and provides different functionalities to the end-user.
 

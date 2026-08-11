@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Candle Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about the candle chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Candle Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Candle Chart in .NET MAUI Cartesian Chart visualizes open, high, low, and close values, making it ideal for financial and stock market analysis.
 platform: maui
 control: SfCartesianChart
 documentation: ug

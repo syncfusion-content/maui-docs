@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Validation in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn about the validation support in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control, including ValidationMode and HasError.
+title: Validation in .NET MAUI Masked Entry | Syncfusion®
+description: Learn about the validation support in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in .NET MAUI Masked Entry
 
-The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control validates user input against the configured `Mask` and exposes the result through the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property. Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValidationMode) property to choose when validation is performed.
+The [Masked Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control validates user input against the configured `Mask` and exposes the result through the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property. Use the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValidationMode) property to choose when validation is performed.
 
 ## Prerequisites
 

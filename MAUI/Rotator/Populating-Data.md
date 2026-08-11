@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Populating Data in .NET MAUI Rotator control | Syncfusion®
+title: Populating Data in .NET MAUI Rotator | Syncfusion®
 description: Learn about the Populating Data support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Populating Data in .NET MAUI Rotator (SfRotator)
+# Populating Data in .NET MAUI Rotator
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can be populated with items in two ways:
 
 * **Through Binding** - bind a collection (such as `IList`, `List<T>`, or `ObservableCollection<T>`) to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property and supply a shared layout via `ItemTemplate`.
 * **Through Rotator Item** - create a list of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) objects when each item needs a different view, an image, or arbitrary content via the `ItemContent` property.
@@ -39,7 +39,7 @@ This section explains how to set the `ItemsSource` and apply a custom template t
 
 ### Create a Model with Data
 
-The `SfRotator` items can be populated with a collection of image data. Assign a collection to the `ItemsSource` property. Collections include arrays, `List<T>`, and `ObservableCollection<T>`. For example, you may want to create a `RotatorModel` with an `Image` property as follows.
+The `Rotator` items can be populated with a collection of image data. Assign a collection to the `ItemsSource` property. Collections include arrays, `List<T>`, and `ObservableCollection<T>`. For example, you may want to create a `RotatorModel` with an `Image` property as follows.
 
 {% tabs %}
 {% highlight C# %}
@@ -57,7 +57,7 @@ public class RotatorModel
 {% endhighlight %}
 {% endtabs %}
 
-Create and populate the `SfRotator` collection as follows.
+Create and populate the `Rotator` collection as follows.
 
 {% tabs %}
 {% highlight C# %}
@@ -85,7 +85,7 @@ public class RotatorViewModel
 
 ### Binding the Data with Custom Template
 
-The `SfRotator` provides support to add a custom view as Rotator items by designing a view inside its `ItemTemplate`. This template will be applied to all its items, and its data will be bound.
+The `Rotator` provides support to add a custom view as Rotator items by designing a view inside its `ItemTemplate`. This template will be applied to all its items, and its data will be bound.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ StackLayout stackLayout = new StackLayout()
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator with image items](images/RotatorItems.png)
+![Rotator with image items](images/RotatorItems.png)
 
 Similarly, every item can be created and customized when a different Rotator item view is needed.
 

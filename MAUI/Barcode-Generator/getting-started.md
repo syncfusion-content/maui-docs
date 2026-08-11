@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Barcode Generator control | Syncfusion
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Barcode Generator(SfBarcodeGenerator) control and more.
+title: Getting Started with .NET MAUI Barcode Generator | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Barcode Generator control. Explore setup, barcode symbologies, customization, and generation features.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug

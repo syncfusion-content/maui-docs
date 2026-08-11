@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Character Segments in .NET MAUI Digital Gauge | Syncfusion
-description: Learn here all about Customize Character Segments support in Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
+title: Customize Character Segments in .NET MAUI Digital Gauge | Syncfusion®
+description: Customize Character Segments in .NET MAUI Digital Gauge enables segment-level styling and appearance customization for flexible digital value displays.
 platform: maui
 control: DigitalGauge
 documentation: ug

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Placement Modes in .NET MAUI Rotator control | Syncfusion®
+title: Placement Modes in .NET MAUI Rotator | Syncfusion®
 description: Learn about the Placement Modes support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Placement Modes in .NET MAUI Rotator (SfRotator)
+# Placement Modes in .NET MAUI Rotator
 
 ## Overview
 
-The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
+The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
 
 The following `DotsPlacement` values are available:
 
@@ -115,7 +115,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with DotPlacement set to None](images/DotsPlacement.png)
+![Rotator with DotPlacement set to None](images/DotsPlacement.png)
 
 ## See also
 

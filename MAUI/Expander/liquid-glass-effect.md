@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Liquid Glass Effect for .NET MAUI Expander | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Expander (SfExpander) control.
+description: Learn here all about how to apply and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Expander (SfExpander) control.
 platform: MAUI
 control: SfExpander
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Expander (SfExpander)
+# Liquid Glass Effect in .NET MAUI Expander
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Expander (SfExpander) control.
 

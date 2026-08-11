@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mask Types in .NET MAUI Masked Entry control | Syncfusion®
-description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) and how to use them effectively.
+title: Mask Types in .NET MAUI Masked Entry | Syncfusion®
+description: Learn more about the various mask types available in the Syncfusion® .NET MAUI Masked Entry and how to use them effectively.
 platform: maui
 control: SfMaskedEntry
 documentation: ug

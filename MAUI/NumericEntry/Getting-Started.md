@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI NumericEntry | Syncfusion®
-description: Learn how to get started with Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control, its elements, and more in here.
+title: Getting Started with .NET MAUI Numeric Entry | Syncfusion®
+description: Learn how to get started with Syncfusion® .NET MAUI Numeric Entry control, its elements, and more in here.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
@@ -147,6 +147,6 @@ numericEntry.CustomFormat = "0.000";
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry value editing](GettingStarted_images/editing_value.gif)
+![.NET MAUI Numeric Entry value editing](GettingStarted_images/editing_value.gif)
 
 You can download the Numeric Entry Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-numericentry-samples).

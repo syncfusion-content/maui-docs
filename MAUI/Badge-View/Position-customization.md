@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Position Customization of Syncfusion® .NET MAUI Badge View
-description: Learn here all about position customization in Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
-platform: MAUI
+title: Position Customization in .NET MAUI Badge View | Syncfusion®
+description: Learn how to customize badge position in Syncfusion® .NET MAUI Badge View (SfBadgeView) with multiple placement options.
+platform: maui
 control: SfBadgeView
-documentation: UG
+documentation: ug
 ---
 
-# Position customization
+# Position Customization in .NET MAUI Badge View
 
 The default position of notification is [TopRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopRight). The position can be customized as [TopLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopLeft), [BottomLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomRight), `Left`, `Top`, `Right`, and `Bottom` using the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Position) property. 
 

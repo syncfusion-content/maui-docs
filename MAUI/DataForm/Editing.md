@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data handling in .NET MAUI DataForm control | Syncfusion®
-description: Learn about the commit feature in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Editing in .NET MAUI DataForm | Syncfusion®
+description: Learn about data editing and commit modes in Syncfusion® .NET MAUI DataForm (SfDataForm) for handling user input in mobile and desktop applications.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Editing in .NET MAUI DataForm (SfDataForm)
+# Editing in .NET MAUI DataForm
 
 The data form commits the data and user input to update the value in the underlying data object.
 

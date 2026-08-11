@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Loading Online Images in .NET MAUI Rotator control | Syncfusion®
-description: Learn about Loading Online Images support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+title: Loading Online Images in .NET MAUI Rotator | Syncfusion®
+description: Learn about loading online images support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Loading Online Images in .NET MAUI Rotator (SfRotator)
+# Loading Online Images in .NET MAUI Rotator
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or clear text traffic on Android).
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control can load images from remote URLs by binding a collection of model objects whose `Image` property holds the URL. The `ItemTemplate` resolves the URL through the standard .NET MAUI `Image` control, which handles the network request, caching, and platform-specific configuration (such as ATS on iOS or clear text traffic on Android).
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Load Online Images
 
-Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property of [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) and use an [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate) to display each image. The `Image.Source` binding resolves the URL for each item.
+Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemsSource) property of [Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) and use an [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate) to display each image. The `Image.Source` binding resolves the URL for each item.
 
 {% tabs %}
 
@@ -86,7 +86,7 @@ public class RotatorViewModel
 
 {% endtabs %}
 
-![SfRotator loading images from URLs](images/URLImage.png)
+![Rotator loading images from URLs](images/URLImage.png)
 
 ## See also
 

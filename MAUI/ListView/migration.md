@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin SfListView to .NET MAUI SfListView | Syncfusion®
+title: Migrate from Xamarin ListView to .NET MAUI ListView | Syncfusion®
 platform: MAUI
 control: SfListView
 description: Learn here all about Migrating from Syncfusion® Xamarin SfListView to Syncfusion® .NET MAUI SfListView control.
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfListView to .NET MAUI SfListView 
+# Migrate from Xamarin.Forms ListView to .NET MAUI ListView
 
 To make migration easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-listview) to [.NET MAUI SfListView](https://www.syncfusion.com/maui-controls/maui-listview), we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
 

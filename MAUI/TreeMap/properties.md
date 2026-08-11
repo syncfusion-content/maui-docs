@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI TreeMap control | Syncfusion®
-description: This section explains about the properties and events with Syncfusion® MAUI TreeMap (SfTreeMap) control and more.
+title: API Reference in .NET MAUI TreeMap | Syncfusion®
+description: API Reference in .NET MAUI TreeMap provides detailed information about classes, methods, properties, events, and namespaces available in the control.
 platform: maui
 control: SfTreeMap
 documentation: ug
 ---
 
-# .NET MAUI TreeMap API Reference
+# API Reference in .NET MAUI TreeMap
 
 ## Properties
 

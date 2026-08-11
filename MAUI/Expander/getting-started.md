@@ -2,13 +2,13 @@
 layout: post
 title: Getting Started with .NET MAUI Expander control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-expander"
-description: Learn here about getting started with Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
+description: Learn here all about how to get started with Syncfusion® .NET MAUI Expander (SfExpander) control, its elements and more.
 platform: MAUI
 control: SfExpander
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Expander (SfExpander)
+# Getting Started with .NET MAUI Expander
 
 This section guides you through setting up and configuring a [Expander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) in your .NET MAUI application. Follow the steps below to add a basic Expander to your project.
 

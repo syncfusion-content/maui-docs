@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Liquid Glass Effect for .NET MAUI Accordion | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Accordion (SfAccordion) control.
+description: Learn how to apply and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Accordion control.
 platform: MAUI
 control: SfAccordion
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Accordion (SfAccordion)
+# Liquid Glass Effect in .NET MAUI Accordion
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Accordion (SfAccordion) control.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Sliding Direction in .NET MAUI Rotator control | Syncfusion®
+title: Sliding Direction in .NET MAUI Rotator | Syncfusion®
 description: Learn here all about Sliding Direction support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Sliding Direction in .NET MAUI Rotator (SfRotator)
+# Sliding Direction in .NET MAUI Rotator
 
-The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is `Horizontal`. When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
+The [`NavigationDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html) property controls the direction in which [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) items are navigated. The property is of type `NavigationDirection` and the default value is `Horizontal`. When `EnableAutoPlay` is `true`, the rotator advances through the items in the selected direction.
 
 The following `NavigationDirection` values are available:
 

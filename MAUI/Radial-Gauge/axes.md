@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis in .NET MAUI Radial Gauge control | Syncfusion®
-description: Learn here all about the Axis feature of Syncfusion® .NET MAUI Radial Gauge (SfRadialGauge) control using the custom scale support.
+title: Axis in .NET MAUI Radial Gauge | Syncfusion®
+description: Axis in .NET MAUI Radial Gauge defines the gauge scale and supports customizable ranges, labels, ticks, and styling for effective value representation.
 platform: maui
 control: SfRadialGauge
 documentation: ug

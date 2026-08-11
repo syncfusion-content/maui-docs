@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick in .NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Ticks in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to show and customize major and minor ticks in Syncfusion® .NET MAUI DateTime Range Slider for better visual guidance.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Tick in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Ticks in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to add major and minor ticks in the DateTime Range Slider.
 

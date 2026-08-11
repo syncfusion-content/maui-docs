@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Backdrop Page| Syncfusion
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page(SfBackdropPage) control, its elements and more.
+title: Getting Started with .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Backdrop Page control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Backdrop Page
+# Getting Started with .NET MAUI Backdrop Page
 
 This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion<sup>&reg;</sup> backdrop page. Follow the steps below to add a .NET MAUI Backdrop page to your project.
 

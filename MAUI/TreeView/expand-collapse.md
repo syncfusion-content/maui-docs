@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Expand and collapse in .NET MAUI TreeView (SfTreeView)
+# Expand and collapse in .NET MAUI TreeView
 
 The TreeView allows you to expand and collapse nodes through user interaction or programmatically.
 

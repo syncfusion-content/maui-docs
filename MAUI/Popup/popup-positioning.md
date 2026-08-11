@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Popup Positioning in MAUI Popup (SfPopup)
+# Positioning the .NET MAUI Popup
 
 The `SfPopup` allows showing the popup content at various available positions.
 

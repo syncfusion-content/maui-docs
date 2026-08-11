@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fixed Hint Position in .NET MAUI SfTextInputLayout | Syncfusion®
-description: Learn how to keep the hint label always at the top (always-floated) position in the Syncfusion® .NET MAUI SfTextInputLayout control.
+title: Fixed Hint Position in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn how to keep the hint label always at the top (always-floated) position in the Syncfusion® .NET MAUI Text Input Layout control.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout ishintalwaysfloated, syncfusion text input layout fixed hint maui, sftextinputlayout always floated hint maui, .net maui text input layout hint position, sftextinputlayout hint floating maui
 ---
 
-# Fixed Hint Position in .NET MAUI Text Input Layout (SfTextInputLayout)
+# Fixed Hint Position in .NET MAUI Text Input Layout
 
 By default, the hint label in [Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) floats to the top of the input line only when the input view is focused or contains a value. When the input is empty and unfocused, the hint sits in the input line as a placeholder. Set the [IsHintAlwaysFloated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsHintAlwaysFloated) property to `true` to keep the hint label permanently at the top, regardless of focus or value state.
 

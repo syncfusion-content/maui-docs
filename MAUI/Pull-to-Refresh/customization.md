@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customization in .NET MAUI PullToRefresh control | Syncfusion®
-description: Learn about customization features support in Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control and more.
+title: Customization in .NET MAUI Pull to Refresh control | Syncfusion®
+description: Learn here all about customization features support in Syncfusion® .NET MAUI Pull to Refresh (SfPullToRefresh) control and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---
 
-# Customization in .NET MAUI PullToRefresh (SfPullToRefresh)
+# Customization in .NET MAUI Pull to Refresh
 
-The .NET MAUI PullToRefresh control supports customization of various features, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. The control can be personalized using the following properties.
+The .NET MAUI Pull to Refresh control supports customization of various features, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. The control can be personalized using the following properties.
 
 ## PullableContent
 
@@ -25,9 +25,9 @@ The [PullableContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullTo
                             RefreshViewWidth="30">
     <syncfusion:SfPullToRefresh.PullableContent>
             <Label x:Name="Monthlabel" 
+                    VerticalTextAlignment="Start" />
                     TextColor="White" 
                     HorizontalTextAlignment="Center"   
-                    VerticalTextAlignment="Start" />
     </syncfusion:SfPullToRefresh.PullableContent>
 </syncfusion:SfPullToRefresh>
 
@@ -57,9 +57,9 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.SlideOnTop;
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh with slide on top transition mode.](Images/customization/net-maui-pulltorefresh-getting-started.png)
+![Syncfusion .NET MAUI Pull to Refresh with slide on top transition mode.](Images/customization/net-maui-pulltorefresh-getting-started.png)
 
-The following code example shows how to set the `TransitionMode` as `Push` to PullToRefresh. This transition moves the refresh content and main content simultaneously.
+The following code example shows how to set the `TransitionMode` as `Push` to Pull to Refresh. This transition moves the refresh content and main content simultaneously.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -75,11 +75,11 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.Push;
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh with push transition mode.](Images/customization/net-maui-pulltorefresh-getting-started-push.png)
+![Syncfusion .NET MAUI Pull to Refresh with push transition mode.](Images/customization/net-maui-pulltorefresh-getting-started-push.png)
 
 ## RefreshViewThreshold
 
-The threshold value for the refresh view, indicating the starting position of the progress indicator within the view.This is a `double` value; the default is `50`.
+The threshold value for the refresh view, indicating the starting position of the progress indicator within the view. This is a `double` value; the default is `50`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -265,11 +265,11 @@ pullToRefresh.EndRefreshing();
 
 ## Host .NET MAUI DataGrid as pullable content
 
-The `PullToRefresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI `DataGrid` inside the `PullToRefresh`, follow these steps.
+The `Pull to Refresh` control provides support for loading any custom control as pullable content. To host the .NET MAUI `DataGrid` inside the `Pull to Refresh`, follow these steps.
 <ol>
     <li> Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/datagrid/getting-started">DataGrid</a> and PullToRefresh.</li>
     <li> Define the `OrdersInfo` collection in a ViewModel and implement a `Refresh Item source(int count)` method that updates it. See the <a href="https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
-    <li> Import PullToRefresh and DataGrid control namespace as follows.</li>
+    <li> Import Pull to Refresh and DataGrid control namespace as follows.</li>
     <br/>
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -286,9 +286,9 @@ using Syncfusion.Maui.PullToRefresh;
 {% endhighlight %}
 {% endtabs %}
     <br/>
-    <li> Define the DataGrid as PullableContent of the PullToRefresh.</li> 
+    <li> Define the DataGrid as PullableContent of the Pull to Refresh.</li> 
     <li> Handle the pull to refresh events for refreshing the data. </li>
-    <li> Customize the required properties of the DataGrid and PullToRefresh based on your requirement.</li>
+    <li> Customize the required properties of the DataGrid and Pull to Refresh based on your requirement.</li>
 </ol>
 
 This is how the final output will look like when hosting a Datagrid control as pullable content.
@@ -379,9 +379,9 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-a
 
 ## Host .NET MAUI ListView as pullable content
 
-To host the .NET MAUI `ListView` inside the `PullToRefresh` to update items in the list while performing the pull to refresh action, follow these steps.
+To host the .NET MAUI `ListView` inside the `Pull to Refresh` to update items in the list while performing the pull to refresh action, follow these steps.
 <ol>
-    <li>	Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView</a> and PullToRefresh.</li>
+    <li>	Add the required assembly references as discussed in the <a href="https://help.syncfusion.com/maui/listview/getting-started">ListView</a> and Pull to Refresh.</li>
     <li>	Define the `InboxInfos` collection in a `ListViewInboxInfoViewModel` and implement an `AddItemsRefresh(int count)` method that adds new items. See the <a href="https://github.com/SyncfusionExamples/load-listview-as-pullable-content-of-.net-maui-pull-to-refresh">View sample in GitHub</a> for a complete example.</li>
     <li>	Import the SfPullToRefresh control and SfListView control namespace as follows.</li>
     <br/>
@@ -492,11 +492,11 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-a
 
 If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
 
-![Syncfusion .NET MAUI PullToRefresh with ListView hosted with push transition mode.](Images/customization/net-maui-listview-push.gif)
+![Syncfusion .NET MAUI Pull to Refresh with ListView hosted with push transition mode.](Images/customization/net-maui-listview-push.gif)
 
 ## Pulling and refreshing template
 
-The `PullToRefresh` allows you to set a template for the pulling and refreshing view. The pulling and refreshing templates can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshingViewTemplate) properties, respectively. Both templates accept a `DataTemplate` and can be assigned independently if you need different views for each state. During the pulling gesture, the `Pulling` event provides a [PullingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullingEventArgs.html) `Progress` value whose sign indicates the direction; use `Math.Abs(e.Progress)` for an absolute value.
+The `Pull to Refresh` allows you to set a template for the pulling and refreshing view. The pulling and refreshing templates can be set using the [SfPullToRefresh.PullingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_PullingViewTemplate) and [SfPullToRefresh.RefreshingViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_RefreshingViewTemplate) properties, respectively. Both templates accept a `DataTemplate` and can be assigned independently if you need different views for each state. During the pulling gesture, the `Pulling` event provides a [PullingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullingEventArgs.html) `Progress` value whose sign indicates the direction; use `Math.Abs(e.Progress)` for an absolute value.
 
 Refer to the following code example in which a [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html?tabs=tabid-1) is loaded in the pulling view template and refreshing view template.
 
@@ -644,4 +644,4 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh view Template.](Images/customization/net-maui-template-slideontop.gif)
+![Syncfusion .NET MAUI Pull to Refresh view Template.](Images/customization/net-maui-template-slideontop.gif)

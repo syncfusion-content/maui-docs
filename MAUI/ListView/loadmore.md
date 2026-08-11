@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Load More in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Load More support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
+description: Learn here all about Load More items support in Syncfusion® .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
-# Load More in .NET MAUI ListView (SfListView)
+# Load More in .NET MAUI ListView
 
 The `SfListView` enables `Load More` view by setting the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) and [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) properties. This can be displayed either on the top or bottom of the view by setting the [SfListView.LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMorePosition) property. This view is displayed when the end of the list is reached and the `LoadMorePosition` is set to `End`. This provides an option to add the items at runtime.
 

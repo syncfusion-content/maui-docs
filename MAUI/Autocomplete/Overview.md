@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion .NET MAUI Autocomplete Control | Syncfusion®
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Autocomplete  control and more details.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Autocomplete control and more details.
 platform: maui
 control: SfAutocomplete
 documentation: ug

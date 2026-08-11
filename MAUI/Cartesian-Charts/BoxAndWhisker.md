@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Box and whisker Chart in .NET MAUI Cartesian Chart control |Syncfusion
-description: Learn here all about box and whisker chart support in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Box and Whisker Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Box and Whisker Chart in .NET MAUI Cartesian Chart visualizes data distribution, quartiles, median, and outliers for effective statistical analysis.
 platform: maui
 control: SfCartesianChart
 documentation: ug

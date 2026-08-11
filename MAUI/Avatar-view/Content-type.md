@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Various Customizations in Syncfusion® Avatar View control.  
-description: Explore the supported avatar types in .NET MAUI Avatar View and learn about how to set values for avatar types in .NET MAUI Avatar View.
-platform: MAUI
+title: Content Types in .NET MAUI Avatar View | Syncfusion®
+description: Learn about supported avatar content types in Syncfusion® .NET MAUI Avatar View (SfAvatarView) including text, initials, and image options.
+platform: maui
 control: SfAvatarView
-documentation: UG
+documentation: ug
 ---
 
-# Content Types in SfAvatarView
+# Content Types in .NET MAUI Avatar View
 
 ## Avatar types
 

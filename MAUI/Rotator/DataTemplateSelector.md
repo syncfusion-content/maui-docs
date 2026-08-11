@@ -1,15 +1,15 @@
 ---
 layout: post
-title: DataTemplateSelector in .NET MAUI Rotator control | Syncfusion®
-description: Learn how to use a DataTemplateSelector to choose a DataTemplate per item in the Syncfusion® .NET MAUI Rotator (SfRotator) control.
+title: DataTemplateSelector in .NET MAUI Rotator | Syncfusion®
+description: Learn how to use a DataTemplateSelector to choose a DataTemplate in the Syncfusion® .NET MAUI Rotator (SfRotator) control.
 platform: maui 
 control: Rotator 
 documentation: ug
 ---
 
-# DataTemplateSelector in .NET MAUI Rotator (SfRotator)
+# DataTemplateSelector in .NET MAUI Rotator
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a `DataTemplate` based on the underlying data object for each item.
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) supports [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-10.0#create-a-datatemplateselector), with which you can choose a `DataTemplate` based on the underlying data object for each item.
 
 `DataTemplateSelector` exposes a single over ridable method, `OnSelectTemplate`, which is invoked by the `Rotator` once per item. The method receives the data object (`item`) and the parent `BindableObject` (`container`), and must return the `DataTemplate` to use for that item.
 

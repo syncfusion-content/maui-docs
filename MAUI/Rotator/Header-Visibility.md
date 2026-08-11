@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Header Visibility in .NET MAUI Rotator control | Syncfusion®
-description: Learn about the Header Visibility support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+title: Header Visibility in .NET MAUI Rotator | Syncfusion®
+description: Learn about the header visibility support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui
 control: Rotator
 documentation: ug
 ---
 
-# Header Visibility in .NET MAUI Rotator (SfRotator)
+# Header Visibility in .NET MAUI Rotator
 
-The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
+The [`IsTextVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_IsTextVisible) property enables the text area at the bottom of the [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control, which displays additional information about each item.
 
 The text area is populated from the [`ItemText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html#Syncfusion_Maui_Rotator_SfRotatorItem_ItemText) property of [`SfRotatorItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotatorItem.html) when items are added through the `SfRotatorItem` collection. When items are populated through an `ItemTemplate`, the text area does not appear, even when `IsTextVisible` is `true`.
 

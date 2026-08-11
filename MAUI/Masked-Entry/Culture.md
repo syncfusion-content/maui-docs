@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Culture in .NET MAUI MaskedEntry control | Syncfusion®
-description: Learn how to set the different culture support for currency symbols, date, time, decimal, and group separators in the MaskedEntry control.
+title: Culture in .NET MAUI Masked Entry | Syncfusion®
+description: Learn how to set the different culture for currency symbols, date, time, decimal, and group separators in the Masked Entry control.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# Culture in .NET MAUI MaskedEntry
+# Culture in .NET MAUI Masked Entry
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ maskedEntry.Culture = new CultureInfo("fr-FR");
 
 Based on the France Culture, the '$' will be localized to '€'; '.' will be localized to ',' and ',' will be localized to ' '(single white space).
 
-![MAUI MaskedEntry culture](MaskedEntry_Images/maui_masked_entry_culture.gif)
+![MAUI Masked Entry culture](MaskedEntry_Images/maui_masked_entry_culture.gif)
 
 ## See Also
 

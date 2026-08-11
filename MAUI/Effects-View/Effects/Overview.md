@@ -9,4 +9,4 @@ documentation: UG
 
 # Effects in .NET MAUI Effects View
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides modern effects such as highlight, ripple, selection, scaling, and rotation. This section explains these effects in detail.
+The [Effects View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides modern effects such as highlight, ripple, selection, scaling, and rotation. This section explains these effects in detail.

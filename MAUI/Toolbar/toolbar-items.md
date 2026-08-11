@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar Items in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Toolbar Items support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+title: Toolbar Items in .NET MAUI Toolbar | Syncfusion®
+description: Learn about toolbar items in Syncfusion® .NET MAUI Toolbar (SfToolbar) for displaying icons and custom views.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Toolbar Items in .NET MAUI Toolbar (SfToolbar)
+# Toolbar Items in .NET MAUI Toolbar
 
 This section explains how to populate items for both default views and custom views using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) properties in [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html).
 

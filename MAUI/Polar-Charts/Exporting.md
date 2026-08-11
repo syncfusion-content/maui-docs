@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting in .NET MAUI Polar Chart Control | Syncfusion
-description: Learn here how to export the chart view as an image and stream in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) control.
+title: Exporting in .NET MAUI Polar Chart | Syncfusion®
+description: Exporting in .NET MAUI Polar Chart enables charts to be saved as image files for sharing, reporting, and presentation purposes.
 platform: maui
 control: SfPolarChart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Chart in .NET MAUI Cartesian Chart control | Syncfusion
-description: Learn here all about the column chart and its features in Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) control.
+title: Column Chart in .NET MAUI Cartesian Chart | Syncfusion®
+description: Column Chart in .NET MAUI Cartesian Chart displays data using vertical columns, making it easy to compare values across different categories and groups.
 platform: maui
 control: SfCartesianChart
 documentation: ug

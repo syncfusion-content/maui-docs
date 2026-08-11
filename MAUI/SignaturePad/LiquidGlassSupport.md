@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Signature Pad
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI Signature Pad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control.
 
 ## Prerequisites
 
@@ -111,7 +111,7 @@ this.Content = grid;
 
 The following screenshot illustrates the `SfSignaturePad` rendered inside a Liquid Glass container:
 
-![SignaturePad with Liquid Glass Effect](images/getting-started/SignaturePad_liquidglass.png)
+![Signature Pad with Liquid Glass Effect](images/getting-started/SignaturePad_liquidglass.png)
 
 ## See Also
 
