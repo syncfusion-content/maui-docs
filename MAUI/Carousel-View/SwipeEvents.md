@@ -152,7 +152,7 @@ private void carousel_SwipeEnded(object sender, EventArgs e)
 
 ## See Also
 
-- [Populating Data in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
-- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Populating Data in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Transformation in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [Load More in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/loadmore)
 

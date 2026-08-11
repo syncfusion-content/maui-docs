@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [.NET MAUI Carousel View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) provides several transformation options to customize the appearance and layout of its items. You can tilt the unselected items, adjust the spacing between the selected and unselected items, and scale items to a specified value. Most of these properties apply in the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html); spacing in the `Linear` mode is configured using a dedicated property.
+The [.NET MAUI Carousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) provides several transformation options to customize the appearance and layout of its items. You can tilt the unselected items, adjust the spacing between the selected and unselected items, and scale items to a specified value. Most of these properties apply in the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html#Syncfusion_Maui_Core_Carousel_ViewMode_Default) [ViewMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Carousel.ViewMode.html); spacing in the `Linear` mode is configured using a dedicated property.
 
 ## Properties Overview
 
@@ -119,7 +119,7 @@ public class CarouselViewModel
 {% endtabs %}
 
 
-![Rotation angle in .NET MAUI Carousel View.](Images/net-maui-carousel-view-rotationangle.png)
+![Rotation angle in .NET MAUI Carousel](Images/net-maui-carousel-view-rotationangle.png)
 
 ## Set Gap between the Selected Item
 
@@ -207,7 +207,7 @@ public class CarouselViewModel
 {% endtabs %}
 
 
-![SelectedItemOffset in .NET MAUI Carousel View.](Images/net-maui-carousel-view-selectedoffset.png)
+![SelectedItemOffset in .NET MAUI Carousel.](Images/net-maui-carousel-view-selectedoffset.png)
 
 ## Set Gap between Unselected Items
 
@@ -296,7 +296,7 @@ public class CarouselViewModel
 {% endtabs %}
 
 
-![Offset in .NET MAUI Carousel View.](Images/net-maui-carousel-view-offset.png)
+![Offset in .NET MAUI Carousel](Images/net-maui-carousel-view-offset.png)
 
 ## Set Scaling for Carousel Items
 
@@ -385,7 +385,7 @@ public class CarouselViewModel
 {% endtabs %}
 
 
-![Scale offset in .NET MAUI Carousel View.](Images/net-maui-carousel-view-scaleoffset.png)
+![Scale offset in .NET MAUI Carousel](Images/net-maui-carousel-view-scaleoffset.png)
 
 ## Set Item Spacing in Linear Mode
 
@@ -476,9 +476,9 @@ public class CarouselViewModel
 {% endtabs %}
 
 
-![ItemSpacing in .NET MAUI Carousel View.](Images/net-maui-carousel-view-itemspacing.png)
+![ItemSpacing in .NET MAUI Carousel](Images/net-maui-carousel-view-itemspacing.png)
 
 ## See Also
 
-- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [UIVirtualization in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [Populating Items in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UIVirtualization in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

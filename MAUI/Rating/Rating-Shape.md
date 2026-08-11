@@ -21,7 +21,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Overview
 
-The `Rating` control supports five built-in rating shapes through the [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property. The following shapes are available:
+The `Rating` control supports five built-in Rating shapes through the [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property. The following shapes are available:
 
 * [`Star`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Star)
 * [`Heart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Heart)
@@ -29,9 +29,9 @@ The `Rating` control supports five built-in rating shapes through the [`RatingSh
 * [`Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Circle)
 * [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Custom)
 
-The default rating shape of the `Rating` control is `Star`.
+The default Rating shape of the `Rating` control is `Star`.
 
-![SfRating rating shapes](images/rating-shapes.png)
+![Rating shapes](images/Rating-shapes.png)
 
 The `Star`, `Heart`, `Diamond`, and `Circle` shapes are built-in and require no additional configuration. The `Custom` shape lets you supply your own SVG path data.
 
