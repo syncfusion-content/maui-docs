@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Pull to Refresh
 
-The .NET MAUI PullToRefresh control supports customization of various features, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. The control can be personalized using the following properties.
+The .NET MAUI Pull to Refresh control supports customization of various features, including TransitionMode, PullingThreshold, ProgressBackground, ProgressColor, and more. The control can be personalized using the following properties.
 
 ## PullableContent
 
@@ -57,7 +57,7 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.SlideOnTop;
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh with slide on top transition mode.](Images/customization/net-maui-pulltorefresh-getting-started.png)
+![Syncfusion .NET MAUI Pull to Refresh with slide on top transition mode.](Images/customization/net-maui-pulltorefresh-getting-started.png)
 
 The following code example shows how to set the `TransitionMode` as `Push` to PullToRefresh. This transition moves the refresh content and main content simultaneously.
 
@@ -75,7 +75,7 @@ pullToRefresh.TransitionMode = PullToRefreshTransitionType.Push;
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh with push transition mode.](Images/customization/net-maui-pulltorefresh-getting-started-push.png)
+![Syncfusion .NET MAUI Pull to Refresh with push transition mode.](Images/customization/net-maui-pulltorefresh-getting-started-push.png)
 
 ## RefreshViewThreshold
 
@@ -373,7 +373,7 @@ namespace PullToRefreshTemplate
 
 If you run the above sample with the TransitionMode as Push, the output will look as follows.
 
-![Syncfusion .NET MAUI PullToRefresh with DataGrid hosted with push transition mode.](Images/customization/net-maui-datagrid-push.gif)
+![Syncfusion .NET MAUI Pull to Refresh with DataGrid hosted with push transition mode.](Images/customization/net-maui-datagrid-push.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).
 
@@ -492,7 +492,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-listview-a
 
 If you run the above sample with the [TransitionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_TransitionMode) as Push, the output will look as follows.
 
-![Syncfusion .NET MAUI PullToRefresh with ListView hosted with push transition mode.](Images/customization/net-maui-listview-push.gif)
+![Syncfusion .NET MAUI Pull to Refresh with ListView hosted with push transition mode.](Images/customization/net-maui-listview-push.gif)
 
 ## Pulling and refreshing template
 
@@ -644,4 +644,4 @@ public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI PullToRefresh view Template.](Images/customization/net-maui-template-slideontop.gif)
+![Syncfusion .NET MAUI Pull to Refresh view Template.](Images/customization/net-maui-template-slideontop.gif)
