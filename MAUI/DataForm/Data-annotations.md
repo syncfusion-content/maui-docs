@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Annotations in .NET MAUI DataForm
 
-The data form supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
+The DataForm supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
 
 ## Display attribute
 
@@ -31,7 +31,7 @@ Specifies the label text.
 {{'[GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies the group name that identifies the fields in the data form.
+Specifies the group name that identifies the fields in the DataForm.
 </td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ Specifies watermark text for the editor.
 {{'[Order](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0)' | markdownify }}
 </td>
 <td>
-Specifies the order of field in the data form.
+Specifies the order of field in the DataForm.
 </td>
 </tr>
 </table>
@@ -242,7 +242,7 @@ public string Address { get; set; }
 {% endtabs %}
 
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
+The DataForm supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
 
 #### DataFormDisplayOptions attribute
 
@@ -260,7 +260,7 @@ Details
 {{'[RowSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowSpan)'| markdownify }}
 </td>
 <td>
-Specifies the row span for the data form item.
+Specifies the row span for the DataForm item.
 </td>
 </tr>
 <tr>
@@ -268,7 +268,7 @@ Specifies the row span for the data form item.
 {{'[ColumnSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ColumnSpan)'| markdownify }}
 </td>
 <td>
-Specifies the column span for the data form item.
+Specifies the column span for the DataForm item.
 </td>
 </tr>
 <tr>
@@ -292,7 +292,7 @@ Specifies whether the label should be visible or not.
 {{'[RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder)'| markdownify }}
 </td>
 <td>
-Specifies the row order of field in the data form
+Specifies the row order of field in the DataForm
 </td>
 </tr>
 <tr>

@@ -13,7 +13,7 @@ To get start quickly with data editors in .NET MAUI DataForm, you can check on t
 
 {% youtube "https://www.youtube.com/watch?v=Fv__sIKRsIA" %}
 
-The data form supports the following built-in editors to edit the data:
+The DataForm supports the following built-in editors to edit the data:
 
 <table>
 <tr>
@@ -476,7 +476,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 In the date editor, the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) will be loaded.
 
-In the date editor, the default date value will be the current date. You can also add nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display the current date in the date editor.
+In the date editor, the default date value will be the current date. You can also add nullable `DateTime` data type for the date picker property in DataForm, which allows you to set the current date and display the current date in the date editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -577,7 +577,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## CheckBox editor
 
-In the CheckBox editor, the [SfCheckBox](https://help.syncfusion.com/maui/checkbox/overview) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
+In the CheckBox editor, the [SfCheckBox](https://help.syncfusion.com/maui/checkbox/overview) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in DataForm.
 
 {% tabs %}
 {% highlight C# %}

@@ -11,11 +11,11 @@ documentation: ug
 
 ## Overview
 
-The data form supports linear and grid layouts and manages the layout of the label, editor, and validation label.
+The DataForm supports linear and grid layouts and manages the layout of the label, editor, and validation label.
 
-## Linear data form layout
+## Linear DataForm layout
 
-By default, the data form arranges the fields one by one. It is applicable for both label positions: left and top.
+By default, the DataForm arranges the fields one by one. It is applicable for both label positions: left and top.
 
 When the label position is Left, the linear layout is shown as follows:
 
@@ -25,9 +25,9 @@ When the label position is Top, the linear layout is shown as follows:
 
 ![Linear layout top label position in .NET MAUI DataForm.](images/layout/linear-layout-top.png)
 
-## Grid data form layout
+## Grid DataForm layout
 
-By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property which provides a grid-like layout for the data form. The column order of the data form field in a row can be changed using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ItemsOrderInRow).
+By default, the DataForm arranges one data field per row. It is possible to have more than one data field per row by setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property which provides a grid-like layout for the DataForm. The column order of the DataForm field in a row can be changed using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ItemsOrderInRow).
 
 {% tabs %}
 {% highlight XAML %}
@@ -49,7 +49,7 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the data form group, refer to the [loading different layout for data form group](https://help.syncfusion.com/maui/dataform/grouping#changing-the-layout-for-the-group).
+N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the DataForm group, refer to the [loading different layout for DataForm group](https://help.syncfusion.com/maui/dataform/grouping#changing-the-layout-for-the-group).
 
 When the label position is Top, the grid layout is shown as follows:
 
@@ -95,7 +95,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Label position
 
-The label can be positioned either top or left side of the editor. By using the [DataFormDefaultLayoutSettings.LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_LabelPosition) property, lay out the label associated with the editor for the data form.
+The label can be positioned either top or left side of the editor. By using the [DataFormDefaultLayoutSettings.LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_LabelPosition) property, lay out the label associated with the editor for the DataForm.
 
 By default, the label will be positioned at left side of the editor.
 
@@ -195,11 +195,11 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Changing order of the editors
 
-The order of the data form editors can be changed by using attributes or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+The order of the DataForm editors can be changed by using attributes or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 #### Using attributes
 
-The data form editors' order can be changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder) property in the [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute.
+The DataForm editors' order can be changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder) property in the [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -215,7 +215,7 @@ public string Name { get; set; }
 
 #### Using event
 
-The data form editors' order can be changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+The DataForm editors' order can be changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -377,7 +377,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Change the editor visibility
 
-The data form editor visibility is changed by using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_IsVisible) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+The DataForm editor visibility is changed by using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_IsVisible) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -416,7 +416,7 @@ dataForm.ScrollTo("FirstName");
 
 ## Change the editor height
 
-The .NET MAUI DataForm allows you to modify the height of each editor to fit the height of the data form or to customize the height based on text size by using the [EditorHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_EditorHeight) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+The .NET MAUI DataForm allows you to modify the height of each editor to fit the height of the DataForm or to customize the height based on text size by using the [EditorHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_EditorHeight) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

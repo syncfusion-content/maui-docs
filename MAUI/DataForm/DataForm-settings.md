@@ -217,7 +217,7 @@ You can change the data editor settings by using the property of [DataFormItem](
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
-Here, `Salary` data field is restricted from being edited in the data form.
+Here, `Salary` data field is restricted from being edited in the DataForm.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

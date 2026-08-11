@@ -61,9 +61,9 @@ Follow these steps to localize the `DataForm` based on the [CurrentUICulture](ht
  
     ![Localization name value pair in .NET MAUI DataForm.](images/localization/name-value-pair.png)
 
-## Localizing data form display values
+## Localizing DataForm display values
 
-Here, the display attributes or data form item display values to get localized based on culture from the Localization Resource File (.Resx).
+Here, the display attributes or DataForm item display values to get localized based on culture from the Localization Resource File (.Resx).
 
 #### Using attribute
 
@@ -111,7 +111,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Localizing validation error messages
 
-Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or data form error messages get localized based on culture from Localization Resource File (.Resx).
+Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or DataForm error messages get localized based on culture from Localization Resource File (.Resx).
 
 #### Using attribute
 
@@ -130,7 +130,7 @@ public string FirstName { get; set; }
 
 #### Using event
 
-Also, localize the data form `error message` and `valid message` in the [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) by using the Resources (.Resx) file.
+Also, localize the DataForm `error message` and `valid message` in the [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) by using the Resources (.Resx) file.
 
 {% tabs %}
 {% highlight C# %}
@@ -160,7 +160,7 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 {% endhighlight %}
 {% endtabs %}
 
-## Localizing data form picker editors
+## Localizing DataForm picker editors
 
 Localize DataForm list items (Picker, AutoComplete, RadioGroup, ComboBox) [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using the ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
 

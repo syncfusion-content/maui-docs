@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in .NET MAUI DataForm
 
-The data form commits the data and user input to update the value in the underlying data object.
+The DataForm commits the data and user input to update the value in the underlying data object.
 
 ## Commit mode
 
@@ -148,7 +148,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Read only mode
 
-The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly) property of the data form.
+The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly) property of the DataForm.
 
 {% tabs %}
 {% highlight XAML %}
