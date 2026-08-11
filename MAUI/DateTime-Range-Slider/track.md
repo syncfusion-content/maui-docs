@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track in .NET MAUI DateTime Range Slider control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+description: Learn here all about the track feature of the .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -37,6 +37,9 @@ It represents the values currently selected in the DateTime Range Slider. The th
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -53,11 +56,11 @@ rangeSlider.ShowLabels = true;
 
 ## Track color
 
-Change the active and inactive track color of the DateTime range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class.
+Change the active and inactive track color of the DateTime Range Slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class.
 
 The active side of the DateTime Range Slider is between the start and end thumbs.
 
-The inactive side of the DateTime Range Slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
+The inactive side of the DateTime Range Slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
@@ -77,6 +80,9 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -94,7 +100,7 @@ rangeSlider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1A
 
 ## Track height
 
-Change the active and inactive track height using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class. The default value of the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and the [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties are `8.0` and `6.0` respectively.
+Change the active and inactive track height of the DateTime Range Slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class. The default value of the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize) and the [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize) properties are `8.0` and `6.0` respectively.
 
 {% tabs %}
 
@@ -114,6 +120,8 @@ Change the active and inactive track height using the [`ActiveSize`](https://hel
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -148,8 +156,10 @@ You can extend the track at the edges using the [`TrackExtent`](https://help.syn
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
-SfDateTimeSlider rangeSlider = new SfDateTimeSlider();
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
@@ -172,7 +182,7 @@ rangeSlider.TrackExtent = 25;
 
 ## Disabled track
 
-Change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the DateTime Range Slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 
@@ -238,6 +248,10 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
 
 VerticalStackLayout stackLayout = new();
 SfDateTimeRangeSlider defaultRangeSlider = new()
@@ -325,6 +339,8 @@ The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sf
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Orientation = SliderOrientation.Vertical;
@@ -343,7 +359,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ![DateTimeRangeSlider orientation](images/getting-started/orientation.png)
 
-## Inverse the slider
+## Inverse the DateTime Range Slider
 
 Invert the DateTime Range Slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
 
@@ -365,6 +381,8 @@ Invert the DateTime Range Slider using the [IsInversed](https://help.syncfusion.
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);

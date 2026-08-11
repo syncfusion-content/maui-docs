@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Dividers feature of .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Dividers in .NET MAUI DataTime Range Slider | Syncfusion®
+description: Learn here all about the Dividers feature of the .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -15,7 +15,7 @@ This section explains how to add the dividers in the DateTime Range Slider.
 
 The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2010, 01, 01)` and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the DateTime Range Slider will render the dividers at 2010, 2012, 2014, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2010, 01, 01)`, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2018, 01, 01)`, and the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the DateTime Range Slider will render the dividers at 2010, 2012, 2014, and so on.
 
 {% tabs %}
 
@@ -32,6 +32,8 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -71,6 +73,8 @@ Change the active and inactive divider radius of the range slider using the [`Ac
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -119,6 +123,10 @@ Also, you can change the active and inactive divider stroke color using the [`Ac
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -167,6 +175,10 @@ Change the active and inactive divider colors using the [`ActiveFill`](https://h
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -266,6 +278,11 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 VerticalStackLayout stackLayout = new();
 SfDateTimeRangeSlider defaultRangeSlider = new()
