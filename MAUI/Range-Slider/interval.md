@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interval in .NET MAUI Range Slider | SyncfusionÂ®
+title: Interval in .NET MAUI Range Slider | Syncfusion®
 description: Learn how to configure numeric intervals in the .NET MAUI Range Slider control with labels, ticks, and dividers.
 platform: maui
 control: SfRangeSlider

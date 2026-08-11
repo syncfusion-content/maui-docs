@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Properties in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+title: Properties in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn about the properties and events available in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Properties in .NET MAUI DateTime Slider | SyncfusionÂ®
-description: Learn about the properties and events available in the SyncfusionÂ® .NET MAUI DateTime Slider control.
+title: Properties in .NET MAUI DateTime Slider | Syncfusion®
+description: Learn about the properties and events available in the Syncfusion® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

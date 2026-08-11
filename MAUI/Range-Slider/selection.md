@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Slider | SyncfusionÂ®
-description: Learn how to configure range selection in the SyncfusionÂ® .NET MAUI Range Slider control with discrete steps, interval behavior, and drag options.
+title: Range selection in .NET MAUI Range Slider | Syncfusion®
+description: Learn how to configure range selection in the Syncfusion® .NET MAUI Range Slider control with discrete steps, interval behavior, and drag options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
