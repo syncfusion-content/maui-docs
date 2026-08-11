@@ -10,7 +10,7 @@ keywords: .net maui sfchipgroup events, syncfusion chips selection changed maui,
 
 # Events in .NET MAUI Chips
 
-[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) and [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) raise events to notify users application when the user interacts with the chips. This page documents the events exposed by both controls.
+[Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) and [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) raise events to notify users application when the user interacts with the chips. This page documents the events exposed by both controls.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 | [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging) | `SfChipGroup` | `SelectionChangingEventArgs` | Raised before a chip is selected. Can be canceled. |
 | [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged) | `SfChipGroup` | `SelectionChangedEventArgs` | Raised after a chip is selected. |
 | [ChipClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipClicked) | `SfChipGroup` | `EventArgs` | Raised when a chip is clicked. |
-| [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) | `SfChipGroup` | `SelectionChangedEventArgs` | Raised after a chip is removed from an `Input`-type `SfChipGroup`. |
+| [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) | `SfChipGroup` | `SelectionChangedEventArgs` | Raised after a chip is removed from an `Input`-type `Chip Group`. |
 | [CloseButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CloseButtonClicked) | `SfChip` | `EventArgs` | Raised when the close button of an `SfChip` is clicked. |
 
 N> The `SelectionChanging` and `SelectionChanged` events are supported only for [`Choice`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html#Syncfusion_Maui_Core_SfChipsType_Choice) and [`Filter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html#Syncfusion_Maui_Core_SfChipsType_Filter) chip types. The `ItemRemoved` event is supported only for the [`Input`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html#Syncfusion_Maui_Core_SfChipsType_Input) chip type.
@@ -216,7 +216,7 @@ void OnChipClicked(object? sender, EventArgs e)
 
 ## Item removed event
 
-The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) event is raised after a chip is removed from the `SfChipGroup`. The argument contains the following information,
+The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved) event is raised after a chip is removed from the `Chip Group`. The argument contains the following information,
 
 ### Event Arguments
 

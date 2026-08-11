@@ -32,15 +32,15 @@ Set the `EnableLiquidGlassEffect` property to `true` on the `SfChipGroup`. When 
 
 ### Step 2: Set a transparent background
 
-To achieve a glass-like background on the `SfChipGroup`, set its `Background` property to `Transparent`. The background is then treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background on the `Chip Group`, set its `Background` property to `Transparent`. The background is then treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 ### Step 3: Place the control over a colorful image or gradient
 
-The effect relies on the pixels behind the control. Place the `SfChipGroup` over a wallpaper, gradient, or other colorful content to see the tinting and refraction.
+The effect relies on the pixels behind the control. Place the `Chip Group` over a wallpaper, gradient, or other colorful content to see the tinting and refraction.
 
 ## Example
 
-The following example shows an `SfChipGroup` with the Liquid Glass Effect enabled, placed over a wallpaper image.
+The following example shows an `Chip Group` with the Liquid Glass Effect enabled, placed over a wallpaper image.
 
 {% tabs %}
 {% highlight xaml %}
@@ -88,7 +88,7 @@ Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates `SfChipGroup` with the Liquid Glass Effect enabled via `EnableLiquidGlassEffect`, displayed over a wallpaper background.
+The following screenshot illustrates `Chip Group` with the Liquid Glass Effect enabled via `EnableLiquidGlassEffect`, displayed over a wallpaper background.
 
 ![SfChipGroup with the Liquid Glass Effect enabled, displayed over a wallpaper background](images/customization-images/Chip_liquidglass.png)
 

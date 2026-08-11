@@ -9,7 +9,7 @@ documentation: ug
 
 # UpDown Button in .NET MAUI Numeric Entry
 
-This section describes how to change the value of the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the keyboard, the mouse scroll wheel, and the on-screen up-down buttons. It also covers placement, alignment, ordering, color, template customization, and auto-reverse behavior.
+This section describes how to change the value of the [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the keyboard, the mouse scroll wheel, and the on-screen up-down buttons. It also covers placement, alignment, ordering, color, template customization, and auto-reverse behavior.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry value changed by key presses](GettingStarted_images/valuechange-bykeys.gif)
+![.NET MAUI Numeric Entry value changed by key presses](GettingStarted_images/valuechange-bykeys.gif)
 
 ## UpDown button placement
 
@@ -85,7 +85,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
+![UpDown Placement in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonPlacement.gif)
 
 ### UpDown button placement: InlineVertical
 
@@ -113,7 +113,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
+![UpDown Vertical Placement in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
 ## UpDown button alignment
 
@@ -145,7 +145,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown alignment is Left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+![UpDown alignment is Left in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
 
 ### UpDown button alignment: Right (default)
 
@@ -199,7 +199,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
+![UpDown alignment is Both in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
 
 ## UpDown button order
@@ -234,7 +234,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Order is UpThenDown in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
+![UpDown Order is UpThenDown in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
 
 ### UpDown button order: DownThenUp
 
@@ -262,7 +262,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
+![UpDown Order is DownThenUp in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
 
 
 ## UpDown button color
@@ -296,7 +296,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![UpDownButtonColor support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonColor.png)
+![UpDownButtonColor support in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonColor.png)
 
 ## UpDown button template
 
@@ -398,7 +398,7 @@ Content = verticalStackLayout;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
+![UpDownButtonTemplate support in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonTemplate.png)
 
 ## Auto reverse in Numeric Entry
 
@@ -428,7 +428,7 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-![AutoReverse support in .NET MAUI NumericEntry](UpDownButton_images/AutoReverseSupport.gif)
+![AutoReverse support in .NET MAUI Numeric Entry](UpDownButton_images/AutoReverseSupport.gif)
 
 ## See Also
 

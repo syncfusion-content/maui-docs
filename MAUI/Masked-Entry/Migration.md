@@ -9,14 +9,14 @@ documentation: ug
 
 # Migrating from Xamarin Masked Edit to .NET MAUI Masked Entry
 
-To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most of the APIs are kept from the Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, rename some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows.
+To migrate easier from the Xamarin Masked Edit to [.NET MAUI Masked Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most of the APIs are kept from the Xamarin Masked Edit in .NET MAUI Masked Entry. However, to maintain the consistency of API naming in .NET MAUI Masked Entry, rename some of the APIs. The APIs changed in .NET MAUI Masked Entry from Xamarin Masked Edit are detailed as follows.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfMaskedEdit</th>
-<th>.NET MAUI SfMaskedEntry</th></tr>
+<th>Xamarin Masked Edit</th>
+<th>.NET MAUI Masked Entry</th></tr>
 <tr>
 <td>Syncfusion.XForms.MaskedEdit</td>
 <td>Syncfusion.Maui.Inputs</td></tr>
@@ -27,8 +27,8 @@ To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](htt
 <table> 
 <tr>
 <th>Enum</th>
-<th>Xamarin SfMaskedEdit</th>
-<th>.NET MAUI SfMaskedEntry</th>
+<th>Xamarin Masked Edit</th>
+<th>.NET MAUI Masked Entry</th>
 <th>Description</th></tr>
 <tr>
 <td>Xamarin - MaskType <br/> .NET MAUI - MaskedEntryMaskType</td>

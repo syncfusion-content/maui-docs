@@ -19,7 +19,7 @@ Use `GroupKey` when your Radio Buttons are scattered across different layouts or
 
 ## Prerequisites
 
-Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Buttons`
 
