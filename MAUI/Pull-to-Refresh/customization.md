@@ -373,7 +373,7 @@ namespace PullToRefreshTemplate
 
 If you run the above sample with the TransitionMode as Push, the output will look as follows.
 
-![Syncfusion .NET MAUI PullToRefresh with DataGrid hosted with push transition mode.](Images/customization/net-maui-datagrid-push.gif)
+![Syncfusion .NET MAUI Pull to Refresh with DataGrid hosted with push transition mode.](Images/customization/net-maui-datagrid-push.gif)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-datagrid-as-pullable-content-of-.net-maui-pull-to-refresh).
 
