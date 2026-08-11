@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin SfExpander to .NET MAUI SfExpander | Syncfusion®
-description: Learn about migrating from the Syncfusion® Xamarin.Forms SfExpander control to the Syncfusion® .NET MAUI SfExpander control.
+title: Migrate from Xamarin Expander to .NET MAUI Expander | Syncfusion®
+description: Learn here all about migrating from the Syncfusion® Xamarin.Forms Expander control to the Syncfusion® .NET MAUI Expander control.
 platform: MAUI
 control: SfExpander
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfExpander to .NET MAUI SfExpander
+# Migrate from Xamarin.Forms Expander to .NET MAUI Expander
 
 Migrating from Xamarin.Forms SfExpander to .NET MAUI SfExpander is straightforward because many APIs remain familiar. However, to align with .NET MAUI naming conventions and API consistency, some namespaces, properties, and enums have been renamed.
 

@@ -105,5 +105,5 @@ public class CarouselViewModel
 
 ## See Also
 
-- [Populating Data in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [LoadMore in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Populating Data in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [LoadMore in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/loadmore)

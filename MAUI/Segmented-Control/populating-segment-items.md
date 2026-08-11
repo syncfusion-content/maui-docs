@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion<sup>&reg;</sup>
-description: Learn about to manage the segment content in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented control (SfSegmentedControl).
+title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about populating segment items with text, icons, or a combination of both in the .NET MAUI Segmented Control.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Create Segment Content in .NET MAUI Segmented Control (SfSegmentedControl)
+# Create Segment Content in .NET MAUI Segmented Control
 
 Depending on the application, different scenarios may require icons, text, or a combination of both for effective communication.
 
@@ -79,7 +79,7 @@ public class ViewModel
 ![Display text in .NET MAUI Segmented control.](images/populating-segment-items/text.png)
 
 ## Image
-Create a segmented control with segments that contain the provided images by using the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html) collection, which is bound to the [Itemssource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property.
+Create a segmented control with segments that contain the provided images by using the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html) collection, which is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property.
 
 {% tabs %}
 {% highlight XAML %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Range Selector | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control.
-platform: MAUI
+title: Liquid Glass Effect in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Range Selector control.
+platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Range Selector (SfRangeSelector)
+# Liquid Glass Effect in .NET MAUI Range Selector
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control.
 

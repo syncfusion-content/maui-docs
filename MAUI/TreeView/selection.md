@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Selection in .NET MAUI TreeView (SfTreeView)
+# Selection in .NET MAUI TreeView
 
 This section explains how to perform selection and its related operations in the TreeView.
 

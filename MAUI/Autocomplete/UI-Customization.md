@@ -1140,11 +1140,11 @@ The drop-down that shows the filtered items will be placed automatically based o
 {% tabs %}
 {% highlight xaml %}
 
- <editors:SfAutocomplete x:Name="autocomplete"
-                         ItemsSource="{Binding SocialMedias}"
-                         DisplayMemberPath="Name"
-                         TextMemberPath="Name"
-                         DropDownPlacement="Top"/>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        DropDownPlacement="Top"/>
 
 {% endhighlight %}
 
@@ -1202,11 +1202,11 @@ The autocomplete enables the user to provide padding for the items inside dropdo
 {% tabs %}
 {% highlight xaml %}
 
-   <editors:SfAutocomplete x:Name="autocomplete"
-                           ItemsSource="{Binding SocialMedias}"
-                           DisplayMemberPath="Name"
-                           TextMemberPath="Name"
-                           ItemPadding="10,20,0,0"/>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        ItemPadding="10,20,0,0"/>
 
 {% endhighlight %}
 
@@ -1264,11 +1264,11 @@ The [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.D
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autocomplete"
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            DropDownWidth="400"/>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        DropDownWidth="400"/>
 
 {% endhighlight %}
 
@@ -1328,11 +1328,11 @@ Suggestion box can be shown whenever the control receives focus using the [ShowS
 
 {% highlight xaml %}
 
-      <editors:SfAutocomplete x:Name="autocomplete"
-                              ItemsSource="{Binding SocialMedias}"
-                              DisplayMemberPath="Name"
-                              TextMemberPath="Name"                           
-                              ShowSuggestionsOnFocus="True"/>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"                           
+                        ShowSuggestionsOnFocus="True"/>
 
 {% endhighlight %}
 
@@ -1673,7 +1673,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
     employeeTemplateSelector.EmployeeTemplate1 = employeeTemplate1;
     employeeTemplateSelector.EmployeeTemplate2 = employeeTemplate2;
 
-    SfAutocomplete autoComplete = new()
+    SfAutocomplete autocomplete = new()
     {
         BindingContext = employee,
         ItemsSource = employee.Employees,
@@ -1683,7 +1683,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         ItemTemplate = employeeTemplateSelector,
     };
 
-    this.Content = autoComplete;
+    this.Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1772,23 +1772,23 @@ The Autocomplete control allows you to customize the style of the TokenItem gene
   xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
  ...
 
-  <editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autoComplete"
                         SelectionMode="Multiple"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" > 
-       <editors:SfAutocomplete.TokenItemStyle>
-           <Style TargetType="core:SfChipGroup">
-               <Setter Property="ChipTextColor" Value="White"/>
-               <Setter Property="ChipFontAttributes" Value="Bold"/>
-               <Setter Property="CloseButtonColor" Value="White"/>
-               <Setter Property="ChipBackground" Value="#d3a7ff"/>
-               <Setter Property="ChipStroke" Value="#5118e3"/>
-               <Setter Property="ChipStrokeThickness" Value="6"/>
-               <Setter Property="ChipCornerRadius" Value="18"/>
-           </Style>
-       </editors:SfAutocomplete.TokenItemStyle>
-   </editors:SfAutocomplete>
+    <editors:SfAutocomplete.TokenItemStyle>
+        <Style TargetType="core:SfChipGroup">
+            <Setter Property="ChipTextColor" Value="White"/>
+            <Setter Property="ChipFontAttributes" Value="Bold"/>
+            <Setter Property="CloseButtonColor" Value="White"/>
+            <Setter Property="ChipBackground" Value="#d3a7ff"/>
+            <Setter Property="ChipStroke" Value="#5118e3"/>
+            <Setter Property="ChipStrokeThickness" Value="6"/>
+            <Setter Property="ChipCornerRadius" Value="18"/>
+        </Style>
+    </editors:SfAutocomplete.TokenItemStyle>
+</editors:SfAutocomplete>
 
 {% endhighlight %}
 
@@ -1805,16 +1805,16 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            Completed="autoComplete_Completed" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Completed="Autocomplete_Completed" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-private async void autoComplete_Completed(object sender, EventArgs e)
+private async void Autocomplete_Completed(object sender, EventArgs e)
 {
     await DisplayAlert("Message", "Text entering Completed", "close");
 }
@@ -1864,7 +1864,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
 };
-autoComplete.Completed+=autoComplete_Completed;
+autocomplete.Completed+=Autocomplete_Completed;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1885,24 +1885,24 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
-                            DropdownOpening="Autocomplete_DropdownOpening"
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name">
-    </editors:SfAutocomplete>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        DropdownOpening="Autocomplete_DropdownOpening"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name">
+</editors:SfAutocomplete>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
+    autocomplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -1960,24 +1960,24 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight xaml %}
 
-     <editors:SfAutocomplete x:Name="autoComplete" 
-                             DropdownOpened="autoComplete_DropdownOpened"
-                             ItemsSource="{Binding SocialMedias}"
-                             DisplayMemberPath="Name"
-                             TextMemberPath="Name">
-     </editors:SfAutocomplete>
+<editors:SfAutocomplete x:Name="autoComplete" 
+                        DropdownOpened="Autocomplete_DropdownOpened"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name">
+</editors:SfAutocomplete>
  
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropdownOpened += autoComplete_DropdownOpened;
+    autocomplete.DropdownOpened += Autocomplete_DropdownOpened;
     
 
 {% endhighlight %}
@@ -2018,7 +2018,7 @@ public class SocialMedia
 
 {% highlight c# %}
 
-  private void autoComplete_DropdownOpened(object sender, EventArgs e)
+  private void Autocomplete_DropdownOpened(object sender, EventArgs e)
   {
     // Trigger when the dropdown is opened
   }
@@ -2035,22 +2035,22 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     
-    <editors:SfAutocomplete x:Name="autoComplete" 
-                            ItemsSource="{Binding SocialMedias}"
-                            DisplayMemberPath="Name"
-                            TextMemberPath="Name"
-                            DropDownClosed="SfAutocomplete_DropDownClosed">
-    </editors:SfAutocomplete>
+<editors:SfAutocomplete x:Name="autocomplete" 
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        DropDownClosed="Autocomplete_DropDownClosed">
+</editors:SfAutocomplete>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropDownClosed += SfAutocomplete_DropDownClosed;
+    autocomplete.DropDownClosed += Autocomplete_DropDownClosed;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -2089,7 +2089,7 @@ public class SocialMedia
 {% tabs %}
 {% highlight c# %}
     
-    private void SfAutocomplete_DropDownClosed(object sender, EventArgs e)
+    private void Autocomplete_DropDownClosed(object sender, EventArgs e)
     {
         await DisplayAlert("Message", "DropDown Closed", "close");
     }
@@ -2100,17 +2100,17 @@ public class SocialMedia
 ## ValueChanged Event
 When the value of Autocomplete changes, the [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ValueChanged) event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
 
-* `OldValue` – Contains the previous text value before the change.
-* `NewValue` – Contains the new text value after the change.
+* `OldValue` - Contains the previous text value before the change.
+* `NewValue` - Contains the new text value after the change.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"  
-                    TextMemberPath="Name" 
-                    DisplayMemberPath="Name" 
-                    ItemsSource="{Binding SocialMedias}" 
-                    ValueChanged="OnValueChanged" />
+                        TextMemberPath="Name" 
+                        DisplayMemberPath="Name" 
+                        ItemsSource="{Binding SocialMedias}" 
+                        ValueChanged="OnValueChanged" />
 
 {% endhighlight %}
 
@@ -2179,11 +2179,11 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autocomplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        ClearButtonClicked="autocomplete_ClearButtonClicked"/>
+                        ClearButtonClicked="Autocomplete_ClearButtonClicked"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -2194,7 +2194,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
         TextMemberPath = "Name",
         DisplayMemberPath = "Name"
     };
-autocomplete.ClearButtonClicked += autocomplete_ClearButtonClicked;
+autocomplete.ClearButtonClicked += Autocomplete_ClearButtonClicked;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -2235,7 +2235,7 @@ The `ClearButtonClicked` event can be handled as follows:
 {% tabs %}
 {% highlight C# %}
     
-private async void autocomplete_ClearButtonClicked(object sender, EventArgs e)
+private async void Autocomplete_ClearButtonClicked(object sender, EventArgs e)
 {
    await DisplayAlert("Message", "Clear Button Clicked", "ok");
 }
@@ -2250,8 +2250,8 @@ The cursor position in the input view can be obtained or updated using the [Curs
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
-                            CursorPosition = "4" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
 
@@ -2274,17 +2274,15 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAu
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
-                            ShowBorder = "False" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ShowBorder = "False" />
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
-    SfAutocomplete autocomplete = new SfAutocomplete
-    {
-        ShowBorder = false,
-    };
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ShowBorder = false,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -2302,17 +2300,17 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
-                            HorizontalTextAlignment="Center" 
-                            VerticalTextAlignment="Start"/>
+<editors:SfAutocomplete x:Name="autocomplete"
+                        HorizontalTextAlignment="Center" 
+                        VerticalTextAlignment="Start"/>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutocomplete autocomplete = new SfAutocomplete
-    {
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Start,
-    };
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Start,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -2333,10 +2331,10 @@ N> Default value of ReturnType is `Default`.
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-            ItemsSource="{Binding SocialMedias}"
-            DisplayMemberPath="Name"
-            TextMemberPath="Name" 
-            ReturnType="Next"/>
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" 
+                        ReturnType="Next"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -2393,10 +2391,10 @@ The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
-                    ItemsSource="{Binding SocialMedias}"
-                    TextMemberPath="Name"
-                    DisplayMemberPath="Name">
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name">
             <editors:SfAutocomplete.ClearButtonPath>
                 <Path Data="M1.70711 0.292893C1.31658 -0.097631 0.683417 -0.097631 0.292893 0.292893C-0.097631 0.683417 -0.097631 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.097631 12.6834 -0.097631 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.097631 12.6834 -0.097631 12.2929 0.292893L7 5.58579L1.70711 0.292893Z" 
                 Fill="Red" 
@@ -2470,11 +2468,11 @@ The following image illustrates the result of the above code:
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                    ItemsSource="{Binding SocialMedia}"
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name"
-                    ReturnCommand="{Binding AlertCommand}"
-                    ReturnCommandParameter="Return key is pressed"/>
+                        ItemsSource="{Binding SocialMedia}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        ReturnCommand="{Binding AlertCommand}"
+                        ReturnCommandParameter="Return key is pressed"/>
 
 {% endhighlight %}
 {% highlight c# %}

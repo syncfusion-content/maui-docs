@@ -27,13 +27,13 @@ The following table summarizes the available precision modes and their typical u
 
 | Precision mode | Allowed increments | Typical use case |
 |----------------|--------------------|------------------|
-| `Standard` | Whole values (e.g., 1, 2, 3) | Simple whole-star ratings such as product or movie ratings. |
+| `Standard` | Whole values (e.g., 1, 2, 3) | Simple whole-star Rating such as product or movie Rating. |
 | `Half`    | Half values (e.g., 0.5, 1.5, 2.5) | Ratings that allow half-step granularity, such as service feedback. |
 | `Exact`   | Any fractional value (e.g., 2.3, 3.7) | Ratings that require precise or continuous feedback, such as analytics. |
 
 ## Standard
 
-When the precision mode of `Rating` is set as [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), rating items are filled completely based on the rating value. Only whole values are accepted; fractional values are rounded to the nearest whole number.
+When the precision mode of `Rating` is set as [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), Rating items are filled completely based on the Rating value. Only whole values are accepted; fractional values are rounded to the nearest whole number.
 
 {% tabs %}
 
@@ -60,7 +60,7 @@ SfRating rating = new SfRating()
 
 ## Half
 
-When the precision mode of `Rating` is set as [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), rating items are filled up to half of an item based on the rating value. Half values (for example, 0.5, 1.5, 2.5) are accepted, allowing partial fills of rating items.
+When the precision mode of `Rating` is set as [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), Rating items are filled up to half of an item based on the Rating value. Half values (for example, 0.5, 1.5, 2.5) are accepted, allowing partial fills of Rating items.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ SfRating rating = new SfRating()
 
 ## Exact
 
-When the precision mode of `Rating` is set as [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact), rating items are filled precisely to match the exact rating value. Fractional values (for example, 3.7) are accepted and rating items are filled to the proportional amount.
+When the precision mode of `Rating` is set as [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact), Rating items are filled precisely to match the exact Rating value. Fractional values (for example, 3.7) are accepted and Rating items are filled to the proportional amount.
 
 {% tabs %}
 

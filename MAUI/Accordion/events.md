@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accordion Events in .NET MAUI Accordion control | Syncfusion®
-description: Learn all about Accordion Events support in the Syncfusion® .NET MAUI Accordion (SfAccordion) control and more.
+title: Events in .NET MAUI Accordion control | Syncfusion®
+description: Learn here about all the Events available in Syncfusion® .NET MAUI Accordion control, its elements, and more.
 platform: MAUI
 control: SfAccordion
 documentation: ug
 --- 
 
-# Accordion Events in .NET MAUI Accordion (SfAccordion)
+# Events in .NET MAUI Accordion
 
 There are four built-in events in the SfAccordion control namely:
 

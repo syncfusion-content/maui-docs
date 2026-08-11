@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn how to enable and customize tooltips in the Syncfusion® .NET MAUI Range Slider control for interactive value selection.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Range Slider (SfRangeSlider)
+# Tooltip in .NET MAUI Range Slider control
 
 This section helps to learn about how to add tooltip in the range slider.
 

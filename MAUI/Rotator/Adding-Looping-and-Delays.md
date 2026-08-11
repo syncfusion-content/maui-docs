@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator
 
-Looping and delay can be enabled in the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
+Looping and delay can be enabled in the [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
 
 ## Properties Reference
 

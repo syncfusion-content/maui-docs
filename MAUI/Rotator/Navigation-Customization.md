@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control supports customizing the appearance and visibility of the navigation bar, including the dot indicators, the thumbnail indicators, the navigation button, and the position of the strip.
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control supports customizing the appearance and visibility of the navigation bar, including the dot indicators, the thumbnail indicators, the navigation button, and the position of the strip.
 
 This page covers:
 
@@ -134,7 +134,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with custom dot stroke color](images/DotsStroke.png)
+![Rotator with custom dot stroke color](images/DotsStroke.png)
 
 ### Selected Dot Color
 
@@ -513,7 +513,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with custom unselected thumbnail stroke](images/UnSelectedThumbnailStroke.png)
+![Rotator with custom unselected thumbnail stroke](images/UnSelectedThumbnailStroke.png)
 
 ## Customizing Position
 
@@ -605,7 +605,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with navigation strip position set to Top](images/NavigationStripPosition.png)
+![Rotator with navigation strip position set to Top](images/NavigationStripPosition.png)
 
 ## Navigation Button Customization
 
@@ -699,7 +699,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with custom navigation button icon color](images/NavigationButtonIconColor.png)
+![Rotator with custom navigation button icon color](images/NavigationButtonIconColor.png)
 
 ### Navigation Button Background Color
 
@@ -885,7 +885,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with ShowNavigationButton set to false](images/ShowNavigationButton.png)
+![Rotator with ShowNavigationButton set to false](images/ShowNavigationButton.png)
 
 ## See also
 

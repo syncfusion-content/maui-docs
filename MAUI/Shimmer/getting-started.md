@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started for .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the getting started with Syncfusion .NET MAUI Shimmer (SfShimmer) control, its elements and more.
+title: Getting Started with .NET MAUI Shimmer | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Shimmer control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfShimmer
 documentation: ug
 ---
 
-# Getting started of .NET MAUI Shimmer
+# Getting Started with .NET MAUI Shimmer
 
 This section explains how to add the [.NET MAUI Shimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) control. Follow the steps below to add a .NET MAUI Shimmer control to your project.
 

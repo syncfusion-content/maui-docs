@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Voice Support in .NET MAUI AI AssistView | Syncfusion®
-description: Learn how to enable and configure voice input and text-to-speech support in the Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control.
+title: Voice input & output support in .NET MAUI AI AssistView | Syncfusion®
+description: Learn about voice input and text-to-speech support in the Syncfusion® .NET MAUI AI AssistView control.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# How to Enable Voice Support in .NET MAUI SfAIAssistView?
+# Voice support in .NET MAUI AI AssistView
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides built-in voice input and text-to-speech capabilities. Voice input allows users to interact using speech through a microphone button, while text-to-speech enables users to listen to AI responses.
 
