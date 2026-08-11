@@ -9,7 +9,7 @@ documentation: UG
 
 # Migrating from Xamarin CheckBox to .NET MAUI CheckBox
 
-To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we have retained most of the APIs from Xamarin CheckBox in the MAUI CheckBox. However, to ensure consistency in API naming, some APIs have been renamed. The changes in the MAUI CheckBox from Xamarin CheckBox are detailed below:
+To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we have retained most of the APIs from Xamarin CheckBox in the .NET MAUI CheckBox. However, to ensure consistency in API naming, some APIs have been renamed. The changes in the .NET MAUI CheckBox from Xamarin CheckBox are detailed below:
 
 ## Namespaces 
 
