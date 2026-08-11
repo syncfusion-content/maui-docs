@@ -1673,7 +1673,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
     employeeTemplateSelector.EmployeeTemplate1 = employeeTemplate1;
     employeeTemplateSelector.EmployeeTemplate2 = employeeTemplate2;
 
-    SfAutocomplete autoComplete = new()
+    SfAutocomplete autocomplete = new()
     {
         BindingContext = employee,
         ItemsSource = employee.Employees,
@@ -1683,7 +1683,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         ItemTemplate = employeeTemplateSelector,
     };
 
-    this.Content = autoComplete;
+    this.Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1805,16 +1805,16 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autocomplete"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
                             TextMemberPath="Name"
-                            Completed="autoComplete_Completed" />
+                            Completed="Autocomplete_Completed" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-private async void autoComplete_Completed(object sender, EventArgs e)
+private async void Autocomplete_Completed(object sender, EventArgs e)
 {
     await DisplayAlert("Message", "Text entering Completed", "close");
 }
@@ -1864,7 +1864,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
 };
-autoComplete.Completed+=autoComplete_Completed;
+autocomplete.Completed+=Autocomplete_Completed;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1885,7 +1885,7 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autocomplete"
                             DropdownOpening="Autocomplete_DropdownOpening"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
@@ -1896,13 +1896,13 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
+    autocomplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -1971,13 +1971,13 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropdownOpened += autoComplete_DropdownOpened;
+    autocomplete.DropdownOpened += Autocomplete_DropdownOpened;
     
 
 {% endhighlight %}
@@ -2035,7 +2035,7 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     
-    <editors:SfAutocomplete x:Name="autoComplete" 
+    <editors:SfAutocomplete x:Name="autocomplete" 
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
                             TextMemberPath="Name"
@@ -2044,13 +2044,13 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete
+    SfAutocomplete autocomplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
     };
-    autoComplete.DropDownClosed += SfAutocomplete_DropDownClosed;
+    autocomplete.DropDownClosed += SfAutocomplete_DropDownClosed;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel" %}
@@ -2250,7 +2250,7 @@ The cursor position in the input view can be obtained or updated using the [Curs
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autocomplete"
                             CursorPosition = "4" />
 {% endhighlight %}
 {% highlight C# %}
@@ -2274,7 +2274,7 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAu
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autocomplete"
                             ShowBorder = "False" />
 {% endhighlight %}
 {% highlight C# %}
@@ -2302,7 +2302,7 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfAutocomplete x:Name="autoComplete"
+    <editors:SfAutocomplete x:Name="autocomplete"
                             HorizontalTextAlignment="Center" 
                             VerticalTextAlignment="Start"/>
 {% endhighlight %}
@@ -2393,7 +2393,7 @@ The [ClearButtonPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name">
