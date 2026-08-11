@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from Xamarin Image Editor to .NET MAUI Image Editor
 
-To make migration easier from the [Xamarin Image Editor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImage Editor.XForms.html) to the [.NET MAUI Image Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image Editor.html), most of the APIs from Xamarin Image Editor have been retained in the .NET MAUI Image Editor. However, to maintain the consistency of API naming in the .NET MAUI Image Editor, some of the APIs have been renamed. The API changes from Xamarin Image Editor to .NET MAUI Image Editor are detailed as follows.
+To make migration easier from the [Xamarin Image Editor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfImageEditor.XForms.html) to the [.NET MAUI Image Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.html), most of the APIs from Xamarin Image Editor have been retained in the .NET MAUI Image Editor. However, to maintain the consistency of API naming in the .NET MAUI Image Editor, some of the APIs have been renamed. The API changes from Xamarin Image Editor to .NET MAUI Image Editor are detailed as follows.
 
 ## Namespaces
 
