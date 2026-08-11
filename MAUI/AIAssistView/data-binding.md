@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in .NET MAUI AI AssistView Control | Syncfusion®
-description: Learn here about binding the Request and Response Items in Syncfusion® .NET MAUI AssistView control.
+description: Learn here about binding the Request and Response Items in Syncfusion® .NET MAUI AI AssistView control.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
