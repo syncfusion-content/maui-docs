@@ -310,7 +310,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the MaskedEntry.
+Explore a real-world application that demonstrates the practical use of the Masked Entry.
     </div>
     <a href="https://github.com/syncfusion/maui-aisalesdashboard" class="explore-link">
     View Sample
