@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Essential® UI Kit for .NET MAUI | MAUI | Syncfusion®
-description: The Syncfusion® Essential® UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
+title: Essential® UI Kit for .NET MAUI Visual Studio Code | Syncfusion®
+description: The Syncfusion® Essential® UI Kit for .NET MAUI Visual Studio Code extension provides predefined design screens and templates for .NET MAUI applications.
 platform: maui
 control: Syncfusion<sup>®</sup> Extensions
 documentation: ug
 ---
 
-# Essential<sup>®</sup> UI Kit for .NET MAUI
+# Essential® UI Kit for .NET MAUI Visual Studio Code
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI provides pre-built XAML templates, making it easy to create user interfaces for cross-platform applications. It follows a well-structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and the modification of existing views.
 
