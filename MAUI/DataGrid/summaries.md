@@ -1718,7 +1718,7 @@ Each summary has a specific key using which the custom summary renderer can be r
 
 <tr>
 <td>Table summary</td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryCellRenderer.html" aria-label="DataGridTableSummaryCellRenderer">DataGridTableSummaryCellRenderer </a> </td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryCellRenderer.html" aria-label="DataGridTableSummaryCellRenderer class documentation">DataGridTableSummaryCellRenderer </a> </td>
 <td>TableSummary</td>
 </tr>
 
