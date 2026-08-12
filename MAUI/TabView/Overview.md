@@ -9,7 +9,7 @@ documentation: UG
 
 # About Syncfusion® .NET MAUI Tab View Control
 
-The advanced Syncfusion® .NET MAUI Tab View [SfTabView](https://www.syncfusion.com/maui-controls/maui-tab-view) provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
+The advanced Syncfusion® [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) provides a simple and intuitive interface for tab navigation in both mobile and desktop applications. This allows users to explore and switch between different tabs efficiently.
 
    ![.NET MAUI Tab View](images/TabView.png)
 
@@ -64,7 +64,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/tabview/overview">Tab View</a></td>
+<td><a href="/maui/tabview/overview" aria-label="MAUI Tab View control overview">Tab View</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -81,11 +81,11 @@ The following table summarizes the globalization support available in this contr
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) shows a step‑by‑step guide to begin using the Tab View control.  
+- [Getting Started](https://help.syncfusion.com/maui/tabview/getting-started) shows a step-by-step guide to begin using the Tab View control.  
 - [Headers](https://help.syncfusion.com/maui/tabview/header-display-mode) explains how to configure header placement and styles.  
 - [Tab Bar Customization](https://help.syncfusion.com/maui/tabview/tab-bar-customization) helps customize tab bar appearance and behavior. 
 - [Tab Item Customization](https://help.syncfusion.com/maui/tabview/tab-item-customization) details how to style and configure individual tab items. 
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples. 
 
 ## Resources
 
@@ -257,7 +257,7 @@ Explore Features
     <h3 class="form-title">Tutorial Videos</h3>
 </div>
     <div class="form-description">
-      Watch step‑by‑step video guides to quickly understand concepts and implementation.
+      Watch step-by-step video guides to quickly understand concepts and implementation.
     </div>
     <a href="https://www.syncfusion.com/tutorial-videos/maui/tab-view" class="explore-link">
     Watch now
@@ -275,7 +275,7 @@ Explore Features
     <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
-       Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
+       Find practical solutions, troubleshooting tips and how-to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/section/1127" class="explore-link">
 Search KB's
@@ -293,7 +293,7 @@ Search KB's
     <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
-      Discover in‑depth articles, use cases and expert insights from our developers.
+      Discover in-depth articles, use cases and expert insights from our developers.
     </div>
     <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
 Read Blogs
@@ -311,7 +311,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the TabView.
+      Explore a real-world application that demonstrates the practical use of the Tab View.
     </div>
     <a href="https://github.com/syncfusion/maui-weather-analysis" class="explore-link">
     View Sample

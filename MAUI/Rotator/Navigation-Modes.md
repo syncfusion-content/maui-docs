@@ -12,7 +12,7 @@ documentation: ug
 
 ## Overview
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control uses two related properties to configure the navigation strip that lets users move between items:
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control uses two related properties to configure the navigation strip that lets users move between items:
 
 * [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) - controls the appearance of the navigation bar (for example, `Dots` or `Thumbnail`).
 * [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripPosition) - controls where the navigation bar is placed relative to the slider area (for example, `Bottom`, `Top`, `Left`, or `Right`).
@@ -309,7 +309,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with Top navigation strip position](images/NavigationStripPosition.png)
+![Rotator with Top navigation strip position](images/NavigationStripPosition.png)
 
 ## See also
 

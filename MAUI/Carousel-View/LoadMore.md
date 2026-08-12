@@ -36,7 +36,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 ## Allow Load More
 
-Enable the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property to activate `LoadMore` support in the Carousel View. The default value of the `AllowLoadMore` property is `false`.
+Enable the [AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_AllowLoadMore) property to activate `LoadMore` support in the Carousel. The default value of the `AllowLoadMore` property is `false`.
 
 {% tabs %}
 
@@ -458,6 +458,6 @@ Find the complete Load More sample on [GitHub](https://github.com/SyncfusionExam
 
 ## See also
 
-- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
-- [Transformation in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [Populating Items in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UI Virtualization in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [Transformation in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/transformation)

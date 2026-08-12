@@ -71,7 +71,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![Outlined SfTextInputLayout with a 4-unit focused stroke and a 2-unit unfocused stroke](images/HowTo/StrokeThickness.png)
+![Outlined Text Input Layout with a 4-unit focused stroke and a 2-unit unfocused stroke](images/HowTo/StrokeThickness.png)
 
 ## See Also
 
