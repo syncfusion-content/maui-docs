@@ -118,7 +118,7 @@ this.Content = segmentedControl;
 
 ## Properties
 
-### SfSegmentedControl
+### Segmented Control
 
 <table> 
 <tr>

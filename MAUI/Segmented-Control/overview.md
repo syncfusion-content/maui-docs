@@ -309,7 +309,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the SegmentedControl.
+      Explore a real-world application that demonstrates the practical use of the Segmented Control.
     </div>
     <a href="https://github.com/syncfusion/maui-weather-analysis" class="explore-link">
     View Sample
