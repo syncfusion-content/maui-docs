@@ -201,7 +201,7 @@ private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEv
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Completed) event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) in editable mode by pressing the Return key on the keyboard. The handler is a generic event handler that takes the `sender` and `EventArgs`.
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Completed) event is raised when the user finalizes the text in the [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) in editable mode by pressing the Return key on the keyboard. The handler is a generic event handler that takes the `sender` and `EventArgs`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -304,7 +304,7 @@ sfNumericEntry.Stroke = Colors.Red;
 
 ## Border visibility
 
-Use the [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowBorder) property of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) to control the visibility of the border. The default value is `true`. The following example shows how to change the border visibility:
+Use the [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowBorder) property of [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) to control the visibility of the border. The default value is `true`. The following example shows how to change the border visibility:
 
 {% tabs %}
 {% highlight XAML %}
@@ -326,11 +326,11 @@ sfNumericEntry.ShowBorder = false;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI NumericEntry ShowBorder](GettingStarted_images/showborder.png)
+![.NET MAUI Numeric Entry ShowBorder](GettingStarted_images/showborder.png)
 
 ## TextAlignment
 
-The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports text-alignment customization through the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_VerticalTextAlignment) properties.
+The [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports text-alignment customization through the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_VerticalTextAlignment) properties.
 
 N> Dynamic changes to the `HorizontalTextAlignment` property may not behave as expected on the Android platform.
 
@@ -356,7 +356,7 @@ sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI NumericEntry TextAlignment](GettingStarted_images/textalignment.png)
+![.NET MAUI Numeric Entry TextAlignment](GettingStarted_images/textalignment.png)
 
 ## Select text on focus
 
@@ -384,7 +384,7 @@ numericEntry.SelectAllOnFocus = false;
 
 The `ReturnType` property specifies the return button of the on-screen keyboard (for example, `Next`, `Done`, or `Go`). Use it to manage the flow between multiple input fields by defining what action the Return key performs.
 
-You can define the return key type of [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) by using the ReturnType property.
+You can define the return key type of [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) by using the ReturnType property.
 
 N> The default value of `ReturnType` is `Default`.
 
@@ -452,7 +452,7 @@ this.Content = numericEntry;
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI NumericEntry ClearButtonPath](GettingStarted_images/clearbuttoncustomization.png)
+![.NET MAUI Numeric Entry ClearButtonPath](GettingStarted_images/clearbuttoncustomization.png)
 
 ## Return Command and Return Command Parameter
 
@@ -506,13 +506,13 @@ public class CommandDemoViewModel
 
 ## Automation ID
 
-The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s `AutomationId` is derived from the control's `AutomationId` to ensure uniqueness.
+The [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s `AutomationId` is derived from the control's `AutomationId` to ensure uniqueness.
 
 For example, if the `SfNumericEntry's` `AutomationId` is set to `EmployeeNumericEntry`, the editable entry can be targeted as `EmployeeNumericEntry Entry` and the clear button as `EmployeeNumericEntry Clear Button`. This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
 
 The following screenshot illustrates the `AutomationId`s of the inner elements:
 
-![.NET MAUI NumericEntry AutomationId demonstration](GettingStarted_images/NumericEntry_AutomationID.png)
+![.NET MAUI Numeric Entry AutomationId demonstration](GettingStarted_images/NumericEntry_AutomationID.png)
 
 ## See Also
 

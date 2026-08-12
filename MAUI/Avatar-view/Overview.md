@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion® Avatar View Control for .NET MAUI
-description: Learn about the .NET MAUI Avatar View control, its introduction, key features, and how it enhances modern app design experiences.
+title: About Syncfusion® .NET MAUI Avatar View Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Avatar View control and more details.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
 ---
 
-# Overview of .NET MAUI Avatar View
+# About Syncfusion® .NET MAUI Avatar View Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.com/maui-controls/maui-avatarview) control provides a graphical representation of a user's image. It allows customization of the view by adding an image, background color, icon, and text.
 

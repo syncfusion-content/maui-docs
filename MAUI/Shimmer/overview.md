@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview for .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the overview of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
+title: About Syncfusion® .NET MAUI Shimmer Control | Syncfusion®
+description: Learn about introduction of Syncfusion® .NET MAUI Shimmer control with its features and capabilities for loading placeholders and animations.
 platform: maui
 control: SfShimmer
 documentation: ug
 ---
 
-# Overview of .NET MAUI Shimmer
+# About Syncfusion® .NET MAUI Shimmer Control
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer ([SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer)) control can increase an application's responsiveness by displaying a shimmer effect while the content is loading or processing in the background.
 

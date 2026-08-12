@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States and Colors in .NET MAUI Text Input Layout | Syncfusion®
-description: 	Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in .NET MAUI Text Input Layout.
+description: Learn how to customize stroke, background, label colors, and visual states such as Normal, Focused, Error, and Disabled in .NET MAUI Text Input Layout.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -108,7 +108,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with per-state stroke colors defined via the Visual State Manager](images/StatesAndColors/States.png)
+![Text Input Layout with per-state stroke colors defined via the Visual State Manager](images/StatesAndColors/States.png)
 
 ## Disabled state
 
@@ -144,7 +144,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout in the disabled state, with the container, hint, and border rendered in disabled colors](images/StatesAndColors/Disabled.jpg)
+![Text Input Layout in the disabled state, with the container, hint, and border rendered in disabled colors](images/StatesAndColors/Disabled.jpg)
 
 ## Container background
 
@@ -186,7 +186,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![Filled SfTextInputLayout with a custom container background and stroke color](images/StatesAndColors/FilledContainerBackground.png)
+![Filled Text Input Layout with a custom container background and stroke color](images/StatesAndColors/FilledContainerBackground.png)
 
 ### Outlined
 
@@ -224,7 +224,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![Outlined SfTextInputLayout with a custom container background and stroke color](images/StatesAndColors/OutlinedContainerBackground.png)
+![Outlined Text Input Layout with a custom container background and stroke color](images/StatesAndColors/OutlinedContainerBackground.png)
 
 ## Customize the label text color
 
@@ -278,7 +278,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with the hint label in green, helper text in blue, and error text in maroon](images/StatesAndColors/AssistiveColors.png)
+![Text Input Layout with the hint label in green, helper text in blue, and error text in maroon](images/StatesAndColors/AssistiveColors.png)
 
 ## See Also
 

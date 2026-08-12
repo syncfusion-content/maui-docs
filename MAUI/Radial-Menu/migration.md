@@ -9,14 +9,14 @@ documentation: UG
  
 # Migrate from Xamarin Radial Menu to .NET MAUI Radial Menu
 
-To simplify the migration from the [Xamarin SfRadialMenu Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-radial-menu) to the [.NET MAUI SfRadialMenu Control](https://www.syncfusion.com/maui-controls/maui-radial-menu), most of the APIs from the `Xamarin SfRadialMenu Control` have been retained in the `.NET MAUI SfRadialMenu Control`. However, to maintain the consistency in API naming within the `.NET MAUI SfRadialMenu Control`, some APIs have been renamed. The following sections outline the differences.
+To simplify the migration from the [Xamarin Radial Menu](https://www.syncfusion.com/xamarin-ui-controls/xamarin-radial-menu) to the [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu), most of the APIs from the `Xamarin Radial Menu` have been retained in the `.NET MAUI Radial Menu`. However, to maintain the consistency in API naming within the `.NET MAUI Radial Menu`, some APIs have been renamed. The following sections outline the differences.
 
 ## Namespaces
 
 <table>
 <tr>
-<th>Xamarin SfRadialMenu control</th>
-<th>.NET MAUI SfRadialMenu control</th></tr>
+<th>Xamarin Radial Menu control</th>
+<th>.NET MAUI Radial Menu control</th></tr>
 <tr>
 <td>Syncfusion.Xamarin.RadialMenu</td>
 <td>Syncfusion.Maui.RadialMenu</td></tr>
@@ -74,7 +74,7 @@ xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.M
 {% highlight C# %}
 
 using Syncfusion.Maui.RadialMenu;
-…
+...
 
 SfRadialMenu radialMenu = new SfRadialMenu();
 this.Content = radialMenu;
@@ -91,19 +91,19 @@ this.Content = radialMenu;
 
 <table> 
 <tr>
-<th>Xamarin SfRadialMenu control</th>
-<th>.NET MAUI SfRadialMenu control</th>
+<th>Xamarin Radial Menu control</th>
+<th>.NET MAUI Radial Menu control</th>
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[CenterButtonBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderColor)'}}</td>
-<td>{{'[CenterButtonStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke)'}}</td>
+<td>{{[CenterButtonBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderColor)}}</td>
+<td>{{[CenterButtonStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke)}}</td>
 <td>Gets or sets a value of the stroke brush for the center button's stroke in the SfRadialMenu.</td>
 </tr>
 
 <tr>
-<td>{{'[CenterButtonBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderThickness)'}}</td>
-<td>{{'[CenterButtonStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStrokeThickness)'}}</td>
+<td>{{[CenterButtonBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderThickness)}}</td>
+<td>{{[CenterButtonStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStrokeThickness)}}</td>
 <td>Gets or sets a value of the the stroke thickness for the center button's stroke thickness in the SfRadialMenu.</td>
 </tr>
 

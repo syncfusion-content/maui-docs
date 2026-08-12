@@ -208,7 +208,7 @@ Find the complete UIVirtualization sample from this [link](https://github.com/Sy
 
 ## See Also
 
-- [Getting Started with .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/getting-started)
-- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
-- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [Getting Started with .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/getting-started)
+- [Populating Items in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Load More in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Transformation in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/transformation)

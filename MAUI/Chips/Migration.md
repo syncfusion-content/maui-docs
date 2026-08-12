@@ -9,14 +9,14 @@ documentation: ug
 
 # Migrating from Xamarin Chips to .NET MAUI Chips
 
-To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), we kept most of the APIs from Xamarin SfChips in MAUI SfChips. However, to maintain the consistency of API naming in MAUI SfChips, we renamed some of the APIs. The APIs changed in MAUI SfChips from Xamarin SfChips are detailed as follows:
+To migrate easier from Xamarin Chips to [.NET MAUI Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), we kept most of the APIs from Xamarin Chips in .NET MAUI SChips. However, to maintain the consistency of API naming in MAUI Chips, we renamed some of the APIs. The APIs changed in .NET MAUI Chips from Xamarin Chips are detailed as follows:
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfChips</th>
-<th>.NET MAUI SfChips</th></tr>
+<th>Xamarin Chips</th>
+<th>.NET MAUI Chips</th></tr>
 <tr>
 <td>Syncfusion.Xamarin.Buttons</td>
 <td>Syncfusion.Maui.Core</td></tr>
@@ -26,8 +26,8 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 
 <table> 
 <tr>
-<th>Xamarin SfChips</th>
-<th>.NET MAUI SfChips</th>
+<th>Xamarin Chips</th>
+<th>.NET MAUI Chips</th>
 <th>Description</th></tr>
 <tr>
 <td> {{'[BorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Border.SfBorder.html#Syncfusion_XForms_Border_SfBorder_BorderThickness)'| markdownify }}</td>
@@ -83,8 +83,8 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 <table> 
 <tr>
 <th>Event Name</th>
-<th>Xamarin SfChips</th>
-<th>.NET MAUI SfChips</th>
+<th>Xamarin Chips</th>
+<th>.NET MAUI Chips</th>
 <th>Description</th></tr>
 <tr>
 <td> {{'[ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved)'| markdownify }}</td>

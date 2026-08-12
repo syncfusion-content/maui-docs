@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Track in DateTime Range Selector control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+description: Learn here all about adding the track feature of .NET MAUI DateTime Range Selector control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Track in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Track in .NET MAUI DateTime Range Selector
 
 This section helps to learn about how to customize the track in the DateTime Range Selector.
 

@@ -112,5 +112,5 @@ private void Carousel_SelectionChanged(object sender, SelectionChangedEventArgs 
 
 ## See also
 
-- [Populating Items in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [Populating Items in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [UI Virtualization in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/uivirtualization)

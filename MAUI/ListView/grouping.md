@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# Grouping in .NET MAUI ListView (SfListView)
+# Grouping in .NET MAUI ListView
 
 A group is a collection of items that belong to a specific category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its [Key](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Key), which allows you to access the underlying data in the group.
 

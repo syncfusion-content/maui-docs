@@ -9,14 +9,14 @@ documentation: UG
 
 # Migrating from Xamarin Effects View to .NET MAUI Effects View
 
-To ease the migration from Xamarin SfEffectsView to .NET MAUI SfEffectsView, most APIs from Xamarin SfEffectsView have been retained in MAUI SfEffectsView. However, to maintain API naming consistency in MAUI SfEffectsView, some APIs have been renamed. The changes in MAUI SfEffectsView from Xamarin SfEffectsView are detailed as follows.
+To ease the migration from Xamarin Effects View to .NET MAUI Effects View, most APIs from Xamarin Effects View have been retained in .NET MAUI Effects View. However, to maintain API naming consistency in .NET MAUI Effects View, some APIs have been renamed. The changes in .NET MAUI Effects View from Xamarin Effects View are detailed as follows.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfEffectsView</th>
-<th>.NET MAUI SfEffectsView</th></tr>
+<th>Xamarin Effects View</th>
+<th>.NET MAUI Effects View</th></tr>
 <tr>
 <td>Syncfusion.XForms.EffectsView</td>
 <td>Syncfusion.Maui.Core</td></tr>
@@ -26,8 +26,8 @@ To ease the migration from Xamarin SfEffectsView to .NET MAUI SfEffectsView, mos
 
 <table> 
 <tr>
-<th>Xamarin SfEffectsView</th>
-<th>.NET MAUI SfEffectsView</th>
+<th>Xamarin Effects View</th>
+<th>.NET MAUI Effects View</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[AutoResetEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_AutoResetEffect)'| markdownify }}</td>
@@ -52,8 +52,8 @@ To ease the migration from Xamarin SfEffectsView to .NET MAUI SfEffectsView, mos
 <table>
 <tr>
 <th>Enum</th>
-<th>Xamarin SfEffectsView</th>
-<th>.NET MAUI SfEffectsView</th>
+<th>Xamarin Effects View</th>
+<th>.NET MAUI Effects View</th>
 <th>Description</th></tr>
 <tr>
 <td>RippleStartPosition</td>
