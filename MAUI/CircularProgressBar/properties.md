@@ -139,6 +139,21 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_">SetProgress</a></td>
+        <td>void</td>
+        <td>Updates the progress value with optional animation settings.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -156,20 +171,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted">ProgressCompleted</a></td>
         <td>EventHandler</td>
         <td>Raised when the progress value reaches the maximum value.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_">SetProgress</a></td>
-        <td>void</td>
-        <td>Updates the progress value with optional animation settings.</td>
     </tr>
 </table>

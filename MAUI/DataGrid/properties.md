@@ -365,6 +365,51 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     </tr>
 </table>
 
+## Methods
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView">CollapseAllDetailsView()</a></td>
+		<td>void</td>
+		<td>Collapses all details views.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView">ExpandAllDetailsView()</a></td>
+		<td>void</td>
+		<td>Expands all details views.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells">GetSelectedCells()</a></td>
+		<td>void</td>
+		<td>Returns the selected cells.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit">EndEdit()</a></td>
+		<td>void</td>
+		<td>Ends the current editing session.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ClearSelection">ClearSelection()</a></td>
+		<td>void</td>
+		<td>Clears the current selection.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_">ScrollToColumnIndex(int)</a></td>
+		<td>void</td>
+		<td>Scrolls to the specified column index.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_">ScrollToRowIndex(int)</a></td>
+		<td>void</td>
+		<td>Scrolls to the specified row index.</td>
+	</tr>
+</table>
+
 ## Events
 
 <table>
@@ -577,50 +622,5 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ViewCreated">ViewCreated</a></td>
 		<td>EventArgs</td>
 		<td>Raised when the view is created.</td>
-	</tr>
-</table>
-
-## Methods
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView">CollapseAllDetailsView()</a></td>
-		<td>void</td>
-		<td>Collapses all details views.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView">ExpandAllDetailsView()</a></td>
-		<td>void</td>
-		<td>Expands all details views.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells">GetSelectedCells()</a></td>
-		<td>void</td>
-		<td>Returns the selected cells.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit">EndEdit()</a></td>
-		<td>void</td>
-		<td>Ends the current editing session.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ClearSelection">ClearSelection()</a></td>
-		<td>void</td>
-		<td>Clears the current selection.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_">ScrollToColumnIndex(int)</a></td>
-		<td>void</td>
-		<td>Scrolls to the specified column index.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_">ScrollToRowIndex(int)</a></td>
-		<td>void</td>
-		<td>Scrolls to the specified row index.</td>
 	</tr>
 </table>

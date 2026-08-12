@@ -63,11 +63,6 @@ documentation: ug
 		<td>Defines the font size.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_HorizontalTextAlignment">HorizontalTextAlignment</a></td>
-		<td>TextAlignment</td>
-		<td>Defines the horizontal text alignment.</td>
-	</tr>
-	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageAlignment">ImageAlignment</a></td>
 		<td>Alignment</td>
 		<td>Defines the image alignment.</td>
@@ -116,11 +111,6 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextColor">TextColor</a></td>
 		<td>Color</td>
 		<td>Defines the text color.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment">VerticalTextAlignment</a></td>
-		<td>TextAlignment</td>
-		<td>Defines the vertical text alignment.</td>
 	</tr>
 </table>
 

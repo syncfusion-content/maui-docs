@@ -134,35 +134,6 @@ documentation: ug
 
 </table>
 
-## Events
-
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-
-<tr>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged">SelectionChanged</a></td>
-<td>EventHandler&lt;SelectionChangedEventArgs&gt;</td>
-<td>Raised when the selected item changes.</td>
-</tr>
-
-<tr>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted">SwipeStarted</a></td>
-<td>EventHandler&lt;SwipeStartedEventArgs&gt;</td>
-<td>Raised when swiping starts.</td>
-</tr>
-
-<tr>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded">SwipeEnded</a></td>
-<td>EventHandler</td>
-<td>Raised when swiping ends.</td>
-</tr>
-
-</table>
-
 ## Methods
 
 <table>
@@ -188,6 +159,35 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_MovePrevious">MovePrevious()</a></td>
 <td>void</td>
 <td>Moves to the previous carousel item.</td>
+</tr>
+
+</table>
+
+## Events
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged">SelectionChanged</a></td>
+<td>EventHandler&lt;SelectionChangedEventArgs&gt;</td>
+<td>Raised when the selected item changes.</td>
+</tr>
+
+<tr>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeStarted">SwipeStarted</a></td>
+<td>EventHandler&lt;SwipeStartedEventArgs&gt;</td>
+<td>Raised when swiping starts.</td>
+</tr>
+
+<tr>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded">SwipeEnded</a></td>
+<td>EventHandler</td>
+<td>Raised when swiping ends.</td>
 </tr>
 
 </table>

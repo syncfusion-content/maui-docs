@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # API Reference in .NET MAUI CheckBox
+
 ## Properties
 
 <table>

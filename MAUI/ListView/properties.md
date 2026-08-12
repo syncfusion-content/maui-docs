@@ -428,6 +428,72 @@ documentation: ug
         <td>Defines the parameter passed to the tap command.</td>
     </tr>
 </table>
+
+## Methods
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseAll">CollapseAll()</a></td>
+		<td>void</td>
+		<td>Collapses all groups.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseGroup_Syncfusion_Maui_DataSource_GroupResult_">CollapseGroup(GroupResult)</a></td>
+		<td>void</td>
+		<td>Collapses the specified group.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandAll">ExpandAll()</a></td>
+		<td>void</td>
+		<td>Expands all groups.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandGroup_Syncfusion_Maui_DataSource_GroupResult_">ExpandGroup(GroupResult)</a></td>
+		<td>void</td>
+		<td>Expands the specified group.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshItem_System_Int32_System_Int32_System_Boolean_">RefreshItem(Int32, Int32, Boolean)</a></td>
+		<td>void</td>
+		<td>Refreshes the specified item.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView">RefreshView()</a></td>
+		<td>void</td>
+		<td>Refreshes the view.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ResetSwipeItem_System_Boolean_">ResetSwipeItem(Boolean)</a></td>
+		<td>void</td>
+		<td>Resets the swiped item.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_">ScrollTo(Double, Boolean)</a></td>
+		<td>void</td>
+		<td>Scrolls to the specified position.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Object_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_">ScrollTo(Object, ScrollToPosition, Boolean)</a></td>
+		<td>void</td>
+		<td>Scrolls to the specified item.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectAll">SelectAll()</a></td>
+		<td>void</td>
+		<td>Selects all items.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeItem_System_Object_System_Double_">SwipeItem(Object, Double)</a></td>
+		<td>void</td>
+		<td>Swipes the specified item.</td>
+	</tr>
+</table>
+
 ## Events
 
 <table>
@@ -535,70 +601,5 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Swiping">Swiping</a></td>
 		<td>EventHandler&lt;SwipingEventArgs&gt;</td>
 		<td>Raised while an item is swiped.</td>
-	</tr>
-</table>
-
-## Methods
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseAll">CollapseAll()</a></td>
-		<td>void</td>
-		<td>Collapses all groups.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseGroup_Syncfusion_Maui_DataSource_GroupResult_">CollapseGroup(GroupResult)</a></td>
-		<td>void</td>
-		<td>Collapses the specified group.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandAll">ExpandAll()</a></td>
-		<td>void</td>
-		<td>Expands all groups.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandGroup_Syncfusion_Maui_DataSource_GroupResult_">ExpandGroup(GroupResult)</a></td>
-		<td>void</td>
-		<td>Expands the specified group.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshItem_System_Int32_System_Int32_System_Boolean_">RefreshItem(Int32, Int32, Boolean)</a></td>
-		<td>void</td>
-		<td>Refreshes the specified item.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView">RefreshView()</a></td>
-		<td>void</td>
-		<td>Refreshes the view.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ResetSwipeItem_System_Boolean_">ResetSwipeItem(Boolean)</a></td>
-		<td>void</td>
-		<td>Resets the swiped item.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_">ScrollTo(Double, Boolean)</a></td>
-		<td>void</td>
-		<td>Scrolls to the specified position.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Object_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_">ScrollTo(Object, ScrollToPosition, Boolean)</a></td>
-		<td>void</td>
-		<td>Scrolls to the specified item.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectAll">SelectAll()</a></td>
-		<td>void</td>
-		<td>Selects all items.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeItem_System_Object_System_Double_">SwipeItem(Object, Double)</a></td>
-		<td>void</td>
-		<td>Swipes the specified item.</td>
 	</tr>
 </table>

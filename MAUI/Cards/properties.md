@@ -44,6 +44,26 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Backward">Backward()</a></td>
+        <td>void</td>
+        <td>Moves the layout to the previous card, if available.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Forward">Forward()</a></td>
+        <td>void</td>
+        <td>Moves the layout to the next card, if available.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -66,25 +86,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanging">VisibleIndexChanging</a></td>
         <td>EventHandler&lt;CardVisibleIndexChangingEventArgs&gt;</td>
         <td>Raised before the visible card index changes and can be canceled.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Backward">Backward()</a></td>
-        <td>void</td>
-        <td>Moves the layout to the previous card, if available.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Forward">Forward()</a></td>
-        <td>void</td>
-        <td>Moves the layout to the next card, if available.</td>
     </tr>
 </table>

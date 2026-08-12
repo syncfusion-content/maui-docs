@@ -189,26 +189,6 @@ documentation: ug
     </tr>
 </table>
 
-## Events
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanged">ValueChanged</a></td>
-        <td>EventHandler&lt;MaskedEntryValueChangedEventArgs&gt;</td>
-        <td>Raised when the control value changes.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging">ValueChanging</a></td>
-        <td>EventHandler&lt;MaskedEntryValueChangingEventArgs&gt;</td>
-        <td>Raised before the control value is updated.</td>
-    </tr>
-</table>
-
 ## Methods
 
 <table>
@@ -226,5 +206,25 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Unfocus">Unfocus()</a></td>
         <td>void</td>
         <td>Removes focus from the masked entry control.</td>
+    </tr>
+</table>
+
+## Events
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanged">ValueChanged</a></td>
+        <td>EventHandler&lt;MaskedEntryValueChangedEventArgs&gt;</td>
+        <td>Raised when the control value changes.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging">ValueChanging</a></td>
+        <td>EventHandler&lt;MaskedEntryValueChangingEventArgs&gt;</td>
+        <td>Raised before the control value is updated.</td>
     </tr>
 </table>

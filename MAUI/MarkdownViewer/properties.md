@@ -29,21 +29,6 @@ documentation: ug
     </tr>
 </table>
 
-## Events
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked">HyperlinkClicked</a></td>
-        <td>EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</td>
-        <td>Raised when a hyperlink inside the markdown content is clicked.</td>
-    </tr>
-</table>
-
 ## Methods
 
 <table>
@@ -76,5 +61,20 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_OnParentSet">OnParentSet()</a></td>
         <td>void</td>
         <td>Called when the parent of the control changes.</td>
+    </tr>
+</table>
+
+## Events
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked">HyperlinkClicked</a></td>
+        <td>EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</td>
+        <td>Raised when a hyperlink inside the markdown content is clicked.</td>
     </tr>
 </table>

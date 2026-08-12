@@ -74,6 +74,41 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnimateSeries">AnimateSeries()</a></td>
+        <td>void</td>
+        <td>Animates all eligible series in the chart.</td>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PointToValue_Syncfusion_Maui_Charts_ChartAxis_System_Double_System_Double_">PointToValue(ChartAxis, Double, Double)</a></td>
+        <td>object</td>
+        <td>Converts chart coordinates to the corresponding axis value.</td>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ResumeSeriesNotification">ResumeSeriesNotification()</a></td>
+        <td>void</td>
+        <td>Resumes chart series notifications.</td>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SuspendSeriesNotification">SuspendSeriesNotification()</a></td>
+        <td>void</td>
+        <td>Suspends chart series notifications.</td>
+    </tr>
+    <tr>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ValueToPoint_Syncfusion_Maui_Charts_ChartAxis_System_Double_">ValueToPoint(ChartAxis, Double)</a></td>
+        <td>System.Single</td>
+        <td>A float representing the point coordinate in pixels.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -141,40 +176,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomStart">ZoomStart</a></td>
         <td>EventHandler&lt;ChartZoomStartEventArgs&gt;</td>
         <td>Raised when zooming starts.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnimateSeries">AnimateSeries()</a></td>
-        <td>void</td>
-        <td>Animates all eligible series in the chart.</td>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PointToValue_Syncfusion_Maui_Charts_ChartAxis_System_Double_System_Double_">PointToValue(ChartAxis, Double, Double)</a></td>
-        <td>object</td>
-        <td>Converts chart coordinates to the corresponding axis value.</td>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ResumeSeriesNotification">ResumeSeriesNotification()</a></td>
-        <td>void</td>
-        <td>Resumes chart series notifications.</td>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SuspendSeriesNotification">SuspendSeriesNotification()</a></td>
-        <td>void</td>
-        <td>Suspends chart series notifications.</td>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ValueToPoint_Syncfusion_Maui_Charts_ChartAxis_System_Double_">ValueToPoint(ChartAxis, Double)</a></td>
-        <td>System.Single</td>
-        <td>A float representing the point coordinate in pixels.</td>
     </tr>
 </table>

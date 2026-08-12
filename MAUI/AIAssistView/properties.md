@@ -369,6 +369,26 @@ documentation: ug
 	</tr>
 </table>
 
+## Methods
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateAssistChat">CreateAssistChat()</a></td>
+		<td>AssistViewChat</td>
+		<td>Creates the AssistViewChat instance used for customizing chat view functionality.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateConversationListView">CreateConversationListView()</a></td>
+		<td>ConversationListView</td>
+		<td>Creates the ConversationListView instance used for customizing list view functionality.</td>
+	</tr>
+</table>
+
 ## Events
 
 <table>
@@ -451,25 +471,5 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening">ToastOpening</a></td>
 		<td>EventHandler&lt;ToastNotificationEventArgs&gt;</td>
 		<td>Raised when a toast notification is about to be displayed.</td>
-	</tr>
-</table>
-
-## Methods
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateAssistChat">CreateAssistChat()</a></td>
-		<td>AssistViewChat</td>
-		<td>Creates the AssistViewChat instance used for customizing chat view functionality.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateConversationListView">CreateConversationListView()</a></td>
-		<td>ConversationListView</td>
-		<td>Creates the ConversationListView instance used for customizing list view functionality.</td>
 	</tr>
 </table>

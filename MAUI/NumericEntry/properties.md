@@ -159,6 +159,32 @@ documentation: ug
     </tr>
 </table>
 
+
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Focus">Focus()</a></td>
+        <td>void</td>
+        <td>Sets focus to the numeric entry control.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_OnFontChanged_Microsoft_Maui_Font_Microsoft_Maui_Font_">OnFontChanged(Font, Font)</a></td>
+        <td>void</td>
+        <td>Called when the font settings change.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Unfocus">Unfocus()</a></td>
+        <td>void</td>
+        <td>Removes focus from the numeric entry control.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -186,30 +212,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChanged">ValueChanged</a></td>
         <td>EventHandler&lt;NumericEntryValueChangedEventArgs&gt;</td>
         <td>Raised when the numeric value changes.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Focus">Focus()</a></td>
-        <td>void</td>
-        <td>Sets focus to the numeric entry control.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_OnFontChanged_Microsoft_Maui_Font_Microsoft_Maui_Font_">OnFontChanged(Font, Font)</a></td>
-        <td>void</td>
-        <td>Called when the font settings change.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Unfocus">Unfocus()</a></td>
-        <td>void</td>
-        <td>Removes focus from the numeric entry control.</td>
     </tr>
 </table>

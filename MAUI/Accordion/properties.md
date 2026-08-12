@@ -54,36 +54,6 @@ documentation: ug
     </tr>
 </table>
 
-## Events
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsed">Collapsed</a></td>
-        <td>ExpandedAndCollapsedEventArgs</td>
-        <td>Raised after an accordion item finishes collapsing.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing">Collapsing</a></td>
-        <td>ExpandingAndCollapsingEventArgs</td>
-        <td>Raised before an accordion item starts collapsing.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanded">Expanded</a></td>
-        <td>ExpandedAndCollapsedEventArgs</td>
-        <td>Raised after an accordion item finishes expanding.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanding">Expanding</a></td>
-        <td>ExpandingAndCollapsingEventArgs</td>
-        <td>Raised before an accordion item starts expanding.</td>
-    </tr>
-</table>
-
 ## Methods
 
 <table>
@@ -126,5 +96,35 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_RaiseExpandingEvent_System_Int32_">RaiseExpandingEvent(int)</a></td>
         <td>bool</td>
         <td>Raises the expanding event for the specified item index.</td>
+    </tr>
+</table>
+
+## Events
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsed">Collapsed</a></td>
+        <td>ExpandedAndCollapsedEventArgs</td>
+        <td>Raised after an accordion item finishes collapsing.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing">Collapsing</a></td>
+        <td>ExpandingAndCollapsingEventArgs</td>
+        <td>Raised before an accordion item starts collapsing.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanded">Expanded</a></td>
+        <td>ExpandedAndCollapsedEventArgs</td>
+        <td>Raised after an accordion item finishes expanding.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanding">Expanding</a></td>
+        <td>ExpandingAndCollapsingEventArgs</td>
+        <td>Raised before an accordion item starts expanding.</td>
     </tr>
 </table>

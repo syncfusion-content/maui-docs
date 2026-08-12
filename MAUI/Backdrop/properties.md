@@ -69,21 +69,6 @@ documentation: ug
 	</tr>
 </table>
 
-## Events
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerStateChanged">BackLayerStateChanged</a></td>
-		<td>EventHandler&lt;BackLayerStateChangedEventArgs&gt;</td>
-		<td>Raised when the back layer is revealed or concealed.</td>
-	</tr>
-</table>
-
 ## Methods
 
 <table>
@@ -111,5 +96,20 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OnSizeAllocated_System_Double_System_Double_">OnSizeAllocated(double, double)</a></td>
 		<td>void</td>
 		<td>Handles the size allocation for the page.</td>
+	</tr>
+</table>
+
+## Events
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerStateChanged">BackLayerStateChanged</a></td>
+		<td>EventHandler&lt;BackLayerStateChangedEventArgs&gt;</td>
+		<td>Raised when the back layer is revealed or concealed.</td>
 	</tr>
 </table>

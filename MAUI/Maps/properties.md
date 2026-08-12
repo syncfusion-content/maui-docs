@@ -24,21 +24,6 @@ documentation: ug
     </tr>
 </table>
 
-### Events
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected">ShapeSelected</a></td>
-        <td>EventHandler&lt;ShapeSelectedEventArgs&gt;</td>
-        <td>Raised when a map shape is selected or unselected.</td>
-    </tr>
-</table>
-
 ### Methods
 
 <table>
@@ -51,6 +36,21 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_GetLatLngFromPoint_Microsoft_Maui_Graphics_Point_">GetLatLngFromPoint(Point)</a></td>
         <td>MapLatLng</td>
         <td>Converts the specified pixel point into a latitude and longitude value.</td>
+    </tr>
+</table>
+
+### Events
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected">ShapeSelected</a></td>
+        <td>EventHandler&lt;ShapeSelectedEventArgs&gt;</td>
+        <td>Raised when a map shape is selected or unselected.</td>
     </tr>
 </table>
 

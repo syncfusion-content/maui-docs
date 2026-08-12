@@ -44,6 +44,26 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer">ToggleDrawer()</a></td>
+        <td>void</td>
+        <td>Opens or closes the primary drawer based on its current state.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleSecondaryDrawer">ToggleSecondaryDrawer()</a></td>
+        <td>void</td>
+        <td>Opens or closes the secondary drawer based on its current state.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -79,25 +99,6 @@ documentation: ug
     </tr>
 </table>
 
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer">ToggleDrawer()</a></td>
-        <td>void</td>
-        <td>Opens or closes the primary drawer based on its current state.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleSecondaryDrawer">ToggleSecondaryDrawer()</a></td>
-        <td>void</td>
-        <td>Opens or closes the secondary drawer based on its current state.</td>
-    </tr>
-</table>
 
 ## DrawerSettings Properties
 
