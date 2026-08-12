@@ -123,7 +123,7 @@ this.Content = imageEditor;
 
 ## Properties
 
-#### SfImageEditor
+**SfImageEditor**
 
 {% tabs %}
 {% highlight XAML %}
@@ -212,7 +212,7 @@ this.Content = imageEditor;
 
 </table>
 
-#### ImageEditorAnnotationSettings 
+**ImageEditorAnnotationSettings**
 
 <table>
 <tr>
@@ -244,7 +244,7 @@ this.Content = imageEditor;
 </tr>
 </table>
 
-#### ImageEditorShapeSettings 
+**ImageEditorShapeSettings**
 
 <table>
 <tr>
@@ -270,7 +270,7 @@ this.Content = imageEditor;
 </tr>
 </table>
 
-#### ImageEditorTextSettings
+**ImageEditorTextSettings**
 
 <table>
 <tr>
@@ -308,7 +308,7 @@ this.Content = imageEditor;
 </tr>
 </table>
 
-#### ImageEditorTextStyle
+**ImageEditorTextStyle**
 
 <table>
 <tr>
