@@ -9,9 +9,9 @@ documentation: ug
 
 # Customization in .NET MAUI Chips
 
-The [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) controls support customizing the background color, border color, close button color, selection indicator, text, icons, and more. This page documents the customization properties for both [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) and [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html).
+The [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) controls support customizing the background color, border color, close button color, selection indicator, text, icons, and more. This page documents the customization properties for both [`SfChip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) and [Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html).
 
-- For `SfChipGroup` samples that bind `ItemsSource` to `Employees`, set the page's `BindingContext` to a ViewModel that exposes an `ObservableCollection<Employee>` (see the [Populating Items](https://help.syncfusion.com/maui/chips/populating-items) page for a complete model and ViewModel).
+- For `Chip Group` samples that bind `ItemsSource` to `Employees`, set the page's `BindingContext` to a ViewModel that exposes an `ObservableCollection<Employee>` (see the [Populating Items](https://help.syncfusion.com/maui/chips/populating-items) page for a complete model and ViewModel).
 - For samples that reference an image (e.g., `ChipUserContact.png`, `lion.png`, `john.png`), add the image to the `Resources/Images` folder of your .NET MAUI project and register it as a `MauiImage` in the `.csproj` file.
 
 ## Prerequisites
@@ -617,11 +617,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with InputView](images/customization-images/chipgroup_inputview_image.png)
+![Chip Group with InputView](images/customization-images/chipgroup_inputview_image.png)
 
 ### ChipBackground
 
-The [ChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipBackground) property customizes the background color of the unselected chips in `SfChipGroup`. The default value is `Colors.Transparent`.
+The [ChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipBackground) property customizes the background color of the unselected chips in `Chip Group`. The default value is `Colors.Transparent`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -689,7 +689,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipBackground](images/customization-images/chipgroup_chipbackgroundcolor_image.png)
+![Chip Group with ChipBackground](images/customization-images/chipgroup_chipbackgroundcolor_image.png)
 
 To customize the background color of the **selected** chip, set `ChipType="Choice"` or `ChipType="Filter"` and use the `VisualStateManager`:
 
@@ -786,7 +786,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with SelectedChipBackground](images/customization-images/chipgroup_chipbackground_image.png)
+![Chip Group with SelectedChipBackground](images/customization-images/chipgroup_chipbackground_image.png)
 
 ### SelectedChipBackground
 
@@ -860,11 +860,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with SelectedChipBackground](images/customization-images/chipgroup_selectedchipbackgroundcolor_image.png)
+![Chip Group with SelectedChipBackground](images/customization-images/chipgroup_selectedchipbackgroundcolor_image.png)
 
 ### ChipTextColor
 
-The [ChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextColor) property customizes the text color of the unselected chips in `SfChipGroup`. The default value is `Color.FromArgb("#49454F")`.
+The [ChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextColor) property customizes the text color of the unselected chips in `Chip Group`. The default value is `Color.FromArgb("#49454F")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -928,7 +928,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipTextColor](images/customization-images/chipgroup_chiptextcolor_image.png)
+![Chip Group with ChipTextColor](images/customization-images/chipgroup_chiptextcolor_image.png)
 
 To customize the text color of the **selected** chip, set `ChipType="Choice"` or `ChipType="Filter"` and use the `VisualStateManager`:
 
@@ -1025,7 +1025,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolor_image.png)
+![Chip Group with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolor_image.png)
 
 ### SelectedChipTextColor
 
@@ -1101,11 +1101,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolorproperty_image.png)
+![Chip Group with SelectedChipTextColor](images/customization-images/chipgroup_selectedchiptextcolorproperty_image.png)
 
 ### ChipStroke
 
-The [ChipStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStroke) property customizes the border color of the chips in `SfChipGroup`. The default value is `Color.FromArgb("#79747E")`.
+The [ChipStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStroke) property customizes the border color of the chips in `Chip Group`. The default value is `Color.FromArgb("#79747E")`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1171,11 +1171,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipStroke](images/customization-images/chipgroup_chipstroke_image.png)
+![Chip Group with ChipStroke](images/customization-images/chipgroup_chipstroke_image.png)
 
 ### ChipTextSize
 
-The [ChipTextSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextSize) property customizes the text size of the chips in `SfChipGroup`. The default value is `14d`.
+The [ChipTextSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipTextSize) property customizes the text size of the chips in `Chip Group`. The default value is `14d`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1239,11 +1239,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipTextSize](images/customization-images/chipgroup_chiptextsize_image.png)
+![Chip Group with ChipTextSize](images/customization-images/chipgroup_chiptextsize_image.png)
 
 ### ChipFontAttributes
 
-The [ChipFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipFontAttributes) property customizes the font style of the chip text in `SfChipGroup`. The default value is `FontAttributes.None`.
+The [ChipFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipFontAttributes) property customizes the font style of the chip text in `Chip Group`. The default value is `FontAttributes.None`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1309,11 +1309,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipFontAttributes](images/customization-images/chipgroup_chipfontattribute_image.png)
+![Chip Group with ChipFontAttributes](images/customization-images/chipgroup_chipfontattribute_image.png)
 
 ### ChipFontFamily
 
-The [ChipFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipFontFamily) property customizes the font family of the chip text in `SfChipGroup`. The default value is `string.Empty`.
+The [ChipFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipFontFamily) property customizes the font family of the chip text in `Chip Group`. The default value is `string.Empty`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1377,11 +1377,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipFontFamily](images/customization-images/chipgroup_chipfontfamily-image.png)
+![Chip Group with ChipFontFamily](images/customization-images/chipgroup_chipfontfamily-image.png)
 
 ### ChipPadding
 
-The [ChipPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipPadding) property sets the spacing between each chip in `SfChipGroup`.
+The [ChipPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipPadding) property sets the spacing between each chip in `Chip Group`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1445,11 +1445,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipPadding](images/customization-images/chipgroup_chippadding_image.png)
+![Chip Group with ChipPadding](images/customization-images/chipgroup_chippadding_image.png)
 
 ### ChipStrokeThickness
 
-The [ChipStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStrokeThickness) property customizes the border width of the chips in `SfChipGroup`. The default value is `1d`.
+The [ChipStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipStrokeThickness) property customizes the border width of the chips in `Chip Group`. The default value is `1d`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1515,11 +1515,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipStrokeThickness](images/customization-images/chipgroup_chipstrokethickness_image.png)
+![Chip Group with ChipStrokeThickness](images/customization-images/chipgroup_chipstrokethickness_image.png)
 
 ### ChipLayout
 
-The `SfChipGroup` creates a chip for each item and arranges the chips in a `StackLayout` with horizontal orientation by default. Use the `ChipLayout` property to provide a custom layout (such as a `FlexLayout`) for the chips.
+The `Chip Group` creates a chip for each item and arranges the chips in a `StackLayout` with horizontal orientation by default. Use the `ChipLayout` property to provide a custom layout (such as a `FlexLayout`) for the chips.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1601,7 +1601,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 ### ItemHeight
 
-The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemHeight) property customizes the height of the items in `SfChipGroup`.
+The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemHeight) property customizes the height of the items in `Chip Group`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1665,11 +1665,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ItemHeight](images/customization-images/chipgroup_itemheight_image.png)
+![Chip Group with ItemHeight](images/customization-images/chipgroup_itemheight_image.png)
 
 ### ShowIcon
 
-The [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ShowIcon) property specifies whether any image is displayed on the chips in `SfChipGroup`. The default value is `false`.
+The [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ShowIcon) property specifies whether any image is displayed on the chips in `Chip Group`. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1737,11 +1737,11 @@ public class ChipsViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ShowIcon](images/customization-images/chipgroup_showicon_image.png)
+![Chip Group with ShowIcon](images/customization-images/chipgroup_showicon_image.png)
 
 ### CloseButtonColor
 
-The [CloseButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_CloseButtonColor) property customizes the color of the close button in `SfChipGroup`.
+The [CloseButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_CloseButtonColor) property customizes the color of the close button in `Chip Group`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1806,11 +1806,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with CloseButtonColor](images/customization-images/chipgroup_closebuttoncolor_image.png)
+![Chip Group with CloseButtonColor](images/customization-images/chipgroup_closebuttoncolor_image.png)
 
 ### SelectionIndicatorColor
 
-The [SelectionIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property customizes the selection indicator color in `SfChipGroup`.
+The [SelectionIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionIndicatorColor) property customizes the selection indicator color in `Chip Group`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1875,11 +1875,11 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with SelectionIndicatorColor](images/customization-images/chipgroup_selectionindicatorcolor_image.png)
+![Chip Group with SelectionIndicatorColor](images/customization-images/chipgroup_selectionindicatorcolor_image.png)
 
 ### ChipImageSize
 
-The [ChipImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipImageSize) property customizes the size of the icon image in `SfChipGroup`. The default value is `18d`.
+The [ChipImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipImageSize) property customizes the size of the icon image in `Chip Group`. The default value is `18d`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1948,7 +1948,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup with ChipImageSize](images/customization-images/chipgroup_chipimagesize_image.png)
+![Chip Group with ChipImageSize](images/customization-images/chipgroup_chipimagesize_image.png)
 
 
 ### IsSelected

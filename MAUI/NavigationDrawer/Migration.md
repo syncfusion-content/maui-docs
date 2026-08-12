@@ -9,14 +9,14 @@ documentation: UG
 
 # Migrate from Xamarin Navigation Drawer to .NET MAUI Navigation Drawer 
 
-To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer, most of the APIs from Xamarin SfNavigationDrawer have been retained in MAUI SfNavigationDrawer. However, some APIs have been renamed to ensure consistency in API naming within MAUI SfNavigationDrawer. The changes to APIs between Xamarin SfNavigationDrawer and .NET MAUI SfNavigationDrawer are as follows:
+To simplify the migration process from Xamarin Navigation Drawer to .NET MAUI Navigation Drawer, most of the APIs from Xamarin Navigation Drawer have been retained in .NET MAUI Navigation Drawer. However, some APIs have been renamed to ensure consistency in API naming within .NET MAUI Navigation Drawer. The changes to APIs between Xamarin Navigation Drawer and .NET MAUI Navigation Drawer are as follows:
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfNavigationDrawer</th>
-<th>.NET MAUI SfNavigationDrawer</th></tr>
+<th>Xamarin Navigation Drawer</th>
+<th>.NET MAUI Navigation Drawer</th></tr>
 <tr>
 <td>Syncfusion.SfNavigationDrawer.XForms</td>
 <td>Syncfusion.Maui.NavigationDrawer</td></tr>
@@ -26,8 +26,8 @@ To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI S
 
 <table> 
 <tr>
-<th>Xamarin SfNavigationDrawer</th>
-<th>.NET MAUI SfNavigationDrawer</th>
+<th>Xamarin Navigation Drawer</th>
+<th>.NET MAUI Navigation Drawer</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[DefaultDrawerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_DefaultDrawerSettings)'| markdownify }}</td>
@@ -35,14 +35,14 @@ To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI S
 <td>Gets or sets the DrawerSettings, which is a container for various customization options, allowing the appearance of the Navigation Drawer to be customized.</td></tr>
 </table>
 
-N> In Xamarin SfNavigationDrawer, the obsolete properties have been removed in .NET MAUI, and can be exclusively set using the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) properties.
+N> In Xamarin Navigation Drawer, the obsolete properties have been removed in .NET MAUI, and can be exclusively set using the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) properties.
 
 ## Events
 
 <table>
 <tr>
-<th>Xamarin SfNavigationDrawer</th>
-<th>.NET MAUI SfNavigationDrawer</th>
+<th>Xamarin Navigation Drawer</th>
+<th>.NET MAUI Navigation Drawer</th>
 <th>Description</th>
 </tr>
 <tr>

@@ -10,14 +10,14 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Migrating from Xamarin ComboBox to .NET MAUI ComboBox
 
-To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), we kept most of the APIs from Xamarin SfComboBox in MAUI SfComboBox. However, to maintain the consistency of API naming in MAUI SfComboBox, we renamed some of the APIs. The APIs that have been changed in MAUI SfComboBox from Xamarin SfComboBox are detailed as follows.
+To migrate easier from Xamarin ComboBox to [.NET Maui ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), we kept most of the APIs from Xamarin ComboBox in .NET Maui ComboBox. However, to maintain the consistency of API naming in .NET Maui ComboBox, we renamed some of the APIs. The APIs that have been changed in .NET Maui ComboBox from Xamarin ComboBox are detailed as follows.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfComboBox</th>
-<th>.NET MAUI SfComboBox</th></tr>
+<th>Xamarin ComboBox</th>
+<th>.NET MAUI ComboBox</th></tr>
 <tr>
 <td>Syncfusion.XForms.ComboBox</td>
 <td>Syncfusion.Maui.Inputs</td></tr>
@@ -27,8 +27,8 @@ To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help
 
 <table> 
 <tr>
-<th>Xamarin SfComboBox</th>
-<th>.NET MAUI SfComboBox</th>
+<th>Xamarin ComboBox</th>
+<th>.NET MAUI ComboBox</th>
 <th>Description</th></tr>
 <tr>
 <td> {{'[IsEditableMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SfComboBox.html#Syncfusion_XForms_ComboBox_SfComboBox_IsEditableMode)'| markdownify }}</td>
@@ -96,8 +96,8 @@ To migrate easier from Xamarin SfComboBox to [.NET MAUI SfComboBox](https://help
 <table>
 <tr>
 <th>Enum</th>
-<th>Xamarin SfComboBox</th>
-<th>.NET MAUI SfComboBox</th>
+<th>Xamarin ComboBox</th>
+<th>.NET MAUI ComboBox</th>
 <th>Description</th></tr>
 <tr>
 <td>Xamarin - {{'[SuggestionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ComboBox.SfComboBox.html#Syncfusion_XForms_ComboBox_SfComboBox_SuggestionMode)'| markdownify }} <br/> .NET MAUI - {{'[TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode)'| markdownify }}</td>
@@ -152,7 +152,7 @@ Xamarin - {{'[MultiSelectMode](https://help.syncfusion.com/cr/xamarin/Syncfusion
 <br/>
 {{'[Token](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html#Syncfusion_Maui_Inputs_ComboBoxMultiSelectionDisplayMode_Token)'| markdownify }}
 </td>
-<td>Gets or sets the multi selection mode for the SfComboBox control.</td>
+<td>Gets or sets the multi selection mode for the ComboBox control.</td>
 </tr>
 
 </table>
@@ -162,8 +162,8 @@ Xamarin - {{'[MultiSelectMode](https://help.syncfusion.com/cr/xamarin/Syncfusion
 <table> 
 <tr>
 <th>Event Name</th>
-<th>Xamarin SfComboBox</th>
-<th>.NET MAUI SfComboBox</th>
+<th>Xamarin ComboBox</th>
+<th>.NET MAUI ComboBox</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[SelectedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged)'| markdownify }}</td>
