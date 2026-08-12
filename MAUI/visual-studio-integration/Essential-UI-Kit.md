@@ -7,7 +7,7 @@ control: Syncfusion<sup>®</sup> Extensions
 documentation: ug
 ---
 
-# Essential<sup>®</sup> UI Kit for .NET MAUI
+# Essential® UI Kit for .NET MAUI Visual Studio
 
 Essential<sup>®</sup> UI Kit for .NET MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. It follows a clear separation of the View, ViewModel, and Model classes, making it easy to integrate your business logic and modify existing views.
 
