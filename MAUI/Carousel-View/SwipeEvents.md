@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Swipe Events in .NET MAUI Carousel | Syncfusion®
 description: Learn here all about swipe event support in Syncfusion® .NET MAUI Carousel (SfCarousel) control and more.
@@ -152,7 +152,7 @@ private void carousel_SwipeEnded(object sender, EventArgs e)
 
 ## See Also
 
-- [Populating Data in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/populating-data)
-- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
-- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Populating Data in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/populating-data)
+- [Transformation in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [Load More in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/loadmore)
 

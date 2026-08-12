@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Overlay in .NET MAUI DateTime Slider | Syncfusion®
-description: Learn how to customize the thumb and thumb overlay appearance in the Syncfusion® .NET MAUI DateTime Slider control.
+title: Thumb and Overlay in .NET MAUI DateTime Slider | SyncfusionÂ®
+description: Learn how to customize the thumb and thumb overlay appearance in the SyncfusionÂ® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

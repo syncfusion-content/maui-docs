@@ -10,7 +10,7 @@ keywords: .net maui sfchipgroup populating items, syncfusion chips itemssource m
 
 # Populating Items in .NET MAUI Chips
 
-[SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports two ways to populate its items:
+[Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) supports two ways to populate its items:
 
 - **Business objects** - bind a collection to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemsSource) property.
 - **SfChip instances** - add [SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) controls to the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Items) collection.
@@ -126,7 +126,7 @@ Content = chipGroup;
 {% endhighlight %}
 {% endtabs %}
 
-![SfChipGroup populated with five SfChip instances using the Action chip type](images/items/chips_items.png)
+![Chip Group populated with five SfChip instances using the Action chip type](images/items/chips_items.png)
 
 ## See Also
 

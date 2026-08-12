@@ -604,7 +604,7 @@ SfTabView tabView = new SfTabView
 
 ### Scroll button customization
 
-The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) properties of `SfTabView` customize the background and foreground color of the scroll button.
+The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) properties of `Tab View` customize the background and foreground color of the scroll button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -744,7 +744,7 @@ To disable the hover effect when the mouse pointer is over a [SfTabItem](https:/
 
 ### Select tab items programmatically
 
-To select the tab items programmatically, you can use the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property in `SfTabView`.
+To select the tab items programmatically, you can use the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property in `Tab View`.
 
 {% tabs %}
 {% highlight xaml %}

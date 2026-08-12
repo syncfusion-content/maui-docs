@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Freeze Panes in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to freeze rows and columns in Syncfusion® .NET MAUI DataGrid to keep important data visible while scrolling.
+title: Freeze Panes in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to freeze rows and columns in Syncfusion® .NET MAUI Data Grid to keep important data visible while scrolling.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui freeze panes, maui freeze panes
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui freeze panes, maui freeze panes
 ---
 
-# Freeze Panes in .NET MAUI DataGrid
+# Freeze Panes in .NET MAUI Data Grid
 
 ## Overview
 
-Freezing panes allows you to keep specific rows and columns visible while scrolling through large datasets, similar to Excel. This is useful when you have headers or identifier columns that should remain visible during navigation. The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control supports freezing rows and columns independently at the top/bottom and left/right edges of the grid.
+Freezing panes allows you to keep specific rows and columns visible while scrolling through large datasets, similar to Excel. This is useful when you have headers or identifier columns that should remain visible during navigation. The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control supports freezing rows and columns independently at the top/bottom and left/right edges of the grid.
 
 
 ## Freeze Panes Properties
@@ -26,7 +26,7 @@ You can freeze rows and columns by setting the following properties:
 | [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | int | 0 | Sets the number of columns to freeze at the left side of the DataGrid |
 | [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenColumnCount) | int | 0 | Sets the number of columns to freeze at the right side of the DataGrid |
 
-To get started quickly with freeze rows and columns in .NET MAUI DataGrid, watch this video tutorial (starts at the freeze panes section):
+To get started quickly with freeze rows and columns in .NET MAUI Data Grid, watch this video tutorial (starts at the freeze panes section):
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU?start=550"></iframe>
 

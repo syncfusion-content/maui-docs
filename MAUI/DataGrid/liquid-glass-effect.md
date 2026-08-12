@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DataGrid (SfDataGrid) control.
+title: Liquid Glass Effect in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Data Grid (SfDataGrid) control.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI DataGrid
+# Liquid Glass Effect in .NET MAUI Data Grid
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) control.
 
 ## Apply liquid glass effect
 
@@ -114,7 +114,7 @@ this.Content = grid;
 
 The following screenshot illustrates SfDataGrid within SfGlassEffectView.
 
-<img alt="MAUI DataGrid with liquid glass support" src="Images/liquidGlassEffect/maui-datagrid-Liquid-Glass-Effect.png" width="404" />   
+<img alt="MAUI Data Grid with liquid glass support" src="Images/liquidGlassEffect/maui-datagrid-Liquid-Glass-Effect.png" width="404" />   
 
 
 ## Platform Support

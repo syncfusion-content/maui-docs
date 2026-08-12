@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Signature Pad
 
-This section explains how to customize the appearance of the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control. The following aspects of the SignaturePad can be customized:
+This section explains how to customize the appearance of the [.NET MAUI Signature Pad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control. The following aspects of the SignaturePad can be customized:
 
 * Stroke color
 * Stroke thickness
