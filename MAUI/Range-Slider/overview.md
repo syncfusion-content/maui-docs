@@ -69,7 +69,7 @@ The following table summarizes the globalization support available in the contro
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/range-slider/overview">Range Slider</a></td>
+<td><a href="/maui/range-slider/overview" aria-label="MAUI Range Slider control overview">Range Slider</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
