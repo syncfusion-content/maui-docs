@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Release Notes - Syncfusion MAUI AI Coding Assistants | Syncfusion
-description: Explore the release notes for Syncfusion MAUI AI Coding Assistants, covering MCP Server, Skills, and Agentic UI Builder updates across all versions.
+title: Syncfusion MAUI AI Coding Assistants Release Notes | Syncfusion®
+description: Syncfusion MAUI AI Coding Assistants Release Notes provide details about new features, enhancements, bug fixes, and updates across releases.
 control: Syncfusion MAUI AI Coding Assistants Release Notes
 platform: MAUI
 documentation: ug
