@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion .NET MAUI Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion .NET MAUI component guidance.
+title: Syncfusion .NET MAUI Agent Skills for AI Assistants | Syncfusion®
+description: Syncfusion .NET MAUI Agent Skills for AI Assistants provide specialized capabilities for building AI-driven workflows with .NET MAUI controls and components.
 control: Skills
 platform: maui
 documentation: ug
