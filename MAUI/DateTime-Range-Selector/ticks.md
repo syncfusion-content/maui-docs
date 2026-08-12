@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tick in .NET MAUI DateTime Range Selector | Syncfusion®
-description: Learn how to add and customize major and minor ticks in the Syncfusion® .NET MAUI DateTime Range Selector, including colors, sizes, offsets, and intervals.
+title: Tick in .NET MAUI DateTime Range Selector | SyncfusionÂ®
+description: Learn how to add and customize major and minor ticks in the SyncfusionÂ® .NET MAUI DateTime Range Selector, including colors, sizes, offsets, and intervals.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
