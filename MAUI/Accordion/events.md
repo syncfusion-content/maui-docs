@@ -86,7 +86,8 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
                         Collapsing="accordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
-
+            ...
+            ...
         </syncfusion:AccordionItem>
     </syncfusion:SfAccordion.Items>
  </syncfusion:SfAccordion>
@@ -128,4 +129,3 @@ private void accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.Expand
 }
 {% endhighlight %}
 {% endtabs %}
-``
