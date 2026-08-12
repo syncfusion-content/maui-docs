@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Record Template View in .NET MAUI DataGrid | Syncfusion®
+title: Record Template View in .NET MAUI Data Grid | Syncfusion®
 description: Learn how to use Record Template View in Syncfusion® .NET MAUI DataGrid to create fully customized row layouts and enhance data presentation.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 ---
 
-# Record Template View in .NET MAUI DataGrid
+# Record Template View in .NET MAUI Data Grid
 
 The SfDataGrid provides support to represent additional information of a row using [TemplateViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html) that can be defined in datagrid. It allows you to load any controls to [TemplateViewDefinition.RowTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html#Syncfusion_Maui_DataGrid_TemplateViewDefinition_RowTemplate) in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
 
@@ -419,5 +419,5 @@ void dataGrid_DetailsViewCollapsing(object sender, DataGridDetailsViewCollapsing
 
 The following limitations apply when using Record Template View:
 
-* Does not support both `DetailsViewTemplate` and `DetailsViewDataGrid` at same level.
+* Does not support both `DetailsViewTemplate` and `DetailsView Data Grid` at same level.
 * Does not support more than one `DetailsViewTemplate` in same level.

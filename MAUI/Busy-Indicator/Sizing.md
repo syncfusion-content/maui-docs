@@ -15,7 +15,7 @@ The `.NET MAUI Busy Indicator` allows you customize the size of the indicator us
 
 {% highlight xaml %}
 
-<core:SfBusyIndicator x:Name="busyindicator"
+<core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
@@ -50,7 +50,7 @@ The following example sets `SizeFactor` to `0.3` to make the indicator smaller.
 
 {% highlight xaml %}
 
-<core:SfBusyIndicator x:Name="busyindicator"
+<core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
                       AnimationType="CircularMaterial"
                       Title="Loading..."

@@ -9,14 +9,14 @@ documentation: UG
 
 # Migrating from Xamarin Radio Button to .NET MAUI Radio Button
 
-To facilitate an easier migration from Xamarin Radio Button to [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button), most APIs from Xamarin SfRadioButton have been retained in MAUI SfRadioButton. However, to ensure consistency in API naming within MAUI SfRadioButton, certain APIs have been renamed. The following table details the changes from Xamarin SfRadioButton to .NET MAUI SfRadioButton:
+To facilitate an easier migration from Xamarin Radio Button to [.NET MAUI Radio Button](https://www.syncfusion.com/maui-controls/maui-radio-button), most APIs from Xamarin Radio Button have been retained in .NET MAUI Radio Button. However, to ensure consistency in API naming within .NET MAUI Radio Button, certain APIs have been renamed. The following table details the changes from Xamarin Radio Button to .NET MAUI Radio Button:
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfRadioButton</th>
-<th>.NET MAUI SfRadioButton</th></tr>
+<th>Xamarin Radio Button</th>
+<th>.NET MAUI Radio Button</th></tr>
 <tr>
 <td>Syncfusion.Xamarin.Buttons</td>
 <td>Syncfusion.Maui.Buttons</td></tr>
@@ -26,8 +26,8 @@ To facilitate an easier migration from Xamarin Radio Button to [.NET MAUI Radio 
 
 <table> 
 <tr>
-<th>Xamarin SfRadioButton</th>
-<th>.NET MAUI SfRadioButton</th>
+<th>Xamarin Radio Button</th>
+<th>.NET MAUI Radio Button</th>
 <th>Description</th></tr>
 <tr>
 <td> {{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Buttons.ToggleButton.html#Syncfusion_XForms_Buttons_ToggleButton_BorderWidth)'| markdownify }}</td>

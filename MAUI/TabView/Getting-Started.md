@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Tab View
 
-This section guides you through setting up and configuring a [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
+This section guides you through setting up and configuring a [Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
 
 To quickly get started with the .NET MAUI Tab View, watch this video.
 

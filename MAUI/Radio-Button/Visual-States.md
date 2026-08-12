@@ -9,7 +9,7 @@ documentation: UG
 
 # Visual States in .NET MAUI Radio Button
 
-The visual appearance of the [.NET MAUI Radio Button] can be customized reactively using the `VisualStateManager` and `VisualState` types. The `SfRadioButton` control exposes the following two visual states:
+The visual appearance of the [.NET MAUI Radio Button] can be customized reactively using the `VisualStateManager` and `VisualState` types. The `Radio Button` control exposes the following two visual states:
 
 * Checked
 * Unchecked
@@ -18,7 +18,7 @@ Visual states are applied automatically whenever the [IsChecked](https://help.sy
 
 ## Prerequisites
 
-Before using the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Buttons`
 
@@ -26,7 +26,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Common Visual State Group
 
-Both states are defined inside a single `VisualStateGroup` named `CommonStates`. The group is attached to `SfRadioButton` through the `VisualStateManager.VisualStateGroups` attached property (XAML) or the `VisualStateManager.SetVisualStateGroups` static method (C#). Inside each `VisualState.Setters` block you can change any bindable property of `SfRadioButton` - common targets include `TextColor`, `BackgroundColor`, `CheckedColor`, `UncheckedColor`, `StrokeThickness`, `FontAttributes`, and `FontSize`.
+Both states are defined inside a single `VisualStateGroup` named `CommonStates`. The group is attached to `Radio Button` through the `VisualStateManager.VisualStateGroups` attached property (XAML) or the `VisualStateManager.SetVisualStateGroups` static method (C#). Inside each `VisualState.Setters` block you can change any bindable property of `Radio Button` - common targets include `TextColor`, `BackgroundColor`, `CheckedColor`, `UncheckedColor`, `StrokeThickness`, `FontAttributes`, and `FontSize`.
 
 {% tabs %}
 {% highlight xaml %}

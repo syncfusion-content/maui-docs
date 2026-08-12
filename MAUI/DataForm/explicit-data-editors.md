@@ -11,7 +11,7 @@ documentation: ug
 
 ## Explicitly create data editors
 
-The data form auto-generates the editors based on the data type. You can explicitly add the data editors by adding [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) manually, and you need to change the [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) property to false.
+The DataForm auto-generates the editors based on the data type. You can explicitly add the data editors by adding [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) manually, and you need to change the [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) property to false.
 
 N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
 [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event will not be triggered when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
@@ -122,7 +122,7 @@ public class ContactInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly add data editor
+**Explicitly add data editor**
 
 You can dynamically add the data editor manually by using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
@@ -135,7 +135,8 @@ this.dataForm.Items.Add(new DataFormTextItem() {FieldName = "Country" });
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly remove data editor
+**Explicitly remove data editor**
+
 You can dynamically remove the data editor explicitly by using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
 {% tabs %}
@@ -146,7 +147,8 @@ this.dataForm.Items.RemoveAt(2);
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly clear data editors
+**Explicitly clear data editors**
+
 You can dynamically clear all the item views from the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
 {% tabs %}
@@ -157,7 +159,8 @@ this.dataForm.Items.Clear();
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly replace data editor
+**Explicitly replace data editor**
+
 You can replace the data editor with a new editor by using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
 {% tabs %}
@@ -173,7 +176,8 @@ this.dataForm.Items[3] = dateItem;
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly add group editor
+**Explicitly add group editor**
+
 You can dynamically add custom group editor by using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) property of [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
 {% tabs %}
@@ -192,7 +196,7 @@ this.dataForm.Items.Add(dataFormGroupItem);
 {% endhighlight %}
 {% endtabs %}
 
-#### Explicitly add custom editor
+**Explicitly add custom editor**
 
 You can add custom editor manually by adding the custom view as an [EditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorView) of [DataFormCustomItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html).In this case, the editor view will not be generated based on the field type and the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_).
 

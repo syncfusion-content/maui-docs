@@ -2043,7 +2043,7 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="combobox"
+<editors:SfComboBox x:Name="comboBox"
                     IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
@@ -2118,7 +2118,7 @@ N> The `Completed` event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
-The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the SfComboBox. It can cancel dropdown opening with `CancelEventArgs` that contains the following property:
+The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_DropdownOpening) event will be fired whenever opening the dropdown menu in the ComboBox. It can cancel dropdown opening with `CancelEventArgs` that contains the following property:
 
  * Cancel: Dropdown opening is based on this value.
 
@@ -2342,7 +2342,7 @@ private void SfComboBox_DropDownClosed(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox` is placed inside a `ScrollView`, the dropdown may close unexpectedly due to layout resizing. To prevent this, override `OnSizeAllocated` and handle the `DropDownClosing`. For more details, refer to the [KB article](https://support.syncfusion.com/agent/kb/19349).
+N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `ComboBox` is placed inside a `ScrollView`, the dropdown may close unexpectedly due to layout resizing. To prevent this, override `OnSizeAllocated` and handle the `DropDownClosing`. For more details, refer to the [KB article](https://support.syncfusion.com/agent/kb/19349).
 
 ## ValueChanged Event
 When the value of comboBox changes, the [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ValueChanged) event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
@@ -2500,7 +2500,7 @@ The following image illustrates the result of the above code:
 
 The [ReturnType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnType) property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
 
-You can define the return key type of `SfComboBox` by using the `ReturnType` property.
+You can define the return key type of `ComboBox` by using the `ReturnType` property.
 
 N> Default value of ReturnType is `Default`.
 
@@ -2788,7 +2788,7 @@ public SocialMediaViewModel
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides `AutomationId` support for the `editable entry`, the `clear button`, and the `dropdown button`, enabling UI automation frameworks to reliably target these primary elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
 
-For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements. The following screenshot illustrates the AutomationIds of inner elements.
+For example, if the ComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements. The following screenshot illustrates the AutomationIds of inner elements.
 
 The following screenshot illustrates the AutomationIds of inner elements.
 

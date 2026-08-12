@@ -33,7 +33,7 @@ N> The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownView
 
 ## From String
 
-Assign a markdown-formatted string to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control to render markdown content directly within your application.
+Assign a markdown-formatted string to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control to render markdown content directly within your application.
 
 {% tabs %}
 {% highlight xaml %}
@@ -78,7 +78,7 @@ markdownViewer.Source = markdownContent;
 
 ## From Local File
 
-To load markdown content from a local `.md` file, read its contents using standard file I/O and assign the result to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the `SfMarkdownViewer`. 
+To load markdown content from a local `.md` file, read its contents using standard file I/O and assign the result to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the `Markdown Viewer`. 
 
 Use the following code-behind to read the file and assign its content to the Markdown Viewer:
 
@@ -97,7 +97,7 @@ Content = markdownViewer;
 ## From Embedded Resource
 
 1. To load Markdown content from an embedded resource, place the `.md` file inside the `Resources` folder of your .NET MAUI project. 
-2. Use asynchronous file access to read and assign the content to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control.
+2. Use asynchronous file access to read and assign the content to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control.
 
 Refer to the following code-behind to read the embedded resource and assign its content to the Markdown Viewer:
 

@@ -9,14 +9,14 @@ documentation: ug
 
 # Migrate from Xamarin Signature Pad to .NET MAUI Signature Pad
 
-To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html) to [.NET MAUI  SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) easier, most of the APIs from the Xamarin SfSignaturePad were kept in the .NET MAUI SfSignaturePad. However, to maintain the consistency of API naming in the.NET MAUI SfSignaturePad, some of the APIs have been renamed. Please find the difference in the following topics.
+To migrate from the [Xamarin Signature Pad](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html) to [.NET MAUI  Signature Pad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) easier, most of the APIs from the Xamarin Signature Pad were kept in the .NET MAUI Signature Pad. However, to maintain the consistency of API naming in the.NET MAUI Signature Pad, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfSignaturePad</th>
-<th>.NET MAUI SfSignaturePad</th></tr>
+<th>Xamarin Signature Pad</th>
+<th>.NET MAUI Signature Pad</th></tr>
 <tr>
 <td>Syncfusion.XForms.SignaturePad</td>
 <td>Syncfusion.Maui.SignaturePad</td></tr>
@@ -26,8 +26,8 @@ To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamari
 
 <table> 
 <tr>
-<th>Xamarin SfSignaturePad</th>
-<th>.NET MAUI SfSignaturePad</th>
+<th>Xamarin Signature Pad</th>
+<th>.NET MAUI Signature Pad</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html#Syncfusion_XForms_SignaturePad_SfSignaturePad_StrokeColor)'| markdownify }}</td>
@@ -47,8 +47,8 @@ To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamari
 
 <table> 
 <tr>
-<th>Xamarin SfSignaturePad</th>
-<th>.NET MAUI SfSignaturePad</th>
+<th>Xamarin Signature Pad</th>
+<th>.NET MAUI Signature Pad</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Save](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html#Syncfusion_XForms_SignaturePad_SfSignaturePad_Save)'| markdownify }}</td>
@@ -64,8 +64,8 @@ To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamari
 
 <table> 
 <tr>
-<th>Xamarin SfSignaturePad</th>
-<th>.NET MAUI SfSignaturePad</th>
+<th>Xamarin Signature Pad</th>
+<th>.NET MAUI Signature Pad</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[StrokeStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html#Syncfusion_XForms_SignaturePad_SfSignaturePad_StrokeStarted)'| markdownify }}</td>

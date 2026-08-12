@@ -13,7 +13,7 @@ The .NET MAUI DataForm supports the grouping of the editors, which are relevant 
 
 Grouping is achieved by defining the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
-#### Using attributes
+**Using attributes**
 
 {% tabs %}
 {% highlight c# tabtitle="ContactsInfo.cs" %}
@@ -33,7 +33,7 @@ public class ContactInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### Using event
+**Using event**
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -58,11 +58,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Changing editors order in the group
 
-#### Using attribute
+**Using attribute**
 
-#### Display attribute
+**Display attribute**
 
-The order of the editors in the group is changed by using attributes. Set the order of the data form items in the group by using the [Order](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0#system-componentmodel-dataannotations-displayattribute-order) property along with the [GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0#system-componentmodel-dataannotations-displayattribute-groupname) property in the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
+The order of the editors in the group is changed by using attributes. Set the order of the DataForm items in the group by using the [Order](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0#system-componentmodel-dataannotations-displayattribute-order) property along with the [GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0#system-componentmodel-dataannotations-displayattribute-groupname) property in the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
 
 {% tabs %}
 {% highlight c# tabtitle="ContactsInfo.cs" %}
@@ -80,7 +80,7 @@ public class ContactInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### DataForm display options attribute
+**DataForm display options attribute**
 
 The order of the editors in the group is also changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder) property of the [DataFormDisplayOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute.
 
@@ -105,7 +105,7 @@ public class ContactInfo
 {% endhighlight %}
 {% endtabs %}
 
-#### Using event
+**Using event**
 
 The order of the editors in the group can also be changed by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property of a [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
@@ -208,7 +208,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Changing the layout for the group
 
 The linear or grid layout for the particular group can be loaded by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
-By setting the `ColumnCount` property in the data form, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ColumnCount) for the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
+By setting the `ColumnCount` property in the DataForm, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ColumnCount) for the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="ContactsInfo.cs" %}
@@ -309,7 +309,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Changing the group editors visibility
 
-The data form group visibility can be changed by using the `IsVisible` property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
+The DataForm group visibility can be changed by using the `IsVisible` property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -335,7 +335,7 @@ Here, the `Name` group will be hidden.
 
 ## Changing the group header background
 
-The data form group header background can be changed by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderBackground) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
+The DataForm group header background can be changed by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderBackground) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -360,7 +360,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Changing the group header text style
 
-The data form group header text style can be changed by using the [HeaderTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderTextStyle) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
+The DataForm group header text style can be changed by using the [HeaderTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderTextStyle) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -390,7 +390,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Changing the padding for group headers and editors
 
-The distance between editors and the data form’s borders or group headers can be changed by using the [ItemsPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ItemsPadding) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
+The distance between editors and the DataForm’s borders or group headers can be changed by using the [ItemsPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ItemsPadding) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

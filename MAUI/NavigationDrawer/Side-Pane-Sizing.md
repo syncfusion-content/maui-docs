@@ -119,6 +119,6 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 ## See also
 
 - [Side Pane Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
-- [Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
+- [Toggle Methods in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggling-drawer)
 - [Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/navigation-pane-sides)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)

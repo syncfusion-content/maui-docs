@@ -9,14 +9,14 @@ documentation: UG
 
 # Migrating from Xamarin Tab View to .NET MAUI Tab View
 
-To facilitate easier migration from Xamarin SfTabView to .NET MAUI SfTabView, we have retained most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain API naming consistency, some APIs have been renamed. The following details the changes in APIs from Xamarin SfTabView to MAUI SfTabView.
+To facilitate easier migration from Xamarin Tab View to .NET MAUI Tab View, we have retained most of the APIs from Xamarin Tab View in .NET MAUI Tab View. However, to maintain API naming consistency, some APIs have been renamed. The following details the changes in APIs from Xamarin Tab View to .NET MAUI Tab View.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfTabView</th>
-<th>.NET MAUI SfTabView</th></tr>
+<th>Xamarin Tab View</th>
+<th>.NET MAUI Tab View</th></tr>
 <tr>
 <td>Syncfusion.XForms.TabView</td>
 <td>Syncfusion.Maui.TabView</td></tr>
@@ -26,8 +26,8 @@ To facilitate easier migration from Xamarin SfTabView to .NET MAUI SfTabView, we
 
 <table> 
 <tr>
-<th>Xamarin SfTabView</th>
-<th>.NET MAUI SfTabView</th>
+<th>Xamarin Tab View</th>
+<th>.NET MAUI Tab View</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SelectionIndicatorSettings.html#Syncfusion_XForms_TabView_SelectionIndicatorSettings_Color)'| markdownify}}</td>
@@ -80,8 +80,8 @@ To facilitate easier migration from Xamarin SfTabView to .NET MAUI SfTabView, we
 <table>
 <tr>
 <th>Enum</th>
-<th>Xamarin SfTabView</th>
-<th>.NET MAUI SfTabView</th>
+<th>Xamarin Tab View</th>
+<th>.NET MAUI Tab View</th>
 <th>Description</th></tr>
 <tr>
 <td>TabWidthMode</td>
@@ -94,8 +94,8 @@ To facilitate easier migration from Xamarin SfTabView to .NET MAUI SfTabView, we
 
 <table>
 <tr>
-<th>Xamarin SfTabView</th>
-<th>.NET MAUI SfTabView</th>
+<th>Xamarin Tab View</th>
+<th>.NET MAUI Tab View</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TabHeaderPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.TabHeaderPosition.html)'| markdownify}}</td>

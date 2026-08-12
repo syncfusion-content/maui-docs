@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column Drag and Drop in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about column drag-and-drop support in Syncfusion® .NET MAUI DataGrid, including column reordering, customization options, and usage examples.
+title: Column Drag and Drop in .NET MAUI Data Grid | Syncfusion®
+description: Learn all about column drag-and-drop support in Syncfusion® .NET MAUI Data Grid, including column reordering, customization options, and usage examples.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column drag and drop, maui column drag and drop
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column drag and drop, maui column drag and drop
 ---
 
-# Column Drag and Drop in .NET MAUI DataGrid
+# Column Drag and Drop in .NET MAUI Data Grid
 
 The SfDataGrid allows you to drag and drop a column header by setting the [SfDataGrid.AllowDraggingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingColumn) property to `true.` A drag view is displayed while dragging a column header. You can handle drag and drop operations based on your requirements by using the [SfDataGrid.QueryColumnDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryColumnDragging) event.
 
-To quickly get started with column drag and drop in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
+To quickly get started with column drag and drop in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/qwkDwCgo_jo'></iframe>
 

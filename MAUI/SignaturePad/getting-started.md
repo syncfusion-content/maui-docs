@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Signature Pad
 
-This section guides you through setting up and configuring a [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) in your .NET MAUI application. Follow the steps below to add a basic SignaturePad to your project.
+This section guides you through setting up and configuring a [Signature Pad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) in your .NET MAUI application. Follow the steps below to add a basic Signature Pad to your project.
 
-To quickly get started with the .NET MAUI SignaturePad, watch this video.
+To quickly get started with the .NET MAUI Signature Pad, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=gV2stNPCgYo" %}
 
@@ -124,7 +124,7 @@ using Syncfusion.Maui.SignaturePad;
 
 ## Step 5: Add the SignaturePad component
 
-Add the SignaturePad control to your XAML page and initialize it with basic properties.
+Add the Signature Pad control to your XAML page and initialize it with basic properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -143,8 +143,8 @@ Content = new StackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SignaturePad default](images/getting-started/default.png)
+![Signatur Pad default](images/getting-started/default.png)
 
-You can download the SignaturePad Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-signature-pad).
+You can download the Signature Pad Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-signature-pad).
 
-N> You can refer to our [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI SignaturePad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the SignaturePad in .NET MAUI.
+N> You can refer to our [.NET MAUI Signature Pad](https://www.syncfusion.com/maui-controls/maui-signaturepad) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Signature Pad Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SignaturePad) that shows you how to render the Signature Pad in .NET MAUI.

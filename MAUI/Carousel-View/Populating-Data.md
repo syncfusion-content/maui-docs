@@ -269,7 +269,7 @@ You can also create and customize each `SfCarouselItem` individually when a diff
 
 ## See also
 
-- [Load More in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/loadmore)
-- [Transformation in .NET MAUI Carousel View (SfCarousel)](https://help.syncfusion.com/maui/carousel-view/transformation)
-- [UI Virtualization in .NET MAUI Carousel View](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
+- [Load More in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/loadmore)
+- [Transformation in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/transformation)
+- [UI Virtualization in .NET MAUI Carousel](https://help.syncfusion.com/maui/carousel-view/uivirtualization)
 

@@ -10,7 +10,7 @@ keywords : .net maui switch, maui switch, .net maui switch control, maui switch 
 
 # About Syncfusion® .NET MAUI Switch Control
 
-The Syncfusion® .NET MAUI Switch ([SfSwitch](https://www.syncfusion.com/maui-controls/maui-switch)) control provides an efficient way to toggle between states based on the selected value.
+The Syncfusion® [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch)) control provides an efficient way to toggle between states based on the selected value.
 
    ![.NET MAUI Switch](Images/overview/net-maui-overview.png)
 
