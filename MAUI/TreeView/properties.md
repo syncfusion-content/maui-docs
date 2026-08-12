@@ -1,14 +1,5 @@
 ---
 layout: post
-title: About .NET MAUI TreeView Control | Syncfusion®
-description: Learn here all about introduction of the Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements and more.
-platform: MAUI
-control: TreeView
-documentation: ug
----
-
----
-layout: post
 title: Properties of .NET MAUI TreeView control | Syncfusion®
 description: This section explains the properties, events and methods with Syncfusion® MAUI TreeView (SfTreeView) control.
 platform: maui
