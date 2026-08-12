@@ -49,7 +49,7 @@ The appearance of headings, body content, and tables in SfMarkdownViewer can be 
 
 ### Apply style settings
 
-The following example shows how to apply style settings to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property of `SfMarkdownViewer`.
+The following example shows how to apply style settings to the [Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings) property of `Markdown Viewer`.
 
 The Source property of SfMarkdownViewer can be bound to a string property in the ViewModel using Source="{Binding MarkdownContent}", where MarkdownContent contains the markdown text to render.
 

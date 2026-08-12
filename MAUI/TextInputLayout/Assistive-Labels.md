@@ -102,7 +102,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![maui textinputlayout helpertext label](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
+![Text Input Layout helpertext label](images/AssistiveLabels/Maui-TextInputLayout-HelperText.jpg)
 
 N> Helper text and error text share the same area below the input line. When `HasError` is `true`, the error text replaces the helper text.
 
