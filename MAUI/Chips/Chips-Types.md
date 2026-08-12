@@ -30,8 +30,6 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 The `Input` [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) arranges the [.NET MAUI Chips](https://www.syncfusion.com/maui-controls/maui-chips) in a layout, enables a close button for each chip, and provides an embedded `InputView` (an `Entry` in the example below) where users can type the text for a new chip.
 
-### XAML
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -138,7 +136,7 @@ private void OnEntryCompleted(object sender, EventArgs e)
 
 The following image illustrates the `Input` `ChipType`:
 
-![Input type in .NET MAUI SfChipGroup](images/items/Input.png)
+![Input type in .NET MAUI Chip Group](images/items/Input.png)
 
 ## Choice
 
@@ -249,7 +247,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 The following image illustrates the `Choice` `ChipType`:
 
-![Choice typed in .NET MAUI SfChipGroup](images/items/Choice.png)
+![Choice typed in .NET MAUI Chip Group](images/items/Choice.png)
 
 ### ChoiceMode
 
@@ -404,7 +402,7 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 ## Action
 
-The `Action` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) of [`SfChipGroup`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when the user clicks a chip. The command only fires for the `Action` `ChipType`. You can pass a `CommandParameter` to the `Command` to provide context to the handler (for example, the clicked `Person`).
+The `Action` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipsType.html) of [Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) executes the [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command) when the user clicks a chip. The command only fires for the `Action` `ChipType`. You can pass a `CommandParameter` to the `Command` to provide context to the handler (for example, the clicked `Person`).
 
 {% tabs %}
 {% highlight xaml %}
@@ -537,7 +535,7 @@ public class ChipsViewModel : INotifyPropertyChanged
 
 The following image illustrates the `Action` `ChipType`:
 
-![Action typed in .NET MAUI SfChipGroup](images/items/Action.png)
+![Action typed in .NET MAUI Chip Group](images/items/Action.png)
 
 ## See Also
 

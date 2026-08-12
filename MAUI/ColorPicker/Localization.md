@@ -108,7 +108,7 @@ To localize the color picker based on `CurrentUICulture` using `.resx` files, fo
 
    ![resource-file-name-value-pair](Images/Localization/add-name-value-pair.png)
 
-7. Rebuild the project so the resource generator emits the strongly-typed `SfColorPicker` (or your custom) resource class.
+7. Rebuild the project so the resource generator emits the strongly-typed `Color Picker` (or your custom) resource class.
 
 8. Run the app. The color picker reads strings from the `.resx` that matches `CurrentUICulture`. If no match is found, the neutral `SfColorPicker.resx` is used.
 
