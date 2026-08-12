@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion MAUI MCP Server | Syncfusion
-description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting in .NET MAUI apps.
+title: Syncfusion MAUI MCP Server | Syncfusion®
+description: Syncfusion MAUI MCP Server enables AI-assisted development by providing access to .NET MAUI controls, APIs, and documentation through MCP.
 platform: MAUI
 control: Getting started with Syncfusion MAUI MCP Server
 documentation: ug
