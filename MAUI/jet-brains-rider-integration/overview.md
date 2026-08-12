@@ -9,12 +9,12 @@ documentation: ug
 
 # Overview of .NET MAUI Extension for JetBrains Rider
 
-The [Syncfusion® .NET MAUI](https://marketplace.jetbrains.com/) extension for JetBrains Rider simplifies the use of Syncfusion® .NET MAUI components by configuring the required Syncfusion® .NET MAUI NuGet packages. This extension streamlines development by providing developers with easy access to the powerful features and functionalities of Syncfusion® .NET MAUI components, saving time and effort.
+The Syncfusion<sup>®</sup> .NET MAUI integration for JetBrains Rider simplifies the development of cross-platform .NET MAUI applications by providing access to Syncfusion<sup>®</sup> controls, templates, and development resources. It helps developers quickly configure Syncfusion<sup>®</sup> components in their projects and build modern applications using Rider's rich .NET development environment.
 
-The Syncfusion® .NET MAUI extension offers the following support in JetBrains Rider:
+The Syncfusion<sup>®</sup> .NET MAUI integration for JetBrains Rider provides the following features:
 
-**Project Template:** Creates Syncfusion® .NET MAUI applications with the necessary Syncfusion® components and configurations for development.
+* [Project Template](template-studio): CreatesUI applications with the required Syncfusion<sup>®</sup> components and project configurations for development.
 
-**Code Snippet:** Adds a Syncfusion® .NET MAUI component with multiple features into the .NET MAUI application's XAML code editor.
+* [Essential UI Kit](Essential-UI-Kit): Provides reens and UI templates to accelerate the development of cross-platform .NET MAUI applications.
 
-**Essential UI Kit:** Provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications.
+* [Notifications](Syncfusion-Notifications): Displays notifications about trial applications, newer Syncfusion<sup>®</sup> NuGet package versions, and new Essential Studio<sup>®</sup> releases.
