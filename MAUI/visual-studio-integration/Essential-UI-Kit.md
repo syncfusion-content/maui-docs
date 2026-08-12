@@ -62,6 +62,9 @@ Example: If you added Login With Social Icon Page,
 MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight C# %}
 
 // For .NET 9 or later, use the below code snippet.
@@ -73,3 +76,4 @@ protected override Window CreateWindow(IActivationState? activationState)
 
 {% endhighlight %}
 {% endtabs %}
+
