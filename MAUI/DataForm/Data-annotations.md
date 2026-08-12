@@ -244,7 +244,7 @@ public string Address { get; set; }
 ## Custom attribute
 The DataForm supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
 
-#### DataFormDisplayOptions attribute
+**DataFormDisplayOptions attribute**
 
 <table>
 <tr>
@@ -314,7 +314,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-#### DataFormValueConverter attribute
+**DataFormValueConverter attribute**
 
 Specifies the Converter type, which converts the original value in a different format or as a different value.
 
@@ -329,7 +329,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-#### DateFormDateRange attribute
+**DateFormDateRange attribute**
 
 <table>
 <tr>
