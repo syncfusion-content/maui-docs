@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ImageEditor | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI ImageEditor control. Explore setup, features, examples, and customization options.
+title: Getting Started with .NET MAUI Image Editor | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Image Editor control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
 ---
 
-# Getting Started with .NET MAUI ImageEditor
+# Getting Started with .NET MAUI Image Editor
 
 This section explains the steps to create and load an image in the [.NET MAUI Image Editor (SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add the .NET MAUI Image Editor control to your project.
 
@@ -33,7 +33,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ImageEditor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor/) and install the latest version.
@@ -57,7 +57,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ImageEditor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -81,7 +81,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ImageEditor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor/) and install the latest version.
@@ -102,7 +102,7 @@ builder.ConfigureSyncfusionCore();
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Import the ImageEditor namespace
+## Step 4: Import the Image Editor namespace
  
 Add the following namespace in your XAML or C#.
  
@@ -246,6 +246,6 @@ imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
 {% endhighlight %}
 {% endtabs %}
 
-You can download the ImageEditor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted).
+You can download the Image Editor Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted).
 
 N> You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.
