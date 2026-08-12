@@ -39,6 +39,10 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Interval = 0.2;
@@ -83,6 +87,10 @@ Change the active and inactive divider radius of the Range Selector using the [`
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Interval = 0.2;
@@ -137,6 +145,10 @@ Also, change the active and inactive divider stroke color of the Range Selector 
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Interval = 0.2;
@@ -191,6 +203,10 @@ Change the active and inactive divider color of the Range Selector using the [`A
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Interval = 0.2;

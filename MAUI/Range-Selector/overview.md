@@ -7,9 +7,9 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Overview of .NET MAUI Range Selector
+# .NET MAUI Range Selector Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI Range Selector ([SfRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
+The Syncfusion<sup>®</sup> .NET MAUI Range Selector ([SfRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control that allows users to select a range of values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
 ![.NET MAUI range selector overview ](images/overview/range_selector_overview.png)
 
@@ -24,10 +24,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Selector ([SfRangeSelector](https://
 
 - **Numeric range selection** allows selecting values between a defined minimum and maximum range.  
 - **Content integration** allows embedding custom UI elements or controls such as [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) inside the range selector.  
-- **Customizable label** allows displaying values with formatting based on application needs.  
-- **Ticks and dividers** allows indicating intervals clearly using major and minor tick marks.  
-- **Discrete mode** allows moving selection thumbs in fixed steps using defined intervals.  
-- **Tooltip** allows displaying selected values clearly with customizable text formatting.  
+- **Customizable labels** allow displaying values with formatting based on application needs.
+- **Ticks and dividers** indicate intervals clearly using major and minor tick marks.
+- **Discrete mode** allows moving selection thumbs in fixed steps using defined intervals.
+- **Tooltip** displays selected values clearly with customizable text formatting.
 
 ## Globalization
 

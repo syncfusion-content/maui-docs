@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Range Selector control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfRangeSelector) control.
+description: This section explains how to get started with the Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -124,7 +124,7 @@ using Syncfusion.Maui.Sliders;
 
 ## Step 5: Add the Range Selector component
 
-The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property will add the content to the Range Selector. Add any control within the Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) will be added as a content.
+The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property adds content to the Range Selector. Add any control within the Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) are added as content.
 
 {% tabs %}
 
@@ -147,6 +147,9 @@ The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeS
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 10;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about the track feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -48,6 +48,9 @@ It represents the values currently selected in the Range Selector. The Range Sel
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 10;
@@ -97,6 +100,10 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -139,6 +146,9 @@ Change the active and inactive track height of the Range Selector using the [`Ac
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.TrackStyle.ActiveSize = 10;
@@ -183,6 +193,9 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 1;

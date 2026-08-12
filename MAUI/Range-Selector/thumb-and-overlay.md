@@ -11,12 +11,12 @@ documentation: ug
 
 This section helps to learn about how to customize the thumb and thumb overlay in the Range Selector.
 
-* Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the Range Selector.
-* Thumb overlay - It is rendered around the thumb while interacting with them.
+* Thumb - An element of the Range Selector that can be used to drag and change the selected value.
+* Thumb overlay - A visual indicator rendered around the thumb while interacting with it.
 
 ## Thumb size
 
-Change the size of the thumb in the Range Selector using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
+Change the size of the thumb in the Range Selector using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
 
 {% tabs %}
 
@@ -43,12 +43,16 @@ Change the size of the thumb in the Range Selector using the [`Radius`](https://
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Radius = 15;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -66,10 +70,10 @@ Change the color of the thumb in the Range Selector using the [`Fill`](https://h
 <ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
     <sliders:SfRangeSelector>
-        
+
         <sliders:SfRangeSelector.ThumbStyle>
             <sliders:SliderThumbStyle Fill="#EE3F3F" />
         </sliders:SfRangeSelector.ThumbStyle>
@@ -84,12 +88,16 @@ Change the color of the thumb in the Range Selector using the [`Fill`](https://h
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -125,13 +133,17 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.ThumbStyle.StrokeThickness = 2;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -167,12 +179,16 @@ Change the thumb stroke color while two thumbs are overlapping in the Range Sele
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -208,12 +224,15 @@ Change the size of the thumb overlay in the Range Selector using the [`Radius`](
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbOverlayStyle.Radius = 18;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -249,12 +268,16 @@ Change the color of the thumb overlay in the Range Selector using the [`Fill`](h
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
-        
+
 {% endhighlight %}
 
 {% endtabs %}

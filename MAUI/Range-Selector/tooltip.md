@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about the Tooltip feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the Range Selector.
 
 ## Enable tooltip
 
-Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`. 
+Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current value during interaction. By default, the tooltip text is formatted using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_NumberFormat) property. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.
 
 {% tabs %}
 
@@ -40,6 +40,9 @@ Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Tooltip = new SliderTooltip();
@@ -81,6 +84,9 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Tooltip = new SliderTooltip();
@@ -94,7 +100,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector show always tooltip](images/tooltip/show-always-tooltip.gif)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-selector/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
+N> Refer to [this page](https://help.syncfusion.com/maui/range-selector/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
 ## Tooltip label style
 
@@ -131,6 +137,10 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
