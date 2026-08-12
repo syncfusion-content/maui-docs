@@ -16,7 +16,7 @@ The `SfListView` supports different layouts such as linear and grid layouts. The
 The linear layout arranges items linearly in a single column vertically or a single row horizontally. Initialize a [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html) and assign it to the [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_ItemsLayout) property to display items in a linear layout. It is the default layout.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6 7" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                     ItemsSource="{Binding CategoryInfo}"
@@ -27,7 +27,7 @@ The linear layout arranges items linearly in a single column vertically or a sin
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView;
 // ...
 listView.ItemsLayout = new LinearLayout();
@@ -46,7 +46,7 @@ The number of columns can be defined by using the `SpanCount` property of `GridL
 In `Horizontal` orientation, `SpanCount` defines the number of rows.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 6 7" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                     ItemsSource="{Binding GalleryInfo}"
@@ -57,7 +57,7 @@ In `Horizontal` orientation, `SpanCount` defines the number of rows.
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.ListView;
 // ...
 listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
@@ -74,7 +74,7 @@ In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfu
 N> `ItemSize` represents a single dimension of the item. In a `GridLayout`, divide the available width by the per-cell width to compute the number of columns. In vertical orientation, use the item height; in horizontal orientation, use the item width.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13 14 15 16" %}
+{% highlight c# tabtitle="C#" hl_lines="12 13 14 15 16" %}
 public partial class GridLayoutPage : ContentPage
 {
   public GridLayoutPage()

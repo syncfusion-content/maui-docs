@@ -12,7 +12,7 @@ documentation: ug
 `Syncfusion® SfListView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. RTL can be applied explicitly on the `SfListView` by setting the `FlowDirection` property, or inherited from a parent visual element or the device's system flow direction.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="XAML" hl_lines="4" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
@@ -21,7 +21,7 @@ documentation: ug
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 

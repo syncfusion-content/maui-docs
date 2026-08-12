@@ -19,7 +19,7 @@ The `SfListView` allows you to display and customize empty view content when the
 The empty view is displayed whenever the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or whenever the collection assigned to the `ItemsSource` property is null or empty. In this section, the `EmptyView` property is set to a string.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                          ItemsSource="{Binding Items}"
@@ -28,7 +28,7 @@ The empty view is displayed whenever the [ItemsSource](https://help.syncfusion.c
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.EmptyView = "No Items";
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +38,7 @@ listView.EmptyView = "No Items";
 The `EmptyView` property can be set to a view, which is displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                          ItemsSource="{Binding Items}"
@@ -53,7 +53,7 @@ The `EmptyView` property can be set to a view, which is displayed when the [Item
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 VerticalStackLayout stackLayout = new VerticalStackLayout() { VerticalOptions = LayoutOptions.Center };
 
 var label1 = new Label()
@@ -88,7 +88,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 The `EmptyView` property can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:EmptyViewTemplate">
   <Grid>
@@ -116,7 +116,7 @@ The `EmptyView` property can be set to a custom type, which is used to display w
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.EmptyView = new FilterItem() { Filter = filterText.Text};
 
 listView.EmptyViewTemplate = new DataTemplate(() =>
@@ -137,7 +137,7 @@ listView.EmptyViewTemplate = new DataTemplate(() =>
 The `FilterItem` type defines a `Filter` property. It inherits from `BindableObject` so that the `Filter` property can be backed by a `BindableProperty` and notify the template when the value changes, which keeps the `EmptyViewTemplate` in sync with the `SearchBar.Text` value at run time:
 
 {% tabs %}
-{% highlight c# tabtitle="FilterItem.cs" %}
+{% highlight c# tabtitle="C#" %}
 public class FilterItem : BindableObject
 {
   public static readonly BindableProperty FilterProperty = BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
@@ -162,7 +162,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 The `EmptyView` can be changed to a specific view at run time. Views can also be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:EmptyViewTemplate">
   <ContentPage.Resources>
@@ -207,7 +207,7 @@ The `EmptyView` can be changed to a specific view at run time. Views can also be
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.EmptyView = Resources["SingleView"];
 
 checkBox.CheckedChanged += CheckBox_CheckedChanged;
@@ -217,7 +217,7 @@ checkBox.CheckedChanged += CheckBox_CheckedChanged;
 `EmptyView` is changed based on the value of the [CheckBox.IsChecked](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 {
   if(e.Value)
@@ -239,7 +239,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 The `EmptyView` appearance can be changed at run time based on the value of `EmptyView` by using the `EmptyViewTemplate` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:EmptyViewTemplate">
   <ContentPage.Resources>
@@ -284,7 +284,7 @@ The `EmptyView` appearance can be changed at run time based on the value of `Emp
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 listView.EmptyView = filterText.Text;
 
 listView.EmptyViewTemplate = new EmptyViewDataTemplateSelector() { BasicTemplate = this.Resources["BasicTemplate"] as DataTemplate, AdvancedTemplate = this.Resources["AdvancedTemplate"] as DataTemplate };
@@ -294,7 +294,7 @@ listView.EmptyViewTemplate = new EmptyViewDataTemplateSelector() { BasicTemplate
 The `EmptyView` property is set to the `SearchBar.Text` property, and the `EmptyViewTemplate` property is set to an `EmptyViewDataTemplateSelector` object.
 
 {% tabs %}
-{% highlight c# tabtitle="EmptyViewDataTemplateSelector.cs" %}
+{% highlight c# tabtitle="C#" %}
 public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
 {
   public DataTemplate BasicTemplate { get; set; }

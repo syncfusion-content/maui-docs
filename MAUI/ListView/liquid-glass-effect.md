@@ -28,7 +28,7 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfListView` control
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfListView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6" %}
 <Grid>
       <core:SfGlassEffectView x:Name="glassview" EffectType="Regular">
           <ListView:SfListView x:Name="listView"
@@ -49,7 +49,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
   </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight c# tabtitle="C#" hl_lines="18" %}
 
 
 using Microsoft.Maui.Controls;
