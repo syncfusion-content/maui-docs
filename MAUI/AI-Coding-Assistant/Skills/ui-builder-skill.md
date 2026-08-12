@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion® MAUI UI Builder Skill for AI Assistants | Syncfusion®
-description: Install Syncfusion® MAUI UI Builder to generate production-ready MAUI components from natural-language prompts.
+title: MAUI UI Builder Skill for AI Assistants | Syncfusion®
+description: Syncfusion® MAUI UI Builder Skill for AI Assistants enables AI-driven UI creation, helping generate .NET MAUI layouts and interface components efficiently.
 control: Skills
 platform: maui
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion® MAUI UI Builder Skill for AI Assistants
+# MAUI UI Builder Skill for AI Assistants
 
 **Syncfusion® MAUI UI Builder** is an AI-powered skill and companion agent that accelerates cross-platform application development by transforming natural-language UI requirements into production-ready components using Syncfusion® MAUI libraries.
 
