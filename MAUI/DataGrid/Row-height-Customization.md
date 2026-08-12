@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Row Height Customization in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to customize row heights in Syncfusion® .NET MAUI DataGrid, including fixed, dynamic, and content-based row sizing options.
+title: Row Height Customization in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to customize row heights in Syncfusion® .NET MAUI Data Grid, including fixed, dynamic, and content-based row sizing options.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row height customization, maui row height customization
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row height customization, maui row height customization
 ---
 
-# Row Height Customization in .NET MAUI DataGrid
+# Row Height Customization in .NET MAUI Data Grid
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
 
-To get start quickly with customize the row height in .NET MAUI DataGrid, you can check on this video:
+To get start quickly with customize the row height in .NET MAUI Data Grid, you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU?start=76"></iframe>
 

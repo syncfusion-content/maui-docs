@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Grid Events in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to handle events and listen for cell value changes in Syncfusion® .NET MAUI DataGrid to respond to user interactions and data updates.
+title: Grid Events in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to handle events and listen for cell value changes in Syncfusion® .NET MAUI Data Grid to respond to user interactions and data updates.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui grid events, maui grid events
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui grid events, maui grid events
 ---
 
-# Grid Events in .NET MAUI DataGrid
+# Grid Events in .NET MAUI Data Grid
 
 ## Cell Tap Events
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides the following events for handling interactions with the cells.
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides the following events for handling interactions with the cells.
 
 * [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap on a cell has occurred.
 * [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when the user has tapped a cell with a primary button at the same cell twice in quick succession.

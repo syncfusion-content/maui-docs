@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paging in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to enable and customize paging in Syncfusion® .NET MAUI DataGrid to efficiently navigate and manage large datasets.
+title: Paging in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to enable and customize paging in Syncfusion® .NET MAUI Data Grid to efficiently navigate and manage large datasets.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui paging, maui paging
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui paging, maui paging
 ---
 
-# Paging in .NET MAUI DataGrid
+# Paging in .NET MAUI Data Grid
 
 The data grid interactively supports data manipulation through the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control, providing built-in options to page data on demand when dealing with large volumes. The `SfDataPager` can be placed above or below as needed to easily manage data paging.
 
@@ -104,7 +104,7 @@ public partial class MainPage : ContentPage
 
 The following screenshot shows the result of running the above code:
 
-<img alt="Normal paging .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-normal-paging.png" width="404" Height = "429"/>
+<img alt="Normal paging .NET MAUI Data Grid." src="Images\paging\net-maui-datagrid-normal-paging.png" width="404" Height = "429"/>
 
 ## On-Demand Paging	
 
@@ -252,7 +252,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Numeric button shape .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-button-shape.png" width="404" Height = "429"/>
+<img alt="Numeric button shape .NET MAUI Data Grid." src="Images\paging\net-maui-datagrid-button-shape.png" width="404" Height = "429"/>
 
 ## Generating numeric buttons
 
@@ -364,7 +364,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Button size and font size of .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-buttonsize-and-fontsize.png" width="404" Height = "429"/>
+<img alt="Button size and font size of .NET MAUI Data Grid." src="Images\paging\net-maui-datagrid-buttonsize-and-fontsize.png" width="404" Height = "429"/>
 
 ## Display mode
 
@@ -527,7 +527,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Auto-ellipsis mode .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-autoelipsismode.png" width="404" Height = "429"/>
+<img alt="Auto-ellipsis mode .NET MAUI Data Grid." src="Images\paging\net-maui-datagrid-autoelipsismode.png" width="404" Height = "429"/>
 
 ## Customize the auto-ellipsis text
 
@@ -933,7 +933,7 @@ this.Content = grid;
 
 The following picture shows the customize styles of data pager:
 
-<img alt="Data pager style .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-pager-style.png" width="404" Height = "429"/>
+<img alt="Data pager style .NET MAUI Data Grid." src="Images\paging\net-maui-datagrid-pager-style.png" width="404" Height = "429"/>
 
 ### Limitations
 - UI Filtering is not supported. You can implement filtering at the application level.

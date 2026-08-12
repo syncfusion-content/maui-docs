@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data Validation in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about data validation in Syncfusion® .NET MAUI DataGrid, including validation rules, error handling, and data input customization.
+title: Data Validation in .NET MAUI Data Grid | Syncfusion®
+description: Learn all about data validation in Syncfusion® .NET MAUI Data Grid, including validation rules, error handling, and data input customization.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui data validation, maui data validation
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui data validation, maui data validation
 ---
 
-# Data Validation in .NET MAUI DataGrid
+# Data Validation in .NET MAUI Data Grid
 
-[.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to validate data and display hints when validation fails. When invalid data is detected, an error icon is displayed at the top right corner of the DataGridCell. When you hover over the error icon, error information is displayed in an error tip.
+[.NET MAUI Data Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to validate data and display hints when validation fails. When invalid data is detected, an error icon is displayed at the top right corner of the DataGridCell. When you hover over the error icon, error information is displayed in an error tip.
 
 ## Built-in Validation
 
@@ -24,7 +24,7 @@ Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo` can be 
 
 ## Built-in validation using IDataErrorInfo / INotifyDataErrorInfo
 
-[.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) provides support to validate the data based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) / [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0).
+[.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) provides support to validate the data based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) / [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0).
 
 ### Using IDataErrorInfo
 
