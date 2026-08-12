@@ -7,11 +7,11 @@ control: Syncfusion® Extensions
 documentation: ug
 ---
 
-# Essential<sup>®</sup> UI Kit for .NET MAUI
+# Essential<sup>®</sup> UI Kit for .NET MAUI with JetBrains Rider
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI provides ready-to-use XAML templates, making it easy to design user interfaces for cross-platform applications in JetBrains Rider. It follows a structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and the modification of existing views.
 
-## Installation of Essential<sup>®</sup> UI Kit for .NET MAUI Extension
+## Installation of Essential<sup>®</sup> UI Kit for .NET MAUI in JetBrains Rider
 
 To get started with Essential<sup>®</sup> UI Kit for .NET MAUI in JetBrains Rider, install the required Syncfusion® integration, if available, from the JetBrains Marketplace through Rider's plugin management system. Once installed, it enables access to Syncfusion® features and resources within Rider for .NET MAUI application development.
 
