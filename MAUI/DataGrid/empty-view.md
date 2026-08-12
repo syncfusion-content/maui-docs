@@ -96,7 +96,7 @@ this.Content = dataGrid;
 
 ## Display a DataTemplate when DataGrid has no items
 
-#### Using EmptyViewTemplate with Custom Binding
+### Using EmptyViewTemplate with Custom Binding
 
 For advanced scenarios such as filtered or searched data, you can set the `EmptyView` to a custom type that will be displayed when the `ItemsSource` is null or the collection that the `ItemsSource` parameter specifies is empty or null. The `EmptyViewTemplate` can be used to modify the `EmptyView`'s appearance and behavior based on dynamic properties.
  
