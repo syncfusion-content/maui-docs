@@ -60,7 +60,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region color](images/regions/region_color.png)
+![Range Selector region color](images/regions/region_color.png)
 
 ## Region stroke
 
@@ -115,7 +115,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region stroke](images/regions/region_stroke.png)
+![Range Selector region stroke](images/regions/region_stroke.png)
 
 ## Region stroke thickness
 
@@ -174,4 +174,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region stroke width](images/regions/region_stroke_width.png)
+![Range Selector region stroke width](images/regions/region_stroke_width.png)

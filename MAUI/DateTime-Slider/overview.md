@@ -13,7 +13,7 @@ documentation: ug
 
 - Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
-![.NET MAUI datetime slider overview ](images/overview/datetime_slider_overview.png)
+![.NET MAUI DateTime Slider overview ](images/overview/datetime_slider_overview.png)
 
 ## Business use cases
 
