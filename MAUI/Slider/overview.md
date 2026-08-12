@@ -11,22 +11,22 @@ documentation: ug
 
 The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
-![.NET MAUI slider overview ](images/overview/slider_overview.png)
+![.NET MAUI Slider overview ](images/overview/slider_overview.png)
 
 ## Business use cases
 
-- Applications that require adjusting numeric values such as volume, brightness, or intensity using a slider.  
+- Applications that require adjusting numeric values such as volume, brightness, or intensity using a Slider.  
 - Data-driven apps that allow users to filter or refine results based on a selected value range.  
-- Configuration panels that use sliders for setting thresholds or tuning parameters.  
+- Configuration panels that use Sliders for setting thresholds or tuning parameters.  
 - Mobile applications that require quick and intuitive value selection through touch interaction.  
 
 ## Key features
 
 - **Numeric value selection** allows selecting a single value within a defined minimum and maximum range.  
-- **Orientation** allows displaying the slider in horizontal or vertical layouts based on design requirements.  
+- **Orientation** allows displaying the Slider in horizontal or vertical layouts based on design requirements.  
 - **Customizable label** allows rendering value labels with user-defined formatting.  
 - **Ticks and dividers** allows visualizing intervals clearly using major and minor ticks.  
-- **Discrete mode** allows moving the slider thumb in fixed steps using defined intervals.  
+- **Discrete mode** allows moving the Slider thumb in fixed steps using defined intervals.  
 - **Tooltip** allows displaying the selected value clearly during interaction. 
 
 ## Globalization

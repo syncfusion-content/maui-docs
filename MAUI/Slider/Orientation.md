@@ -49,7 +49,7 @@ SfSlider slider = new SfSlider()
 
 ## Inverse the slider
 
-Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
+Invert the Slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -84,4 +84,4 @@ SfSlider slider = new SfSlider()
 
 {% endtabs %}
 
-![Inverse slider](images/getting-started/slider-inverse.png)
+![Inverse Slider](images/getting-started/slider-inverse.png)

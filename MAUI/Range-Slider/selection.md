@@ -48,7 +48,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider numeric discrete mode](images/selection/step-size.gif)
+![Range Slider numeric discrete mode](images/selection/step-size.gif)
 
 ## Interval Selection
 
@@ -85,7 +85,7 @@ rangeSlider.EnableIntervalSelection = true;
 
 {% endtabs %}
 
-![RangeSlider EnableIntervalSelection](images/selection/enableintervalselection.gif)
+![Range Slider EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
 ## DragBehavior
 
