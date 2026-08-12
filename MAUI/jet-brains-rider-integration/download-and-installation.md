@@ -1,66 +1,66 @@
 ---
 layout: post
 title: Download and Setup in .NET MAUI Extension | Syncfusion®
-description: Learn here more about how to download and install in the Syncfusion® .NET MAUI Extension for JetBrains Rider and much more.
+description: Learn here more about how to download, install, and configure the Syncfusion® .NET MAUI Extension in JetBrains Rider.
 platform: MAUI
 component: Common
 documentation: ug
 ---
 
-# Download and Setup Guide 
+# Download and Setup Guide
 
-[Essential UI Kit](#essential-ui-kit)
+Before developing Syncfusion<sup>®</sup> .NET MAUI applications in JetBrains Rider, ensure that the required software and .NET MAUI development tools are installed and configured properly.
 
-## Essential UI Kit
-Syncfusion® publishes the JetBrains Rider extension through the JetBrains Marketplace. You can install it directly from JetBrains Rider or download and install it from the marketplace package.
+## Prerequisites
 
-## Install the Essential UI Kit Extension through JetBrains Rider
-The following instructions outline the process of installing the Essential UI Kit for .NET MAUI - Syncfusion® extension from JetBrains Rider.
+The following software must be installed to develop Syncfusion<sup>®</sup> .NET MAUI applications in JetBrains Rider:
 
-1. Open JetBrains Rider.
+* [JetBrains Rider 2025.1 or later](https://www.jetbrains.com/rider/)
 
-2. Open the Plugin dialog from **Settings/Preferences > Plugin**.
+* [.NET 9.0 or later SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 
-3. Search for **Syncfusion® .NET MAUI UI Kit** in the JetBrains Marketplace tab.
+## Install JetBrains Rider
 
-4. Install the **Essential UI Kit for .NET MAUI - Syncfusion®** extension by clicking the Install button.
+The following steps illustrate how to download and install JetBrains Rider.
 
-     ![Online-Manage-Extension-window](images/OnlineExtension.png)
+1. Download JetBrains Rider from the official [JetBrains](https://www.jetbrains.com/rider/) website.
 
-5. Restart JetBrains Rider after installation.
+2. Run the installer and complete the installation process.
 
-     ![SyncfusionMenu](images/MenuExtensions.png)
+3. Launch JetBrains Rider after the installation is complete.
 
-## Install the Essential UI Kit Extension from the JetBrains Marketplace
+## Configure .NET MAUI Support
 
-The following instructions outline the process of downloading and installing Essential® UI Kit for .NET MAUI applications from the JetBrains Marketplace.
+The following steps will guide you through configuring .NET MAUI support in JetBrains Rider.
 
-1. Open the [JetBrains Marketplace](https://plugins.jetbrains.com/) and locate the Essential UI Kit for .NET MAUI - Syncfusion® extension.
+1. Install the required .NET SDK version.
 
-2. Select **Install** from the marketplace. If prompted, choose **Open JetBrains Rider** to continue the installation.
+2. Open a terminal and install the .NET MAUI workload using the following command:
 
-3. Install the **Essential UI Kit for .NET MAUI - Syncfusion®** extension by clicking the Install button.
+   ```bash
+   dotnet workload install maui
+   ```
 
-     ![Online-Manage-Extension-window](images/OnlineExtension.png)
+3. Restart JetBrains Rider if it is already running.
 
-4. Restart JetBrains Rider after installation.
+4. Verify that the **.NET MAUI Application** template is available when creating a new solution.
 
-     ![SyncfusionMenu](images/MenuExtensions.png)
+## Additional Platform Requirements
 
-## Manually Installing the Essential UI Kit Extension in JetBrains Rider
+Depending on the target platform, install the following components:
 
-The following instructions detail the manual installation process of the Essential UI Kit for .NET MAUI - Syncfusion® extension in JetBrains Rider.
+* Android SDK and Android Emulator for Android application development.
 
-1. Download the plugin package from the JetBrains Marketplace.
+* Xcode on macOS for iOS and Mac Catalyst application development.
 
-     ![SyncfusionMenu](images/EssentialUIKitPackage.png)
+## Verify Installation
 
-2. In JetBrains Rider, open **Settings/Preferences > Plugin**.
+1. Open JetBrains Rider and click **New Solution**.
 
-3. Click the gear icon and choose **Install Plugin from Disk**.
+2. Select the **.NET MAUI Application** template.
 
-     ![SyncfusionMenu](images/InstallPluginWithDisk.png)
+3. Create a new .NET MAUI project.
 
-4. Browse to the downloaded plugin package and install it.
+4. Build and run the application to verify that the development environment is configured successfully.
 
-5. Restart JetBrains Rider after installation.
+After completing these steps, you can start developing Syncfusion® .NET MAUI applications in JetBrains Rider and add the required Syncfusion® NuGet packages to your projects.
