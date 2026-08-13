@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Essential® UI Kit for .NET MAUI Visual Studio | Syncfusion®
-description: The Syncfusion® Essential® UI Kit for .NET MAUI Visual Studio extension provides predefined design screens and templates for .NET MAUI applications.
+title: Essential® UI Kit for .NET MAUI in Visual Studio | MAUI | Syncfusion®
+description: The Syncfusion® Essential® UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
 platform: maui
 control: Syncfusion<sup>®</sup> Extensions
 documentation: ug
@@ -62,6 +62,9 @@ Example: If you added Login With Social Icon Page,
 MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight C# %}
 
 // For .NET 9 or later, use the below code snippet.
@@ -73,3 +76,4 @@ protected override Window CreateWindow(IActivationState? activationState)
 
 {% endhighlight %}
 {% endtabs %}
+
