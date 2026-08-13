@@ -16,18 +16,18 @@ The Syncfusion® .NET MAUI Cards ([SfCards](https://www.syncfusion.com/maui-cont
 ## Business use cases
 
 - Mobile applications that require swipe-based navigation for content browsing or recommendations.
-- E-commerce applications that display product cards with interactive swipe actions.
+- E-commerce applications that display product Cards with interactive swipe actions.
 - Dashboard and productivity apps that use card layouts for compact and organized data presentation.
 - Social or content apps that require card stacking and gesture-based interactions for user engagement.
 
 ## Key features
 
-- **Removable card support** allows creating cards that can be dismissed through user interaction.
-- **Swipe interaction** enables dismissing cards in left and right directions for intuitive navigation.
-- **Dismissal control** allows restricting or customizing when cards can be removed.
-- **Card stack layout** allows displaying multiple cards in a stacked format with one visible at a time.
-- **Multi-directional swipe support** enables dismissing and retrieving cards in left, right, top, and bottom directions.
-- **Swiped card visibility control** allows handling how dismissed cards are displayed or restored.
+- **Removable card support** allows creating Cards that can be dismissed through user interaction.
+- **Swipe interaction** enables dismissing Cards in left and right directions for intuitive navigation.
+- **Dismissal control** allows restricting or customizing when Cards can be removed.
+- **Card stack layout** allows displaying multiple Cards in a stacked format with one visible at a time.
+- **Multi-directional swipe support** enables dismissing and retrieving Cards in left, right, top, and bottom directions.
+- **Swiped card visibility control** allows handling how dismissed Cards are displayed or restored.
 
 ## Globalization
 
