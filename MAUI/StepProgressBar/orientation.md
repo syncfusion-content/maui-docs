@@ -34,7 +34,7 @@ stepProgressBar.Orientation = StepProgressBarOrientation.Horizontal;
 
 ## Vertical
 
-To view the step progress bar control in [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Vertical) orientation, define the vertical orientation as demonstrated in the following code example.
+To view the Step ProgressBar control in [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html#Syncfusion_Maui_ProgressBar_StepProgressBarOrientation_Vertical) orientation, define the vertical orientation as demonstrated in the following code example.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="2" %}

@@ -202,7 +202,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 N> All the (*) marked APIs are renamed from Xamarin SfCircularProgressBar to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar.
 
-The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+The following code example explains how to use the properties in the Xamarin Circular ProgressBar and the .NET MAUI Circular ProgressBar.
 
 <table>
 <tr>

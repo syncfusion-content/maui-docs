@@ -161,7 +161,7 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 N> All the (*) marked APIs are renamed from Xamarin SfLinearProgressBar to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar.
 
-The following code example explains how to use the properties in the Xamarin linear progress bar and the .NET MAUI linear progress bar.
+The following code example explains how to use the properties in the Xamarin Linear ProgressBar and the .NET MAUI Linear ProgressBar.
 
 <table>
 <tr>

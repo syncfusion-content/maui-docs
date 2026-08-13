@@ -9,7 +9,7 @@ documentation: ug
 
 # States in .NET MAUI Linear ProgressBar
 
-Configure the states of the linear progress bar control depending on the usage.
+Configure the states of the Linear ProgressBar control depending on the usage.
 
 ## Determinate
 
@@ -17,7 +17,7 @@ This is the default state. Use it when the progress estimation is known.
 
 ## Indeterminate
 
-By enabling the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property, the state of the linear progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with the determinate mode to indicate that the application estimates progress before the actual progress starts.
+By enabling the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property, the state of the Linear ProgressBar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with the determinate mode to indicate that the application estimates progress before the actual progress starts.
 
 {% tabs %}
 

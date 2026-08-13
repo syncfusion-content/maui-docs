@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET MAUI Step ProgressBar
 
-Enhance the accessibility of .NET MAUI Step Progress Bar with a user-friendly design that provides inclusive features for seamless navigation and usability for all users. The following table lists the elements along with their formats and examples.
+Enhance the accessibility of .NET MAUI Step ProgressBar with a user-friendly design that provides inclusive features for seamless navigation and usability for all users. The following table lists the elements along with their formats and examples.
 
 <table>
 <tr>

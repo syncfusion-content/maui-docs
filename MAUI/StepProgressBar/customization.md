@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Step ProgressBar
 
-You can fully customize the appearance of the step progress bar, including the background color, step size, content size, animations, and more.
+You can fully customize the appearance of the Step ProgressBar, including the background color, step size, content size, animations, and more.
 
 ## ActiveStepIndex
 
@@ -198,7 +198,7 @@ public MainPage()
 
 ## Progress bar background
 
-You can customize the progress bar background of the step progress bar by using the [ProgressBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressBarBackground) property in `SfStepProgressBar`.
+You can customize the progress bar background of the Step ProgressBar by using the [ProgressBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressBarBackground) property in `SfStepProgressBar`.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
@@ -227,7 +227,7 @@ public MainPage()
 
 ## Customize Progress Track Size for each step
 
-The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property in the `StepProgressBarItem`.
+The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each Step ProgressBar using [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property in the `StepProgressBarItem`.
 
 *The default value of the `ProgressTrackSize` property is 50.
 
@@ -485,7 +485,7 @@ public class ViewModel
 
 ## Customize step appearance using DataTemplateSelector
 
-You can customize the step appearance using the [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) property in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step based on certain conditions.
+You can customize the step appearance using the [StepTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate) property in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step in the Step ProgressBar based on the step’s data. This allows you to customize the appearance of a particular step based on certain conditions.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" %}
@@ -703,7 +703,7 @@ public class ViewModel
 
 ## Customize primary and secondary text appearance using DataTemplateSelector
 
-You can customize the appearance of the step descriptions using the [PrimaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate) and [SecondaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate) properties in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step description in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
+You can customize the appearance of the step descriptions using the [PrimaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate) and [SecondaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate) properties in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step description in the Step ProgressBar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="37" %}

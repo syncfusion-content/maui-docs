@@ -22,7 +22,7 @@ The Syncfusion® [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-co
 
 ## Key features
 
-- **Orientation** allows displaying the step progress bar in horizontal or vertical layouts.  
+- **Orientation** allows displaying the Step ProgressBar in horizontal or vertical layouts.  
 - **Progress status** allows representing steps using states such as completed, in progress, and not started.  
 - **Status text** allows displaying primary and secondary text to describe each step clearly.  
 - **Formatted text** allows customizing the appearance and style of step descriptions.  

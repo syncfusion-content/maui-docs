@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in .NET MAUI Linear ProgressBar
 
-The linear progress bar provides animation support to visualize the progress value changes in an interactive way. 
+The Linear ProgressBar provides animation support to visualize the progress value changes in an interactive way. 
 
 The following properties are used to define the duration of animation for the specific states.
 
@@ -21,7 +21,7 @@ The following properties are used to define the duration of animation for the sp
 
 The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing) property allows you to specify the transfer function that controls the animation speed when it runs.
 
-The following code sample demonstrates the `CubicInOut` easing function of the linear progress bar.
+The following code sample demonstrates the `CubicInOut` easing function of the Linear ProgressBar.
 
 {% tabs %}
 
@@ -61,7 +61,7 @@ N> The animation duration and easing effect parameters will not affect the confi
 
 The [`IndeterminateAnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing) property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
 
-The following code sample demonstrates the `BounceIn` easing function of the linear progress bar.
+The following code sample demonstrates the `BounceIn` easing function of the Linear ProgressBar.
 
 {% tabs %}
 

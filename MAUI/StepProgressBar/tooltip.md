@@ -9,11 +9,11 @@ documentation: ug
 
 # Tooltip in .NET MAUI Step ProgressBar
 
-The tooltip provides information when hovering over or tapping the steps in the step progress bar, displaying details about each step.
+The tooltip provides information when hovering over or tapping the steps in the Step ProgressBar, displaying details about each step.
 
 ## Enable tooltip
 
-To enable the tooltip for the step progress bar control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) property of [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is set to `false`. To provide users with additional information or context about a specific step, simply set this property to `true`.
+To enable the tooltip for the Step ProgressBar control, utilize the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) property of [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). By default, the value of [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip) is set to `false`. To provide users with additional information or context about a specific step, simply set this property to `true`.
 
 ## Tooltip text
 

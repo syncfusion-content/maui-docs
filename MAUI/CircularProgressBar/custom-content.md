@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Content in .NET MAUI Circular ProgressBar
 
-In the circular progress bar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
+In the Circular ProgressBar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
 
 For example, include an add, start, or pause button to control the progress. You can also add an image that indicates the actual task in progress, or add custom text that conveys how far the task is completed.
 

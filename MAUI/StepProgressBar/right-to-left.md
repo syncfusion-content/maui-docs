@@ -32,4 +32,4 @@ this.Content = stepProgressBar;
 
 {% endtabs %}
 
-![Right-to-left in .NET MAUI Step Progress Bar](images/right-to-left/maui-stepprogressbar-right-to-left.gif)
+![Right-to-left in .NET MAUI Step ProgressBar](images/right-to-left/maui-stepprogressbar-right-to-left.gif)

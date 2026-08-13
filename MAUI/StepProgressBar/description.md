@@ -228,7 +228,7 @@ N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryF
 
 ## Customize label spacing
 
-You can customize the space between the step and the primary or secondary text of the step progress bar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar` control. The default value of the `LabelSpacing` property is `5`.
+You can customize the space between the step and the primary or secondary text of the Step ProgressBar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar` control. The default value of the `LabelSpacing` property is `5`.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="2" %}
@@ -254,7 +254,7 @@ this.Content = stepProgressBar;
 
 ## Customize label position
 
-You can customize the position of the primary or secondary text of the step progress bar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar` control. It can be positioned at the `Start`, `End`, `Bottom`, or `Top`.
+You can customize the position of the primary or secondary text of the Step ProgressBar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar` control. It can be positioned at the `Start`, `End`, `Bottom`, or `Top`.
 
 The default value of the `LabelPosition` property in the horizontal direction is `Bottom`, and in the vertical direction, it is `End`.
 

@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfStepProgressBar](https://www.syncfusio
 
 ## Initialize the control
 
-To initialize the control, import the step progress bar namespace and initialize `SfStepProgressBar` as shown in the following code sample.
+To initialize the control, import the Step ProgressBar namespace and initialize `SfStepProgressBar` as shown in the following code sample.
 
 <table>
 <tr>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Properties of .NET MAUI Circular Progress Bar control | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® MAUI Circular Progress Bar (SfCircularProgressBar) control.
+title: Properties of .NET MAUI Circular ProgressBar control | Syncfusion®
+description: This section explains the properties, events, and methods with Syncfusion® MAUI Circular ProgressBar (SfCircularProgressBar) control.
 platform: maui
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Circular Progress Bar API Reference
+# .NET MAUI Circular ProgressBar API Reference
 
 ## Properties
 
