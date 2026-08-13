@@ -13,303 +13,189 @@ documentation: ug
 
 <table>
 	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Type<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
 	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat">DateFormat</a> <br/>
-		</td>
-		<td>
-			string
-		</td>
-		<td>Formats the date text.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_DateFormat">DateFormat</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.String.html">string</a></td>
+		<td>Formats the date labels shown on the range slider.</td>
 	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType">IntervalType</a><br/>
-		</td>
-		<td>
-			SliderDateIntervalType
-		</td>
-		<td>Sets the date interval type.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_IntervalType">IntervalType</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html">SliderDateIntervalType</a></td>
+		<td>Specifies how date intervals are grouped for ticks and labels, such as <code>Auto</code>, <code>Days</code>, <code>Months</code>, or <code>Years</code>.</td>
 	</tr>
-	<tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration">StepDuration</a><br/>
-		</td>
-		<td>
-			SliderStepDuration
-		</td>
-		<td>Defines the step used for discrete date selection.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_Orientation">Orientation</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderOrientation.html">SliderOrientation</a></td>
+		<td>Defines whether the slider is displayed horizontally or vertically.</td>
 	</tr>
-	<tr valign="top">	
-		<td>
-		<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation">Orientation</a> <br/>
-		</td>
-		<td>
-			SliderOrientation
-		</td>
-		<td>Sets the slider orientation.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_StepDuration">StepDuration</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderStepDuration.html">SliderStepDuration</a></td>
+		<td>Defines the discrete step size used when moving the thumbs across date values.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_ThumbIcon">ThumbIcon</a> <br/>
-		</td>
-		<td>
-			ImageSource
-		</td>
-		<td>Sets the thumb icon.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_RangeStart">RangeStart</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html">DateTime</a></td>
+		<td>Gets or sets the start value of the selected date range.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Value">Value</a><br/>
-		</td>
-		<td>
-			DateTime
-		</td>
-		<td>Stores the current date value.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_RangeEnd">RangeEnd</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html">DateTime</a></td>
+		<td>Gets or sets the end value of the selected date range.</td>
 	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay">DeferredUpdateDelay</a> <br/>
-		</td>
-		<td>
-			double
-		</td>
-		<td>Sets the deferred update delay in milliseconds.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior">DragBehavior</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html">SliderDragBehavior</a></td>
+		<td>Controls how the thumbs move during dragging, such as dragging the thumbs independently or together.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle">DividerStyle</a> <br/>
-		</td>
-		<td>
-			SliderDividerStyle
-		</td>
-		<td>Customizes the divider appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection">EnableIntervalSelection</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether the selected range snaps to interval boundaries.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand">DragCompletedCommand</a> <br/>
-		</td>
-		<td>
-			ICommand
-		</td>
-		<td>Runs when thumb movement completes.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EndThumbIcon">EndThumbIcon</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html">ImageSource</a></td>
+		<td>Sets the icon displayed on the end thumb.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter">DragCompletedCommandParameter</a> <br/>
-		</td>
-		<td>
-			object
-		</td>
-		<td>Supplies the drag completed command parameter.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_StartThumbIcon">StartThumbIcon</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html">ImageSource</a></td>
+		<td>Sets the icon displayed on the start thumb.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand">DragStartedCommand</a> <br/>
-		</td>
-		<td>
-			ICommand
-		</td>
-		<td>Runs when thumb movement starts.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay">DeferredUpdateDelay</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html">double</a></td>
+		<td>Specifies the delay, in milliseconds, before deferred updates are applied.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter">DragStartedCommandParameter</a> <br/>
-		</td>
-		<td>
-			object
-		</td>
-		<td>Supplies the drag started command parameter.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle">DividerStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html">SliderDividerStyle</a></td>
+		<td>Customizes the appearance of the dividers between range segments.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement">EdgeLabelsPlacement</a> <br/>
-		</td>
-		<td>
-			SliderEdgeLabelsPlacement
-		</td>
-		<td>Controls the placement of edge labels.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand">DragCompletedCommand</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Windows.Input.ICommand.html">ICommand</a></td>
+		<td>Executes when thumb dragging ends.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate">EnableDeferredUpdate</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Enables deferred selection updates.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter">DragCompletedCommandParameter</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Object.html">object</a></td>
+		<td>Gets or sets the parameter passed to the completed-drag command.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect">EnableLiquidGlassEffect</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Enables the liquid glass effect.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand">DragStartedCommand</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Windows.Input.ICommand.html">ICommand</a></td>
+		<td>Executes when thumb dragging starts.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval">Interval</a> <br/>
-		</td>
-		<td>
-			double
-		</td>
-		<td>Sets the interval between track elements.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter">DragStartedCommandParameter</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Object.html">object</a></td>
+		<td>Gets or sets the parameter passed to the started-drag command.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed">IsInversed</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Reverses the slider direction.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement">EdgeLabelsPlacement</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html">SliderEdgeLabelsPlacement</a></td>
+		<td>Defines where edge labels appear in relation to the slider track.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement">LabelsPlacement</a> <br/>
-		</td>
-		<td>
-			SliderLabelsPlacement
-		</td>
-		<td>Controls where labels appear relative to ticks.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate">EnableDeferredUpdate</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether range updates are deferred until the interaction completes.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle">LabelStyle</a> <br/>
-		</td>
-		<td>
-			SliderLabelStyle
-		</td>
-		<td>Customizes the label appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect">EnableLiquidGlassEffect</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether the liquid glass visual effect is enabled.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle">MajorTickStyle</a> <br/>
-		</td>
-		<td>
-			SliderTickStyle
-		</td>
-		<td>Customizes the major tick appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval">Interval</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html">double</a></td>
+		<td>Specifies the interval between tick marks and labels.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum">Maximum</a> <br/>
-		</td>
-		<td>
-			DateTime
-		</td>
-		<td>Sets the upper limit of the track.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed">IsInversed</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether the slider direction is reversed.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum">Minimum</a> <br/>
-		</td>
-		<td>
-			DateTime
-		</td>
-		<td>Sets the lower limit of the track.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement">LabelsPlacement</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html">SliderLabelsPlacement</a></td>
+		<td>Defines where labels are placed relative to the slider track.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval">MinorTicksPerInterval</a> <br/>
-		</td>
-		<td>
-			int
-		</td>
-		<td>Sets the number of minor ticks between major ticks.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle">LabelStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html">SliderLabelStyle</a></td>
+		<td>Customizes the appearance of the value labels.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle">MinorTickStyle</a> <br/>
-		</td>
-		<td>
-			SliderTickStyle
-		</td>
-		<td>Customizes the minor tick appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle">MajorTickStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html">SliderTickStyle</a></td>
+		<td>Customizes the appearance of the major ticks.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers">ShowDividers</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Shows or hides dividers.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum">Maximum</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html">DateTime</a></td>
+		<td>Sets the upper date limit of the slider.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels">ShowLabels</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Shows or hides labels.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum">Minimum</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html">DateTime</a></td>
+		<td>Sets the lower date limit of the slider.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks">ShowTicks</a> <br/>
-		</td>
-		<td>
-			bool
-		</td>
-		<td>Shows or hides ticks.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval">MinorTicksPerInterval</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Int32.html">int</a></td>
+		<td>Specifies the number of minor ticks between each pair of major ticks.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbOverlayStyle">ThumbOverlayStyle</a> <br/>
-		</td>
-		<td>
-			SliderThumbOverlayStyle
-		</td>
-		<td>Customizes the thumb overlay appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle">MinorTickStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html">SliderTickStyle</a></td>
+		<td>Customizes the appearance of the minor ticks.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyle">ThumbStyle</a> <br/>
-		</td>
-		<td>
-			SliderThumbStyle
-		</td>
-		<td>Customizes the thumb appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers">ShowDividers</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether divider markers are shown.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip">Tooltip</a> <br/>
-		</td>
-		<td>
-			SliderTooltip
-		</td>
-		<td>Customizes the tooltip appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels">ShowLabels</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether value labels are shown.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent">TrackExtent</a> <br/>
-		</td>
-		<td>
-			double
-		</td>
-		<td>Sets the track edge extension in pixels.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks">ShowTicks</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html">bool</a></td>
+		<td>Determines whether tick marks are shown.</td>
 	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle">TrackStyle</a> <br/>
-		</td>
-		<td>
-			SliderTrackStyle
-		</td>
-		<td>Customizes the track appearance.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbOverlayStyle">ThumbOverlayStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html">SliderThumbOverlayStyle</a></td>
+		<td>Customizes the appearance of the thumb overlay.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyle">ThumbStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html">SliderThumbStyle</a></td>
+		<td>Customizes the appearance of the thumb.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip">Tooltip</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html">SliderTooltip</a></td>
+		<td>Customizes the tooltip that appears while dragging.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent">TrackExtent</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html">double</a></td>
+		<td>Specifies the additional track length shown beyond the slider bounds.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle">TrackStyle</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html">SliderTrackStyle</a></td>
+		<td>Customizes the appearance of the slider track.</td>
 	</tr>
 </table>
 
@@ -317,59 +203,18 @@ documentation: ug
 
 <table>
 	<tr>
-		<th>
-			Name<br/>
-		</th>
-		<th>
-			Type<br/>
-		</th>
-		<th>
-			Description<br/>
-		</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
 	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanged">ValueChanged</a>  <br/>
-		</td>
-		<td>
-			EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;
-		</td>
-		<td>Fires when value selection ends.</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanged">ValueChanged</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html">EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;</a></td>
+		<td>Occurs after the user finishes selecting a new range.</td>
 	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanging">ValueChanging</a>  <br/>
-		</td>
-		<td>
-			EventHandler&lt;DateTimeRangeSliderValueChangingEventArgs&gt;
-		</td>
-		<td>Fires while the thumb is dragged to a new value.</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated">LabelCreated</a>  <br/>
-		</td>
-		<td>
-			EventHandler&lt;SliderLabelCreatedEventArgs&gt;
-		</td>
-		<td>Fires when a slider label is created for formatting or text changes.</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd">ValueChangeEnd</a>  <br/>
-		</td>
-		<td>
-			EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;
-		</td>
-		<td>Fires when range selection ends.</td>
-	</tr>
-	<tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart">ValueChangeStart</a>  <br/>
-		<td>Fires when range selection starts.</td>
-		</td>
-		<td>
-		 Represents the ValueChangeStart event, which occurs when the user is selecting a new value by tap/mouse down in the thumb.
-		</td>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanging">ValueChanging</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html">EventHandler&lt;DateTimeRangeSliderValueChangingEventArgs&gt;</a></td>
+		<td>Occurs while the user is changing the selected range.</td>
 	</tr>
 </table>
