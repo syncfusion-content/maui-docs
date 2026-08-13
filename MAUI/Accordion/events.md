@@ -16,7 +16,7 @@ There are four built-in events in the SfAccordion control namely:
 * [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing)
 * [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsed)
 
-### Expanding Event
+## Expanding Event
 
 The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanding) event will be triggered when the accordion item is being expanded. It can cancel expansion with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
@@ -47,7 +47,7 @@ private void accordion_Expanding(object sender, Syncfusion.Maui.Accordion.Expand
 {% endhighlight %}
 {% endtabs %}
 
-### Expanded Event
+## Expanded Event
 
 The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanded) event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
 
@@ -73,7 +73,7 @@ private void accordion_Expanded(object sender, Syncfusion.Maui.Accordion.Expande
 {% endhighlight %}
 {% endtabs %}
 
-### Collapsing Event
+## Collapsing Event
 
 The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsing) event will be triggered when the accordion item is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
@@ -104,7 +104,7 @@ private void accordion_Collapsing(object sender, Syncfusion.Maui.Accordion.Expan
 {% endhighlight %}
 {% endtabs %}
 
-### Collapsed Event 
+## Collapsed Event 
 
 The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsed) event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
 
