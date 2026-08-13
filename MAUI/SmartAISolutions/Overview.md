@@ -100,24 +100,24 @@ line-height: 1;
 <div><p class="category-topics">AutoComplete</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching" aria-label="AutoComplete Smart Searching">
 <span class="sf-home-icon sf-icon-auto-complete"></span>Smart Searching</a>
 </div>
 
 <div><p class="category-topics">ComboBox</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Searching"><span class="sf-home-icon sf-icon-combobox"></span>Smart Searching</a>
+<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Searching" aria-label="ComboBox Smart Searching"><span class="sf-home-icon sf-icon-combobox"></span>Smart Searching</a>
 </div>
 
 <div><p class="category-topics">Cartesian Charts</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/cartesian-charts/AI-Powered-Data-Processing"><span class="sf-home-icon sf-icon-Cartesian-chart"></span>Data Cleaning and Preprocessing</a>
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Data-Processing" aria-label="Cartesian Charts Data Cleaning and Preprocessing"><span class="sf-home-icon sf-icon-Cartesian-chart"></span>Data Cleaning and Preprocessing</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart"><span class="sf-home-icon sf-icon-Cartesian-chart"></span>Stock Forecasting</a>
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" aria-label="Cartesian Charts Stock Forecasting"><span class="sf-home-icon sf-icon-Cartesian-chart"></span>Stock Forecasting</a>
 </div>
 
 </td>
@@ -128,27 +128,27 @@ line-height: 1;
 <div><p class="category-topics">DataForm</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/dataform/AI-Powered-Smart-Paste-DataForm"><span class="sf-home-icon sf-icon-data-form"></span>Smart Paste</a>
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-Paste-DataForm" aria-label="DataForm Smart Paste"><span class="sf-home-icon sf-icon-data-form"></span>Smart Paste</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm"><span class="sf-home-icon sf-icon-data-form"></span>Smart Data Entry</a>
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm" aria-label="DataForm Smart Data Entry"><span class="sf-home-icon sf-icon-data-form"></span>Smart Data Entry</a>
 </div>
 
 <div><p class="category-topics">DataGrid</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/DataGrid/AI-driven-anomaly-detection"><span class="sf-home-icon sf-icon-data-grid"></span>Anomaly Detection</a>
+<a target="_self" href="/maui/DataGrid/AI-driven-anomaly-detection" aria-label="DataGrid Anomaly Detection"><span class="sf-home-icon sf-icon-data-grid"></span>Anomaly Detection</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/DataGrid/AI-driven-predictive-data-entry"><span class="sf-home-icon sf-icon-data-grid"></span>Predictive Data Entry</a>
+<a target="_self" href="/maui/DataGrid/AI-driven-predictive-data-entry" aria-label="DataGrid Predictive Data Entry"><span class="sf-home-icon sf-icon-data-grid"></span>Predictive Data Entry</a>
 </div>
 
 <div><p class="category-topics">Maps</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Maps/AI-driven-smart-location-search"><span class="sf-home-icon sf-icon-maps"></span>Smart Location Search</a>
+<a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-maps"></span>Smart Location Search</a>
 </div>
 
 </td>
