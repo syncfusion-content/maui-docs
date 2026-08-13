@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI-Driven Task Prioritization Engine in .NET MAUI Kanban Board | Syncfusion®
+title: AI Task Prioritization Engine in .NET MAUI Kanban Board | Syncfusion®
 description: Learn how to implement an AI-Driven Task Prioritization Engine using the Syncfusion® .NET MAUI Kanban Board (SfKanban) control.
 platform: maui
 control: SfKanban
@@ -669,7 +669,7 @@ When the user clicks the AI action button:
 
 This provides an intelligent task management experience that helps users focus on urgent and high-impact work items.
 
-![.NET MAUI Kanban Board.](Images/smart-ai-solution/Kanban%20Board.gif)
+![.NET MAUI Kanban Board.](Images/smart-ai-solution/kanbanboard.gif)
 
 You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/AI-Task-Prioritization-Engine-with-MAUI-Kanban-Board)
 
