@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Range Slider
 
-This section explains the steps required to add the [RangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion<sup>®</sup> Range Slider.
+This section explains the steps required to add the [Range Slider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion<sup>®</sup> Range Slider.
 
 To quickly get started with the .NET MAUI Range Slider, watch this video.
 
@@ -122,9 +122,9 @@ using Syncfusion.Maui.Sliders;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the RangeSlider component
+## Step 5: Add the Range Slider component
 
-Configure the `RangeSlider` component that allows you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
+Configure the `Range Slider` component that allows you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 {% highlight xaml %}
@@ -156,7 +156,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 {% endtabs %}
 
-![RangeSlider ticks](images/getting-started/ticks.png)
+![Range Slider ticks](images/getting-started/ticks.png)
 
 You can download the Range Slider Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-range-slider).
 
