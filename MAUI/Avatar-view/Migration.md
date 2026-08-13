@@ -9,14 +9,14 @@ documentation: ug
 
 # Migration from Xamarin Avatar View to .NET MAUI Avatar View 
 
-To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) to .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html), most APIs from the Xamarin version have been retained in the MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html). However, to ensure consistency in API naming within the MAUI environment, some APIs have been renamed. The changes in MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) are detailed below.
+To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) to .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html), most APIs from the Xamarin version have been retained in the MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html). However, to ensure consistency in API naming within the MAUI environment, some APIs have been renamed. The changes in .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) are detailed below.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfAvatarView</th>
-<th>.NET MAUI SfAvatarView</th></tr>
+<th>Xamarin AvatarView</th>
+<th>.NET MAUI Avatar View</th></tr>
 <tr>
 <td>Syncfusion.XForms.AvatarView</td>
 <td>Syncfusion.Maui.Core</td></tr>
@@ -26,8 +26,8 @@ To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr
 
 <table> 
 <tr>
-<th>Xamarin SfAvatarView</th>
-<th>.NET MAUI SfAvatarView</th>
+<th>Xamarin AvatarView</th>
+<th>.NET MAUI Avatar View</th>
 <th>Description</th></tr>
 <tr>
 <td>BorderColor</td>
