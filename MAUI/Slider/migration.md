@@ -18,7 +18,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table>
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <tr>
 <td>Syncfusion.SfRangeSlider.XForms</td>
@@ -31,7 +31,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -56,7 +56,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -81,7 +81,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -99,7 +99,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -152,7 +152,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -173,7 +173,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
@@ -186,7 +186,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table>
 <tr>
-<th>Xamarin RangeSlider</th>
+<th>Xamarin Range Slider</th>
 <th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
