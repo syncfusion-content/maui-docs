@@ -90,8 +90,8 @@ this.Content = stepProgressBar;
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[SfStepProgressBar](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfStepProgressBar.html)'| markdownify }}</td>
@@ -128,8 +128,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -188,8 +188,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -263,8 +263,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -308,8 +308,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -348,8 +348,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfStepProgressBar</th>
-<th>.NET MAUI SfStepProgressBar</th>
+<th>Xamarin Step ProgressBar</th>
+<th>.NET MAUI Step ProgressBar</th>
 <th>Description</th>
 </tr>
 <tr>

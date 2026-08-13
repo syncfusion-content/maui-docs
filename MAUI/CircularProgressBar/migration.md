@@ -86,8 +86,8 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin SfCircularProgressBar</th>
-<th>.NET MAUI SfCircularProgressBar</th>
+<th>Xamarin Circular ProgressBar</th>
+<th>.NET MAUI Circular ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>

@@ -69,8 +69,8 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin SfLinearProgressBar</th>
-<th>.NET MAUI SfLinearProgressBar</th>
+<th>Xamarin Linear ProgressBar</th>
+<th>.NET MAUI Linear ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>
