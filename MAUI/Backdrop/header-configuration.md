@@ -27,7 +27,7 @@ public App()
 
 {% endhighlight %}
 
-N> The page header for the backdrop will appear only when adding backdrop as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0).
+N> The page header for the Backdrop will appear only when adding Backdrop as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0).
  
 ## Icon customization
 
@@ -35,7 +35,7 @@ The default icons in the navigation header can be customized using the following
 
 ### Default icons in NavigationPage
 
-When the backdrop page contained within the [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0), the hamburger icon and close icon (X mark ) will be used by default.
+When the Backdrop page contained within the [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0), the hamburger icon and close icon (X mark ) will be used by default.
 
 ![.NET MAUI Backdrop in navigation page](images/header-configuration/default-navigationpage-icons.png)
 
