@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter Row in .NET MAUI DataGrid | Syncfusion
-description: Learn how to use FilterRow in Syncfusion® .NET MAUI DataGrid to filter data directly within the DataGrid and quickly find relevant records.
+title: Filter Row in .NET MAUI Data Grid | Syncfusion
+description: Learn how to use FilterRow in Syncfusion® .NET MAUI Data Grid to filter data directly within the DataGrid and quickly find relevant records.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui filterrow, maui filterrow
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui filterrow, maui filterrow
 ---
 
-# Filter Row in .NET MAUI DataGrid
+# Filter Row in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterRowPosition) property. Available positions include `FixedTop`, `FixedBottom`, and `Scrollable`.
 
@@ -30,7 +30,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-basic.png" width="404" />   
+<img alt="MAUI Data Grid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-basic.png" width="404" />   
 
 ## Getting the FilterRow index
 
@@ -84,7 +84,7 @@ dataGrid.Columns.Add(countryColumn);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid Filter Row Cell with MultiSelect ComboBox" src="Images\filterrow\maui-datagrid-filterrow-multiselectcombobox.png" width="404" />   
+<img alt="MAUI Data Grid Filter Row Cell with MultiSelect ComboBox" src="Images\filterrow\maui-datagrid-filterrow-multiselectcombobox.png" width="404" />   
 
 Below are the built-in FilterRow editor types supported in SfDataGrid.
 
@@ -157,7 +157,7 @@ dataGrid.Columns.Add(customerIdColumn);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-style-filterrowoptionsvisibility.png" width="404" />   
+<img alt="MAUI Data Grid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-style-filterrowoptionsvisibility.png" width="404" />   
 
 Below are the filter conditions supported by different filter row editors in SfDataGrid.
 
@@ -265,7 +265,7 @@ dataGrid.Columns.Add(customerColumn);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Filter Row without Null option in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-allowblankfilters.png" width="404" />   
+<img alt="Filter Row without Null option in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-allowblankfilters.png" width="404" />   
 
 {% tabs %}
 {% highlight XAML %}
@@ -287,7 +287,7 @@ dataGrid.Columns.Add(countryColumn);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Filter Row with Null option in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-multiselectblankfilters.png" width="404" />   
+<img alt="Filter Row with Null option in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-multiselectblankfilters.png" width="404" />   
 
 ## Instant filtering
 Filters are typically applied to columns upon cell navigation or pressing the Enter key. However, by setting [DataGridColumn.ImmediateUpdateColumnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ImmediateUpdateColumnFilter) to `true`, you can enable instant filtering as you type within the editor.
@@ -364,7 +364,7 @@ Customize the appearance of the filter row by defining a style with TargetType [
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing Filter Row Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-style.png" width="404" />  
+<img alt="Customizing Filter Row Style in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-style.png" width="404" />  
 
 ### Styling filter row cells
 
@@ -385,7 +385,7 @@ Customize individual filter row cell appearance through the `FilterRowCellStyle`
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing Filter Row Cell Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-cellstyle.png" width="404" />  
+<img alt="Customizing Filter Row Cell Style in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-cellstyle.png" width="404" />  
 
 ## Customizing filter row editors
 
@@ -602,7 +602,7 @@ public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBox
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing Filter Row in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-customnumericrenderer.png" width="404" />  
+<img alt="Customizing Filter Row in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-customnumericrenderer.png" width="404" />  
 
 ## Customizing DataGridFilterRowMultiSelectRenderer
 
@@ -642,4 +642,4 @@ public class CustomDataGridMultiSelectComboBoxRenderer : DataGridFilterRowMultiS
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing Filter Row in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-custommultiselect.png" width="404" />  
+<img alt="Customizing Filter Row in MAUI Data Grid" src="Images\filterrow\maui-datagrid-filterrow-custommultiselect.png" width="404" />  

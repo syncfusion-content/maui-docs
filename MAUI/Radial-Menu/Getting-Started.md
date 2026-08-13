@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Radial Menu
 
-This section guides you through setting up and configuring a [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) in your .NET MAUI application. Follow the steps below to add a basic [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) to your project.
+This section guides you through setting up and configuring a [Radial Menu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) in your .NET MAUI application. Follow the steps below to add a basic [Radial Menu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) to your project.
 
 To quickly get started with the .NET MAUI Radial Menu, watch this video.
 

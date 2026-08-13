@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Search in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to search data in Syncfusion® .NET MAUI DataGrid including search customization, highlighting, and efficient record discovery.
+title: Search in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to search data in Syncfusion® .NET MAUI Data Grid including search customization, highlighting, and efficient record discovery.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
 ---
 
-# Search in .NET MAUI DataGrid
+# Search in .NET MAUI Data Grid
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to search the data displayed within the datagrid. You can search the data using the built-in search UI or programmatically.
 
 ## UI Searching

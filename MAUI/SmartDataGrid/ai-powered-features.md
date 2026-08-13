@@ -1,14 +1,14 @@
 ---
 layout: post
-title: AI-Powered Features in .NET MAUI SmartDataGrid control | Syncfusion®
-description: Learn how to use AI-powered natural language commands in Syncfusion® .NET MAUI SmartDataGrid to interact, analyze, and manipulate data using everyday language.
+title: AI-Powered Features in .NET MAUI Smart Data Grid control | Syncfusion®
+description: Learn to use AI-powered natural language commands in in Syncfusion® .NET MAUI Smart Data Grid to analyze, interact with, and manage data effortlessly.
 platform: MAUI
 control: SfSmartDataGrid
 documentation: UG
 keywords : maui datagrid, ai assist, natural language commands, sorting, grouping, filtering, highlighting
 ---
 
-# AI-Powered features in .NET MAUI SmartDataGrid
+# AI-Powered features in .NET MAUI Smart Data Grid
 
 The [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) provides AI-powered capabilities that enable grid operations through natural language prompts. Instead of manually configuring sort criteria, filter conditions, or grouping levels through UI controls, you can type natural language commands to perform these actions instantly. Actions such as sorting, grouping, filtering, highlighting, and clearing can be applied using simple text commands. Multi-column operations are supported in a single prompt for efficient interaction with the grid.
 

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Columns in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about columns in Syncfusion® .NET MAUI DataGrid, including column configuration, customization options, supported types, and key features.
+title: Columns in .NET MAUI Data Grid | Syncfusion®
+description: Learn all about columns in Syncfusion® .NET MAUI Data Grid, including column configuration, customization options, supported types, and key features.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column, maui column
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column, maui column
 ---
 
-# Columns in .NET MAUI DataGrid
+# Columns in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows a user to create and add columns in the following two ways:
 
 * Automatically generating columns
 * Manually defining columns
 
-To get started quickly with column manipulation in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), check this video tutorial:
+To get started quickly with column manipulation in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), check this video tutorial:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/QrMUWMnnLDU'></iframe>
 
@@ -262,7 +262,7 @@ public class OrderInfo
 
 The OrderID and Customer column rearranged based on specified order.
 
-<img alt="Changing Columns Order in Maui DataGrid" src="Images\columns\maui-datagrid-order.png" width="404"/>
+<img alt="Changing Columns Order in MAUI Data Grid" src="Images\columns\maui-datagrid-order.png" width="404"/>
 
 #### Make Columns Read-Only
 
@@ -306,7 +306,7 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Maui DataGrid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
+<img alt="MAUI Data Grid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
 
 #### Group Columns Under Stacked Headers
 
@@ -338,7 +338,7 @@ public double Qty
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Maui DataGrid group columns with stacked header" src="Images\columns\maui-datagrid-groupName.png" width="404"/>
+<img alt="MAUI Data Grid group columns with stacked header" src="Images\columns\maui-datagrid-groupName.png" width="404"/>
 
 ## Manually generate columns
 
@@ -476,6 +476,6 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
+<img alt="MAUI Data Grid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
 
-N> Looking for the full .NET MAUI DataGrid component overview, features, pricing, and documentation? Visit the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.
+N> Looking for the full .NET MAUI Data Grid component overview, features, pricing, and documentation? Visit the [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) page.

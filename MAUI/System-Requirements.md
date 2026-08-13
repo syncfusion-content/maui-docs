@@ -1,6 +1,6 @@
-﻿---
+---
 layout: post
-title: System Requirements for Syncfusion® .NET MAUI | Syncfusion
+title: System Requirements for .NET MAUI | Syncfusion®
 description: Describes system requirements for Syncfusion® .NET MAUI Components, including supported platforms, .NET versions, and development environments.
 platform: MAUI
 control: Installation and Deployment
@@ -30,13 +30,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     display: flex;
     flex-direction: column;
     gap: 8px;
-    transition: all 0.25s ease;
     color: inherit;
-  }
-  .form-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border-color: #D5D5D5;
   }
   .form-card .label {
     font-size: 12px;
@@ -74,11 +68,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border-radius: 12px;
     border: 1px solid #E6E6E6;
     background: #ffffff;
-    transition: all 0.2s ease;
-  }
-  .system-row:hover {
-    background: #F7F9FC;
-    border-color: #D5D5D5;
   }
   .system-row .system-body { flex: 1; }
   .system-row .system-name {
@@ -158,11 +147,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border-radius: 12px;
     background: #ffffff;
     border: 1px solid #E6E6E6;
-    transition: all 0.2s ease;
-  }
-  .development-row:hover {
-    border-color: #C5C5C5;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   }
   .development-row .development-logo {
     flex: 0 0 48px;
@@ -221,11 +205,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     color: #ffffff;
     overflow: hidden;
     border: 1px solid transparent;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .net-tile:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
   }
   .net-tile.net10 { background: linear-gradient(135deg, #512BD4 0%, #2B0A8C 100%); }
   .net-tile.net9  { background: linear-gradient(135deg, #0078D4 0%, #00509E 100%); }
@@ -311,12 +290,11 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
   }
   .platform-table .platform-row {
     display: flex;
+    align-items: flex-start;
     border-bottom: 1px solid #F0F0F0;
     color: #1F1F1F;
-    transition: background 0.2s ease;
   }
   .platform-table .platform-row:last-child { border-bottom: none; }
-  .platform-table .platform-row:hover { background: #FAFCFF; }
   .platform-table .platform-row .row-cell {
     padding: 14px 16px;
     vertical-align: top;
@@ -325,31 +303,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     font-weight: 600;
   }
 </style>
-
-## Requirements at a Glance
-
-<div class="req-grid">
-  <div class="form-card">
-    <p class="label">Operating Systems</p>
-    <p class="value">Windows 11 (21H2+), Windows 10 (1909+), Windows Server 2016/2019/2022</p>
-  </div>
-  <div class="form-card">
-    <p class="label">Hardware</p>
-    <p class="value">x86 or x64 processor, 4 GB RAM (minimum), 16 GB (recommended), up to 210 GB free disk space</p>
-  </div>
-  <div class="form-card">
-    <p class="label">Development Environment</p>
-    <p class="value">Visual Studio 2026 18.0.0, Visual Studio 2022 17.8.0, Visual Studio Code</p>
-  </div>
-  <div class="form-card">
-    <p class="label">.NET Versions</p>
-    <p class="value">.NET 9.0, .NET 10.0</p>
-  </div>
-  <div class="form-card">
-    <p class="label">Supported Platforms</p>
-    <p class="value">Android, iOS, macOS, Windows</p>
-  </div>
-</div>
 
 ## Operating Systems
 
@@ -418,20 +371,29 @@ Our .NET MAUI components are compatible with the following development environme
   <div class="development-row vs2026">
     <div class="development-logo">VS</div>
     <p class="development-name">Visual Studio 2026</p>
-    <span class="development-version"><span class="dot"></span>Version 18.0.0</span>
+    <span class="development-version"><span class="dot"></span>Version 18.0.0 or later</span>
   </div>
   <div class="development-row vs2022">
     <div class="development-logo">VS</div>
     <p class="development-name">Visual Studio 2022</p>
-    <span class="development-version"><span class="dot"></span>Version 17.8.0</span>
+    <span class="development-version"><span class="dot"></span>Version 17.8.0 or later</span>
   </div>
   <div class="development-row code">
     <div class="development-logo">VS</div>
     <p class="development-name">Visual Studio Code</p>
-    <span class="development-version"><span class="dot"></span>Supported</span>
+    <span class="development-version"><span class="dot"></span>Supports all versions</span>
   </div>
 </div>
 
+
+<style>
+  /* Padding inside note-style blockquotes (Reference / Additional Information) */
+  blockquote.note,
+  blockquote:has(> p > strong:first-child) {
+    padding: 8px 16px !important;
+    border-left-width: 4px !important;
+  }
+</style>
 
 > **Reference**
 >
@@ -443,12 +405,12 @@ The following .NET versions are supported.
 
 <div class="net-grid">
   <div class="net-tile net10">
-    <p class="net-label">Latest</p>
+    <p class="net-label">Long Term Support</p>
     <p class="net-version">.NET 10.0</p>
     <span class="net-status"><span class="dot"></span>Supported</span>
   </div>
   <div class="net-tile net9">
-    <p class="net-label">Previous</p>
+    <p class="net-label">Standard Term Support</p>
     <p class="net-version">.NET 9.0</p>
     <span class="net-status"><span class="dot"></span>Supported</span>
   </div>

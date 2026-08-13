@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Navigation Drawer
 
-This section guides you through setting up and configuring a [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in your .NET MAUI application. Follow the steps below to add a basic Navigation Drawer to your project.
+This section guides you through setting up and configuring a [Navigation Drawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in your .NET MAUI application. Follow the steps below to add a basic Navigation Drawer to your project.
 
 To quickly get started with the .NET MAUI Navigation Drawer, watch this video.
 
