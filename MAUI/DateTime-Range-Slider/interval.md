@@ -55,7 +55,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider date interval](images/interval/date-interval.png)
+![Range Slider date interval](images/interval/date-interval.png)
 
 ## Auto interval
 
