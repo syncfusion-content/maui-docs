@@ -68,12 +68,12 @@ documentation: ug
         <td>Defines the maximum progress value.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Minimum">Minimum</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Minimum" aria-label="Minimum progress value in Circular ProgressBar">Minimum</a></td>
         <td>double</td>
         <td>Defines the minimum progress value.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Progress" aria-label="Minimum progress value in Circular ProgressBar">Progress</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Progress" aria-label="Progress value in Circular ProgressBar">Progress</a></td>
         <td>double</td>
         <td>Defines the current progress value displayed by the control.</td>
     </tr>
