@@ -23,8 +23,8 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com
 
 ## Key features
 
-- **Positioning** allows placing the badge around the target element to suit different UI layouts.  
-- **Predefined styles** provide built-in color options to quickly customize the badge appearance.  
+- **Positioning** allows placing the Badge around the target element to suit different UI layouts.  
+- **Predefined styles** provide built-in color options to quickly customize the Badge appearance.  
 - **Animation support** enables adding visual effects to highlight updates and draw user attention.  
 
 ## Globalization
@@ -63,7 +63,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/badge-view/overview">Badge View</a></td>
+<td><a href="/maui/badge-view/overview" aria-label="MAUI Badge View control overview">Badge View</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -74,15 +74,15 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with badge indicators.  
+- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with Badge indicators.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
 - [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badges.  
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/badge-view/getting-started) shows how to begin using the Badge View step by step.  
-- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify badge appearance and styles.  
-- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with badge animation effects.
+- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify Badge appearance and styles.  
+- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with Badge animation effects.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
