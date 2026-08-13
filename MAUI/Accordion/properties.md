@@ -35,17 +35,17 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AutoScrollPosition" aria-label="View AutoScrollPosition property in API reference">AutoScrollPosition</a></td>
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionAutoScrollPosition.html" aria-label="View AccordionAutoScrollPosition type in API reference">AccordionAutoScrollPosition</a></td>
-        <td>Determines where the item appears after it is brought into view. This helps keep the focused item in the preferred position.</td>
+        <td>Defines where the item appears after it is brought into view. This helps keep the focused item in the preferred position.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ExpandMode" aria-label="View ExpandMode property in API reference">ExpandMode</a></td>
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionExpandMode.html" aria-label="View AccordionExpandMode type in API reference">AccordionExpandMode</a></td>
-        <td>Determines whether one item or multiple items can stay open at the same time. This defines the accordion expansion behavior.</td>
+        <td>Defines whether one item or multiple items can stay open at the same time. This shapes the accordion expansion behavior.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_HeaderIconPosition" aria-label="View HeaderIconPosition property in API reference">HeaderIconPosition</a></td>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpanderIconPosition.html" aria-label="View ExpanderIconPosition type in API reference">ExpanderIconPosition</a></td>
-        <td>Determines where the header icon appears in each item. This helps match the icon with the layout.</td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ExpanderIconPosition.html" aria-label="View ExpanderIconPosition type in API reference">ExpanderIconPosition</a></td>
+        <td>Defines where the header icon appears in each item. This helps match the icon with the layout.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ItemSpacing" aria-label="View ItemSpacing property in API reference">ItemSpacing</a></td>
@@ -70,7 +70,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_BringIntoView_Syncfusion_Maui_Accordion_AccordionItem_" aria-label="View BringIntoView method in API reference">BringIntoView(AccordionItem)</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-        <td>Defines a way to scroll the specified item into view. This helps focus on a specific section.</td>
+        <td>Scrolls the specified item into view. This helps focus on a specific section.</td>
     </tr>
 </table>
 
