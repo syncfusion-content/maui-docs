@@ -118,7 +118,7 @@ You can choose how the selected items are displayed using the [MultiSelectionDis
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         SelectionMode="Multiple"
                         ItemsSource="{Binding SocialMedias}"
                         SelectedItems="{Binding SelectedItemsList}"
@@ -187,7 +187,7 @@ When [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         SelectionMode="Multiple"
                         MultiSelectionDisplayMode="Delimiter"
@@ -262,7 +262,7 @@ When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         SelectionMode="Multiple"
                         MaxDropDownHeight="250"
@@ -274,7 +274,7 @@ When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 {% endhighlight %}
 {% highlight C# %}
 
-SfAutocomplete autoComplete = new SfAutocomplete
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = new SocialMediaViewModel().SocialMedias,
     DisplayMemberPath = "Name",
@@ -328,7 +328,7 @@ When [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"

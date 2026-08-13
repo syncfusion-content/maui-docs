@@ -14,7 +14,7 @@ The Syncfusion<sup>®</sup> [.NET MAUI Busy Indicator](https://help.syncfusion.c
 
 ## Prerequisites
 
-Before using the [`SfBusyIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), ensure the following NuGet package is installed in your .NET MAUI project:	
 
 - `Syncfusion.Maui.Core`
 

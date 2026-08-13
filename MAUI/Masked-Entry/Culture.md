@@ -85,7 +85,7 @@ maskedEntry.Culture = new CultureInfo("fr-FR");
 
 Based on the France Culture, the '$' will be localized to '€'; '.' will be localized to ',' and ',' will be localized to ' '(single white space).
 
-![MAUI MaskedEntry culture](MaskedEntry_Images/maui_masked_entry_culture.gif)
+![MAUI Masked Entry culture](MaskedEntry_Images/maui_masked_entry_culture.gif)
 
 ## See Also
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in .NET MAUI Rotator
 
-The [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
+The [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control exposes events that you can handle to respond to user interaction and selection changes. This page covers:
 
 * **SelectedIndexChanged** - raised when the selected item changes.
 * **ItemTapped** - raised when an item is tapped.
@@ -116,7 +116,7 @@ private void Rotator_SelectedIndexChanged(object sender, SelectedIndexChangedEve
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator SelectedIndexChanged event](images/SelectedIndexChanged.png)
+![Rotator SelectedIndexChanged event](images/SelectedIndexChanged.png)
 
 ## ItemTapped Event
 
@@ -210,7 +210,7 @@ private void Rotator_ItemTapped(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![SfRotator ItemTapped event](images/ItemTapped.png)
+![Rotator ItemTapped event](images/ItemTapped.png)
 
 ## See Also
 

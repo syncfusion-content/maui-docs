@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [`.NET MAUI Rotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
+The [`DotPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_DotPlacement) property controls where the navigation dots are rendered for each item in the [.NET MAUI Rotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html). The property is of type `DotsPlacement` (enum) and the default value is `Default`.
 
 The following `DotsPlacement` values are available:
 
@@ -115,7 +115,7 @@ public class RotatorViewModel
 {% endtabs %}
 
 
-![SfRotator with DotPlacement set to None](images/DotsPlacement.png)
+![Rotator with DotPlacement set to None](images/DotsPlacement.png)
 
 ## See also
 

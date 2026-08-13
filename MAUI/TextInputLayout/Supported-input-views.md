@@ -35,7 +35,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Entry
 
-For single-line text input, host the .NET MAUI [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control inside `SfTextInputLayout`.
+For single-line text input, host the .NET MAUI [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control inside `Text Input Layout`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -69,7 +69,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with an Entry control for single-line text input](images/SupportedInputViews/Entry.png)
+![Text Input Layout with an Entry control for single-line text input](images/SupportedInputViews/Entry.png)
 
 ## Editor
 
@@ -107,7 +107,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with an Editor control for multi-line text input](images/SupportedInputViews/Editor.jpg)
+![Text Input Layout with an Editor control for multi-line text input](images/SupportedInputViews/Editor.jpg)
 
 ## SfAutocomplete
 
@@ -165,7 +165,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfAutocomplete in single-selection mode](images/SupportedInputViews/Autocomplete.jpg)
+![Text Input Layout with SfAutocomplete in single-selection mode](images/SupportedInputViews/Autocomplete.jpg)
 
 ### Multiple Selection
 
@@ -250,7 +250,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfAutocomplete in multiple-selection mode](images/SupportedInputViews/Autocomplete-Multi.jpg)
+![Text Input Layout with SfAutocomplete in multiple-selection mode](images/SupportedInputViews/Autocomplete-Multi.jpg)
 
 For more information, see the [Autocomplete Selection](https://help.syncfusion.com/maui/autocomplete/selection) documentation.
 
@@ -311,7 +311,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfComboBox in single-selection mode](images/SupportedInputViews/ComboBox.jpg)
+![Text Input Layout with SfComboBox in single-selection mode](images/SupportedInputViews/ComboBox.jpg)
 
 ### Multiple Selection
 
@@ -397,7 +397,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfComboBox in multiple-selection mode](images/SupportedInputViews/ComboBox-Multi.jpg)
+![Text Input Layout with SfComboBox in multiple-selection mode](images/SupportedInputViews/ComboBox-Multi.jpg)
 
 For more information, see the [ComboBox Selection](https://help.syncfusion.com/maui/combobox/selection) documentation.
 
@@ -442,7 +442,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfMaskedEntry configured for a 16-digit card number](images/SupportedInputViews/MaskedEntry.png)
+![Text Input Layout with SfMaskedEntry configured for a 16-digit card number](images/SupportedInputViews/MaskedEntry.png)
 
 ## SfNumericEntry
 
@@ -487,7 +487,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with SfNumericEntry showing the inline up/down buttons and clear button](images/SupportedInputViews/NumericEntry_TIL.png)
+![Text Input Layout with SfNumericEntry showing the inline up/down buttons and clear button](images/SupportedInputViews/NumericEntry_TIL.png)
 
 ## Picker
 
@@ -538,9 +538,9 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with a Picker control for selecting a fruit](images/SupportedInputViews/Picker.jpg)
+![Text Input Layout with a Picker control for selecting a fruit](images/SupportedInputViews/Picker.jpg)
 
-N> The Windows platform does not support the MAUI `Picker` as an input view of `SfTextInputLayout`. Use a Syncfusion input view (such as `SfComboBox` or `SfAutocomplete`) on Windows.
+N> The Windows platform does not support the MAUI `Picker` as an input view of `Text Input Layout`. Use a Syncfusion input view (such as `SfComboBox` or `SfAutocomplete`) on Windows.
 
 ## TimePicker
 
@@ -576,9 +576,9 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with a TimePicker for time selection](images/SupportedInputViews/TimePicker.jpg)
+![Text Input Layout with a TimePicker for time selection](images/SupportedInputViews/TimePicker.jpg)
 
-N> The Windows platform does not support the MAUI `TimePicker` as an input view of `SfTextInputLayout`. Use a Syncfusion input view on Windows.
+N> The Windows platform does not support the MAUI `TimePicker` as an input view of `Text Input Layout`. Use a Syncfusion input view on Windows.
 
 ## DatePicker
 
@@ -616,9 +616,9 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with a DatePicker for date selection](images/SupportedInputViews/DatePicker.jpg)
+![Text Input Layout with a DatePicker for date selection](images/SupportedInputViews/DatePicker.jpg)
 
-N> The Windows platform does not support the MAUI `DatePicker` as an input view of `SfTextInputLayout`. Use a Syncfusion input view on Windows.
+N> The Windows platform does not support the MAUI `DatePicker` as an input view of `Text Input Layout`. Use a Syncfusion input view on Windows.
 
 ## See Also
 

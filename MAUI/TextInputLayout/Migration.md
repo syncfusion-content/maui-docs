@@ -10,14 +10,14 @@ keywords: .net maui text input layout, syncfusion text input layout, text input 
 
 # Migrating from Xamarin to .NET MAUI Text Input Layout
 
-To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout, we kept most of the APIs from Xamarin SfTextInputLayout in MAUI SfTextInputLayout. However, to maintain the consistency of API naming in MAUI SfTextInputLayout, we renamed some of the APIs. The APIs changed in MAUI SfTextInputLayout from Xamarin SfTextInputLayout as detailed in the following:
+To migrate easier from Xamarin Text Input Layout to .NET MAUI Text Input Layout, we kept most of the APIs from Xamarin Text Input Layout in .NET MAUI Text Input Layout. However, to maintain the consistency of API naming in .NET MAUI Text Input Layout, we renamed some of the APIs. The APIs changed in .NET MAUI Text Input Layout from Xamarin Text Input Layout as detailed in the following:
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfTextInputLayout</th>
-<th>.NET MAUI SfTextInputLayout</th></tr>
+<th>Xamarin Text Input Layout</th>
+<th>.NET MAUI Text Input Layout</th></tr>
 <tr>
 <td>Syncfusion.SfTextInputLayout.XForms</td>
 <td>Syncfusion.Maui.Core</td></tr>
@@ -27,8 +27,8 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 
 <table> 
 <tr>
-<th>Xamarin SfTextInputLayout</th>
-<th>.NET MAUI SfTextInputLayout</th>
+<th>Xamarin Text Input Layout</th>
+<th>.NET MAUI Text Input Layout</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[FocusedStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_FocusedStrokeWidth)'| markdownify }}</td>
@@ -60,7 +60,7 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.LabelStyle.html#Syncfusion_XForms_TextInputLayout_LabelStyle_Color)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor)'| markdownify }}</td>
-<td>Gets or sets the text color of the SfTextInputLayout controls label.</td></tr>
+<td>Gets or sets the text color of the Text Input Layout controls label.</td></tr>
 </table>
 
 
