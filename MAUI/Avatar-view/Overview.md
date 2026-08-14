@@ -22,7 +22,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.co
 
 ## Key features
 
-- **Image and initials** displays user avatar views using profile images or fallback initials.
+- **Image and initials** displays user Avatar Views using profile images or fallback initials.
 - **View** customizes size, background color, border, and corner radius.  
 - **Group view support** combines up to three images or initials within a single view.
 - **Visual styles** apply different appearance styles.  
@@ -30,9 +30,9 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.co
 
 ## Related controls
 
-- [Badge View](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on avatar views.  
+- [Badge View](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on Avatar Views.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting user lists with Avatar View support.  
-- [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user avatar views in conversations.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user Avatar Views in conversations.  
 
 ## See Also
 

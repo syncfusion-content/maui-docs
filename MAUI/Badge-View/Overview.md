@@ -16,7 +16,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com
 
 ## Business use cases
 
-- Messaging applications that display unread message counts and notification badge views.  
+- Messaging applications that display unread message counts and notification Badge Views.  
 - E-commerce applications that highlight cart item counts and order updates.  
 - Dashboard applications that show alerts, warnings, or status indicators.  
 - Social and productivity apps that require quick visual notification indicators.  
@@ -76,7 +76,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with Badge View indicators.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
-- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badge views.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message Badge Views.  
 
 ## See Also
 

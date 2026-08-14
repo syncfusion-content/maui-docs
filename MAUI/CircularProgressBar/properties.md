@@ -18,122 +18,122 @@ documentation: ug
         <th>Description</th>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationDuration">AnimationDuration</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationDuration" aria-label="Animation duration of Circular Progress Bar">AnimationDuration</a></td>
         <td>double</td>
         <td>Defines the duration used for the progress animation.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing">AnimationEasing</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing" aria-label="Animation easing function of Circular Progress Bar">AnimationEasing</a></td>
         <td>Easing</td>
         <td>Defines the easing function applied to the progress animation.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content">Content</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content" aria-label="Content of Circular Progress Bar">Content</a></td>
         <td>View</td>
         <td>Defines the view displayed at the center of the circular progress bar.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_EndAngle">EndAngle</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_EndAngle" aria-label="Ending angle of Circular Progress Bar">EndAngle</a></td>
         <td>double</td>
         <td>Defines the ending angle of the circular progress arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops">GradientStops</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops" aria-label="Collection of gradient stops in Circular Progress Bar">GradientStops</a></td>
         <td>ProgressGradientStopCollection</td>
         <td>Defines the collection of gradient stops used for rendering the progress.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationDuration">IndeterminateAnimationDuration</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationDuration" aria-label="Indeterminate animation duration of Circular Progress Bar">IndeterminateAnimationDuration</a></td>
         <td>double</td>
         <td>Defines the duration of the indeterminate animation cycle.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing">IndeterminateAnimationEasing</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing" aria-label="Indeterminate animation easing function of Circular Progress Bar">IndeterminateAnimationEasing</a></td>
         <td>Easing</td>
         <td>Defines the easing function used for the indeterminate animation.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor">IndeterminateIndicatorWidthFactor</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor" aria-label="Indeterminate indicator width factor of Circular Progress Bar">IndeterminateIndicatorWidthFactor</a></td>
         <td>double</td>
         <td>Defines the width factor of the moving indicator in indeterminate mode.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate">IsIndeterminate</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate" aria-label="Indeterminate property in Circular Progress Bar">IsIndeterminate</a></td>
         <td>bool</td>
         <td>Defines whether the progress bar displays an indeterminate animation.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Maximum">Maximum</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Maximum" aria-label="Maximum progress value in Circular Progress Bar">Maximum</a></td>
         <td>double</td>
         <td>Defines the maximum progress value.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Minimum">Minimum</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Minimum" aria-label="Minimum progress value in Circular Progress Bar">Minimum</a></td>
         <td>double</td>
         <td>Defines the minimum progress value.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Progress">Progress</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Progress" aria-label="Progress value in Circular Progress Bar">Progress</a></td>
         <td>double</td>
         <td>Defines the current progress value displayed by the control.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressCornerStyle">ProgressCornerStyle</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressCornerStyle" aria-label="Progress corner style of Circular Progress Bar">ProgressCornerStyle</a></td>
         <td>CornerStyle</td>
         <td>Defines the corner style applied to the progress arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill">ProgressFill</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill" aria-label="Progress portion fill of Progress Bar">ProgressFill</a></td>
         <td>Brush</td>
         <td>Defines the brush used to fill the progress portion.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor">ProgressRadiusFactor</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor" aria-label="Progress radius factor of Progress Bar">ProgressRadiusFactor</a></td>
         <td>double</td>
         <td>Defines the radius factor used to position the progress arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness">ProgressThickness</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness" aria-label="Thickness of Circular Progress Bar">ProgressThickness</a></td>
         <td>double</td>
         <td>Defines the thickness of the progress arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount">SegmentCount</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount" aria-label="Segment count of Circular Progress Bar">SegmentCount</a></td>
         <td>int</td>
         <td>Defines the number of segments shown in the progress bar.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth">SegmentGapWidth</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth" aria-label="Segment gap width of Circular Progress Bar">SegmentGapWidth</a></td>
         <td>double</td>
         <td>Defines the gap width between adjacent progress segments.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_StartAngle">StartAngle</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_StartAngle" aria-label="Starting angle of Circular Progress Bar">StartAngle</a></td>
         <td>double</td>
         <td>Defines the starting angle of the circular progress arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit">ThicknessUnit</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit" aria-label="Thickness unit of Circular Progress Bar">ThicknessUnit</a></td>
         <td>ProgressBarThicknessUnit</td>
         <td>Defines the unit used to measure progress and track thickness.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackCornerStyle">TrackCornerStyle</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackCornerStyle" aria-label="Track corner style of Circular Progress Bar">TrackCornerStyle</a></td>
         <td>CornerStyle</td>
         <td>Defines the corner style applied to the track arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill">TrackFill</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill" aria-label="Track fill of Circular Progress Bar">TrackFill</a></td>
         <td>Brush</td>
         <td>Defines the brush used to fill the track portion.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackRadiusFactor">TrackRadiusFactor</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackRadiusFactor" aria-label="Track radius factor of Circular Progress Bar">TrackRadiusFactor</a></td>
         <td>double</td>
         <td>Defines the radius factor used to position the track arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness">TrackThickness</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness" aria-label="Track thickness of Circular Progress Bar">TrackThickness</a></td>
         <td>double</td>
         <td>Defines the thickness of the track arc.</td>
     </tr>
@@ -148,12 +148,12 @@ documentation: ug
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged">ProgressChanged</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged" aria-label="Progress changed event in Circular Progress Bar">ProgressChanged</a></td>
         <td>EventHandler&lt;ProgressChangedEventArgs&gt;</td>
         <td>Raised when the progress value changes.</td>
     </tr>
     <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted">ProgressCompleted</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted" aria-label="Progress completed event in Circular Progress Bar">ProgressCompleted</a></td>
         <td>EventHandler</td>
         <td>Raised when the progress value reaches the maximum value.</td>
     </tr>
@@ -168,7 +168,7 @@ documentation: ug
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_">SetProgress</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_" aria-label="Updating the progress value in ProgressBar">SetProgress</a></td>
         <td>void</td>
         <td>Updates the progress value with optional animation settings.</td>
     </tr>

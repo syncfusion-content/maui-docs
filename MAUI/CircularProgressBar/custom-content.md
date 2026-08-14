@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Custom Content in .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn about adding custom views and content in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
+title: Custom Content in .NET MAUI Circular Progress Bar | Syncfusion®
+description: Learn about adding custom views and content in Syncfusion® .NET MAUI Circular Progress Bar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Custom Content in .NET MAUI Circular ProgressBar
+# Custom Content in .NET MAUI Circular Progress Bar
 
-In the circular progress bar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
+In the Circular Progress Bar, add any view to the center using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
 
 For example, include an add, start, or pause button to control the progress. You can also add an image that indicates the actual task in progress, or add custom text that conveys how far the task is completed.
 
@@ -79,6 +79,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with custom content](images/custom-content/content.png)
+![.NET MAUI Circular Progress Bar with custom content](images/custom-content/content.png)
 
-N> Refer to our [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Circular Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
