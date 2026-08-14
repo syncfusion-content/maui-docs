@@ -81,8 +81,8 @@ The following table summarizes the globalization support available in this contr
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/badge-view/getting-started) shows how to begin using the Badge View step by step.  
-- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify Badge appearance and styles.  
-- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with Badge animation effects.
+- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify Badge View appearance and styles.  
+- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with Badge View animation effects.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
