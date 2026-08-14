@@ -150,7 +150,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set .NET MAUI Linear Gauge tick position](images/axis-ticks/label-placement.PNG)
+![Set .NET MAUI Linear Gauge tick position](images/axis-labels/label-placement.PNG)
 
 
 ## Customize Tick Offset
