@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control.
 
 ## Apply liquid glass effect
 
@@ -17,23 +17,26 @@ Follow these steps to enable and configure the Liquid Glass Effect in the DateTi
 
 ### Step 1: Enable the liquid glass effect on DateTime Slider
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html) control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html) control to apply the Liquid Glass Effect. When enabled, it provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeSlider` control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
     <Grid>
-        <Image Source="Wallpaper.png" Aspect="AspectFill">
-            <sliders:SfDateTimeSlider
-                Minimum="2010-01-01" 
-                Maximum="2018-01-01" 
-                EnableLiquidGlassEffect="True" />
+        <Image Source="Wallpaper.png" Aspect="AspectFill" />
+        <sliders:SfDateTimeSlider
+            Minimum="2010-01-01" 
+            Maximum="2018-01-01" 
+            EnableLiquidGlassEffect="True" />
     </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
+using System;
+using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Sliders;
+
 var grid = new Grid
 {
     BackgroundColor = Colors.Transparent
@@ -48,7 +51,7 @@ grid.Children.Add(image);
 
 SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
 {
-    Minimun = new DateTime(2010, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     EnableLiquidGlassEffect = true
 };

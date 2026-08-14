@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track in .NET MAUI DateTime Slider control | Syncfusion®
-description: Learn here all about adding and customizing the slider track in .NET MAUI Slider (SfDateTimeSlider) control and more.
+description: Learn here all about adding and customizing the slider track in the .NET MAUI DateTime Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
@@ -36,6 +36,8 @@ It represents the value currently selected in the DateTime Slider. The slider's 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
@@ -73,6 +75,10 @@ The inactive side of the DateTime Slider is between the thumb and the [`Maximum`
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
@@ -106,6 +112,8 @@ Change the active and inactive track height of the DateTime Slider using the [`A
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
@@ -138,6 +146,8 @@ You can extend the track at edges using the [`TrackExtent`](https://help.syncfus
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
@@ -161,7 +171,7 @@ slider.TrackExtent = 25;
 
 ## Disabled track
 
-Change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider track properties based on the visual states. The applicable visual states are enabled (default) and disabled.
 
 {% tabs %}
 
@@ -225,6 +235,9 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
 
 VerticalStackLayout stackLayout = new();
 SfDateTimeSlider defaultSlider = new()
@@ -278,7 +291,7 @@ VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
 stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(24, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 
@@ -308,6 +321,8 @@ The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Orientation = SliderOrientation.Vertical;
@@ -345,6 +360,8 @@ Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syn
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
