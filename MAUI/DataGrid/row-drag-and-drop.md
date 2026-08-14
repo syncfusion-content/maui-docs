@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Row Drag and Drop in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to enable and customize row drag-and-drop in Syncfusion® .NET MAUI DataGrid to reorder and move records interactively.
+title: Row Drag and Drop in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to enable and customize row drag-and-drop in Syncfusion® .NET MAUI Data Grid to reorder and move records interactively.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row drag and drop, maui row drag and drop
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row drag and drop, maui row drag and drop
 ---
 
-# Row Drag and Drop in .NET MAUI DataGrid
+# Row Drag and Drop in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to drag and drop rows by setting the [SfDataGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow) property to `true`. Dragging is enabled by long pressing and dragging a row on mobile platforms and by clicking and dragging on desktop platforms. A row drag view is displayed during the drag operation. You can handle drag-and-drop operations based on your requirements by using the [SfDataGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event.
 
-To quickly get started with row drag and drop in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
+To quickly get started with row drag and drop in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/qwkDwCgo_jo'></iframe>
 

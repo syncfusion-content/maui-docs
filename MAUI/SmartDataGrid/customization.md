@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customization in .NET MAUI SmartDataGrid control | Syncfusion®
-description: Learn how to customize the behavior and features of Syncfusion® .NET MAUI SmartDataGrid including interactions, data operations, and configuration options.
+title: Customization in .NET MAUI Smart Data Grid control | Syncfusion®
+description: Learn how to customize the behavior and features of Syncfusion® .NET MAUI Smart Data Grid including interactions, data operations, and configuration options.
 platform: MAUI
 control: SfSmartDataGrid
 documentation: UG
 keywords : maui datagrid, customization, assistview, prompts, smart actions
 ---
 
-# Customization in .NET MAUI SmartDataGrid
+# Customization in .NET MAUI Smart Data Grid
 
 The [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) provides options to customize its behavior and features, including predefined suggestions, initial prompts, enabling or disabling smart actions, and programmatic control of the AssistView.
 

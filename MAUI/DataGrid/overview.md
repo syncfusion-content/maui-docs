@@ -1,19 +1,19 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI DataGrid control | Syncfusion®
+title: About Syncfusion .NET MAUI Data Grid control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-datagrid"
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DataGrid control and more details.
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Data Grid control and more details.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
-# About Syncfusion .NET MAUI DataGrid Control
+# About Syncfusion .NET MAUI Data Grid Control
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-<img alt="MAUI DataGrid" src="Images/overview/maui-datagrid.png" width="567"/>
+<img alt="MAUI Data Grid" src="Images/overview/maui-datagrid.png" width="567"/>
 
 ## Business use cases
 
@@ -73,7 +73,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/datagrid/overview">DataGrid</a></td>
+<td><a href="/maui/datagrid/overview" aria-label="Navigate to DataGrid documentation">DataGrid</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>

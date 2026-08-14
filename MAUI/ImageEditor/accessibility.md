@@ -55,7 +55,7 @@ Save the current image.
 <tr>
 <td>
 Ctrl + O<br/><br/></td><td>
-Opens the image browser to import the new image inside ImageEditor. 
+Opens the image browser to import the new image inside Image Editor. 
 <br/><br/></td></tr>
 </table>
 

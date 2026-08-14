@@ -1,14 +1,14 @@
 ---
 layout: post
-title: ToolTip in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to enable and customize tooltips in Syncfusion® .NET MAUI DataGrid to display additional information for cells, rows, and grid elements.
+title: ToolTip in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to enable and customize tooltips in Syncfusion® .NET MAUI Data Grid to display additional information for cells, rows, and grid elements.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui tooltip, maui tooltip
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui tooltip, maui tooltip
 ---
 
-# ToolTip in .NET MAUI DataGrid
+# ToolTip in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides support for displaying tooltips. A tooltip displays a pop-up window showing information when interacting with cells of SfDataGrid. 
 
@@ -43,7 +43,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid displays ToolTip for Record Cell" src="Images/tooltip/maui-datagrid-tooltip-basic.png" width="404" />   
+<img alt="MAUI Data Grid displays ToolTip for Record Cell" src="Images/tooltip/maui-datagrid-tooltip-basic.png" width="404" />   
 
 You can enable tooltips for specific columns by setting the `DataGridColumn.ShowToolTip` property to `true` for the desired columns. If a column has `ShowToolTip` explicitly set to `false`, the tooltip will not display for that column even if grid-level `ShowToolTip` is `true`.
 
@@ -149,7 +149,7 @@ To change the tooltip's border appearance, use the Stroke and StrokeThickness pr
                        ShowToolTip="True" />
 {% endhighlight %}
 {% endtabs %}
-<img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-style.png" width="404" /> 
+<img alt="Customizing ToolTip Style in MAUI Data Grid" src="Images/tooltip/maui-datagrid-tooltip-style.png" width="404" /> 
 
 ### Apply Default Style
 
@@ -217,7 +217,7 @@ public class ImageConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template.png" width="404" /> 
+<img alt="Customizing ToolTip using ToolTipTemplate in MAUI Data Grid" src="Images/tooltip/maui-datagrid-tooltip-template.png" width="404" /> 
 
 ### Customizing the ToolTip with DataTemplateSelector
 
@@ -278,11 +278,11 @@ public class ToolTipTemplateSelector : DataTemplateSelector
 
 The following image shows the `DefaultTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template-selector2.png"  width="404"/>
+<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI Data Grid" src="Images/tooltip/maui-datagrid-tooltip-template-selector2.png"  width="404"/>
 
 The following image shows the `AlternateTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images/tooltip/maui-datagrid-tooltip-template-selector1.png" width="404"/>
+<img alt="Displaying AlternateTemplate for ToolTip in MAUI Data Grid" src="Images/tooltip/maui-datagrid-tooltip-template-selector1.png" width="404"/>
 
 ## ToolTip Delay
 

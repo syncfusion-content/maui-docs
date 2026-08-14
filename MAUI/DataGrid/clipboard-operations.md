@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Clipboard Operations in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about Clipboard Operations in Syncfusion® .NET MAUI DataGrid, including copying, pasting, and customizing clipboard behavior.
+title: Clipboard Operations in .NET MAUI Data Grid | Syncfusion®
+description: Learn all about Clipboard Operations in Syncfusion® .NET MAUI Data Grid, including copying, pasting, and customizing clipboard behavior.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, Copy to clipboard, Cut to clipboard and Paste to clipboard
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, Copy to clipboard, Cut to clipboard and Paste to clipboard
 ---
 
 
-# Clipboard Operations in .NET MAUI DataGrid
+# Clipboard Operations in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) provides support for clipboard operations such as cut, copy, and paste data within the control and between other applications such as Notepad and Excel. Clipboard operations for copy and paste are enabled by default. You can copy selected records/cells from SfDataGrid by pressing  <kbd>Ctrl+C</kbd> and paste the content from [Clipboard](https://learn.microsoft.com/en-us/dotnet/api/system.windows.clipboard?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) to SfDataGrid by pressing <kbd>Ctrl+V</kbd>.
 
@@ -55,7 +55,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Copy to Clipboard in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-copy-to-clipboard.png" width="404"/>
+<img alt="Copy to Clipboard in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-copy-to-clipboard.png" width="404"/>
 
 > **Note:** `IncludeHiddenColumn` is not supported when `SelectionUnit` is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell).
 
@@ -96,7 +96,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Paste Clipboard Content in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-paste-to-clipboard.png" width="404"/>
+<img alt="Paste Clipboard Content in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-paste-to-clipboard.png" width="404"/>
 
 > **Note:** To enable pasting within the DataGrid, the [AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing) property must be set to true.
 
@@ -139,7 +139,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Cut to Clipboard in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-cut-to-clipboard.png" width="404"/>
+<img alt="Cut to Clipboard in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-cut-to-clipboard.png" width="404"/>
 
 > **Note:** `IncludeHiddenColumn` is not supported when `SelectionUnit` is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell). For unbound columns, cut operations won't work, but the data can still be copied to the clipboard.
 
@@ -214,7 +214,7 @@ void dataGrid_CopyCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Copy to Clipboard based on Cell Value in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-copy-cell-value.png" width="404"/>
+<img alt="Copy to Clipboard based on Cell Value in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-copy-cell-value.png" width="404"/>
 
 The example below handles the copy operation when the `MappingName` of a Column is Country:
 
@@ -228,7 +228,7 @@ void dataGrid_CopyCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Copy to Clipboard based on Mapping Name in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-copy-mapping-name.png" width="404"/>
+<img alt="Copy to Clipboard based on Mapping Name in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-copy-mapping-name.png" width="404"/>
 
 ### PasteCellContent
 
@@ -264,7 +264,7 @@ void dataGrid_PasteCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Paste Clipboard Content based on Cell Value in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-paste-cell-value.png" width="404"/>
+<img alt="Paste Clipboard Content based on Cell Value in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-paste-cell-value.png" width="404"/>
 
 The example below handles the paste operation when the MappingName of a Column is "OrderID":
 
@@ -278,7 +278,7 @@ void dataGrid_DataGridPasteCellContent(object? sender, DataGridCopyPasteCellEven
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Paste Clipboard Content based on Mapping Name in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-paste-mapping-name.png" width="404"/>
+<img alt="Paste Clipboard Content based on Mapping Name in MAUI Data Grid" src="Images/clipboard-operations/maui-datagrid-paste-mapping-name.png" width="404"/>
 
 ## Handling Programmatically
 
@@ -286,7 +286,7 @@ This section covers programmatic approaches for copy, cut, and paste operations 
 
 ### Copy Operations
 
-#### Programmatically Copy to Clipboard in Maui DataGrid
+#### Programmatically Copy to Clipboard in MAUI Data Grid
 
 Copy the selected records/cells in SfDataGrid by using the Copy method in [CopyPasteController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CopyPasteController) of SfDataGrid.
 
@@ -318,7 +318,7 @@ this.dataGrid.CopyPasteController.Copy();
 {% endhighlight %}
 {% endtabs %}
 
-#### Copy rows without selecting in Maui DataGrid
+#### Copy rows without selecting in MAUI Data Grid
 
 You can copy records without selection by using the [CopyRowsToClipboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteController.html#Syncfusion_Maui_DataGrid_DataGridCopyPasteController_CopyRowsToClipboard_System_Int32_System_Int32_) method in `CopyPasteController` of SfDataGrid:
  
@@ -330,7 +330,7 @@ this.dataGrid.CopyPasteController.CopyRowsToClipboard(2, 4);
 
 ### Cut Operations
 
-#### Programmatically Cut Data to Clipboard in Maui DataGrid
+#### Programmatically Cut Data to Clipboard in MAUI Data Grid
 
 To cut the selected records/cells in SfDataGrid, use the Cut method in `CopyPasteController`:
 
@@ -373,7 +373,7 @@ this.dataGrid.CopyPasteController.Paste();
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Clipboard operations in Maui DataGrid
+## Customizing Clipboard operations in MAUI Data Grid
 
 The SfDataGrid processes clipboard operations in the [DataGridCopyPasteController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteController.html) class. You can customize the default copy-paste behaviors by overriding the `DataGridCopyPasteController` class and setting it to [SfDataGrid.CopyPasteController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CopyPasteController).
 
@@ -408,7 +408,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-### Paste a cell into many cells in Maui DataGrid
+### Paste a cell into many cells in MAUI Data Grid
 
 By default, you can copy one cell and paste it into another cell when Cell Selection is enabled in SfDataGrid. The code below shows how to copy one cell and paste it into all selected cells by overriding the [OnPasteToCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteController.html#Syncfusion_Maui_DataGrid_DataGridCopyPasteController_OnPasteToCell_System_Object_Syncfusion_Maui_DataGrid_DataGridColumn_System_Object_) method in the `DataGridCopyPasteController` class:
 
@@ -457,7 +457,7 @@ public class CustomCopyPaste : DataGridCopyPasteController
 {% endhighlight %}
 {% endtabs %}
 
-### Paste a record into many rows in Maui DataGrid
+### Paste a record into many rows in MAUI Data Grid
 
 By default, you can copy one row and paste it into another row when row selection is enabled in SfDataGrid. The code below shows how to copy one row and paste it into all selected rows by overriding the [OnPasteToRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteController.html#Syncfusion_Maui_DataGrid_DataGridCopyPasteController_OnPasteToRow_System_Object_System_Object_) method in the `DataGridCopyPasteController` class:
 
@@ -497,7 +497,7 @@ public class CustomCopyPaste : DataGridCopyPasteController
 {% endhighlight %}
 {% endtabs %}
 
-### Select pasted records in Maui DataGrid
+### Select pasted records in MAUI Data Grid
 
 By default, after pasting clipboard values to SfDataGrid, the selection remains on the previously selected records. The code below shows how to select the pasted records after the paste operation by overriding the [OnPasteToRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteController.html#Syncfusion_Maui_DataGrid_DataGridCopyPasteController_OnPasteToRows_System_Object_) and `OnPasteToRow` methods in the `DataGridCopyPasteController` class. This code is applicable when SelectionUnit is [Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Row).
 
@@ -536,7 +536,7 @@ public class CustomCopyPaste : DataGridCopyPasteController
 {% endhighlight %}
 {% endtabs %}
 
-### Create new records while pasting in Maui DataGrid
+### Create new records while pasting in MAUI Data Grid
 
 By default, when pasting clipboard values to SfDataGrid, it changes the values of existing records. The code example below shows how to add the copied records as new rows in SfDataGrid by overriding the `OnPasteToRows` method in the `DataGridCopyPasteController` class:
 

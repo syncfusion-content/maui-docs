@@ -147,6 +147,6 @@ numericEntry.CustomFormat = "0.000";
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI NumericEntry value editing](GettingStarted_images/editing_value.gif)
+![.NET MAUI Numeric Entry value editing](GettingStarted_images/editing_value.gif)
 
 You can download the Numeric Entry Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-numericentry-samples).
