@@ -45,7 +45,7 @@ N>
 
 I> Syncfusion<sup>®</sup> license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://help.syncfusion.com/maui/licensing/licensing-faq/ci-license-validation) section for detailed instructions on how to implement it.
 
-### .NET MAUI
+## .NET MAUI
 
 ### 1. Registering license key in App.xaml.cs
 
