@@ -49,7 +49,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Animation" aria-label="View Animation property in API reference">Animation</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html" aria-label="View BadgeAnimation type in API reference">BadgeAnimation</a></td>
-    <td>Animation used when the badge appears, changes, or hides. Choose a supported animation style to control the motion effect.</td>
+    <td>Animation used when the badge appears, changes, or hides. Choose a supported <code>BadgeAnimation</code> value to control the motion effect.</td>
 </tr>
 
 <tr valign="top">
@@ -73,7 +73,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment" aria-label="View BadgeAlignment property in API reference">BadgeAlignment</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAlignment.html" aria-label="View BadgeAlignment type in API reference">BadgeAlignment</a></td>
-    <td>Alignment of the badge around the target view. Choose a supported alignment to place the badge in the desired location.</td>
+    <td>Alignment of the badge around the target view. Choose a supported <code>BadgeAlignment</code> value to place the badge in the desired location.</td>
 </tr>
 
 <tr valign="top">
@@ -109,13 +109,13 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Icon" aria-label="View Icon property in API reference">Icon</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeIcon.html" aria-label="View BadgeIcon type in API reference">BadgeIcon</a></td>
-    <td>Icon displayed inside the badge. Choose a supported badge icon to replace or supplement the text.</td>
+    <td>Icon displayed inside the badge. Choose a supported <code>BadgeIcon</code> value to replace or supplement the text.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible" aria-label="View IsVisible property in API reference">IsVisible</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-    <td>Controls whether the badge is shown on screen. Set this to false to hide the badge.</td>
+    <td>Controls whether the badge is shown on screen. Set this to <code>false</code> to hide the badge.</td>
 </tr>
 
 <tr valign="top">
@@ -127,7 +127,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Position" aria-label="View Position property in API reference">Position</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html" aria-label="View BadgePosition type in API reference">BadgePosition</a></td>
-    <td>Position of the badge relative to the target. Choose a supported position to place the badge correctly.</td>
+    <td>Position of the badge relative to the target. Choose a supported <code>BadgePosition</code> value to place the badge correctly.</td>
 </tr>
 
 <tr valign="top">
@@ -157,6 +157,6 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type" aria-label="View Type property in API reference">Type</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html" aria-label="View BadgeType type in API reference">BadgeType</a></td>
-    <td>Badge type that controls how the badge is rendered. Choose a supported badge type to match the intended display.</td>
+    <td>Badge type that controls how the badge is rendered. Choose a supported <code>BadgeType</code> value to match the intended display.</td>
 </tr>
 </table>

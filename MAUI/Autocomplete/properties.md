@@ -21,37 +21,37 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DelimiterText" aria-label="View DelimiterText property in API reference">DelimiterText</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-<td>Text used to separate selected items. Multiple values appear in a single line.</td>
+<td>Text used to separate selected items. Multiple values appear in a <code>single line</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath" aria-label="View DisplayMemberPath property in API reference">DisplayMemberPath</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-<td>Property path used to show item text in the suggestion list. Each item displays a readable label.</td>
+<td>Property path used to show item text in the suggestion list. Each item displays a <code>readable label</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownCornerRadius" aria-label="View DropDownCornerRadius property in API reference">DropDownCornerRadius</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerRadius" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
-<td>Roundness of the dropdown corners. The popup appears with the chosen corner shape.</td>
+<td>Roundness of the dropdown corners. The popup appears with the chosen <code>corner shape</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownFooterView" aria-label="View DropdownFooterView property in API reference">DropdownFooterView</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
-<td>View shown at the bottom of the dropdown. Extra actions or custom content can appear there.</td>
+<td>View shown at the bottom of the dropdown. Extra actions or <code>custom content</code> can appear there.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownHeaderView" aria-label="View DropdownHeaderView property in API reference">DropdownHeaderView</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
-<td>View shown at the top of the dropdown. Titles or custom header content can appear there.</td>
+<td>View shown at the top of the dropdown. Titles or <code>custom header content</code> can appear there.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize" aria-label="View DropDownItemFontSize property in API reference">DropDownItemFontSize</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
-<td>Font size used for dropdown items. Larger values make the text easier to read.</td>
+<td>Font size used for dropdown items. Larger values make the text easier to <code>read</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -69,19 +69,19 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-<td>Determines whether the liquid glass visual effect appears. The popup uses a glass like surface when enabled.</td>
+<td>Determines whether the liquid glass visual effect appears. The popup uses a <code>glass-like surface</code> when enabled.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_FilterBehavior" aria-label="View FilterBehavior property in API reference">FilterBehavior</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IAutocompleteFilterBehavior.html" aria-label="View IAutocompleteFilterBehavior type in API reference">IAutocompleteFilterBehavior</a></td>
-<td>Filtering behavior used for suggestion items. Matching values are narrowed down while typing.</td>
+<td>Filtering behavior used for suggestion items. Matching values are <code>narrowed down</code> while typing.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible" aria-label="View IsDropDownShadowVisible property in API reference">IsDropDownShadowVisible</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-<td>Determines whether the dropdown shows a shadow. The popup appears separated from the background.</td>
+<td>Determines whether the dropdown shows a <code>shadow</code>. The popup appears separated from the background.</td>
 </tr>
 
 <tr valign="top">
@@ -93,31 +93,31 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate" aria-label="View ItemTemplate property in API reference">ItemTemplate</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-<td>Template used to render each item. Each suggestion can appear with custom layout.</td>
+<td>Template used to render each item. Each suggestion can appear with <code>custom layout</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate" aria-label="View LoadMoreTemplate property in API reference">LoadMoreTemplate</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-<td>Template used for the load more area. Additional items can appear with a custom layout.</td>
+<td>Template used for the load more area. Additional items can appear with a <code>custom layout</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText" aria-label="View LoadMoreText property in API reference">LoadMoreText</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-<td>Text shown in the load more area. It appears while more data is being fetched.</td>
+<td>Text shown in the load more area. It appears while more data is being <code>fetched</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion" aria-label="View MaximumSuggestion property in API reference">MaximumSuggestion</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
-<td>Maximum number of suggestions shown at one time. The list stays compact and easy to scan.</td>
+<td>Maximum number of suggestions shown at one time. The list stays <code>compact</code> and easy to scan.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters" aria-label="View MinimumPrefixCharacters property in API reference">MinimumPrefixCharacters</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
-<td>Minimum typed characters needed before suggestions appear. Fewer matches are shown too early.</td>
+<td>Minimum typed characters needed before suggestions appear. Fewer matches are shown too <code>early</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -129,25 +129,25 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate" aria-label="View NoResultsFoundTemplate property in API reference">NoResultsFoundTemplate</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-<td>Template shown when no matches are found. The empty state follows the app design.</td>
+<td>Template shown when no matches are found. The <code>empty state</code> follows the app design.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText" aria-label="View NoResultsFoundText property in API reference">NoResultsFoundText</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-<td>Message shown when no matching items are found. Users get clear feedback after filtering.</td>
+<td>Message shown when no matching items are found. Users get clear <code>feedback</code> after filtering.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnCommand" aria-label="View ReturnCommand property in API reference">ReturnCommand</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Command run when the return key is pressed. Custom actions can be triggered from keyboard input.</td>
+<td>Command run when the return key is pressed. Custom actions can be triggered from <code>keyboard input</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ReturnCommandParameter" aria-label="View ReturnCommandParameter property in API reference">ReturnCommandParameter</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
-<td>Value passed to the return command. The action can receive extra context through it.</td>
+<td>Value passed to the return command. The action can receive extra <code>context</code> through it.</td>
 </tr>
 
 <tr valign="top">
@@ -159,43 +159,43 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_SearchBehavior" aria-label="View SearchBehavior property in API reference">SearchBehavior</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IAutocompleteSearchBehavior.html" aria-label="View IAutocompleteSearchBehavior type in API reference">IAutocompleteSearchBehavior</a></td>
-<td>Searching behavior used while typing. Matching results are found through this logic.</td>
+<td>Searching behavior used while typing. Matching results are found through this <code>logic</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItem" aria-label="View SelectedDropDownItem property in API reference">SelectedDropDownItem</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
-<td>Currently selected dropdown item. This is the chosen value from the suggestion list.</td>
+<td>Currently selected dropdown item. This is the <code>chosen value</code> from the suggestion list.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedDropDownItems" aria-label="View SelectedDropDownItems property in API reference">SelectedDropDownItems</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.ilist" aria-label="View IList type in API reference">IList</a></td>
-<td>Selected items when multiple selection is enabled. The collection reflects the current state.</td>
+<td>Selected items when multiple selection is enabled. The collection reflects the current <code>state</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem" aria-label="View SelectedItem property in API reference">SelectedItem</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
-<td>Currently selected item. This is the main selected value in the field.</td>
+<td>Currently selected item. This is the <code>main</code> selected value in the field.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItems" aria-label="View SelectedItems property in API reference">SelectedItems</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.ilist" aria-label="View IList type in API reference">IList</a></td>
-<td>Collection of selected items. Multiple values can be chosen at once.</td>
+<td>Collection of selected items. Multiple values can be chosen at <code>once</code>.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue" aria-label="View SelectedValue property in API reference">SelectedValue</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
-<td>Value of the currently selected item. A key or identifier can be bound here.</td>
+<td>Value of the currently selected item. A <code>key</code> or identifier can be bound here.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath" aria-label="View SelectedValuePath property in API reference">SelectedValuePath</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-<td>Property path used to read the selected value from each item. A specific field from the source data can be bound.</td>
+<td>Property path used to read the selected value from each item. A specific field from the source data can be <code>bound</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -231,7 +231,7 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ShowSuggestionsOnFocus" aria-label="View ShowSuggestionsOnFocus property in API reference">ShowSuggestionsOnFocus</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-<td>Determines whether suggestions appear when the field receives focus. Available items are shown right away.</td>
+<td>Determines whether suggestions appear when the field receives focus. Available items are shown <code>right away</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -261,7 +261,7 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TokenItemStyle" aria-label="View TokenItemStyle property in API reference">TokenItemStyle</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.TokenItemStyle.html" aria-label="View TokenItemStyle type in API reference">TokenItemStyle</a></td>
-<td>Appearance of selected item tokens. The selected values appear as chips or tags.</td>
+<td>Appearance of selected item tokens. The selected values appear as <code>chips</code> or tags.</td>
 </tr>
 
 <tr valign="top">
@@ -284,7 +284,7 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear" aria-label="View Clear method in API reference">Clear()</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-<td>Clears the selected value and text from the field. This returns the autocomplete to an empty state.</td>
+<td>Clears the selected value and text from the field. This returns the autocomplete to an <code>empty state</code>.</td>
 </tr>
 
 </table>
@@ -301,55 +301,55 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ClearButtonClicked" aria-label="View ClearButtonClicked event in API reference">ClearButtonClicked</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-<td>Fires when the clear button is clicked. This lets you react to the reset action.</td>
+<td>Fires when the <code>clear button</code> is clicked. This lets you react to the <code>reset</code> action.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed" aria-label="View Completed event in API reference">Completed</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-<td>Fires when text input is completed. This usually happens when the user finishes entering text.</td>
+<td>Fires when text input is <code>completed</code>. This usually happens when the user finishes entering text.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownClosed" aria-label="View DropDownClosed event in API reference">DropDownClosed</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-<td>Fires when the dropdown is closed. This can be used to update the page after selection ends.</td>
+<td>Fires when the dropdown is <code>closed</code>. This can be used to update the page after selection ends.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Focused" aria-label="View Focused event in API reference">Focused</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;FocusEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.focuseventargs" aria-label="View FocusEventArgs type in API reference">FocusEventArgs</a>&gt;</a></td>
-<td>Fires when the field receives focus. This is useful for showing suggestions or helper text.</td>
+<td>Fires when the field receives <code>focus</code>. This is useful for showing suggestions or helper text.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreButtonTapped" aria-label="View LoadMoreButtonTapped event in API reference">LoadMoreButtonTapped</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-<td>Fires when the load more button is tapped. This helps load more items on demand.</td>
+<td>Fires when the <code>load more</code> button is tapped. This helps load more items on demand.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html" aria-label="View SelectionChangedEventArgs type in API reference">SelectionChangedEventArgs</a>&gt;</a></td>
-<td>Fires when the selected item changes. This lets you update related content or state.</td>
+<td>Fires when the selected value changes. This lets you update related content or <code>state</code>.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging" aria-label="View SelectionChanging event in API reference">SelectionChanging</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangingEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html" aria-label="View SelectionChangingEventArgs type in API reference">SelectionChangingEventArgs</a>&gt;</a></td>
-<td>Fires before the selected item changes. This allows the change to be checked or cancelled.</td>
+<td>Fires before the selected item changes. This allows the change to be checked or <code>cancelled</code>.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Unfocused" aria-label="View Unfocused event in API reference">Unfocused</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;FocusEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.focuseventargs" aria-label="View FocusEventArgs type in API reference">FocusEventArgs</a>&gt;</a></td>
-<td>Fires when the field loses focus. This is useful for validation or final updates.</td>
+<td>Fires when the field loses <code>focus</code>. This is useful for validation or final updates.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;AutocompleteValueChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteValueChangedEventArgs.html" aria-label="View AutocompleteValueChangedEventArgs type in API reference">AutocompleteValueChangedEventArgs</a>&gt;</a></td>
-<td>Fires when the selected value changes. This is useful for reacting to the new value.</td>
+<td>Fires when the selected value changes. This is useful for reacting to the <code>new value</code>.</td>
 </tr>
 
 </table>
