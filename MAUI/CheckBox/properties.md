@@ -114,7 +114,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor" aria-label="View UncheckedColor property in API reference">UncheckedColor</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0">Color</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
 		<td>Gets or sets the color shown when the check box is unchecked.</td>
 	</tr>
 </table>
