@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migration to .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn about migration from Syncfusion® Xamarin Circular ProgressBar to .NET MAUI Circular ProgressBar with API comparisons.
+title: Migration to .NET MAUI Circular Progress Bar | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Circular Progress Bar to .NET MAUI Circular Progress Bar with API comparisons.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---  
 
-# Migration to .NET MAUI Circular ProgressBar
+# Migration to .NET MAUI Circular Progress Bar
 
-To make the migration from the [Xamarin Circular ProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin Circular ProgressBar were kept in the .NET MAUI Circular ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI Circular ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Circular Progress Bar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI Circular Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin Circular Progress Bar were kept in the .NET MAUI Circular Progress Bar. However, to maintain the consistency of API naming in the .NET MAUI Circular Progress Bar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize the control
 
@@ -86,8 +86,8 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin Circular ProgressBar</th>
-<th>.NET MAUI Circular ProgressBar</th>
+<th>Xamarin Circular Progress Bar</th>
+<th>.NET MAUI Circular Progress Bar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>
@@ -202,7 +202,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 N> All the (*) marked APIs are renamed from Xamarin SfCircularProgressBar to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar.
 
-The following code example explains how to use the properties in the Xamarin Circular ProgressBar and the .NET MAUI Circular ProgressBar.
+The following code example explains how to use the properties in the Xamarin Circular Progress Bar and the .NET MAUI Circular Progress Bar.
 
 <table>
 <tr>

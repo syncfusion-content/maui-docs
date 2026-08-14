@@ -156,7 +156,7 @@ Content = sfBadgeView;
 
 ## Predefined styles
 
-The colors of the Badge View can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The Badge supports the following essential colors for different scenarios:
+The colors of the Badge View can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The Badge View supports the following essential colors for different scenarios:
 
  * Dark
  * Error
@@ -478,7 +478,7 @@ Content = sfBadgeView;
 
 ## Keeping multiple badges aligned uniformly
 
-When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a Badge View is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the Badge View is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badge views.
+When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a Badge View is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the Badge View is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without Badge Views.
 
 {% tabs %}
 
@@ -593,7 +593,7 @@ sfBadgeView.BadgeSettings = badgeSetting;
 
 ## Visibility of badge
 
-Show or hide the badge views in the .NET MAUI Badge View by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the Badge View will be visible.
+Show or hide the Badge Views in the .NET MAUI Badge View by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the Badge View will be visible.
 
 {% tabs %}
 {% highlight xaml %}

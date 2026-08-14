@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn about enabling and customizing the liquid glass effect in Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
+title: Liquid Glass Effect in .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn about enabling and customizing the liquid glass effect in Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Linear ProgressBar
+# Liquid Glass Effect in .NET MAUI Linear Progress Bar
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
 
 ## Apply the liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the Linear ProgressBar control:
+Follow these steps to enable and configure the Liquid Glass Effect in the Linear Progress Bar control:
 
 ### Step 1: Wrap the control inside a glass effect view
 
@@ -23,7 +23,7 @@ For more details, refer to the [Liquid Glass Getting Started](https://help.syncf
 
 ### Step 2: Customize the background
 
-To achieve a glass-like background in the Linear ProgressBar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass-like background in the Linear Progress Bar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control:
 

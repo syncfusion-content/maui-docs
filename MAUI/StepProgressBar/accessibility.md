@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Accessibility in .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn about accessibility features in Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Step ProgressBar
+# Accessibility in .NET MAUI Step Progress Bar
 
-Enhance the accessibility of .NET MAUI Step ProgressBar with a user-friendly design that provides inclusive features for seamless navigation and usability for all users. The following table lists the elements along with their formats and examples.
+Enhance the accessibility of .NET MAUI Step Progress Bar with a user-friendly design that provides inclusive features for seamless navigation and usability for all users. The following table lists the elements along with their formats and examples.
 
 <table>
 <tr>

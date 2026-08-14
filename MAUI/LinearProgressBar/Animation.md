@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Animation in .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn about animation support and duration customization in Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
+title: Animation in .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn about animation support and duration customization in Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Animation in .NET MAUI Linear ProgressBar
+# Animation in .NET MAUI Linear Progress Bar
 
-The Linear ProgressBar provides animation support to visualize the progress value changes in an interactive way. 
+The Linear Progress Bar provides animation support to visualize the progress value changes in an interactive way. 
 
 The following properties are used to define the duration of animation for the specific states.
 
@@ -21,7 +21,7 @@ The following properties are used to define the duration of animation for the sp
 
 The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing) property allows you to specify the transfer function that controls the animation speed when it runs.
 
-The following code sample demonstrates the `CubicInOut` easing function of the Linear ProgressBar.
+The following code sample demonstrates the `CubicInOut` easing function of the Linear Progress Bar.
 
 {% tabs %}
 
@@ -45,7 +45,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with CubicInOut animation](images/animation/easing-animation.gif)
+![.NET MAUI Linear Progress Bar with CubicInOut animation](images/animation/easing-animation.gif)
 
 The [`SetProgress()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_) method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
 
@@ -61,7 +61,7 @@ N> The animation duration and easing effect parameters will not affect the confi
 
 The [`IndeterminateAnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing) property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
 
-The following code sample demonstrates the `BounceIn` easing function of the Linear ProgressBar.
+The following code sample demonstrates the `BounceIn` easing function of the Linear Progress Bar.
 
 {% tabs %}
 
@@ -85,6 +85,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with indeterminate animation](images/animation/indeterminate.gif)
+![.NET MAUI Linear Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
 
-N> Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

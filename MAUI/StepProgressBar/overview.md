@@ -1,15 +1,15 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI Step ProgressBar Control | Syncfusion®
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Step ProgressBar control and more details.
+title: About Syncfusion® .NET MAUI Step Progress Bar Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Step Progress Bar control and more details.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# About Syncfusion® .NET MAUI Step ProgressBar Control
+# About Syncfusion® .NET MAUI Step Progress Bar Control
 
-The Syncfusion® [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) (SfStepProgressBar) control allows you to display progress through multiple steps in a process, such as order tracking or a user registration form. It is customizable, with options for step shape, content, progress bar color, and more.
+The Syncfusion® [.NET MAUI Step Progress Bar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) (SfStepProgressBar) control allows you to display progress through multiple steps in a process, such as order tracking or a user registration form. It is customizable, with options for step shape, content, progress bar color, and more.
 
 ![Overview of .NET MAUI StepProgressBar](images/overview/maui-stepprogressbar-overview.gif)
 
@@ -22,7 +22,7 @@ The Syncfusion® [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-co
 
 ## Key features
 
-- **Orientation** allows displaying the Step ProgressBar in horizontal or vertical layouts.  
+- **Orientation** allows displaying the Step Progress Bar in horizontal or vertical layouts.  
 - **Progress status** allows representing steps using states such as completed, in progress, and not started.  
 - **Status text** allows displaying primary and secondary text to describe each step clearly.  
 - **Formatted text** allows customizing the appearance and style of step descriptions.  
@@ -69,7 +69,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/stepprogressbar/overview" aria-label="MAUI Step ProgressBar control overview">Step Progress Bar</a></td>
+<td><a href="/maui/stepprogressbar/overview" aria-label="MAUI Step Progress Bar control overview">Step Progress Bar</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -86,7 +86,7 @@ The following table summarizes the globalization support available in this contr
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/stepprogressbar/getting-started) shows a step‑by‑step guide to begin using the Step ProgressBar control.  
+- [Getting Started](https://help.syncfusion.com/maui/stepprogressbar/getting-started) shows a step‑by‑step guide to begin using the Step Progress Bar control.  
 - [Customization](https://help.syncfusion.com/maui/stepprogressbar/customization) explains how to customize appearance and step configuration.  
 - [Tooltip](https://help.syncfusion.com/maui/stepprogressbar/tooltip) helps show helpful hints when hovering.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples. 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Description in .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn about description feature displaying primary and secondary text in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Description in .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn about description feature displaying primary and secondary text in Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Description in .NET MAUI Step ProgressBar
+# Description in .NET MAUI Step Progress Bar
 
 Each step in a multi-step process performs a different operation. You can display information about a step's status on either side. A primary description is shown on the right or bottom of the step, and a secondary description is shown on the left or top of the step.
 
@@ -228,7 +228,7 @@ N> If both `PrimaryText` and `PrimaryFormattedText` are provided, then `PrimaryF
 
 ## Customize label spacing
 
-You can customize the space between the step and the primary or secondary text of the Step ProgressBar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar` control. The default value of the `LabelSpacing` property is `5`.
+You can customize the space between the step and the primary or secondary text of the Step Progress Bar by using the [LabelSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing) property in `SfStepProgressBar` control. The default value of the `LabelSpacing` property is `5`.
 
 {% tabs %}
 {% highlight XAML tabtitle="XAML" hl_lines="2" %}
@@ -254,7 +254,7 @@ this.Content = stepProgressBar;
 
 ## Customize label position
 
-You can customize the position of the primary or secondary text of the Step ProgressBar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar` control. It can be positioned at the `Start`, `End`, `Bottom`, or `Top`.
+You can customize the position of the primary or secondary text of the Step Progress Bar by using the [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition) property in `SfStepProgressBar` control. It can be positioned at the `Start`, `End`, `Bottom`, or `Top`.
 
 The default value of the `LabelPosition` property in the horizontal direction is `Bottom`, and in the vertical direction, it is `End`.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn about appearance customization including angles, colors, thickness in Syncfusion® .NET MAUI Circular ProgressBar (SfCircularProgressBar) control.
+title: Appearance in .NET MAUI Circular Progress Bar | Syncfusion®
+description: Learn about appearance customization including angles, colors, thickness in Syncfusion® .NET MAUI Circular Progress Bar (SfCircularProgressBar) control.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Circular ProgressBar
+# Appearance in .NET MAUI Circular Progress Bar
 
 ## Angle
 
-The appearance of the Circular ProgressBar can be customized to semi-circle, arc, and more. The start and end angles can be customized using the [`StartAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_StartAngle) and [`EndAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_EndAngle) properties respectively.
+The appearance of the Circular Progress Bar can be customized to semi-circle, arc, and more. The start and end angles can be customized using the [`StartAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_StartAngle) and [`EndAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_EndAngle) properties respectively.
 
-The following code sample demonstrates how to change the appearance of the Circular ProgressBar to semi-circle.
+The following code sample demonstrates how to change the appearance of the Circular Progress Bar to semi-circle.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with angle customization](images/appearance/angle.png)
+![.NET MAUI Circular Progress Bar with angle customization](images/appearance/angle.png)
 
 ## Range colors
 
@@ -52,7 +52,7 @@ The following properties in the [`GradientStops`](https://help.syncfusion.com/cr
 * [`Color:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Color) Represents the color of the specified range.
 * [`Value:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Value) Represents the start or end value for the specified color.
 
-The following code sample demonstrates how to map the solid color range in the Circular ProgressBar.
+The following code sample demonstrates how to map the solid color range in the Circular Progress Bar.
 
 {% tabs %}
 
@@ -93,9 +93,9 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI Circular Progress Bar with range colors](images/appearance/range-colors.png)
 
-The following code sample demonstrates how to apply gradient transition effect to the range colors in the Circular ProgressBar.
+The following code sample demonstrates how to apply gradient transition effect to the range colors in the Circular Progress Bar.
 
 {% tabs %}
 
@@ -128,11 +128,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI Circular Progress Bar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
-The following properties are used to customize the appearance of the Circular ProgressBar:
+The following properties are used to customize the appearance of the Circular Progress Bar:
 
 * [`ProgressRadiusFactor:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor) Defines the outer radius of the progress indicator.
 * [`ProgressThickness:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness) Defines the thickness of the progress indicator.
@@ -142,7 +142,7 @@ The following properties are used to customize the appearance of the Circular Pr
 
 The [`ProgressThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness) or [`TrackThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness) of the progress bar can be specified either in pixel or factor. If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit) is specified as [`Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SizeUnit.html#Syncfusion_Maui_ProgressBar_SizeUnit_Pixel), the range will be rendered based on the provided pixel value. If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit) is set as [`Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SizeUnit.html#Syncfusion_Maui_ProgressBar_SizeUnit_Factor), the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
-The following code sample demonstrates how to customize the appearance of the Circular ProgressBar.
+The following code sample demonstrates how to customize the appearance of the Circular Progress Bar.
 
 {% tabs %}
 
@@ -174,7 +174,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with appearance customization](images/appearance/circular-thickness.png)
+![.NET MAUI Circular Progress Bar with appearance customization](images/appearance/circular-thickness.png)
 
 ## Corner style customization
 
@@ -210,11 +210,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with corner style customization](images/appearance/corner-style.png)
+![.NET MAUI Circular Progress Bar with corner style customization](images/appearance/corner-style.png)
 
 ## Color customization
 
-The following properties are used to customize the color in the Circular ProgressBar.
+The following properties are used to customize the color in the Circular Progress Bar.
 
 * [`ProgressFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) Represents the color of the progress indicator.
 * [`TrackFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) Represents the color of the track indicator.
@@ -245,6 +245,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Circular ProgressBar with color customization](images/appearance/color.png)
+![.NET MAUI Circular Progress Bar with color customization](images/appearance/color.png)
 
-N> Refer to our [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Circular Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
