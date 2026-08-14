@@ -21,7 +21,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Annotations" aria-label="View Annotations property in API reference">Annotations</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotationCollection.html" aria-label="View ChartAnnotationCollection type in API reference">ChartAnnotationCollection</a></td>
-    <td>Collection of annotations displayed on the chart. Use this to place custom text, shapes, or callouts at specific chart positions.</td>
+    <td>Collection of annotations displayed on the chart. Use this to place custom text, shapes, or callout at specific chart positions.</td>
 </tr>
 
 <tr valign="top">
