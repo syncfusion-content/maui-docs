@@ -37,7 +37,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.co
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/avatar-view/getting-started) shows how to begin using Avatar View step by step.  
-- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) explains how to configure Avatar content such as images or initials.  
+- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) explains how to configure Avatar View content such as images or initials.  
 - [Customization](https://help.syncfusion.com/maui/avatar-view/customization) shows how to style and customize Avatar View. 
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
