@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Core NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
@@ -55,7 +55,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name, and press **Enter**.
 4. Then choose **Create project**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Core NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -79,7 +79,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Core NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
@@ -123,9 +123,9 @@ using Syncfusion.Maui.Core;
 
 Create an instance for the Badge View control. Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
-Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the Badge.
+Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the Badge View.
 
-An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the Badge, ensure the image is included correctly in your project resources.
+An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the Badge View, ensure the image is included correctly in your project resources.
 
 
 {% tabs %}

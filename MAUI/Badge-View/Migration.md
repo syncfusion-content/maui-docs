@@ -9,13 +9,13 @@ documentation: ug
 
 # Migration from Xamarin Badge View to .NET MAUI Badge View 
 
-To migrate easier from Xamarin BadgeView to .NET MAUI Badge View, we kept most of the APIs from Xamarin BadgeView in .NET MAUI Badge View. However, some APIs have been renamed to ensure consistency with MAUI naming conventions. Below are the details of the changes from Xamarin BadgeView to .NET MAUI Badge View.
+To migrate easier from Xamarin Badge View to .NET MAUI Badge View, we kept most of the APIs from Xamarin Badge View in .NET MAUI Badge View. However, some APIs have been renamed to ensure consistency with MAUI naming conventions. Below are the details of the changes from Xamarin Badge View to .NET MAUI Badge View.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin BadgeView</th>
+<th>Xamarin Badge View</th>
 <th>.NET MAUI Badge View</th></tr>
 <tr>
 <td>Syncfusion.XForms.BadgeView</td>
@@ -26,7 +26,7 @@ To migrate easier from Xamarin BadgeView to .NET MAUI Badge View, we kept most o
 
 <table> 
 <tr>
-<th>Xamarin BadgeView</th>
+<th>Xamarin Badge View</th>
 <th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>
@@ -60,7 +60,7 @@ To migrate easier from Xamarin BadgeView to .NET MAUI Badge View, we kept most o
 <table>
 <tr>
 <th>Enum</th>
-<th>Xamarin BadgeView</th>
+<th>Xamarin Badge View</th>
 <th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>
@@ -74,7 +74,7 @@ To migrate easier from Xamarin BadgeView to .NET MAUI Badge View, we kept most o
 
 <table>
 <tr>
-<th>Xamarin BadgeView</th>
+<th>Xamarin Badge View</th>
 <th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>

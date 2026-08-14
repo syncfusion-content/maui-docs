@@ -16,15 +16,15 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com
 
 ## Business use cases
 
-- Messaging applications that display unread message counts and notification badges.  
+- Messaging applications that display unread message counts and notification badge views.  
 - E-commerce applications that highlight cart item counts and order updates.  
 - Dashboard applications that show alerts, warnings, or status indicators.  
 - Social and productivity apps that require quick visual notification indicators.  
 
 ## Key features
 
-- **Positioning** allows placing the Badge around the target element to suit different UI layouts.  
-- **Predefined styles** provide built-in color options to quickly customize the Badge appearance.  
+- **Positioning** allows placing the Badge View around the target element to suit different UI layouts.  
+- **Predefined styles** provide built-in color options to quickly customize the Badge View appearance.  
 - **Animation support** enables adding visual effects to highlight updates and draw user attention.  
 
 ## Globalization
@@ -74,9 +74,9 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with Badge indicators.  
+- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with Badge View indicators.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
-- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badges.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badge views.  
 
 ## See Also
 

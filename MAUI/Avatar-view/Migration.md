@@ -15,7 +15,7 @@ To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr
 
 <table>
 <tr>
-<th>Xamarin AvatarView</th>
+<th>Xamarin Avatar View</th>
 <th>.NET MAUI Avatar View</th></tr>
 <tr>
 <td>Syncfusion.XForms.AvatarView</td>
@@ -26,7 +26,7 @@ To ease the migration from Xamarin [SfAvatarView](https://help.syncfusion.com/cr
 
 <table> 
 <tr>
-<th>Xamarin AvatarView</th>
+<th>Xamarin Avatar View</th>
 <th>.NET MAUI Avatar View</th>
 <th>Description</th></tr>
 <tr>

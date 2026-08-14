@@ -79,6 +79,6 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![BadgeView support](HowTo_Images/BadgeView_AvatarView.jpg)
+![Badge View support](HowTo_Images/BadgeView_AvatarView.jpg)
 
 To learn more about the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).
