@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI Circular Progress Bar Control | Syncfusion®
+title: About Syncfusion® .NET MAUI Circular ProgressBar Control | Syncfusion®
 description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Circular Progress Bar control and more details.
 platform: MAUI
 control: SfCircularProgressBar
