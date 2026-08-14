@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Overview of Syncfusion<sup>®</sup> license validation in CI services - Syncfusion<sup>®</sup>
-description: Learn how to register Syncfusion<sup>®</sup> license key for Syncfusion<sup>®</sup> application for license validation.
+title: Syncfusion® License Validation in CI Services | Syncfusion®
+description: Learn how to register a Syncfusion® license key for a Syncfusion® application for license validation.
 platform: MAUI
-control: Essential Studio<sup>®</sup>
+control: Essential Studio®
 documentation: UG
 ---
 
@@ -15,6 +15,8 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
     padding: 10px 17px 14px
 }
 </style>
+
+# Syncfusion® License Validation in CI Services
 
 Syncfusion<sup>®</sup> license key validation in CI services ensures that Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. Configure the continuous integration pipeline to fail when the license key validation fails. If validation fails, re-verify the platform, version, and license key values to resolve the issue.
 
