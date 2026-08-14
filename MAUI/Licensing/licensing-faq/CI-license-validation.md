@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Overview of Syncfusion<sup>®</sup> license validation in CI services - Syncfusion<sup>®</sup>
-description: Learn how to register Syncfusion<sup>®</sup> license key for Syncfusion<sup>®</sup> application for license validation.
+title: Syncfusion® License Validation in CI Services | Syncfusion®
+description: Learn how to register a Syncfusion® license key for a Syncfusion® application for license validation.
 platform: MAUI
-control: Essential Studio<sup>®</sup>
+control: Essential Studio®
 documentation: UG
 ---
 
