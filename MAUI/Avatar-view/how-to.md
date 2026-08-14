@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in Syncfusion® .NET MAUI Avatar View
-description: Learn how to use the different states available in .NET MAUI Avatar View.
+description: Learn how to use the different states available in .NET MAUI Avatar View to display notifications and user status.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
