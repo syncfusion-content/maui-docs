@@ -1,9 +1,9 @@
 ---
 layout: post
 title: About Essential Studio® .NET MAUI Licensing | Syncfusion®
-description: Learn about Syncfusion® Essential Studio® .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
+description: Learn about Syncfusion® Essential Studio® .NET MAUI license keys, including how to generate, register, and manage them for your applications.
 platform: MAUI
-control: Essential Studio<sup>®</sup>
+control: Essential Studio®
 documentation: UG
 ---
 
