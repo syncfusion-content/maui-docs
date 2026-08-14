@@ -20,8 +20,8 @@ One more thing is, in .NET MAUI Range Slider, you do not have an API name [ShowR
 
 <table>
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th></tr>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th></tr>
 <tr>
 <td>Syncfusion.SfRangeSlider.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>

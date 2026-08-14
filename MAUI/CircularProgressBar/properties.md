@@ -146,10 +146,10 @@ documentation: ug
         <th>Name</th>
         <th>Type</th>
         <th>Description</th>
-    </tr>
+    </tr>d:\UG\devfinalfix\maui-docs\MAUI\NumericEntry\properties.md
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_" aria-label="View SetProgress method in API reference">SetProgress</a></td>
-        <td>void</td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
         <td>Updates the current <code>Progress</code> value and can animate the transition using optional duration and easing settings.</td>
     </tr>
 </table>
