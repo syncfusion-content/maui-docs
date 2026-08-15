@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Dividers feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Dividers in .NET MAUI DateTime Range Selector control | Syncfusion®
+description: Learn here all about the Dividers feature of the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Dividers in .NET MAUI DateTime Range Selector
+# Dividers in SfDateTimeRangeSelector for .NET MAUI
 
-This section explains how to add the dividers in the DateTime Range Selector(SfDateTimeRangeSelector).
+This section explains how to add the dividers in the DateTime Range Selector (SfDateTimeRangeSelector).
 
 ## Show dividers
 
@@ -43,6 +43,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -95,6 +98,9 @@ Change the active and inactive divider radius using the [`ActiveRadius`](https:/
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -157,6 +163,11 @@ Also, change the active and inactive divider stroke color using the [`ActiveStro
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -220,6 +231,11 @@ Change the active and inactive divider colors using the [`ActiveFill`](https://h
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime RangeSelector | Syncfusion®
+title: Liquid Glass Effect in .NET MAUI DateTime Range Selector | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSelector (SfDateTimeRangeSelector) control.
 platform: MAUI
 control: SfDateTimeRangeSelector
@@ -9,32 +9,34 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI DateTimeRangeSelector
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime RangeSelector (SfDateTimeRangeSelector) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 
 ## Apply liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the DateTime RangeSelector control:
+Follow these steps to enable and configure the Liquid Glass Effect in the DateTime Range Selector control:
 
-### Step 1: Enable the liquid glass effect on DateTime RangeSelector
+### Step 1: Enable the liquid glass effect on DateTime Range Selector
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) control to apply the Liquid Glass Effect. When enabled, it provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeRangeSelector` control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
     <Grid>
-        <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <Image Source="Wallpaper.png" Aspect="AspectFill" />
         <sliders:SfDateTimeRangeSelector
             Minimum="2010-01-01" 
             Maximum="2018-01-01" 
             RangeStart="2012-01-01" 
             RangeEnd="2016-01-01"
-            EnableLiquidGlassEffect="True"/>
+            EnableLiquidGlassEffect="True" />
     </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
+using System;
+using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Sliders;
 
 var grid = new Grid
@@ -64,7 +66,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates SfDateTimeRangeSelector with the glass effect visible on the thumb while it is pressed.
 
 ![date time range selector with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 

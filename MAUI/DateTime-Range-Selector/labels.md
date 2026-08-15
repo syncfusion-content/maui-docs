@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Labels in .NET MAUI DateTime Range Selector control | Syncfusion®
+description: Learn here all about the labels and customization features of the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -13,7 +13,7 @@ This section explains how to add the labels in the DateTime Range Selector.
 
 ## Show labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels at a given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels at the given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
 
 {% tabs %}
 
@@ -42,6 +42,9 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.R
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -93,6 +96,9 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.I
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
@@ -145,6 +151,9 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2011, 01, 01);
@@ -164,7 +173,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-and-commands) to customize the label text format through range slider events.
+N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-and-commands) to customize the label text format through range selector events.
 
 ## Edge labels placement
 
@@ -202,6 +211,9 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2002, 01, 07);
@@ -229,7 +241,7 @@ Change the active and inactive label appearance using the [`ActiveTextColor`](ht
 
 The active side of the DateTime Range Selector is between the start and end thumbs.
 
-The inactive side of the DateTime Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
+The inactive side of the DateTime Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and between the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
@@ -267,6 +279,10 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](http
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
@@ -293,7 +309,7 @@ rangeSelector.Content = chart;
 
 ## Label offset
 
-Adjust the space between ticks and labels using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when the  [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) is enabled. Otherwise, it is `15.0` by default.
+Adjust the space between ticks and labels using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) is enabled. Otherwise, it is `15.0` by default.
 
 {% tabs %}
 
@@ -326,6 +342,9 @@ Adjust the space between ticks and labels using the [`Offset`](https://help.sync
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Charts;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);

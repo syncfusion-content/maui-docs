@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with DateTime Range Selector control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfDateTimeRangeSelector) control.
+description: This section explains how to get started with the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -77,13 +77,13 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
@@ -127,7 +127,7 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
 
 {% tabs %}
 {% highlight xaml %}
-<slider:SfDateTimeRangeSelector ShowLabels="True"
+<sliders:SfDateTimeRangeSelector ShowLabels="True"
                                 ShowTicks="True"
                                 ShowDividers="True"
                                 Minimum="2022-01-01"
@@ -137,7 +137,7 @@ Create an instance of the SfDateTimeRangeSelector and initialize it as follows:
                                 IntervalType="Months"
                                 Interval="2"
                                 DateFormat="MMM yy">
-</slider:SfDateTimeRangeSelector>
+</sliders:SfDateTimeRangeSelector>
 {% endhighlight %}
 
 {% highlight C# %}
