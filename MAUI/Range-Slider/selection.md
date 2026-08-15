@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range selection in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn how to perform range selection with the Syncfusion .NET MAUI Range Slider (SfRangeSlider), including selecting and adjusting value ranges.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Range selection in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about the range selection in the Range Slider.
+This section explains the range selection in the Range Slider.
 
 ## Discrete selection
 
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property in the range slider.
+Move the thumb in a discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property in the Range Slider.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
@@ -25,9 +25,9 @@ Move the thumb in discrete manner for numeric values using the [`StepSize`](http
                        RangeEnd="8"
                        Interval="2"
                        StepSize="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
-                       ShowDividers="True" />
+                       ShowLabels="true"
+                       ShowTicks="true"
+                       ShowDividers="true" />
 
 {% endhighlight %}
 
@@ -50,22 +50,22 @@ rangeSlider.ShowDividers = true;
 
 ![RangeSlider numeric discrete mode](images/selection/step-size.gif)
 
-## Interval Selection
+## Interval selection
 
-Both the thumbs are moved to the selected interval if the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is true, otherwise the nearest thumb is moved to the touch position.
+Both the thumbs are moved to the selected interval if the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is `true`; otherwise, the nearest thumb is moved to the touch position.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
                        Interval="2"
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       EnableIntervalSelection="True" />
+                       ShowTicks="true"
+                       ShowLabels="true"
+                       EnableIntervalSelection="true" />
 
 {% endhighlight %}
 
@@ -95,15 +95,15 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="100"
                        RangeStart="25"
                        RangeEnd="75"
-                       Interval="25" 
-                       ShowTicks="True"
-                       ShowLabels="True"
+                       Interval="25"
+                       ShowTicks="true"
+                       ShowLabels="true"
                        DragBehavior="OnThumb" />
 
 {% endhighlight %}
@@ -126,19 +126,19 @@ rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
 
 ### BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the range slider thumb radius. Its not possible to move the individual thumb when setting this behavior.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both thumbs can be moved at the same time without changing the range between the start and end thumbs. This behavior does not consider the Range Slider thumb radius. It is not possible to move the individual thumb with this behavior.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="100"
                        RangeStart="25"
                        RangeEnd="75"
-                       Interval="25" 
-                       ShowTicks="True"
-                       ShowLabels="True"
+                       Interval="25"
+                       ShowTicks="true"
+                       ShowLabels="true"
                        DragBehavior="BetweenThumbs" />
 
 {% endhighlight %}
@@ -161,19 +161,19 @@ rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
 
 ### Both
 
-When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both the thumbs can be moved at the same time without changing the range between the start and end thumbs.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both thumbs can be moved at the same time without changing the range between the start and end thumbs.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="100"
                        RangeStart="25"
                        RangeEnd="75"
-                       Interval="25" 
-                       ShowTicks="True"
-                       ShowLabels="True"
+                       Interval="25"
+                       ShowTicks="true"
+                       ShowLabels="true"
                        DragBehavior="Both" />
 
 {% endhighlight %}
@@ -204,16 +204,16 @@ It invokes the `ValueChanging` event when the thumb is dragged and held for the 
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
                        Interval="2"
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       EnableDeferredUpdate="True"
+                       ShowTicks="true"
+                       ShowLabels="true"
+                       EnableDeferredUpdate="true"
                        DeferredUpdateDelay="1000" />
 
 {% endhighlight %}

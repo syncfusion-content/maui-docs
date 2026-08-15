@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Slider control | Syncfusion®
+title: Range selection in .NET MAUI DateTime Range Slider | Syncfusion®
 description: Learn here all about range selection of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider

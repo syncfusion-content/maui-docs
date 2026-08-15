@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tick in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the tick feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and its customization options.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,21 +9,21 @@ documentation: ug
 
 # Tick in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about how to add major and minor ticks in the range slider.
+This section explains how to add major and minor ticks in the Range Slider.
 
 ## Show major ticks
 
-Enable the major ticks on the track. It is a shape used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property is `False`.
+Show the major ticks on the track. They are shapes used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property is `false`.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the Range Slider will render the major ticks at 0.0, 2.0, 4.0, and so on.
 
 ### Without interval
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider ShowTicks="True" />
+<sliders:SfRangeSlider ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -42,10 +42,10 @@ rangeSlider.ShowTicks = true;
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True" />
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -63,16 +63,16 @@ rangeSlider.ShowTicks = true;
 
 ## Show minor ticks
 
-It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property is 0.
+It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the Range Slider will render the major ticks at 0.0, 2.0, 4.0, and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) is 1, then smaller ticks are rendered on 1.0 and 3.0, and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property is `0`.
 
 ### Without interval
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider MinorTicksPerInterval="2"
-                       ShowTicks="True" />
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -89,13 +89,14 @@ rangeSlider.ShowTicks = true;
 ![RangeSlider minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With interval
+
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.25"
                        MinorTicksPerInterval="1"
-                       ShowTicks="True" />
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -122,10 +123,10 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True">
+                       ShowTicks="true">
 
     <sliders:SfRangeSlider.MajorTickStyle>
         <sliders:SliderTickStyle ActiveFill="#EE3F3F"
@@ -160,10 +161,10 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True"
+                       ShowTicks="true"
                        MinorTicksPerInterval="1">
 
     <sliders:SfRangeSlider.MinorTickStyle>
@@ -196,10 +197,10 @@ Change the major and minor ticks size of the range slider using the [`ActiveSize
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True"
+                       ShowTicks="true"
                        MinorTicksPerInterval="1">
 
     <sliders:SfRangeSlider.MinorTickStyle>
@@ -239,10 +240,10 @@ Adjust the space between track and ticks of the range slider using the [`Offset`
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True"
+                       ShowTicks="true"
                        MinorTicksPerInterval="1">
 
     <sliders:SfRangeSlider.MinorTickStyle>
@@ -274,11 +275,11 @@ rangeSlider.MajorTickStyle.Offset = 5;
 
 ## Disabled ticks
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the range slider to disabled by setting the `IsEnabled` property to `false`. Using the Visual State Manager (VSM), customize the range slider's major and minor tick properties based on the visual states. The applicable visual states are `Enabled` (default) and `Disabled`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
@@ -355,7 +356,7 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
         <sliders:SfRangeSlider />
         <Label Text="Disabled"
                Padding="24,10" />
-        <sliders:SfRangeSlider IsEnabled="False" />
+        <sliders:SfRangeSlider IsEnabled="false" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

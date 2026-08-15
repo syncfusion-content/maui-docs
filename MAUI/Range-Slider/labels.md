@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the labels and customization features in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,23 +9,23 @@ documentation: ug
 
 # Labels in .NET MAUI Range Slider (SfRangeSlider)
 
-This section explains how to add the labels in the range slider.
+This section explains how to add the labels in the Range Slider.
 
 ## Show labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels on given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels on the given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `false`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
                        Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True" />
+                       ShowLabels="true"
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -52,7 +52,7 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="2"
                        Maximum="10"
@@ -60,8 +60,8 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
                        RangeEnd="8"
                        Interval="2"
                        NumberFormat="$#"
-                       ShowLabels="True"
-                       ShowTicks="True" />
+                       ShowLabels="true"
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -89,7 +89,7 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
@@ -97,8 +97,8 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
                        RangeEnd="8"
                        Interval="2"
                        LabelsPlacement="BetweenTicks"
-                       ShowLabels="True"
-                       ShowTicks="True" />
+                       ShowLabels="true"
+                       ShowTicks="true" />
 
 {% endhighlight %}
 
@@ -120,7 +120,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands) to customize label text format through range slider events.
+N> Refer to the [Events and Commands](https://help.syncfusion.com/maui/range-slider/events-and-commands) documentation to customize label text format through range slider events.
 
 ## Edge labels placement
 
@@ -130,7 +130,7 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="100"
                        Maximum="1000"
@@ -138,8 +138,8 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
                        RangeStart="325"
                        RangeEnd="775"
                        NumberFormat="$##.#"
-                       ShowLabels="True"
-                       ShowTicks="True"
+                       ShowLabels="true"
+                       ShowTicks="true"
                        EdgeLabelsPlacement="Inside" />
 
 {% endhighlight %}
@@ -173,15 +173,15 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        Interval="2"
                        RangeStart="2"
                        RangeEnd="8"
-                       ShowLabels="True"
-                       ShowTicks="True">
+                       ShowLabels="true"
+                       ShowTicks="true">
 
     <sliders:SfRangeSlider.LabelStyle>
         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
@@ -225,16 +225,16 @@ Adjust the space between ticks and labels of the range slider using the [`Offset
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
-                       ShowLabels="True" 
-                       ShowTicks="True">
-  
+                       Interval="2"
+                       ShowLabels="true"
+                       ShowTicks="true">
+
   <sliders:SfRangeSlider.LabelStyle>
     <sliders:SliderLabelStyle Offset="10" />
   </sliders:SfRangeSlider.LabelStyle>
@@ -263,11 +263,11 @@ rangeSlider.LabelStyle.Offset = 10;
 
 ## Disabled labels
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider labels properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the range slider to disabled by setting the `IsEnabled` property to `false`. Using the Visual State Manager (VSM), customize the range slider label properties based on the visual states. The applicable visual states are `Enabled` (default) and `Disabled`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
@@ -332,7 +332,7 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
         <sliders:SfRangeSlider />
         <Label Text="Disabled"
                Padding="24,10" />
-        <sliders:SfRangeSlider IsEnabled="False" />
+        <sliders:SfRangeSlider IsEnabled="false" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

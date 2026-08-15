@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Events and Commands in .NET MAUI Range Slider control | Syncfusion®
+description: Learn all about adding events and commands to the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,24 +9,24 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Slider (SfRangeSlider)
 
-This section explains how to add the events and commands for range slider.
+This section explains how to add the events and commands for the Range Slider.
 
 ## Events
 
 ### Handle callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) - Called when the user selects a new value for the slider by tap/mouse down on the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
-* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stopped interacting with slider by tap/mouse up the thumb.
+* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanged) - Called when the user completes selecting a new value.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stops interacting with the slider by tap/mouse up on the thumb.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
- <sliders:SfRangeSlider ValueChangeStart="OnValueChangeStart" 
-                        ValueChanging="OnValueChanging" 
-                        ValueChanged="OnValueChanged" 
+<sliders:SfRangeSlider ValueChangeStart="OnValueChangeStart"
+                        ValueChanging="OnValueChanging"
+                        ValueChanged="OnValueChanged"
                         ValueChangeEnd="OnValueChangeEnd">
 </sliders:SfRangeSlider>
 
@@ -71,15 +71,15 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider Minimum="2"
                        Maximum="10"
                        RangeStart="4"
                        RangeEnd="8"
                        Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
+                       ShowLabels="true"
+                       ShowTicks="true"
                        LabelCreated="OnLabelCreated" />
 
 {% endhighlight %}
@@ -125,7 +125,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
 
@@ -153,15 +153,15 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 
 ![RangeSlider custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and their parameter
+## Commands and their parameters
 
 ### Drag started command
 
-The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) will be executed when the user starts moving the thumb.
+The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) will be invoked when the user starts moving the thumb.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel" />
@@ -200,11 +200,11 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) will be executed when the user starts moving the thumb.
+The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) will be invoked when the user starts moving the thumb.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel" />
@@ -245,11 +245,11 @@ public class ViewModel
 
 ### Drag completed command
 
-The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) will be executed when the user completes moving the thumb.
+The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) will be invoked when the user completes moving the thumb.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel" />
@@ -288,11 +288,11 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter) will be executed when the user completes moving the thumb.
+The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter) will be invoked when the user completes moving the thumb.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel" />

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dividers in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Dividers feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the dividers feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,22 +9,22 @@ documentation: ug
 
 # Dividers in .NET MAUI Range Slider (SfRangeSlider)
 
-This section explains how to add the dividers in the range slider.
+This section explains how to add the dividers in the Range Slider.
 
 ## Show dividers
 
-The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
+The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is `false`. It is a shape used to represent the major interval points of the track.
 
 For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the dividers at 0.0, 2.0, 4.0, and so on.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider RangeStart="0.2"
                        RangeEnd="0.8"
                        Interval="0.2"
-                       ShowDividers="True" />
+                       ShowDividers="true" />
 
 {% endhighlight %}
 
@@ -48,12 +48,12 @@ Change the active and inactive divider radius of the range slider using the [`Ac
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider RangeStart="0.2"
                        RangeEnd="0.8"
                        Interval="0.2"
-                       ShowDividers="True">
+                       ShowDividers="true">
 
     <sliders:SfRangeSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="3"
@@ -86,12 +86,12 @@ Change the active and inactive divider color of the range slider using the [`Act
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider RangeStart="0.2"
                        RangeEnd="0.8"
                        Interval="0.2"
-                       ShowDividers="True">
+                       ShowDividers="true">
 
     <sliders:SfRangeSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="7"
@@ -130,12 +130,12 @@ Also, change the active and inactive divider stroke color of the range slider us
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider RangeStart="0.2"
                        RangeEnd="0.8"
                        Interval="0.2"
-                       ShowDividers="True">
+                       ShowDividers="true">
 
     <sliders:SfRangeSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="7"
@@ -176,11 +176,11 @@ rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
 
 ## Disabled divider
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the range slider to disabled by setting the `IsEnabled` property to `false`. Using the Visual State Manager (VSM), customize the range slider divider properties based on the visual states. The applicable visual states are `Enabled` (default) and `Disabled`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
         <Setter Property="Interval"
@@ -238,7 +238,7 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
         <sliders:SfRangeSlider />
         <Label Text="Disabled"
                Padding="24,10" />
-        <sliders:SfRangeSlider IsEnabled="False" />
+        <sliders:SfRangeSlider IsEnabled="false" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

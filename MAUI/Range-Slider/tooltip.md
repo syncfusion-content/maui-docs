@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn all about the tooltip feature in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,18 +9,18 @@ documentation: ug
 
 # Tooltip in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about how to add tooltip in the range slider.
+This section explains how to add a tooltip in the Range Slider.
 
 ## Enable tooltip
 
-Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.  
+Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, the tooltip text is formatted with the `NumberFormat`. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
-   
+
    <sliders:SfRangeSlider.Tooltip>
       <sliders:SliderTooltip />
    </sliders:SfRangeSlider.Tooltip>
@@ -42,16 +42,16 @@ rangeSlider.Tooltip = new SliderTooltip();
 
 ## Show always
 
-Always shows a tooltip with and without the thumb interaction by setting the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property. The default value of the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property is `False`.
+Always show a tooltip with and without the thumb interaction by setting the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property. The default value of the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property is `false`.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
-   
+
    <sliders:SfRangeSlider.Tooltip>
-      <sliders:SliderTooltip ShowAlways="True" />
+      <sliders:SliderTooltip ShowAlways="true" />
    </sliders:SfRangeSlider.Tooltip>
 
 </sliders:SfRangeSlider>
@@ -70,7 +70,7 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 ![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
+N> Refer to the [Events and Commands](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) documentation to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
 ## Tooltip label style
 
@@ -78,7 +78,7 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight XAML %}
 
 <sliders:SfRangeSlider>
 
