@@ -7,11 +7,12 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Change the data editor settings (SfDataForm)
+# Change the Data Editor settings (SfDataForm)
 
-## Auto generate data editor 
+## Auto-Generate Data Editor
 
 By default, the [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) will be generated based on the property type. For example, the [DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html) will be generated based on the property type in [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject).
+
 The [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) generation depends on the type and attribute defined for the property.
 
 You can customize the auto-generated editor, label, and group settings by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
@@ -170,11 +171,11 @@ You can customize the property settings or cancel the generation of [DataFormIte
 
 ## Cancel the auto generate data editors
 
-You can cancel the specific data editor by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is set to true or by defining display attribute to avoid the particular data field being displayed.
+You can cancel the specific data editor by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is set to `true`, or by defining the Display attribute to avoid the particular data field being displayed.
 
 #### Using attributes
 
-You can set [AutoGenerateField](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0) to `false` for canceling the data editor generation.
+You can set [AutoGenerateField](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0) to `false` to cancel the data editor generation.
 
 {% tabs %}
 {% highlight C# %}
@@ -464,7 +465,7 @@ By default, the label will be generated from the property name. You can hide the
 
 #### Using attribute
 
-You can hide the label text for editor by setting [ShowLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ShowLabel) as false in [DataformDisplayOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute.
+You can hide the label text for an editor by setting the [ShowLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ShowLabel) property to `false` in the [DataFormDisplayOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -505,9 +506,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 You can change the row order of an editor by setting the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property of [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html) by using [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
 
-You can change the order of item's within a row using [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ItemsOrderInRow) property, which is applicable only when [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCountProperty) is set to more than one. You can place an item within a row from 0 to [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCountProperty) - 1 position.
+You can change the order of items within a row using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ItemsOrderInRow) property, which is applicable only when the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCountProperty) is set to more than one. You can place an item within a row from 0 to the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCountProperty) - 1 position.
 
-Refer [here](https://help.syncfusion.com/maui/dataform/layout#changing-order-of-the-editors) to know more about changing order of the editors.
+Refer [here](https://help.syncfusion.com/maui/dataform/layout#changing-order-of-the-editors) to know more about changing the order of the editors.
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
@@ -590,24 +591,25 @@ N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Da
 </tr>
 </table>
 
-By using [DataFormTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextStyle.html) class properties, you can change the text style .
+By using the [DataFormTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextStyle.html) class properties, you can change the text style.
 
-DataFormTextStyle class properties:-
-    1.FontSize
-    2.FontFamily
-    3.FontAttributes
-    4.TextColor
+The `DataFormTextStyle` class properties include:
+
+* FontSize
+* FontFamily
+* FontAttributes
+* TextColor
 
 #### Change Label Text Style
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    if (e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
     {
         e.DataFormItem.LabelTextStyle = new DataFormTextStyle() 
         {
@@ -626,13 +628,13 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 #### Change Editor Text Style
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    if (e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
     {
         e.DataFormItem.EditorTextStyle = new DataFormTextStyle() 
         {
@@ -648,13 +650,14 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ![Editor text style in .NET MAUI DataForm.](images/editor-settings/editor-text-style.png)
 
-Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
+Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle).
 
 ## Editor view customization
-You can customize the editor view by using the  [InitializeDataEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html#Syncfusion_Maui_DataForm_DataFormItemManager_InitializeDataEditor_Syncfusion_Maui_DataForm_DataFormItem_Microsoft_Maui_Controls_View_) method of [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
+
+You can customize the editor view by using the [InitializeDataEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html#Syncfusion_Maui_DataForm_DataFormItemManager_InitializeDataEditor_Syncfusion_Maui_DataForm_DataFormItem_Microsoft_Maui_Controls_View_) method of [DataFormItemManager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemManager.html).
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.ItemManager = new DataFormItemManagerEditorExt();
 
