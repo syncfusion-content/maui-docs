@@ -9,7 +9,7 @@ documentation: ug
  
 # About Syncfusion® .NET MAUI DataForm Control
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
+The Syncfusion<sup>&reg;</sup> [.NET MAUI DataForm](https://www.syncfusion.com/maui-controls/maui-dataform) (SfDataForm) control is used to create or edit DataForm such as login, reservation, contact, employee form and more based on the business purpose. 
 
 ![.NET MAUI dataform overview ](images/overview/dataform_overview.png)
 
@@ -65,7 +65,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/dataform/overview">DataForm</a></td>
+<td><a href="/maui/dataform/overview" aria-label="MAUI DataForm control overview">DataForm</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>

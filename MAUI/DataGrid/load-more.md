@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load More in .NET MAUI DataGrid | Syncfusion®
+title: Load More in .NET MAUI Data Grid | Syncfusion®
 description: Learn Load more command in MAUI Data Grid using Syncfusion controls. It supports data operations, UI customization, and enterprise features.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui load more, maui load more
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui load more, maui load more
 ---
 
-# Load More in .NET MAUI DataGrid
+# Load More in .NET MAUI Data Grid
 
 To enable load more functionality in SfDataGrid, set the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property to `true` and specify a [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption). When enabled, an interactive load more button appears when the user scrolls to the end of the list. Users can tap this button (or the grid automatically loads more data, depending on the option) to load additional items from your data source.
 

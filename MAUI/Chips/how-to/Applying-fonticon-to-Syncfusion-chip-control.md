@@ -10,7 +10,7 @@ keywords: .net maui sfchip font icon, syncfusion chip fontimage maui, sfchip ima
 
 # How to Set a Font Icon in .NET MAUI Chips
 
-[SfChip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) supports displaying a font icon by assigning a [FontImageSource](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontimagesource) to its [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property.
+[Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) supports displaying a font icon by assigning a [FontImageSource](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontimagesource) to its [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ImageSource) property.
 
 ## Prerequisites
 

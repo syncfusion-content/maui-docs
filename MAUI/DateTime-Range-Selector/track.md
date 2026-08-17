@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Track in .NET MAUI DateTime Range Selector | Syncfusion®
-description: Configure the track in the Syncfusion .NET MAUI DateTime Range Selector: active/inactive fills, sizes, track extent, and inversion options.
+title: Track in DateTime Range Selector control | Syncfusion®
+description: Learn here all about adding the track feature of .NET MAUI DateTime Range Selector control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -62,7 +62,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector date label](images/track/date-labels.png)
+![Range Selector date label](images/track/date-labels.png)
 
 ## Track color
 
@@ -115,7 +115,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track color](images/track/track-color.png)
+![Range Selector track color](images/track/track-color.png)
 
 ## Track height
 
@@ -164,7 +164,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track size](images/track/track-size.png)
+![Range Selector track size](images/track/track-size.png)
 
 ## Track extent
 
@@ -217,11 +217,11 @@ rangeSelector.Content = chart;
 
 **Without track extent**
 
-![RangeSelector track extent before](images/track/track-extent-before-image.png)
+![Range Selector track extent before](images/track/track-extent-before-image.png)
 
 **With track extent**
 
-![RangeSelector track extent after](images/track/track-extent-after-image.png)
+![Range Selector track extent after](images/track/track-extent-after-image.png)
 
 ## Inverse
 
@@ -274,4 +274,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![Inverse range selector](images/getting-started/slider-inverse.png)
+![Inverse Range Selector](images/getting-started/slider-inverse.png)

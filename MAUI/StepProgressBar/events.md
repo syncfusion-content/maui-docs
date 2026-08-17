@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn about events in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control for responsive user interactions.
+title: Events in .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn about events in Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control for responsive user interactions.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI Step ProgressBar
+# Events in .NET MAUI Step Progress Bar
 
 ## StepTapped
 

@@ -46,7 +46,7 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse range slider](images/getting-started/slider-inverse.png)
+![Inverse Range Slider](images/getting-started/slider-inverse.png)
 
 ## Orientation
 
@@ -85,4 +85,4 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 {% endtabs %}
 
-![RangeSlider orientation](images/getting-started/orientation.png)
+![Range Slider orientation](images/getting-started/orientation.png)

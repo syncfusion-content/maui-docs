@@ -68,7 +68,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout rendered with the Filled container type and a focused bottom stroke](images/ContainerType/Filled_Focused.jpg)
+![Text Input Layout rendered with the Filled container type and a focused bottom stroke](images/ContainerType/Filled_Focused.jpg)
 
 ## Outlined
 
@@ -106,7 +106,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout rendered with the Outlined container type and a rounded border](images/ContainerType/Outlined.png)
+![Text Input Layout rendered with the Outlined container type and a rounded border](images/ContainerType/Outlined.png)
 
 ### Customize the corner radius of the outline border
 
@@ -144,7 +144,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![Outlined SfTextInputLayout with a custom 8-unit corner radius on the border](images/ContainerType/CornerRadius.png)
+![Outlined Text Input Layout with a custom 8-unit corner radius on the border](images/ContainerType/CornerRadius.png)
 
 N> `OutlineCornerRadius` is only applied when `ContainerType` is set to `Outlined`. The property is ignored for `Filled` and `None`.
 
@@ -186,7 +186,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![Outlined SfTextInputLayout with 5 units of padding on the top and bottom of the input view](images/ContainerType/padingg.png)
+![Outlined Text Input Layout with 5 units of padding on the top and bottom of the input view](images/ContainerType/padingg.png)
 
 ## None
 
@@ -224,7 +224,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout rendered with the None container type, showing no background or border](images/ContainerType/None_focused.jpg)
+![Text Input Layout rendered with the None container type, showing no background or border](images/ContainerType/None_focused.jpg)
 
 ## See Also
 

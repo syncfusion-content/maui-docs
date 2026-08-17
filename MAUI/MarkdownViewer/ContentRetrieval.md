@@ -30,7 +30,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## GetMarkdownText
 
-The [GetMarkdownText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText) method returns the raw markdown content currently assigned to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the `SfMarkdownViewer` control.
+The [GetMarkdownText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText) method returns the raw markdown content currently assigned to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the `Markdown Viewer` control.
 
 {% tabs %} 
 {% highlight C# %}
@@ -52,7 +52,7 @@ string markdown = markdownViewer.GetMarkdownText();
 
 ## GetHtmlText
 
-The [GetHtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText) method converts the markdown content of the `SfMarkdownViewer` control into HTML format and provides the result as a string.
+The [GetHtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText) method converts the markdown content of the `Markdown Viewer` control into HTML format and provides the result as a string.
 
 {% tabs %} 
 {% highlight C# %}

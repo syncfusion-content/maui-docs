@@ -63,9 +63,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates Slider with the glass effect visible on the thumb while it is pressed.
 
-![slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
+![Slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

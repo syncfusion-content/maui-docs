@@ -1,15 +1,15 @@
 ---
 layout: post
-title: AI-Driven anomaly detection in .NET MAUI DataGrid | Syncfusion
-description: Learn all about the AI-driven anomaly detection feature in Syncfusion® .NET MAUI DataGrid, including its capabilities, configuration, and usage.
+title: AI-Driven anomaly detection in .NET MAUI Data Grid | Syncfusion
+description: Learn all about the AI-driven anomaly detection feature in Syncfusion® .NET MAUI Data Grid, including its capabilities, configuration, and usage.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# AI-Driven Anomaly Detection in .NET MAUI DataGrid
+# AI-Driven Anomaly Detection in .NET MAUI Data Grid
 
-This document provides a comprehensive guide to implementing AI-driven anomaly detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates how to integrate Azure OpenAI services to analyze dataset patterns and automatically highlight anomalies in real-time.
+This document provides a comprehensive guide to implementing AI-driven anomaly detection with the Syncfusion [.NET MAUI Data Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates how to integrate Azure OpenAI services to analyze dataset patterns and automatically highlight anomalies in real-time.
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
@@ -123,11 +123,11 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 {% endtabs %}
 
-## Integrating AI-Driven Anomaly Detection in .NET MAUI DataGrid
+## Integrating AI-Driven Anomaly Detection in .NET MAUI Data Grid
 
-After completing the Azure OpenAI setup above, use the `.NET MAUI DataGrid` control to display data and visualize anomaly detection results. This section demonstrates how to style cells dynamically based on AI analysis and highlight outliers in real-time.
+After completing the Azure OpenAI setup above, use the `.NET MAUI Data Grid` control to display data and visualize anomaly detection results. This section demonstrates how to style cells dynamically based on AI analysis and highlight outliers in real-time.
 
-Before proceeding, review the [.NET MAUI DataGrid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
+Before proceeding, review the [.NET MAUI Data Grid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
 ### Step 1: Create the DataGrid Layout
 
@@ -216,7 +216,7 @@ Before proceeding, review the [.NET MAUI DataGrid getting started guide](https:/
 
 {% endtabs %}
 
-### Step 2: Enable AI-Powered .NET MAUI DataGrid
+### Step 2: Enable AI-Powered .NET MAUI Data Grid
 
 In your code-behind or ViewModel, create a method that sends the DataGrid data to Azure OpenAI for analysis. The AI service analyzes the dataset and returns anomaly detection results in JSON format, including the row index and anomaly status for each record. This data is then parsed and applied to the SfDataGrid by dynamically updating cell styles using the `AnomalyDetectionConverter` or by setting custom properties in the ViewModel.
 
@@ -293,6 +293,6 @@ private async Task GetAnomalyResponseAsync()
 
 {% endtabs %}
 
-![AI driven Smart Anomaly Detection .NET MAUI DataGrid](Images/smart-ai-solutions/anamoly-detection.gif)
+![AI driven Smart Anomaly Detection .NET MAUI Data Grid](Images/smart-ai-solutions/anamoly-detection.gif)
 
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/AnamolyDetection).

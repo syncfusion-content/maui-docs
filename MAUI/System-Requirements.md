@@ -1,6 +1,6 @@
-﻿---
+---
 layout: post
-title: System Requirements for Syncfusion® .NET MAUI | Syncfusion
+title: System Requirements for .NET MAUI | Syncfusion®
 description: Describes system requirements for Syncfusion® .NET MAUI Components, including supported platforms, .NET versions, and development environments.
 platform: MAUI
 control: Installation and Deployment

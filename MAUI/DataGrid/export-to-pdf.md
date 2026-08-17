@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Export to PDF in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to export data from Syncfusion® .NET MAUI DataGrid to PDF, including customization, formatting, and export configuration options.
+title: Export to PDF in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to export data from Syncfusion® .NET MAUI Data Grid to PDF, including customization, formatting, and export configuration options.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui export to pdf, maui export to pdf
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui export to pdf, maui export to pdf
 ---
-# Export To PDF in .NET MAUI DataGrid
+# Export To PDF in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) offers comprehensive support for exporting data to PDF, providing a range of customization options to suit your specific needs. This feature allows you to personalize the exported PDF's appearance, exclude specific columns or headers, and even define custom row heights and column widths, among other possibilities.
 
-To quickly get started with export to PDF in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
+To quickly get started with export to PDF in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), watch this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/h8c_qnnG7iE'></iframe>
 
@@ -1155,7 +1155,7 @@ pdfDoc.Close(true);
 SaveService saveService = new();
 saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
 ```
-<img src="Images\export-to-pdf\maui-datagrid-exportdetailsview.png" alt="Maui DataGrid displays Nested dataGrid exported to PDF" width="404"/>
+<img src="Images\export-to-pdf\maui-datagrid-exportdetailsview.png" alt="MAUI Data Grid displays Nested dataGrid exported to PDF" width="404"/>
 
 By default, only expanded detail grids are exported. To export all detail grids regardless of expansion state, set [CanExportAllDetails](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportAllDetails) to `true`:
 

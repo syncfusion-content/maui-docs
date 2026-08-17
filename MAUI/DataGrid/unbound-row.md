@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Unbound Row in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to use unbound rows in Syncfusion® .NET MAUI DataGrid to display custom information, summaries, and additional data independent of the data source.
+title: Unbound Row in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to use unbound rows in Syncfusion® .NET MAUI Data Grid to display custom information, summaries, and additional data independent of the data source.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound row, maui unbound row
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound row, maui unbound row
 ---
 
 
-# Unbound Row in .NET MAUI DataGrid
+# Unbound Row in .NET MAUI Data Grid
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to add **additional rows** at top and also bottom of the DataGrid which are **not bound with data object** of underlying data source. You can add unbound rows using [SfDataGrid.UnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_UnboundRows) collection property. You can add any number of unbound rows to the DataGrid. Unbound rows can also be exported to PDF and Excel documents.
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) allows you to add **additional rows** at top and also bottom of the DataGrid which are **not bound with data object** of underlying data source. You can add unbound rows using [SfDataGrid.UnboundRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_UnboundRows) collection property. You can add any number of unbound rows to the DataGrid. Unbound rows can also be exported to PDF and Excel documents.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,7 +96,7 @@ Below screenshot shows different unbound rows placed in all possible positions.
 
 ## Populating data for unbound rows
 
-You can populate data for the unbound row by handling [QueryUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundRow) event of .NET MAUI DataGrid. This event is fired for each cell of the unbound rows whenever the row gets refreshed or comes to view. 
+You can populate data for the unbound row by handling [QueryUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundRow) event of .NET MAUI Data Grid. This event is fired for each cell of the unbound rows whenever the row gets refreshed or comes to view. 
 [DataGridUnboundRowEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowEventArgs.html) of the `QueryUnboundRow` event provides information about the cell that triggered this event.
 
 You can get or set the [DataGridUnboundRowEventArgs.Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowEventArgs.html#Syncfusion_Maui_DataGrid_DataGridUnboundRowEventArgs_Value) property based on the [DataGridUnboundActions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundActions.html). If `UnboundAction` is `QueryData` then you can set the value to be displayed. If the `UnboundAction` is `CommitData` then you can get the edited value.

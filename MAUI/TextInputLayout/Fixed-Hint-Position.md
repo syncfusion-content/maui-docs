@@ -80,7 +80,7 @@ Content = inputLayout;
 {% endhighlight %}
 {% endtabs %}
 
-![Outlined SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionOutlined.png)
+![Outlined Text Input Layout with the hint label always floated at the top](images/FixedHintPosition/HintPositionOutlined.png)
 
 ## Always-floated hint with None container
 
@@ -108,7 +108,7 @@ Content = inputLayout;
 {% endhighlight %}
 {% endtabs %}
 
-![None-container SfTextInputLayout with the hint label always floated at the top](images/FixedHintPosition/HintPositionNone.png)
+![None-container Text Input Layout with the hint label always floated at the top](images/FixedHintPosition/HintPositionNone.png)
 
 ## See Also
 

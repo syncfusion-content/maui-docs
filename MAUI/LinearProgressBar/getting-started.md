@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI Linear ProgressBar control. Explore setup, features, examples, and customization options.
+title: Getting Started with .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Linear Progress Bar control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Linear ProgressBar
+# Getting Started with .NET MAUI Linear Progress Bar
 
-This section explains the steps required to add the Linear ProgressBar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Linear ProgressBar. Follow the steps below to add a .NET MAUI Linear ProgressBar control to your project.
+This section explains the steps required to add the Linear Progress Bar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Linear Progress Bar. Follow the steps below to add a .NET MAUI Linear Progress Bar control to your project.
 
-To get started quickly with our .NET MAUI Linear ProgressBar, check the following video.
+To get started quickly with our .NET MAUI Linear Progress Bar, check the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=DY29ko7PTXg&t"%}
@@ -124,7 +124,7 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add a Linear ProgressBar control
+## Step 5: Add a Linear Progress Bar control
 
 Initialize the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) and set the `Progress` property to display the filling level of the bar.
 
@@ -148,9 +148,9 @@ N> By default, the value of progress should be specified between 0 and 100. To d
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Linear ProgressBar](images/getting-started/progress-bar.png)
+![.NET MAUI Linear Progress Bar](images/getting-started/progress-bar.png)
 
-You can download the Linear ProgressBar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-).
+You can download the Linear Progress Bar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-).
 
 N> 
-* Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.
+* Refer to our [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

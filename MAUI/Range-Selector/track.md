@@ -62,7 +62,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector numeric label](images/track/rangeselector-basic.png)
+![Range Selector numeric label](images/track/rangeselector-basic.png)
 
 ## Track color
 
@@ -108,7 +108,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track color](images/track/track-color.png)
+![Range Selector track color](images/track/track-color.png)
 
 ## Track height
 
@@ -150,7 +150,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track size](images/track/track-size.png)
+![Range Selector track size](images/track/track-size.png)
 
 ## Track extent
 
@@ -201,8 +201,8 @@ rangeSelector.Content = chart;
 
 **Without track extent**
 
-![RangeSelector track extent before](images/track/track-extent-before-image.png)
+![Range Selector track extent before](images/track/track-extent-before-image.png)
 
 **With track extent**
 
-![RangeSelector track extent after](images/track/track-extent-after-image.png)
+![Range Selector track extent after](images/track/track-extent-after-image.png)

@@ -10,9 +10,9 @@ keywords: .net maui text input layout, syncfusion text input layout, text input 
 
 # Getting Started with .NET MAUI Text Input Layout
 
-This section guides you through setting up and configuring a [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) in your .NET MAUI application. Follow the steps below to add a basic TextInputLayout to your project.
+This section guides you through setting up and configuring a [Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) in your .NET MAUI application. Follow the steps below to add a basic TextInputLayout to your project.
 
-To quickly get started with the .NET MAUI TextInputLayout, watch this video.
+To quickly get started with the .NET MAUI Text Input Layout, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=VKo3vNBzNbw" %}
 
@@ -124,7 +124,7 @@ using Syncfusion.Maui.Core;
 
 ## Step 5: Add the TextInputLayout Component
 
-Configure the `TextInputLayout` component to enhance input fields with additional context and styling. Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCore.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
+Configure the `Text Input Layout` component to enhance input fields with additional context and styling. Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCore.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
 
 {% tabs %} 
 
@@ -150,6 +150,6 @@ When focusing on the input view, the hint label will be moved to the top positio
 
 ![Adding hint](images/GettingStarted/GettingStarted.png)
 
-You can download the TextInputLayout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-textinputlayout-samples).
+You can download the Text Input Layout Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-textinputlayout-samples).
 
 N> You can refer to our [.NET MAUI Text Input Layout](https://www.syncfusion.com/maui-controls/maui-textinputlayout) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Text Input Layout Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TextInputLayout) that shows you how to render the Text Input Layout in .NET MAUI.
