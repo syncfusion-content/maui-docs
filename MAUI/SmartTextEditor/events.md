@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI SmartTextEditor | Syncfusion®
+title: Events in .NET MAUI Smart Text Editor | Syncfusion®
 description: Learn about events in Syncfusion® .NET MAUI Smart Text Editor control including TextChanged event and event arguments for text change notifications.
 platform: maui
 control: SfSmartTextEditor

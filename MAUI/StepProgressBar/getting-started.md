@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI Step ProgressBar control. Explore setup, features, examples, and customization options.
+title: Getting Started with .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Step Progress Bar control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Step ProgressBar
+# Getting Started with .NET MAUI Step Progress Bar
 
-This section explains how to add the [.NET MAUI Step ProgressBar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with the Syncfusion® Step Progress Bar. Follow the steps below to add the .NET MAUI Step Progress Bar control to your project.
+This section explains how to add the [.NET MAUI Step Progress Bar](https://www.syncfusion.com/maui-controls/maui-stepprogressbar) control. This section covers only the basic features needed to get started with the Syncfusion® Step Progress Bar. Follow the steps below to add the .NET MAUI Step Progress Bar control to your project.
 
 To get started quickly with the .NET MAUI Step Progress Bar, you can check the below video.
 
@@ -107,9 +107,9 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Create the ViewModel
 
-You can use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of `SfStepProgressBar` to populate the step progress bar items. Hence, you must create an item collection and bind it to the progress bar control.
+You can use the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of `SfStepProgressBar` to populate the Step Progress Bar items. Hence, you must create an item collection and bind it to the progress bar control.
 
-Create a simple `ObservableCollection` of items for the step progress bar:
+Create a simple `ObservableCollection` of items for the Step Progress Bar:
 
 {% tabs %}
 {% highlight C# %}
@@ -142,7 +142,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Import Step ProgressBar namespace
+## Step 5: Import Step Progress Bar namespace
 
 Add the following namespace in your XAML or C# code.
 
@@ -159,9 +159,9 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Add the Step ProgressBar component
+## Step 6: Add the Step Progress Bar component
 
-The Step ProgressBar control allows you to bind an item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind the item collection in both XAML and C#.
+The Step Progress Bar control allows you to bind an item collection by setting the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource) property of the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). Bind the item collection in both XAML and C#.
 
 {% tabs %}
 {% highlight XAML %}

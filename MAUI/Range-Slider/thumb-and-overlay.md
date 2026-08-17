@@ -95,7 +95,7 @@ rangeSlider.ThumbStyle.StrokeThickness = 2;
 
 {% endtabs %}
 
-![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
+![Range Slider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
 
 ## Thumb overlapping stroke color
 
@@ -122,7 +122,7 @@ rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#FFD7
 
 {% endtabs %}
 
-![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
+![Range Slider thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
 
 ## Thumb overlay size
 
@@ -149,7 +149,7 @@ rangeSlider.ThumbOverlayStyle.Radius = 18;
 
 {% endtabs %}
 
-![RangeSlider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
+![Range Slider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
 
 ## Thumb overlay color
 
@@ -176,7 +176,7 @@ rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD7
 
 {% endtabs %}
 
-![RangeSlider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
+![Range Slider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
 
 ## Disabled thumb
 
@@ -302,4 +302,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)
+![Range Slider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)

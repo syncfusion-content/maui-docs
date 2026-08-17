@@ -12,104 +12,85 @@ documentation: ug
 ## Properties
 
 <table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayer">BackLayer</a></td>
-		<td>BackdropBackLayer</td>
-		<td>Defines the view placed behind the front layer.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption">BackLayerRevealOption</a></td>
-		<td>RevealOption</td>
-		<td>Defines how the back layer is revealed.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseIconImageSource">CloseIconImageSource</a></td>
-		<td>ImageSource</td>
-		<td>Defines the image source used for the close icon.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseText">CloseText</a></td>
-		<td>string</td>
-		<td>Defines the accessibility text for the close icon.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_Content">Content</a></td>
-		<td>View</td>
-		<td>Defines the view that contains the content of the page.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_ControlTemplate">ControlTemplate</a></td>
-		<td>ControlTemplate</td>
-		<td>Defines the control template used to display content.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_FrontLayer">FrontLayer</a></td>
-		<td>BackdropFrontLayer</td>
-		<td>Defines the view placed in front of the back layer.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed">IsBackLayerRevealed</a></td>
-		<td>bool</td>
-		<td>Defines whether the back layer is in the expanded state.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenIconImageSource">OpenIconImageSource</a></td>
-		<td>ImageSource</td>
-		<td>Defines the image source used for the open icon.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenText">OpenText</a></td>
-		<td>string</td>
-		<td>Defines the accessibility text for the open icon.</td>
-	</tr>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayer" aria-label="View BackLayer property in API reference">BackLayer</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html" aria-label="View BackdropBackLayer type in API reference">BackdropBackLayer</a></td>
+    <td>View placed behind the <code>front layer</code>. Secondary content appears in this layer.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption" aria-label="View BackLayerRevealOption property in API reference">BackLayerRevealOption</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.RevealOption.html" aria-label="View RevealOption type in API reference">RevealOption</a></td>
+    <td>Mode that defines how the <code>back layer</code> is revealed. Choose <code>Fill</code> to fill the page or <code>Auto</code> to fit the content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseIconImageSource" aria-label="View CloseIconImageSource property in API reference">CloseIconImageSource</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+    <td>Image shown for the <code>close</code> icon in the <code>navigation bar</code>. A custom icon replaces the default.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseText" aria-label="View CloseText property in API reference">CloseText</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><code>Accessibility</code> text used by the close icon. It is announced by <code>screen readers</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_Content" aria-label="View Content property in API reference">Content</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
+    <td><code>Root</code> view that contains the content of the page. The page is rendered from this view.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_ControlTemplate" aria-label="View ControlTemplate property in API reference">ControlTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.controltemplate" aria-label="View ControlTemplate type in API reference">ControlTemplate</a></td>
+    <td>Template used to display the page content. A custom template changes the <code>page layout</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_FrontLayer" aria-label="View FrontLayer property in API reference">FrontLayer</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html" aria-label="View BackdropFrontLayer type in API reference">BackdropFrontLayer</a></td>
+    <td>View placed in front of the <code>back layer</code>. Primary content appears in this layer.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed" aria-label="View IsBackLayerRevealed property in API reference">IsBackLayerRevealed</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Determines whether the <code>back layer</code> is in the <code>expanded</code> state. The back layer is visible when enabled.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenIconImageSource" aria-label="View OpenIconImageSource property in API reference">OpenIconImageSource</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+    <td>Image shown for the <code>open</code> icon in the <code>navigation bar</code>. A custom icon replaces the default.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenText" aria-label="View OpenText property in API reference">OpenText</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><code>Accessibility</code> text used by the open icon. It is announced by <code>screen readers</code>.</td>
+</tr>
 </table>
 
 ## Events
 
 <table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerStateChanged">BackLayerStateChanged</a></td>
-		<td>EventHandler&lt;BackLayerStateChangedEventArgs&gt;</td>
-		<td>Raised when the back layer is revealed or concealed.</td>
-	</tr>
-</table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
 
-## Methods
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_GetTouchHeight">GetTouchHeight()</a></td>
-		<td>double</td>
-		<td>Returns the touch height for the front layer.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OnAppearing">OnAppearing()</a></td>
-		<td>void</td>
-		<td>Invoked when the page is about to appear.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OnDisappearing">OnDisappearing()</a></td>
-		<td>void</td>
-		<td>Invoked when the page is about to disappear.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OnSizeAllocated_System_Double_System_Double_">OnSizeAllocated(double, double)</a></td>
-		<td>void</td>
-		<td>Handles the size allocation for the page.</td>
-	</tr>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerStateChanged" aria-label="View BackLayerStateChanged event in API reference">BackLayerStateChanged</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;BackLayerStateChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackLayerStateChangedEventArgs.html" aria-label="View BackLayerStateChangedEventArgs type in API reference">BackLayerStateChangedEventArgs</a>&gt;</a></td>
+    <td>Fires when the <code>back layer</code> is <code>revealed</code> or <code>concealed</code>. The current state of the back layer is provided.</td>
+</tr>
 </table>
