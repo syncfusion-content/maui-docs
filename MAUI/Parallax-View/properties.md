@@ -19,27 +19,26 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content">Content</a></td>
-<td>View</td>
-<td>Defines the content displayed within the parallax view.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content" aria-label="View Content property in API reference">Content</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
+<td>Defines the main visual content hosted inside the parallax surface and provides the primary layout that moves with the parallax interaction.</td>
 </tr>
 
 <tr valign="top">
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Orientation">Orientation</a></td>
-<td>ParallaxOrientation</td>
-<td>Defines the scrolling direction used for the parallax effect.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Orientation" aria-label="View Orientation property in API reference">Orientation</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.Orientation.html" aria-label="View ParallaxOrientation enum in API reference">Orientation</a></td>
+<td>Defines the movement direction of the parallax effect by using the <code>Orientation</code> enum and controls whether the content responds to horizontal or vertical scrolling behavior.</td>
 </tr>
 
 <tr valign="top">
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source">Source</a></td>
-<td>View</td>
-<td>Defines the source view that drives the parallax animation.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source" aria-label="View Source property in API reference">Source</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
+<td>Defines the source view that drives the parallax movement and acts as the reference element used to calculate the scrolling offset.</td>
 </tr>
 
 <tr valign="top">
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Speed">Speed</a></td>
-<td>double</td>
-<td>Defines the speed factor of the parallax animation.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Speed" aria-label="View Speed property in API reference">Speed</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+<td>Defines the speed factor of the parallax movement and controls how strongly the foreground content shifts relative to the source scroll position.</td>
 </tr>
-
 </table>

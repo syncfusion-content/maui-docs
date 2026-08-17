@@ -18,131 +18,132 @@ documentation: ug
     <th>Description</th>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex">ActiveStepIndex</a></td>
-    <td>int</td>
-    <td>Defines the index of the currently active step.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepIndex" aria-label="View ActiveStepIndex property in API reference">ActiveStepIndex</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
+    <td>Defines the zero-based index of the currently active step and is used to control which step is highlighted as the current point in the workflow.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue">ActiveStepProgressValue</a></td>
-    <td>double</td>
-    <td>Defines the progress value of the active step.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ActiveStepProgressValue" aria-label="View ActiveStepProgressValue property in API reference">ActiveStepProgressValue</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the progress value for the active step and represents how much of the current step has been completed.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings">CompletedStepSettings</a></td>
-    <td>StepSettings</td>
-    <td>Defines the appearance settings applied to completed steps.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings" aria-label="View CompletedStepSettings property in API reference">CompletedStepSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html" aria-label="View StepSettings type in API reference">StepSettings</a></td>
+    <td>Defines the appearance settings applied to completed steps, including the visual treatment used to distinguish finished progress from the remaining steps.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_EnableLiquidGlassEffect">EnableLiquidGlassEffect</a></td>
-    <td>bool</td>
-    <td>Defines whether the liquid glass effect is enabled.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Determines whether the <code>liquid glass</code> visual treatment is applied to the control for a more refined and modern surface appearance.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings">InProgressStepSettings</a></td>
-    <td>StepSettings</td>
-    <td>Defines the appearance settings applied to steps that are currently in progress.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings" aria-label="View InProgressStepSettings property in API reference">InProgressStepSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html" aria-label="View StepSettings type in API reference">StepSettings</a></td>
+    <td>Defines the appearance settings applied to steps that are currently in progress and provides a distinct visual state for active progression.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource">ItemsSource</a></td>
-    <td>IEnumerable</td>
-    <td>Defines the collection of steps displayed in the step progress bar.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ItemsSource" aria-label="View ItemsSource property in API reference">ItemsSource</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable" aria-label="View IEnumerable type in API reference">IEnumerable</a></td>
+    <td>Defines the collection used to generate the steps displayed in the progress bar and serves as the data source for step creation.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition">LabelPosition</a></td>
-    <td>StepLabelPosition</td>
-    <td>Defines the position of step labels.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelPosition" aria-label="View LabelPosition property in API reference">LabelPosition</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.LabelPosition.html" aria-label="View LabelPosition enum in API reference">LabelPosition</a></td>
+    <td>Defines the position of step labels by using the <code>LabelPosition</code> enum, which controls how labels are arranged relative to the step indicators.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing">LabelSpacing</a></td>
-    <td>double</td>
-    <td>Defines the spacing between labels and step indicators.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_LabelSpacing" aria-label="View LabelSpacing property in API reference">LabelSpacing</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the spacing between the step indicators and their labels and helps control the visual balance of the layout.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings">NotStartedStepSettings</a></td>
-    <td>StepSettings</td>
-    <td>Defines the appearance settings applied to steps that have not started.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings" aria-label="View NotStartedStepSettings property in API reference">NotStartedStepSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html" aria-label="View StepSettings type in API reference">StepSettings</a></td>
+    <td>Defines the appearance settings applied to steps that have not started and provides the initial visual state for pending progress.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_Orientation">Orientation</a></td>
-    <td>StepProgressBarOrientation</td>
-    <td>Defines whether the step progress bar is displayed horizontally or vertically.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_Orientation" aria-label="View Orientation property in API reference">Orientation</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarOrientation.html" aria-label="View StepProgressBarOrientation enum in API reference">StepProgressBarOrientation</a></td>
+    <td>Defines whether the control is arranged horizontally or vertically by using the <code>StepProgressBarOrientation</code> enum.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate">PrimaryTextTemplate</a></td>
-    <td>DataTemplate</td>
-    <td>Defines the template used to display primary text for each step.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate" aria-label="View PrimaryTextTemplate property in API reference">PrimaryTextTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to render the primary text for each step and allows the main step label content to be fully customized.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressAnimationDuration">ProgressAnimationDuration</a></td>
-    <td>double</td>
-    <td>Defines the duration of the step progress animation.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressAnimationDuration" aria-label="View ProgressAnimationDuration property in API reference">ProgressAnimationDuration</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the duration, in milliseconds, used for progress animation when step states or progress values change.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressBarBackground">ProgressBarBackground</a></td>
-    <td>Brush</td>
-    <td>Defines the background of the progress bar track.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ProgressBarBackground" aria-label="View ProgressBarBackground property in API reference">ProgressBarBackground</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Defines the background brush of the progress track and controls the visual appearance of the inactive bar surface.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate">SecondaryTextTemplate</a></td>
-    <td>DataTemplate</td>
-    <td>Defines the template used to display secondary text for each step.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate" aria-label="View SecondaryTextTemplate property in API reference">SecondaryTextTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to render the secondary text for each step and supports supplementary descriptions or status details.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip">ShowToolTip</a></td>
-    <td>bool</td>
-    <td>Defines whether tooltips are displayed for steps.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ShowToolTip" aria-label="View ShowToolTip property in API reference">ShowToolTip</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Determines whether tooltips are displayed for step indicators when additional contextual information needs to be shown.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepContentSize">StepContentSize</a></td>
-    <td>double</td>
-    <td>Defines the size of the step content area.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepContentSize" aria-label="View StepContentSize property in API reference">StepContentSize</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the size of the content area inside each step and helps control how much space is reserved for text or custom templates.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepSize">StepSize</a></td>
-    <td>double</td>
-    <td>Defines the size of each step indicator.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepSize" aria-label="View StepSize property in API reference">StepSize</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the size of each step indicator and controls the overall prominence of the progress markers.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepStrokeWidth">StepStrokeWidth</a></td>
-    <td>double</td>
-    <td>Defines the stroke width of step indicators.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepStrokeWidth" aria-label="View StepStrokeWidth property in API reference">StepStrokeWidth</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Defines the stroke width of step indicators and controls how strongly the step outline is rendered.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate">StepTemplate</a></td>
-    <td>DataTemplate</td>
-    <td>Defines the template used to render step indicators.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTemplate" aria-label="View StepTemplate property in API reference">StepTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to render each step indicator and enables custom visual layouts for the step surface.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipSettings">ToolTipSettings</a></td>
-    <td>StepProgressBarToolTipSettings</td>
-    <td>Defines the appearance settings of step tooltips.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipSettings" aria-label="View ToolTipSettings property in API reference">ToolTipSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarToolTipSettings.html" aria-label="View StepProgressBarToolTipSettings type in API reference">StepProgressBarToolTipSettings</a></td>
+    <td>Defines the appearance settings of step tooltips and controls the visual presentation of tooltip content.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipTemplate">ToolTipTemplate</a></td>
-    <td>DataTemplate</td>
-    <td>Defines the template used to display step tooltips.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_ToolTipTemplate" aria-label="View ToolTipTemplate property in API reference">ToolTipTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to render tooltip content and allows the tooltip surface to be customized with structured information.</td>
 </tr>
+
 </table>
 
 ## Events
@@ -154,15 +155,16 @@ documentation: ug
     <th>Description</th>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepStatusChanged">StepStatusChanged</a></td>
-    <td>EventHandler&lt;StepStatusChangedEventArgs&gt;</td>
-    <td>Raised when the status of a step changes.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepStatusChanged" aria-label="View StepStatusChanged event in API reference">StepStatusChanged</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepStatusChangedEventArgs.html" aria-label="View StepStatusChangedEventArgs type in API reference">StepStatusChangedEventArgs</a></td>
+    <td>Raised when a step changes status, such as moving from <code>not started</code> to <code>in progress</code> or from <code>in progress</code> to <code>completed</code>.</td>
 </tr>
 
-<tr>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTapped">StepTapped</a></td>
-    <td>EventHandler&lt;StepTappedEventArgs&gt;</td>
-    <td>Raised when a step is tapped.</td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_StepTapped" aria-label="View StepTapped event in API reference">StepTapped</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepTappedEventArgs.html" aria-label="View StepTappedEventArgs type in API reference">StepTappedEventArgs</a></td>
+    <td>Raised when a step is tapped and can be used to respond to step selection or interaction logic.</td>
 </tr>
+
 </table>
