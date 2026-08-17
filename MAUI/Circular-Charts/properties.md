@@ -43,7 +43,7 @@ documentation: ug
 
 </table>
 
-# .NET MAUI Chart Series API Reference
+## .NET MAUI Chart Series API Reference
 
 ### Properties
 
@@ -182,7 +182,7 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_CreateAnimation_System_Action_System_Double__" aria-label="View CreateAnimation method in API reference">CreateAnimation(Action)</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
-<td>Creates and starts the animation for the series by invoking the supplied callback during the animation lifecycle.</td>
+<td>Creates and starts the animation for the series by invoking the supplied callback during the animation life cycle.</td>
 </tr>
 
 </table>
