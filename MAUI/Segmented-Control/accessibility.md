@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Segmented Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about Accessibility support with the Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
+title: Accessibility in .NET MAUI Segmented Control | Syncfusion®
+description: Learn about accessibility support that allows screen readers to describe segment items in the .NET MAUI Segmented Control.
 platform: maui
 control: SfSegmentedControl
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Segmented Control (SfSegmentedControl)
+# Accessibility in .NET MAUI Segmented Control
 
 The Segmented Control is designed to work effectively with the segment elements, providing voice descriptions of their segment items.
 

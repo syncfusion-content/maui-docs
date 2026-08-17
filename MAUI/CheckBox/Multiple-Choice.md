@@ -85,7 +85,7 @@ this.Content = stackLayout;
 
 ## Intermediate state
 
-The [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) supports an indeterminate (intermediate) state in addition to checked and unchecked. The indeterminate state is enabled by setting the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to `true`. When `IsThreeState` is `true`, the `IsChecked` property is treated as `bool?` so it can hold a third `null` value.
+The [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) supports an indeterminate (intermediate) state in addition to checked and unchecked. The indeterminate state is enabled by setting the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to `true`. When `IsThreeState` is `true`, the `IsChecked` property is treated as `bool?` so it can hold a third `null` value.
 
 N> When the `IsThreeState` property is set to `false` and the `IsChecked` property is set to `null`, the CheckBox displays in the unchecked state.
 

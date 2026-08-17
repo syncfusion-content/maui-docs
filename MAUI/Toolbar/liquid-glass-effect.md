@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Toolbar | Syncfusion®
-description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Toolbar using the EnableLiquidGlassEffect property.
+title: Liquid Glass Effect in .NET MAUI Toolbar | Syncfusion®
+description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Toolbar (SfToolbar) for a modern, translucent design.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Toolbar (SfToolbar)
+# Liquid Glass Effect in .NET MAUI Toolbar
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Toolbar (SfToolbar) control.
 
@@ -185,13 +185,13 @@ this.Content = mainGrid;
 
 ## Toolbar Grouping layout
 
-When the Liquid Glass Effect is enabled, the toolbar automatically arrange items into groups. Each group appears as its own rounded rectangle with the glass effect applied. Separator items define where one group ends and the next begins, helping keep the toolbar visually organized.
+When the Liquid Glass Effect is enabled, the Toolbar automatically arrange items into groups. Each group appears as its own rounded rectangle with the glass effect applied. Separator items define where one group ends and the next begins, helping keep the Toolbar visually organized.
 
 ### Understanding grouping behavior
 
-When `EnableLiquidGlassEffect` is set to true, the toolbar groups consecutive items together.
+When `EnableLiquidGlassEffect` is set to true, the Toolbar groups consecutive items together.
 
-- **Automatic group detection**: Consecutive toolbar items without a separator are automatically grouped together and rendered as a single glass effect container.
+- **Automatic group detection**: Consecutive Toolbar items without a separator are automatically grouped together and rendered as a single glass effect container.
 - **Separator-driven organization**: Add a [SeparatorToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html) to break the current group and start a new one, giving you precise control over group boundaries.
 - **Independent glass effect**: Each group receives its own rounded, glass-like background with the liquid glass effect applied, maintaining clear visual separation.
 
@@ -199,7 +199,7 @@ When `EnableLiquidGlassEffect` is set to true, the toolbar groups consecutive it
 
 The space between two groups is controlled by the separator’s [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness) property. This helps you easily adjust spacing without changing the toolbar structure.
 
-The following code snippet demonstrates how to add separator items and adjust the group gaps in the toolbar control:
+The following code snippet demonstrates how to add separator items and adjust the group gaps in the Toolbar control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

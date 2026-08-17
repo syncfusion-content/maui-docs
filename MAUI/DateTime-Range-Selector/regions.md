@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Regions in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about the Regions and its customization feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Regions in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to customize active and inactive regions in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Regions in DateTime Range Selector (SfDateTimeRangeSelector)
+# Regions in .NET MAUI DateTime Range Selector
 
 This section explains how to customize the active and inactive regions in the DateTime Range Selector control.
 
@@ -60,7 +60,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region color](images/regions/region_color.png)
+![Range Selector region color](images/regions/region_color.png)
 
 ## Region stroke
 
@@ -115,7 +115,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region stroke](images/regions/region_stroke.png)
+![Range Selector region stroke](images/regions/region_stroke.png)
 
 ## Region stroke thickness
 
@@ -174,4 +174,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector region stroke width](images/regions/region_stroke_width.png)
+![Range Selector region stroke width](images/regions/region_stroke_width.png)

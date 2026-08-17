@@ -1,17 +1,17 @@
 ---
 layout: post
-title: About .NET MAUI Circular Progress Bar | Syncfusion®
-description: Learn all about the Syncfusion<sup>&reg;</sup> .NET MAUI Circular Progress Bar (SfCircularProgressBar) control, its features, and elements.
+title: About Syncfusion® .NET MAUI Circular ProgressBar Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Circular Progress Bar control and more details.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Overview of .NET MAUI Circular ProgressBar
+# About Syncfusion® .NET MAUI Circular Progress Bar Control
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displays progress in a circular shape, supports determinate and indeterminate states, segments, smooth animation, and customizable content. You can also define ranges with different colors.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI Circular Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with customizable visuals. It displays progress in a circular shape, supports determinate and indeterminate states, segments, smooth animation, and customizable content. You can also define ranges with different colors.
 
-![Circular ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Circular Progress Bar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 ## Business use cases
 
@@ -38,7 +38,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Circular ProgressBar](https://www.sync
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/circularprogressbar/getting-started) shows a step‑by‑step guide to begin using the Circular ProgressBar control.  
+- [Getting Started](https://help.syncfusion.com/maui/circularprogressbar/getting-started) shows a step‑by‑step guide to begin using the Circular Progress Bar control.  
 - [States](https://help.syncfusion.com/maui/circularprogressbar/states) explains determinate, indeterminate, and buffer modes to show progress clearly.  
 - [Customization](https://help.syncfusion.com/maui/circularprogressbar/appearance) lets you tweak colors, thickness, and styles to match your design.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.
@@ -267,7 +267,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the Circular ProgressBar.
+      Explore a real-world application that demonstrates the practical use of the Circular Progress Bar.
     </div>
     <a href="https://github.com/syncfusion/maui-weather-analysis" class="explore-link">
     View Sample

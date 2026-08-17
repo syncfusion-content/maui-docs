@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn about Tooltip support in Syncfusion® .NET MAUI Toolbar (SfToolbar) to view additional details of toolbar items.
+title: Tooltip in .NET MAUI Toolbar | Syncfusion®
+description: Learn about tooltip support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for displaying item details.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Enable Tooltip for Toolbar items
+# Tooltip in .NET MAUI Toolbar
 
 The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems.
 
@@ -15,7 +15,7 @@ The tooltip is enabled in the view when the [TooltipText](https://help.syncfusio
 
 You can set the tooltip text by setting the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) property.
 
-The following code sample demonstrates how to create a toolbar control with tooltip.
+The following code sample demonstrates how to create a Toolbar control with tooltip.
 
 {% tabs %}
 
@@ -167,7 +167,7 @@ The properties of ToolTipSettings are:
 * **TextStyle** : Set text style for the tooltip text.
 * **ToolTipPosition** : Set the [ToolbarRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html) for the tooltip. The options are [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Auto), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Top), [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Bottom), [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Left) and [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Right). The default value is `Auto`.
 
-The following code sample demonstrates how to create a toolbar control with tooltip settings.
+The following code sample demonstrates how to create a Toolbar control with tooltip settings.
 
 {% tabs %}
 

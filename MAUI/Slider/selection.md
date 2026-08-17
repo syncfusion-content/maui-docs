@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Value selection in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about the value selection of Syncfusion® .NET MAUI Slider (SfSlider) control and more.
+title: Value Selection in .NET MAUI Slider | Syncfusion®
+description: Learn how to configure value selection in the Syncfusion® .NET MAUI Slider, including discrete step selection and deferred updates.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Value selection in .NET MAUI Slider (SfSlider)
+# Value Selection in .NET MAUI Slider
 
 This section helps to learn about the value selection in the Slider.
 
 ## Discrete selection
 
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize) property in the slider.
+Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize) property in the Slider.
 
 {% tabs %}
 

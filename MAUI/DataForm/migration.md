@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI DataForm (SfDataForm) | Syncfusion<sup>&reg;</sup>
-description: Learn about Migrating from Syncfusion<sup>&reg;</sup> Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
-platform: MAUI
+title: Migration to .NET MAUI DataForm | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin DataForm to .NET MAUI DataForm control with API comparisons.
+platform: maui
 control: SfDataForm
 documentation: ug
----  
+---
 
-# Migrate from Xamarin.Forms SfDataForm to .NET MAUI SfDataForm 
+# Migration from Xamarin DataForm to .NET MAUI DataForm
 
 To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/xamarin-dataform) to the [.NET MAUI SfDataForm](https://www.syncfusion.com/maui-controls/maui-dataform) easier, most of the APIs from the `Xamarin SfDataForm` were kept in the `.NET MAUI SfDataForm`. However, to maintain the consistency of API naming in the `.NET MAUI SfDataForm`, some of the APIs have been renamed. Please find the difference in the following topics.
 
@@ -249,7 +249,7 @@ this.Content = dataForm;
 
 ## Properties
 
-#### SfDataForm
+**SfDataForm**
 
 <table> 
 <tr>
@@ -393,7 +393,7 @@ public class DataModel
 </tr>
 </table>
 
-#### DataFormTextStyle
+**DataFormTextStyle**
 
 The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to the [DataFormTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextStyle.html) in `.NET MAUI SfDataForm`.
 
@@ -482,7 +482,7 @@ public class DataModel
 
 </table>
 
-#### DataFormViewItem
+**DataFormViewItem**
 
 <table>
 
@@ -522,7 +522,7 @@ public class DataModel
 </tr>
 </table>
 
-#### DataFormItem
+**DataFormItem**
 
 <table>
 
@@ -683,7 +683,7 @@ public class DataModel
 </tr>
 </table>
 
-#### DataFormDefaultLayoutSettings
+**DataFormDefaultLayoutSettings**
 
 The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDefaultLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html) class of `.NET MAUI SfDataForm`.
 
@@ -713,7 +713,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### TextInputLayoutSettings
+**TextInputLayoutSettings**
 
 <table>
 <tr>
@@ -788,7 +788,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormGroupItem
+**DataFormGroupItem**
 
 <table>
 
@@ -846,7 +846,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormPasswordItem
+**DataFormPasswordItem**
 
 <table>
 <tr>
@@ -861,7 +861,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormCheckBoxItem
+**DataFormCheckBoxItem**
 
 <table>
 <tr>
@@ -876,7 +876,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormSwitchItem
+**DataFormSwitchItem**
 
 <table>
 <tr>
@@ -897,7 +897,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormTextEditorItem
+**DataFormTextEditorItem**
 
 <table>
 <tr>
@@ -912,7 +912,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormNumericItem
+**DataFormNumericItem**
 
 <table>
 <tr>
@@ -952,7 +952,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 
 </table>
 
-#### DataFormMaskedTextItem
+**DataFormMaskedTextItem**
 
 <table>
 <tr>
@@ -992,7 +992,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 
 </table>
 
-#### DataFormDateItem
+**DataFormDateItem**
 
 <table>
 <tr>
@@ -1019,7 +1019,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormTimeItem
+**DataFormTimeItem**
 
 <table>
 
@@ -1035,7 +1035,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 </tr>
 </table>
 
-#### DataFormListItem
+**DataFormListItem**
 
 The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.Editors.DataFormPickerEditor.html),  [DataFormAutoCompleteEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.Editors.DataFormAutoCompleteEditor.html),  [DataFormDropDownEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.Editors.DataFormDropDownEditor.html) and  [DataFormRadioGroupEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.Editors.DataFormRadioGroupEditor.html)) are added to the [DataFormListItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html) class in  the `.NET MAUI SfDataForm`.
 
@@ -1064,7 +1064,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-#### DataFormComboBoxItem
+**DataFormComboBoxItem**
 
 <table>
 <tr>
@@ -1085,7 +1085,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-#### DataFormAutoCompleteItem
+**DataFormAutoCompleteItem**
 
 <table>
 
@@ -1101,7 +1101,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-#### DataFormDisplayOptionsAttribute
+**DataFormDisplayOptionsAttribute**
 
 <table>
 
@@ -1147,7 +1147,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-#### DataFormDateRangeAttribute
+**DataFormDateRangeAttribute**
 
 <table>
 
@@ -1199,7 +1199,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-#### DataFormValueConverterAttribute 
+**DataFormValueConverterAttribute**
 
 <table>
 

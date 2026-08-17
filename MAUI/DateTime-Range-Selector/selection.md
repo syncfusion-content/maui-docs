@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Range selection in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to manage range selection behavior in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Range selection in .NET MAUI Range Selector (SfDateTimeRangeSelector)
+# Range selection in .NET MAUI DateTime Range Selector
 
 This section helps to learn about the range selection in the DateTime Range Selector.
 
@@ -68,7 +68,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector date discrete mode](images/selection/step-duration.gif)
+![Range Selector date discrete mode](images/selection/step-duration.gif)
 
 ## Interval Selection
 
@@ -118,7 +118,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector EnableIntervalSelection](images/selection/enableintervalselection.gif)
+![Range Selector EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
 ## DragBehavior
 
@@ -226,7 +226,7 @@ rangeSelector.Content = chart;
 
 ### Both
 
-When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both the thumbs can be moved at the same time without changing the range between the start and end thumbs.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both the thumbs can be moved at the same time without changing the range between the start and end thumbs.
 
 {% tabs %}
 
@@ -275,7 +275,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector DragBehavior](images/selection/drag_behavior.gif)
+![Range Selector DragBehavior](images/selection/drag_behavior.gif)
 
 ## Deferred update
 

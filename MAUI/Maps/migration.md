@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Migrate from Xamarin SfMaps to .NET MAUI Maps | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin SfMaps to Syncfusion® .NET MAUI Maps control and more.
+title: Migrate Xamarin SfMaps to .NET MAUI SfMaps | Syncfusion®
+description: Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps with updated APIs, improved performance, and modern mapping features for geographic visualization.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfMaps to .NET MAUI Maps
+# Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps
 
 To make the migration from the [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps) easier, most of the APIs from the Xamarin SfMaps are kept in the.NET MAUI SfMaps. However, some APIs have been renamed to maintain the consistency of API naming in the .NET MAUI SfMaps. Please find the difference in the following topics.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Header Configuration with Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion
-description: Learn how to configure and customize the header in the Syncfusion backdrop page control in the .NET MAUI platform.
+title: Header Configuration in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to configure and customize the header, icons, and text in the Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Header Configuration in .NET MAUI Backdrop Page (SfBackdropPage)
+# Header Configuration in .NET MAUI Backdrop Page
 
-Add a backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the [`BarBackgroundColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.barbackgroundcolor?view=net-maui-6.0) [`BarTextColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.bartextcolor?view=net-maui-6.0) and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
+Add a Backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the [`BarBackgroundColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.barbackgroundcolor?view=net-maui-6.0) [`BarTextColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.bartextcolor?view=net-maui-6.0) and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
  
 {% highlight C# %} 
 
@@ -27,7 +27,7 @@ public App()
 
 {% endhighlight %}
 
-N> The page header for the backdrop will appear only when adding backdrop as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0).
+N> The page header for the Backdrop will appear only when adding Backdrop as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0).
  
 ## Icon customization
 
@@ -35,13 +35,13 @@ The default icons in the navigation header can be customized using the following
 
 ### Default icons in NavigationPage
 
-When the backdrop page contained within the [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0), the hamburger icon and close icon (X mark ) will be used by default.
+When the Backdrop page contained within the [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0), the hamburger icon and close icon (X mark ) will be used by default.
 
 ![.NET MAUI Backdrop in navigation page](images/header-configuration/default-navigationpage-icons.png)
 
 ### Default icons in FlyoutPage
 
-When the backdrop page is placed in the [FlyoutPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/flyoutpage?view=net-maui-6.0), the down arrow icon and up arrow icon will be used by default.
+When the Backdrop page is placed in the [FlyoutPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/flyoutpage?view=net-maui-6.0), the down arrow icon and up arrow icon will be used by default.
 
 ![.NET MAUI Backdrop in navigation page](images/header-configuration/default-flyoutpage-icons.png)
 

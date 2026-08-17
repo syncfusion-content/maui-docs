@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Range Selection in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to configure range selection in Syncfusion® .NET MAUI DateTime Range Slider with discrete, interval, and drag behavior options.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Range selection in .NET MAUI Range Slider (SfDateTimeRangeSlider)
+# Range Selection in .NET MAUI DateTime Range Slider
 
 This section helps to learn about the range selection in the DateTime Range Slider.
 
@@ -50,7 +50,7 @@ rangeSlider.StepDuration = new SliderStepDuration(years: 1);
 
 {% endtabs %}
 
-![RangeSlider date discrete mode](images/selection/step-duration.gif)
+![Range Slider date discrete mode](images/selection/step-duration.gif)
 
 ## Interval Selection
 
@@ -88,7 +88,7 @@ rangeSlider.EnableIntervalSelection = true;
 
 {% endtabs %}
 
-![RangeSlider EnableIntervalSelection](images/selection/enableintervalselection.gif)
+![Range Slider EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
 ## DragBehavior
 
@@ -130,7 +130,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
 
 ### BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at the same time without changing the range between the start and end thumbs. We had considered this behavior without the range slider thumb radius. It is not possible to move the individual thumb when setting this behavior.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at the same time without changing the range between the start and end thumbs. We had considered this behavior without the Range Slider thumb radius. It is not possible to move the individual thumb when setting this behavior.
 
 {% tabs %}
 
@@ -200,7 +200,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.Both;
 
 {% endtabs %}
 
-![RangeSlider DragBehavior](images/selection/drag_behavior.gif)
+![Range Slider DragBehavior](images/selection/drag_behavior.gif)
 
 ## Deferred update
 

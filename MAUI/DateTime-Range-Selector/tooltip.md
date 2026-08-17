@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Tooltip in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to enable and customize tooltip appearance in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Tooltip in .NET MAUI DateTime Range Selector
 
 This section helps to learn how to add the tooltip in the DateTime Range Selector.
 
@@ -57,7 +57,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector tooltip](images/tooltip/tooltip.png)
+![Range Selector tooltip](images/tooltip/tooltip.png)
 
 ## Show always
 
@@ -106,7 +106,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector show always tooltip](images/tooltip/show-always-tooltip.gif)
+![Range Selector show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
@@ -168,5 +168,5 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector tooltip style](images/tooltip/tooltip-style.png)
+![Range Selector tooltip style](images/tooltip/tooltip-style.png)
 

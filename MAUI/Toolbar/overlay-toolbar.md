@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Overlay Toolbar in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Overlay toolbar support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+title: Overlay Toolbar in .NET MAUI Toolbar | Syncfusion®
+description: Learn about overlay Toolbar support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for floating Toolbar UI.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Overlay Toolbar in .NET MAUI Toolbar (SfToolbar)
+# Overlay in .NET MAUI Toolbar
 
-The toolbar control supports displaying an overlay toolbar in the view. You can add the [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [OverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button, which can be used to close the overlay toolbar.
+The Toolbar control supports displaying an overlay Toolbar in the view. You can add the [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [OverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button, which can be used to close the overlay Toolbar.
 
-## How to display the overlay toolbar
+## How to display the overlay Toolbar
 
-To display an overlay toolbar, define the `OverlayToolbar` property for a toolbar item. When the toolbar item is tapped, the overlay toolbar will appear. The following example shows how to add an overlay toolbar to a toolbar item.
+To display an overlay Toolbar, define the `OverlayToolbar` property for a Toolbar item. When the Toolbar item is tapped, the overlay Toolbar will appear. The following example shows how to add an overlay Toolbar to a Toolbar item.
 
-N> There is no need to set framework‑specific layout properties such as `Height`, `Width`, `FlowDirection`, or explicit frame bounds for the overlay toolbar. The overlay toolbar automatically aligns with the main toolbar, inheriting its layout, size, and orientation. All sizing and flow behavior are managed by the main toolbar.
+N> There is no need to set framework‑specific layout properties such as `Height`, `Width`, `FlowDirection`, or explicit frame bounds for the overlay Toolbar. The overlay Toolbar automatically aligns with the main Toolbar, inheriting its layout, size, and orientation. All sizing and flow behavior are managed by the main Toolbar.
 
 {% tabs %}
 
@@ -121,10 +121,10 @@ namespace ToolbarSample
 ![overlay-toolbar](images/overlay-toolbar.gif)
 
 ## Back icon customization
-The toolbar control support customization of back icon using properties [BackIconAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment), [BackIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor), [BackIconToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText), [BackIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate).
+The Toolbar control support customization of back icon using properties [BackIconAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment), [BackIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor), [BackIconToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText), [BackIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate).
 
-*    **BackIconColor** – This property is used to define the color of the back icon displayed in the overlay toolbar.
-*    **BackIconAlignment** – This property defines the position of the back icon within the overlay toolbar. It supports two position options: [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start), which places the icon at the leading edge, and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End), which positions it at the trailing edge. By default, the back icon appears at the leading position.
+*    **BackIconColor** – This property is used to define the color of the back icon displayed in the overlay Toolbar.
+*    **BackIconAlignment** – This property defines the position of the back icon within the overlay Toolbar. It supports two position options: [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start), which places the icon at the leading edge, and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End), which positions it at the trailing edge. By default, the back icon appears at the leading position.
 
 N> For a `Horizontal` orientation, the `Start` position corresponds to the `left` side and the `End` position to the `right`. In a `Vertical` orientation, the `Start` position aligns with the `top`, while the `End` position aligns with the `bottom`.
 

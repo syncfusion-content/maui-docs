@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Marker Pointer in .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn here all about Content Pointer feature of the Syncfusion® .NET MAUI Linear Gauge control, including image, text pointer support and more.
+title: Content Marker Pointer in .NET MAUI Linear Gauge | Syncfusion®
+description: Content Marker Pointer in .NET MAUI Linear Gauge displays custom content as a marker pointer, enabling flexible representation of values within the gauge scale.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Content Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
+# Content Marker Pointer in .NET MAUI Linear Gauge
 
 The [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) allows you to use any .NET MAUI content as a marker pointer. Multiple content marker pointers can be added to a single gauge. For animation support, refer to the [Pointer animation](https://help.syncfusion.com/maui/linear-gauge/animation#pointer-animation) documentation. The following code sample uses an `Image` as a marker pointer.
 

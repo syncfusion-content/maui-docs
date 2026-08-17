@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data handling in .NET MAUI DataForm control | Syncfusion®
-description: Learn about the commit feature in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Editing in .NET MAUI DataForm | Syncfusion®
+description: Learn about data editing and commit modes in Syncfusion® .NET MAUI DataForm (SfDataForm) for handling user input in mobile and desktop applications.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Editing in .NET MAUI DataForm (SfDataForm)
+# Editing in .NET MAUI DataForm
 
-The data form commits the data and user input to update the value in the underlying data object.
+The DataForm commits the data and user input to update the value in the underlying data object.
 
 ## Commit mode
 
@@ -21,7 +21,7 @@ The supported commit modes are as follows:
 * PropertyChanged
 * Manual
 
-#### LostFocus
+**LostFocus**
 
 If the commit mode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_LostFocus), the value is committed when the editor loses its focus. By default, the DataForm [CommitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_CommitMode) is `LostFocus`.
 
@@ -45,7 +45,7 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-#### PropertyChanged
+**PropertyChanged**
 
 If the commit mode is [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_PropertyChanged), the value will be committed immediately when it is changed.
 
@@ -69,7 +69,7 @@ this.Content = dataForm;
 {% endhighlight %}
 {% endtabs %}
 
-#### Manual
+**Manual**
 
 If the commit mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_Manual), the value should be committed manually by calling the [SfDataForm.Commit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Commit) method.
 
@@ -109,7 +109,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 To show the original value in a different format or as a different value, use the [DataFormValueConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValueConverterAttribute.html) attribute.
 
-#### Changing original value of the DataForm property value using converter
+**Changing original value of the DataForm property value using converter**
 
 {% tabs %}
 {% highlight C# %}
@@ -148,7 +148,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 
 ## Read only mode
 
-The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly) property of the data form.
+The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly) property of the DataForm.
 
 {% tabs %}
 {% highlight XAML %}
@@ -172,7 +172,7 @@ this.Content = dataForm;
 
 The particular editor can be disabled using attributes and [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
-#### Using attribute
+**Using attribute**
 
 An editor can be disabled using the [EditableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-7.0) and [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.readonlyattribute?view=net-6.0).
 
@@ -188,7 +188,7 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-#### Using event
+**Using event**
 
 An editor can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_IsReadOnly) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 

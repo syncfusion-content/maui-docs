@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scale in .NET MAUI Linear Gauge control | Syncfusion®
-description: Learn here all about adding and customizing scale of Syncfusion® .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Scale in .NET MAUI Linear Gauge | Syncfusion®
+description: Scale in .NET MAUI Linear Gauge defines the measurement axis for displaying values, supporting customizable intervals, labels, and visual styling.
 platform: maui
 control: SfLinearGauge
 
 documentation: ug
 ---
 
-# Scale in .NET MAUI Linear Gauge (SfLinearGauge)
+# Scale in .NET MAUI Linear Gauge
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Linear Gauge** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/linear-gauge/getting-started)** guide.
 

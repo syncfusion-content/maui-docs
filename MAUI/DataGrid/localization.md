@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to localize Syncfusion® .NET MAUI DataGrid by translating built-in text and adapting the DataGrid for different languages and regions.
+title: Localization in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to localize Syncfusion® .NET MAUI Data Grid by translating built-in text and adapting the DataGrid for different languages and regions.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# Localization in .NET MAUI DataGrid
+# Localization in .NET MAUI Data Grid
 
 Localization is the process of translating application resources into different languages for specific cultures. The `SfDataGrid` can be localized by adding resource files. The following strings in `SfDataGrid` can be localized:
 

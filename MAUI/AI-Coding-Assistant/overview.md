@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion AI Coding Assistant Overview | Syncfusion
-description: Learn how Syncfusion AI Coding Assistant boost .NET MAUI productivity by generating accurate code snippets, configuration examples, and contextual guidance.
+title: About Syncfusion® AI Coding Assistant Control | Syncfusion®
+description: Learn about the overview of Syncfusion® AI Coding Assistant control, including code generation, smart suggestions, customization options, and key features.
 platform: MAUI
 control: Syncfusion AI Coding Assistant Overview.
 documentation: ug
 ---
 
-# Syncfusion® AI Coding Assistant Overview
+# About Syncfusion® AI Coding Assistant Control
 
 The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant** are designed to streamline your development workflow when building MAUI applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components. It uses contextual knowledge of the Syncfusion<sup style="font-size:70%">&reg;</sup> component library to generate accurate code snippets, configuration examples, and guided explanations—minimizing documentation searches and maximizing productivity.
 

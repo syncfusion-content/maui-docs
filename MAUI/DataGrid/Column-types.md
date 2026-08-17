@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Column Types in .NET MAUI DataGrid | Syncfusion®
-description: Learn all about column types in Syncfusion® .NET MAUI DataGrid, including supported column types, customization options, and usage examples.
+title: Column Types in .NET MAUI Data Grid | Syncfusion®
+description: Learn all about column types in Syncfusion® .NET MAUI Data Grid, including supported column types, customization options, and usage examples.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column types, maui column types
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column types, maui column types
 ---
 
-# Column Types in .NET MAUI DataGrid
+# Column Types in .NET MAUI Data Grid
 
-The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. Each column type serves a specific purpose and provides specialized functionality. Any of the columns can be used depending on the requirements.
+The [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) contains different types of columns. Each column type serves a specific purpose and provides specialized functionality. Any of the columns can be used depending on the requirements.
 
-To get started quickly with column types in .NET MAUI DataGrid, you can check this video:
+To get started quickly with column types in .NET MAUI Data Grid, you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/tLNua3iGnGE"></iframe>
 
@@ -1727,7 +1727,7 @@ SfDataGrid triggers, [CurrentCellDropDownSelectionChanged](https://help.syncfusi
 `SelectedIndex` property returns the index of selected item.
 `SelectedItem` property returns the selected item from drop down list.
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column.png" width="404"/>
 
 ### Auto-complete support
 
@@ -1737,7 +1737,7 @@ You can enable the `SfMultiColumnComboBox` to automatically complete the entered
 
 You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting [AllowIncrementalFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowIncrementalFiltering) property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting [AllowCaseSensitiveFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowCaseSensitiveFiltering) to `true`. These features help users to quickly select items from large list.
 
-<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
 
 ### Null value support
 
@@ -1824,9 +1824,9 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 {% endtabs %}
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404"/>
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
 
 You can download the sample from the following link: [Sample](https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid).
 
@@ -2028,7 +2028,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridTimePicker column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker.png" width="404"/>
+<img alt="DataGridTimePicker column in .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-column-timepicker.png" width="404"/>
 
 ### Null value support
 
@@ -2073,7 +2073,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridTimePicker column with Format in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-timepicker-format.png" width="404"/>
+<img alt="DataGridTimePicker column with Format in .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-column-timepicker-format.png" width="404"/>
 
 ## DataGridCheckBoxSelectorColumn
 
@@ -2110,7 +2110,7 @@ this.Content = dataGrid;
 
 By default, a checkbox is displayed in the header of the selector column, which is used to select or deselect all rows in the datagrid.
 
-<img alt="DataGridCheckBoxSelector column in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector.png" width="404"/>
+<img alt="DataGridCheckBoxSelector column in .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-column-checkboxselector.png" width="404"/>
 
 ### Text on column header
 
@@ -2149,7 +2149,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
+<img alt="DataGridCheckBoxSelector column with AllowCheckboxOnHeader as false in .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-column-checkboxselector-allowcheckboxonheader.png" width="404"/>
 
 ### Canceling the checkbox state change
 
@@ -2234,7 +2234,7 @@ dataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Row header .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-show-row-header.png" width="404"/>
+<img alt="Row header .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-show-row-header.png" width="404"/>
 
 ### Load template in row header
 
@@ -2256,7 +2256,7 @@ The data template can be loaded to the row header by setting the [SfDataGrid.Row
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Row header in .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-show-row-header-load-template.png" width="404"/>
+<img alt="Row header in .NET MAUI Data Grid" src="Images\column-types\maui-datagrid-show-row-header-load-template.png" width="404"/>
 
 ## Bind a view model property inside header template
 

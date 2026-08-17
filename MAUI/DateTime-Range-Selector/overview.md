@@ -1,19 +1,19 @@
 ---
 layout: post
-title: .NET MAUI DateTime Range Selector control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control with key features and more.
+title: About Syncfusion® MAUI DateTime Range Selector Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DateTime Range Selector control and more details.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Overview of .NET MAUI DateTime Range Selector
+# About Syncfusion® .NET MAUI DateTime Range Selector Control
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is an interactive control that makes selecting a range of dates or times simple and clear.
 
 - Instead of manually entering values, users can drag two thumbs across a timeline to define both the start and end points within a minimum and maximum limit.
 
-![.NET MAUI datetime range selector overview ](images/overview/datetime_range_selector.png)
+![.NET MAUI Datetime Range Selector overview ](images/overview/datetime_range_selector.png)
 
 ## Business use cases
 
@@ -53,6 +53,10 @@ The following table summarizes the globalization support available in this contr
 </span>
 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
 </div>
@@ -67,12 +71,12 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/datetime-range-selector/overview">DateTimeRangeSelector</a></td>
+<td><a href="/maui/datetime-range-selector/overview" aria-label="MAUI DateTime Range Selector control overview">DateTimeRangeSelector</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 

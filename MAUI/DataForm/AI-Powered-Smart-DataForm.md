@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI-powered Smart .NET MAUI Dataform for Data Entry | Syncfusion®
-description: Learn here all about how to build an AI powered smart data entry in .NET MAUI SfDataForm by integrating Azure OpenAI.
+title: AI-Powered Smart Data Entry in .NET MAUI DataForm | Syncfusion®
+description: Learn how to build AI-powered smart data entry forms in .NET MAUI DataForm by integrating Azure OpenAI services for intelligent field handling.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# AI-powered Smart .NET MAUI Dataform for Data Entry
+# AI-Powered Smart Data Entry in .NET MAUI DataForm
 
 This guide explains how to implement AI-powered smart data forms in a .NET MAUI application using Syncfusion® DataForm ([SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html)) and AIAssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) controls. These forms automatically generate fields, validate input, and guide users interactively using AI logic from Azure OpenAI Services.
 
@@ -281,9 +281,9 @@ The SfAIAssistView offers contextual help, such as real-time suggestions or chat
 
 {% endtabs %}
 
-### Step 2: Create and Edit Data Form Items using Azure OpenAI
+### Step 2: Create and Edit DataForm Items using Azure OpenAI
 
-#### Creating Data Form Items
+#### Creating DataForm Items
 
 We first create a button click event that triggers the AI-powered form item generation process.
 
@@ -420,11 +420,11 @@ private async void GenerateAIDataForm(string userPrompt)
 
 {% endtabs %}
 
-#### Generating a New Data Form
+#### Generating a New DataForm
 
 When the user request is identified as "New Form", a complete form can be created dynamically.
 
-#### Editing Data Form Items
+#### Editing DataForm Items
 
 Azure OpenAI also allows editing an existing form. The following operations are supported:
  
@@ -446,7 +446,7 @@ Azure OpenAI also allows editing an existing form. The following operations are 
 
 #### Handling Requests via AIAssistView
  
-Finally, the `Request` event in AIAssistView listens to user inputs and invokes the data form generation or edit methods.
+Finally, the `Request` event in AIAssistView listens to user inputs and invokes the DataForm generation or edit methods.
 
 With these implementations, the DataForm becomes AI-powered, enabling users to create and modify form structures dynamically via Azure OpenAI.
 

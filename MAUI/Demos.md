@@ -5,7 +5,6 @@ description: Describes how to download and install the Syncfusion® .NET MAUI Sa
 platform: MAUI
 control: Demo
 documentation: UG
-
 ---
 
 # How to Get and Install the .NET MAUI Sample Browser App

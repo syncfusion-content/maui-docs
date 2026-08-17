@@ -1,17 +1,17 @@
 ---
 layout: post
-title: .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control with key features and more.
+title: About Syncfusion® .NET MAUI Range Slider Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Range Slider control and more details.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI Range Slider
+# About Syncfusion® .NET MAUI Range Slider Control
 
 The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
-![.NET MAUI range slider overview ](images/overview/range_slider_overview.png)
+![.NET MAUI Range Slider overview ](images/overview/range_slider_overview.png)
 
 ## Business use cases
 
@@ -49,6 +49,10 @@ The following table summarizes the globalization support available in the contro
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/full-support.svg" width="16"> Full Support
 </span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
  
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
@@ -65,12 +69,12 @@ The following table summarizes the globalization support available in the contro
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/range-slider/overview">Range Slider</a></td>
+<td><a href="/maui/range-slider/overview" aria-label="MAUI Range Slider control overview">Range Slider</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 

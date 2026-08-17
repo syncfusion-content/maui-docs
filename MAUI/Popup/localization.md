@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in .NET MAUI SfPopup control | Syncfusion®
-description: Learn about Localization support in the Syncfusion® .NET MAUI Popup (SfPopup) control and customize localized UI experiences.
+title: Localization in .NET MAUI Popup control | Syncfusion®
+description: Learn here all about Localization support in the Syncfusion® .NET MAUI Popup (SfPopup) control and customize localized UI experiences.
 platform: MAUI
 control: SfPopup
 documentation: ug
 ---
 
-# Localization in .NET MAUI Popup (SfPopup)
+# Localization in .NET MAUI Popup
 
 Localization is the process of translating the application resources into different languages for specific cultures. The `SfPopup` can be localized by adding a `resource` file.
 

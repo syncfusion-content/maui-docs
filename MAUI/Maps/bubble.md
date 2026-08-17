@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubbles in .NET MAUI Maps Control | Syncfusion®
-description: Learn all about the Bubbles feature of Syncfusion® .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+title: Bubbles in .NET MAUI Maps | Syncfusion®
+description: Bubbles in .NET MAUI Maps visualize data using scalable markers, making it easy to represent geographic values and compare data across locations.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Bubbles in .NET MAUI Maps (SfMaps)
+# Bubbles in .NET MAUI Maps
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **.NET MAUI Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 

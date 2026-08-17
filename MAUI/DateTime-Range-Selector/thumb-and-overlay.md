@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Thumb and Overlay in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Selector control, customization options and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Thumb and Overlay in DateTime Range Selector (SfDateTimeRangeSelector)
+# Thumb and Overlay in .NET MAUI DateTime Range Selector
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Selector.
 
@@ -60,7 +60,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
+![Range Selector thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
 
 ## Thumb color
 
@@ -108,7 +108,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
+![Range Selector thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
 
 ## Thumb stroke thickness and stroke
 
@@ -157,7 +157,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
+![Range Selector thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
 
 ## Thumb overlapping stroke color
 
@@ -205,7 +205,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
+![Range Selector thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
 
 ## Thumb overlay size
 
@@ -253,7 +253,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
+![Range Selector thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
 
 ## Thumb overlay color
 
@@ -301,4 +301,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
+![Range Selector thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion® Avatar View Control for .NET MAUI
-description: Learn about the .NET MAUI Avatar View control, its introduction, key features, and how it enhances modern app design experiences.
+title: About Syncfusion® .NET MAUI Avatar View Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Avatar View control and more details.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
 ---
 
-# Overview of .NET MAUI Avatar View
+# About Syncfusion® .NET MAUI Avatar View Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.com/maui-controls/maui-avatarview) control provides a graphical representation of a user's image. It allows customization of the view by adding an image, background color, icon, and text.
 
@@ -22,7 +22,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.co
 
 ## Key features
 
-- **Image and initials** displays user avatars using profile images or fallback initials.
+- **Image and initials** displays user Avatar Views using profile images or fallback initials.
 - **View** customizes size, background color, border, and corner radius.  
 - **Group view support** combines up to three images or initials within a single view.
 - **Visual styles** apply different appearance styles.  
@@ -30,15 +30,15 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Avatar View](https://www.syncfusion.co
 
 ## Related controls
 
-- [Badge View](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on avatars.  
-- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting user lists with avatar support.  
-- [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user avatars in conversations.  
+- [Badge View](https://help.syncfusion.com/maui/badge-view/overview) for displaying notifications or status indicators on Avatar Views.  
+- [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting user lists with Avatar View support.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for showing user Avatar Views in conversations.  
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/avatar-view/getting-started) shows how to begin using AvatarView step by step.  
-- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) explains how to configure avatar content such as images or initials.  
-- [Customization](https://help.syncfusion.com/maui/avatar-view/customization) shows how to style and customize AvatarView. 
+- [Getting Started](https://help.syncfusion.com/maui/avatar-view/getting-started) shows how to begin using Avatar View step by step.  
+- [Content Type](https://help.syncfusion.com/maui/avatar-view/content-type) explains how to configure Avatar View content such as images or initials.  
+- [Customization](https://help.syncfusion.com/maui/avatar-view/customization) shows how to style and customize Avatar View. 
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
 ## Resources

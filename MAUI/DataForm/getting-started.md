@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI DataForm control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI DataForm | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI DataForm control. Explore setup, features, examples, and customization options
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Getting Started with the .NET MAUI DataForm
+# Getting Started with .NET MAUI DataForm
 
 This section provides a quick overview of how to get started with the [.NET MAUI DataForm(SfDataForm)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario. Follow the steps below to add .NET MAUI DataForm control to your project.
 
@@ -27,7 +27,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI DataForm NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI DataForm NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.DataForm](https://www.nuget.org/packages/Syncfusion.Maui.DataForm/) and install the latest version.
@@ -51,7 +51,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI DataForm NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI DataForm NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -105,7 +105,7 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Define Model and View Model
 
-The [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) is a data edit control, so create a data object with details to create a data form based on your business requirement.
+The [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) is a data edit control, so create a data object with details to create a DataForm based on your business requirement.
 
 Here, the data object named **ContactsInfo** is created with some properties.
 
@@ -160,7 +160,7 @@ using Syncfusion.Maui.DataForm;
 
 ## Step 6: Add the DataForm component
 
-Create an instance and set it as the DataForm's `DataObject`. By default, the data form auto-generates the editors based on the primitive data type in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property. Please refer the following code to set the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property.
+Create an instance and set it as the DataForm's `DataObject`. By default, the DataForm auto-generates the editors based on the primitive data type in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property. Please refer the following code to set the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property.
 
 {% tabs %}
 {% highlight XAML %}

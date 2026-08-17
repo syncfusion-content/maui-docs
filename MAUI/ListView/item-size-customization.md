@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Item Size Customization in .NET MAUI ListView control | Syncfusion®
-description: Learn about Item Size Customization support in the Syncfusion® .NET MAUI ListView (SfListView) control.
+description: Learn about all about Item Size Customization support in the Syncfusion® .NET MAUI ListView (SfListView) control.
 platform: MAUI
 control: SfListView
 documentation: ug
 ---
 
-# Item Size Customization in .NET MAUI ListView (SfListView)
+# Item Size Customization in .NET MAUI ListView
 
 This section explains how to customize the item size in the `.NET MAUI ListView` (SfListView).
 

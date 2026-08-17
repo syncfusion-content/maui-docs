@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Segments in .NET MAUI Linear ProgressBar control | Syncfusion®
-description: Learn all about segments support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
+title: Segments in .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn about segmented progress visualization and multiple progress sections in Syncfusion® .NET MAUI Linear Progress Bar control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
+# Segments in .NET MAUI Linear Progress Bar
 
-To visualize the progress of multiple sequential tasks, split the linear progress bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
+To visualize the progress of multiple sequential tasks, split the Linear Progress Bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -33,7 +33,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with segment](images/segment/segment.png)
+![.NET MAUI Linear Progress Bar with segment](images/segment/segment.png)
 
 ## Gap customization
 
@@ -62,6 +62,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with segment gap width](images/segment/gap-width.png)
+![.NET MAUI Linear Progress Bar with segment gap width](images/segment/gap-width.png)
 
-N> Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

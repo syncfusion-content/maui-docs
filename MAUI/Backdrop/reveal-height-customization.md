@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Reveal height customization of Backdrop Page | Syncfusion®
-description: Learn here all about how to configure and customize the reveal height in the Syncfusion<sup>&reg;</sup> backdrop page control.
+title: Reveal Height Customization in .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to configure and customize the reveal height in Syncfusion® .NET MAUI Backdrop Page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Reveal Height Customization in MAUI Backdrop Page (SfBackdropPage)
+# Reveal Height Customization in .NET MAUI Backdrop Page
 
-When revealing the back layer, the front layer will be moved downwards. By setting the [`BackLayerRevealOption`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption) property of the backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
+When revealing the back layer, the front layer will be moved downwards. By setting the [`BackLayerRevealOption`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption) property of the Backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
 
 The following options are provided to move the front layer:
 
@@ -19,7 +19,7 @@ The following options are provided to move the front layer:
 
 ## Reveal and conceal the back layer
 
-The following options are provided in the backdrop to reveal and conceal the back layer.
+The following options are provided in the Backdrop to reveal and conceal the back layer.
 
 * **Programmatically** - Reveals the back layer by setting the [`IsBackLayerRevealed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_IsBackLayerRevealed) property to true. By default, it is set to false.
 * **Touch interaction** - Reveals the back layer by clicking the toolbar icon at the top-right corner of the navigation bar header. The Hamburger (or menu ) icon reveals, and the Close icon conceals the back layer. When adding the backdrop as a child of the Fly out Page, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons respectively.

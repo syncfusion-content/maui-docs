@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn how to enable and customize tooltips in the Syncfusion® .NET MAUI Range Slider control for interactive value selection.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Range Slider (SfRangeSlider)
+# Tooltip in .NET MAUI Range Slider control
 
 This section helps to learn about how to add tooltip in the range slider.
 
@@ -38,7 +38,7 @@ rangeSlider.Tooltip = new SliderTooltip();
 
 {% endtabs %}
 
-![RangeSlider tooltip](images/tooltip/tooltip.png)
+![Range Slider tooltip](images/tooltip/tooltip.png)
 
 ## Show always
 
@@ -68,7 +68,7 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 {% endtabs %}
 
-![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
+![Range Slider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
@@ -111,5 +111,5 @@ rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endtabs %}
 
-![RangeSlider tooltip style](images/tooltip/tooltip-style.png)
+![Range Slider tooltip style](images/tooltip/tooltip-style.png)
 

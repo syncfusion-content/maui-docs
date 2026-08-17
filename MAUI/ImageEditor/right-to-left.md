@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI Image Editor
+# Right-to-Left in .NET MAUI Image Editor
 
 The [SfImageEditor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports rendering content in right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 

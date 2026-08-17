@@ -1,19 +1,19 @@
 ---
 layout: post
-title: .NET MAUI DateTime Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control with key features and more.
+title: About Syncfusion® .NET MAUI DateTime Slider Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI DateTime Slider control and more details.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Overview of .NET MAUI DateTime Slider
+# About Syncfusion® .NET MAUI DateTime Slider Control
 
 - The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a lightweight, interactive control that makes choosing a date or time quickly.
 
 - Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
-![.NET MAUI datetime slider overview ](images/overview/datetime_slider_overview.png)
+![.NET MAUI DateTime Slider overview ](images/overview/datetime_slider_overview.png)
 
 ## Business use cases
 
@@ -53,6 +53,10 @@ The following table summarizes the globalization support available in this contr
 </span>
 
 <span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/not-applicable.svg" width="16"> Not Applicable
 </span>
 </div>
@@ -67,12 +71,12 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/datetime-slider/overview">DateTimeSlider</a></td>
+<td><a href="/maui/datetime-slider/overview" aria-label="MAUI DateTime Slider control overview">DateTimeSlider</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 </table>
 

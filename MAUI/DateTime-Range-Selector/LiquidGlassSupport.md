@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime RangeSelector | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSelector (SfDateTimeRangeSelector) control.
+title: Liquid Glass Effect in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI DateTime Range Selector for adaptive glass visuals and interactive feedback.
 platform: MAUI
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI DateTimeRangeSelector
+# Liquid Glass Effect in .NET MAUI DateTime Range Selector
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime RangeSelector (SfDateTimeRangeSelector) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 
 ## Apply liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the DateTime RangeSelector control:
+Follow these steps to enable and configure the Liquid Glass Effect in the DateTime Range Selector control:
 
 ### Step 1: Enable the liquid glass effect on DateTime RangeSelector
 
@@ -64,9 +64,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates Range Selector with the glass effect visible on the thumb while it is pressed.
 
-![date time range selector with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
+![DateTime Range Selector with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

@@ -253,7 +253,7 @@ This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExam
 
 ## Size customization
 
-The [ControlSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The property accepts a `double` (in device-independent units) and represents both the width and the height of the CheckBox indicator.
+The [ControlSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. The property accepts a `double` (in device-independent units) and represents both the width and the height of the CheckBox indicator.
 
 {% tabs %}
 {% highlight xaml %}

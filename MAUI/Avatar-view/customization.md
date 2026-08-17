@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Syncfusion® .NET MAUI Avatar View 
-description: Discover how to apply a wide range of customizations to the default view in .NET MAUI Avatar View to match your app’s design needs.
-platform: MAUI
+title: Customization in .NET MAUI Avatar View | Syncfusion®
+description: Learn how to customize appearance, colors, sizes, and shapes in Syncfusion® .NET MAUI Avatar View (SfAvatarView) to match your design needs.
+platform: maui
 control: SfAvatarView
-documentation: UG
+documentation: ug
 ---
 
-# Customization in .NET MAUI Avatar View (SfAvatarView)
+# Customization in .NET MAUI Avatar View
 
 The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides options to customize its appearance, including color and size attributes. 
 

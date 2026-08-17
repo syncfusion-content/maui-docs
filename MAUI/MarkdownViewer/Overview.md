@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion® .NET MAUI Markdown Viewer Control | Syncfusion®
-description: Learn about the introduction of the  Syncfusion® Essential Studio .NET MAUI Markdown Viewer control, its rendering capabilities, and key features.
+description: Learn about the introduction of the Syncfusion® Essential Studio .NET MAUI Markdown Viewer control, its rendering capabilities, and key features.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # About Syncfusion® .NET MAUI Markdown Viewer Control
 
-The [.NET MAUI SfMarkdownViewer](https://www.syncfusion.com/maui-controls/maui-markdown-viewer) is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
+The [.NET MAUI Markdown Viewer](https://www.syncfusion.com/maui-controls/maui-markdown-viewer) is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
 
 ![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
 
@@ -51,6 +51,10 @@ The following table summarizes the globalization support available in this contr
 <span style="display: inline-flex; align-items: center; gap: 6px;">
 <img src="../Images/no-support.svg" width="16"> No Support
 </span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
 </div>
 
 <table>
@@ -63,8 +67,8 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/markdownviewer/overview">Markdown Viewer</a></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><a href="/maui/markdownviewer/overview" aria-label="MAUI Markdown Viewer control overview">Markdown Viewer</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Labels in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to show and customize labels in the .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector) control.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Labels in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Labels in .NET MAUI DateTime Range Selector
 
 This section explains how to add the labels in the DateTime Range Selector.
 
@@ -58,7 +58,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector labels](images/labels-and-dividers/labels.png)
+![Range Selector labels](images/labels-and-dividers/labels.png)
 
 ## Date format
 
@@ -111,7 +111,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector date format](images/labels-and-dividers/date-format.png)
+![Range Selector date format](images/labels-and-dividers/date-format.png)
 
 ## Label placement
 
@@ -162,7 +162,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label placement](images/labels-and-dividers/label-placement.png)
+![Range Selector label placement](images/labels-and-dividers/label-placement.png)
 
 N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-and-commands) to customize the label text format through range slider events.
 
@@ -221,7 +221,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
+![Range Selector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
@@ -289,7 +289,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label style](images/labels-and-dividers/label-style.png)
+![Range Selector label style](images/labels-and-dividers/label-style.png)
 
 ## Label offset
 
@@ -343,4 +343,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label offset](images/labels-and-dividers/label-offset.png)
+![Range Selector label offset](images/labels-and-dividers/label-offset.png)

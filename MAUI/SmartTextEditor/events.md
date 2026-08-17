@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in AI-Powered Text Editor control | Syncfusion®
-description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control and more details.
+title: Events in .NET MAUI Smart Text Editor | Syncfusion®
+description: Learn about events in Syncfusion® .NET MAUI Smart Text Editor control including TextChanged event and event arguments for text change notifications.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Events in .NET MAUI AI-Powered Text Editor (SfSmartTextEditor)
+# Events in .NET MAUI Smart Text Editor
 
 The AI-Powered Text Editor provides the `TextChanged` event, which is triggered whenever the text in the smart text editor changes.
 

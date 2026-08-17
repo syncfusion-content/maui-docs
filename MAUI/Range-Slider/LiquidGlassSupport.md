@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI Range Slider | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
+title: Liquid Glass Effect in .NET MAUI Range Slider | Syncfusion®
+description: Learn how to enable and customize the liquid glass effect in the .NET MAUI Range Slider control for a modern translucent UI.
 platform: MAUI
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Range Slider (SfRangeSlider)
+# Liquid Glass Effect in .NET MAUI Range Slider
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 
@@ -61,9 +61,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates Range Slider with the glass effect visible on the thumb while it is pressed.
 
-![range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
+![Range Slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

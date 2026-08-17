@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick in .NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Tick in .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to add and customize major and minor ticks in the Syncfusion® .NET MAUI DateTime Range Selector, including colors, sizes, offsets, and intervals.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Tick in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Tick in .NET MAUI DateTime Range Selector
 
 This section helps to learn about how to add major and minor ticks in the DateTime Range Selector.
 
@@ -58,7 +58,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector ticks](images/ticks/show-ticks-without-interval.png)
+![Range Selector ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With interval
 
@@ -103,7 +103,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector ticks](images/ticks/show-ticks.png)
+![Range Selector ticks](images/ticks/show-ticks.png)
 
 ## Show minor ticks
 
@@ -152,7 +152,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks](images/ticks/show-minorticks-without-interval.png)
+![Range Selector minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With interval
 {% tabs %}
@@ -198,7 +198,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks](images/ticks/show-minor-ticks.png)
+![Range Selector minor ticks](images/ticks/show-minor-ticks.png)
 
 ## Major ticks color
 
@@ -256,7 +256,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector major ticks color](images/ticks/major-ticks-color.png)
+![Range Selector major ticks color](images/ticks/major-ticks-color.png)
 
 ## Minor ticks color
 
@@ -316,7 +316,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks color](images/ticks/minor-ticks-color.png)
+![Range Selector minor ticks color](images/ticks/minor-ticks-color.png)
 
 ## Ticks size
 
@@ -377,7 +377,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector tick size](images/ticks/tick-size.png)
+![Range Selector tick size](images/ticks/tick-size.png)
 
 ## Ticks offset
 
@@ -436,4 +436,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector tick offset](images/ticks/tick-offset.png)
+![Range Selector tick offset](images/ticks/tick-offset.png)

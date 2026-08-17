@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Sorting in .NET MAUI TreeView (SfTreeView)
+# Sorting in .NET MAUI TreeView
 
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control provides built-in support for sorting data using the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
 

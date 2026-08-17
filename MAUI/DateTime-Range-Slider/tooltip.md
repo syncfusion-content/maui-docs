@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Range Slider control | Syncfusion®
+title: Tooltip in .NET MAUI DateTime Range Slider control | Syncfusion®
 description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Tooltip in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to add tooltip in the DateTime Range Slider.
 
@@ -45,7 +45,7 @@ rangeSlider.Tooltip = new SliderTooltip();
 
 {% endtabs %}
 
-![RangeSlider tooltip](images/tooltip/tooltip.png)
+![Range Slider tooltip](images/tooltip/tooltip.png)
 
 ## Show always
 
@@ -82,7 +82,7 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 {% endtabs %}
 
-![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
+![Range Slider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/datetime-range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
@@ -132,5 +132,4 @@ rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endtabs %}
 
-![RangeSlider tooltip style](images/tooltip/tooltip-style.png)
-
+![Range Slider tooltip style](images/tooltip/tooltip-style.png)
