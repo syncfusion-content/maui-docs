@@ -52,7 +52,7 @@ Content = sfBadgeView;
 
 ![Badge position](badge-position_images/net_maui_badge_view_position.png)
 
-## Setting a badge Offset
+## Setting a Badge Offset
 
 The x,y position of the Badge View can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property to achieve precise placement.
 

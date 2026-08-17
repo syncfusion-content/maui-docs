@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Slider
 
-This section helps to learn about how to add tooltip in the slider.
+This section helps to learn about how to add tooltip in the Slider.
 
 ## Enable tooltip
 
