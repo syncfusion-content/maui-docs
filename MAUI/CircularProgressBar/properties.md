@@ -146,7 +146,6 @@ documentation: ug
         <th>Name</th>
         <th>Type</th>
         <th>Description</th>
-    </tr>d:\UG\devfinalfix\maui-docs\MAUI\NumericEntry\properties.md
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_" aria-label="View SetProgress method in API reference">SetProgress</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
@@ -154,7 +153,7 @@ documentation: ug
     </tr>
 </table>
 
-## Events
+## Events  
 
 <table>
     <tr>
