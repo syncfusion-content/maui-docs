@@ -1,0 +1,81 @@
+---
+layout: post
+title: Localization in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about localization in Syncfusion .NET MAUI Date Time Picker control for multi-language and culture support.
+platform: maui
+control: SfDateTimePicker
+documentation: ug
+---
+
+# Localization in .NET MAUI Date Time Picker control
+
+Localization is the process of translating the application resources into different languages for specific cultures. The `SfDateTimePicker` can be localized by adding a resource file. `SfDateTimePicker` supports localizing the following strings:
+
+   * `Day`
+   * `Month`
+   * `Year`
+   * `Hour`
+   * `Minute`
+   * `Second`
+   * `Meridian`
+   * `OK`
+   * `Cancel`
+
+## Setting CurrentUICulture to the application
+
+Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+
+{% tabs %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 11 15" %}
+
+using Syncfusion.Maui.Picker;
+using System.Globalization;
+using System.Resources;
+
+namespace DateTimePicker;
+public partial class App : Application
+{
+	public App()
+	{
+		InitializeComponent();
+		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+      //// ResXPath => Full path of the resx file; For example : //SfPickerResources.ResourceManager = new ResourceManager
+      // ("DateTimePicker.Resources.SfDateTimePicker", Application.Current.GetType().Assembly);
+
+		SfPickerResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
+	   MainPage = new MainPage();
+	}
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+   ![Date Time picker Date localization in .NET MAUI Date Picker.](images/localization/maui-date-time-picker-date-localization.png)
+
+   ![Date Time picker Time localization in .NET MAUI Date Picker.](images/localization/maui-date-time-picker-time-localization.png)
+
+N>
+The required `resx` files must have their `Build Action` set to `EmbeddedResource`, and the file name must contain the culture code (for example, `SfDateTimePicker.fr-FR.resx`). Place the files in the `Resources` folder.
+
+## Localize application level
+
+To localize the `DateTimePicker` based on `CurrentUICulture` using `resource` files, follow the below steps.
+
+   1. Create new folder, named as `Resources` in the application.
+
+   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+
+   3. In Add New Item wizard, select the Resource File option and name the filename as `SfDateTimePicker.<culture name>.resx.` For example, give the name as `SfDateTimePicker.fr-FR.resx` for French culture.
+
+   4. The culture name indicates the name of the language and country.
+
+   ![shows-the-name-of-resource-file-to-be-added-for-maui-date-time-picker](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-date-time-picker.png)
+
+
+   5. Now, select `Add` option to add the resource file in **Resources** folder.
+
+   ![shows-the-added-resource-file-for-french-language-in-maui-date-time-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-date-time-picker.png)
+
+   6. Add the Name/Value pair in Resource Designer of `SfDateTimePicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
+
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-date-time-picker](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-date-time-picker.png)
