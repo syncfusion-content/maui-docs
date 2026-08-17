@@ -50,7 +50,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider](images/labels-and-dividers/divider.png)
+![Range Selector divider](images/labels-and-dividers/divider.png)
 
 ## Divider radius
 
@@ -206,4 +206,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider color](images/labels-and-dividers/divider-color.png)
+![Range Selector divider color](images/labels-and-dividers/divider-color.png)

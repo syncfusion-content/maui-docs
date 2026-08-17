@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn about events supported in Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control for progress tracking and user interactions.
+title: Events in .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn about events supported in Syncfusion® .NET MAUI Linear Progress Bar (SfLinearProgressBar) control for progress tracking and user interactions.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI Linear ProgressBar
+# Events in .NET MAUI Linear Progress Bar
 
 ## ProgressChanged
 
@@ -78,4 +78,4 @@ private void OnProgressCompleted(object sender, ProgressValueEventArgs e)
 
 {% endtabs %}
 
-N> Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

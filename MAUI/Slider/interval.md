@@ -9,7 +9,7 @@ documentation: ug
 
 # Interval in .NET MAUI Slider
 
-This section explains how to add the interval for numeric slider.
+This section explains how to add the interval for numeric Slider.
 
 ## Numeric interval
 

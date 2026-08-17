@@ -44,7 +44,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider labels](images/labels-and-dividers/labels.png)
+![Range Slider labels](images/labels-and-dividers/labels.png)
 
 ## Number format
 
@@ -81,7 +81,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider number format](images/labels-and-dividers/number-format.png)
+![Range Slider number format](images/labels-and-dividers/number-format.png)
 
 ## Label placement
 
@@ -118,7 +118,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
+![Range Slider label placement](images/labels-and-dividers/label-placement.png)
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands) to customize label text format through range slider events.
 
@@ -161,7 +161,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
+![Range Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
@@ -217,7 +217,7 @@ rangeSlider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
 
 {% endtabs %}
 
-![RangeSlider label style](images/labels-and-dividers/label-style.png)
+![Range Slider label style](images/labels-and-dividers/label-style.png)
 
 ## Label offset
 
@@ -259,7 +259,7 @@ rangeSlider.LabelStyle.Offset = 10;
 
 {% endtabs %}
 
-![RangeSlider label offset](images/labels-and-dividers/label-offset.png)
+![Range Slider label offset](images/labels-and-dividers/label-offset.png)
 
 ## Disabled labels
 
@@ -421,4 +421,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider label disabled state](images/labels-and-dividers/labels-disabled.png)
+![Range Slider label disabled state](images/labels-and-dividers/labels-disabled.png)

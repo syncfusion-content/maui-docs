@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> **[.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop)** page comprises two surfaces: a back layer and a front layer. The back layer holds actionable content (like navigation or filtration), which is relevant to the front layer.
 
-   ![BackdropPage control for .NET MAUI.](images/overview/net_maui_backdrop.gif)
+   ![Backdrop page control for .NET MAUI.](images/overview/net_maui_backdrop.gif)
 
 ## Business use cases
 
@@ -64,7 +64,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/backdrop/overview">Backdrop</a></td>
+<td><a href="/maui/backdrop/overview" aria-label="MAUI Backdrop control overview">Backdrop</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>

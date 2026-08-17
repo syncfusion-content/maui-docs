@@ -11,28 +11,28 @@ documentation: ug
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Toolbar](https://www.syncfusion.com/maui-controls/maui-toolbar) control is a customizable UI control that provides quick access to actions or commands through buttons, icons, or menus, enhancing usability and efficiency. It offers a structured, customizable, and user-friendly layout that supports multiple orientations, item alignments, and overflow handling.
 
-![.NET MAUI toolbar overview ](images/overview.png)
+![.NET MAUI Toolbar overview ](images/overview.png)
 
 ## Business use cases
 
 - Applications that require quick access to common actions such as save, edit, or navigation commands.  
-- Productivity and editor apps that provide toolbar-based command execution for user tasks.  
+- Productivity and editor apps that provide Toolbar-based command execution for user tasks.  
 - Dashboard applications that expose frequently used actions in a compact and accessible UI.  
 - Business applications that require organized command layouts with support for overflow and responsiveness.  
 
 ## Key features
 
 - **Toolbar item** allows displaying icons, text, or custom views for flexible command representation.  
-- **Orientation** allows arranging toolbar items in horizontal or vertical layouts.  
-- **Item alignment** allows positioning items at the start, center, or end of the toolbar.  
+- **Orientation** allows arranging Toolbar items in horizontal or vertical layouts.  
+- **Item alignment** allows positioning items at the start, center, or end of the Toolbar.  
 - **Overflow handling** allows managing extra items using scroll, navigation buttons, or a more options menu.  
 - **Overflow positioning** allows controlling the placement of overflow items based on available space.  
-- **Overlay toolbar** allows displaying floating toolbars that appear when needed.  
-- **Separator** allows visually dividing toolbar items for better clarity and grouping.  
-- **Tooltip** allows showing additional information when interacting with toolbar items.  
-- **Enable or disable** allows controlling the availability of individual toolbar actions.  
-- **Interaction** allows selecting and highlighting toolbar items for better usability.  
-- **Keyboard support** allows navigating and interacting with toolbar items through keyboard shortcuts.  
+- **Overlay Toolbar** allows displaying floating Toolbars that appear when needed.  
+- **Separator** allows visually dividing Toolbar items for better clarity and grouping.  
+- **Tooltip** allows showing additional information when interacting with Toolbar items.  
+- **Enable or disable** allows controlling the availability of individual Toolbar actions.  
+- **Interaction** allows selecting and highlighting Toolbar items for better usability.  
+- **Keyboard support** allows navigating and interacting with Toolbar items through keyboard shortcuts.  
 
 ## Globalization
 
@@ -70,7 +70,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/toolbar/overview">Toolbar</a></td>
+<td><a href="/maui/toolbar/overview" aria-label="MAUI Toolbar control overview">Toolbar</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
