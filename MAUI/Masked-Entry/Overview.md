@@ -64,7 +64,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/masked-entry/overview">Masked Entry</a></td>
+<td><a href="/maui/masked-entry/overview" aria-label="MAUI Masked Entry control overview">Masked Entry</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -310,7 +310,7 @@ Read Blogs
     <h3 class="form-title">Use Case Sample</h3>
 </div>
     <div class="form-description">
-      Explore a real-world application that demonstrates the practical use of the MaskedEntry.
+Explore a real-world application that demonstrates the practical use of the Masked Entry.
     </div>
     <a href="https://github.com/syncfusion/maui-aisalesdashboard" class="explore-link">
     View Sample

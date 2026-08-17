@@ -1,15 +1,15 @@
 ---
 layout: post
-title: AI-Driven predictive data entry in .NET MAUI DataGrid | Syncfusion
-description: Learn all about the AI-driven predictive data entry feature in Syncfusion® .NET MAUI DataGrid, including setup, capabilities, and usage examples.
+title: AI-Driven predictive data entry in .NET MAUI Data Grid | Syncfusion
+description: Learn all about the AI-driven predictive data entry feature in Syncfusion® .NET MAUI Data Grid, including setup, capabilities, and usage examples.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# AI-Driven Predictive Data Entry in .NET MAUI DataGrid
+# AI-Driven Predictive Data Entry in .NET MAUI Data Grid
 
-This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates using Azure OpenAI to predict GPA and grade values based on historical student performance data.
+This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI Data Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates using Azure OpenAI to predict GPA and grade values based on historical student performance data.
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
@@ -121,11 +121,11 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 {% endtabs %}
 
-## Integrating AI-Driven Predictive Data Entry in .NET MAUI DataGrid
+## Integrating AI-Driven Predictive Data Entry in .NET MAUI Data Grid
 
-After completing the Azure OpenAI setup above, use the [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
+After completing the Azure OpenAI setup above, use the [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
 
-Before proceeding, review the [.NET MAUI DataGrid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
+Before proceeding, review the [.NET MAUI Data Grid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
 ### Step 1: Create the DataGrid Layout
 
@@ -206,7 +206,7 @@ Before proceeding, review the [.NET MAUI DataGrid getting started guide](https:/
 
 {% endtabs %}
 
-### Step 2: Enable AI-Powered .NET MAUI DataGrid
+### Step 2: Enable AI-Powered .NET MAUI Data Grid
 
 Create a method to send student data to Azure OpenAI for prediction. The AI service analyzes historical GPA data and returns predictions for Final Year GPA, CGPA, and Total Grade. After deserializing the JSON response, add these new columns to the DataGrid and populate each row with the predicted values.
 
@@ -281,6 +281,6 @@ private async Task GetResponseAsync()
 {% endtabs %}
 
 
-![AI driven Smart Predictive Data Entry .NET MAUI DataGrid](Images/smart-ai-solutions/predictive-data-entry.gif)
+![AI driven Smart Predictive Data Entry .NET MAUI Data Grid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
 You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/PredictiveDataEntry).

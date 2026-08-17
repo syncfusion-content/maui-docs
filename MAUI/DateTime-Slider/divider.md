@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding and customizing the slider divider feature in .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Dividers in .NET MAUI DateTime Slider | Syncfusion®
+description: Learn how to show, style, and customize dividers in the Syncfusion® .NET MAUI DateTime Slider control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Dividers in .NET MAUI DateTime Slider (SfDateTimeSlider)
+# Dividers in .NET MAUI DateTime Slider
 
 This section explains how to add dividers to the DateTime Slider.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Selection in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to use selection features in Syncfusion® .NET MAUI DataGrid including row, cell, and multiple selection modes with customization options.
+title: Selection in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to use selection features in Syncfusion® .NET MAUI Data Grid including row, cell, and multiple selection modes with customization options.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui selection, maui selection
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui selection, maui selection
 ---
 
 # Selection in .NET MAUI DataGrid
 
-The MAUI DataGrid [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to select one or more rows based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
+The MAUI Data Grid [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to select one or more rows based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
 
-To get started quickly with performing selection in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
+To get started quickly with performing selection in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/mN95SPfVcHo"></iframe>
 
@@ -172,7 +172,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Multiple Selection in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-multiple-selection.png" width="404" />
+<img alt="Multiple Selection in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-multiple-selection.png" width="404" />
 
 ### Process cell selection using methods
 
@@ -218,7 +218,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="All the rows selected in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-selectall.png" width="404" />
+<img alt="All the rows selected in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-selectall.png" width="404" />
 
 ## Column selection
 The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection) property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
@@ -245,7 +245,7 @@ The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404" />
+<img alt="Column selection support in .NET MAUI Data Grid" src="Images\selection\maui_datagrid_column_selection.gif" width="404" />
 
 ## Selection behavior
 
@@ -478,7 +478,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Extended selection support in .NET MAUI DataGrid" src="Images\selection\maui-dataGrid-extendedSelection.png" width="404" />
+<img alt="Extended selection support in .NET MAUI Data Grid" src="Images\selection\maui-dataGrid-extendedSelection.png" width="404" />
 
 ## Shift and ctrl Key Combinations
 
@@ -595,7 +595,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Move current cell in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-movecurrentcell.png" width="404" />
+<img alt="Move current cell in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-movecurrentcell.png" width="404" />
 
 ## Clear selection
 The `DataGrid` allows you to clear the selection applied in the grid rows and columns either by setting the `SfDataGrid.SelectionMode` to None or by calling the [SfDataGrid.ClearSelection()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ClearSelection) method.
@@ -732,7 +732,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customize the current row highlight color in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-currentrowhighlight.png" width="404" />
+<img alt="Customize the current row highlight color in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-currentrowhighlight.png" width="404" />
 
 ## Customizing Selection Appearance
 
@@ -770,7 +770,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Selection style in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-selection-style.png" width="404" />
+<img alt="Selection style in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-selection-style.png" width="404" />
 
 ### Current Cell Border Styling
 
@@ -806,7 +806,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Current cell style in .NET MAUI DataGrid" src="Images\selection\maui-datagrid-currentcell-style.png" width="404" >
+<img alt="Current cell style in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-currentcell-style.png" width="404" >
 
 ## Binding selection properties
 The SfDataGrid allows you to bind the selection properties such as `SelectedIndex` and `SelectedRow` to the properties in the ViewModel directly.

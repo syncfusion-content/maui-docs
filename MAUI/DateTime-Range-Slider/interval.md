@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Interval in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to configure the Interval, IntervalType, and DateFormat to control labels, ticks, and dividers in the .NET MAUI DateTime Range Slider.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Interval in .NET MAUI Range Slider (SfDateTimeRangeSlider)
+# Interval in .NET MAUI DateTime Range Slider
 
 This section explains how to add the interval for the DateTime Range Slider.
 
@@ -55,7 +55,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider date interval](images/interval/date-interval.png)
+![Range Slider date interval](images/interval/date-interval.png)
 
 ## Auto interval
 

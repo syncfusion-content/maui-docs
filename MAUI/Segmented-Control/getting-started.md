@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Segmented control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Segmented control (SfSegmentedControl) in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI Segmented Control | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Segmented Control. Explore setup, features, examples, and customization options.
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
 
-# Getting Started with the .NET MAUI Segmented Control
+# Getting Started with .NET MAUI Segmented Control
 
 This section provides a quick overview of how to get started with the [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario. Follow the steps below to add .NET MAUI Segmented control to your project.
 
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons Control NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Buttons Control NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
@@ -56,7 +56,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Segmented Control NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Segmented Control NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -80,7 +80,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Segmented Control NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Segmented Control NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.

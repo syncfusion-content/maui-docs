@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfShimmer to .NET MAUI SfShimmer
-description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Shimmer to Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer control.
+title: Migration to .NET MAUI Shimmer | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Shimmer control to .NET MAUI Shimmer control with API comparisons.
 platform: maui
 control: SfShimmer
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfShimmer to .NET MAUI SfShimmer 
+# Migration from Xamarin Shimmer to .NET MAUI Shimmer
 
 To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) easier, most of the APIs from the Xamarin SfShimmer were kept in the .NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
 
@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xa
 
 ## Initialize control
 
-To initialize the control, import the shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
+To initialize the control, import the Shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
 
 <table>
 <tr>
@@ -102,7 +102,7 @@ this.Content = shimmer;
 
 ## Properties
 
-### SfShimmer
+### Shimmer
 
 The following code example, explains how to initialize the properties of the `Xamarin SfShimmer` and `.NET MAUI SfShimmer` class.
 

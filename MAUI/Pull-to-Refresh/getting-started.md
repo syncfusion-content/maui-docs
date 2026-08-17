@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI PullToRefresh control | Syncfusion®
+title: Getting Started with .NET MAUI Pull to Refresh control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-pull-to-refresh"
-description: Learn here about getting started with Syncfusion® .NET MAUI PullToRefresh (SfPullToRefresh) control, its elements, and more.
+description: Learn here all about how to get started with Syncfusion® .NET MAUI Pull to Refresh (SfPullToRefresh) control, its elements, and more.
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI PullToRefresh
+# Getting Started with .NET MAUI Pull to Refresh
 
 This section guides you through setting up and configuring a [PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) in your .NET MAUI application. Follow the steps below to add a basic PullToRefresh to your project.
 
@@ -28,7 +28,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI PullToRefresh NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Pull to Refresh NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version.
@@ -52,11 +52,11 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name, and press <kbd>Enter</kbd>.
 4. Then choose **Create project**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI PullToRefresh NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Pull to Refresh NuGet package
 
 1. Press <kbd>Ctrl</kbd>+<kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you are in the project root directory where your `.csproj` file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.PullToRefresh` to install the Syncfusion<sup>®</sup> .NET MAUI PullToRefresh package.
+3. Run the command `dotnet add package Syncfusion.Maui.PullToRefresh` to install the Syncfusion<sup>®</sup> .NET MAUI Pull to Refresh package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
@@ -75,7 +75,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the project name, solution name, and location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI PullToRefresh NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Pull to Refresh NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh/) and install the latest version.
@@ -164,7 +164,7 @@ For MVVM scenarios, you can also bind `IsRefreshing` to a boolean property on yo
 
 The following image shows the default `SlideOnTop` transition behavior:
 
-![.NET MAUI PullToRefresh with default slide on top transition mode](Images/getting-started/maui-pull-to-refresh-slideontop-mode.gif)
+![.NET MAUI Pull to Refresh with default slide on top transition mode](Images/getting-started/maui-pull-to-refresh-slideontop-mode.gif)
 
 You can download the PullToRefresh Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-pull-to-refresh/tree/master).
 
@@ -186,7 +186,7 @@ To use the [Push](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefr
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI PullToRefresh with push transition mode](Images/getting-started/maui-pull-to-refresh-push-mode.gif)
+![.NET MAUI Pull to Refresh with push transition mode](Images/getting-started/maui-pull-to-refresh-push-mode.gif)
 
 For details on additional properties such as `ProgressColor`, `PullingThreshold`, and `RefreshContent`, see the [Customization](customization.md) page.
 

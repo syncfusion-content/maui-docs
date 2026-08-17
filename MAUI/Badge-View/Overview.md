@@ -1,15 +1,14 @@
 ---
-
 layout: post
-title: Overview of Syncfusion® .NET MAUI Badge View
-description: This section provides a quick overview and explains the key features of the Syncfusion® .NET MAUI Badge View control.
+title: About Syncfusion® .NET MAUI Badge View Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Badge View control and more details.
 platform: MAUI
 control: SfBadgeView
 documentation: UG
 
 ---
 
-# Overview of .NET MAUI Badge View
+# About Syncfusion® .NET MAUI Badge View Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) (SfBadgeView) is used to notify users of new or unread messages, notifications, or the status of various events within your application.
 
@@ -17,15 +16,15 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Badge View](https://www.syncfusion.com
 
 ## Business use cases
 
-- Messaging applications that display unread message counts and notification badges.  
+- Messaging applications that display unread message counts and notification Badge Views.  
 - E-commerce applications that highlight cart item counts and order updates.  
 - Dashboard applications that show alerts, warnings, or status indicators.  
 - Social and productivity apps that require quick visual notification indicators.  
 
 ## Key features
 
-- **Positioning** allows placing the badge around the target element to suit different UI layouts.  
-- **Predefined styles** provide built-in color options to quickly customize the badge appearance.  
+- **Positioning** allows placing the Badge View around the target element to suit different UI layouts.  
+- **Predefined styles** provide built-in color options to quickly customize the Badge View appearance.  
 - **Animation support** enables adding visual effects to highlight updates and draw user attention.  
 
 ## Globalization
@@ -64,7 +63,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/badge-view/overview">Badge View</a></td>
+<td><a href="/maui/badge-view/overview" aria-label="MAUI Badge View control overview">Badge View</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -75,15 +74,15 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with badge indicators.  
+- [Avatar View](https://help.syncfusion.com/maui/avatar-view/overview) for displaying user profiles with Badge View indicators.  
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for presenting notification items in a structured format.  
-- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message badges.  
+- [Chat](https://help.syncfusion.com/maui/chat/overview) for building messaging interfaces with unread message Badge Views.  
 
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui/badge-view/getting-started) shows how to begin using the Badge View step by step.  
-- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify badge appearance and styles.  
-- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with badge animation effects.
+- [Badge Customization](https://help.syncfusion.com/maui/badge-view/badge-customization) shows how to modify Badge View appearance and styles.  
+- [Animation](https://help.syncfusion.com/maui/badge-view/animation) shows how to enhance UI with Badge View animation effects.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources

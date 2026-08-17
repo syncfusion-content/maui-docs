@@ -309,7 +309,7 @@ Apply custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/Syn
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="combobox" 
+<editors:SfComboBox x:Name="comboBox" 
     DropDownPlacement="Bottom"
     MaxDropDownHeight="200"
     IsEditable="True"

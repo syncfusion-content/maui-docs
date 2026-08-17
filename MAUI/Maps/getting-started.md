@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Maps control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Maps (SfMaps) control, its elements, and more. 
+title: Getting Started with .NET MAUI Maps | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Maps control. Explore setup, layers, markers, shapes, and geographic visualization features.
 platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui maps library.
 ---
 
-# Getting started with .NET MAUI Maps (SfMaps)
+# Getting Started with .NET MAUI Maps
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide.
 

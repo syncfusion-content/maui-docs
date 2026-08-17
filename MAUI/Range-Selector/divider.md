@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Dividers feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Dividers in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to show and customize dividers in the Syncfusion® .NET MAUI Range Selector control for better visual guidance.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Dividers in .NET MAUI Range Selector (SfRangeSelector)
+# Dividers in .NET MAUI Range Selector
 
 This section explains how to add the dividers in the Range Selector.
 
@@ -50,7 +50,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider](images/labels-and-dividers/divider.png)
+![Range Selector divider](images/labels-and-dividers/divider.png)
 
 ## Divider radius
 
@@ -206,4 +206,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider color](images/labels-and-dividers/divider-color.png)
+![Range Selector divider color](images/labels-and-dividers/divider-color.png)

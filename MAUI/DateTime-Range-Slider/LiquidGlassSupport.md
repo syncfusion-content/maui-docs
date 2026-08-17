@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI DateTime RangeSlider | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
-platform: MAUI
+title: Liquid Glass Effect in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI DateTime Range Slider for a modern, translucent experience.
+platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI DateTimeRangeSlider
+# Liquid Glass Effect in .NET MAUI DateTime Range Slider
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime RangeSlider (SfDateTimeRangeSlider) control.
 
 ## Apply liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the DateTime RangeSlider control:
+Follow these steps to enable and configure the Liquid Glass Effect in the DateTime Range Slider control:
 
-### Step 1: Enable the liquid glass effect on DateTime RangeSlider
+### Step 1: Enable the liquid glass effect on DateTime Range Slider
 
 Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect) property to `true` in the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
 
@@ -64,9 +64,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates Range Slider with the glass effect visible on the thumb while it is pressed.
 
-![date time range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
+![DateTime Range Slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

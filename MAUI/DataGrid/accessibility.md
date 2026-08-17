@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI DataGrid | Syncfusion®
-description: Learn about the accessibility support available in Syncfusion® .NET MAUI DataGrid. Explore features designed to improve usability for all users.
+title: Accessibility in .NET MAUI Data Grid | Syncfusion®
+description: Learn about the accessibility support available in Syncfusion® .NET MAUI Data Grid. Explore features designed to improve usability for all users.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui accessibility, maui accessibility
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui accessibility, maui accessibility
 ---
 
-# Accessibility in .NET MAUI DataGrid
+# Accessibility in .NET MAUI Data Grid
 
 SfDataGrid and SfDataPager provide built-in [AutomationId](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.element.automationid?view=net-maui-10.0) support for all their inner elements. The `AutomationId` property enables UI automation frameworks and test scripts to identify and interact with individual grid and pager elements. A unique `AutomationId` is automatically assigned to each inner element by combining the control's `AutomationId` with the element's identifier (row index, column index, or button name).
 

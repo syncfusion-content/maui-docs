@@ -81,7 +81,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with a Unicode calendar emoji as the leading view, positioned inside the container](images/CustomIcons/LeadingView.png)
+![Text Input Layout with a Unicode calendar emoji as the leading view, positioned inside the container](images/CustomIcons/LeadingView.png)
 
 ## Trailing view
 
@@ -123,7 +123,7 @@ Content = new VerticalStackLayout
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with a Unicode eye emoji as the trailing view, positioned outside the container](images/CustomIcons/TrailingView.png)
+![Text Input Layout with a Unicode eye emoji as the trailing view, positioned outside the container](images/CustomIcons/TrailingView.png)
 
 
 ## Show or hide the leading and trailing views
@@ -266,7 +266,7 @@ public class TextInputLayoutViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![SfTextInputLayout with both the leading and trailing views hidden using ShowLeadingView and ShowTrailingView](images/CustomIcons/LeadTrailCust.png)
+![Text Input Layout with both the leading and trailing views hidden using ShowLeadingView and ShowTrailingView](images/CustomIcons/LeadTrailCust.png)
 
 ## See Also
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Filtering in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to filter data in Syncfusion® .NET MAUI DataGrid, including built-in filtering options, custom filters, and filter customization.
+title: Filtering in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to filter data in Syncfusion® .NET MAUI Data Grid, including built-in filtering options, custom filters, and filter customization.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui filtering, maui filtering
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui filtering, maui filtering
 ---
 
-# Filtering in .NET MAUI DataGrid
+# Filtering in .NET MAUI Data Grid
 
 Filtering is the process of retrieving values in a collection that satisfy specified conditions. The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides two filtering approaches: programmatic filtering via predicates and UI-based filtering through interactive menus.
 
-To get started quickly with filtering in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
+To get started quickly with filtering in [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid), you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/KpN28Mi0Qn0'></iframe>
 

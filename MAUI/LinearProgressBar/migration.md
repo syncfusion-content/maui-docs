@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  Linear ProgressBar | Syncfusion®
-description: Learn all about migrating from the Syncfusion® Xamarin Linear ProgressBar to the Syncfusion® .NET MAUI Linear ProgressBar control.
+title: Migration to .NET MAUI  Linear Progress Bar | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Linear Progress Bar to .NET MAUI Linear Progress Bar with API comparisons.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms to .NET MAUI SfLinearProgressBar
+# Migration to .NET MAUI Linear Progress Bar
 
 To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI SfLinearProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin SfLinearProgressBar were kept in the .NET MAUI SfLinearProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
@@ -69,8 +69,8 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin SfLinearProgressBar</th>
-<th>.NET MAUI SfLinearProgressBar</th>
+<th>Xamarin Linear Progress Bar</th>
+<th>.NET MAUI Linear Progress Bar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>
@@ -161,7 +161,7 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 N> All the (*) marked APIs are renamed from Xamarin SfLinearProgressBar to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar.
 
-The following code example explains how to use the properties in the Xamarin linear progress bar and the .NET MAUI linear progress bar.
+The following code example explains how to use the properties in the Xamarin Linear Progress Bar and the .NET MAUI Linear Progress Bar.
 
 <table>
 <tr>

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Parallax View control | Syncfusion®
+title: Getting Started with .NET MAUI Parallax View control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/maui-controls/maui-parallax-view"
-description: Learn about getting started with Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
+description: Learn here all about how to get started with Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Parallax View (SfParallaxView)
+# Getting Started with .NET MAUI Parallax View
 
 This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ParallaxView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Parallax View NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
@@ -56,11 +56,11 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ParallaxView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Parallax View NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion<sup>®</sup> .NET MAUI ParallaxView package.
+3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion<sup>®</sup> .NET MAUI Parallax View package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 {% endtabcontent %}
@@ -80,7 +80,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI ParallaxView NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Parallax View NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events and Commands support in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn about Events and Commands support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless interactions.
+title: Events in .NET MAUI Toolbar | Syncfusion®
+description: Learn about events and commands in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless user interactions.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Events in .NET MAUI Toolbar (SfToolbar)
+# Events in .NET MAUI Toolbar
 
 The Toolbar supports the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped), [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction), [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressed), [MoreItemsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged), and [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped) events to interact with .NET MAUI Toolbar.
 
@@ -19,10 +19,10 @@ Below is a list of the arguments:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **Tapped**: The tapped action performed on an toolbar element can be found in the [ToolbarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html), you can see details about the tapped items.
+* **Tapped**: The tapped action performed on an Toolbar element can be found in the [ToolbarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html), you can see details about the tapped items.
 
-    * **NewToolbarItem** : Returns the tapped toolbar item.
-    * **PreviousToolbarItem** : Returns the previously tapped toolbar item.
+    * **NewToolbarItem** : Returns the tapped Toolbar item.
+    * **PreviousToolbarItem** : Returns the previously tapped Toolbar item.
 
 {% tabs %}
 
@@ -55,7 +55,7 @@ Below is a list of the arguments:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **ItemTouchInteraction**: The touch action performed on an toolbar element can be found in the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html), you can see details about the touch items.
+* **ItemTouchInteraction**: The touch action performed on an Toolbar element can be found in the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html), you can see details about the touch items.
 
     * **ToolbarItem** : Returns the touch SfToolbarItem.
     * **PointerActions** : Returns the ToolbarItemPointerActions.
@@ -91,7 +91,7 @@ Below is a list of the arguments:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **ItemLongPressed**: The long press action  performed on an toolbar element can be found in the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html), you can see details about the pressed items.
+* **ItemLongPressed**: The long press action  performed on an Toolbar element can be found in the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html), you can see details about the pressed items.
 
     * **ToolbarItem** : Returns the pressed SfToolbarItem.
 
@@ -127,7 +127,7 @@ Below is a list of the arguments:
 
 * **MoreItemsChanged**: The more items changed action can be found in the [ToolbarMoreItemsChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html), you can see details about the more items.
 
-    * **ToolbarItems** : Returns the list of toolbar item in the more options.
+    * **ToolbarItems** : Returns the list of Toolbar item in the more options.
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ Below is a list of the arguments:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **SelectionChanged**: The selection changed action performed on an toolbar element can be found in the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html), you can see details about the selected items.
+* **SelectionChanged**: The selection changed action performed on an Toolbar element can be found in the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html), you can see details about the selected items.
 
     * **NewToolbarItems** : Returns the newly selected toolbar items.
     * **OldToolbarItems** : Returns the previously selected toolbar items.

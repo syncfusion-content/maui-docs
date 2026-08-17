@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Interval in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to configure numeric intervals in the Syncfusion® .NET MAUI Range Selector control for precise value selection.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Interval in .NET MAUI Range Selector (SfRangeSelector)
+# Interval in .NET MAUI Range Selector
 
 This section explains how to add the interval for numeric Range Selector.
 
@@ -62,7 +62,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector numeric interval](images/interval/numeric-interval.png)
+![Range Selector numeric interval](images/interval/numeric-interval.png)
 
 ## Auto interval
 

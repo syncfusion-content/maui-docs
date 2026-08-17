@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Backdrop Page| Syncfusion
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page(SfBackdropPage) control, its elements and more.
+title: Getting Started with .NET MAUI Backdrop Page | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Backdrop Page control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Backdrop Page
+# Getting Started with .NET MAUI Backdrop Page
 
 This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion<sup>&reg;</sup> backdrop page. Follow the steps below to add a .NET MAUI Backdrop page to your project.
 
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Backdrop NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop/) and install the latest version.
@@ -56,7 +56,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Backdrop NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -80,7 +80,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Backdrop NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Backdrop NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop/) and install the latest version.

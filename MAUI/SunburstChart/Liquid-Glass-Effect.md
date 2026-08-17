@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI Sunburst Chart (SfSunburstChart) for stunning UI.
+title: Liquid Glass Effect in .NET MAUI Sunburst Chart | Syncfusion®
+description: Liquid Glass Effect in .NET MAUI Sunburst Chart applies a sleek glass-like visual style to chart segments, enhancing chart appearance and visual appeal.
 platform: maui
 control: SfSunburstChart
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Thumb and Overlay in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to customize the thumb and thumb overlay in the .NET MAUI DateTime Range Slider, including size, color, stroke, and disabled states.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Thumb and Overlay in DateTime Range Slider (SfDateTimeRangeSlider)
+# Thumb and Thumb Overlay in .NET MAUI DateTime Range Slider
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Slider.
 
@@ -22,11 +22,11 @@ Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Radius="15" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -43,12 +43,12 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Radius = 15;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
+![Range Slider thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
 
 ## Thumb color
 
@@ -58,11 +58,11 @@ Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Fill="#EE3F3F" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -79,12 +79,12 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
+![Range Slider thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
 
 ## Thumb stroke thickness and stroke
 
@@ -94,11 +94,11 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
    </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -116,12 +116,12 @@ rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.ThumbStyle.StrokeThickness = 2;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
+![Range Slider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
 
 ## Thumb overlapping stroke color
 
@@ -131,11 +131,11 @@ Change the thumb stroke color while two thumbs overlap by using the [`OverlapStr
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-  
+
   <sliders:SfDateTimeRangeSlider.ThumbStyle>
       <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
   </sliders:SfDateTimeRangeSlider.ThumbStyle>
@@ -152,12 +152,12 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
+![Range Slider thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
 
 ## Thumb overlay size
 
@@ -167,11 +167,11 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
       <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
@@ -188,12 +188,12 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Radius = 18;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
+![Range Slider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
 
 ## Thumb overlay color
 
@@ -203,11 +203,11 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-   
+
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
       <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
@@ -224,12 +224,12 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
+![Range Slider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
 
 ## Disabled thumb
 
@@ -378,4 +378,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)
+![Range Slider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)

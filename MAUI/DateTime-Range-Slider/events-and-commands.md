@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Events and Commands in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn how to handle events and commands in Syncfusion® .NET MAUI DateTime Range Slider and customize interactions effectively.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Events and Commands in .NET MAUI Range Slider (SfDateTimeRangeSlider)
+# Events and Commands in .NET MAUI DateTime Range Slider
 
 This section explains how to add the events and commands for the DateTime Range Slider.
 
@@ -141,7 +141,7 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 {% endtabs %}
 
-![RangeSlider custom label](images/labels-and-dividers/custom-label.png)
+![Range Slider custom label](images/labels-and-dividers/custom-label.png)
 
 ### Tooltip text format
 
@@ -201,7 +201,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 
 {% endtabs %}
 
-![RangeSlider custom tooltip](images/tooltip/custom-tooltip.png)
+![Range Slider custom tooltip](images/tooltip/custom-tooltip.png)
 
 ## Commands and their parameter
 

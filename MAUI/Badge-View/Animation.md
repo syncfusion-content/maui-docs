@@ -1,19 +1,17 @@
 ---
-
 layout: post
-title: Badge Animation with Syncfusion® .NET MAUI Badge View
-description: Learn all about Animation support in the Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
-platform: MAUI
+title: Animation in .NET MAUI Badge View | Syncfusion®
+description: Learn about animation support in Syncfusion® .NET MAUI Badge View (SfBadgeView) with configurable animation effects and duration.
+platform: maui
 control: SfBadgeView
-documentation: UG
-
+documentation: ug
 ---
 
-# Animation in .NET MAUI Badge View (SfBadgeView)
+# Animation in .NET MAUI Badge View
 
 ## Enable Animation
 
-You can enable or disable the animation of the badge text using [Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_Scale) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_None) enum values of the `BadgeAnimation` property. The animation becomes visible when you change the badge text.
+You can enable or disable the animation of the Badge View text using [Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_Scale) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_None) enum values of the `BadgeAnimation` property. The animation becomes visible when you change the Badge View text.
 
 {% tabs %}
 

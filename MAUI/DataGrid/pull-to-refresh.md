@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pull To Refresh in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to enable and customize Pull To Refresh in Syncfusion® .NET MAUI DataGrid  to refresh data through intuitive touch gestures.
+title: Pull To Refresh in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to enable and customize Pull To Refresh in Syncfusion® .NET MAUI Data Grid  to refresh data through intuitive touch gestures.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui pull to refresh, maui pull to refresh
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui pull to refresh, maui pull to refresh
 ---
 
-# Pull To Refresh in .NET MAUI DataGrid
+# Pull To Refresh in .NET MAUI Data Grid
 
 ## Pull To Refresh
 
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
 
 For more customization options of SfPullToRefresh, refer to the [PullToRefresh customization documentation](https://help.syncfusion.com/maui/pull-to-refresh/customization).
 
-##  Host .NET MAUI DataGrid as pullable content
+##  Host .NET MAUI Data Grid as pullable content
 The `SfPullToRefresh` control supports wrapping any custom control (including DataGrid) as pullable content. This approach provides more flexibility for refresh behavior and visual customization compared to the built-in approach.
 <ol>
     <li> <strong>Add Assembly References:</strong> Ensure both DataGrid and PullToRefresh assemblies are referenced in your project.</li>

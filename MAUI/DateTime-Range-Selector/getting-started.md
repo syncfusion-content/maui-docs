@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with DateTime Range Selector control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfDateTimeRangeSelector) control.
+title: Getting Started with .NET MAUI DateTime Range Selector | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI DateTime Range Selector control. Explore setup, features, examples, and customization options.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
@@ -56,7 +56,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -81,7 +81,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
@@ -162,6 +162,6 @@ var rangeSelector = new SfDateTimeRangeSelector
 
 {% endtabs %}
 
-![Initialize RangeSelector](images/getting-started/initialize-slider.png)
+![Initialize Range Selector](images/getting-started/initialize-slider.png)
 
 You can download the DateTime Range Selector Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-datetime-range-selector)

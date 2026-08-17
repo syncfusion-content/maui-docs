@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Ticks in .NET MAUI Range Slider control | Syncfusion®
+description: Learn how to add and customize major and minor ticks in the Syncfusion® .NET MAUI Range Slider control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Tick in .NET MAUI Range Slider (SfRangeSlider)
+# Ticks in .NET MAUI Range Slider control
 
 This section helps to learn about how to add major and minor ticks in the range slider.
 
@@ -36,7 +36,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider ticks](images/ticks/show-ticks-without-interval.png)
+![Range Slider ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With interval
 
@@ -59,7 +59,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider ticks](images/ticks/show-ticks.png)
+![Range Slider ticks](images/ticks/show-ticks.png)
 
 ## Show minor ticks
 
@@ -86,7 +86,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider minor ticks](images/ticks/show-minorticks-without-interval.png)
+![Range Slider minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With interval
 {% tabs %}
@@ -110,7 +110,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider minor ticks](images/ticks/show-minor-ticks.png)
+![Range Slider minor ticks](images/ticks/show-minor-ticks.png)
 
 ## Major ticks color
 
@@ -148,7 +148,7 @@ rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 {% endtabs %}
 
-![RangeSlider major ticks color](images/ticks/major-ticks-color.png)
+![Range Slider major ticks color](images/ticks/major-ticks-color.png)
 
 ## Minor ticks color
 
@@ -188,7 +188,7 @@ rangeSlider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 {% endtabs %}
 
-![RangeSlider minor ticks color](images/ticks/minor-ticks-color.png)
+![Range Slider minor ticks color](images/ticks/minor-ticks-color.png)
 
 ## Ticks size
 
@@ -231,7 +231,7 @@ rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 {% endtabs %}
 
-![RangeSlider tick size](images/ticks/tick-size.png)
+![Range Slider tick size](images/ticks/tick-size.png)
 
 ## Ticks offset
 
@@ -270,7 +270,7 @@ rangeSlider.MajorTickStyle.Offset = 5;
 
 {% endtabs %}
 
-![RangeSlider tick offset](images/ticks/tick-offset.png)
+![Range Slider tick offset](images/ticks/tick-offset.png)
 
 ## Disabled ticks
 
@@ -462,4 +462,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider ticks disabled state](images/ticks/ticks-disabled.png)
+![Range Slider ticks disabled state](images/ticks/ticks-disabled.png)

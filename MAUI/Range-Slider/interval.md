@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in.NET MAUI Range Slider control | Syncfusion® 
-description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Interval in .NET MAUI Range Slider | Syncfusion®
+description: Learn how to configure numeric intervals in the .NET MAUI Range Slider control with labels, ticks, and dividers.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Interval in .NET MAUI Range Slider (SfRangeSlider)
+# Interval in .NET MAUI Range Slider
 
 This section explains how to add the interval for numeric range slider.
 
@@ -48,7 +48,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider numeric interval](images/interval/numeric-interval.png)
+![Range Slider numeric interval](images/interval/numeric-interval.png)
 
 ## Auto interval
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Linear ProgressBar control | Syncfusion®
-description: Learn all about appearance support in the Syncfusion® .NET MAUI Linear ProgressBar control, its elements, and more.
+title: Appearance in .NET MAUI Linear Progress Bar | Syncfusion®
+description: Learn about customizing appearance of Syncfusion® .NET MAUI Linear Progress Bar control, including track colors, thickness, and corner radius styling.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
+# Appearance in .NET MAUI Linear Progress Bar
 
 ## Range colors
 
@@ -20,7 +20,7 @@ The following properties in the [`GradientStops`](https://help.syncfusion.com/cr
 * [`Color:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Color) Represents the color of the specified range.
 * [`Value:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Value) Represents the start or end value for the specified color.
 
-The following code sample demonstrates how to map the solid color range in the linear progress bar.
+The following code sample demonstrates how to map the solid color range in the Linear Progress Bar.
 
 {% tabs %}
 
@@ -59,9 +59,9 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI Linear Progress Bar with range colors](images/appearance/range-colors.png)
 
-The following code sample demonstrates how to apply gradient transition effect to the range colors in the linear progress bar.
+The following code sample demonstrates how to apply gradient transition effect to the range colors in the Linear Progress Bar.
 
 {% tabs %}
 
@@ -94,11 +94,11 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI Linear Progress Bar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
-In the linear progress bar, the height of the track, progress, and secondary progress can be customized using the [`TrackHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackHeight), [`ProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight), and [`SecondaryProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight) properties, respectively.
+In the Linear Progress Bar, the height of the track, progress, and secondary progress can be customized using the [`TrackHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackHeight), [`ProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight), and [`SecondaryProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight) properties, respectively.
 
 {% tabs %}
 
@@ -128,11 +128,11 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with height customization](images/appearance/thickness.png)
+![.NET MAUI Linear Progress Bar with height customization](images/appearance/thickness.png)
 
 ## Padding
 
-In the linear progress bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the [`ProgressPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressPadding) property.
+In the Linear Progress Bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the [`ProgressPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressPadding) property.
 
 {% tabs %}
 
@@ -164,11 +164,11 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with padding adjustment](images/appearance/padding.png)
+![.NET MAUI Linear Progress Bar with padding adjustment](images/appearance/padding.png)
 
 ## Corner radius
 
-In the linear progress bar, the corner radius of the track, progress, and secondary progress can be customized using the [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius), [`ProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius), and [`SecondaryProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius) properties, respectively.
+In the Linear Progress Bar, the corner radius of the track, progress, and secondary progress can be customized using the [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius), [`ProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius), and [`SecondaryProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius) properties, respectively.
 
 {% tabs %}
 
@@ -198,11 +198,11 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with corner radius customization](images/appearance/corner-radius.png)
+![.NET MAUI Linear Progress Bar with corner radius customization](images/appearance/corner-radius.png)
 
 ## Color customization
 
-The following properties are used to customize the color in the linear progress bar.
+The following properties are used to customize the color in the Linear Progress Bar.
 
 * [`ProgressFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) Represents the color of the progress indicator.
 * [`TrackFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) Represents the color of the track indicator.
@@ -234,9 +234,9 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with color customization](images/appearance/color.png)
+![.NET MAUI Linear Progress Bar with color customization](images/appearance/color.png)
 
-The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressFill) property as demonstrated in the following code sample.
+The Linear Progress Bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressFill) property as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -262,6 +262,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI Linear ProgressBar with secondary progress color customization](images/appearance/secondary-progress.png)
+![.NET MAUI Linear Progress Bar with secondary progress color customization](images/appearance/secondary-progress.png)
 
-N> Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear Progress Bar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

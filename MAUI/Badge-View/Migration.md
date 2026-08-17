@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Badge View | Syncfusion® 
-description: Learn how to migrate from Syncfusion® Xamarin Badge View to Syncfusion® .NET MAUI Badge View control and more.
-platform: MAUI
+title: Migration to .NET MAUI Badge View | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Badge View to .NET MAUI Badge View control with API comparisons.
+platform: maui
 control: SfBadgeView
-documentation: UG
----  
+documentation: ug
+---
 
-# Migrating from Xamarin SfBadgeView to .NET MAUI SfBadgeView 
+# Migration from Xamarin Badge View to .NET MAUI Badge View 
 
-To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, some APIs have been renamed to ensure consistency with MAUI naming conventions. Below are the details of the changes from Xamarin SfBadgeView to .NET MAUI SfBadgeView.
+To migrate easier from Xamarin Badge View to .NET MAUI Badge View, we kept most of the APIs from Xamarin Badge View in .NET MAUI Badge View. However, some APIs have been renamed to ensure consistency with MAUI naming conventions. Below are the details of the changes from Xamarin Badge View to .NET MAUI Badge View.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfBadgeView</th>
-<th>.NET MAUI SfBadgeView</th></tr>
+<th>Xamarin Badge View</th>
+<th>.NET MAUI Badge View</th></tr>
 <tr>
 <td>Syncfusion.XForms.BadgeView</td>
 <td>Syncfusion.Maui.Core</td></tr>
@@ -26,8 +26,8 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 
 <table> 
 <tr>
-<th>Xamarin SfBadgeView</th>
-<th>.NET MAUI SfBadgeView</th>
+<th>Xamarin Badge View</th>
+<th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[BadgeAnimation](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeAnimation)'| markdownify }}</td>
@@ -60,8 +60,8 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <table>
 <tr>
 <th>Enum</th>
-<th>Xamarin SfBadgeView</th>
-<th>.NET MAUI SfBadgeView</th>
+<th>Xamarin Badge View</th>
+<th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>
 <td>BadgePosition</td>
@@ -74,8 +74,8 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 
 <table>
 <tr>
-<th>Xamarin SfBadgeView</th>
-<th>.NET MAUI SfBadgeView</th>
+<th>Xamarin Badge View</th>
+<th>.NET MAUI Badge View</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[BadgeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html)'| markdownify}}</td>

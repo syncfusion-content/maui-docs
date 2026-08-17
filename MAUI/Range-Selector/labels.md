@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Labels in .NET MAUI Range Selector | Syncfusion®
+description: Learn how to show and customize labels in the Syncfusion® .NET MAUI Range Selector control for better value guidance.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Labels in .NET MAUI Range Selector (SfRangeSelector)
+# Labels in .NET MAUI Range Selector
 
 This section explains how to add the labels in the Range Selector.
 
@@ -58,7 +58,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector labels](images/labels-and-dividers/labels.png)
+![Range Selector labels](images/labels-and-dividers/labels.png)
 
 ## Number format
 
@@ -109,7 +109,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector number format](images/labels-and-dividers/number-format.png)
+![Range Selector number format](images/labels-and-dividers/number-format.png)
 
 ## Label placement
 
@@ -160,7 +160,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label placement](images/labels-and-dividers/label-placement.png)
+![Range Selector label placement](images/labels-and-dividers/label-placement.png)
 
 N> Refer [here](https://help.syncfusion.com/maui/range-selector/events-and-commands) to customize label text format through range slider events.
 
@@ -217,7 +217,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
+![Range Selector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
@@ -285,7 +285,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label style](images/labels-and-dividers/label-style.png)
+![Range Selector label style](images/labels-and-dividers/label-style.png)
 
 ## Label offset
 
@@ -339,4 +339,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector label offset](images/labels-and-dividers/label-offset.png)
+![Range Selector label offset](images/labels-and-dividers/label-offset.png)

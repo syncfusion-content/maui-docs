@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unbound Columns in .NET MAUI DataGrid | Syncfusion®
-description: Learn how to create and customize unbound columns in Syncfusion® .NET MAUI DataGrid to display calculated, formatted, or custom data values.
+title: Unbound Column in .NET MAUI Data Grid | Syncfusion®
+description: Learn how to create and customize unbound columns in Syncfusion® .NET MAUI Data Grid to display calculated, formatted, or custom data values.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound column, maui unbound coulumn
+keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui unbound column, maui unbound coulumn
 ---
 
-# Unbound column in .NET MAUI DataGrid
+# Unbound Column in .NET MAUI Data Grid
 
 The data grid allows adding additional columns that are not bound with data objects from the underlying data source. The unbound column can be added using the [SfDataGrid.DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html) class.
 
@@ -80,7 +80,7 @@ this.Content = dataGrid;
 {% endtabs %}
 
 
-<img alt="Unbound column in MAUI DataGrid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" Height = "429"/>
+<img alt="Unbound column in MAUI Data Grid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" Height = "429"/>
 
 > **Note:** It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary for this field to exist in the data object.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # About Syncfusion® .NET MAUI Signature Pad Control
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI SignaturePad](https://www.syncfusion.com/maui-controls/maui-signaturepad) (SfSignaturePad) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad control.
+The Syncfusion® [.NET MAUI Signature Pad](https://www.syncfusion.com/maui-controls/maui-signaturepad) (SfSignaturePad) is an interactive UI control, allowing users to capture smooth and realistic signatures. It also allows you to save signatures as images and synchronize them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this Signature Pad control.
 
 ![.NET MAUI signature pad overview ](Images/overview/default.jpg)
 
@@ -63,7 +63,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/signaturepad/overview">Signature Pad</a></td>
+<td><a href="/maui/signaturepad/overview" aria-label="MAUI Signature Pad control overview">Signature Pad</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>

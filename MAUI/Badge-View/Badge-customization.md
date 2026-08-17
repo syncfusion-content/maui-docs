@@ -1,19 +1,17 @@
 ---
-
 layout: post
-title: Customization of Syncfusion® .NET MAUI Badge View
-description: This section explains how to customize the font, stroke, and text in the Syncfusion® .NET MAUI Badge View control.
-platform: MAUI
+title: Customization in .NET MAUI Badge View | Syncfusion®
+description: Learn how to customize appearance, colors, fonts, and text in Syncfusion® .NET MAUI Badge View (SfBadgeView) control.
+platform: maui
 control: SfBadgeView
-documentation: UG
-
+documentation: ug
 ---
 
-# Badge Customization in .NET MAUI Badge View (SfBadgeView)
+# Customization in .NET MAUI Badge View
 
 The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) property helps you to customize the basic look and feel of the Badge View. 
 
-The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize various aspects, including background color, text color, stroke, width, offset, and font attributes.
+The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as Badge View types, positions and colors. You can customize various aspects, including background color, text color, stroke, width, offset, and font attributes.
 
 ## Font customization
 
@@ -158,7 +156,7 @@ Content = sfBadgeView;
 
 ## Predefined styles
 
-The colors of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The badge supports the following essential colors for different scenarios:
+The colors of the Badge View can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The Badge View supports the following essential colors for different scenarios:
 
  * Dark
  * Error
@@ -210,7 +208,7 @@ The colors of the badge can be customized using the [Type](https://help.syncfusi
 
 ## Badge background customization
 
-Other than the predefined styles, the color of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties) which has to be set as [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the Badge View can be set using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
+Other than the predefined styles, the color of the Badge View can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties) which has to be set as [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the Badge View can be set using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
 
 {% tabs %}
 
@@ -347,11 +345,11 @@ Content = sfBadgeView;
 
 ## Badge Alignment and Sizing
 
-The [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property positions the badge text relative to the [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) content. You can set this to Start, Center, or End. However, the final visual position of the badge is also dependent on how the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) and its Content are sized. The following scenarios explain how alignment behaves based on different size configurations.
+The [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property positions the Badge View text relative to the [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) content. You can set this to Start, Center, or End. However, the final visual position of the Badge View is also dependent on how the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) and its Content are sized. The following scenarios explain how alignment behaves based on different size configurations.
 
 ### 1. Alignment with a Fixed Size on SfBadgeView
 
-When an explicit WidthRequest and HeightRequest are set directly on the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), the badge is aligned relative to these fixed dimensions. The size of the inner Content does not influence the badge's position. This approach is useful when you need the badge to appear at the edge of a specific, defined area, regardless of the content inside.
+When an explicit WidthRequest and HeightRequest are set directly on the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), the Badge View is aligned relative to these fixed dimensions. The size of the inner Content does not influence the Badge View's position. This approach is useful when you need the Badge View to appear at the edge of a specific, defined area, regardless of the content inside.
 
 {% tabs %}
 
@@ -396,7 +394,7 @@ Content = sfBadgeView;
 
 ### 2. Alignment with a Fixed Size on the Content
 
-When the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) has no explicit size, but its Content does, the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps itself around the content. In this case, the badge is aligned relative to the bounds of the Content. This is a common scenario when you want to place a badge on a specific control like a Button or a larger Label.
+When the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) has no explicit size, but its Content does, the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps itself around the content. In this case, the Badge View is aligned relative to the bounds of the Content. This is a common scenario when you want to place a Badge View on a specific control like a Button or a larger Label.
 
 {% tabs %}
 
@@ -439,7 +437,7 @@ Content = sfBadgeView;
 
 ### 3. Alignment with Automatic Sizing
 
-When neither the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) nor its Content has an explicit size, both controls size themselves automatically based on their content. The [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps its Content, and the badge is then aligned relative to the final calculated bounds of that Content.
+When neither the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) nor its Content has an explicit size, both controls size themselves automatically based on their content. The [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps its Content, and the Badge View is then aligned relative to the final calculated bounds of that Content.
 
 {% tabs %}
 
@@ -480,7 +478,7 @@ Content = sfBadgeView;
 
 ## Keeping multiple badges aligned uniformly
 
-When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a badge is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the badge is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badges.
+When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a Badge View is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the Badge View is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without Badge Views.
 
 {% tabs %}
 
@@ -568,7 +566,7 @@ Content = horizontalStack;
 
 ## FontAutoScalingEnabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property automatically scales the badge text's font size based on the operating system's text size. The default value is `false`.
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property automatically scales the Badge View text's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 
@@ -595,7 +593,7 @@ sfBadgeView.BadgeSettings = badgeSetting;
 
 ## Visibility of badge
 
-Show or hide the badges in the .NET MAUI Badge View by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
+Show or hide the Badge Views in the .NET MAUI Badge View by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the Badge View will be visible.
 
 {% tabs %}
 {% highlight xaml %}

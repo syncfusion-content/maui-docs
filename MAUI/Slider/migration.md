@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from Xamarin SfRangeSlider to .NET MAUI SfSlider | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin RangeSlider to Syncfusion® .NET MAUI Slider control and more.
+title: Migrate from Xamarin Slider to .NET MAUI Slider | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Slider to .NET MAUI Slider control with API comparisons.
 platform: MAUI
 control: SfSlider
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider 
+# Migration from Xamarin Slider to .NET MAUI Slider
 
 In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider). But in MAUI, separate controls for Range Slider and Slider to make the control architecture more clear and user-friendly. In Xamarin.Forms, set the [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) of Range Slider to false to get a single thumb slider. But in MAUI, you have the following two controls, which will always have a single thumb.
 
@@ -18,8 +18,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table>
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th></tr>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <tr>
 <td>Syncfusion.SfRangeSlider.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
@@ -31,8 +31,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackColor)'| markdownify }}</td>
@@ -56,8 +56,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ThumbSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ThumbSize)'| markdownify }}</td>
@@ -81,8 +81,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td rowspan="2" valign="center">
@@ -99,8 +99,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
@@ -152,8 +152,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TooltipBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ToolTipBackgroundColor)'| markdownify }}</td>
@@ -173,8 +173,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
@@ -186,8 +186,8 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 
 <table>
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Slider</th></tr>
 <th>Description</th></tr>
 <tr>
 <td>{{'[DragStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragStarted)'| markdownify }}</td>

@@ -105,7 +105,7 @@ this.Content = grid;
 
 The following screenshot illustrates the `Numeric Entry` rendered inside a Liquid Glass container:
 
-![.NET MAUI NumericEntry with the Liquid Glass Effect](GettingStarted_images/NumericEntry_liquidGlass.png)
+![.NET MAUI Numeric Entry with the Liquid Glass Effect](GettingStarted_images/NumericEntry_liquidGlass.png)
 
 ## See Also
 
