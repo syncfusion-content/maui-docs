@@ -48,7 +48,7 @@ It represents the values currently selected in the range slider. The range slide
 
 {% endtabs %}
 
-![RangeSlider numeric label](images/track/rangeslider-basic.png)
+![Range Slider numeric label](images/track/rangeslider-basic.png)
 
 ## Track color
 
@@ -81,7 +81,7 @@ rangeSlider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1A
 
 {% endtabs %}
 
-![RangeSlider track color](images/track/track-color.png)
+![Range Slider track color](images/track/track-color.png)
 
 ## Track height
 
@@ -110,7 +110,7 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 {% endtabs %}
 
-![RangeSlider track size](images/track/track-size.png)
+![Range Slider track size](images/track/track-size.png)
 
 ## Track extent
 
@@ -141,11 +141,11 @@ SfRangeSlider rangeSlider = new SfRangeSlider()
 
 **Without track extent**
 
-![RangeSlider track extent before](images/track/track-extent-before-image.png)
+![Range Slider track extent before](images/track/track-extent-before-image.png)
 
 **With track extent**
 
-![RangeSlider track extent after](images/track/track-extent-after-image.png)
+![Range Slider track extent after](images/track/track-extent-after-image.png)
 
 ## Disabled track
 
@@ -261,4 +261,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider track disabled state](images/track/track-disabled.png)
+![Range Slider track disabled state](images/track/track-disabled.png)

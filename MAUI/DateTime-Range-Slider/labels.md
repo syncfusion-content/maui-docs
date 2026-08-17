@@ -45,7 +45,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider labels](images/labels-and-dividers/labels.png)
+![Range Slider labels](images/labels-and-dividers/labels.png)
 
 ## Date format
 
@@ -85,7 +85,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider date format](images/labels-and-dividers/date-format.png)
+![Range Slider date format](images/labels-and-dividers/date-format.png)
 
 ## Label placement
 
@@ -123,9 +123,9 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
+![Range Slider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/datetime-range-slider/events-and-commands) to customize label text format through range slider events.
+N> Refer [here](https://help.syncfusion.com/maui/datetime-range-slider/events-and-commands) to customize label text format through Range Slider events.
 
 ## Edge labels placement
 
@@ -164,11 +164,11 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
+![Range Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
-Change the active and inactive label appearance of the range slider using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
+Change the active and inactive label appearance of the Range Slider using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
 
 The active side of the DateTime Range Slider is between the start and end thumbs.
 
@@ -219,7 +219,7 @@ rangeSlider.LabelStyle.InactiveFontAttributes = FontAttributes.Bold;
 
 {% endtabs %}
 
-![RangeSlider label style](images/labels-and-dividers/label-style.png)
+![Range Slider label style](images/labels-and-dividers/label-style.png)
 
 ## Label offset
 
@@ -261,7 +261,7 @@ rangeSlider.LabelStyle.Offset = 10;
 
 {% endtabs %}
 
-![RangeSlider label offset](images/labels-and-dividers/label-offset.png)
+![Range Slider label offset](images/labels-and-dividers/label-offset.png)
 
 ## Disabled labels
 
@@ -439,4 +439,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider label disabled state](images/labels-and-dividers/labels-disabled.png)
+![Range Slider label disabled state](images/labels-and-dividers/labels-disabled.png)

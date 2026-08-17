@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Effect in .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
+title: Liquid Glass Effect in .NET MAUI Step Progress Bar | Syncfusion®
+description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI Step ProgressBar
+# Liquid Glass Effect in .NET MAUI Step Progress Bar
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass-like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 

@@ -13,7 +13,7 @@ documentation: ug
 
 - Instead of typing values or navigating multiple pickers, users simply drag the slider thumb across a timeline to select the exact point they need.
 
-![.NET MAUI datetime slider overview ](images/overview/datetime_slider_overview.png)
+![.NET MAUI DateTime Slider overview ](images/overview/datetime_slider_overview.png)
 
 ## Business use cases
 
@@ -71,7 +71,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/datetime-slider/overview">DateTimeSlider</a></td>
+<td><a href="/maui/datetime-slider/overview" aria-label="MAUI DateTime Slider control overview">DateTimeSlider</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
