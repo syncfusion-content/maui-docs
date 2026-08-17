@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Radial Gauge control | Syncfusion®
-description: This section explains the properties with Syncfusion® MAUI Radial Gauge (SfRadialGauge) control.
+description: This section explains the properties with Syncfusion<sup>&reg;</sup> MAUI Radial Gauge (SfRadialGauge) control.
 platform: maui
 control: SfRadialGauge
 documentation: ug

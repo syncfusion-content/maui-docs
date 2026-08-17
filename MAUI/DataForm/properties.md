@@ -211,7 +211,7 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateForm" aria-label="View ValidateForm event in API reference">ValidateForm</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidateFormEventArgs.html" aria-label="View DataFormValidateFormEventArgs type in API reference">DataFormValidateFormEventArgs</a></td>
-<td>Raised when the data form is validated and provides the validation scope information for the complete form lifecycle.</td>
+<td>Raised when the data form is validated and provides the validation scope information for the complete form life cycle.</td>
 </tr>
 
 <tr valign="top">

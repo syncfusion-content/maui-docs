@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Parallax View control | Syncfusion®
-description: This section explains the properties with Syncfusion® MAUI Parallax View (SfParallaxView) control.
+description: This section explains the properties with Syncfusion<sup>&reg;</sup> MAUI Parallax View (SfParallaxView) control.
 platform: maui
 control: SfParallaxView
 documentation: ug

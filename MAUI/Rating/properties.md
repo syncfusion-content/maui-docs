@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Rating control | Syncfusion®
-description: This section explains the properties and events with Syncfusion® MAUI Rating (SfRating) control.
+description: This section explains the properties and events with Syncfusion<sup>&reg;</sup> MAUI Rating (SfRating) control.
 platform: maui
 control: SfRating
 documentation: ug

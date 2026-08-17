@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties of .NET MAUI Shimmer control | Syncfusion®
-description: This section explains the properties and methods with Syncfusion® MAUI Shimmer (SfShimmer) control.
+description: This section explains the properties and methods with Syncfusion<sup>&reg;</sup> MAUI Shimmer (SfShimmer) control.
 platform: maui
 control: SfShimmer
 documentation: ug
