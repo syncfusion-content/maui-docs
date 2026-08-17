@@ -266,25 +266,25 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipClicked" aria-label="View ChipClicked event in API reference">ChipClicked</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;ChipClickedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ChipClickedEventArgs.html" aria-label="View ChipClickedEventArgs type in API reference">ChipClickedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;ChipClickedEventArgs&gt; type in API reference">EventHandler</a></td>
     <td>Raised when a chip is clicked. Use this event to respond to chip selection or interaction.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemRemoved" aria-label="View ItemRemoved event in API reference">ItemRemoved</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;ChipEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ChipEventArgs.html" aria-label="View ChipEventArgs type in API reference">ChipEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html" aria-label="View SelectionChangedEventArgs type in API reference">SelectionChangedEventArgs</a>&gt;</a></td>
     <td>Raised when a chip is removed from the group. This is useful for updating the data source after deletion.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SelectionChangedEventArgs.html" aria-label="View SelectionChangedEventArgs type in API reference">SelectionChangedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html" aria-label="View SelectionChangedEventArgs type in API reference">SelectionChangedEventArgs</a>&gt;</a></td>
     <td>Raised when the selected chip changes. Use this event to react after the new selection is applied.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_SelectionChanging" aria-label="View SelectionChanging event in API reference">SelectionChanging</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangingEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SelectionChangingEventArgs.html" aria-label="View SelectionChangingEventArgs type in API reference">SelectionChangingEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;SelectionChangingEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangingEventArgs.html" aria-label="View SelectionChangingEventArgs type in API reference">SelectionChangingEventArgs</a>&gt;</a></td>
     <td>Raised before the selected chip changes. Use this event to validate or cancel the selection update.</td>
 </tr>
 </table>
