@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Date Picker Mode in .NET MAUI Date Picker control | Syncfusion®
-description: Learn about date picker modes in Syncfusion .NET MAUI Date Picker control with Default, Dialog, and RelativeDialog options.
 platform: maui
+title: Date Picker Mode in .NET MAUI Date Picker control | Syncfusion®
+description: Learn about date picker modes in Syncfusion® .NET MAUI Date Picker control with Default, Dialog, and RelativeDialog options.
 control: SfDatePicker
 documentation: ug
 ---

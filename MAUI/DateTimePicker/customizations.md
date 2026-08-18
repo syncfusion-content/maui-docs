@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about customizations in Syncfusion .NET MAUI Date Time Picker control for headers, footers, and visual styling.
 platform: maui
+title: Customizations in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about customizations in Syncfusion® .NET MAUI Date Time Picker control for headers, footers, and visual styling.
 control: SfDateTimePicker
 documentation: ug
 ---
@@ -47,13 +47,13 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.HeaderView = new DateTimePickerHeaderView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.HeaderView = new DateTimePickerHeaderView()
         {
             DividerColor = Colors.Red,
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -184,8 +184,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.HeaderView = new DateTimePickerHeaderView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.HeaderView = new DateTimePickerHeaderView()
         {
             Background = Color.FromArgb("#D3D3D3"),
             TextStyle = new PickerTextStyle()
@@ -195,7 +195,7 @@ public partial class MainPage : ContentPage
             }
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -239,8 +239,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
         {
             DayHeaderText = "Day Column",
             MonthHeaderText = "Month Column",
@@ -252,7 +252,7 @@ public partial class MainPage : ContentPage
             MeridiemHeaderText = "Meridiem Column",
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -291,13 +291,13 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
         {
             DividerColor = Colors.Red,
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -338,8 +338,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.ColumnHeaderView = new DateTimePickerColumnHeaderView()
         {
             Background = Color.FromArgb("#D3D3D3"),
             TextStyle = new PickerTextStyle()
@@ -349,7 +349,7 @@ public partial class MainPage : ContentPage
             },
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -500,15 +500,15 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.FooterView = new PickerFooterView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.FooterView = new PickerFooterView()
         {
             Height = 40,
             OkButtonText = "Save",
             CancelButtonText = "Exit",
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -545,13 +545,13 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.FooterView = new PickerFooterView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.FooterView = new PickerFooterView()
         {
             DividerColor = Colors.Red,
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -592,8 +592,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.FooterView = new PickerFooterView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.FooterView = new PickerFooterView()
         {
             Background = Color.FromArgb("#D3D3D3"),
             TextStyle = new PickerTextStyle()
@@ -603,7 +603,7 @@ public partial class MainPage : ContentPage
             }
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -747,8 +747,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.SelectionView = new PickerSelectionView()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.SelectionView = new PickerSelectionView()
         {
             CornerRadius = 10,
             Stroke = Color.FromArgb("#36454F"),
@@ -756,7 +756,7 @@ public partial class MainPage : ContentPage
             Background = Color.FromArgb("#808080"),
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -793,8 +793,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.SelectedTextStyle = new PickerTextStyle()
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.SelectedTextStyle = new PickerTextStyle()
         {
             TextStyle = new PickerTextStyle()
             {
@@ -803,7 +803,7 @@ public partial class MainPage : ContentPage
             }
         };
 
-        this.Content = picker;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -838,9 +838,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.ColumnDividerColor = Colors.Red;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.ColumnDividerColor = Colors.Red;
+        this.Content = dateTimePicker;
     }
 }
 

@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Time restriction in .NET MAUI Time Picker control | Syncfusion®
 description: Set minimum and maximum time limits to restrict time selection in the .NET MAUI Time Picker control.
-platform: maui
 control: SfTimePicker
 documentation: ug
 ---  
@@ -30,9 +30,9 @@ The time picker provides an option to restrict the selection of time items using
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.MinimumTime = new TimeSpan(7, 40, 0);
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MinimumTime = new TimeSpan(7, 40, 0);
+this.Content = timePicker;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -60,9 +60,9 @@ The time picker provides an option to restrict the selection of time items using
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.MaximumTime = new TimeSpan(20, 15, 0);
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MaximumTime = new TimeSpan(20, 15, 0);
+this.Content = timePicker;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -99,16 +99,16 @@ The [BlackoutTimes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.S
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.BlackoutTimes.Add(new TimeSpan(12, 28, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 26, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 24, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 22, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 37, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 35, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 33, 0));
-picker.BlackoutTimes.Add(new TimeSpan(12, 32, 0));
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 28, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 26, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 24, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 22, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 37, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 35, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 33, 0));
+timePicker.BlackoutTimes.Add(new TimeSpan(12, 32, 0));
+this.Content = timePicker;
 
 {% endhighlight %}  
 {% endtabs %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI Picker control | Syncfusion®
-description: Learn about localization in Syncfusion .NET MAUI Picker control for multi-language and culture support.
+description: Learn about localization in Syncfusion® .NET MAUI Picker control for multi-language and culture support.
 platform: maui
 control: SfPicker
 documentation: ug
