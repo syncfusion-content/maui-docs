@@ -50,7 +50,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the Sfbutton is checkable. It is used to check the state of the SfButton.</td>
+		<td>Gets or sets a value indicating whether the SfButton is checkable. It is used to check the state of the SfButton.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect" aria-label="View EnableRippleEffect property in API reference">EnableRippleEffect</a></td>
