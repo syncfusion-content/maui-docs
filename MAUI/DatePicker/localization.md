@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Localization in .NET MAUI Date Picker control | Syncfusion®
-description: Learn about localization in Syncfusion .NET MAUI Date Picker control for multi-language and culture support.
 platform: maui
+title: Localization in .NET MAUI Date Picker control | Syncfusion®
+description: Learn about localization in Syncfusion® .NET MAUI Date Picker control for multi-language and culture support.
 control: SfDatePicker
 documentation: ug
 ---

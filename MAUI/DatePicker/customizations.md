@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Date Picker control | Syncfusion®
-description: Learn about customizations in Syncfusion .NET MAUI Date Picker control for headers, footers, and visual elements.
 platform: maui
+title: Customizations in .NET MAUI Date Picker control | Syncfusion®
+description: Learn about customizations in Syncfusion® .NET MAUI Date Picker control for headers, footers, and visual elements.
 control: SfDatePicker
 documentation: ug
 ---
@@ -28,7 +28,7 @@ The SfDatePicker control allows you to add the header text by setting the [Text]
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.HeaderView >
             <picker:PickerHeaderView Height="40" Text="Date Picker"/>
         </picker:SfDatePicker.HeaderView>
@@ -68,7 +68,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.HeaderView >
             <picker:PickerHeaderView DividerColor="Red" />
         </picker:SfDatePicker.HeaderView>
@@ -107,7 +107,7 @@ Customize the header text style and background color of the `Date picker` using 
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.HeaderView >
             <picker:PickerHeaderView Background="#D3D3D3">
                 <picker:PickerHeaderView.TextStyle >
@@ -155,7 +155,7 @@ You can customize the date picker header appearance by using the [HeaderTemplate
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker">
+    <picker:SfDatePicker x:Name="datePicker">
         <picker:SfDatePicker.HeaderTemplate>
             <DataTemplate>
                 <Grid BackgroundColor="#BB9AB1">
@@ -200,7 +200,7 @@ You can customize the date picker header appearance by using the [HeaderTemplate
             </DataTemplate>
             <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
         </Grid.Resources>
-        <picker:SfDatePicker x:Name="datepicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
+        <picker:SfDatePicker x:Name="datePicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
         </picker:SfDatePicker>
     </Grid>
 </ContentPage>
@@ -247,7 +247,7 @@ The [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.Sf
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.ColumnHeaderView >
             <picker:DatePickerColumnHeaderView DayHeaderText="Day Column"
                                                MonthHeaderText="Month Column"
@@ -290,7 +290,7 @@ The SfDatePicker control allows you to customize the column header divider color
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.ColumnHeaderView >
             <picker:DatePickerColumnHeaderView DividerColor="Red" />
         </picker:SfDatePicker.ColumnHeaderView>
@@ -329,7 +329,7 @@ Customize the column header view text style and background color of the Date Pic
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.ColumnHeaderView >
             <picker:DatePickerColumnHeaderView Background="#D3D3D3">
                 <picker:DatePickerColumnHeaderView.TextStyle >
@@ -377,7 +377,7 @@ You can customize the date picker column header appearance by using the [ColumnH
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.ColumnHeaderTemplate>
             <DataTemplate>
                 <Grid BackgroundColor="#BB9AB1">
@@ -442,7 +442,7 @@ You can customize the date picker column header appearance by using the [ColumnH
             </DataTemplate>
             <local:ColumnHeaderTemplateSelector x:Key="columnHeaderTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
         </Grid.Resources>
-        <picker:SfDatePicker x:Name="datepicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
+        <picker:SfDatePicker x:Name="datePicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
         </picker:SfDatePicker>
     </Grid>
 </ContentPage>
@@ -490,7 +490,7 @@ The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Sync
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.FooterView >
             <picker:PickerFooterView Height="40" OkButtonText="Save"
                                      CancelButtonText="Exit" ShowOkButton="True"/>
@@ -533,7 +533,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.FooterView >
             <picker:PickerFooterView DividerColor="Red" />
         </picker:SfDatePicker.FooterView>
@@ -572,7 +572,7 @@ Customize the footer text style and background color of the Date Picker using th
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.FooterView >
             <picker:PickerFooterView Background="#D3D3D3">
                 <picker:PickerFooterView.TextStyle >
@@ -620,7 +620,7 @@ You can customize the date picker footer appearance by using the [FooterTemplate
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker">
+    <picker:SfDatePicker x:Name="datePicker">
         <picker:SfDatePicker.FooterTemplate>
             <DataTemplate>
                 <Grid BackgroundColor="#BB9AB1">
@@ -679,7 +679,7 @@ You can customize the date picker footer appearance by using the [FooterTemplate
             </DataTemplate>
             <local:FooterTemplateSelector x:Key="footerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormalDatesTemplate="{StaticResource normalDatesTemplate}"/>
         </Grid.Resources>
-        <picker:SfDatePicker x:Name="datepicker" FooterTemplate="{StaticResource footerTemplateSelector}">
+        <picker:SfDatePicker x:Name="datePicker" FooterTemplate="{StaticResource footerTemplateSelector}">
         </picker:SfDatePicker>
     </Grid>
 </ContentPage>
@@ -726,7 +726,7 @@ In the SfDatePicker control, the corner radius, stroke, and padding can be custo
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.SelectionView >
             <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
         </picker:SfDatePicker.SelectionView>
@@ -768,7 +768,7 @@ Customize the selected item's text style of the Date Picker by using the [Select
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.SelectedTextStyle >
             <picker:PickerTextStyle FontSize="15" TextColor="White"/>
         </picker:SfDatePicker.SelectedTextStyle>
@@ -807,7 +807,7 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker"
+    <picker:SfDatePicker x:Name="datePicker"
                          ColumnDividerColor="Red">
 
     </picker:SfDatePicker>
@@ -942,7 +942,7 @@ N>
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.DayColumnTextStyle>
             <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
         </picker:SfDatePicker.DayColumnTextStyle>
@@ -983,7 +983,7 @@ N>
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.MonthColumnTextStyle>
             <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
         </picker:SfDatePicker.MonthColumnTextStyle>
@@ -1024,7 +1024,7 @@ N>
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker x:Name="datePicker" >
         <picker:SfDatePicker.YearColumnTextStyle>
             <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
         </picker:SfDatePicker.YearColumnTextStyle>
@@ -1064,7 +1064,7 @@ Customize the day column width of the [SfDatePicker](https://help.syncfusion.com
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" DayColumnWidth="150"/>
+    <picker:SfDatePicker x:Name="datePicker" DayColumnWidth="150"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -1094,7 +1094,7 @@ Customize the month column width of the [SfDatePicker](https://help.syncfusion.c
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" MonthColumnWidth="150"/>
+    <picker:SfDatePicker x:Name="datePicker" MonthColumnWidth="150"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -1124,7 +1124,7 @@ Customize the year column width of the [SfDatePicker](https://help.syncfusion.co
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="datepicker" YearColumnWidth="150"/>
+    <picker:SfDatePicker x:Name="datePicker" YearColumnWidth="150"/>
 </ContentPage>
 
 {% endhighlight %}

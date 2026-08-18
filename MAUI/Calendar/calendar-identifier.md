@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Calendar Identifier in .NET MAUI Calendar control | Syncfusion®
-description: Learn about calendar identifier in Syncfusion .NET MAUI Calendar control to display different calendar types based on cultures.
 platform: maui
+title: Calendar Identifier in .NET MAUI Calendar control | Syncfusion®
+description: Learn about calendar identifier in Syncfusion® .NET MAUI Calendar control to display different calendar types based on cultures.
 control: SfCalendar
 documentation: ug
 ---
@@ -74,7 +74,7 @@ this.Content = calendar;
 {% endhighlight %}
 {% endtabs %}
 
-## DateTime values in Calendar identifiers
+### DateTime values in Calendar identifiers
 All the DateTime properties of the calendar can be given in two ways when the calendar identifier is specified other than the [GregorianCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarIdentifier.html#Syncfusion_Maui_Calendar_CalendarIdentifier_Gregorian).
 
 * Create a display date value by declaring the calendar identifier and the respective calendar identifier date.

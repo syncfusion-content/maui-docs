@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Liquid Glass Effect in .NET MAUI Date Picker control | Syncfusion®
-description: Learn about liquid glass effect in Syncfusion .NET MAUI Date Picker control for modern translucent design appearance.
-platform: MAUI
+description: Learn about liquid glass effect in Syncfusion® .NET MAUI Date Picker control for modern translucent design appearance.
 control: SfDatePicker
 documentation: ug
 ---
@@ -58,7 +58,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                 CornerRadius="20"
                 WidthRequest="350"
                 HeightRequest="350">
-                <picker:SfDatePicker x:Name="datepicker"
+                <picker:SfDatePicker x:Name="datePicker"
                                      EnableLiquidGlassEffect="True"
                                      Background="Transparent">
                     <picker:SfDatePicker.ColumnHeaderView>

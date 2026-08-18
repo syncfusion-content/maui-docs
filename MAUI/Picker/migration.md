@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Picker control | Syncfusion®
-description: Learn about migration from Syncfusion Xamarin Picker to .NET MAUI Picker control with API comparisons.
+description: Learn about migration from Syncfusion® Xamarin Picker to .NET MAUI Picker control with API comparisons.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from Xamarin Picker to .NET MAUI Picker control 
 
-To make the migration from the [Xamarin SfPicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-picker) to [.NET MAUI SfPicker](https://www.syncfusion.com/maui-controls/maui-picker) easier, most of the APIs from the Xamarin SfPicker were kept in the .NET MAUI SfPicker. However, to maintain the consistency of API naming in the .NET MAUI SfPicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Picker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-picker) to [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) easier, most of the APIs from the Xamarin Picker were kept in the .NET MAUI Picker. However, to maintain the consistency of API naming in the .NET MAUI Picker, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -102,7 +102,7 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 
 ### SfPicker
 
-The following code example, explains how to initialize the properties of the `Xamarin SfPicker` and `.NET MAUI SfPicker` class.
+The following code example, explains how to initialize the properties of the `Xamarin Picker` and `.NET MAUI Picker` class.
 
 <table>
 <tr>

@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Looping in .NET MAUI Time Picker control | Syncfusion®
 description: Enable seamless looping support to navigate between first and last items in the .NET MAUI Time Picker.
-platform: maui
 control: SfTimePicker
 documentation: ug
 ---
@@ -65,12 +65,12 @@ The `SfTimePicker` control allows you to select the time using the [SelectedTime
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker()
+SfTimePicker timePicker = new SfTimePicker()
 {
     SelectedTime = new TimeSpan(7, 22, 1),
 };
 
-this.Content = picker;
+this.Content = timePicker;
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +98,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.picker.SelectedTime = null;
+        this.timePicker.SelectedTime = null;
     }
 }
 

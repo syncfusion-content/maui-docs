@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI Picker control | Syncfusion®
-description: Learn about accessibility in Syncfusion .NET MAUI Picker control for inclusive design and user interactions.
+description: Learn about accessibility in Syncfusion® .NET MAUI Picker control for inclusive design and user interactions.
 control: SfPicker
+platform: maui
 documentation: ug
 ---
 
