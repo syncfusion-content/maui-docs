@@ -84,7 +84,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the delay, in milliseconds, before deferred updates are applied.</td>
+		<td>Defines the delay, in milliseconds, before deferred updates are applied.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -147,7 +147,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Determines whether value updates are deferred until interaction completes.</td>
+		<td>Defines whether value updates are deferred until interaction completes.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -246,7 +246,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Determines whether dividers are shown between the selected range and the remaining track.</td>
+		<td>Defines whether dividers are shown between the selected range and the remaining track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -300,7 +300,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets how far the track extends beyond the thumb bounds in device-independent units.</td>
+		<td>Defines how far the track extends beyond the thumb bounds in device-independent units.</td>
 	</tr>
     <tr valign="top">		
 		<td>

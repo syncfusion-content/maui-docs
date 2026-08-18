@@ -76,7 +76,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a>
 		</td>
-		<td>Sets the image displayed on the end thumb.</td>
+		<td>Defines the image displayed on the end thumb.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -256,7 +256,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View int type in API reference">int</a>
 		</td>
-		<td>Sets the number of minor ticks displayed between two major ticks.</td>
+		<td>Defines the number of minor ticks displayed between two major ticks.</td>
 	</tr>
     <tr valign="top">		
 		<td>

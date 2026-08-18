@@ -140,7 +140,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand" aria-label="View MessageLongPressedCommand property in API reference">MessageLongPressedCommand</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-		<td>Gets or sets the command executed when a message is long pressed.</td>
+		<td>Defines the command that executes when a message is long pressed.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape" aria-label="View MessageShape property in API reference">MessageShape</a></td>
@@ -200,7 +200,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SentIcon" aria-label="View SentIcon property in API reference">SentIcon</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-		<td>Gets or sets the image displayed for sent messages.</td>
+		<td>Defines the image displayed for sent messages.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowAttachmentButton" aria-label="View ShowAttachmentButton property in API reference">ShowAttachmentButton</a></td>
