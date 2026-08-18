@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# .NET MAUI Circular Chart API Reference
+# API Reference for .NET MAUI Circular Chart
 
 ## Properties
 
@@ -43,7 +43,7 @@ documentation: ug
 
 </table>
 
-## .NET MAUI Chart Series API Reference
+## Chart Series
 
 ### Properties
 

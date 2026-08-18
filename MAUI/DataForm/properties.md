@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# .NET MAUI DataForm API Reference
+# API Reference for .NET MAUI DataForm
 
 ## Properties
 

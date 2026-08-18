@@ -7,7 +7,7 @@ control: SfPullToRefresh
 documentation: ug
 ---
 
-# .NET MAUI PullToRefresh API Reference
+# API Reference for .NET MAUI PullToRefresh
 
 ## Properties
 

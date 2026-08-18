@@ -7,7 +7,7 @@ control: SfNavigationDrawer
 documentation: ug
 ---
 
-# .NET MAUI Navigation Drawer API Reference
+# API Reference for .NET MAUI Navigation Drawer
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfPyramidChart
 documentation: ug
 ---
 
-# .NET MAUI Pyramid Chart API Reference
+# API Reference for .NET MAUI Pyramid Chart
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfDockLayout
 documentation: ug
 ---
 
-# .NET MAUI DockLayout API Reference
+# API Reference for .NET MAUI DockLayout
 
 ## Properties
 

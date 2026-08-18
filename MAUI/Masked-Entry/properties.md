@@ -7,7 +7,7 @@ control: SfMaskedEntry
 documentation: ug
 ---
 
-# .NET MAUI Masked Entry API Reference
+# API Reference for .NET MAUI Masked Entry
 
 ## Properties
 

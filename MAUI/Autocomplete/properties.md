@@ -7,7 +7,7 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-#  API Reference in .NET MAUI Autocomplete control
+#  API Reference for .NET MAUI Autocomplete
 
 ## Properties
 

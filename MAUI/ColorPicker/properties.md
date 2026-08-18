@@ -7,7 +7,7 @@ control: SfColorPicker
 documentation: ug
 ---
 
-# .NET MAUI Color Picker API Reference
+# API Reference for .NET MAUI Color Picker
 
 ## Properties
 

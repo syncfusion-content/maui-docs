@@ -7,7 +7,7 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# .NET MAUI Signature Pad API Reference
+# API Reference for .NET MAUI Signature Pad
 
 ## Properties
 

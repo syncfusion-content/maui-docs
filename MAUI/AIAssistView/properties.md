@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# .NET MAUI AI AssistView API Reference
+# API Reference for .NET MAUI AI AssistView
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfRadialMenu
 documentation: ug
 ---
 
-# .NET MAUI Radial Menu API Reference
+# API Reference for .NET MAUI Radial Menu
 
 ## Properties
 

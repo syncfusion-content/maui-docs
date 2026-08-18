@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# .NET MAUI Barcode Generator API Reference
+# API Reference for .NET MAUI Barcode Generator
 
 ## Properties
 

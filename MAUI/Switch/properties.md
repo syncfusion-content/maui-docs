@@ -7,7 +7,7 @@ control: SfSwitch
 documentation: ug
 ---
 
-# .NET MAUI Switch API Reference
+# API Reference for .NET MAUI Switch
 
 ## Properties
 

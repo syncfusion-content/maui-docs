@@ -7,7 +7,7 @@ control: SfTabView
 documentation: ug
 ---
 
-# .NET MAUI Tab View API Reference
+# API Reference for .NET MAUI Tab View
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfSunburstChart
 documentation: ug
 ---
 
-# .NET MAUI Sunburst Chart API Reference
+# API Reference for .NET MAUI Sunburst Chart
 
 ## Properties
 

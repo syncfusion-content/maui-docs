@@ -7,7 +7,7 @@ control: SfSegmented
 documentation: ug
 ---
 
-# .NET MAUI Segmented API Reference
+# API Reference for .NET MAUI Segmented
 
 ## Properties
 

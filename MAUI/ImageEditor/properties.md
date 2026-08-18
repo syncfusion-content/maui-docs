@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Properties in .NET MAUI Image Editor
+# API Reference for .NET MAUI Image Editor
 
 ## Properties
 

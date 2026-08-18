@@ -7,7 +7,7 @@ control: SfRotator
 documentation: ug
 ---
 
-# .NET MAUI Rotator API Reference
+# API Reference for .NET MAUI Rotator
 
 ## Properties
 

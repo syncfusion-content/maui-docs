@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Circular Progress Bar API Reference
+# API Reference for .NET MAUI Circular Progress Bar
 
 ## Properties
 

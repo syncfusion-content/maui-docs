@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Linear ProgressBar API Reference
+# API Reference for .NET MAUI Linear ProgressBar
 
 ## Properties
 

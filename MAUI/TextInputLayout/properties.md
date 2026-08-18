@@ -7,7 +7,7 @@ control: SfTextInputLayout
 documentation: ug
 ---
 
-# .NET MAUI Text Input Layout API Reference
+# API Reference for .NET MAUI Text Input Layout
 
 ## Properties
 

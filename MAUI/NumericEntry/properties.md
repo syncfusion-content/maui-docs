@@ -7,7 +7,7 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# .NET MAUI Numeric Entry API Reference
+# API Reference for .NET MAUI Numeric Entry
 
 ## Properties
 

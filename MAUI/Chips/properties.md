@@ -7,7 +7,7 @@ control: SfChip
 documentation: ug
 ---
 
-# .NET MAUI Chip API Reference
+# API Reference for .NET MAUI Chip
 
 ## Properties
 

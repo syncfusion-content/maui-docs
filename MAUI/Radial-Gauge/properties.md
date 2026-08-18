@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# .NET MAUI Radial Gauge API Reference
+# API Reference for .NET MAUI Radial Gauge
 
 ## Properties
 

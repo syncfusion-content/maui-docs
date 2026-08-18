@@ -7,7 +7,7 @@ control: SfCarousel
 documentation: ug
 ---
 
-# .NET MAUI Carousel View API Reference
+# API Reference for .NET MAUI Carousel View
 
 ## Properties
 

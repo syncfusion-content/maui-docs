@@ -7,7 +7,7 @@ control: SfRating
 documentation: ug
 ---
 
-# .NET MAUI Rating API Reference
+# API Reference for .NET MAUI Rating
 
 ## Properties
 

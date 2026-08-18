@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# .NET MAUI Cartesian Chart API Reference
+# API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfExpander
 documentation: ug
 ---
 
-# .NET MAUI Expander API Reference
+# API Reference for .NET MAUI Expander
 
 ## Properties
 

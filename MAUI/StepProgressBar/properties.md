@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Step ProgressBar API Reference
+# API Reference for .NET MAUI Step ProgressBar
 
 ## Properties
 

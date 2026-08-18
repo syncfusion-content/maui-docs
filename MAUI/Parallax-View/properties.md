@@ -7,7 +7,7 @@ control: SfParallaxView
 documentation: ug
 ---
 
-# .NET MAUI Parallax View API Reference
+# API Reference for .NET MAUI Parallax View
 
 ## Properties
 

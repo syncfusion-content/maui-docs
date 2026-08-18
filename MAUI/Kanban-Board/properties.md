@@ -7,7 +7,7 @@ control: SfKanban
 documentation: ug
 ---
 
-# .NET MAUI Kanban Board API Reference
+# API Reference for .NET MAUI Kanban Board
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfEffectsView
 documentation: ug
 ---
 
-# .NET MAUI Effects View API Reference
+# API Reference for .NET MAUI Effects View
 
 ## Properties
 

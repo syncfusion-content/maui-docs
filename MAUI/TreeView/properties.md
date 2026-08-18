@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# .NET MAUI TreeView API Reference
+# API Reference for .NET MAUI TreeView
 
 ## Properties
 

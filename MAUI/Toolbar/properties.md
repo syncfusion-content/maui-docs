@@ -7,7 +7,7 @@ control: SfToolbar
 documentation: ug
 ---
 
-# .NET MAUI Toolbar API Reference
+# API Reference for .NET MAUI Toolbar
 
 ## Properties
 

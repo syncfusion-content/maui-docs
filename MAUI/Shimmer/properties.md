@@ -7,7 +7,7 @@ control: SfShimmer
 documentation: ug
 ---
 
-# .NET MAUI Shimmer API Reference
+# API Reference for .NET MAUI Shimmer
 
 ## Properties
 

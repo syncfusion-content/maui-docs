@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# .NET MAUI Linear Gauge API Reference
+# API Reference for .NET MAUI Linear Gauge
 
 ## Properties
 

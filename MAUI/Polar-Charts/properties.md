@@ -7,7 +7,7 @@ control: SfPolarChart
 documentation: ug
 ---
 
-# .NET MAUI Polar Chart API Reference
+# API Reference for .NET MAUI Polar Chart
 
 ## Properties
 

@@ -7,7 +7,7 @@ control: SfRadioButton
 documentation: ug
 ---
 
-# .NET MAUI Radio Button API Reference
+# API Reference for .NET MAUI Radio Button
 
 ## Properties
 

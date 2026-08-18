@@ -7,7 +7,7 @@ control: SfDigitalGauge
 documentation: ug
 ---
 
-# .NET MAUI Digital Gauge API Reference
+# API Reference for .NET MAUI Digital Gauge
 
 ## Properties
 

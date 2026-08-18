@@ -7,7 +7,7 @@ control: SfFunnelChart
 documentation: ug
 ---
 
-# .NET MAUI Funnel Chart API Reference
+# API Reference for .NET MAUI Funnel Chart
 
 ## Properties
 

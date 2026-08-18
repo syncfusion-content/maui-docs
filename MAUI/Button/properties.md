@@ -7,7 +7,7 @@ control: SfButton
 documentation: ug
 ---
 
-# .NET MAUI Button API Reference
+# API Reference for .NET MAUI Button
 
 ## Properties
 

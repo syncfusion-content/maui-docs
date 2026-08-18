@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# .NET MAUI Popup API Reference
+# API Reference for .NET MAUI Popup
 
 ## Properties
 
