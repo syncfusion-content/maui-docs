@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# .NET MAUI Barcode Generator API Reference
+# API Reference for .NET MAUI Barcode Generator
 
 ## Properties
 
@@ -70,8 +70,8 @@ documentation: ug
     <th>Description</th>
 </tr>
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_" aria-label="View GetStreamAsync method in API reference">GetStreamAsync(<code>ImageFileFormat</code>)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" aria-label="View Task&lt;Stream&gt; type in API reference">Task&lt;<a href="https://learn.microsoft.com/dotnet/api/system.io.stream" aria-label="View Stream type in API reference">Stream</a>&gt;</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_" aria-label="View GetStreamAsync method in API reference">GetStreamAsync(ImageFileFormat)</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" aria-label="View Task&lt;Stream&gt; type in API reference">Task&lt;<a href="https://learn.microsoft.com/dotnet/api/system.io.stream" aria-label="View Stream type in API reference">Stream&gt;</a></a></td>
     <td>Returns the barcode as a stream in the requested image format. This is useful when the output needs to be saved or processed before display.</td>
 </tr>
 

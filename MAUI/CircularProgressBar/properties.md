@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# .NET MAUI Circular Progress Bar API Reference
+# API Reference for .NET MAUI Circular Progress Bar
 
 ## Properties
 
@@ -133,9 +133,23 @@ documentation: ug
         <td>Defines the radius factor used to position the track arc.</td>
     </tr>
     <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness" aria-label="Track thickness of Circular Progress Bar">TrackThickness</a></td>
-        <td>double</td>
-        <td>Defines the thickness of the track arc.</td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness" aria-label="View TrackThickness property in API reference">TrackThickness</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+        <td>Sets the thickness of the <code>track arc</code>.</td>
+    </tr>
+</table>
+
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_" aria-label="View SetProgress method in API reference">SetProgress</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
+        <td>Updates the current <code>Progress</code> value and can animate the transition using optional duration and easing settings.</td>
     </tr>
 </table>
 
@@ -156,20 +170,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted" aria-label="Progress completed event in Circular Progress Bar">ProgressCompleted</a></td>
         <td>EventHandler</td>
         <td>Raised when the progress value reaches the maximum value.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_" aria-label="Updating the progress value in ProgressBar">SetProgress</a></td>
-        <td>void</td>
-        <td>Updates the progress value with optional animation settings.</td>
     </tr>
 </table>
