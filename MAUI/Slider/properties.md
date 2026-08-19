@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Properties in .NET MAUI Slider
+# API Reference for .NET MAUI Slider
 
 ## Properties
 

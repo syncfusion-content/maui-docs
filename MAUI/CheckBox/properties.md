@@ -7,7 +7,7 @@ control: SfCheckBox
 documentation: ug
 ---
 
-# API Reference in .NET MAUI CheckBox
+# API Reference for .NET MAUI CheckBox
 
 ## Properties
 

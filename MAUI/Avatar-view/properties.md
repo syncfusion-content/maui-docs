@@ -7,7 +7,7 @@ control: SfAvatarView
 documentation: ug
 ---
 
-# Properties in .NET MAUI Avatar View
+# API Reference for .NET MAUI Avatar View
 
 ## Properties
 

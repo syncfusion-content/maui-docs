@@ -7,7 +7,7 @@ control: SfTreeMap
 documentation: ug
 ---
 
-# API Reference in .NET MAUI TreeMap
+# API Reference for .NET MAUI TreeMap
 
 ## Properties
 

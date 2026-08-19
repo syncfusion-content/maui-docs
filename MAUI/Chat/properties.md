@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# .NET MAUI Chat API Reference
+# API Reference for .NET MAUI Chat
 
 ## Properties
 

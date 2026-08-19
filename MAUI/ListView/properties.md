@@ -7,7 +7,7 @@ control: SfListView
 documentation: ug
 ---
 
-# .NET MAUI ListView API Reference
+# API Reference for .NET MAUI ListView
 
 ## Properties
 

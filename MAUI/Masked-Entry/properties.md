@@ -7,7 +7,7 @@ control: SfMaskedEntry
 documentation: ug
 ---
 
-# .NET MAUI Masked Entry API Reference
+# API Reference for .NET MAUI Masked Entry
 
 ## Properties
 
@@ -140,7 +140,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ShowBorder" aria-label="View ShowBorder property in API reference">ShowBorder</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-        <td>Determines whether the control border is displayed. This supports bordered and borderless visual styles.</td>
+        <td>Determines whether the control border is displayed. This supports bordered and border less visual styles.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_SelectAllOnFocus" aria-label="View SelectAllOnFocus property in API reference">SelectAllOnFocus</a></td>

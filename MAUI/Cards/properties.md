@@ -7,7 +7,7 @@ control: SfCardLayout
 documentation: ug
 ---
 
-# .NET MAUI Cards API Reference
+# API Reference for .NET MAUI Cards
 
 ## Properties
 
