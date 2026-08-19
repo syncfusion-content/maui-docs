@@ -32,36 +32,34 @@ In the `GetCompletion` method, we will construct the prompt and send it to the A
 {% tabs %}
 {% highlight c# %}
 
-// AzureBaseService.cs
-    public abstract class AzureBaseService
-    {        
-        internal const string Endpoint = "YOUR_END_POINT_NAME";
+public abstract class AzureBaseService
+{        
+    internal const string Endpoint = "YOUR_END_POINT_NAME";
 
-        internal const string DeploymentName = "DEPLOYMENT_NAME";
+    internal const string DeploymentName = "DEPLOYMENT_NAME";
 
-        internal const string Key = "API_KEY";
+    internal const string Key = "API_KEY";
 
-        public AzureBaseService()
-        {
+    public AzureBaseService()
+    {
 
-        }
-
-        /// <summary>
-        /// To get the Azure open ai kernal method
-        /// </summary>
-        private void GetAzureOpenAIKernal()
-        {
-            try
-            {
-                var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
-                this.Client = client;
-            }
-            catch (Exception)
-            {
-            }
-        }
-        
     }
+
+    /// <summary>
+    /// To get the Azure open ai kernal method
+    /// </summary>
+    private void GetAzureOpenAIKernal()
+    {
+        try
+        {
+            var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
+            this.Client = client;
+        }
+        catch (Exception)
+        {
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -70,46 +68,44 @@ In the `GetCompletion` method, we will construct the prompt and send it to the A
 {% tabs %}
 {% highlight c# %}
 
-//ComboBoxAzureAIService.cs
-
 public class ComboBoxAzureAIService : AzureBaseService
 {
-        /// <summary>
-        /// Gets a completion response from the AzureAI service based on the provided prompt.
-        /// </summary>
-        /// <param name="prompt"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
+    /// <summary>
+    /// Gets a completion response from the AzureAI service based on the provided prompt.
+    /// </summary>
+    /// <param name="prompt"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
+    {
+        ChatHistory = string.Empty;
+        if (ChatHistory != null && Client != null)
         {
-            ChatHistory = string.Empty;
-            if (ChatHistory != null && Client != null)
+            ChatHistory = ChatHistory + "You are a filtering assistant.";
+            // Add the user message to the options
+            ChatHistory = ChatHistory + prompt;
+            try
             {
-                ChatHistory = ChatHistory + "You are a filtering assistant.";
-                // Add the user message to the options
-                ChatHistory = ChatHistory + prompt;
-                try
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
-                    var chatresponse = await Client.CompleteAsync(ChatHistory);
-                    cancellationToken.ThrowIfCancellationRequested();
-                    return chatresponse.ToString();
-                }
-                catch (RequestFailedException ex)
-                {
-                    // Log the error message and rethrow the exception or handle it appropriately
-                    Debug.WriteLine($"Request failed: {ex.Message}");
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    // Handle other potential exceptions
-                    Debug.WriteLine($"An error occurred: {ex.Message}");
-                    throw;
-                }
+                cancellationToken.ThrowIfCancellationRequested();
+                var chatresponse = await Client.CompleteAsync(ChatHistory);
+                cancellationToken.ThrowIfCancellationRequested();
+                return chatresponse.ToString();
             }
-            return "";
+            catch (RequestFailedException ex)
+            {
+                // Log the error message and rethrow the exception or handle it appropriately
+                Debug.WriteLine($"Request failed: {ex.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                // Handle other potential exceptions
+                Debug.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
         }
+        return "";
+    }
 }
 
 {% endhighlight %}
@@ -125,13 +121,11 @@ The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% tabs %}
 {% highlight c# %}
 
-// Model.cs
 public class ComboBoxModel
 {
     public string? Name { get; set; }
 }
 
-//ViewModel.cs
 public class ComboBoxViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<ComboBoxModel> foods;
@@ -191,8 +185,6 @@ The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI 
 
 {% tabs %}
 {% highlight c# %}
-
-//ComboBoxCustomFilter.cs
 
 public class ComboBoxCustomFilter : IComboBoxFilterBehavior
 {
@@ -312,21 +304,20 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 
 {% tabs %}
 {% highlight xaml %}
-    <editors:SfComboBox x:Name="combobox" 
-                        DropDownPlacement="Bottom"
-                        MaxDropDownHeight="200"
-                        IsEditable="True"
-                        TextSearchMode="StartsWith"
-                        IsFilteringEnabled="True"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        ItemsSource="{Binding Foods}">
-        <editors:SfComboBox.FilterBehavior>
-            <local:ComboBoxCustomFilter/>
-        </editors:SfComboBox.FilterBehavior>
-    </editors:SfComboBox>
+<editors:SfComboBox x:Name="combobox" 
+                    DropDownPlacement="Bottom"
+                    MaxDropDownHeight="200"
+                    IsEditable="True"
+                    TextSearchMode="StartsWith"
+                    IsFilteringEnabled="True"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ItemsSource="{Binding Foods}">
+    <editors:SfComboBox.FilterBehavior>
+        <local:ComboBoxCustomFilter/>
+    </editors:SfComboBox.FilterBehavior>
+</editors:SfComboBox>
 </ContentPage.Content>
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -335,6 +326,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI Combobox With AI Smart filter.](Images/AIFilter/ai_smart_filter.gif)
 
-You can find the complete sample from this [link.]()  
+You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Filtering-using-.NET-MAUI-ComboBox/tree/master)  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.
