@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# .NET MAUI Chat API Reference
+# API Reference for .NET MAUI Chat
 
 ## Properties
 
@@ -20,27 +20,27 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput" aria-label="View AllowMultilineInput property in API reference">AllowMultilineInput</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the input editor accepts multiline text. The default value is true.</td>
+		<td>Allows the message editor to expand across multiple lines so users can compose longer messages without sending immediately</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowPinning" aria-label="View AllowPinning property in API reference">AllowPinning</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether pinned messages are enabled. When enabled, pinned messages appear in a dedicated container at the top of the chat interface.</td>
+		<td>Allows users to pin messages so important conversations remain easy to find.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowSwiping" aria-label="View AllowSwiping property in API reference">AllowSwiping</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether messages can be swiped to reveal action views.</td>
+		<td>Enables swipe gestures on chat messages for supported message actions.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonCommand" aria-label="View AttachmentButtonCommand property in API reference">AttachmentButtonCommand</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-		<td>Gets or sets the command executed when the attachment button is tapped.</td>
+		<td>Executes an action when the attachment button in the message input area is selected.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonCommandParameter" aria-label="View AttachmentButtonCommandParameter property in API reference">AttachmentButtonCommandParameter</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
-		<td>Gets or sets the parameter passed to <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonCommand" aria-label="View AttachmentButtonCommand property in API reference">AttachmentButtonCommand</a>.</td>
+		<td>Supplies additional data to the command executed by the attachment button.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AttachmentButtonTemplate" aria-label="View AttachmentButtonTemplate property in API reference">AttachmentButtonTemplate</a></td>
@@ -60,7 +60,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CurrentUser" aria-label="View CurrentUser property in API reference">CurrentUser</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Author.html" aria-label="View Author type in API reference">Author</a></td>
-		<td>Gets or sets the current user that represents outgoing messages.</td>
+		<td>Identifies the local participant in the conversation so outgoing and incoming messages can be displayed with different visual styles and alignment.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_DeliveredIcon" aria-label="View DeliveredIcon property in API reference">DeliveredIcon</a></td>
@@ -135,12 +135,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand" aria-label="View MessageDoubleTappedCommand property in API reference">MessageDoubleTappedCommand</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-		<td>Gets or sets the command executed when a message is double tapped.</td>
+		<td>Executes an action when a message bubble is double-tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand" aria-label="View MessageLongPressedCommand property in API reference">MessageLongPressedCommand</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-		<td>Gets or sets the command executed when a message is long pressed.</td>
+		<td>Executes an action when a message bubble is pressed and held. Verification of the exact API name and availability is recommended from the API reference.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape" aria-label="View MessageShape property in API reference">MessageShape</a></td>
@@ -200,7 +200,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SentIcon" aria-label="View SentIcon property in API reference">SentIcon</a></td>
 		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-		<td>Gets or sets the image displayed for sent messages.</td>
+		<td>Defines the image displayed for sent messages.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowAttachmentButton" aria-label="View ShowAttachmentButton property in API reference">ShowAttachmentButton</a></td>
@@ -309,6 +309,26 @@ documentation: ug
 	</tr>
 </table>
 
+## Methods
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ResetSwipeOffset" aria-label="View ResetSwipeOffset method in API reference">ResetSwipeOffset()</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Void.html" aria-label="View void type in API reference">void</a></td>
+		<td>Resets the swipe offset of the last swiped message and returns it to its default position.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ScrollToMessage_System_Object_" aria-label="View ScrollToMessage method in API reference">ScrollToMessage(object)</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Void.html" aria-label="View void type in API reference">void</a></td>
+		<td>Scrolls the chat to the specified message.</td>
+	</tr>
+</table>
+
 ## Events
 
 <table>
@@ -386,25 +406,5 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Swiping" aria-label="View Swiping event in API reference">Swiping</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html" aria-label="View MessageSwipingEventArgs type in API reference">MessageSwipingEventArgs</a></td>
 		<td>Raised while a message is being swiped.</td>
-	</tr>
-</table>
-
-## Methods
-
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ResetSwipeOffset" aria-label="View ResetSwipeOffset method in API reference">ResetSwipeOffset()</a></td>
-		<td>void</td>
-		<td>Resets the swipe offset of the last swiped message and returns it to its default position.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ScrollToMessage_System_Object_" aria-label="View ScrollToMessage method in API reference">ScrollToMessage(object)</a></td>
-		<td>void</td>
-		<td>Scrolls the chat to the specified message.</td>
 	</tr>
 </table>
