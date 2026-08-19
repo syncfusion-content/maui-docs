@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Liquid Glass Effect in .NET MAUI Calendar control | Syncfusion®
-description: Learn about liquid glass effect in Syncfusion .NET MAUI Calendar control for modern translucent design appearance.
-platform: MAUI
+description: Learn about liquid glass effect in Syncfusion® .NET MAUI Calendar control for modern translucent design appearance.
 control: SfCalendar
 documentation: ug
 ---

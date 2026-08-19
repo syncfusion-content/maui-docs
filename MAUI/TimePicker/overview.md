@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI Time Picker Control | Syncfusion
-description: Learn about introduction of Syncfusion<sup>&reg;</sup> Essential Studio .NET MAUI Time Picker control and more details.
 platform: maui
+title: About Syncfusion .NET MAUI Time Picker Control | Syncfusion®
+description: Learn about introduction of Syncfusion<sup>&reg;</sup> Essential Studio .NET MAUI Time Picker control and more details.
 control: SfTimePicker
 documentation: ug
 ---
 
-# About Syncfusion .NET MAUI Time Picker Control
+# About Syncfusion® .NET MAUI Time Picker Control
 
 Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker ([SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker)) control allows you to select the time and visualize its items inside a popup or a drop-down UI element. The Time Picker also enables you to set time formats and customize its dialog appearance by configuring its header, footer, and more.
 

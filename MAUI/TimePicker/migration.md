@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrate from Xamarin SfTimePicker to .NET MAUI TimePicker | Syncfusion
-description: Migrate from Xamarin SfTimePicker to .NET MAUI Time Picker with API mapping and guidance on renamed properties.
 platform: maui
+title: Migrate from Xamarin TimePicker to .NET MAUI TimePicker | Syncfusion®
+description: Migrate from Xamarin Time Picker to .NET MAUI Time Picker with API mapping and guidance on renamed properties.
 control: SfTimePicker
 documentation: ug
 ---  
 
-# Migrate from Xamarin SfTimePicker to .NET MAUI SfTimePicker 
+# Migrate from Xamarin Time Picker to .NET MAUI Time Picker 
 
-To make the migration from the [Xamarin SfTimePicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html) to [.NET MAUI SfTimePicker](https://www.syncfusion.com/maui-controls/maui-timepicker) easier, most of the APIs from the Xamarin SfTimePicker are kept in the .NET MAUI SfTimePicker. However, to maintain the consistency of API naming in the .NET MAUI SfTimePicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Time Picker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfTimePicker.html) to [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) easier, most of the APIs from the Xamarin Time Picker are kept in the .NET MAUI Time Picker. However, to maintain the consistency of API naming in the .NET MAUI Time Picker, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -109,7 +109,7 @@ this.Content = timePicker;
 
 ### SfTimePicker
 
-The following code example, explains how to initialize the properties of the `Xamarin SfTimePicker` and `.NET MAUI SfTimePicker` class.
+The following code example, explains how to initialize the properties of the `Xamarin Time Picker` and `.NET MAUI Time Picker` class.
 
 <table>
 <tr>
@@ -136,7 +136,7 @@ using Syncfusion.SfPicker.XForms;
 ...
 
 SfTimePicker timePicker = new SfTimePicker();
-timePicker.Format = TimeFormat.HH_mm_ss;
+timepicker.Format = TimeFormat.HH_mm_ss;
 this.Content = timePicker;
 
 {% endhighlight %}
@@ -164,7 +164,7 @@ using Syncfusion.Maui.Picker;
 ...
 
 SfTimePicker timePicker = new SfTimePicker();
-timePicker.Format = PickerTimeFormat.h_mm_ss_tt;
+timepicker.Format = PickerTimeFormat.h_mm_ss_tt;
 this.Content = timePicker;
 
 {% endhighlight %}

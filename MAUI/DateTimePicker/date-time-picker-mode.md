@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Mode in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about mode in Syncfusion .NET MAUI Date Time Picker control with Default, Dialog, and RelativeDialog options.
 platform: maui
+title: Mode in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about mode in Syncfusion® .NET MAUI Date Time Picker control with Default, Dialog, and RelativeDialog options.
 control: SfDateTimePicker
 documentation: ug
 ---
@@ -40,9 +40,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.Mode = PickerMode.Dialog;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.Mode = PickerMode.Dialog;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -87,7 +87,7 @@ public partial class MainPage : ContentPage
     }
     private void Button_Clicked(object sender, EventArgs e)
     {
-        this.picker.IsOpen = true;
+        this.dateTimePicker.IsOpen = true;
     }
 }
 
@@ -153,7 +153,7 @@ public partial class MainPage : ContentPage
     }
     private void Button_Clicked(object sender, EventArgs e)
     {
-        this.picker.IsOpen = true;
+        this.dateTimePicker.IsOpen = true;
     }
 }
 
@@ -204,8 +204,8 @@ public partial class MainPage : ContentPage
     }
     private void Button_Clicked(object sender, EventArgs e)
     {
-        this.picker.IsOpen = true;
-        this.picker.RelativeView = pickerButton;
+        this.dateTimePicker.IsOpen = true;
+        this.dateTimePicker.RelativeView = pickerButton;
     }
 }
 
@@ -245,10 +245,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.PopupWidth = 300;
-        picker.PopupHeight = 400;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.PopupWidth = 300;
+        dateTimePicker.PopupHeight = 400;
+        this.Content = dateTimePicker;
     }
 }
 

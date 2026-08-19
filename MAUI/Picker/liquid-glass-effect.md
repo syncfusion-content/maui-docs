@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Liquid Glass Effect in .NET MAUI Picker control | Syncfusion®
-description: Learn about liquid glass effect in Syncfusion .NET MAUI Picker control for modern translucent design.
-platform: MAUI
+description: Learn about liquid glass effect in Syncfusion® .NET MAUI Picker control for modern translucent design.
+platform: maui
 control: SfPicker
 documentation: ug
 ---

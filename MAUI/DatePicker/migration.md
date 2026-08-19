@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Date Picker control | Syncfusion®
-description: Learn about migration from Syncfusion Xamarin Date Picker to .NET MAUI Date Picker control with API comparisons.
 platform: maui
+title: Migration from Xamarin to .NET MAUI Date Picker control | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Date Picker to .NET MAUI Date Picker control with API comparisons.
 control: SfDatePicker
 documentation: ug
 ---  
 
 # Migration from Xamarin Date Picker to .NET MAUI Date Picker control 
 
-To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Date Picker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin Date Picker are kept in the .NET MAUI Date Picker. However, to maintain the consistency of API naming in the .NET MAUI Date Picker, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -107,7 +107,7 @@ this.Content = datePicker;
 
 ### SfDatePicker
 
-The following code example, explains how to initialize the properties of the `Xamarin SfDatePicker` and `.NET MAUI SfDatePicker` class.
+The following code example, explains how to initialize the properties of the `Xamarin Date Picker` and `.NET MAUI Date Picker` class.
 
 <table>
 <tr>

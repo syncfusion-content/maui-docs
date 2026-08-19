@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Customizations in .NET MAUI Calendar control | Syncfusion®
-description: Learn about customizations in Syncfusion .NET MAUI Calendar control for cells, themes, and visual elements.
 platform: maui
+description: Learn about customizations in Syncfusion® .NET MAUI Calendar control for cells, themes, and visual elements.
 control: SfCalendar
 documentation: ug
 ---
