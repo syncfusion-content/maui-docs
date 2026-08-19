@@ -20,7 +20,7 @@ The prompt composition pipeline combines the following inputs into a single prom
 * **PromptParts** - discrete, ordered fragments contributed by application logic, tools, or plugin. Each part exposes an `Order` and an `IsEnabled` flag.
 * **User input** - the message typed in the request editor.
 
-The user input is always appended as the last segment. Non-empty segments are joined with a newline (`Environment.NewLine`) delimiter, and the `PromptComposing` event is raised immediately before the request is sent to the AI service.
+The user input is always appended as the last segment. The `PromptComposing` event is raised immediately before the request is sent to the AI service.
 
 ## Composition order
 
@@ -42,7 +42,7 @@ The [SystemPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistV
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           SystemPrompt="You are a helpful, concise assistant. Always respond in Markdown."/>
+                           SystemPrompt="Provide clear, professional, and outcome-driven guidance based on available information"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="10" %}
@@ -56,7 +56,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.SystemPrompt = "You are a helpful, concise assistant. Always respond in Markdown.";
+        this.sfAIAssistView.SystemPrompt = "Provide clear, professional, and outcome-driven guidance based on available information";
         this.Content = sfAIAssistView;
     }
 }
@@ -72,7 +72,7 @@ The [ContextPrompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssist
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           ContextPrompt="Document: Sales Report Q1 2026. Selected cell: B7."/>
+                           ContextPrompt="Leverage conversation context and user goals to deliver personalized and effective responses"/>
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="10" %}
@@ -86,7 +86,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ContextPrompt = "Document: Sales Report Q1 2026. Selected cell: B7.";
+        this.sfAIAssistView.ContextPrompt = "Leverage conversation context and user goals to deliver personalized and effective responses.";
         this.Content = sfAIAssistView;
     }
 }
@@ -135,54 +135,23 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView = new SfAIAssistView();
         this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>
         {
-            new AssistPromptPart
-            {
-                Content = "Available tools: Calculator, Search, Translate.",
-                Order = 10,
+           new AssistPromptPart
+           {
+                Content = "Available tools: Search, KnowledgeBase, Calendar, Email, Calculator, Weather, Translation.",
+                Order = 1,
                 IsEnabled = true
-            }
+           },
+           new AssistPromptPart
+           {
+                Content = "Select the best tool when needed and provide concise, accurate, context-aware responses.",
+                Order = 2,
+                IsEnabled = false
+           },
         };
 
         this.Content = sfAIAssistView;
     }
 }
-
-{% endhighlight %}
-{% endtabs %}
-
-### Ordering of parts
-
-Parts are sorted by the `Order` property in ascending order before they are joined into the prompt. Lower values are placed first; parts with the same `Order` value retain their insertion order. `Order` only controls the relative position of parts within the `PromptParts` block - it does not move a part before `SystemPrompt` or after the user input.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" hl_lines="3,4,5" %}
-
-this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>
-{
-    new AssistPromptPart { Content = "Tone: friendly and direct.", Order = 5 },
-    new AssistPromptPart { Content = "Available tools: Calculator, Search.", Order = 10 },
-    new AssistPromptPart { Content = "Output format: bullet list.", Order = 20 }
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-### Enabling and disabling parts
-
-Set [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistPromptPart.html#Syncfusion_Maui_AIAssistView_AssistPromptPart_IsEnabled) to `false` to exclude a part from composition without removing it from the collection. The default value is `true`.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
-
-this.sfAIAssistView.PromptParts = new System.Collections.Generic.List<AssistPromptPart>()
-{
-    new AssistPromptPart
-    {
-        Content = "Include detailed citations in every response.",
-        Order = 50,
-        IsEnabled = false
-    },
-};
 
 {% endhighlight %}
 {% endtabs %}
@@ -198,7 +167,7 @@ The [PromptComposing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                           PromptComposing="sfAIAssistView_PromptComposing" />
+                           PromptComposing="OnPromptComposing" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="9" %}
@@ -211,13 +180,13 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         SfAIAssistView sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.PromptComposing += SfAIAssistView_PromptComposing;
+        sfAIAssistView.PromptComposing += OnPromptComposing;
         this.Content = sfAIAssistView;
     }
 
-    private void SfAIAssistView_PromptComposing(object sender, PromptComposingEventArgs e)
+    private void OnPromptComposing(object sender, PromptComposingEventArgs e)
     {
-        // Handle the prompt composing event.
+        // Use the PromptComposing event to access the merged SystemPrompt, ContextPrompt, agent context, and enabled PromptParts through e.ComposedPrompt and e.Parts.
     }
 }
 
