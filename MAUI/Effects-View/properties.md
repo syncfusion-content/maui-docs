@@ -186,31 +186,31 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AnimationCompleted" aria-label="View AnimationCompleted event in API reference">AnimationCompleted</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
 <td>Raised when the visual effect animation completes and signals that the current transition has finished.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressed" aria-label="View LongPressed event in API reference">LongPressed</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
 <td>Raised when a <code>long press</code> interaction occurs and indicates that the press gesture has been recognized.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
 <td>Raised when the selection state changes and reflects transitions between selected and unselected states.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDown" aria-label="View TouchDown event in API reference">TouchDown</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
 <td>Raised when a <code>touch down</code> action occurs and marks the beginning of pointer contact with the control.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUp" aria-label="View TouchUp event in API reference">TouchUp</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
 <td>Raised when a <code>touch up</code> action occurs and marks the end of pointer contact with the control.</td>
 </tr>
 

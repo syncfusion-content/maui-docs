@@ -85,7 +85,7 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_TextChanged" aria-label="View TextChanged event in API reference">TextChanged</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.textchangedeventargs" aria-label="View TextChangedEventArgs type in API reference">TextChangedEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.textchangedeventargs" aria-label="View TextChangedEventArgs type in API reference">TextChangedEventArgs&gt;</a></a></td>
 <td>Raised when the text displayed in the digital gauge changes and provides the updated text change information.</td>
 </tr>
 

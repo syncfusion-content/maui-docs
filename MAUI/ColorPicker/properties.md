@@ -318,19 +318,19 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged" aria-label="View ColorChanged event in API reference">ColorChanged</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html" aria-label="View ColorChangedEventArgs type in API reference">ColorChangedEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html" aria-label="View ColorChangedEventArgs type in API reference">ColorChangedEventArgs&gt;</a></a></td>
 <td>Raised when the selected color changes and provides the final color selection details after the update is applied.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging" aria-label="View ColorChanging event in API reference">ColorChanging</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html" aria-label="View ColorChangingEventArgs type in API reference">ColorChangingEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html" aria-label="View ColorChangingEventArgs type in API reference">ColorChangingEventArgs&gt;</a></a></td>
 <td>Raised while the selected color is changing and provides intermediate selection details before the new value is committed.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected" aria-label="View ColorSelected event in API reference">ColorSelected</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html" aria-label="View ColorSelectedEventArgs type in API reference">ColorSelectedEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html" aria-label="View ColorSelectedEventArgs type in API reference">ColorSelectedEventArgs&gt;</a></a></td>
 <td>Raised when a color is selected and provides the selection details associated with the chosen swatch or value.</td>
 </tr>
 

@@ -127,13 +127,13 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ClearButtonClicked" aria-label="View ClearButtonClicked event in API reference">ClearButtonClicked</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a></td>
     <td>Raised when the clear button is clicked and indicates that the current selection has been cleared.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxValueChangedEventArgs.html" aria-label="View ComboBoxValueChangedEventArgs type in API reference">ComboBoxValueChangedEventArgs</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxValueChangedEventArgs.html" aria-label="View ComboBoxValueChangedEventArgs type in API reference">ComboBoxValueChangedEventArgs&gt;</a></a></td>
     <td>Raised when the selected value or text in the control changes and provides the updated value change details.</td>
 </tr>
 </table>
