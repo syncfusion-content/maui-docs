@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from Xamarin Cards to .NET MAUI Cards
 
-To make the migration from the [Xamarin SfCards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin SfCards were kept in the.NET MAUI SfCards. However, to maintain the consistency of API naming in the .NET MAUI SfCards, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Cards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI Cards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin Cards were kept in the .NET MAUI Cards. However, to maintain the consistency of API naming in the .NET MAUI Cards, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 

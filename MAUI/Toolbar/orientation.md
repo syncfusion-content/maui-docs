@@ -13,9 +13,9 @@ This his section covers support for horizontal and vertical layouts, allowing fl
 
 ## Horizontal Toolbar
 
-To set up a horizontal toolbar using the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation). This configuration arranges the toolbar’s items from left to right across the screen.
+To set up a horizontal Toolbar using the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation). This configuration arranges the Toolbar’s items from left to right across the screen.
 
-The following code sample demonstrates how to create a toolbar control with horizontal layout.
+The following code sample demonstrates how to create a Toolbar control with horizontal layout.
 
 {% tabs %}
 
@@ -136,9 +136,9 @@ public class TextFormattingViewModel
 
 ## Vertical Toolbar
 
-To set up a Vertical toolbar using the SfToolbar component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html#Syncfusion_Maui_Toolbar_ToolbarOrientation_Vertical). This configuration arranges the toolbar’s items from top to bottom across the screen.
+To set up a Vertical Toolbar using the SfToolbar component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Vertical](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html#Syncfusion_Maui_Toolbar_ToolbarOrientation_Vertical). This configuration arranges the Toolbar’s items from top to bottom across the screen.
 
-The following code sample demonstrates how to create a toolbar control with vertical layout.
+The following code sample demonstrates how to create a Toolbar control with vertical layout.
 {% tabs %}
 
 {% highlight xaml %}

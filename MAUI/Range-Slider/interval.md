@@ -48,7 +48,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider numeric interval](images/interval/numeric-interval.png)
+![Range Slider numeric interval](images/interval/numeric-interval.png)
 
 ## Auto interval
 

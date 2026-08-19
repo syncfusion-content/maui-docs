@@ -40,7 +40,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider divider](images/labels-and-dividers/divider.png)
+![Range Slider divider](images/labels-and-dividers/divider.png)
 
 ## Divider radius
 
@@ -78,7 +78,7 @@ rangeSlider.DividerStyle.InactiveRadius = 5;
 
 {% endtabs %}
 
-![RangeSlider divider radius](images/labels-and-dividers/divider-radius.png)
+![Range Slider divider radius](images/labels-and-dividers/divider-radius.png)
 
 ## Divider color
 
@@ -120,7 +120,7 @@ rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B
 
 {% endtabs %}
 
-![RangeSlider divider color](images/labels-and-dividers/divider-color.png)
+![Range Slider divider color](images/labels-and-dividers/divider-color.png)
 
 ## Divider stroke width and stroke color
 
@@ -172,7 +172,7 @@ rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
 
 {% endtabs %}
 
-![RangeSlider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
+![Range Slider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
 
 ## Disabled divider
 
@@ -321,4 +321,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider divider disabled state](images/labels-and-dividers/divider-disabled.png)
+![Range Slider divider disabled state](images/labels-and-dividers/divider-disabled.png)
