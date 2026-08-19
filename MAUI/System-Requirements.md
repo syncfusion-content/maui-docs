@@ -13,13 +13,14 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
 
 <style>
   /* ---------- Shared grid + card ---------- */
-  .req-grid {
+  .requirements-grid {
     display: flex;
     flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin: 0 0 8px 0;
   }
-  .form-card {
+  .info-card {
     flex: 0 0 calc(33.33% - 14px);
     max-width: calc(33.33% - 14px);
     box-sizing: border-box;
@@ -32,7 +33,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     gap: 8px;
     color: inherit;
   }
-  .form-card .label {
+  .info-card .label {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -40,27 +41,27 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     color: #6B6B6B;
     margin: 0;
   }
-  .form-card .value {
+  .info-card .value {
     font-size: 15px;
     color: #1F1F1F;
     line-height: 1.5;
     margin: 0;
   }
-  @media (max-width: 900px) {
-    .form-card { flex: 0 0 calc(50% - 10px); max-width: calc(50% - 10px); }
-  }
   @media (max-width: 600px) {
-    .form-card { flex: 0 0 100%; max-width: 100%; }
+    .info-card { flex: 0 0 calc(50% - 10px); max-width: calc(50% - 10px); }
+  }
+  @media (max-width: 350px) {
+    .info-card { flex: 0 0 100%; max-width: 100%; }
   }
 
   /* ---------- Operating Systems: tinted feature list ---------- */
-  .system-list {
+  .system-requirements-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 0 0 8px 0;
   }
-  .system-row {
+  .system-requirement-row {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -69,20 +70,20 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border: 1px solid #E6E6E6;
     background: #ffffff;
   }
-  .system-row .system-body { flex: 1; }
-  .system-row .system-name {
+  .system-requirement-row .system-requirement-body { flex: 1; }
+  .system-requirement-row .system-requirement-name {
     font-size: 15px;
     font-weight: 600;
     color: #1F1F1F;
     margin: 0 0 2px 0;
   }
-  .system-row .system-version {
+  .system-requirement-row .system-requirement-version {
     font-size: 13px;
     color: #0078D4;
     font-weight: 600;
     margin: 0;
   }
-  .system-row .system-editions {
+  .system-requirement-row .system-requirement-editions {
     font-size: 13px;
     color: #555;
     line-height: 1.5;
@@ -90,13 +91,13 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
   }
 
   /* ---------- Hardware Environment: stat tiles ---------- */
-  .hw-grid {
+  .hardware-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     margin: 0 0 8px 0;
   }
-  .hw-tile {
+  .hardware-tile {
     position: relative;
     padding: 22px 20px;
     border-radius: 14px;
@@ -104,7 +105,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border: 1px solid #D6E0F5;
     overflow: hidden;
   }
-  .hw-tile::after {
+  .hardware-tile::after {
     content: "";
     position: absolute;
     right: -20px;
@@ -114,7 +115,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border-radius: 50%;
     background: rgba(0, 120, 212, 0.08);
   }
-  .hw-tile .hw-label {
+  .hardware-tile .hardware-label {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -122,26 +123,26 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     color: #005A9E;
     margin: 0 0 6px 0;
   }
-  .hw-tile .hw-value {
+  .hardware-tile .hardware-value {
     font-size: 17px;
     font-weight: 600;
     color: #1F1F1F;
     line-height: 1.4;
     margin: 0;
   }
-  @media (max-width: 900px) { .hw-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 600px) { .hw-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .hardware-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .hardware-grid { grid-template-columns: 1fr; } }
 
   /* ---------- Development Environment: icon-led horizontal cards ---------- */
   .development-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
     margin: 0 0 8px 0;
   }
   .development-row {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
     gap: 16px;
     padding: 16px 18px;
     border-radius: 12px;
@@ -153,9 +154,9 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     font-size: 22px;
     color: #ffffff;
     font-weight: 700;
@@ -192,13 +193,13 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
   .development-row.code .development-version .dot { background: #0078D7; }
 
   /* ---------- .NET Versions: colorful gradient tiles ---------- */
-  .net-grid {
+  .net-version-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin: 0 0 8px 0;
   }
-  .net-tile {
+  .net-version-tile {
     position: relative;
     padding: 26px 24px;
     border-radius: 16px;
@@ -206,9 +207,9 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     overflow: hidden;
     border: 1px solid transparent;
   }
-  .net-tile.net10 { background: linear-gradient(135deg, #512BD4 0%, #2B0A8C 100%); }
-  .net-tile.net9  { background: linear-gradient(135deg, #0078D4 0%, #00509E 100%); }
-  .net-tile::before {
+  .net-version-tile.net-version-10 { background: linear-gradient(135deg, #512BD4 0%, #2B0A8C 100%); }
+  .net-version-tile.net-version-9  { background: linear-gradient(135deg, #0078D4 0%, #00509E 100%); }
+  .net-version-tile::before {
     content: "";
     position: absolute;
     right: -30px;
@@ -218,7 +219,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border-radius: 50%;
     background: rgba(255,255,255,0.08);
   }
-  .net-tile::after {
+  .net-version-tile::after {
     content: "";
     position: absolute;
     right: 20px;
@@ -228,7 +229,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
   }
-  .net-tile .net-label {
+  .net-version-tile .net-version-label {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -236,14 +237,14 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     color: rgba(255,255,255,0.85);
     margin: 0 0 6px 0;
   }
-  .net-tile .net-version {
+  .net-version-tile .net-version-number {
     font-size: 32px;
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
-  .net-tile .net-status {
+  .net-version-tile .net-version-status {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -255,17 +256,17 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     font-weight: 600;
     letter-spacing: 0.3px;
   }
-  .net-tile .net-status .dot {
+  .net-version-tile .net-version-status .dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: #6FFFB0;
     box-shadow: 0 0 6px #6FFFB0;
   }
-  @media (max-width: 700px) { .net-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .net-version-grid { grid-template-columns: 1fr; } }
 
   /* ---------- Supported Platforms: styled list (div-based) ---------- */
-  .platform-table {
+  .platform-requirements-table {
     width: 100%;
     border: 1px solid #E6E6E6;
     border-radius: 12px;
@@ -273,9 +274,16 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     background: #ffffff;
     margin: 0 0 8px 0;
     font-size: 14px;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  .platform-table .platform-header {
+  .platform-requirements-table .platform-requirements-header,
+  .platform-requirements-table .platform-requirements-row {
     display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+  }
+  .platform-requirements-table .platform-requirements-header {
     background: #F4F7FB;
     color: #1F1F1F;
     text-align: left;
@@ -285,83 +293,70 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     text-transform: uppercase;
     border-bottom: 1px solid #E6E6E6;
   }
-  .platform-table .platform-header .header-cell {
-    padding: 12px 16px;
+  .platform-requirements-table .platform-requirements-header .header-cell,
+  .platform-requirements-table .platform-requirements-row .row-cell {
+    box-sizing: border-box;
+    padding: 12px 14px;
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
-  .platform-table .platform-row {
-    display: flex;
-    align-items: flex-start;
+  .platform-requirements-table .platform-requirements-row {
     border-bottom: 1px solid #F0F0F0;
     color: #1F1F1F;
   }
-  .platform-table .platform-row:last-child { border-bottom: none; }
-  .platform-table .platform-row .row-cell {
-    padding: 14px 16px;
-    vertical-align: top;
+  .platform-requirements-table .platform-requirements-row:last-child { border-bottom: none; }
+  .platform-requirements-table .platform-requirements-row .row-cell {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
-  .platform-table .plat-cell {
+  .platform-requirements-table .platform-cell {
     font-weight: 600;
   }
 </style>
 
-## Operating Systems
+## Operating Systems & Hardware
 
-The following operating systems are supported.
+The following table summarizes the operating systems and hardware required to develop, build, and run Syncfusion<sup>®</sup> .NET MAUI applications on Windows and macOS (Mac Catalyst).
 
-<div class="system-list">
-  <div class="system-row">
-    <div class="system-body">
-      <p class="system-name">Windows 11</p>
-      <p class="system-editions">Home, Pro, Pro Education, Pro for Workstations, Enterprise, and Education</p>
-    </div>
-    <p class="system-version">Version 21H2 or higher</p>
+<div class="platform-requirements-table">
+  <div class="platform-requirements-header">
+    <div class="header-cell" style="flex: 0 0 22%;">Category</div>
+    <div class="header-cell" style="flex: 1 1 39%;">Windows</div>
+    <div class="header-cell" style="flex: 1 1 39%;">macOS (Mac Catalyst)</div>
   </div>
-  <div class="system-row">
-    <div class="system-body">
-      <p class="system-name">Windows 10</p>
-      <p class="system-editions">Home, Professional, Education, and Enterprise</p>
-    </div>
-    <p class="system-version">Version 1909 or higher</p>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Operating System</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">Windows 10 version 1909 or later &bull; Windows Server 2019 or later</div>
+    <div class="row-cell" style="flex: 1 1 39%;">macOS 12 or later</div>
   </div>
-  <div class="system-row">
-    <div class="system-body">
-      <p class="system-name">Windows Server 2022</p>
-      <p class="system-editions">Standard and Datacenter</p>
-    </div>
-    <p class="system-version">Latest release</p>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Development Tools</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio 2022 or later</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Xcode 15.4 or later</div>
   </div>
-  <div class="system-row">
-    <div class="system-body">
-      <p class="system-name">Windows Server 2019</p>
-      <p class="system-editions">Standard and Datacenter</p>
-    </div>
-    <p class="system-version">Latest release</p>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Architecture</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">x86 / x64</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Apple Silicon (M1+) recommended</div>
   </div>
-  <div class="system-row">
-    <div class="system-body">
-      <p class="system-name">Windows Server 2016</p>
-      <p class="system-editions">Standard and Datacenter</p>
-    </div>
-    <p class="system-version">Latest release</p>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Processor</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">1.8 GHz or faster, quad-core recommended</div>
+    <div class="row-cell" style="flex: 1 1 39%;">1.8 GHz or faster, quad-core recommended</div>
+  </div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Memory</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">Minimum 4 GB RAM &bull; Recommended 16 GB RAM</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Minimum 4 GB RAM &bull; Recommended 16 GB RAM</div>
+  </div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Disk Space</span></div>
+    <div class="row-cell" style="flex: 1 1 39%;">Up to 210 GB available storage</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Up to 210 GB available storage</div>
   </div>
 </div>
 
-## Hardware Environment
-
-<div class="hw-grid">
-  <div class="hw-tile">
-    <p class="hw-label">Processor</p>
-    <p class="hw-value">x86 or x64</p>
-  </div>
-  <div class="hw-tile">
-    <p class="hw-label">RAM</p>
-    <p class="hw-value">4 GB (minimum)<br>16 GB (recommended)</p>
-  </div>
-  <div class="hw-tile">
-    <p class="hw-label">Hard Disk</p>
-    <p class="hw-value">Up to 210 GB of free space</p>
-  </div>
-</div>
 
 ## Development Environment
 
@@ -403,16 +398,16 @@ Our .NET MAUI components are compatible with the following development environme
 
 The following .NET versions are supported.
 
-<div class="net-grid">
-  <div class="net-tile net10">
-    <p class="net-label">Long Term Support</p>
-    <p class="net-version">.NET 10.0</p>
-    <span class="net-status"><span class="dot"></span>Supported</span>
+<div class="net-version-grid">
+  <div class="net-version-tile net-version-10">
+    <p class="net-version-label">Long Term Support</p>
+    <p class="net-version-number">.NET 10.0</p>
+    <span class="net-version-status"><span class="dot"></span>Supported</span>
   </div>
-  <div class="net-tile net9">
-    <p class="net-label">Standard Term Support</p>
-    <p class="net-version">.NET 9.0</p>
-    <span class="net-status"><span class="dot"></span>Supported</span>
+  <div class="net-version-tile net-version-9">
+    <p class="net-version-label">Standard Term Support</p>
+    <p class="net-version-number">.NET 9.0</p>
+    <span class="net-version-status"><span class="dot"></span>Supported</span>
   </div>
 </div>
 
@@ -420,26 +415,26 @@ The following .NET versions are supported.
 
 .NET Multi-platform App UI (.NET MAUI) apps can be developed for the following platforms.
 
-<div class="platform-table">
-  <div class="platform-header">
-    <div class="header-cell" style="width: 28%;">Platform</div>
-    <div class="header-cell">Supported Version</div>
+<div class="platform-requirements-table">
+  <div class="platform-requirements-header">
+    <div class="header-cell" style="flex: 0 0 28%;">Platform</div>
+    <div class="header-cell" style="flex: 1 1 auto;">Supported Version</div>
   </div>
-  <div class="platform-row">
-    <div class="row-cell" style="width: 28%;"><span class="plat-cell">Android</span></div>
-    <div class="row-cell">Android 5.0 (API 21) or higher</div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 28%;"><span class="platform-cell">Android</span></div>
+    <div class="row-cell" style="flex: 1 1 auto;">Android 5.0 (API 21) or higher</div>
   </div>
-  <div class="platform-row">
-    <div class="row-cell" style="width: 28%;"><span class="plat-cell">iOS</span></div>
-    <div class="row-cell">iOS 12.2 or higher</div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 28%;"><span class="platform-cell">iOS</span></div>
+    <div class="row-cell" style="flex: 1 1 auto;">iOS 12.2 or higher</div>
   </div>
-  <div class="platform-row">
-    <div class="row-cell" style="width: 28%;"><span class="plat-cell">macOS</span></div>
-    <div class="row-cell">macOS 12 or higher, using Mac Catalyst</div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 28%;"><span class="platform-cell">macOS</span></div>
+    <div class="row-cell" style="flex: 1 1 auto;">macOS 12 or higher, using Mac Catalyst</div>
   </div>
-  <div class="platform-row">
-    <div class="row-cell" style="width: 28%;"><span class="plat-cell">Windows</span></div>
-    <div class="row-cell">Windows 11 and Windows 10 version 1809 or higher, using Windows UI Library (WinUI) 3</div>
+  <div class="platform-requirements-row">
+    <div class="row-cell" style="flex: 0 0 28%;"><span class="platform-cell">Windows</span></div>
+    <div class="row-cell" style="flex: 1 1 auto;">Windows 11 and Windows 10 version 1809 or higher, using Windows UI Library (WinUI) 3</div>
   </div>
 </div>
 
