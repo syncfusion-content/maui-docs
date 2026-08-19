@@ -279,7 +279,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
   .platform-requirements-table .platform-requirements-header,
   .platform-requirements-table .platform-requirements-row {
     display: flex;
-    flex-wrap: wrap;
     align-items: stretch;
     width: 100%;
   }
