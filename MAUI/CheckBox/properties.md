@@ -20,12 +20,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor" aria-label="View CheckedColor property in API reference">CheckedColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
-		<td>Gets or sets the color that is shown when the check box is checked.</td>
+		<td>Controls the color used when the CheckBox is checked or in the indeterminate state.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing" aria-label="View ContentSpacing property in API reference">ContentSpacing</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Gets or sets the spacing between the check box icon and its text.</td>
+		<td>Defines the spacing between the check box icon and its text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize" aria-label="View ControlSize property in API reference">ControlSize</a></td>
@@ -69,7 +69,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool?</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
 		<td>Gets or sets a value indicating whether the check box is checked, unchecked, or indeterminate.</td>
 	</tr>
 	<tr valign="top">
@@ -80,7 +80,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState" aria-label="View IsThreeState property in API reference">IsThreeState</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the check box supports checked, unchecked, and indeterminate states.</td>
+		<td>Enables three-state selection, allowing the CheckBox to display checked, unchecked, and indeterminate states.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
@@ -95,7 +95,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness" aria-label="View StrokeThickness property in API reference">StrokeThickness</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Gets or sets the border thickness of the check box.</td>
+		<td>Controls the thickness of the CheckBox border. Higher values produce a thicker outline.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text" aria-label="View Text property in API reference">Text</a></td>
@@ -110,12 +110,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor" aria-label="View TickColor property in API reference">TickColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
-		<td>Gets or sets the color of the tick mark drawn inside the check box.</td>
+		<td>Defines the color of the tick mark drawn inside the check box.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor" aria-label="View UncheckedColor property in API reference">UncheckedColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
-		<td>Gets or sets the color shown when the check box is unchecked.</td>
+		<td>Controls the color used when the CheckBox is unchecked.</td>
 	</tr>
 </table>
 
@@ -130,11 +130,11 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged" aria-label="View StateChanged event in API reference">StateChanged</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-9.0" aria-label="View EventHandler<StateChangedEventArgs> type in API reference">EventHandler&lt;StateChangedEventArgs&gt;</a></td>
-		<td>Raised when the state changes.</td>
+		<td>Triggered after the CheckBox state changes through user interaction or programmatic updates. The event reports the new checked, unchecked, or indeterminate state.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanging" aria-label="View StateChanging event in API reference">StateChanging</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-9.0" aria-label="View EventHandler<StateChangingEventArgs> type in API reference">EventHandler&lt;StateChangingEventArgs&gt;</a></td>
-		<td>Raised before the state changes.</td>
+		<td>Triggered before the CheckBox state changes, allowing the state change to be canceled.</td>
 	</tr>
 </table>

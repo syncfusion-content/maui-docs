@@ -3,7 +3,7 @@ layout: post
 title: Licensing FAQ - Net need for ES License Validation | Syncfusion®
 description: Learn whether an internet connection is required for Syncfusion® Essential Studio® license validation.
 platform: MAUI
-control: Essential Studio<sup>®</sup>
+control: Essential Studio®
 documentation: UG
 ---
 
