@@ -130,7 +130,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a>
 		</td>
-		<td>Executes when thumb dragging completes.</td>
+		<td>Executes an action when thumb dragging finishes.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -193,7 +193,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the interval between consecutive date positions on the selector.</td>
+		<td>Defines the spacing between major date or time intervals displayed on the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -202,7 +202,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Determines whether the date range direction is reversed.</td>
+		<td>Reverses the date or time direction so later values appear toward the minimum side and earlier values appear toward the maximum side.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -362,7 +362,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
 		</td>
-		<td>Occurs when the selected date range changes after the interaction ends.</td>
+		<td>Triggered after the selected date or time range changes and the current range-selection operation is completed.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -371,7 +371,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangingEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangingEventArgs&gt;</a>
 		</td>
-		<td>Occurs while the user is dragging a thumb to a new date range value.</td>
+		<td>Triggered while a thumb is being dragged and the selected date or time range is actively changing.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -380,7 +380,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View SliderLabelCreatedEventArgs type in API reference">EventHandler&lt;SliderLabelCreatedEventArgs&gt;</a>
 		</td>
-		<td>Occurs when a label is created so the text can be formatted or updated.</td>
+		<td>Triggered when a date or time label is generated, allowing the displayed label text to be customized.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -389,7 +389,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
 		</td>
-		<td>Occurs when the range selection interaction ends.</td>
+		<td>Triggered when range selection ends, such as when the user releases a thumb after dragging.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -398,6 +398,6 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
 		</td>
-		<td>Occurs when range selection starts.</td>
+		<td>Triggered when range selection begins, such as when the user starts dragging a thumb.</td>
 	</tr>
 </table>

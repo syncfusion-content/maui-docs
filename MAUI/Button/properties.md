@@ -20,12 +20,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource" aria-label="View BackgroundImageSource property in API reference">BackgroundImageSource</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-		<td>Displays an image behind the button content.</td>
+		<td>Displays an image behind the button content as the button background.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Content" aria-label="View Content property in API reference">Content</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.DataTemplate.html" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-		<td>Defines the custom view template for the button.</td>
+		<td>Displays custom content inside the button instead of the default text-and-icon presentation.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
@@ -34,7 +34,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_DashArray" aria-label="View DashArray property in API reference">DashArray</a></td>
-		<td>float[]</td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Single.html" aria-label="View float type in API reference">float[]</a></td>
 		<td>Defines the dash pattern used for the button border.</td>
 	</tr>
 	<tr valign="top">
@@ -80,7 +80,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontFamily" aria-label="View FontFamily property in API reference">FontFamily</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.String.html" aria-label="View string type in API reference">string</a></td>
-		<td>Specifies the font family used for the button text.</td>
+		<td>Displays the button text using the specified font family.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontSize" aria-label="View FontSize property in API reference">FontSize</a></td>
@@ -100,7 +100,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSize" aria-label="View ImageSize property in API reference">ImageSize</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the size of the button image.</td>
+		<td>Controls the displayed size of the button image or icon.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource" aria-label="View ImageSource property in API reference">ImageSource</a></td>
@@ -159,12 +159,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Clicked" aria-label="View Clicked event in API reference">Clicked</a></td>
-		<td>EventHandler&lt;EventArgs&gt;</td>
-		<td>Occurs when the button is clicked.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_CheckedChanged" aria-label="View CheckedChanged event in API reference">CheckedChanged</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler.html" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html" aria-label="View CheckedChangedEventArgs type in API reference">CheckedChangedEventArgs</a>&gt;</td>
-		<td>Occurs when the checked state changes.</td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler.html" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/System.EventArgs.html" aria-label="View EventArgs type in API reference">EventArgs&gt;</a></td>
+		<td>Triggered when the user activates the button by tapping, clicking, or using an equivalent input action.</td>
 	</tr>
 </table>
