@@ -13,9 +13,13 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers elegantly designed XAML p
 
 To know more, refer to this [Read me](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/README.md) file. 
 
-## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.4
+## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.5
+ 
+The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.5 introduces a complete redesign of all **95 UI pages**, featuring modernized visuals, refined layouts, and enhanced user experiences for a more intuitive and engaging application interface.
 
-The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.4 includes a comprehensive collection of **95 customizable UI pages** across **20 app categories**. This release also introduces **8 new customizable UI pages** organized into **2 additional app categories**, including:
+## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0
+
+The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0 offers a collection of all new **8 customizable UI pages** organized into **2 app categories**, including:
 
 * Dashboard
 * Onboarding
