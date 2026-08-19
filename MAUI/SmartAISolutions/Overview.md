@@ -150,12 +150,9 @@ line-height: 1;
 <div class="controlanchorlink">
 <a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-maps"></span>Smart Location Search</a>
 </div>
-
 </td>
-
 </tr>
 </table>
-
 
 ## See Also
 
