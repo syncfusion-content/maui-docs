@@ -85,7 +85,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter" aria-label="View DragCompletedCommandParameter property in API reference">DragCompletedCommandParameter</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Object.html" aria-label="View object type in API reference">object</a></td>
-		<td>Gets or sets the parameter passed to the completed-drag command.</td>
+		<td>Defines the parameter passed to the completed-drag command.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand" aria-label="View DragStartedCommand property in API reference">DragStartedCommand</a></td>
@@ -120,7 +120,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed" aria-label="View IsInversed property in API reference">IsInversed</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Determines whether the slider direction is reversed.</td>
+		<td>Defines whether the slider direction is reversed.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement" aria-label="View LabelsPlacement property in API reference">LabelsPlacement</a></td>
@@ -180,7 +180,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyle" aria-label="View ThumbStyle property in API reference">ThumbStyle</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html" aria-label="View SliderThumbStyle type in API reference">SliderThumbStyle</a></td>
-		<td>Customizes the appearance of the thumb.</td>
+		<td>Defines the appearance of the thumb.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip" aria-label="View Tooltip property in API reference">Tooltip</a></td>

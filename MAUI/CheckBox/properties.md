@@ -25,7 +25,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing" aria-label="View ContentSpacing property in API reference">ContentSpacing</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Gets or sets the spacing between the check box icon and its text.</td>
+		<td>Defines the spacing between the check box icon and its text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize" aria-label="View ControlSize property in API reference">ControlSize</a></td>
@@ -110,7 +110,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor" aria-label="View TickColor property in API reference">TickColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
-		<td>Gets or sets the color of the tick mark drawn inside the check box.</td>
+		<td>Defines the color of the tick mark drawn inside the check box.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor" aria-label="View UncheckedColor property in API reference">UncheckedColor</a></td>
