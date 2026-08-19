@@ -130,7 +130,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle" aria-label="View LabelStyle property in API reference">LabelStyle</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html" aria-label="View SliderLabelStyle type in API reference">SliderLabelStyle</a></td>
-		<td>Customizes the appearance of the value labels.</td>
+		<td>Customizes the appearance of date and time labels displayed on the track.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle" aria-label="View MajorTickStyle property in API reference">MajorTickStyle</a></td>
@@ -190,12 +190,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent" aria-label="View TrackExtent property in API reference">TrackExtent</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the additional track length shown beyond the slider bounds.</td>
+		<td>Extends the track beyond its normal start and end edges by the specified number of pixels.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle" aria-label="View TrackStyle property in API reference">TrackStyle</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html" aria-label="View SliderTrackStyle type in API reference">SliderTrackStyle</a></td>
-		<td>Customizes the appearance of the slider track.</td>
+		<td>Customizes the appearance of the track, including the selected and unselected date-range regions.</td>
 	</tr>
 </table>
 
@@ -210,11 +210,11 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View DateTimeRangeSliderValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;</a></td>
-		<td>Occurs after the user finishes selecting a new range.</td>
+		<td>Triggered after the selected date or time range changes and the current range-selection operation is completed.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View DateTimeRangeSliderValueChangingEventArgs type in API reference">EventHandler&lt;DateTimeRangeSliderValueChangingEventArgs&gt;</a></td>
-		<td>Occurs while the user is changing the selected range.</td>
+		<td>Triggered while a thumb is being dragged and the selected date or time range is actively changing.</td>
 	</tr>
 </table>
