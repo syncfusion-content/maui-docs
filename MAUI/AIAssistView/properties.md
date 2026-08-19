@@ -379,77 +379,77 @@ documentation: ug
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTapped" aria-label="View AttachmentTapped event in API reference">AttachmentTapped</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html" aria-label="View AttachmentTappedEventArgs type in API reference">AttachmentTappedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html" aria-label="View AttachmentTappedEventArgs type in API reference">AttachmentTappedEventArgs&gt;</a></a></td>
         <td>Raised when an <code>attachment</code> is tapped.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped" aria-label="View CardTapped event in API reference">CardTapped</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html" aria-label="View CardTappedEventArgs type in API reference">CardTappedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html" aria-label="View CardTappedEventArgs type in API reference">CardTappedEventArgs&gt;</a></a></td>
         <td>Raised when a <code>card item</code> is tapped.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanged" aria-label="View ChatModeChanged event in API reference">ChatModeChanged</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html" aria-label="View ChatModeChangedEventArgs type in API reference">ChatModeChangedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangedEventArgs.html" aria-label="View ChatModeChangedEventArgs type in API reference">ChatModeChangedEventArgs&gt;</a></a></td>
         <td>Raised <code>after</code> the chat mode changes.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanging" aria-label="View ChatModeChanging event in API reference">ChatModeChanging</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html" aria-label="View ChatModeChangingEventArgs type in API reference">ChatModeChangingEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html" aria-label="View ChatModeChangingEventArgs type in API reference">ChatModeChangingEventArgs&gt;</a></a></td>
         <td>Raised <code>before</code> the chat mode changes.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening" aria-label="View ContextMenuOpening event in API reference">ContextMenuOpening</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html" aria-label="View ContextMenuOpeningEventArgs type in API reference">ContextMenuOpeningEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html" aria-label="View ContextMenuOpeningEventArgs type in API reference">ContextMenuOpeningEventArgs&gt;</a></a></td>
         <td>Raised when a <code>context menu</code> is about to open.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped" aria-label="View ConversationItemTapped event in API reference">ConversationItemTapped</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html" aria-label="View ConversationItemTappedEventArgs type in API reference">ConversationItemTappedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationItemTappedEventArgs.html" aria-label="View ConversationItemTappedEventArgs type in API reference">ConversationItemTappedEventArgs&gt;</a></a></td>
         <td>Raised <code>before</code> a conversation item is loaded.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped" aria-label="View ImageTapped event in API reference">ImageTapped</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html" aria-label="View ImageTappedEventArgs type in API reference">ImageTappedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html" aria-label="View ImageTappedEventArgs type in API reference">ImageTappedEventArgs&gt;</a></a></td>
         <td>Raised when an <code>image</code> is tapped.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressed" aria-label="View ItemLongPressed event in API reference">ItemLongPressed</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html" aria-label="View ItemLongPressedEventArgs type in API reference">ItemLongPressedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html" aria-label="View ItemLongPressedEventArgs type in API reference">ItemLongPressedEventArgs&gt;</a></a></td>
         <td>Raised when an assist item is <code>long pressed</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTapped" aria-label="View ItemTapped event in API reference">ItemTapped</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html" aria-label="View ItemTappedEventArgs type in API reference">ItemTappedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html" aria-label="View ItemTappedEventArgs type in API reference">ItemTappedEventArgs&gt;</a></a></td>
         <td>Raised when an assist item is tapped.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptComposing" aria-label="View PromptComposing event in API reference">PromptComposing</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html" aria-label="View PromptComposingEventArgs type in API reference">PromptComposingEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html" aria-label="View PromptComposingEventArgs type in API reference">PromptComposingEventArgs&gt;</a></a></td>
         <td>Raised <code>before</code> an AI request is sent.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Request" aria-label="View Request event in API reference">Request</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html" aria-label="View RequestEventArgs type in API reference">RequestEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html" aria-label="View RequestEventArgs type in API reference">RequestEventArgs&gt;</a></a></td>
         <td>Raised when a <code>request</code> is initiated.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Scrolled" aria-label="View Scrolled event in API reference">Scrolled</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html" aria-label="View ScrolledEventArgs type in API reference">ScrolledEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html" aria-label="View ScrolledEventArgs type in API reference">ScrolledEventArgs&gt;</a></a></td>
         <td>Raised when the view is <code>scrolled</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding" aria-label="View StopResponding event in API reference">StopResponding</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/system.eventargs" aria-label="View EventArgs type in API reference">EventArgs&gt;</a></a></td>
         <td>Raised when the <code>Stop Responding</code> view is clicked.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected" aria-label="View SuggestionItemSelected event in API reference">SuggestionItemSelected</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html" aria-label="View SuggestionItemSelectedEventArgs type in API reference">SuggestionItemSelectedEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html" aria-label="View SuggestionItemSelectedEventArgs type in API reference">SuggestionItemSelectedEventArgs&gt;</a></a></td>
         <td>Raised when a <code>suggestion item</code> is selected.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening" aria-label="View ToastOpening event in API reference">ToastOpening</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs</a>&gt;</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs&gt;</a></a></td>
         <td>Raised when a <code>toast notification</code> is about to be displayed.</td>
     </tr>
 </table>

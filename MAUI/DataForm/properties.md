@@ -204,19 +204,19 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem" aria-label="View GenerateDataFormItem event in API reference">GenerateDataFormItem</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.GenerateDataFormItemEventArgs.html" aria-label="View GenerateDataFormItemEventArgs type in API reference">GenerateDataFormItemEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.GenerateDataFormItemEventArgs.html" aria-label="View GenerateDataFormItemEventArgs type in API reference">GenerateDataFormItemEventArgs&gt;</a></a></td>
 <td>Raised when a data form item is being generated and allows the generated field configuration to be observed or adjusted before it is displayed.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateForm" aria-label="View ValidateForm event in API reference">ValidateForm</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidateFormEventArgs.html" aria-label="View DataFormValidateFormEventArgs type in API reference">DataFormValidateFormEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidateFormEventArgs.html" aria-label="View DataFormValidateFormEventArgs type in API reference">DataFormValidateFormEventArgs&gt;</a></a></td>
 <td>Raised when the data form is validated and provides the validation scope information for the complete form life cycle.</td>
 </tr>
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty" aria-label="View ValidateProperty event in API reference">ValidateProperty</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html" aria-label="View DataFormValidatePropertyEventArgs type in API reference">DataFormValidatePropertyEventArgs</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html" aria-label="View DataFormValidatePropertyEventArgs type in API reference">DataFormValidatePropertyEventArgs&gt;</a></a></td>
 <td>Raised when an individual property is validated and provides validation details for the field currently under evaluation.</td>
 </tr>
 
