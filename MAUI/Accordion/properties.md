@@ -7,7 +7,7 @@ control: SfAccordion
 documentation: ug
 ---
 
-# .NET MAUI Accordion API Reference
+# API Reference for .NET MAUI Accordion
 
 ## Properties
 

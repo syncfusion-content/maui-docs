@@ -7,7 +7,7 @@ control: SfBusyIndicator
 documentation: ug
 ---
 
-# .NET MAUI Busy Indicator API Reference
+# API Reference for .NET MAUI Busy Indicator
 
 ## Properties
 

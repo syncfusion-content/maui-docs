@@ -7,7 +7,7 @@ control: SfBackdropPage
 documentation: ug
 ---
 
-# Properties in .NET MAUI Backdrop Page
+# API Reference for .NET MAUI Backdrop
 
 ## Properties
 

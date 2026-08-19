@@ -7,7 +7,7 @@ control: SfBadgeView
 documentation: ug
 ---
 
-# .NET MAUI Badge View API Reference
+# API Reference for.NET MAUI Badge View
 
 ## Properties
 

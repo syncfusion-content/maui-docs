@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagrid maui, .net maui grid, .net grid maui.
 ---
 
-# .NET MAUI Data Grid API Reference
+# API Reference for .NET MAUI DataGrid
 
 ## Properties
 

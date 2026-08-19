@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Properties in .NET MAUI DateTime Range Selector
+# API Reference for .NET MAUI DateTime Range Selector
 
 ## Properties
 

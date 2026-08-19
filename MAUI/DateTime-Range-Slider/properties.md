@@ -7,7 +7,7 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Properties in .NET MAUI DateTime Range Slider
+# API Reference for .NET MAUI DateTime Range Slider
 
 ## Properties
 

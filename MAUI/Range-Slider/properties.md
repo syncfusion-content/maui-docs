@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Properties in .NET MAUI Range Slider
+# API Reference for .NET MAUI Range Slider
 
 ## Properties
 

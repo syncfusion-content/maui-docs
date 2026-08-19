@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Properties in .NET MAUI Range Selector
+# API Reference for .NET MAUI Range Selector
 
 ## Properties
 

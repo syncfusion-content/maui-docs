@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# .NET MAUI Maps API Reference
+# API Reference for .NET MAUI Maps
 
 ## Properties
 
