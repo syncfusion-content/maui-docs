@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Looping in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about looping in Syncfusion .NET MAUI Date Time Picker control for seamless cyclic navigation.
 platform: maui
+title: Looping in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about looping in Syncfusion® .NET MAUI Date Time Picker control for seamless cyclic navigation.
 control: SfDateTimePicker
 documentation: ug
 ---

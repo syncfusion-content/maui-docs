@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header, Footer, and Selection in .NET MAUI Picker control | Syncfusion
-description: Learn about header, footer, and selection views in the Syncfusion .NET MAUI Picker control, including customization and styling options.
+title: Header and Footer in .NET MAUI Picker | Syncfusion
+description: Learn how to customize header, footer, and selection views in .NET MAUI Picker control with various styling options.
 platform: maui
 control: SfPicker
 documentation: ug
 ---
 
-# Header, Footer, and Selection in .NET MAUI Picker control
+# Header and Footer in .NET MAUI Picker
 
 This section explains the customization of the header, footer, and selection views in the picker control.
 

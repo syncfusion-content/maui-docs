@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Date Restrictions in .NET MAUI Calendar control | Syncfusion®
-description: Learn about date restrictions in Syncfusion .NET MAUI Calendar control to disable and manage selectable date ranges.
 platform: maui
+title: Date Restrictions in .NET MAUI Calendar control | Syncfusion®
+description: Learn about date restrictions in Syncfusion® .NET MAUI Calendar control to disable and manage selectable date ranges.
 control: SfCalendar
 documentation: ug
 ---

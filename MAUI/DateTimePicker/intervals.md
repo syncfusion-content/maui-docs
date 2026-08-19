@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Intervals in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about intervals in Syncfusion .NET MAUI Date Time Picker control for day, month, year, and time step configuration.
 platform: maui
+title: Intervals in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about intervals in Syncfusion® .NET MAUI Date Time Picker control for day, month, year, and time step configuration.
 control: SfDateTimePicker
 documentation: ug
 ---
@@ -41,9 +41,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.DayInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.DayInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -75,9 +75,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.MonthInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.MonthInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -109,9 +109,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.YearInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.YearInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -143,9 +143,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.HourInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.HourInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -177,9 +177,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.MinuteInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.MinuteInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -211,9 +211,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.SecondInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.SecondInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -246,10 +246,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.TimeFormat = "hh_mm_ss_fff_tt";
-        picker.MilliSecondInterval = 2;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.TimeFormat = "hh_mm_ss_fff_tt";
+        dateTimePicker.MilliSecondInterval = 2;
+        this.Content = dateTimePicker;
     }
 }
 

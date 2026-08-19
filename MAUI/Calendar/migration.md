@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Calendar control | Syncfusion®
-description: Learn about migration from Syncfusion Xamarin Calendar to .NET MAUI Calendar control with API comparisons.
 platform: maui
+title: Migration from Xamarin to .NET MAUI Calendar control | Syncfusion®
+description: Learn about migration from Syncfusion® Xamarin Calendar to .NET MAUI Calendar control with API comparisons.
 control: SfCalendar
 documentation: ug
 ---  
 
 # Migration from Xamarin Calendar to .NET MAUI Calendar control 
 
-To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-calendar) to [.NET MAUI SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar) easier, most of the APIs from the Xamarin SfCalendar were kept in the.NET MAUI SfCalendar. However, to maintain the consistency of API naming in the .NET MAUI SfCalendar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Calendar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-calendar) to [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) easier, most of the APIs from the Xamarin Calendar were kept in the.NET MAUI Calendar. However, to maintain the consistency of API naming in the .NET MAUI Calendar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -22,11 +22,11 @@ To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/x
 <td>Syncfusion.Maui.Calendar</td></tr>
 </table>
 
-N> The selection-based `.NET MAUI SfCalendar` does not manage appointments like the `Xamarin SfCalendar` does. If you require appointment/events management use `.NET MAUI SfScheduler`.
+N> The selection-based `.NET MAUI Calendar` does not manage appointments like the `Xamarin Calendar` does. If you require appointment/events management use `.NET MAUI SfScheduler`.
 
 ## Initialize control
 
-To initialize the control, import the calendar namespace and initialize `SfCalendar` as shown in the following code sample.
+To initialize the control, import the calendar namespace and initialize .NET MAUI Calendar as shown in the following code sample.
 
 <table>
 <tr>
@@ -196,7 +196,7 @@ this.Content = calendar;
 
 ### SfCalendar
 
-The following code example, explains how to initialize the properties of the `Xamarin SfCalendar` and `.NET MAUI SfCalendar` class.
+The following code example, explains how to initialize the properties of the `Xamarin Calendar` and `.NET MAUI Calendar` class.
 
 <table>
 <tr>
@@ -490,7 +490,7 @@ this.Content = calendar;
 
 ### MonthViewSettings
 
-The following code example explains how to configure the month view settings in `Xamarin SfCalendar` and `.NET MAUI SfCalendar`.
+The following code example explains how to configure the month view settings in `Xamarin Calendar` and `.NET MAUI Calendar`.
 
 <table>
 <tr>
@@ -805,7 +805,7 @@ this.Content = calendar;
 
 ### YearViewSettings
 
-The following code example explains how to configure the year view settings in `Xamarin SfCalendar` and `.NET MAUI SfCalendar`.
+The following code example explains how to configure the year view settings in `Xamarin Calendar` and `.NET MAUI Calendar`.
 
 <table>
 <tr>

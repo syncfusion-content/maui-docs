@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Syncfusion .NET MAUI Date Time Picker Control | Syncfusion
+title: About Syncfusion .NET MAUI Date Time Picker Control | Syncfusion®
 description: Learn about introduction of Syncfusion<sup>&reg;</sup>Essential Studio .NET MAUI Date Time Picker control and more details.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# About Syncfusion .NET MAUI Date Time Picker Control
+# About Syncfusion® .NET MAUI Date Time Picker Control
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) provides a way to pick a date, time, or date and time. The Date Time Picker also enables you to set date ranges and date and time formats and to customize its dialog appearance by configuring its header, footer, and more.
 

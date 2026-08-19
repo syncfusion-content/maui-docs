@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Display Mode in .NET MAUI Picker control | Syncfusion®
-description: Learn about text display mode in Syncfusion .NET MAUI Picker control with Default, Fade, Shrink options.
+description: Learn about text display mode in Syncfusion® .NET MAUI Picker control with Default, Fade, Shrink options.
 platform: maui
 control: SfPicker
 documentation: ug

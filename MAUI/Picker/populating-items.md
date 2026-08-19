@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populating Items in .NET MAUI Picker control | Syncfusion®
-description: Learn about populating items in Syncfusion .NET MAUI Picker control with data binding and item sources.
+description: Learn about populating items in Syncfusion® .NET MAUI Picker control with data binding and item sources.
 platform: maui
 control: SfPicker
 documentation: ug
