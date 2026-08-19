@@ -7,7 +7,7 @@ control: SfToolbar
 documentation: ug
 ---
 
-# API Reference for .NET MAUI Toolbar
+#  API Reference for .NET MAUI Toolbar
 
 ## Properties
 
@@ -19,214 +19,93 @@ documentation: ug
 </tr>
 
 <tr>
-<td>
-
-[BackwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground)
-
-</td>
-<td>Brush</td>
-<td>Defines the background of the backward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground" aria-label="View BackwardButtonBackground property in API reference">BackwardButtonBackground</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+<td>Defines the background brush applied to the backward navigation button and allows the control to blend with surrounding visual styles.</td>
 </tr>
 
 <tr>
-<td>
-
-[BackwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor)
-
-</td>
-<td>Color</td>
-<td>Defines the icon color of the backward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor" aria-label="View BackwardButtonIconColor property in API reference">BackwardButtonIconColor</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+<td>Defines the icon color used for the backward navigation button and helps control contrast against the toolbar background.</td>
 </tr>
 
 <tr>
-<td>
-
-[BackwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate)
-
-</td>
-<td>DataTemplate</td>
-<td>Defines the template used to display the backward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate" aria-label="View BackwardButtonTemplate property in API reference">BackwardButtonTemplate</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+<td>Defines the template used to render the backward navigation button with custom layout, visuals, or content.</td>
 </tr>
 
 <tr>
-<td>
-
-[CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_CornerRadius)
-
-</td>
-<td>CornerRadius</td>
-<td>Defines the corner radius of the toolbar.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
+<td>Defines the corner radius applied to the toolbar surface, which controls how rounded the toolbar container appears.</td>
 </tr>
 
 <tr>
-<td>
-
-[EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_EnableLiquidGlassEffect)
-
-</td>
-<td>bool</td>
-<td>Defines whether the liquid glass effect is enabled.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+<td>Determines whether the <code>liquid glass</code> visual effect is applied to the toolbar surface for a more polished appearance.</td>
 </tr>
 
 <tr>
-<td>
-
-[ForwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground)
-
-</td>
-<td>Brush</td>
-<td>Defines the background of the forward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground" aria-label="View ForwardButtonBackground property in API reference">ForwardButtonBackground</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+<td>Defines the background brush applied to the forward navigation button.</td>
 </tr>
 
 <tr>
-<td>
-
-[ForwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor)
-
-</td>
-<td>Color</td>
-<td>Defines the icon color of the forward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor" aria-label="View ForwardButtonIconColor property in API reference">ForwardButtonIconColor</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+<td>Defines the icon color used for the forward navigation button.</td>
 </tr>
 
 <tr>
-<td>
-
-[ForwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate)
-
-</td>
-<td>DataTemplate</td>
-<td>Defines the template used to display the forward navigation button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate" aria-label="View ForwardButtonTemplate property in API reference">ForwardButtonTemplate</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+<td>Defines the template used to render the forward navigation button with customized visuals.</td>
 </tr>
 
 <tr>
-<td>
-
-[MoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground)
-
-</td>
-<td>Brush</td>
-<td>Defines the background of the more button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground" aria-label="View MoreButtonBackground property in API reference">MoreButtonBackground</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+<td>Defines the background brush applied to the <code>More</code> button that opens the overflow menu.</td>
 </tr>
 
 <tr>
-<td>
-
-[MoreButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor)
-
-</td>
-<td>Color</td>
-<td>Defines the icon color of the more button.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor" aria-label="View MoreButtonIconColor property in API reference">MoreButtonIconColor</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+<td>Defines the icon color used for the <code>More</code> button.</td>
 </tr>
 
 <tr>
-<td>
-
-[MoreButtonTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTappedCommand)
-
-</td>
-<td>ICommand</td>
-<td>Defines the command executed when the more button is tapped.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTappedCommand" aria-label="View MoreButtonTappedCommand property in API reference">MoreButtonTappedCommand</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+<td>Defines the command executed when the <code>More</code> button is tapped.</td>
 </tr>
 
 <tr>
-<td>
-
-[MoreItemsChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChangedCommand)
-
-</td>
-<td>ICommand</td>
-<td>Defines the command executed when the collection of overflow items changes.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChangedCommand" aria-label="View MoreItemsChangedCommand property in API reference">MoreItemsChangedCommand</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+<td>Defines the command executed when the overflow item collection changes.</td>
 </tr>
 
 <tr>
-<td>
-
-[MoreItemsRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsRelativePosition)
-
-</td>
-<td>ToolbarMoreItemsRelativePosition</td>
-<td>Defines the relative position of the overflow items popup.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsRelativePosition" aria-label="View MoreItemsRelativePosition property in API reference">MoreItemsRelativePosition</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html" aria-label="View ToolbarRelativePosition enum in API reference">ToolbarRelativePosition</a></td>
+<td>Defines the relative position of the overflow popup using the <code>ToolbarRelativePosition</code> enum.</td>
 </tr>
 
 <tr>
-<td>
-
-[Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation)
-
-</td>
-<td>ToolbarOrientation</td>
-<td>Defines whether the toolbar is displayed horizontally or vertically.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation" aria-label="View Orientation property in API reference">Orientation</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html" aria-label="View ToolbarOrientation enum in API reference">ToolbarOrientation</a></td>
+<td>Defines whether the toolbar is arranged horizontally or vertically by using the <code>ToolbarOrientation</code> enum.</td>
 </tr>
 
 <tr>
-<td>
-
-[OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode)
-
-</td>
-<td>ToolbarOverflowMode</td>
-<td>Defines how overflow items are handled.</td>
-</tr>
-
-<tr>
-<td>
-
-[SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectedItem)
-
-</td>
-<td>ToolbarItem</td>
-<td>Defines the currently selected toolbar item.</td>
-</tr>
-
-<tr>
-<td>
-
-[ShowNavigationButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ShowNavigationButton)
-
-</td>
-<td>bool</td>
-<td>Defines whether navigation buttons are displayed.</td>
-</tr>
-
-<tr>
-<td>
-
-[ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ToolbarItems)
-
-</td>
-<td>ToolbarItemCollection</td>
-<td>Defines the collection of toolbar items.</td>
-</tr>
-
-</table>
-
-## Events
-
-<table>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-
-<tr>
-<td>
-
-[MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped)
-
-</td>
-<td>EventHandler</td>
-<td>Raised when the more button is tapped.</td>
-</tr>
-
-<tr>
-<td>
-
-[MoreItemsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged)
-
-</td>
-<td>EventHandler&lt;MoreItemsChangedEventArgs&gt;</td>
-<td>Raised when the collection of overflow items changes.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode" aria-label="View OverflowMode property in API reference">OverflowMode</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html" aria-label="View ToolbarItemOverflowMode enum in API reference">ToolbarItemOverflowMode</a></td>
+<td>Defines how items that do not fit within the available space are handled through the <code>ToolbarItemOverflowMode</code> enum.</td>
 </tr>
 
 </table>
@@ -241,13 +120,32 @@ documentation: ug
 </tr>
 
 <tr>
-<td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ClearSelection" aria-label="View ClearSelection method in API reference">ClearSelection()</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+<td>Clears the current toolbar item selection and returns the toolbar to an unselected state.</td>
+</tr>
 
-[ClearSelection()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
+</table>
 
-</td>
-<td>void</td>
-<td>Clears the current toolbar item selection.</td>
+## Events
+
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped" aria-label="View MoreButtonTapped event in API reference">MoreButtonTapped</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html" aria-label="View EventArgs type in API reference">ToolbarMoreButtonTappedEventArgs</a></td>
+<td>Raised when the <code>More</code> button is tapped and the overflow menu is requested.</td>
+</tr>
+
+<tr>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged" aria-label="View MoreItemsChanged event in API reference">MoreItemsChanged</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html" aria-label="View ToolbarMoreItemsChangedEventArgs type in API reference">ToolbarMoreItemsChangedEventArgs</a></td>
+<td>Raised when the collection of overflow items changes and the toolbar recalculates the items shown in the <code>More</code> menu.</td>
 </tr>
 
 </table>
