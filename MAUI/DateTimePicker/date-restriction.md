@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Date Restriction in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about date restriction in Syncfusion .NET MAUI Date Time Picker control to manage selectable date and time ranges.
 platform: maui
+title: Date Restriction in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about date restriction in Syncfusion® .NET MAUI Date Time Picker control to manage selectable date and time ranges.
 control: SfDateTimePicker
 documentation: ug
 ---
@@ -37,9 +37,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.MinimumDate = new DateTime(2000, 5, 6, 3, 34, 12);
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.MinimumDate = new DateTime(2000, 5, 6, 3, 34, 12);
+        this.Content = dateTimePicker;
     }
 }
 
@@ -72,9 +72,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.MaximumDate = new DateTime(2042, 10, 10, 12, 15, 03);
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.MaximumDate = new DateTime(2042, 10, 10, 12, 15, 03);
+        this.Content = dateTimePicker;
     }
 }
 
@@ -124,22 +124,22 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 10));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 12));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 14));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 17));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 18));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 20));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 23));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 27));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 3));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 11, 0));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 12, 0));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 8, 0));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 6, 0));
-        picker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 14, 0));
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 10));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 12));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 14));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 17));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 18));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 20));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 23));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 27));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 3));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 11, 0));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 12, 0));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 8, 0));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 6, 0));
+        dateTimePicker.BlackoutDateTimes.Add(new DateTime(2001, 8, 15, 12, 14, 0));
+        this.Content = dateTimePicker;
     }
 }
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Formatting in .NET MAUI Date Time Picker control | Syncfusion®
-description: Learn about formatting in Syncfusion .NET MAUI Date Time Picker control to customize date and time display.
 platform: maui
+title: Formatting in .NET MAUI Date Time Picker control | Syncfusion®
+description: Learn about formatting in Syncfusion® .NET MAUI Date Time Picker control to customize date and time display.
 control: SfDateTimePicker
 documentation: ug
 ---
@@ -84,9 +84,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        datetimepicker.DateFormat = PickerDateFormat.dd_MMM_yyyy;
+        this.Content = dateTimePicker;
     }
 }
 
@@ -152,9 +152,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDateTimePicker picker = new SfDateTimePicker();
-        picker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
-        this.Content = picker;
+        SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+        datetimepicker.TimeFormat = PickerTimeFormat.hh_mm_ss_tt;
+        this.Content = dateTimePicker;
     }
 }
 

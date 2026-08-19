@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Events in .NET MAUI Time Picker control | Syncfusion®
 description: Handle SelectionChanged and other events to respond to user interactions in the .NET MAUI Time Picker.
-platform: maui
 control: SfTimePicker
 documentation: ug
 ---
@@ -40,9 +40,9 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.SelectionChanged += this.OnTimePickerSelectionChanged;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SelectionChanged += this.OnTimePickerSelectionChanged;
+this.Content = timePicker;
 
 private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChangedEventArgs e)
 {
@@ -94,14 +94,14 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.Opened += this.OnTimePickerPopUpOpened;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.Opened += this.OnTimePickerPopUpOpened;
+this.Content = timePicker;
 
 private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 {
     // If you need to open the picker, set the IsOpen property to true.
-    this.picker.IsOpen = true;
+    this.timePicker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -137,9 +137,9 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-this.picker.Closing += this.OnTimePickerPopUpClosing;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+this.timePicker.Closing += this.OnTimePickerPopUpClosing;
+this.Content = timePicker;
 
 private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 {
@@ -178,14 +178,14 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.Closed += this.OnTimePickerPopUpClosed;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.Closed += this.OnTimePickerPopUpClosed;
+this.Content = timePicker;
 
 private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 {
     // If you need to close the picker, set the IsOpen property to false.
-    this.picker.IsOpen = false;
+    this.timePicker.IsOpen = false;
 }
 
 {% endhighlight %}
@@ -226,9 +226,9 @@ The `SfTimePicker` footer view provides two events. These events are not raised 
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
+this.Content = timePicker;
 
 private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 {
@@ -266,9 +266,9 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
+this.Content = timePicker;
 
 private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 {
@@ -308,8 +308,8 @@ using Syncfusion.Maui.Picker;
 using System.Windows.Input;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+this.Content = timePicker;
 public class ViewModel
 {
     public ICommand SelectionChangedCommand { get; set; }
@@ -351,8 +351,8 @@ using Syncfusion.Maui.Picker;
 using System.Windows.Input;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+this.Content = timePicker;
 public class ViewModel
 {
     public ICommand AcceptCommand { get; set; }
@@ -394,8 +394,8 @@ using Syncfusion.Maui.Picker;
 using System.Windows.Input;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-this.Content = picker;
+SfTimePicker timePicker = new SfTimePicker();
+this.Content = timePicker;
 public class ViewModel
 {
     public ICommand DeclineCommand { get; set; }

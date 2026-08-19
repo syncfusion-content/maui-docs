@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Date Restriction in .NET MAUI Date Picker control | Syncfusion®
-description: Learn about date restriction in Syncfusion .NET MAUI Date Picker control to manage minimum and maximum date selection.
 platform: maui
+title: Date Restriction in .NET MAUI Date Picker control | Syncfusion®
+description: Learn about date restriction in Syncfusion® .NET MAUI Date Picker control to manage minimum and maximum date selection.
 control: SfDatePicker
 documentation: ug
 ---
@@ -19,7 +19,7 @@ The Date Picker provides an option to restrict the selection of date items by us
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="picker"
+    <picker:SfDatePicker x:Name="datePicker"
                          MinimumDate="2000/05/15">
     </picker:SfDatePicker>
 </ContentPage>
@@ -30,9 +30,9 @@ The Date Picker provides an option to restrict the selection of date items by us
 using Syncfusion.Maui.Picker;
 
 . . .
-SfDatePicker picker = new SfDatePicker();
-picker.MinimumDate = new DateTime(2000, 05, 15);
-this.Content = picker;
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.MinimumDate = new DateTime(2000, 05, 15);
+this.Content = datePicker;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -49,7 +49,7 @@ The Date Picker provides an option to restrict the selection of date items by us
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="picker"
+    <picker:SfDatePicker x:Name="datePicker"
                          MaximumDate="2042/10/10">
     </picker:SfDatePicker>
 </ContentPage>
@@ -60,9 +60,9 @@ The Date Picker provides an option to restrict the selection of date items by us
 using Syncfusion.Maui.Picker;
 
 . . .
-SfDatePicker picker = new SfDatePicker();
-picker.MaximumDate = new DateTime(2042, 10, 10);
-this.Content = picker;
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.MaximumDate = new DateTime(2042, 10, 10);
+this.Content = datePicker;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -79,7 +79,7 @@ The [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.S
 <ContentPage
              . . .
              xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <picker:SfDatePicker x:Name="picker">
+    <picker:SfDatePicker x:Name="datePicker">
         <picker:SfDatePicker.BlackoutDates>
             <date:DateTime>2001-08-03</date:DateTime>
             <date:DateTime>2001-08-10</date:DateTime>
@@ -100,17 +100,17 @@ The [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.S
 using Syncfusion.Maui.Picker;
 
 . . .
-SfDatePicker picker = new SfDatePicker();
-picker.BlackoutDates.Add(new DateTime(2001, 8, 3));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 10));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 12));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 14));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 17));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 18));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 20));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 23));
-picker.BlackoutDates.Add(new DateTime(2001, 8, 27));
-this.Content = picker;
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 3));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 10));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 12));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 14));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 17));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 18));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 20));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 23));
+datePicker.BlackoutDates.Add(new DateTime(2001, 8, 27));
+this.Content = datePicker;
 
 {% endhighlight %}  
 {% endtabs %}

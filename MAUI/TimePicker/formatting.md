@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Formatting in .NET MAUI Time Picker control | Syncfusion®
 description: Learn how to customize time display formats using predefined formatting options in the Syncfusion .NET MAUI Time Picker control.
-platform: maui
 control: SfTimePicker
 documentation: ug
 ---

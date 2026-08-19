@@ -1,8 +1,8 @@
 ---
 layout: post
+platform: maui
 title: Getting Started with .NET MAUI Time Picker | Syncfusion®
 description: Learn how to get started with the Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker control. Explore setup, features, examples, and customization options.
-platform: maui
 control: SfTimePicker
 documentation: ug
 ---
@@ -146,14 +146,14 @@ Initialize the `SfTimePicker` control and configure its properties. The `SfTimeP
 using Syncfusion.Maui.Picker;
 . . .
 
-SfTimePicker picker = new SfTimePicker();
-picker.HeaderView = new PickerHeaderView()
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HeaderView = new PickerHeaderView()
 {
     Text = "Time Picker",
     Height = 40,
 };
 
-this.Content = picker;
+this.Content = timePicker;
 
 {% endhighlight %}
 {% endtabs %}
