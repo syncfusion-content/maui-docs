@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Properties in .NET MAUI Range Slider
+# API Reference for .NET MAUI Range Slider
 
 ## Properties
 
@@ -25,37 +25,37 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection" aria-label="View EnableIntervalSelection property in API reference">EnableIntervalSelection</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool" aria-label="View bool type in API reference">bool</a></td>
-		<td>Enables thumb movement only at the configured interval positions.</td>
+		<td>Snaps thumb movement to interval positions, allowing values to be selected only at defined intervals.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EndThumbIcon" aria-label="View EndThumbIcon property in API reference">EndThumbIcon</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
-		<td>Sets the visual content displayed inside the end thumb.</td>
+		<td>Displays a custom icon inside the thumb that represents the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeEnd" aria-label="View RangeEnd property in API reference">RangeEnd</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the current end value of the selected range.</td>
+		<td>Defines the value represented by the end thumb and the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeStart" aria-label="View RangeStart property in API reference">RangeStart</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the current start value of the selected range.</td>
+		<td>Defines the value represented by the start thumb and the beginning of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_StartThumbIcon" aria-label="View StartThumbIcon property in API reference">StartThumbIcon</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
-		<td>Sets the visual content displayed inside the start thumb.</td>
+		<td>Displays a custom icon inside the thumb that represents the start of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay" aria-label="View DeferredUpdateDelay property in API reference">DeferredUpdateDelay</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View int type in API reference">int</a></td>
-		<td>Specifies the delay, in milliseconds, before deferred values are updated.</td>
+		<td>Controls how long the control waits before applying deferred value updates when deferred update mode is enabled. The value is specified in milliseconds.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle" aria-label="View DividerStyle property in API reference">DividerStyle</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html" aria-label="View SliderDividerStyle type in API reference">SliderDividerStyle</a></td>
-		<td>Customizes the appearance of dividers between track positions.</td>
+		<td>Customizes the appearance of the divider markers displayed on the track.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand" aria-label="View DragCompletedCommand property in API reference">DragCompletedCommand</a></td>
@@ -80,27 +80,27 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement" aria-label="View EdgeLabelsPlacement property in API reference">EdgeLabelsPlacement</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html" aria-label="View SliderEdgeLabelsPlacement type in API reference">SliderEdgeLabelsPlacement</a></td>
-		<td>Places the first and last labels either inside the track bounds or on the intervals.</td>
+		<td>Controls whether the first and last labels appear inside the track bounds or align with the interval positions at the track edges.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate" aria-label="View EnableDeferredUpdate property in API reference">EnableDeferredUpdate</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool" aria-label="View bool type in API reference">bool</a></td>
-		<td>Enables delayed value updates while the thumb is dragged.</td>
+		<td>Delays value updates until user interaction completes, reducing the frequency of range-change updates during dragging.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool" aria-label="View bool type in API reference">bool</a></td>
-		<td>Enables the liquid glass visual effect for the slider.</td>
+		<td>Applies the Liquid Glass visual effect to the range slider when supported by the platform and configuration. Platform requirements should be verified from the feature documentation.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval" aria-label="View Interval property in API reference">Interval</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the interval used to place labels, ticks, and dividers along the track.</td>
+		<td>Defines the spacing between major intervals used for labels, ticks, and interval-based selection.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed" aria-label="View IsInversed property in API reference">IsInversed</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool" aria-label="View bool type in API reference">bool</a></td>
-		<td>Reverses the direction of the slider value flow.</td>
+		<td>Reverses the value direction so larger values appear toward the minimum side and smaller values toward the maximum side.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement" aria-label="View LabelsPlacement property in API reference">LabelsPlacement</a></td>
@@ -170,32 +170,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent" aria-label="View TrackExtent property in API reference">TrackExtent</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-		<td>Specifies the amount of extra space, in pixels, added to each end of the track.</td>
+		<td>Extends the track beyond its normal start and end edges by the specified number of pixels.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle" aria-label="View TrackStyle property in API reference">TrackStyle</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html" aria-label="View SliderTrackStyle type in API reference">SliderTrackStyle</a></td>
-		<td>Customizes the appearance of the track.</td>
-	</tr>
-</table>
-
-## Methods
-
-<table>
-	<tr>
-		<th>Name<br/></th>
-		<th>Type<br/></th>
-		<th>Description<br/></th>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart" aria-label="View ValueChangeStart method in API reference">ValueChangeStart()</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-		<td>Starts a range value change.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd" aria-label="View ValueChangeEnd method in API reference">ValueChangeEnd()</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-		<td>Ends a range value change.</td>
+		<td>Customizes the appearance of the slider track, including selected and unselected track regions.</td>
 	</tr>
 </table>
 
@@ -210,11 +190,11 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart" aria-label="View ValueChangeStart event in API reference">ValueChangeStart</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangingEventArgs type in API reference">EventHandler&lt;RangeSliderValueChangingEventArgs&gt;</a></td>
-		<td>Fires when range selection starts.</td>
+		<td>Triggered when range selection begins, such as when the user presses or picks up a thumb to start dragging.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd" aria-label="View ValueChangeEnd event in API reference">ValueChangeEnd</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangedEventArgs type in API reference">EventHandler&lt;RangeSliderValueChangedEventArgs&gt;</a></td>
-		<td>Fires when range selection ends.</td>
+		<td>Triggered when range selection ends, such as when the user releases a thumb after dragging.</td>
 	</tr>
 </table>

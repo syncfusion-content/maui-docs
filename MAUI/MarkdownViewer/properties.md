@@ -7,7 +7,7 @@ control: SfMarkdownViewer
 documentation: ug
 ---
 
-# .NET MAUI Markdown Viewer API Reference
+# API Reference for .NET MAUI Markdown Viewer
 
 ## Properties
 

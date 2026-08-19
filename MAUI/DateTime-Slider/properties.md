@@ -7,7 +7,7 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Properties in .NET MAUI DateTime Slider
+# API Reference for .NET MAUI DateTime Slider
 
 ## Properties
 
@@ -75,7 +75,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Gets or sets the currently selected date value on the slider.</td>
+		<td>Controls the currently selected date or time represented by the thumb position.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -84,7 +84,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the delay, in milliseconds, before deferred updates are applied.</td>
+		<td>Controls how long the control waits before applying deferred value updates when deferred update mode is enabled. The value is specified in milliseconds.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -147,7 +147,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Determines whether value updates are deferred until interaction completes.</td>
+		<td>Defines whether value updates are deferred until interaction completes.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -165,7 +165,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the interval between major positions on the track.</td>
+		<td>Defines the spacing between major date or time intervals displayed on the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -174,7 +174,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Reverses the slider direction so values increase in the opposite direction.</td>
+		<td>Reverses the date or time direction so later values appear toward the minimum side and earlier values appear toward the maximum side.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -210,7 +210,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the latest date that can be selected on the slider.</td>
+		<td>Defines the latest date or time that can be selected on the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -219,7 +219,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the earliest date that can be selected on the slider.</td>
+		<td>Defines the earliest date or time that can be selected on the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -246,7 +246,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
 		</td>
-		<td>Determines whether dividers are shown between the selected range and the remaining track.</td>
+		<td>Defines whether dividers are shown between the selected range and the remaining track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -273,7 +273,7 @@ documentation: ug
 		<td>
 			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html" aria-label="View SliderThumbOverlayStyle type in API reference">SliderThumbOverlayStyle</a>
 		</td>
-		<td>Customizes the appearance of the thumb overlay.</td>
+		<td>Customizes the appearance of the overlay displayed around the thumb during interaction.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -291,7 +291,7 @@ documentation: ug
 		<td>
 			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html" aria-label="View SliderTooltip type in API reference">SliderTooltip</a>
 		</td>
-		<td>Customizes the tooltip shown while the thumb is being dragged.</td>
+		<td>Customizes the appearance of the date or time tooltip displayed for the thumb.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -300,7 +300,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets how far the track extends beyond the thumb bounds in device-independent units.</td>
+		<td>Extends the track beyond its normal start and end edges by the specified number of pixels.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -309,7 +309,7 @@ documentation: ug
 		<td>
 			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html" aria-label="View SliderTrackStyle type in API reference">SliderTrackStyle</a>
 		</td>
-		<td>Customizes the appearance of the slider track.</td>
+		<td>Customizes the appearance of the track, including the selected and unselected portions.</td>
 	</tr>
 </table>
 
@@ -334,7 +334,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;DateTimeSliderValueChangedEventArgs&gt;</a>
 		</td>
-		<td>Occurs when the user completes a value selection.</td>
+		<td>Triggered after the selected date or time changes and the current selection operation is completed.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -343,7 +343,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;DateTimeSliderValueChangingEventArgs&gt;</a>
 		</td>
-		<td>Occurs while the thumb is being dragged to a new date value.</td>
+		<td>Triggered while the thumb is being dragged and the selected date or time is actively changing.</td>
 	</tr>
 </table>
 
