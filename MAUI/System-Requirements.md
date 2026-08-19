@@ -165,6 +165,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
   .development-row.vs2026 .development-logo { background: linear-gradient(135deg, #854CC7 0%, #5E2D9C 100%); }
   .development-row.vs2022 .development-logo { background: linear-gradient(135deg, #6E4FCC 0%, #4A2A99 100%); }
   .development-row.code .development-logo { background: linear-gradient(135deg, #0078D7 0%, #00509E 100%); }
+  .development-row.rider .development-logo { background: linear-gradient(135deg, #FE315D 0%, #C40030 100%); }
   .development-row .development-name {
     font-size: 15px;
     font-weight: 600;
@@ -331,8 +332,8 @@ The following table summarizes the operating systems and hardware required to de
   </div>
   <div class="platform-requirements-row">
     <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Development Tools</span></div>
-    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio 2022 or later</div>
-    <div class="row-cell" style="flex: 1 1 39%;">Xcode 15.4 or later</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio 2022 or later (with .NET MAUI workload), .NET SDK, Android SDK &amp; JDK</div>
+    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio Code, Xcode, Command Line Tools, .NET SDK, Android SDK &amp; JDK</div>
   </div>
   <div class="platform-requirements-row">
     <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Architecture</span></div>
@@ -376,6 +377,11 @@ Our .NET MAUI components are compatible with the following development environme
     <div class="development-logo">VS</div>
     <p class="development-name">Visual Studio Code</p>
     <span class="development-version"><span class="dot"></span>Supports all versions</span>
+  </div>
+  <div class="development-row rider">
+    <div class="development-logo">JR</div>
+    <p class="development-name">JetBrains Rider</p>
+    <span class="development-version"><span class="dot"></span>Version 2025.1 or later</span>
   </div>
 </div>
 
