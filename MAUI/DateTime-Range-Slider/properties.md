@@ -209,12 +209,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View DateTimeRangeSliderValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSliderValueChangedEventArgs&gt;</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderValueChangedEventArgs.html" aria-label="View DateTimeRangeSliderValueChangedEventArgs type in API reference">DateTimeRangeSliderValueChangedEventArgs&gt;</a></a></td>
 		<td>Triggered after the selected date or time range changes and the current range-selection operation is completed.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View DateTimeRangeSliderValueChangingEventArgs type in API reference">EventHandler&lt;DateTimeRangeSliderValueChangingEventArgs&gt;</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.EventHandler-1.html" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderValueChangingEventArgs.html" aria-label="View DateTimeRangeSliderValueChangedEventArgs type in API reference">DateTimeRangeSliderValueChangingEventArgs&gt;</a></a></td>
 		<td>Triggered while a thumb is being dragged and the selected date or time range is actively changing.</td>
 	</tr>
 </table>

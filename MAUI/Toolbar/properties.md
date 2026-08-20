@@ -21,7 +21,7 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground" aria-label="View BackwardButtonBackground property in API reference">BackwardButtonBackground</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-<td>Defines the background brush applied to the backward navigation button and allows the control to blend with surrounding visual styles.</td>
+<td>Customizes the background displayed behind the backward navigation button when navigation-button overflow handling is used.</td>
 </tr>
 
 <tr>
@@ -33,7 +33,7 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate" aria-label="View BackwardButtonTemplate property in API reference">BackwardButtonTemplate</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-<td>Defines the template used to render the backward navigation button with custom layout, visuals, or content.</td>
+<td>Replaces the default backward navigation button with custom content when navigation-button overflow handling is enabled.</td>
 </tr>
 
 <tr>
@@ -51,19 +51,19 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground" aria-label="View ForwardButtonBackground property in API reference">ForwardButtonBackground</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-<td>Defines the background brush applied to the forward navigation button.</td>
+<td>Customizes the background displayed behind the forward navigation button when navigation-button overflow handling is used.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor" aria-label="View ForwardButtonIconColor property in API reference">ForwardButtonIconColor</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
-<td>Defines the icon color used for the forward navigation button.</td>
+<td>Customizes the color of the forward navigation button icon.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate" aria-label="View ForwardButtonTemplate property in API reference">ForwardButtonTemplate</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-<td>Defines the template used to render the forward navigation button with customized visuals.</td>
+<td>Replaces the default forward navigation button with custom content when navigation-button overflow handling is enabled.</td>
 </tr>
 
 <tr>
@@ -75,19 +75,19 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor" aria-label="View MoreButtonIconColor property in API reference">MoreButtonIconColor</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
-<td>Defines the icon color used for the <code>More</code> button.</td>
+<td>Customizes the color of the <code> More </code> button icon.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTappedCommand" aria-label="View MoreButtonTappedCommand property in API reference">MoreButtonTappedCommand</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Defines the command executed when the <code>More</code> button is tapped.</td>
+<td>Executes a command when the <code>More</code> button is tapped.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChangedCommand" aria-label="View MoreItemsChangedCommand property in API reference">MoreItemsChangedCommand</a></td>
 <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Defines the command executed when the overflow item collection changes.</td>
+<td>Executes a command when the set of items displayed in the overflow menu changes.</td>
 </tr>
 
 <tr>
@@ -99,13 +99,13 @@ documentation: ug
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation" aria-label="View Orientation property in API reference">Orientation</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html" aria-label="View ToolbarOrientation enum in API reference">ToolbarOrientation</a></td>
-<td>Defines whether the toolbar is arranged horizontally or vertically by using the <code>ToolbarOrientation</code> enum.</td>
+<td>Arranges toolbar items horizontally or vertically using the <code>ToolbarOrientation</code> values.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode" aria-label="View OverflowMode property in API reference">OverflowMode</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html" aria-label="View ToolbarItemOverflowMode enum in API reference">ToolbarItemOverflowMode</a></td>
-<td>Defines how items that do not fit within the available space are handled through the <code>ToolbarItemOverflowMode</code> enum.</td>
+<td>Controls how items are handled when there is not enough space to display them all. Scroll allows continuous <code> scrolling </code>, <code> NavigationButton </code> uses forward and backward navigation buttons, and <code> MoreButton </code> moves overflowed items into an overflow menu.</td>
 </tr>
 
 </table>
@@ -138,14 +138,14 @@ documentation: ug
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped" aria-label="View MoreButtonTapped event in API reference">MoreButtonTapped</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html" aria-label="View EventArgs type in API reference">ToolbarMoreButtonTappedEventArgs</a></td>
-<td>Raised when the <code>More</code> button is tapped and the overflow menu is requested.</td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html" aria-label="View EventArgs type in API reference">ToolbarMoreButtonTappedEventArgs&gt;</a></a></td>
+<td>Triggered when the <code>More</code> button is tapped to open the overflow menu.</td>
 </tr>
 
 <tr>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged" aria-label="View MoreItemsChanged event in API reference">MoreItemsChanged</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html" aria-label="View ToolbarMoreItemsChangedEventArgs type in API reference">ToolbarMoreItemsChangedEventArgs</a></td>
-<td>Raised when the collection of overflow items changes and the toolbar recalculates the items shown in the <code>More</code> menu.</td>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html" aria-label="View ToolbarMoreItemsChangedEventArgs type in API reference">ToolbarMoreItemsChangedEventArgs&gt;</a></a></td>
+<td>Triggered when the set of items displayed in the overflow menu changes after the toolbar recalculates item layout.</td>
 </tr>
 
 </table>

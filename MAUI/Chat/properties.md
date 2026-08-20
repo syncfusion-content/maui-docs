@@ -344,67 +344,67 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped" aria-label="View CardTapped event in API reference">CardTapped</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;CardTappedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html" aria-label="View CardTappedEventArgs type in API reference">CardTappedEventArgs&gt;</a></a></td>
 		<td>Triggered when a card or a card action within a message is tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped" aria-label="View ImageTapped event in API reference">ImageTapped</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;ImageTappedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html" aria-label="View ImageTappedEventArgs type in API reference">ImageTappedEventArgs&gt;</a></a></td>
 		<td>Triggered when an image message is tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped" aria-label="View MessageDoubleTapped event in API reference">MessageDoubleTapped</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;MessageDoubleTappedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html" aria-label="View MessageDoubleTappedEventArgs type in API reference">MessageDoubleTappedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is double-tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed" aria-label="View MessageLongPressed event in API reference">MessageLongPressed</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;MessageLongPressedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html" aria-label="View MessageLongPressedEventArgs type in API reference">MessageLongPressedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is pressed and held.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessagePinned" aria-label="View MessagePinned event in API reference">MessagePinned</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;MessagePinnedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessagePinnedEventArgs.html" aria-label="View MessagePinnedEventArgs type in API reference">MessagePinnedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is added to the pinned messages collection</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped" aria-label="View MessageTapped event in API reference">MessageTapped</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;MessageTappedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html" aria-label="View MessageTappedEventArgs type in API reference">MessageTappedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is tapped.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageUnpinned" aria-label="View MessageUnpinned event in API reference">MessageUnpinned</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;MessageUnpinnedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageUnpinnedEventArgs.html" aria-label="View MessageUnpinnedEventArgs type in API reference">MessageUnpinnedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is removed from the pinned messages collection.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Scrolled" aria-label="View Scrolled event in API reference">Scrolled</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatScrolledEventArgs.html" aria-label="View ChatScrolledEventArgs type in API reference">ChatScrolledEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatScrolledEventArgs.html" aria-label="View ChatScrolledEventArgs type in API reference">ChatScrolledEventArgs&gt;</a></a></td>
 		<td>Triggered when the chat view is scrolled.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SendMessage" aria-label="View SendMessage event in API reference">SendMessage</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html" aria-label="View SendMessageEventArgs type in API reference">SendMessageEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SendMessageEventArgs.html" aria-label="View SendMessageEventArgs type in API reference">SendMessageEventArgs&gt;</a></a></td>
 		<td>Triggered when a message is being sent, allowing the send operation to be handled before the message appears in the conversation.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SuggestionItemSelected" aria-label="View SuggestionItemSelected event in API reference">SuggestionItemSelected</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html" aria-label="View SuggestionItemSelectedEventArgs type in API reference">SuggestionItemSelectedEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SuggestionItemSelectedEventArgs.html" aria-label="View SuggestionItemSelectedEventArgs type in API reference">SuggestionItemSelectedEventArgs&gt;</a></a></td>
 		<td>Triggered when a suggestion item is selected.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded" aria-label="View SwipeEnded event in API reference">SwipeEnded</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html" aria-label="View MessageSwipeEndedEventArgs type in API reference">MessageSwipeEndedEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html" aria-label="View MessageSwipeEndedEventArgs type in API reference">MessageSwipeEndedEventArgs&gt;</a></a></td>
 		<td>Triggered when a message swipe interaction completes.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeStarted" aria-label="View SwipeStarted event in API reference">SwipeStarted</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html" aria-label="View MessageSwipeStartedEventArgs type in API reference">MessageSwipeStartedEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html" aria-label="View MessageSwipeStartedEventArgs type in API reference">MessageSwipeStartedEventArgs&gt;</a></a></td>
 		<td>Triggered when a user begins swiping a message.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Swiping" aria-label="View Swiping event in API reference">Swiping</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html" aria-label="View MessageSwipingEventArgs type in API reference">MessageSwipingEventArgs</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html" aria-label="View MessageSwipingEventArgs type in API reference">MessageSwipingEventArgs&gt;</a></a></td>
 		<td>Triggered continuously while a message is being swiped.</td>
 	</tr>
 </table>

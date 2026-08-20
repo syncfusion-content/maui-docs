@@ -332,7 +332,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;DateTimeSliderValueChangedEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeSliderValueChangedEventArgs.html" aria-label="View DateTimeSliderValueChangedEventArgs type in API reference">DateTimeSliderValueChangedEventArgs&gt;</a></a>
 		</td>
 		<td>Triggered after the selected date or time changes and the current selection operation is completed.</td>
 	</tr>
@@ -341,7 +341,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;DateTimeSliderValueChangingEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeSliderValueChangingEventArgs.html" aria-label="View DateTimeSliderValueChangingEventArgs type in API reference">DateTimeSliderValueChangingEventArgs&gt;</a></a>
 		</td>
 		<td>Triggered while the thumb is being dragged and the selected date or time is actively changing.</td>
 	</tr>

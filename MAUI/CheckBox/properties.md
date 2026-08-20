@@ -129,12 +129,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged" aria-label="View StateChanged event in API reference">StateChanged</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler<StateChangedEventArgs> type in API reference">EventHandler&lt;StateChangedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html" aria-label="View StateChangedEventArgs type in API reference">StateChangedEventArgs&gt;</a></a></td>
 		<td>Triggered after the CheckBox state changes through user interaction or programmatic updates. The event reports the new checked, unchecked, or indeterminate state.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanging" aria-label="View StateChanging event in API reference">StateChanging</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler<StateChangingEventArgs> type in API reference">EventHandler&lt;StateChangingEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html" aria-label="View StateChangingEventArgs type in API reference">StateChangingEventArgs&gt;</a></a></td>
 		<td>Triggered before the CheckBox state changes, allowing the state change to be canceled.</td>
 	</tr>
 </table>
