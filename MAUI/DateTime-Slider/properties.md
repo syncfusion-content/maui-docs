@@ -46,7 +46,7 @@ documentation: ug
 		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration" aria-label="View StepDuration property in API reference">StepDuration</a><br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderStepDuration.html" aria-label="View SliderStepDuration type in API reference">SliderStepDuration</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a>
 		</td>
 		<td>Specifies the step used for discrete date selection when the thumb moves between valid date values.</td>
 	</tr>
@@ -55,7 +55,7 @@ documentation: ug
 		<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation" aria-label="View Orientation property in API reference">Orientation</a> <br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderOrientation.html" aria-label="View SliderOrientation type in API reference">SliderOrientation</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.windows.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a>
 		</td>
 		<td>Sets the layout direction of the slider to <code>Horizontal</code> or <code>Vertical</code>.</td>
 	</tr>
@@ -91,7 +91,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle" aria-label="View DividerStyle property in API reference">DividerStyle</a> <br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html" aria-label="View SliderDividerStyle type in API reference">SliderDividerStyle</a>
+			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a>
 		</td>
 		<td>Customizes the divider appearance between the selected range and the unselected track.</td>
 	</tr>
@@ -136,7 +136,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement" aria-label="View EdgeLabelsPlacement property in API reference">EdgeLabelsPlacement</a> <br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html" aria-label="View SliderEdgeLabelsPlacement type in API reference">SliderEdgeLabelsPlacement</a>
+			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a>
 		</td>
 		<td>Controls where the first and last labels appear on the slider track, such as <code>Inside</code> or <code>Outside</code>.</td>
 	</tr>
@@ -181,7 +181,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement" aria-label="View LabelsPlacement property in API reference">LabelsPlacement</a> <br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html" aria-label="View SliderLabelsPlacement type in API reference">SliderLabelsPlacement</a>
+			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a>
 		</td>
 		<td>Controls where labels appear relative to the ticks, such as <code>None</code>, <code>Inside</code>, or <code>Outside</code>.</td>
 	</tr>
@@ -190,7 +190,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle" aria-label="View LabelStyle property in API reference">LabelStyle</a> <br/>
 		</td>
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html" aria-label="View SliderLabelStyle type in API reference">SliderLabelStyle</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable" aria-label="View IEnumerable type in API reference">IEnumerable</a>
 		</td>
 		<td>Customizes the appearance of the slider labels.</td>
 	</tr>

@@ -54,7 +54,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection" aria-label="View EnableIntervalSelection property in API reference">EnableIntervalSelection</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether the selected range snaps to interval boundaries.</td>
 	</tr>
 	<tr valign="top">
@@ -69,7 +69,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay" aria-label="View DeferredUpdateDelay property in API reference">DeferredUpdateDelay</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
 		<td>Specifies the delay, in milliseconds, before deferred updates are applied.</td>
 	</tr>
 	<tr valign="top">
@@ -79,7 +79,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand" aria-label="View DragCompletedCommand property in API reference">DragCompletedCommand</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Windows.Input.ICommand.html" aria-label="View ICommand type in API reference">ICommand</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 		<td>Executes when thumb dragging ends.</td>
 	</tr>
 	<tr valign="top">
@@ -89,7 +89,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand" aria-label="View DragStartedCommand property in API reference">DragStartedCommand</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Windows.Input.ICommand.html" aria-label="View ICommand type in API reference">ICommand</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 		<td>Executes when thumb dragging starts.</td>
 	</tr>
 	<tr valign="top">
@@ -104,22 +104,22 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate" aria-label="View EnableDeferredUpdate property in API reference">EnableDeferredUpdate</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether range updates are deferred until the interaction completes.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether the liquid glass visual effect is enabled.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval" aria-label="View Interval property in API reference">Interval</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
 		<td>Specifies the interval between tick marks and labels.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed" aria-label="View IsInversed property in API reference">IsInversed</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Defines whether the slider direction is reversed.</td>
 	</tr>
 	<tr valign="top">
@@ -159,17 +159,17 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers" aria-label="View ShowDividers property in API reference">ShowDividers</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether divider markers are shown.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels" aria-label="View ShowLabels property in API reference">ShowLabels</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether value labels are shown.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks" aria-label="View ShowTicks property in API reference">ShowTicks</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Determines whether tick marks are shown.</td>
 	</tr>
 	<tr valign="top">
@@ -189,7 +189,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent" aria-label="View TrackExtent property in API reference">TrackExtent</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Double.html" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
 		<td>Extends the track beyond its normal start and end edges by the specified number of pixels.</td>
 	</tr>
 	<tr valign="top">
