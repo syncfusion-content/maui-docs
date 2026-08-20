@@ -72,7 +72,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_" aria-label="View GetStreamAsync method in API reference">GetStreamAsync(ImageFileFormat)</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1" aria-label="View Task&lt;Stream&gt; type in API reference">Task&lt;<a href="https://learn.microsoft.com/dotnet/api/system.io.stream" aria-label="View Stream type in API reference">Stream&gt;</a></a></td>
-    <td>Generates the <code>barcode</code> as a <code>stream</code> in the requested <code>ImageFileFormat</code>, such as <code>Png</code> or <code>Jpeg</code>. Useful when the output needs to be <code>saved</code> or <code>processed</code> before display.</td>
+    <td>Generates the <code>barcode</code> as a <code>stream</code> in the requested <code>ImageFileFormat</code>, such as <code>PNG</code> or <code>JPEG</code>. Useful when the output needs to be <code>saved</code> or <code>processed</code> before display.</td>
 </tr>
 
 <tr valign="top">
