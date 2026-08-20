@@ -7,9 +7,9 @@ control: Installation and Deployment
 documentation: UG
 ---
 
-# System Requirements for .NET MAUI
+# System Requirements for .NET MAUI Controls
 
-The following are the system requirements for using the Syncfusion<sup>®</sup> .NET MAUI platform.
+The following are the system requirements for using the .NET MAUI controls.
 
 <style>
   /* ---------- Shared grid + card ---------- */
@@ -162,7 +162,6 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
     font-weight: 700;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
-  .development-row.vs2026 .development-logo { background: linear-gradient(135deg, #854CC7 0%, #5E2D9C 100%); }
   .development-row.vs2022 .development-logo { background: linear-gradient(135deg, #6E4FCC 0%, #4A2A99 100%); }
   .development-row.code .development-logo { background: linear-gradient(135deg, #0078D7 0%, #00509E 100%); }
   .development-row.rider .development-logo { background: linear-gradient(135deg, #FE315D 0%, #C40030 100%); }
@@ -317,7 +316,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
 
 ## Operating Systems & Hardware
 
-The following table summarizes the operating systems and hardware required to develop, build, and run Syncfusion<sup>®</sup> .NET MAUI applications on Windows and macOS (Mac Catalyst).
+The following table summarizes the operating systems and hardware required to develop, build, and run .NET MAUI applications on Windows and macOS (Mac Catalyst).
 
 <div class="platform-requirements-table">
   <div class="platform-requirements-header">
@@ -331,19 +330,9 @@ The following table summarizes the operating systems and hardware required to de
     <div class="row-cell" style="flex: 1 1 39%;">macOS 12 or later</div>
   </div>
   <div class="platform-requirements-row">
-    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Development Tools</span></div>
-    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio 2022 or later (with .NET MAUI workload), .NET SDK, Android SDK &amp; JDK</div>
-    <div class="row-cell" style="flex: 1 1 39%;">Visual Studio Code, Xcode, Command Line Tools, .NET SDK, Android SDK &amp; JDK</div>
-  </div>
-  <div class="platform-requirements-row">
     <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Architecture</span></div>
     <div class="row-cell" style="flex: 1 1 39%;">x86 / x64</div>
     <div class="row-cell" style="flex: 1 1 39%;">Apple Silicon (M1+) recommended</div>
-  </div>
-  <div class="platform-requirements-row">
-    <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Processor</span></div>
-    <div class="row-cell" style="flex: 1 1 39%;">1.8 GHz or faster, quad-core recommended</div>
-    <div class="row-cell" style="flex: 1 1 39%;">1.8 GHz or faster, quad-core recommended</div>
   </div>
   <div class="platform-requirements-row">
     <div class="row-cell" style="flex: 0 0 22%;"><span class="platform-cell">Memory</span></div>
@@ -363,14 +352,9 @@ The following table summarizes the operating systems and hardware required to de
 Our .NET MAUI components are compatible with the following development environments.
 
 <div class="development-list">
-  <div class="development-row vs2026">
-    <div class="development-logo">VS</div>
-    <p class="development-name">Visual Studio 2026</p>
-    <span class="development-version"><span class="dot"></span>Version 18.0.0 or later</span>
-  </div>
   <div class="development-row vs2022">
     <div class="development-logo">VS</div>
-    <p class="development-name">Visual Studio 2022</p>
+    <p class="development-name">Visual Studio</p>
     <span class="development-version"><span class="dot"></span>Version 17.8.0 or later</span>
   </div>
   <div class="development-row code">
@@ -387,7 +371,7 @@ Our .NET MAUI components are compatible with the following development environme
 
 
 <style>
-  /* Padding inside note-style blockquotes (Reference / Additional Information) */
+  /* Padding inside note-style blockquotes (Additional Information) */
   blockquote.note,
   blockquote:has(> p > strong:first-child) {
     padding: 8px 16px !important;
@@ -395,9 +379,6 @@ Our .NET MAUI components are compatible with the following development environme
   }
 </style>
 
-> **Reference**
->
-> For more information on .NET MAUI support in Visual Studio Code, see the [announcing the .NET MAUI extension for Visual Studio Code](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/) blog post.
 
 ## Supported .NET Versions
 
