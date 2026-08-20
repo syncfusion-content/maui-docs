@@ -85,7 +85,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the end value of the selected date range.</td>
+		<td>Specifies the end date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -94,7 +94,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the start value of the selected date range.</td>
+		<td>Specifies the start date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -103,7 +103,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a>
 		</td>
-		<td>Sets the image displayed on the start thumb.</td>
+		<td>Customizes the icon displayed on the range selector thumb that represents the start date.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -238,7 +238,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the upper date boundary of the selector.</td>
+		<td>Limits the latest date that can be selected in the range selector.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -247,7 +247,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the lower date boundary of the selector.</td>
+		<td>Limits the earliest date that can be selected in the range selector.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -328,7 +328,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the track edge extension in device-independent units.</td>
+		<td>Controls how far the track extends beyond the thumb on each side, in device-independent units. Larger values increase the visible length of the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>

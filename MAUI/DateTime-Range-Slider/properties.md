@@ -40,12 +40,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_RangeStart" aria-label="View RangeStart property in API reference">RangeStart</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html" aria-label="View DateTime type in API reference">DateTime</a></td>
-		<td>Gets or sets the start value of the selected date range.</td>
+		<td>Specifies the start date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSlider_RangeEnd" aria-label="View RangeEnd property in API reference">RangeEnd</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html" aria-label="View DateTime type in API reference">DateTime</a></td>
-		<td>Gets or sets the end value of the selected date range.</td>
+		<td>Specifies the end date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior" aria-label="View DragBehavior property in API reference">DragBehavior</a></td>
@@ -60,12 +60,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EndThumbIcon" aria-label="View EndThumbIcon property in API reference">EndThumbIcon</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-		<td>Sets the icon displayed on the end thumb.</td>
+		<td>Customizes the icon displayed on the thumb that represents the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_StartThumbIcon" aria-label="View StartThumbIcon property in API reference">StartThumbIcon</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-		<td>Sets the icon displayed on the start thumb.</td>
+		<td>Customizes the icon displayed on the thumb that represents the start of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DeferredUpdateDelay" aria-label="View DeferredUpdateDelay property in API reference">DeferredUpdateDelay</a></td>
@@ -140,12 +140,12 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum" aria-label="View Maximum property in API reference">Maximum</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html" aria-label="View DateTime type in API reference">DateTime</a></td>
-		<td>Sets the upper date limit of the slider.</td>
+		<td>Limits the latest date that can be selected on the slider.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum" aria-label="View Minimum property in API reference">Minimum</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.DateTime.html" aria-label="View DateTime type in API reference">DateTime</a></td>
-		<td>Sets the lower date limit of the slider.</td>
+		<td>Limits the earliest date that can be selected on the slider.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval" aria-label="View MinorTicksPerInterval property in API reference">MinorTicksPerInterval</a></td>

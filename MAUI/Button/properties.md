@@ -34,23 +34,23 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_DashArray" aria-label="View DashArray property in API reference">DashArray</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/System.Single.html" aria-label="View float type in API reference">float[]</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/System.Single.html" aria-label="View float type in API reference">float</a></td>
 		<td>Defines the dash pattern used for the button border.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether to enable glass effect on the SfButton control.</td>
+		<td>Applies the Liquid Glass visual effect to the button when used in an environment that supports glass-effect rendering.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable" aria-label="View IsCheckable property in API reference">IsCheckable</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the SfButton is in the default state or not. This property can be used to change the state of the SfButton.</td>
+		<td>Allows the button to behave like a toggle button that can switch between checked and unchecked states when interacted with.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the SfButton is checkable. It is used to check the state of the SfButton.</td>
+		<td>Controls whether the button appears in its checked state when <code >IsCheckable</code> is enabled.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect" aria-label="View EnableRippleEffect property in API reference">EnableRippleEffect</a></td>
@@ -120,7 +120,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon" aria-label="View ShowIcon property in API reference">ShowIcon</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/System.Boolean.html" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the button icon is visible.</td>
+		<td>Controls whether the button's icon is displayed alongside its content.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>

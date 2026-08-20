@@ -228,7 +228,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View int type in API reference">int</a>
 		</td>
-		<td>Sets the number of minor ticks shown between major ticks.</td>
+		<td>Controls the number of minor tick marks displayed between adjacent major tick marks. Higher values show more intermediate tick marks along the slider track.</td>
 	</tr>
     <tr valign="top">		
 		<td>

@@ -30,82 +30,82 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize" aria-label="View ControlSize property in API reference">ControlSize</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Gets or sets the size of the check box indicator.</td>
+		<td>Controls the size of the check box indicator without affecting the label text size.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.cornerradius?view=net-maui-9.0" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
-		<td>Gets or sets the corner radius of the check box border.</td>
+		<td>Controls how rounded the corners of the check box indicator appear.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation" aria-label="View EnabledAnimation property in API reference">EnabledAnimation</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the state transition animation is enabled.</td>
+		<td>Animates the transition between check box states when the selection changes.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes?view=net-maui-9.0" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
-		<td>Gets or sets the font attributes used for the check box text.</td>
+		<td>Applies font styles such as bold or italic to the check box label.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled" aria-label="View FontAutoScalingEnabled property in API reference">FontAutoScalingEnabled</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the text font scales automatically with the device accessibility settings.</td>
+		<td>Allows the label text to scale automatically based on the device accessibility text-size settings.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontFamily" aria-label="View FontFamily property in API reference">FontFamily</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-9.0" aria-label="View string type in API reference">string</a></td>
-		<td>Gets or sets the font family for the check box text.</td>
+		<td>Applies a specific font family to the check box label.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontSize" aria-label="View FontSize property in API reference">FontSize</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Gets or sets the font size for the check box text.</td>
+		<td>Controls the size of the check box label text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment" aria-label="View HorizontalTextAlignment property in API reference">HorizontalTextAlignment</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.textalignment?view=net-maui-9.0" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
-		<td>Gets or sets the horizontal alignment of the check box text.</td>
+		<td>Controls how the label text is aligned within its available horizontal space.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the check box is checked, unchecked, or indeterminate.</td>
+		<td>Controls whether the check box displays a <code>selected</code>, <code>unselected</code>, or <code>indeterminate</code> state.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_IsEnabled" aria-label="View IsEnabled property in API reference">IsEnabled</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Gets or sets a value indicating whether the check box can respond to user interaction.</td>
+		<td>Controls whether the check box can respond to user interaction. When disabled, the control remains visible but cannot be changed by the user.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState" aria-label="View IsThreeState property in API reference">IsThreeState</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-9.0" aria-label="View bool type in API reference">bool</a></td>
-		<td>Enables three-state selection, allowing the CheckBox to display checked, unchecked, and indeterminate states.</td>
+		<td>Enables an indeterminate state in addition to the checked and unchecked states.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.linebreakmode?view=net-maui-9.0" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
-		<td>Gets or sets how the check box text wraps when it exceeds the available space.</td>
+		<td>Controls how the label text is displayed when it exceeds the available space, such as wrapping or truncating the text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Padding" aria-label="View Padding property in API reference">Padding</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.thickness?view=net-maui-9.0" aria-label="View Thickness type in API reference">Thickness</a></td>
-		<td>Gets or sets the inner padding around the check box content.</td>
+		<td>Controls the space between the check box content and its outer boundary.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness" aria-label="View StrokeThickness property in API reference">StrokeThickness</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-9.0" aria-label="View double type in API reference">double</a></td>
-		<td>Controls the thickness of the CheckBox border. Higher values produce a thicker outline.</td>
+		<td>Controls the thickness of the check box border. Higher values produce a thicker outline.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text" aria-label="View Text property in API reference">Text</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-9.0" aria-label="View string type in API reference">string</a></td>
-		<td>Gets or sets the label text displayed next to the check box.</td>
+		<td>Displays descriptive text alongside the check box indicator.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_TextColor" aria-label="View TextColor property in API reference">TextColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-9.0" aria-label="View Color type in API reference">Color</a></td>
-		<td>Gets or sets the text color of the check box label.</td>
+		<td>Controls the color of the check box label text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_TickColor" aria-label="View TickColor property in API reference">TickColor</a></td>
