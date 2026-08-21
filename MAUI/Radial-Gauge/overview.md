@@ -69,7 +69,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/radial-gauge/overview">Radial Gauge</a></td>
+<td><a href="/maui/radial-gauge/overview" aria-label="MAUI Radial Gauge Control overview">Radial Gauge</a></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
