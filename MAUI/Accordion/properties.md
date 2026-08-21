@@ -30,7 +30,7 @@ documentation: ug
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-        <td>Applies the <code>Liquid Glass</code> effect to all accordion items when the Accordion is placed inside an <code>SfGlassEffectView</code>. Supported on <code>iOS 13.0+</code> or later and <code>macOS 10.15+</code> or later with <code>.NET 8</code> or later.</td>
+        <td>Applies the <code>Liquid Glass</code> effect to all accordion items when the Accordion is placed inside an <code>SfGlassEffectView</code>. Supported on <code>iOS 26</code> or later and <code>macOS 26</code> or later with <code>.NET 10</code> or later; unsupported configurations use the standard background.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_AutoScrollPosition" aria-label="View AutoScrollPosition property in API reference">AutoScrollPosition</a></td>
