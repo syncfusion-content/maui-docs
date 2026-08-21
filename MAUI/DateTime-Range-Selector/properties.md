@@ -85,7 +85,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the end value of the selected date range.</td>
+		<td>Specifies the end date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -94,7 +94,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the start value of the selected date range.</td>
+		<td>Specifies the start date of the currently selected date range.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -103,7 +103,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a>
 		</td>
-		<td>Sets the image displayed on the start thumb.</td>
+		<td>Customizes the icon displayed on the range selector thumb that represents the start date.</td>
 	</tr>
 	<tr valign="top">		
 		<td>
@@ -238,7 +238,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the upper date boundary of the selector.</td>
+		<td>Limits the latest date that can be selected in the range selector.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -247,7 +247,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>
 		</td>
-		<td>Sets the lower date boundary of the selector.</td>
+		<td>Limits the earliest date that can be selected in the range selector.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -328,7 +328,7 @@ documentation: ug
 		<td>
 			<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>
 		</td>
-		<td>Sets the track edge extension in device-independent units.</td>
+		<td>Controls how far the track extends beyond the thumb on each side, in device-independent units. Larger values increase the visible length of the track.</td>
 	</tr>
     <tr valign="top">		
 		<td>
@@ -360,7 +360,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangedEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
 		</td>
 		<td>Triggered after the selected date or time range changes and the current range-selection operation is completed.</td>
 	</tr>
@@ -369,7 +369,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangingEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangingEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangingEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangingEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangingEventArgs&gt;</a>
 		</td>
 		<td>Triggered while a thumb is being dragged and the selected date or time range is actively changing.</td>
 	</tr>
@@ -378,26 +378,8 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated" aria-label="View LabelCreated event in API reference">LabelCreated</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View SliderLabelCreatedEventArgs type in API reference">EventHandler&lt;SliderLabelCreatedEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View SliderLabelCreatedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated" aria-label="View SliderLabelCreatedEventArgs type in API reference">SliderLabelCreatedEventArgs&gt;</a>
 		</td>
 		<td>Triggered when a date or time label is generated, allowing the displayed label text to be customized.</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd" aria-label="View ValueChangeEnd event in API reference">ValueChangeEnd</a>  <br/>
-		</td>
-		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
-		</td>
-		<td>Triggered when range selection ends, such as when the user releases a thumb after dragging.</td>
-	</tr>
-    <tr valign="top">		
-		<td>
-		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart" aria-label="View ValueChangeStart event in API reference">ValueChangeStart</a>  <br/>
-		</td>
-		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
-		</td>
-		<td>Triggered when range selection begins, such as when the user starts dragging a thumb.</td>
 	</tr>
 </table>
