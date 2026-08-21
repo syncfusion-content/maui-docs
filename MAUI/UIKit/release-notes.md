@@ -7,11 +7,22 @@ control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Release Notes
+# Essential UI Kit for .NET MAUI Release Notes
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI offers elegantly designed XAML pages for MAUI apps, compatible with Windows, Android, iOS, and macOS. These pages uses the MVVM design pattern for seamless integration.
 
 To know more, refer to this [Read me](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/README.md) file. 
+
+## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.5
+ 
+The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.5 introduces a complete redesign of all **95 UI pages**, featuring modernized visuals, refined layouts, and enhanced user experiences for a more intuitive and engaging application interface.
+
+## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0
+
+The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0 offers a collection of all new **8 customizable UI pages** organized into **2 app categories**, including:
+
+* Dashboard
+* Onboarding
 
 ## Essential<sup>®</sup> UI Kit for .NET MAUI 1.0.0
 
@@ -35,10 +46,3 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI 1.0.0 offers a versatile collect
 * Tracking
 * Settings
 * Notifications
-
-## Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0
-
-The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0 offers a collection of all new **8 customizable UI pages** organized into **2 app categories**, including:
-
-* Dashboard
-* Onboarding

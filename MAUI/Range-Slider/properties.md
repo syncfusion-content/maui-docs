@@ -189,12 +189,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart" aria-label="View ValueChangeStart event in API reference">ValueChangeStart</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangingEventArgs type in API reference">EventHandler&lt;RangeSliderValueChangingEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangingEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderValueChangingEventArgs.html" aria-label="View EventHandler type in API reference">RangeSliderValueChangingEventArgs&gt;</a></a></td>
 		<td>Triggered when range selection begins, such as when the user presses or picks up a thumb to start dragging.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd" aria-label="View ValueChangeEnd event in API reference">ValueChangeEnd</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangedEventArgs type in API reference">EventHandler&lt;RangeSliderValueChangedEventArgs&gt;</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View RangeSliderValueChangedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderValueChangedEventArgs.html" aria-label="View EventHandler type in API reference">RangeSliderValueChangedEventArgs&gt;</a></a></td>
 		<td>Triggered when range selection ends, such as when the user releases a thumb after dragging.</td>
 	</tr>
 </table>
