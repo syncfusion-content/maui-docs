@@ -220,7 +220,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelCreated" aria-label="View LabelCreated event in API reference">LabelCreated</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LabelCreatedEventArgs.html" aria-label="View LabelCreatedEventArgs type in API reference">LabelCreatedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LabelCreatedEventArgs.html" aria-label="View LabelCreatedEventArgs type in API reference">LabelCreatedEventArgs&gt;</a></a></td>
     <td>Triggered when an <code>axis label</code> is <code>created</code>, allowing the <code>label text</code> or <code>appearance</code> to be customized before it is <code>rendered</code>.</td>
 </tr>
 </table>
