@@ -310,31 +310,31 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Closed" aria-label="View Closed event in API reference">Closed</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupClosedEventArgs.html" aria-label="View PopupClosedEventArgs type in API reference">PopupClosedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupClosedEventArgs.html" aria-label="View PopupClosedEventArgs type in API reference">PopupClosedEventArgs&gt;</a></a></td>
     <td>Triggered <code>after</code> the <code>popup</code> has <code>closed</code>, providing the final <code>close state</code> for <code>post-close handling</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Closing" aria-label="View Closing event in API reference">Closing</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupClosingEventArgs.html" aria-label="View PopupClosingEventArgs type in API reference">PopupClosingEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupClosingEventArgs.html" aria-label="View PopupClosingEventArgs type in API reference">PopupClosingEventArgs&gt;</a></a></td>
     <td>Triggered <code>before</code> the <code>popup</code> closes. Set the <code>Cancel</code> property in the <code>event args</code> to prevent the <code>popup</code> from <code>closing</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Opened" aria-label="View Opened event in API reference">Opened</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOpenedEventArgs.html" aria-label="View PopupOpenedEventArgs type in API reference">PopupOpenedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOpenedEventArgs.html" aria-label="View PopupOpenedEventArgs type in API reference">PopupOpenedEventArgs&gt;</a></a></td>
     <td>Triggered <code>after</code> the <code>popup</code> finishes <code>opening</code>, signaling that the <code>content</code> is fully <code>visible</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Opening" aria-label="View Opening event in API reference">Opening</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOpeningEventArgs.html" aria-label="View PopupOpeningEventArgs type in API reference">PopupOpeningEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOpeningEventArgs.html" aria-label="View PopupOpeningEventArgs type in API reference">PopupOpeningEventArgs&gt;</a></a></td>
     <td>Triggered <code>before</code> the <code>popup</code> opens. Set the <code>Cancel</code> property in the <code>event args</code> to prevent the <code>popup</code> from <code>opening</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_PositionChanging" aria-label="View PositionChanging event in API reference">PositionChanging</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupPositionChangingEventArgs.html" aria-label="View PopupPositionChangingEventArgs type in API reference">PopupPositionChangingEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupPositionChangingEventArgs.html" aria-label="View PopupPositionChangingEventArgs type in API reference">PopupPositionChangingEventArgs&gt;</a></a></td>
     <td>Triggered when the <code>popup position</code> is <code>recalculated</code>. Inspect or modify the <code>position</code> through the <code>event args</code> to control the final <code>placement</code>.</td>
 </tr>
 </table>
