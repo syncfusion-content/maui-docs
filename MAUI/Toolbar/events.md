@@ -13,7 +13,7 @@ The Toolbar supports the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ## Tapped
 
-A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event occurs, each time a toolbar item is tapped.
+A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event occurs, each time a Toolbar item is tapped.
 
 Below is a list of the arguments:
 
@@ -49,7 +49,7 @@ private void OnToolbarTapped(object? sender, ToolbarTappedEventArgs e)
 
 ## Item Touch Interaction
 
-An [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event occurs when the toolbar item is touch or pointer action.
+An [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event occurs when the Toolbar item is touch or pointer action.
 
 Below is a list of the arguments:
 
@@ -305,7 +305,7 @@ public class ToolbarInteractionViewModel
 
 ### Item Touch Interaction Command
 
-The [ItemTouchInteractionCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteractionCommand) will be triggered when you touch the toolbar item and pass the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html) as parameter.
+The [ItemTouchInteractionCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteractionCommand) will be triggered when you touch the Toolbar item and pass the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html) as parameter.
 
 {% tabs %}
 
@@ -383,7 +383,7 @@ public class ToolbarInteractionViewModel
 
 ### Item Long Pressed Command
 
-The [ItemLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressedCommand) will be triggered when you long press the toolbar item and pass the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html) as parameter.
+The [ItemLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressedCommand) will be triggered when you long press the Toolbar item and pass the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html) as parameter.
 
 {% tabs %}
 
@@ -659,7 +659,7 @@ public class ToolbarInteractionViewModel
 
 ### SelectionChanged Command
 
-The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChangedCommand) will be triggered when you select the toolbar items and pass the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html#properties) as parameter.
+The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChangedCommand) will be triggered when you select the Toolbar items and pass the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html#properties) as parameter.
 
 {% tabs %}
 

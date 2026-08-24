@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Range Slider control
 
-This section helps to learn about how to add tooltip in the range slider.
+This section helps to learn about how to add tooltip in the Range Slider.
 
 ## Enable tooltip
 
