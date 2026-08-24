@@ -82,19 +82,19 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped" aria-label="View Tapped event in API reference">Tapped</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;TappedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.tapedeventargs" aria-label="View TappedEventArgs type in API reference">TappedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;TappedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.tapedeventargs" aria-label="View TappedEventArgs type in API reference">TappedEventArgs&gt;</a></a></td>
     <td>Raised when the card layout is tapped by the user. Use this event to respond to selection or open card details.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanged" aria-label="View VisibleIndexChanged event in API reference">VisibleIndexChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;CardVisibleIndexChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangedEventArgs.html" aria-label="View CardVisibleIndexChangedEventArgs type in API reference">CardVisibleIndexChangedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;CardVisibleIndexChangedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangedEventArgs.html" aria-label="View CardVisibleIndexChangedEventArgs type in API reference">CardVisibleIndexChangedEventArgs&gt;</a></a></td>
     <td>Raised after the visible card index changes. Use this event to update related UI after the new card becomes active.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanging" aria-label="View VisibleIndexChanging event in API reference">VisibleIndexChanging</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;CardVisibleIndexChangingEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html" aria-label="View CardVisibleIndexChangingEventArgs type in API reference">CardVisibleIndexChangingEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;CardVisibleIndexChangingEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html" aria-label="View CardVisibleIndexChangingEventArgs type in API reference">CardVisibleIndexChangingEventArgs&gt;</a></a></td>
     <td>Raised before the visible card index changes. Use this event to validate the change or cancel it when needed.</td>
 </tr>
 </table>
