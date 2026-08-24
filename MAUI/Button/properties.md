@@ -19,7 +19,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource" aria-label="View BackgroundImageSource property in API reference">BackgroundImageSource</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
 		<td>Displays an image behind the button content as the button background.</td>
 	</tr>
 	<tr valign="top">
@@ -104,7 +104,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource" aria-label="View ImageSource property in API reference">ImageSource</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
 		<td>Displays an image with the button.</td>
 	</tr>
 	<tr valign="top">
@@ -124,7 +124,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.Brush.html" aria-label="View Brush type in API reference">Brush</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
 		<td>Specifies the brush used to paint the button border.</td>
 	</tr>
 	<tr valign="top">
