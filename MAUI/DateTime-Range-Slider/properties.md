@@ -59,12 +59,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EndThumbIcon" aria-label="View EndThumbIcon property in API reference">EndThumbIcon</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
 		<td>Customizes the icon displayed on the thumb that represents the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_StartThumbIcon" aria-label="View StartThumbIcon property in API reference">StartThumbIcon</a></td>
-		<td><a href="https://help.syncfusion.com/cr/maui/Microsoft.Maui.Controls.ImageSource.html" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
 		<td>Customizes the icon displayed on the thumb that represents the start of the selected range.</td>
 	</tr>
 	<tr valign="top">

@@ -94,3 +94,49 @@ documentation: ug
     <td>Triggered after the rating value changes.</td>
 </tr>
 </table>
+
+## RatingSettings Properties
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedFill" aria-label="View RatedFill property in API reference">RatedFill</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Fills the selected rating items with a brush, making the chosen portion of the rating visually distinct.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStroke" aria-label="View RatedStroke property in API reference">RatedStroke</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Applies an outline brush to the selected rating items, helping emphasize the rated portion of the control.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStrokeThickness" aria-label="View RatedStrokeThickness property in API reference">RatedStrokeThickness</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Controls the width of the outline around selected rating items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedFill" aria-label="View UnratedFill property in API reference">UnratedFill</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Fills the unselected rating items with a brush, defining the appearance of the remaining rating range.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStroke" aria-label="View UnratedStroke property in API reference">UnratedStroke</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Applies an outline brush to the unselected rating items for additional visual definition.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStrokeThickness" aria-label="View UnratedStrokeThickness property in API reference">UnratedStrokeThickness</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Controls the width of the outline around unselected rating items.</td>
+</tr>
+</table>
