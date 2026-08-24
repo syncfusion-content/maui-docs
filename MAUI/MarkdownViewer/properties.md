@@ -29,21 +29,6 @@ documentation: ug
     </tr>
 </table>
 
-## Events
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked" aria-label="View HyperlinkClicked event in API reference">HyperlinkClicked</a></td>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownHyperlinkClickedEventArgs.html" aria-label="View MarkdownHyperlinkClickedEventArgs type in API reference">EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</a></td>
-        <td>Raised when a <code>hyperlink</code> inside the markdown content is clicked. Allows link interactions to be handled through application logic.</td>
-    </tr>
-</table>
-
 ## Methods
 
 <table>
@@ -66,5 +51,20 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetText" aria-label="View GetText method in API reference">GetText()</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
         <td>Returns the current content as plain text without markdown formatting. Useful for extracting readable text.</td>
+    </tr>
+</table>
+
+## Events
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked" aria-label="View HyperlinkClicked event in API reference">HyperlinkClicked</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownHyperlinkClickedEventArgs.html" aria-label="View MarkdownHyperlinkClickedEventArgs type in API reference">EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</a></td>
+        <td>Raised when a <code>hyperlink</code> inside the markdown content is clicked. Allows link interactions to be handled through application logic.</td>
     </tr>
 </table>
