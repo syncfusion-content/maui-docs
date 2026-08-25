@@ -20,7 +20,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ActualColumns" aria-label="View ActualColumns property in API reference">ActualColumns</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList&lt;T&gt; type in API reference">IList&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html" aria-label="View KanbanColumn type in API reference">KanbanColumn</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList&lt;T&gt; type in API reference">IList&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html" aria-label="View KanbanColumn type in API reference">KanbanColumn&gt;</a></a></td>
     <td>Read-only <code>collection</code> of <code>KanbanColumn</code> entries that reflects the <code>columns</code> currently rendered on the <code>board</code> after <code>auto-generation</code> or <code>filtering</code> has been resolved.</td>
 </tr>
 
@@ -142,37 +142,37 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTapped" aria-label="View CardTapped event in API reference">CardTapped</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html" aria-label="View KanbanCardTappedEventArgs type in API reference">KanbanCardTappedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html" aria-label="View KanbanCardTappedEventArgs type in API reference">KanbanCardTappedEventArgs&gt;</a></a></td>
     <td>Triggered when a <code>Kanban card</code> is <code>tapped</code>, providing the <code>tapped card</code> and its <code>data context</code> for <code>selection</code>, <code>navigation</code>, or <code>custom handling</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragStart" aria-label="View DragStart event in API reference">DragStart</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html" aria-label="View KanbanDragStartEventArgs type in API reference">KanbanDragStartEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html" aria-label="View KanbanDragStartEventArgs type in API reference">KanbanDragStartEventArgs&gt;</a></a></td>
     <td>Triggered when the <code>user begins dragging</code> a <code>card</code>. Set the <code>Cancel</code> property in the <code>event args</code> to prevent the <code>drag</code> from <code>starting</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnter" aria-label="View DragEnter event in API reference">DragEnter</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEnterEventArgs.html" aria-label="View KanbanDragEnterEventArgs type in API reference">KanbanDragEnterEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEnterEventArgs.html" aria-label="View KanbanDragEnterEventArgs type in API reference">KanbanDragEnterEventArgs&gt;</a></a></td>
     <td>Triggered when a <code>dragged card</code> <code>enters</code> a <code>column</code>, allowing you to provide <code>live feedback</code> for the <code>target lane</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragOver" aria-label="View DragOver event in API reference">DragOver</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragOverEventArgs.html" aria-label="View KanbanDragOverEventArgs type in API reference">KanbanDragOverEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragOverEventArgs.html" aria-label="View KanbanDragOverEventArgs type in API reference">KanbanDragOverEventArgs&gt;</a></a></td>
     <td>Triggered <code>continuously</code> while the <code>card</code> is <code>dragged over</code> a <code>column</code>, providing <code>up-to-date positioning information</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragLeave" aria-label="View DragLeave event in API reference">DragLeave</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragLeaveEventArgs.html" aria-label="View KanbanDragLeaveEventArgs type in API reference">KanbanDragLeaveEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragLeaveEventArgs.html" aria-label="View KanbanDragLeaveEventArgs type in API reference">KanbanDragLeaveEventArgs&gt;</a></a></td>
     <td>Triggered when a <code>dragged card</code> <code>leaves</code> a <code>column</code>, signaling that the <code>previous target</code> is no longer <code>active</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd" aria-label="View DragEnd event in API reference">DragEnd</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEndEventArgs.html" aria-label="View KanbanDragEndEventArgs type in API reference">KanbanDragEndEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEndEventArgs.html" aria-label="View KanbanDragEndEventArgs type in API reference">KanbanDragEndEventArgs&gt;</a></a></td>
     <td>Triggered when a <code>drag operation completes</code>. Inspect the <code>Cancel</code> property to determine whether the <code>card</code> was successfully <code>dropped</code> or the <code>move was canceled</code>.</td>
 </tr>
 </table>
