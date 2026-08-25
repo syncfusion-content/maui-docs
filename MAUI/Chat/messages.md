@@ -555,7 +555,7 @@ public class ViewModel : INotifyPropertyChanged
     {
         this.Messages.Add(new TextMessage()
         {
-            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Author = new Author() { Name = "Michael", Avatar = "peoplecircle23.png" },
             Text = "We should develop this app in .NET Maui, since it provides native experience and performance.",
         });
 
@@ -567,7 +567,7 @@ public class ViewModel : INotifyPropertyChanged
 
         this.Messages.Add(new HyperlinkMessage()
         {
-            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Author = new Author() { Name = "Michael", Avatar = "peoplecircle23.png" },
             Text = "You can check out this link to get started",
             Url = "https://dotnet.microsoft.com/en-us/apps/maui",
         });
@@ -666,7 +666,7 @@ public class ViewModel : INotifyPropertyChanged
         });
         this.Messages.Add(new ImageMessage()
         {
-            Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
+            Author = new Author() { Name = "Michael", Avatar = "peoplecircle23.png" },
             Aspect = Aspect.AspectFill,
             Source = "car2.jpg",
             DateTime = DateTime.Now,
@@ -683,7 +683,7 @@ public class ViewModel : INotifyPropertyChanged
 
 The `ImageMessage` comes with a built-in [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTapped) event and [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ImageTappedCommand) that will be fired upon tapping an image message. You can get the instance of the `ImageMessage` that was tapped in the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html) as [ImageTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ImageTappedEventArgs.html#Syncfusion_Maui_Chat_ImageTappedEventArgs_Message). You can handle this event/command to achieve requirements like showing the image in full screen or showing options for sharing the image, etc.
 
-## ImageTapped event
+#### ImageTapped event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -722,7 +722,7 @@ private void sfChat_ImageTapped(object sender, ImageTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## ImageTappedCommand
+#### ImageTappedCommand
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
@@ -2044,7 +2044,7 @@ By default, the author’s name and avatar are not shown for outgoing messages s
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -2097,7 +2097,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="16 17" %}
 
 using Syncfusion.Maui.Chat;
 

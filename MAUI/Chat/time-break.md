@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Time break in .NET MAUI Chat Control | Syncfusion®
-description: Learn here all about Time break support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
+title: Time Break in .NET MAUI Chat Control | Syncfusion®
+description: Learn here all about Time Break support in Syncfusion® .NET MAUI Chat (SfChat) control, its elements and more.
 platform: MAUI
 control: Chat
 documentation: ug
@@ -24,7 +24,7 @@ this.sfChat.ShowTimeBreak = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI Chat Time break support](images/time-break/maui-chat-time-break.png)
+![Syncfusion .NET MAUI Chat Time Break support](images/time-break/maui-chat-time-break.png)
 
 ## Sticky time break view
 
@@ -199,5 +199,5 @@ public class TimeBreakTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI Chat Time break template](images/time-break/maui-chat-time-break-template.png)
+![Syncfusion .NET MAUI Chat Time Break template](images/time-break/maui-chat-time-break-template.png)
       
