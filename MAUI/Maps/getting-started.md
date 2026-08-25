@@ -154,7 +154,7 @@ The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.Ma
 
 ### Loading a local file
 
-`SfMaps` provides support to load the JSON data or shapefile from local path. 
+.NET MAUI Maps provides support to load the JSON data or shapefile from local path. 
 
 The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a string argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the data from the shape source file. There's also an implicit conversion operator that enables the filename to be specified as a string argument to the [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property.
 
@@ -185,7 +185,7 @@ map.Layer = layer;
 
 ### Loading a remote file
 
-`SfMaps` provides support to load the JSON data or shapefile from the URI.
+.NET MAUI Maps provides support to load the JSON data or shapefile from the URI.
 
 The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromUri_System_Uri_) method requires a Uri argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the shape source from the Uri. There's also an implicit conversion for string-based URIs.
 
@@ -254,7 +254,7 @@ map.Layer = layer;
 
 ### Loading from stream
 
-`SfMaps` provides support to load the JSON data or shapefile as bytes from stream.
+.NET MAUI Maps provides support to load the JSON data or shapefile as bytes from stream.
 
 The `GetManifestResourceStream` method returns `null` if the resource name is not found. For more reliable assembly resolution, use `typeof(App).GetTypeInfo().Assembly` to get the project assembly.
 
