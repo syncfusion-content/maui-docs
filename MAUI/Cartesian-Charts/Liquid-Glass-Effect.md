@@ -26,7 +26,7 @@ The Liquid Glass Effect enhances MAUI [SfCartesianChart](https://help.syncfusion
 - **Trackball:** Adds a glassy style to trackball labels for precise value inspection.
 - **Chart Background:** Wrap the chart in an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a blurred or clear glass background.
 
-## Apply Liquid Glass Effect to SfCartesianChart Background
+## Apply Liquid Glass Effect to .NET MAUI Cartesian Chart Background
 
 Wrap the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a glass (blurred or clear) appearance. `SfGlassEffectView` is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package.
 
@@ -89,7 +89,7 @@ this.Content = glass;
 
 For detailed guidance on [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html), refer to the Getting Started [documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-## Enable Liquid Glass effect to SfCartesianChart elements
+## Enable Liquid Glass effect to .NET MAUI Cartesian Chart elements
 
 ### Tooltip
 
