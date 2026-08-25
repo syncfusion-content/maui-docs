@@ -15,8 +15,8 @@ To make the migration from the [Xamarin Cards](https://help.syncfusion.com/cr/xa
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th></tr>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th></tr>
 <tr>
 <td>Syncfusion.SfCards.XForms</td>
 <td>Syncfusion.Maui.Cards</td></tr>
@@ -100,12 +100,12 @@ this.Content = cardView;
 
 ### SfCards
 
-The following code example, explains how to initialize the properties of the `Xamarin SfCards` and `.NET MAUI SfCards` class.
+The following code example, explains how to initialize the properties of the `Xamarin Cards` and `.NET MAUI Cards` class.
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -184,8 +184,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCalendar</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -219,8 +219,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>
