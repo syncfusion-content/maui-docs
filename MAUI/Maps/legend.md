@@ -921,7 +921,7 @@ this.Content = maps;
 
 You can customize the appearance of legend items with your own template by using the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) property of `MapLegend`. The binding context of the template is a `LegendItem`, which exposes bindable properties such as `Text` and `IconBrush`.
 
-The `core:` namespace below refers to `xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Maps"`, which must be declared on the `SfMaps` element to use `core:LegendItem` as the `DataTemplate` `x:DataType`.
+The `core:` namespace below refers to `xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Maps"`, which must be declared on the `.NET MAUI Maps` element to use `core:LegendItem` as the `DataTemplate` `x:DataType`.
 
 {% tabs %}
 {% highlight xaml %}
