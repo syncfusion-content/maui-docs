@@ -10,7 +10,7 @@ keywords: .net maui chart performance, maui chart optimization, .net maui fast l
 
 # Performance in .NET MAUI Cartesian Chart
 
-The .NET MAUI Cartesian Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates. Whether you are rendering thousands of data points or pushing real-time updates, the following strategies help you get the best rendering performance from `.NET MAUI Cartesian Chart`.
+The .NET MAUI Cartesian Chart provides performance optimization techniques to efficiently handle large datasets and dynamic data updates. Whether you are rendering thousands of data points or pushing real-time updates, the following strategies help you get the best rendering performance from .NET MAUI Cartesian Chart.
 
 N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfCartesianChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)** guide.
 
