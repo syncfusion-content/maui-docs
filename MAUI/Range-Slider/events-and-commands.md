@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Slider
 
-This section explains how to add the events and commands for range slider.
+This section explains how to add the events and commands for Range Slider.
 
 ## Events
 

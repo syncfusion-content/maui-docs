@@ -189,6 +189,26 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Focus" aria-label="View Focus method in API reference">Focus()</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+        <td>Moves keyboard focus to the <code>Masked Entry</code> and opens the applicable <code>software keyboard</code>. If the control cannot receive focus, its focus state remains unchanged.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Unfocus" aria-label="View Unfocus method in API reference">Unfocus()</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+        <td>Removes keyboard focus from the <code>Masked Entry</code>, which can initiate <code>LostFocus</code> validation and hide prompt characters when configured.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -216,25 +236,5 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs.html" aria-label="View MaskedEntryValueChangingEventArgs type in API reference">MaskedEntryValueChangingEventArgs&gt;</a></a></td>
         <td>Triggered before the value changes and provides the previous and proposed values. The pending change can be canceled, and its validation result can be supplied through <code>IsValid</code>.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Focus" aria-label="View Focus method in API reference">Focus()</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
-        <td>Moves keyboard focus to the <code>Masked Entry</code> and opens the applicable <code>software keyboard</code>. If the control cannot receive focus, its focus state remains unchanged.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Unfocus" aria-label="View Unfocus method in API reference">Unfocus()</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
-        <td>Removes keyboard focus from the <code>Masked Entry</code>, which can initiate <code>LostFocus</code> validation and hide prompt characters when configured.</td>
     </tr>
 </table>

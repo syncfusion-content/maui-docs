@@ -441,101 +441,101 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupCollapsed" aria-label="View GroupCollapsed event in API reference">GroupCollapsed</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangedEventArgs.html" aria-label="View GroupExpandCollapseChangedEventArgs type in API reference">GroupExpandCollapseChangedEventArgs&gt;</a></a></td>
-        <td>Raised after a group is collapsed. This can be used to update <code>grouping</code> state or refresh related UI elements.</td>
+        <td>Triggered after a group is collapsed. This can be used to update <code>grouping</code> state or refresh related UI elements.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupCollapsing" aria-label="View GroupCollapsing event in API reference">GroupCollapsing</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html" aria-label="View GroupExpandCollapseChangingEventArgs type in API reference">GroupExpandCollapseChangingEventArgs&gt;</a></a></td>
-        <td>Raised before a group collapses. The pending action can be reviewed and canceled before the <code>collapse</code> is applied.</td>
+        <td>Triggered before a group collapses. The pending action can be reviewed and canceled before the <code>collapse</code> is applied.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanded" aria-label="View GroupExpanded event in API reference">GroupExpanded</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangedEventArgs.html" aria-label="View GroupExpandCollapseChangedEventArgs type in API reference">GroupExpandCollapseChangedEventArgs&gt;</a></a></td>
-        <td>Raised after a group is expanded. This is useful for syncing visibility state or loading content tied to the expanded <code>section</code>.</td>
+        <td>Triggered after a group is expanded. This is useful for syncing visibility state or loading content tied to the expanded <code>section</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanding" aria-label="View GroupExpanding event in API reference">GroupExpanding</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html" aria-label="View GroupExpandCollapseChangingEventArgs type in API reference">GroupExpandCollapseChangingEventArgs&gt;</a></a></td>
-        <td>Raised before a group expands. This allows validation or cancellation before the child <code>items</code> become visible.</td>
+        <td>Triggered before a group expands. This allows validation or cancellation before the child <code>items</code> become visible.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemAppearing" aria-label="View ItemAppearing event in API reference">ItemAppearing</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html" aria-label="View ItemAppearingEventArgs type in API reference">ItemAppearingEventArgs&gt;</a></a></td>
-        <td>Raised when an item enters the visible viewport. This is useful for <code>lazy</code> loading, animation, or visibility tracking.</td>
+        <td>Triggered when an item enters the visible viewport. This is useful for <code>lazy</code> loading, animation, or visibility tracking.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDisappearing" aria-label="View ItemDisappearing event in API reference">ItemDisappearing</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html" aria-label="View ItemDisappearingEventArgs type in API reference">ItemDisappearingEventArgs&gt;</a></a></td>
-        <td>Raised when an item leaves the visible viewport. This is useful for stopping <code>animations</code> or releasing temporary resources.</td>
+        <td>Triggered when an item leaves the visible viewport. This is useful for stopping <code>animations</code> or releasing temporary resources.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDragging" aria-label="View ItemDragging event in API reference">ItemDragging</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDraggingEventArgs.html" aria-label="View ItemDraggingEventArgs type in API reference">ItemDraggingEventArgs&gt;</a></a></td>
-        <td>Raised while an item is being dragged. This is useful for tracking drag progress and updating custom <code>feedback</code>.</td>
+        <td>Triggered while an item is being dragged. This is useful for tracking drag progress and updating custom <code>feedback</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDoubleTapped" aria-label="View ItemDoubleTapped event in API reference">ItemDoubleTapped</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html" aria-label="View ItemDoubleTappedEventArgs type in API reference">ItemDoubleTappedEventArgs&gt;</a></a></td>
-        <td>Raised when an item is double tapped. This is useful for opening details or triggering an alternate <code>action</code>.</td>
+        <td>Triggered when an item is double tapped. This is useful for opening details or triggering an alternate <code>action</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress" aria-label="View ItemLongPress event in API reference">ItemLongPress</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html" aria-label="View ItemLongPressEventArgs type in API reference">ItemLongPressEventArgs&gt;</a></a></td>
-        <td>Raised when an item is long pressed. This is commonly used for context menus or secondary <code>commands</code>.</td>
+        <td>Triggered when an item is long pressed. This is commonly used for context menus or secondary <code>commands</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemRightTapped" aria-label="View ItemRightTapped event in API reference">ItemRightTapped</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemRightTappedEventArgs.html" aria-label="View ItemRightTappedEventArgs type in API reference">ItemRightTappedEventArgs&gt;</a></a></td>
-        <td>Raised when an item is right tapped. This is useful for desktop-style <code>context</code> actions and menus.</td>
+        <td>Triggered when an item is right tapped. This is useful for desktop-style <code>context</code> actions and menus.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped" aria-label="View ItemTapped event in API reference">ItemTapped</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html" aria-label="View ItemTappedEventArgs type in API reference">ItemTappedEventArgs&gt;</a></a></td>
-        <td>Raised when an item is tapped. This is the primary interaction event for selection, navigation, or custom handling.</td>
+        <td>Triggered when an item is tapped. This is the primary interaction event for selection, navigation, or custom handling.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded" aria-label="View Loaded event in API reference">Loaded</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadedEventArgs.html" aria-label="View ListViewLoadedEventArgs type in API reference">ListViewLoadedEventArgs&gt;</a></a></td>
-        <td>Raised after the list control has finished loading. This is a suitable point for final setup and post-load <code>customization</code>.</td>
+        <td>Triggered after the list control has finished loading. This is a suitable point for final setup and post-load <code>customization</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_QueryItemSize" aria-label="View QueryItemSize event in API reference">QueryItemSize</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html" aria-label="View QueryItemSizeEventArgs type in API reference">QueryItemSizeEventArgs&gt;</a></a></td>
-        <td>Raised when the size of an item is being determined. This is useful for providing a custom <code>size</code> for specific content.</td>
+        <td>Triggered when the size of an item is being determined. This is useful for providing a custom <code>size</code> for specific content.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollStateChanged" aria-label="View ScrollStateChanged event in API reference">ScrollStateChanged</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ScrollStateChangedEventArgs.html" aria-label="View ScrollStateChangedEventArgs type in API reference">ScrollStateChangedEventArgs&gt;</a></a></td>
-        <td>Raised when the scrolling state changes. This can be used to react to <code>idle</code>, <code>dragging</code>, or active scroll transitions.</td>
+        <td>Triggered when the scrolling state changes. This can be used to react to <code>idle</code>, <code>dragging</code>, or active scroll transitions.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangedEventArgs.html" aria-label="View ItemSelectionChangedEventArgs type in API reference">ItemSelectionChangedEventArgs&gt;</a></a></td>
-        <td>Raised after the selection has changed. This is useful for updating related UI or running selection-based <code>logic</code>.</td>
+        <td>Triggered after the selection has changed. This is useful for updating related UI or running selection-based <code>logic</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging" aria-label="View SelectionChanging event in API reference">SelectionChanging</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html" aria-label="View ItemSelectionChangingEventArgs type in API reference">ItemSelectionChangingEventArgs&gt;</a></a></td>
-        <td>Raised before the selection changes. This allows the pending selection to be reviewed or canceled before it is applied.</td>
+        <td>Triggered before the selection changes. This allows the pending selection to be reviewed or canceled before it is applied.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded" aria-label="View SwipeEnded event in API reference">SwipeEnded</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html" aria-label="View SwipeEndedEventArgs type in API reference">SwipeEndedEventArgs&gt;</a></a></td>
-        <td>Raised when a swipe interaction ends. This is useful for handling the final state after <code>swipe</code> actions complete.</td>
+        <td>Triggered when a swipe interaction ends. This is useful for handling the final state after <code>swipe</code> actions complete.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeReset" aria-label="View SwipeReset event in API reference">SwipeReset</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html" aria-label="View ResetSwipeEventArgs type in API reference">ResetSwipeEventArgs&gt;</a></a></td>
-        <td>Raised when a swipe item is reset to its default state. This is useful for restoring the item appearance after a <code>swipe</code> action.</td>
+        <td>Triggered when a swipe item is reset to its default state. This is useful for restoring the item appearance after a <code>swipe</code> action.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeStarting" aria-label="View SwipeStarting event in API reference">SwipeStarting</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeStartingEventArgs.html" aria-label="View SwipeStartingEventArgs type in API reference">SwipeStartingEventArgs&gt;</a></a></td>
-        <td>Raised before a swipe begins. This allows the gesture to be inspected before the swipe <code>UI</code> is shown.</td>
+        <td>Triggered before a swipe begins. This allows the gesture to be inspected before the swipe <code>UI</code> is shown.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Swiping" aria-label="View Swiping event in API reference">Swiping</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html" aria-label="View SwipingEventArgs type in API reference">SwipingEventArgs&gt;</a></a></td>
-        <td>Raised continuously while a swipe is in progress. This is useful for updating thresholds, actions, or custom <code>gesture</code> feedback.</td>
+        <td>Triggered continuously while a swipe is in progress. This is useful for updating thresholds, actions, or custom <code>gesture</code> feedback.</td>
     </tr>
 </table>
