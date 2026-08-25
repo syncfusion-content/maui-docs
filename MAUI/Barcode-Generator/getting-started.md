@@ -187,6 +187,6 @@ this.Content = barcode;
 
 ![.NET MAUI Barcode Generator Initialize Barcode](images/getting-started/maui-intialize-barcode.png)
 
-N> The default symbology of `SfBarcodeGenerator` is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html). To render other symbologies such as `QRCode`, `DataMatrix`, or `Codabar`, set the `Symbology` property.
+N> The default symbology of `.NET MAUI Barcode Generator` is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html). To render other symbologies such as `QRCode`, `DataMatrix`, or `Codabar`, set the `Symbology` property.
 
 You can download the complete Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-dotnet-maui-barcode-generator).
