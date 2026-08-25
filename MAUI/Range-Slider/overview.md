@@ -15,7 +15,7 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 
 ## Business use cases
 
-- Data-driven applications that require filtering values such as price ranges, ratings, or quantities using a slider interface.  
+- Data-driven applications that require filtering values such as price ranges, ratings, or quantities using a Slider interface.  
 - Dashboard applications that allow users to adjust numeric ranges dynamically for data analysis and visualization.  
 - E-commerce applications that provide range-based filtering such as price, discount, or product attributes.  
 - Configuration screens that require setting minimum and maximum thresholds for numeric values.  
@@ -23,10 +23,10 @@ The Syncfusion<sup>®</sup> .NET MAUI Range Slider ([SfRangeSlider](https://www.
 ## Key features
 
 - **Numeric range selection** allows selecting values between defined minimum and maximum limits.  
-- **Orientation** allows displaying the slider in horizontal or vertical layouts based on UI design.  
+- **Orientation** allows displaying the Slider in horizontal or vertical layouts based on UI design.  
 - **Customizable label** allows rendering values with formatting based on application requirements.  
 - **Ticks and dividers** allows visualizing intervals clearly using major and minor tick marks.  
-- **Discrete mode** allows moving slider thumbs in fixed steps using defined intervals.  
+- **Discrete mode** allows moving Slider thumbs in fixed steps using defined intervals.  
 - **Tooltip** allows displaying selected values clearly with customizable text formatting.
 
 ## Globalization
