@@ -373,5 +373,5 @@ this.Content = barcode;
 ## Troubleshooting
 
 - **Value not rendered or appears truncated:** Verify that the `Value` is valid for the assigned `Symbology`. Some symbologies restrict the supported character set and length; for example, `Codabar` accepts only digits and the start/stop characters `A`, `B`, `C`, and `D`. Refer to the **[One-dimensional symbology](https://help.syncfusion.com/maui/barcode-generator/one-dimensional-symbology)** and **[Two-dimensional symbology](https://help.syncfusion.com/maui/barcode-generator/two-dimensional-symbology)** topics for the supported input rules.
-- **Barcode appears too small or too large:** Adjust the `Module` property on the assigned symbology, or increase the `WidthRequest` and `HeightRequest` of the `SfBarcodeGenerator`.
+- **Barcode appears too small or too large:** Adjust the `Module` property on the assigned symbology, or increase the `WidthRequest` and `HeightRequest` of the .NET MAUI Barcode Generator.
 - **Colors do not appear:** Confirm that `ForegroundColor` and `BackgroundColor` are set to contrasting colors; setting both to the same value produces a blank barcode.
