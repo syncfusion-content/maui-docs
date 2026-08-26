@@ -1,0 +1,90 @@
+---
+layout: post
+title: Segments in .NET MAUI Polar Chart | Syncfusion®
+description: ChartSegment represents an individual data point in .NET MAUI Polar Chart, enabling customized rendering and styling of chart segments.
+platform: maui
+control: SfPolarChart
+documentation: ug
+---
+
+# Segments API in .NET MAUI Polar Chart
+
+## Properties
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_AnimatedValue" aria-label="View AnimatedValue property in API reference">AnimatedValue</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Represents the segment's current animation progress and updates as the segment is animated into or updated within the chart.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Fill" aria-label="View Fill property in API reference">Fill</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Controls the brush used to render the interior of the chart segment.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Index" aria-label="View Index property in API reference">Index</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View int type in API reference">int</a></td>
+    <td>Identifies the position of the data point represented by the segment within the series data collection.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Item" aria-label="View Item property in API reference">Item</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+    <td>Provides access to the underlying data object represented by the segment.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Opacity" aria-label="View Opacity property in API reference">Opacity</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Controls the transparency of the segment, where lower values make the segment appear more transparent.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Series" aria-label="View Series property in API reference">Series</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+    <td>Provides the chart series that owns and renders the segment.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Controls the brush used to draw the segment outline.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeDashArray" aria-label="View StrokeDashArray property in API reference">StrokeDashArray</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.doublecollection" aria-label="View DoubleCollection type in API reference">DoubleCollection</a></td>
+    <td>Defines a dash pattern for the segment outline, allowing the border to be rendered with dashed or dotted strokes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeWidth" aria-label="View StrokeWidth property in API reference">StrokeWidth</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Controls the thickness of the segment outline.</td>
+</tr>
+</table>
+
+## Events
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_PropertyChanged" aria-label="View PropertyChanged event in API reference">PropertyChanged</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler" aria-label="View PropertyChangedEventHandler type in API reference">PropertyChangedEventHandler</a></td>
+    <td>Triggered when a segment property changes, allowing updates that depend on the segment's current state, appearance, or animation progress.</td>
+</tr>
+</table>
