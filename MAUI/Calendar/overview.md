@@ -7,349 +7,343 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Properties in .NET MAUI Calendar control
+# About Syncfusion® .NET MAUI Calendar Control
 
-## Properties
+Syncfusion<sup>&reg;</sup> [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) is a calendar control that allows users to select a Single date, Multiple dates, or a Range of dates. It provides various view options such as a Month, Year, Decade, and Century, which allow users to quickly navigate to the desired date. It also supports minimum dates, maximum dates, enable past dates, and disabled dates to restrict the date selection.
+
+## Business use cases
+
+- Booking and reservation applications that require date selection and scheduling workflows.  
+- Business applications that depend on date-based filtering and data analysis.  
+- Event management systems that require navigation across months, years, and custom date ranges.  
+- Form-based applications that need single, multiple, or range date selection inputs.  
+
+## Key features
+
+- **Multiple calendar view modes** allow switching between Month, Year, Decade, and Century views for easy navigation.
+
+   ![Multiple views in .NET MAUI Calendar.](images/overview/maui-multiple-views.png)
+
+- **Quick navigation** enables moving across different date levels efficiently using hierarchical calendar views.
+
+- **Enable and disable built-in view switching** allows enabling or restricting navigation between calendar views based on interaction.
+
+   ![Single selection in .NET MAUI Calendar.](images/overview/maui-single-selection.png)
+
+- **Date selection** support selecting single, multiple, range, or multiple range of dates programmatically or through user interaction.
+
+   ![Selection Modes in .NET MAUI Calendar.](images/overview/maui-selection-modes.png)
+
+- **Limit date selection** allows limiting selectable dates using minimum and maximum range values.
+
+   ![Limit date selection in .NET MAUI Calendar.](images/overview/maui-min-max-date.png)
+
+- **Change first day of week** allows setting the starting day of the week based on regional or application requirements.
+
+   ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.png)
+
+- **Selectable day predicate** allows disabling specific dates such as weekends or holidays to control user interaction.
+
+   ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.png)
+
+- **Highlight weekends and special dates** enables highlighting weekends and special dates using custom styles and colors.
+
+   ![Weekend days highlighted in .NET MAUI Calendar.](images/overview/maui-weekends-dates.png)
+
+   ![Special dates highlighted in .NET MAUI Calendar.](images/overview/maui-special-dates.png)
+
+- **Right to left (RTL)** allows adapting the layout for RTL languages such as Arabic and Hebrew.
+
+   ![Right-to-left rendering in .NET MAUI Calendar.](images/overview/maui-rtl.png)
+
+- **Globalization** ensure that date and time values are displayed based on regional and cultural settings.
+
+   ![Globalization for month view in .NET MAUI Calendar.](images/overview/maui-month-view-globalization.png)
+
+## Globalization
+
+The following table summarizes the globalization support available in this control.
+
+<style>
+.img{
+  margin:0 !important;
+}
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
+</style>
+
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+</div>
 
 <table>
-<tr valign="top">
-    <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
 </tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AcceptCommand" aria-label="View AcceptCommand property in API reference">AcceptCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when the user confirms the current selection through the action button. Use together with <code>ShowActionButtons</code> to defer selection-related actions until the user explicitly accepts them.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation" aria-label="View AllowViewNavigation property in API reference">AllowViewNavigation</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Controls whether tapping items in Year, Decade, and Century views drills down to the next view level. When disabled, those cells can be selected instead of navigating.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CanToggleDaySelection" aria-label="View CanToggleDaySelection property in API reference">CanToggleDaySelection</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Allows the currently selected date to be cleared by tapping it again in Single selection mode. The default value is false. Applicable only when <code>SelectionMode</code> is <c>Single</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
-    <td>Rounds the corners of the calendar container. The default value is 20.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DeclineCommand" aria-label="View DeclineCommand property in API reference">DeclineCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when the user cancels the current operation through the action button. Use together with <code>ShowActionButtons</code> to handle cancel actions.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate" aria-label="View DisplayDate property in API reference">DisplayDate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a></td>
-    <td>Navigates the calendar to a specific date programmatically and updates the visible date range. Navigation is constrained by <code>MinimumDate</code> and <code>MaximumDate</code>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTappedCommand" aria-label="View DoubleTappedCommand property in API reference">DoubleTappedCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when a date cell is double-tapped. The default value is null.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Applies the Liquid Glass visual effect to the calendar when supported by the platform and hosting environment. Platform requirements should be verified against the Liquid Glass feature documentation.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates" aria-label="View EnablePastDates property in API reference">EnablePastDates</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Prevents users from selecting dates that occur before the current day. The default value is true.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection" aria-label="View EnableSwipeSelection property in API reference">EnableSwipeSelection</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Enables drag or swipe gestures to select a date range in Range selection mode. The default value is false. Applicable only when <code>SelectionMode</code> is <c>Range</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EndRangeSelectionBackground" aria-label="View EndRangeSelectionBackground property in API reference">EndRangeSelectionBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Defines the visual highlight applied to the ending date of a selected range. Applicable only when <code>SelectionMode</code> is <c>Range</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_FooterView" aria-label="View FooterView property in API reference">FooterView</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarFooterView.html" aria-label="View CalendarFooterView type in API reference">CalendarFooterView</a></td>
-    <td>Customizes the footer displayed below the calendar views.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderTemplate" aria-label="View HeaderTemplate property in API reference">HeaderTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-    <td>Replaces the built-in header with a custom template for Month, Year, Decade, and Century views. For default view customization, use <code>HeaderView</code>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderView" aria-label="View HeaderView property in API reference">HeaderView</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html" aria-label="View CalendarHeaderView type in API reference">CalendarHeaderView</a></td>
-    <td>Customizes the appearance and behavior of the built-in header across calendar views.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Identifier" aria-label="View Identifier property in API reference">Identifier</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarIdentifier.html" aria-label="View CalendarIdentifier type in API reference">CalendarIdentifier</a></td>
-    <td>Chooses the calendar system used to display and interpret dates, such as Gregorian or Hijri. The default value is Gregorian. <code>FlowDirection</code> is updated based on this value; set <code>FlowDirection</code> after <code>Identifier</code> to override.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_IsOpen" aria-label="View IsOpen property in API reference">IsOpen</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Controls whether the calendar popup is currently displayed when the calendar is used in a popup-based mode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressedCommand" aria-label="View LongPressedCommand property in API reference">LongPressedCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when a date cell is long-pressed. The default value is null.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate" aria-label="View MaximumDate property in API reference">MaximumDate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a></td>
-    <td>Limits navigation and selection to dates on or before the specified date. Dates beyond this range remain unavailable.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate" aria-label="View MinimumDate property in API reference">MinimumDate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a></td>
-    <td>Limits navigation and selection to dates on or after the specified date. Dates before this range remain unavailable.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Mode" aria-label="View Mode property in API reference">Mode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html" aria-label="View CalendarMode type in API reference">CalendarMode</a></td>
-    <td>Determines whether the calendar is displayed inline or shown as a popup relative to a target view.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthView" aria-label="View MonthView property in API reference">MonthView</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html" aria-label="View CalendarMonthView type in API reference">CalendarMonthView</a></td>
-    <td>Configures month-view-specific features such as special dates, week numbers, weekend appearance, and date-cell styling.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate" aria-label="View MonthViewHeaderTemplate property in API reference">MonthViewHeaderTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-    <td>Replaces the built-in month-view header row with a custom template. For default view customization, use <code>CalendarMonthHeaderView</code> from <code>MonthView</code>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigateToAdjacentMonth" aria-label="View NavigateToAdjacentMonth property in API reference">NavigateToAdjacentMonth</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Controls whether tapping leading or trailing dates automatically navigates to the corresponding adjacent month. The default value is true. Applicable only in month view.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigationDirection" aria-label="View NavigationDirection property in API reference">NavigationDirection</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarNavigationDirection.html" aria-label="View CalendarNavigationDirection type in API reference">CalendarNavigationDirection</a></td>
-    <td>Controls whether users navigate through dates vertically or horizontally. The default value is <c>Vertical</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight" aria-label="View PopupHeight property in API reference">PopupHeight</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Specifies the height of the calendar popup when displayed in a popup-based mode. The default height is the sum of header, month-view header, and footer heights.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth" aria-label="View PopupWidth property in API reference">PopupWidth</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Specifies the width of the calendar popup when displayed in a popup-based mode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RangeSelectionDirection" aria-label="View RangeSelectionDirection property in API reference">RangeSelectionDirection</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarRangeSelectionDirection.html" aria-label="View CalendarRangeSelectionDirection type in API reference">CalendarRangeSelectionDirection</a></td>
-    <td>Controls how date ranges are extended and interpreted during range selection. See <code>CalendarRangeSelectionDirection</code> for supported options. The default value is <c>Default</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativePosition" aria-label="View RelativePosition property in API reference">RelativePosition</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarRelativePosition.html" aria-label="View CalendarRelativePosition type in API reference">CalendarRelativePosition</a></td>
-    <td>Defines where the popup appears relative to <code>RelativeView</code> when using relative dialog mode. Applicable only for relative dialog mode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RelativeView" aria-label="View RelativeView property in API reference">RelativeView</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
-    <td>Specifies the view used as the reference element for positioning the calendar popup in relative dialog mode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate" aria-label="View SelectableDayPredicate property in API reference">SelectableDayPredicate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.func-2" aria-label="View Func type in API reference">Func&lt;<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime</a>, <a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool&gt;</a></a></td>
-    <td>Applies custom logic to determine which dates can be selected. Dates that do not satisfy the predicate remain unavailable for selection.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDate" aria-label="View SelectedDate property in API reference">SelectedDate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.nullable" aria-label="View Nullable type in API reference">Nullable&lt;<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime&gt;</a></a></td>
-    <td>Represents the currently selected date in Single selection mode. In Year, Decade, and Century views, selection is possible only when <code>AllowViewNavigation</code> is disabled.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDateRange" aria-label="View SelectedDateRange property in API reference">SelectedDateRange</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDateRange.html" aria-label="View CalendarDateRange type in API reference">CalendarDateRange</a></td>
-    <td>Represents the currently selected date range in Range selection mode. The range must have a valid start and end sequence.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDateRanges" aria-label="View SelectedDateRanges property in API reference">SelectedDateRanges</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDateRange.html" aria-label="View CalendarDateRange type in API reference">CalendarDateRange&gt;</a></a></td>
-    <td>Represents multiple selected date ranges when the calendar is configured to support multi-range selection.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDates" aria-label="View SelectedDates property in API reference">SelectedDates</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://learn.microsoft.com/dotnet/api/system.datetime" aria-label="View DateTime type in API reference">DateTime&gt;</a></a></td>
-    <td>Represents the collection of selected dates in Multiple selection mode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionBackground" aria-label="View SelectionBackground property in API reference">SelectionBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Defines the highlight applied to selected dates. In Range mode, the same brush is used for the dates between the range start and end. The default value is null; when null, the default accent (<c>#6200EE</c>) is used.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionCellTemplate" aria-label="View SelectionCellTemplate property in API reference">SelectionCellTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-    <td>Replaces the default appearance of selected cells with a custom template.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChangedCommand" aria-label="View SelectionChangedCommand property in API reference">SelectionChangedCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes whenever the calendar selection changes.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode" aria-label="View SelectionMode property in API reference">SelectionMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionMode.html" aria-label="View CalendarSelectionMode type in API reference">CalendarSelectionMode</a></td>
-    <td>Determines whether users can select a single date, multiple dates, or a date range. Supported values are <code>Single</code>, <code>Multiple</code>, and Range.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionShape" aria-label="View SelectionShape property in API reference">SelectionShape</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionShape.html" aria-label="View CalendarSelectionShape type in API reference">CalendarSelectionShape</a></td>
-    <td>Controls the shape used to highlight selected dates. The default value is <c>Circle</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowActionButtons" aria-label="View ShowActionButtons property in API reference">ShowActionButtons</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays confirm and cancel buttons that allow users to accept or discard pending selections. The default value is false.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowOutOfRangeDates" aria-label="View ShowOutOfRangeDates property in API reference">ShowOutOfRangeDates</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Controls whether dates outside the <code>MinimumDate</code> and <code>MaximumDate</code> limits remain visible in the calendar.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTodayButton" aria-label="View ShowTodayButton property in API reference">ShowTodayButton</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays a button that navigates the calendar to the current date. The default value is false.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates" aria-label="View ShowTrailingAndLeadingDates property in API reference">ShowTrailingAndLeadingDates</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Controls whether dates from adjacent periods are shown in Month, Decade, and Century views. This setting does not apply to Year view. The default value is true.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_StartRangeSelectionBackground" aria-label="View StartRangeSelectionBackground property in API reference">StartRangeSelectionBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Defines the visual highlight applied to the starting date of a selected range. The default value is <c>#6200EE</c> (blue). Applicable only when <code>SelectionMode</code> is <c>Range</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TappedCommand" aria-label="View TappedCommand property in API reference">TappedCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when a date cell is tapped. The default value is null.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TodayHighlightBrush" aria-label="View TodayHighlightBrush property in API reference">TodayHighlightBrush</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Defines the visual highlight used to identify the current date. The default value is <c>#6200EE</c> (blue). This value is applied to month view header text when the dates include today and the value is not transparent.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View" aria-label="View View property in API reference">View</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html" aria-label="View CalendarView type in API reference">CalendarView</a></td>
-    <td>Selects the active calendar view. Supported views are Month, Year, Decade, and Century. The default value is <c>Month</c>.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand" aria-label="View ViewChangedCommand property in API reference">ViewChangedCommand</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-    <td>Executes when the active view changes or when the visible date range is updated through navigation. The default value is null.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_YearView" aria-label="View YearView property in API reference">YearView</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html" aria-label="View CalendarYearView type in API reference">CalendarYearView</a></td>
-    <td>Configures the appearance and behavior of the Year, Decade, and Century views.</td>
+<tr>
+<td><a href="/maui/calendar/overview" aria-label="MAUI Calendar overview">Calendar</a></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr>
 </table>
 
-## Methods
+## Related controls
 
-<table>
-<tr valign="top">
-    <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward" aria-label="View Backward method in API reference">Backward()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-    <td>Navigates to the previous date interval in the current calendar view, such as the previous month, year, decade, or century. If navigation beyond MinimumDate is not allowed, the visible dates remain unchanged.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward" aria-label="View Forward method in API reference">Forward()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-    <td>Navigates to the next date interval in the current calendar view, such as the next month, year, decade, or century. If navigation beyond MaximumDate is not allowed, the visible dates remain unchanged.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_UpdateSpecialDayPredicate" aria-label="View UpdateSpecialDayPredicate method in API reference">UpdateSpecialDayPredicate()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-    <td>Refreshes the special-date indicators in the month view after the <code>SpecialDayPredicate</code> logic changes, ensuring the visible date cells reflect the updated special-day state.</td>
-</tr>
-</table>
+- [Date Picker](https://help.syncfusion.com/maui/datepicker/overview) for selecting and handling single date input scenarios.  
+- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing appointments and scheduling workflows.  
+- [Date Time Picker](https://help.syncfusion.com/maui/datetimepicker/overview) for selecting combined date and time values.
 
-## Events
+## See Also
 
-<table>
-<tr valign="top">
-    <th>Name</th>
-    <th>Event args</th>
-    <th>Description</th>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ActionButtonCanceled" aria-label="View ActionButtonCanceled event in API reference">ActionButtonCanceled</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-    <td>Triggered when the user taps the cancel button. Any unconfirmed date or range selections are reverted to the last confirmed selection.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ActionButtonClicked" aria-label="View ActionButtonClicked event in API reference">ActionButtonClicked</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSubmittedEventArgs.html" aria-label="View CalendarSubmittedEventArgs type in API reference">CalendarSubmittedEventArgs&gt;</a></a></td>
-    <td>Triggered when the user taps the confirm button to accept the current date or range selection. Use this event to commit selection-dependent actions when ShowActionButtons is enabled.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CalendarPopupClosed" aria-label="View CalendarPopupClosed event in API reference">CalendarPopupClosed</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-    <td>Triggered after the calendar popup has been closed.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CalendarPopupClosing" aria-label="View CalendarPopupClosing event in API reference">CalendarPopupClosing</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs" aria-label="View CancelEventArgs type in API reference">CancelEventArgs&gt;</a></a></td>
-    <td>Triggered before the calendar popup closes, allowing the close operation to be canceled.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CalendarPopupOpened" aria-label="View CalendarPopupOpened event in API reference">CalendarPopupOpened</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-    <td>Triggered after the calendar popup becomes visible.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CalendarPopupOpening" aria-label="View CalendarPopupOpening event in API reference">CalendarPopupOpening</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs" aria-label="View CancelEventArgs type in API reference">CancelEventArgs&gt;</a></a></td>
-    <td>Triggered before the calendar popup opens, allowing the open operation to be canceled.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped" aria-label="View DoubleTapped event in API reference">DoubleTapped</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html" aria-label="View CalendarDoubleTappedEventArgs type in API reference">CalendarDoubleTappedEventArgs&gt;</a></a></td>
-    <td>Triggered when a date cell is double-tapped. Use this event to provide secondary interactions for a date without affecting the primary tap behavior.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed" aria-label="View LongPressed event in API reference">LongPressed</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html" aria-label="View CalendarLongPressedEventArgs type in API reference">CalendarLongPressedEventArgs&gt;</a></a></td>
-    <td>Triggered when a date cell is pressed and held. Commonly used to display context actions or additional information for a date.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html" aria-label="View CalendarSelectionChangedEventArgs type in API reference">CalendarSelectionChangedEventArgs&gt;</a></a></td>
-    <td>Triggered when the selected date, selected dates, or selected range changes, depending on the active SelectionMode.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped" aria-label="View Tapped event in API reference">Tapped</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html" aria-label="View CalendarTappedEventArgs type in API reference">CalendarTappedEventArgs&gt;</a></a></td>
-    <td>Triggered when a date cell is tapped. This event provides access to the interacted date and can be used to handle custom date-selection behavior.</td>
-</tr>
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChanged" aria-label="View ViewChanged event in API reference">ViewChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html" aria-label="View CalendarViewChangedEventArgs type in API reference">CalendarViewChangedEventArgs&gt;</a></a></td>
-    <td>Triggered when the active calendar view changes or when navigation updates the currently visible date range.</td>
-</tr>
-</table>
+- [Getting Started](https://help.syncfusion.com/maui/calendar/getting-started) shows how to begin using the Calendar control step by step.  
+- [Selection modes](https://help.syncfusion.com/maui/calendar/selections) explain different date selection behaviors.  
+- [Customization](https://help.syncfusion.com/maui/calendar/customizations) shows how to modify appearance and interaction settings. 
+- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
+
+## Resources
+
+<style>
+
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(33.33% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
+   }
+}
+@font-face {
+    font-family: 'Toolkit Icons';
+    src: url(data:application/x-font-ttf;base64,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HwcPBisCLwU9AT8FJTMfBh0BDwUrAi8GPwYnMx8HDwYrAi8GPwYnMx8HDwYrAi8GPwYnFR8OMyEzPw41JSMPDhUhNS8OKwEVDwcvBzUjFQ8HLwc1Nx8HFTM1PwcfBxUzHw8RFQ8OIS8PETU/DjM1PwYCfiAGBgUFBAMBAQEBAwQFBQYGIAYGBgQEAwIBAQIDBAQGBpggBgYGBAQDAgEBAgMEBAYGBiAGBgUFBAMBAQEBAwQFBQaXHwcGBQUEAwEBAQEDBAUFBgcfBgYGBAQDAgIDBAQGBgFhHwYGBgQEAwICAwQEBgYGHwcGBQUEAwEBAQEDBAUFBpcgBgYFBQQDAQEBAQMEBQUGBiAGBgYEBAMCAQECAwQEBgaYIAYGBgQEAwIBAQIDBAQGBgYgBgYFBQQDAQEBAQMEBQUGeAEBAwMEBQUGBwcICAkJCQoBegoJCQkICAcHBgUFBAMDAQH+JwoJCQkICAcHBgUFBAMDAQECOAEBAwMEBQUGBwcICAkJCQofAQIDBAQGBgYGBgYEBAMCAbwBAgMEBAYGBgYGBgQEAwIBIAYGBgQEAwIBvAECAwQEBgYGBgYGBAQDAgEfEBAPDg4NDAsLCQcHBQQCAQMEBQcHCQsLDA0ODg8IEP5+EBAPDg4NDAsLCQcHBQQCAQMEBQcHCQsLDA0ODg8IECcBAgMEBAYGAWMBAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAgEBAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAgEBAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAn8BAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAgEBAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAgEBAgMEBAYGBgYGBgQEAwICAwQEBgYGBgYGBAQDAkD8CgoJCAkHCAYGBgUEAwICAgIDBAUGBgYIBwkICQoK/NwCAgMEBQYGBggHCQgJCglAQAkKCQgJBwgGBgYFBAMCAiAGBgUFBAMBAQEBAwQFBQYGICAGBgUFBAMBAQEBAwQFBQYGIH4BAQMEBQUGBx8fBwYFBQQDAQEBAQMEBQUGBx8BAgQFBwgJCgsMDQ4PDwgP/n4RDw8PDg0MCwoJCAcFBAECAQIEBQcICQoLDA0ODw8IDwGDEA8PDw4NDAsKCQgHBQQBAh8H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YwBvAG0AAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAQIBAwEEAQUBBgEHAQgBCQEKAQsBDAENAQ4BDwEQAREBEgETARQBFQEWARcBGAEZARoBGwEcAR0BHgEfASABIQEiASMBJAElASYBJwEoASkBKgErAAlhY2NvcmRpb24GYnV0dG9uDGJvdHRvbS1zaGVldAljYWxlbmRhcnMFY2FyZHMIY2Fyb3VzZWwPY2FydGVzaWFuLWNoYXJ0BWNoaXBzDmNpcmN1bGFyLWNoYXJ0FGNpcmN1bGFyLXByb2dyZXNzYmFyC2RhdGUtcGlja2VyEGRhdGUtdGltZS1waWNrZXIMZWZmZWN0cy12aWV3CGV4cGFuZGVyDGZ1bm5lbC1jaGFydBNsaW5lYXItcHJvZ3Jlc3MtYmFyEW5hdmlnYXRpb24tZHJhd2VyDW51bWVyaWMtZW50cnkObnVtZXJpYy11cGRvd24Jb3RwLWlucHV0BnBpY2tlcgtwb2xhci1jaGFydAVwb3B1cAxwdWxsLXJlZnJlc2gNcHlyYW1pZC1jaGFydBBzZWdtZW50ZWQtYnV0dG9uB3NoaW1tZXILc3BhcmstY2hhcnQOc3VuYnVyc3QtY2hhcnQEdGFicwp0ZXh0LWlucHV0C3RpbWUtcGlja2VyCWFpLXN5bWJvbAthcnJvdy1yaWdodAhzaG93Y2FzZQVibG9ncwZ2aWRlb3MNa25vd2xlZGdlYmFzZQhmZWVkYmFjawdzdXBwb3J0DnVzZWNhc2Utc2FtcGxlAAAAAAA=) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.card-icon {
+  font-family: 'Toolkit Icons' !important;
+  font-size: 20px;
+  line-height: 1;
+  display: inline-block;
+  font-style: normal;
+}
+
+.card-ai:before { content: "\e720"; }
+.card-arrow:before { content: "\e721"; }
+.card-showcase:before { content: "\e722"; }
+.card-blogs:before { content: "\e723"; }
+.card-videos:before { content: "\e724"; }
+.card-knowledge-base:before { content: "\e725"; }
+.card-feedback:before { content: "\e726"; }
+.card-support:before { content: "\e727"; }
+.card-use:before { content: "\e728"; }
+
+.form-card {
+  flex: 0 0 calc(33.33% - 14px);
+  max-width: calc(33.33% - 14px);
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #E6E6E6;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  color: inherit;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #EAF3FF;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon {
+  font-family: 'Toolkit Icons' !important;
+  font-size: 16px;
+  line-height: 1;
+  color: #0A76FF;
+}
+
+.form-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 !important;
+  color: #2d2d2d;
+}
+
+.form-description {
+  font-size: 14px;
+  margin: 0;
+  min-height: 60px;
+  color: #50565F;
+  line-height: 1.5;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-header .form-title {
+  margin-top: 0 !important;
+  line-height: 1.2;
+}
+
+.explore-link {
+  margin-top: auto;
+  color: #0A76FF;
+  font-size: 12;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.explore-link .card-icon {
+  font-size: 16px;
+}
+
+</style>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+<div class="card-header">
+    <div class="icon-circle">
+        <span class="card-icon card-ai"></span>
+    </div>
+    <h3 class="form-title">Feature Tour</h3>
+</div>
+<div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
+<a href="https://www.syncfusion.com/maui-controls/maui-calendar" class="explore-link">
+Explore Features
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 2 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-showcase"></span>
+  </div>
+    <h3 class="form-title">Demos</h3>
+</div>
+    <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Calendar" class="explore-link">
+    View Demos
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 3 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-videos"></span>
+    </div>
+    <h3 class="form-title">Tutorial Videos</h3>
+</div>
+    <div class="form-description">
+      Watch step‑by‑step video guides to quickly understand concepts and implementation.
+    </div>
+    <a href="https://www.syncfusion.com/tutorial-videos/maui/calendar" class="explore-link">
+    Watch now
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 4 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+   <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-knowledge-base"></span>
+    </div>
+    <h3 class="form-title">Knowledge Base</h3>
+</div>
+    <div class="form-description">
+       Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
+    </div>
+    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1219" class="explore-link">
+Search KB's
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 5 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+   <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-blogs"></span>
+    </div>
+    <h3 class="form-title">Blogs</h3>
+</div>
+    <div class="form-description">
+      Discover in‑depth articles, use cases and expert insights from our developers.
+    </div>
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
+Read Blogs
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+<!-- Card 6 -->
+<div class="form-card" target="_blank">
+  <div class="form-content">
+  <div class="card-header">
+    <div class="icon-circle">
+    <span class="card-icon card-use"></span>
+    </div>
+    <h3 class="form-title">Use Case Sample</h3>
+</div>
+    <div class="form-description">
+      Explore a real-world application that demonstrates the practical use of the Calendar.
+    </div>
+    <a href="https://github.com/syncfusion/maui-fitness-tracker" class="explore-link">
+    View Sample
+  <span class="card-icon card-arrow"></span>
+</a>
+  </div>
+</div>
+</div>
