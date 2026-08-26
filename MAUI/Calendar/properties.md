@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Properties in .NET MAUI Calendar control
+# API Properties in .NET MAUI Calendar control
 
 ## Properties
 
