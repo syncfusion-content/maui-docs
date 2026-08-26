@@ -57,7 +57,7 @@ documentation: ug
 		<td>
 			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html" aria-label="View SliderDragBehavior type in API reference">SliderDragBehavior</a>
 		</td>
-		<td>Controls how the start and end thumbs can be dragged. Values include <code>Free</code> and <code>BetweenThumbs</code>
+		<td>Controls how the start and end thumbs can be dragged. Values include <code>Free</code> and <code>BetweenThumbs</code>.
 		</td>
 	</tr>
 	<tr valign="top">		
