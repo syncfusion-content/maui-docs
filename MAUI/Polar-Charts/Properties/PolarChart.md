@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the SfPolarChart control and its ChartBase base class available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: Polar Chart visualizes data using polar coordinates, making it easy to compare values across angles and radial distances.
 platform: maui
 control: SfPolarChart
 documentation: ug

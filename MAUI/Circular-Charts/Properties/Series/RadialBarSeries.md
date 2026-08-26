@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RadialBarSeries in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the CircularSeries base class and its radial bar series available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: RadialBarSeries visualizes values as circular bars in .NET MAUI Circular Chart, helping compare progress and performance metrics.
 platform: maui
 control: SfCircularChart
 documentation: ug

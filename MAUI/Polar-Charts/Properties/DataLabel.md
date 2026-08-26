@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of polar data label settings and their base classes available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+title: DataLabel API in .NET MAUI Polar Chart | Syncfusion®
+description: Polar data labels display values and category information in .NET MAUI Polar Chart, improving data readability and presentation.
 platform: maui
 control: SfPolarChart
 documentation: ug

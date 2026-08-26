@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PieSegment in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the segment classes that render individual data points in a circular chart available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: PieSegment represents an individual slice in a .NET MAUI Circular Chart, enabling customized rendering and styling of data points.
 platform: maui
 control: SfCircularChart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Sunburst Chart | Syncfusion®
-description: This section lists the public API members of the SunburstSelectionChangedEventArgs and SunburstSelectionChangingEventArgs classes available in the Syncfusion® .NET MAUI Sunburst Chart API.
+description: Chart events in .NET MAUI Sunburst Chart let you respond to selection changes and user interactions for customized behavior.
 platform: maui
 control: SfSunburstChart
 documentation: ug

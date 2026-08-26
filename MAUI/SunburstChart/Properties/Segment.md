@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segments and hierarchy in .NET MAUI Sunburst Chart | Syncfusion®
-description: This section lists the public API members of the SunburstSegment class and the SunburstHierarchicalLevel class available in the Syncfusion® .NET MAUI Sunburst Chart API.
+description: SunburstSegment represents an individual hierarchy segment in .NET MAUI Sunburst Chart, supporting custom rendering and styling.
 platform: maui
 control: SfSunburstChart
 documentation: ug

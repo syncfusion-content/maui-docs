@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DoughnutSeries in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the CircularSeries base class and its doughnut series available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: DoughnutSeries displays data as proportional segments in a circular ring, making part-to-whole comparisons easy to understand.
 platform: maui
 control: SfCircularChart
 documentation: ug

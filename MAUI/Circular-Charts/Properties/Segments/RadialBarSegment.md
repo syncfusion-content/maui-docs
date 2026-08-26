@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RadialBarSegment in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the segment classes that render individual data points in a circular chart available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: RadialBarSegment represents a single data point in a .NET MAUI Circular Chart, allowing customized radial bar rendering and styling.
 platform: maui
 control: SfCircularChart
 documentation: ug

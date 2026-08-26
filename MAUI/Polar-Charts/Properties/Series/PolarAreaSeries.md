@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PolarAreaSeries in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the PolarSeries base class and the polar area series available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: PolarAreaSeries displays data as filled regions in a polar coordinate system, helping visualize trends and value distribution.
 platform: maui
 control: SfPolarChart
 documentation: ug

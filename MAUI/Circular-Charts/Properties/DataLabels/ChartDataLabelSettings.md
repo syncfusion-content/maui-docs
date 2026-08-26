@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data labels in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of circular data label settings and their base classes available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: ChartDataLabelSettings provides options to customize the appearance, placement, and visibility of data labels in .NET MAUI Circular Chart.
 platform: maui
 control: SfCircularChart
 documentation: ug

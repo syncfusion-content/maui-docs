@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the SfCircularChart control and its ChartBase base class available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: Create interactive circular charts in .NET MAUI to visualize proportional data with customizable appearance, layout, and behavior.
 platform: maui
 control: SfCircularChart
 documentation: ug

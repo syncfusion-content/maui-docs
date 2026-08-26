@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PolarLineSeries in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the PolarSeries base class and polar line series available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: PolarLineSeries connects data points with lines in a polar coordinate system, making patterns and trends easy to visualize.
 platform: maui
 control: SfPolarChart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend and styles in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the chart legend, legend label style, marker settings, and shared helper types available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: Customize legends, labels, markers, and related styles in .NET MAUI Polar Chart to improve chart readability and visual appearance.
 platform: maui
 control: SfPolarChart
 documentation: ug

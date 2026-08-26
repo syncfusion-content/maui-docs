@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in .NET MAUI Sunburst Chart | Syncfusion®
-description: This section lists the public API members of the SunburstLegend classes available in the Syncfusion® .NET MAUI Sunburst Chart API.
+title: ChartLegend in .NET MAUI Sunburst Chart | Syncfusion®
+description: Customize legends, labels, and related styles in .NET MAUI Sunburst Chart to improve data interpretation and readability.
 platform: maui
 control: SfSunburstChart
 documentation: ug

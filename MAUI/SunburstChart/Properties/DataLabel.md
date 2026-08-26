@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data labels in .NET MAUI Sunburst Chart | Syncfusion®
-description: This section lists the public API members of the SunburstDataLabelSettings class available in the Syncfusion® .NET MAUI Sunburst Chart API.
+title: DataLabel in .NET MAUI Sunburst Chart | Syncfusion®
+description: Configure and customize data labels in .NET MAUI Sunburst Chart to display hierarchical values with enhanced clarity.
 platform: maui
 control: SfSunburstChart
 documentation: ug

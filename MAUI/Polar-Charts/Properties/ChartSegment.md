@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segments in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the segment classes that render individual data points in a polar chart available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: ChartSegment represents an individual data point in .NET MAUI Polar Chart, enabling customized rendering and styling of chart segments.
 platform: maui
 control: SfPolarChart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend and styles in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the chart legend, legend label style, connector line style, and shared helper types available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+title: Legend in .NET MAUI Circular Chart | Syncfusion®
+description: Customize legends, labels, and connector line styles in .NET MAUI Circular Chart to improve chart readability and visual presentation.
 platform: maui
 control: SfCircularChart
 documentation: ug
