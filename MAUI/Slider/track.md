@@ -153,7 +153,7 @@ SfSlider slider = new SfSlider()
 
 ## Disabled track
 
-Change the state of the Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the Slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 

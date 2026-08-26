@@ -57,7 +57,7 @@ documentation: ug
 		<td>
 			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html" aria-label="View SliderDragBehavior type in API reference">SliderDragBehavior</a>
 		</td>
-		<td>Controls how the start and end thumbs can be dragged. Values include <code>Free</code> and <code>BetweenThumbs</code>.</td>
+		<td>Controls how the start and end thumbs can be dragged. Values include <code>Free</code> and <code>BetweenThumbs</code>.
 		</td>
 	</tr>
 	<tr valign="top">		
@@ -360,7 +360,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanged" aria-label="View ValueChanged event in API reference">ValueChanged</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangedEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangedEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangedEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangedEventArgs&gt;</a></a>
 		</td>
 		<td>Triggered after the selected date or time range changes and the current range-selection operation is completed.</td>
 	</tr>
@@ -369,7 +369,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanging" aria-label="View ValueChanging event in API reference">ValueChanging</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangingEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangingEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangingEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View DateTimeRangeSelectorValueChangingEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSelectorValueChangingEventArgs.html" aria-label="View SliderLabelCreatedEventArgs type in API reference">DateTimeRangeSelectorValueChangingEventArgs&gt;</a></a>
 		</td>
 		<td>Triggered while a thumb is being dragged and the selected date or time range is actively changing.</td>
 	</tr>
@@ -378,7 +378,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated" aria-label="View LabelCreated event in API reference">LabelCreated</a>  <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View SliderLabelCreatedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated" aria-label="View SliderLabelCreatedEventArgs type in API reference">SliderLabelCreatedEventArgs&gt;</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View SliderLabelCreatedEventArgs type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated" aria-label="View SliderLabelCreatedEventArgs type in API reference">SliderLabelCreatedEventArgs&gt;</a></a>
 		</td>
 		<td>Triggered when a date or time label is generated, allowing the displayed label text to be customized.</td>
 	</tr>

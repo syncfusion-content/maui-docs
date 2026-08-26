@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in .NET MAUI Smart Text Editor
 
-The AI-Powered Text Editor provides the `TextChanged` event, which is triggered whenever the text in the smart text editor changes.
+The AI-Powered Text Editor provides the `TextChanged` event, which is triggered whenever the text in the Smart Text Editor changes.
 
 ## TextChanged
 
-The [TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_TextChanged) event is triggered whenever the text in the smart text editor changes.
+The [TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_TextChanged) event is triggered whenever the text in the Smart Text Editor changes.
 
 * `Sender`: This contains the `SfSmartTextEditor` object.
 
@@ -44,7 +44,7 @@ private void OnTextChanged(object sender, Syncfusion.Maui.SmartComponents.TextCh
 
 ### TextChangedCommand
 
-The [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html) includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the smart text editor changes. This event can be invoked through the [TextChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_TextChangedCommand).
+The [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html) includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the Smart Text Editor changes. This event can be invoked through the [TextChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_TextChangedCommand).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

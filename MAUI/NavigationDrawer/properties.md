@@ -44,6 +44,26 @@ documentation: ug
     </tr>
 </table>
 
+## Methods
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer" aria-label="View ToggleDrawer method in API reference">ToggleDrawer()</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+        <td>Opens the primary drawer when it is closed and closes it when it is open.</td>
+    </tr>
+    <tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleSecondaryDrawer" aria-label="View ToggleSecondaryDrawer method in API reference">ToggleSecondaryDrawer()</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+        <td>Opens the secondary drawer when it is closed and closes it when it is open. A <code>SecondaryDrawerSettings</code> configuration is required.</td>
+    </tr>
+</table>
+
 ## Events
 
 <table>
@@ -76,26 +96,6 @@ documentation: ug
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled" aria-label="View DrawerToggled event in API reference">DrawerToggled</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.toggledeventargs" aria-label="View ToggledEventArgs type in API reference">ToggledEventArgs&gt;</a></a></td>
         <td>Triggered when either drawer's open state changes and reports whether it is now <code>open</code> and whether the change belongs to the <code>primary drawer</code>.</td>
-    </tr>
-</table>
-
-## Methods
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer" aria-label="View ToggleDrawer method in API reference">ToggleDrawer()</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
-        <td>Opens the primary drawer when it is closed and closes it when it is open.</td>
-    </tr>
-    <tr valign="top">
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleSecondaryDrawer" aria-label="View ToggleSecondaryDrawer method in API reference">ToggleSecondaryDrawer()</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
-        <td>Opens the secondary drawer when it is closed and closes it when it is open. A <code>SecondaryDrawerSettings</code> configuration is required.</td>
     </tr>
 </table>
 
