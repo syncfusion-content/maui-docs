@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Sunburst Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Sunburst Chart (SfSunburstChart) API.
+description: Learn about the properties, methods, and events of the Syncfusion .NET MAUI SunburstChart control API reference documentation.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -23,7 +23,7 @@ The Sunburst Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-chart">Chart</a></td>
+    <td><a href="api-chart" aria-label="View Chart API reference">Chart</a></td>
     <td>
         Provides access to members of the <code>SfSunburstChart</code> control. Use this reference when configuring the
         <code>sunburst chart container</code>, including its <code>data binding input</code>
@@ -37,7 +37,7 @@ The Sunburst Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-legend">Legend</a></td>
+    <td><a href="api-legend" aria-label="View Legend API reference">Legend</a></td>
     <td>
         Lists members related to the <code>sunburst legend</code> and
         <code>toolbar styling</code>, including <code>SunburstLegend</code> and
@@ -50,7 +50,7 @@ The Sunburst Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-behavior">Behavior</a></td>
+    <td><a href="api-behavior" aria-label="View Behavior API reference">Behavior</a></td>
     <td>
         Lists members related to <code>tooltips</code> and
         <code>selection interactions</code> used by the <code>sunburst chart</code>,

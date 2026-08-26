@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Polar Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Polar Chart (SfPolarChart) API.
+description: Learn about the properties, methods, and events of the Syncfusion .NET MAUI PolarChart control API reference documentation.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -24,7 +24,7 @@ The Polar Chart API is documented across the pages below. Each page lists the pu
 </tr>
 
 <tr valign="top">
-    <td><a href="api-chart">Chart</a></td>
+    <td><a href="api-chart" aria-label="View Chart API reference">Chart</a></td>
     <td>
         Provides access to members of the <code>SfPolarChart</code> control. Use this reference when configuring the
         <code>polar chart container</code>, including <code>series collection</code>,
@@ -42,7 +42,7 @@ The Polar Chart API is documented across the pages below. Each page lists the pu
 </tr>
 
 <tr valign="top">
-    <td><a href="api-legend">Legend</a></td>
+    <td><a href="api-legend" aria-label="View Legend API reference">Legend</a></td>
     <td>
         Lists members related to the <code>chart legend</code>, <code>marker customization</code>,
         and supporting styling classes used by the polar chart, including
@@ -61,7 +61,7 @@ The Polar Chart API is documented across the pages below. Each page lists the pu
 </tr>
 
 <tr valign="top">
-    <td><a href="api-behavior">Behavior</a></td>
+    <td><a href="api-behavior" aria-label="View Behavior API reference">Behavior</a></td>
     <td>
         Lists members related to <code>tooltips</code> and
         <code>selection interactions</code> used by the polar chart,
@@ -77,7 +77,7 @@ The Polar Chart API is documented across the pages below. Each page lists the pu
 </tr>
 
 <tr valign="top">
-    <td><a href="api-series">Series</a></td>
+    <td><a href="api-series" aria-label="View Series API reference">Series</a></td>
     <td>
         Provides access to members of the <code>PolarAreaSeries</code> and related
         <code>PolarSeries</code> APIs.

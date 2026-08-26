@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: Learn about the properties, methods, and events of the Syncfusion .NET MAUI CircularChart control API reference documentation.
 platform: maui
 control: SfCircularChart
 documentation: ug
@@ -24,7 +24,7 @@ The Circular Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-chart">Chart</td>
+    <td><a href="api-chart" aria-label="View Chart API reference">Chart</td>
     <td>
         Provides access to members of the <code>SfCircularChart</code> control. Use this reference when configuring the
         <code>circular chart container</code>, including the <code>series collection</code>,
@@ -36,7 +36,7 @@ The Circular Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-legend">Legend</a></td>
+    <td><a href="api-legend" aria-label="View Legend API reference">Legend</a></td>
     <td>
         Lists members related to the <code>chart legend</code> and associated styling classes,
         including <code>ChartLegend</code> and
@@ -52,7 +52,7 @@ The Circular Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-behavior">Behavior</a></td>
+    <td><a href="api-behavior" aria-label="View Behavior API reference">Behavior</a></td>
     <td>
         Lists members related to <code>tooltips</code> and
         <code>selection interactions</code> used by the circular chart,
@@ -71,7 +71,7 @@ The Circular Chart API is documented across the pages below. Each page lists the
 </tr>
 
 <tr valign="top">
-    <td><a href="api-series">Series</a></td>
+    <td><a href="api-series" aria-label="View Series API reference">Series</a></td>
     <td>
         Provides access to members of the circular chart series types, including
         <code>DoughnutSeries</code>, <code>PieSeries</code>,
