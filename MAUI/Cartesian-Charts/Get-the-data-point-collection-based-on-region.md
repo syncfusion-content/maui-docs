@@ -35,5 +35,5 @@ N> You can get the visible plotting region of the series in the chart using the 
 
 ## See also
 
-* [How to highlight selected data points by using GetDataPoints method in .NET MAUI Cartesian Charts](https://support.syncfusion.com/kb/article/16174/how-to-highlight-selected-data-points-by-using-getdatapoints-method-in-net-maui-cartesian-charts)
+* [How to highlight selected data points by using GetDataPoints method in .NET MAUI Cartesian Charts](https://support.syncfusion.com/kb/article/16174/how-to-highlight-selected-data-points-in-net-maui-cartesian-charts)
 * [Transform axis value to pixel value and vice-versa](https://help.syncfusion.com/maui/cartesian-charts/transform-axis-value-to-pixel-value-and-vice-versa)

@@ -47,7 +47,7 @@ public partial class MainPage : ContentPage
 
 ## Selection indicator placements
 
-The Segmented control provides four types of selection indicator placement: Fill, border, top, and bottom border.
+The Segmented Control provides four types of selection indicator placement: Fill, border, top, and bottom border.
 
 ### Fill
 The selection indicator will fill the selected segment, if the [SelectionIndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_SelectionIndicatorPlacement) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) is set to [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_Fill).
@@ -88,7 +88,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Fill selection in .NET MAUI Segmented control.](images/selection/fill.png)
+![Fill selection in .NET MAUI Segmented Control.](images/selection/fill.png)
 
 ### Border
 The selection indicator will be highlighted with the border of the selected segment, if the [SelectionIndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_SelectionIndicatorPlacement) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) is set to [Border](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_Border).
@@ -129,7 +129,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Border selection in .NET MAUI Segmented control.](images/selection/border.png)
+![Border selection in .NET MAUI Segmented Control.](images/selection/border.png)
 
 ### Top border
 The selection indicator will be placed at the top of the selected segment, if the [SelectionIndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_SelectionIndicatorPlacement) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) is set to [TopBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_TopBorder).
@@ -170,7 +170,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Top border selection in .NET MAUI Segmented control.](images/selection/top-border.png)
+![Top border selection in .NET MAUI Segmented Control.](images/selection/top-border.png)
 
 ### Bottom border
 The selection indicator will be placed at the bottom of the selected segment, if the [SelectionIndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_SelectionIndicatorPlacement) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) is set to [BottomBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_BottomBorder).
@@ -211,7 +211,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Bottom border selection in .NET MAUI Segmented control.](images/selection/bottom-border.png)
+![Bottom border selection in .NET MAUI Segmented Control.](images/selection/bottom-border.png)
 
 ## Selection Mode
 
@@ -294,12 +294,12 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Customize selected segment
-The selected segment of the Segmented control is customized using the [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html).
+The selected segment of the Segmented Control is customized using the [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html).
 
 ### Customize selected segment background
-You can customize the selected segment background of the segmented control and each segment item.
+You can customize the selected segment background of the Segmented Control and each segment item.
 
-#### Customize selected segment background of segmented control
+#### Customize selected segment background of Segmented Control
 Customize the selected segment background using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_Background) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings).
 
 {% tabs %}
@@ -377,7 +377,7 @@ public partial class MainPage : ContentPage
 ![Selected segment item background customization in .NET MAUI Segmented control.](images/selection/selected-item-background.gif)
 
 ### Customize selected segment text color
-You can customize the selected segment text color of the segmented control and each segment item.
+You can customize the selected segment text color of the Segmented Control and each segment item.
 
 #### Customize selected segment text color of segmented control
 Customize the selected segment text color using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorSettings.html#Syncfusion_Maui_Buttons_SelectionIndicatorSettings_TextColor) property of [SelectionIndicatorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionIndicatorSettings).
@@ -418,7 +418,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Selected segment text color customization in .NET MAUI Segmented control.](images/selection/selection-text-color.png)
+![Selected segment text color customization in .NET MAUI Segmented Control.](images/selection/selection-text-color.png)
 
 #### Customize selected segment text color of each segment item
 Customize the selected segment text color of each segment item using the [SelectedSegmentTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_SelectedSegmentTextColor) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
@@ -493,7 +493,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Selected segment border color customization in .NET MAUI Segmented control.](images/selection/border-stroke.png)
+![Selected segment border color customization in .NET MAUI Segmented Control.](images/selection/border-stroke.png)
 
 N> The `Stroke` property of `SelectionIndicatorSettings` is applicable only when the selection mode is set to [SelectionIndicatorPlacement.Border](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_Border), [SelectionIndicatorPlacement.TopBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_TopBorder), or [SelectionIndicatorPlacement.BottomBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionIndicatorPlacement.html#Syncfusion_Maui_Buttons_SelectionIndicatorPlacement_BottomBorder).
 
@@ -592,4 +592,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Enable or Disable Ripple Effect Animation in .NET MAUI Segmented control.](images/selection/enable-ripple-effect.gif)
+![Enable or Disable Ripple Effect Animation in .NET MAUI Segmented Control.](images/selection/enable-ripple-effect.gif)

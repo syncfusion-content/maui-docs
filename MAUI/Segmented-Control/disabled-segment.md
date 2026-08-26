@@ -3,7 +3,7 @@ layout: post
 title: Disabled Segmented Item in .NET MAUI Segmented Control | Syncfusion®
 description: Learn about disabling segmented items to restrict selection and interaction in the .NET MAUI Segmented Control.
 platform: maui
-control: Segmented (SfSegmented) control
+control: Segmented (SfSegmented) Control
 documentation: ug
 ---
  
@@ -43,7 +43,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled segment in .NET MAUI Segmented control.](images/disabled-segment/disabled-segment.png)
+![Disabled segment in .NET MAUI Segmented Control.](images/disabled-segment/disabled-segment.png)
 
 ### Programmatically Enable or Disable segment using Method
 Set the enabled state of a specific segment at the specified index using the [SetSegmentEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SetSegmentEnabled_System_Int32_System_Boolean_) method of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html).
@@ -112,11 +112,11 @@ public class ViewModel
 {% endtabs %}
 
 ## Customizing disabled segment item
-You can customize the disabled segment text color and background of the segmented control
+You can customize the disabled segment text color and background of the Segmented Control
 
 ### Customizing the disabled segment text color
 
-Use the [DisabledSegmentTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_DisabledSegmentTextColor) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the disabled segment text color of the segmented control.
+Use the [DisabledSegmentTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_DisabledSegmentTextColor) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the disabled segment text color of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -148,14 +148,14 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled segment text color customization in .NET MAUI Segmented control.](images/disabled-segment/disabled-segment-text-color.png)
+![Disabled segment text color customization in .NET MAUI Segmented Control.](images/disabled-segment/disabled-segment-text-color.png)
 
 
 N> The `DisabledSegmentTextColor` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
 
 ### Customizing the disabled segment background
 
-Use the [DisabledSegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_DisabledSegmentBackground) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the disabled segment background of the segmented control.
+Use the [DisabledSegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_DisabledSegmentBackground) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the disabled segment background of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -187,6 +187,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled segment background customization in .NET MAUI Segmented control.](images/disabled-segment/disabled-segment-background.png)
+![Disabled segment background customization in .NET MAUI Segmented Control.](images/disabled-segment/disabled-segment-background.png)
 
 N> The `DisabledSegmentBackground` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
