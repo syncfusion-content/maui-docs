@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI TreeMap
 
-This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add the .NET MAUI TreeMap control to your project.
+This section provides a quick overview of how to get started with the [.NET MAUI TreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add the .NET MAUI TreeMap control to your project.
 
 To get started quickly with our .NET MAUI TreeMap, you can check the below video.
 
