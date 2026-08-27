@@ -107,6 +107,7 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
     <td>Controls the <code>horizontal size</code> of the marker, measured in <code>device-independent units</code>.</td>
 </tr>
+</table>
 
 ## Events
 
