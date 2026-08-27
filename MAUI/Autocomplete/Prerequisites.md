@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prerequisites for Smart Searching in .NET MAUI Autocomplete | Syncfusion®
-description: Learn about prerequisites of smart search using Syncfusion® .NET MAUI Autocomplete control.
+title: Prerequisites for Smart Searching in Autocomplete | Syncfusion®
+description: Learn about the prerequisites for smart search using the Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug

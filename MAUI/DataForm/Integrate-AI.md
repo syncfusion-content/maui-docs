@@ -9,18 +9,18 @@ documentation: ug
 
 # Integrating Azure OpenAI with the .NET MAUI app
 
-### Step 1: Set Up the .NET MAUI Project
+## Step 1: Set Up the .NET MAUI Project
 
 - Create a new [.NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=vswin&pivots=devices-android) using [Visual Studio](https://visualstudio.microsoft.com/).
 - Add the required NuGet packages:
 `Syncfusion.Maui.DataForm`
 `Syncfusion.Maui.AIAssistView` and [`Azure.AI.OpenAI`](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12)
 
-### Step 2: Set up Azure OpenAI
+## Step 2: Set up Azure OpenAI
 
 To enable AI functionality in your .NET MAUI DataForm, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
-### Step 3: Connect to the Azure OpenAI
+## Step 3: Connect to the Azure OpenAI
 
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. 
 

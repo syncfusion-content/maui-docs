@@ -7,9 +7,9 @@ control: SfDataGrid
 documentation: ug
 ---
 
-## Integrating Azure OpenAI with the .NET MAUI App
+# Integrating Azure OpenAI with the .NET MAUI App
 
-### Step 1: Set Up Azure OpenAI Service
+## Step 1: Set Up Azure OpenAI Service
 
 First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
 
@@ -32,7 +32,7 @@ dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
 
 Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
 
-### Step 2: Create the Azure OpenAI service class
+## Step 2: Create the Azure OpenAI service class
 
 Create a helper class to manage communication with Azure OpenAI. **Important**: Store your API key securely using environment variables or Azure Key Vault, not hard coded strings.
 
@@ -65,7 +65,7 @@ internal class AzureOpenAIService
 
 {% endtabs %}
 
-### Step 3: Initialize the OpenAI Client
+## Step 3: Initialize the OpenAI Client
 
 To set up the connection to Azure OpenAI. Refer to the following code.
 
@@ -82,7 +82,7 @@ this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key))
 
 This connection allows you to send prompts to the model and **receive responses**, which can be used to generates.
 
-### Step 4: Implement the GetResultsFromAI Method
+## Step 4: Implement the GetResultsFromAI Method
 
 Implement a method to retrieve responses from the Azure OpenAI API based on user prompts.
 
