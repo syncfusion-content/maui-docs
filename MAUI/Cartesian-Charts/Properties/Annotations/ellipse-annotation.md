@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in .NET MAUI Cartesian Chart | Syncfusion®
+title: EllipseAnnotation in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members of annotations available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
 platform: maui
 control: SfCartesianChart

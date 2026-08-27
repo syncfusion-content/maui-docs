@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Properties in .NET MAUI Cartesian Chart | Syncfusion®
+title: Series in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
 platform: maui
 control: SfCartesianChart
@@ -10,8 +10,6 @@ documentation: ug
 # Series API in .NET MAUI Cartesian Chart
 
 This page lists the public properties, methods, and events of the series base classes and every Cartesian series type.
-
-## Classes on this page
 
 <table>
 <tr>
