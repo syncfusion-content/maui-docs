@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: This section lists the public API members of the series available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
 platform: maui
 control: SfCircularChart
 documentation: ug
