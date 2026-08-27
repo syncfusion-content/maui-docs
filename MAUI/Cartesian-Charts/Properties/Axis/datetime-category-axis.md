@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis in .NET MAUI Cartesian Chart | Syncfusion®
+title: DateTimeCategoryAxis in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members of chart axes, axis labels, ticks, titles, and multi-level labels available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
 platform: maui
 control: SfCartesianChart
