@@ -1,13 +1,13 @@
 ---
 layout: post
 title: ChartTrackballBehavior in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of tooltip, trackball, crosshair, zoom and pan, and selection behaviors available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# ChartTrackballBehavior API in .NET MAUI Cartesian Chart
+# ChartTrackballBehavior API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

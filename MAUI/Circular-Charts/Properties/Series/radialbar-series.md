@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RadialBarSeries in .NET MAUI Circular Chart | Syncfusion®
-description: This section lists the public API members of the CircularSeries base class and its pie, doughnut, and radial bar series available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
+description: This section lists the public API members of the radial bar series available in the Syncfusion® .NET MAUI Circular Chart (SfCircularChart) API.
 platform: maui
 control: SfCircularChart
 documentation: ug

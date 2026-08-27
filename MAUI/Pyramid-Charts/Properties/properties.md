@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Properties in .NET MAUI Pyramid Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
+description: This section lists the public API members in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# API Reference for .NET MAUI Pyramid Chart
+# API API Reference for .NET MAUI Pyramid Chart
 
 The Pyramid Chart API is documented across the pages below. Each page lists the public properties, methods, and events declared by a related group of classes.
 

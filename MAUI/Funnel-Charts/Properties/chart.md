@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Funnel Chart in .NET MAUI Funnel Chart | Syncfusion®
-description: This section lists the public API members of the SfFunnelChart control and its ChartBase base class available in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
+description: This section lists the public API members for Chart in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# Chart API in .NET MAUI Funnel Chart
+# Chart API Reference for .NET MAUI Funnel Chart
 
 ## Properties
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: ExponentialTrendline in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of trendlines and the individual trendline types available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# ExponentialTrendline API for .NET MAUI Cartesian Chart
+# ExponentialTrendline API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

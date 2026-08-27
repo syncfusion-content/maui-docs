@@ -1,13 +1,13 @@
 ---
 layout: post
 title: EllipseAnnotation in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of annotations available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# EllipseAnnotation API for .NET MAUI Cartesian Chart
+# EllipseAnnotation API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

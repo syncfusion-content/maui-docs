@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Legend in .NET MAUI Funnel Chart | Syncfusion®
-description: This section lists the public API members of the double range available in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
+description: This section lists the public API members for Legend in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# Legend API in .NET MAUI Funnel Chart
+# Legend API Reference for .NET MAUI Funnel Chart
 
 ## Properties
 

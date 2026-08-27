@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug

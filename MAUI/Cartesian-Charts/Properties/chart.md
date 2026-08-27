@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Chart in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of the SfCartesianChart control and its ChartBase base class available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Chart in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Chart API in .NET MAUI Cartesian Chart
+# Chart API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 
