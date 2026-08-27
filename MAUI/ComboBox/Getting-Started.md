@@ -173,7 +173,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
                     HeightRequest="50"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
-                    ItemsSource="{Binding SocialMedias}" />
+                    ItemsSource="{Binding SocialMedias}">
     <inputs:SfComboBox.BindingContext>
         <local:SocialMediaViewModel />
     </inputs:SfComboBox.BindingContext>
