@@ -146,7 +146,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Maximum" aria-label="View Maximum property in API reference">Maximum</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" aria-label="View Nullable type in API reference">Nullable&lt;<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" aria-label="View Nullable type in API reference">Nullable&lt;<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double&gt;</a></a></td>
     <td>Restricts the <code>maximum value</code> displayed on the numerical axis.</td>
 </tr>
 
@@ -158,7 +158,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Minimum" aria-label="View Minimum property in API reference">Minimum</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" aria-label="View Nullable type in API reference">Nullable&lt;<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" aria-label="View Nullable type in API reference">Nullable&lt;<a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double&gt;</a></a></td>
     <td>Restricts the <code>minimum value</code> displayed on the numerical axis.</td>
 </tr>
 
@@ -182,7 +182,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MultiLevelLabels" aria-label="View MultiLevelLabels property in API reference">MultiLevelLabels</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html" aria-label="View ChartMultiLevelLabel type in API reference">ChartMultiLevelLabel</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMultiLevelLabel.html" aria-label="View ChartMultiLevelLabel type in API reference">ChartMultiLevelLabel&gt;</a></a></td>
     <td>Defines a collection of <code>hierarchical labels</code> grouped into multiple levels on the axis.</td>
 </tr>
 
@@ -272,7 +272,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_VisibleLabels" aria-label="View VisibleLabels property in API reference">VisibleLabels</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabel.html" aria-label="View ChartAxisLabel type in API reference">ChartAxisLabel</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabel.html" aria-label="View ChartAxisLabel type in API reference">ChartAxisLabel&gt;</a></a></td>
     <td>Retrieves the collection of axis labels currently <code>rendered on the screen</code>.</td>
 </tr>
 
@@ -334,13 +334,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ActualRangeChanged" aria-label="View ActualRangeChanged event in API reference">ActualRangeChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html" aria-label="View ActualRangeChangedEventArgs type in API reference">ActualRangeChangedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html" aria-label="View ActualRangeChangedEventArgs type in API reference">ActualRangeChangedEventArgs&gt;</a></a></td>
     <td>Triggered when the visible <code>minimum</code> and <code>maximum</code> values of the axis change due to data updates or zooming.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated" aria-label="View LabelCreated event in API reference">LabelCreated</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html" aria-label="View ChartAxisLabelEventArgs type in API reference">ChartAxisLabelEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html" aria-label="View ChartAxisLabelEventArgs type in API reference">ChartAxisLabelEventArgs&gt;</a></a></td>
     <td>Triggered before an axis label is rendered, allowing its content to be <code>customized</code> or <code>hidden</code>.</td>
 </tr>
 </table>
