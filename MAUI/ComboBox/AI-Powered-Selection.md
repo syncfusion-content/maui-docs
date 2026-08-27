@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI-Powered Smart Selection in .NET MAUI MultiSelect ComboBox | Syncfusion®
+title: AI-Powered Selection in .NET MAUI MultiSelect ComboBox | Syncfusion®
 description: Learn how to implement AI-powered smart selection with the Syncfusion® .NET MAUI ComboBox control and Azure OpenAI.
 platform: maui
 control: SfCombobox
@@ -852,6 +852,6 @@ You can find the complete sample from this [link.](https://github.com/syncfusion
 ## See also
 
 * [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
-* [Multiple Selection](https://help.syncfusion.com/maui/combobox/multiple-selection)
+* [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
 * [Searching](https://help.syncfusion.com/maui/combobox/searching)
 * [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
