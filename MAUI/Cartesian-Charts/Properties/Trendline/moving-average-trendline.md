@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trendlines in .NET MAUI Cartesian Chart | Syncfusion®
+title: MovingAverageTrendline in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members of trendlines and the individual trendline types available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
 platform: maui
 control: SfCartesianChart
