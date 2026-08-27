@@ -1,51 +1,50 @@
 ---
 layout: post
-title: Visual States in .NET MAUI ComboBox | Syncfusion®
-description: Learn about visual states support in the Syncfusion® .NET MAUI ComboBox control and how to customize each state.
+title: Visual state in .NET MAUI Autocomplete | Syncfusion®
+description: Learn about visual states support in the Syncfusion® .NET MAUI Autocomplete control and how to customize each state
 platform: maui
-control: SfComboBox
+control: SfAutocomplete
 documentation: ug
-keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox searching.
 ---
 
-# Visual States in .NET MAUI ComboBox
+# Visual States in .NET MAUI Autocomplete
 
-Visual states let you change the appearance of [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
+Visual states let you change the appearance of [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
 
-`SfComboBox` supports the following visual states through the [`VisualStateManager`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states?view=net-maui-10.0):
+`Autocomplete` supports the following visual states through the [`VisualStateManager`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states?view=net-maui-10.0):
 
-* `Normal` - The default resting state of the ComboBox.
-* `Focused` - The ComboBox has keyboard or input focus.
-* `Disabled` - The ComboBox is disabled (`IsEnabled` is `false`).
-* `Hover` - The pointer is over the ComboBox (desktop platforms).
+* `Normal` - The default resting state of the Autocomplete.
+* `Focused` - The Autocomplete has keyboard or input focus.
+* `Disabled` - The Autocomplete is disabled (`IsEnabled` is `false`).
+* `Hover` - The pointer is over the Autocomplete (desktop platforms).
 
 ## Prerequisites
 
-Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html), ensure the following NuGet package is installed in your .NET MAUI project:
+Before using the  [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), ensure the following NuGet package is installed in your .NET MAUI project:
 
 - `Syncfusion.Maui.Inputs`
 
-For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
+For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 ## Defining visual states
 
-`SfComboBox` exposes its states through a single `VisualStateGroup` named `CommonStates`. Each `VisualState` contains a list of `Setter` objects that target bindable properties on the ComboBox. Common target properties are `Background`, `Stroke`, `TextColor`, `PlaceholderColor`, `ClearButtonIconColor`, and `DropDownIconColor`.
+`SfAutocomplete` exposes its states through a single `VisualStateGroup` named `CommonStates`. Each `VisualState` contains a list of `Setter` objects that target bindable properties on the Autocomplete. Common target properties are `Background`, `Stroke`, `TextColor`, `PlaceholderColor`, `ClearButtonIconColor`, and `DropDownIconColor`.
 
 The dropdown appearance can be customized independently using properties such as `DropDownBackground`, `DropDownStroke`, `DropDownStrokeThickness`, `DropDownItemTextColor`, `DropDownItemFontSize`, `SelectedDropDownItemBackground`, and `SelectedDropDownItemTextStyle`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<inputs:SfComboBox x:Name="comboBox"
+<inputs:SfAutocomplete x:Name="autocomplete"
                 DisplayMemberPath="Name"
                 TextMemberPath="Name"
                 ItemsSource="{Binding SocialMedias}"
                 WidthRequest="250"
                 HeightRequest="50"
                 Placeholder="Select an item">
-    <inputs:SfComboBox.BindingContext>
+    <inputs:SfAutocomplete.BindingContext>
         <local:SocialMediaViewModel />
-    </inputs:SfComboBox.BindingContext>
+    </inputs:SfAutocomplete.BindingContext>
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
@@ -82,13 +81,14 @@ The dropdown appearance can be customized independently using properties such as
         </VisualState>
     </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</inputs:SfComboBox>
+</inputs:SfAutocomplete>
 
 {% endhighlight %}
 {% highlight c# %}
 
+
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-SfComboBox comboBox = new SfComboBox
+SfAutocomplete autocomplete = new SfAutocomplete
 {
     WidthRequest = 250,
     HeightRequest = 50,
@@ -102,36 +102,32 @@ VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup { Name = "CommonStates" };
 
 VisualState normalState = new VisualState { Name = "Normal" };
-normalState.Setters.Add(new Setter { Property = SfComboBox.StrokeProperty, Value = Color.FromArgb("#8A8A8A") });
-normalState.Setters.Add(new Setter { Property = SfComboBox.TextColorProperty, Value = Colors.Black });
-normalState.Setters.Add(new Setter { Property = SfComboBox.ClearButtonIconColorProperty, Value = Color.FromArgb("#8A8A8A") });
-normalState.Setters.Add(new Setter { Property = SfComboBox.DropDownIconColorProperty, Value = Color.FromArgb("#8A8A8A") });
+normalState.Setters.Add(new Setter { Property = SfAutocomplete.StrokeProperty, Value = Color.FromArgb("#8A8A8A") });
+normalState.Setters.Add(new Setter { Property = SfAutocomplete.TextColorProperty, Value = Colors.Black });
+normalState.Setters.Add(new Setter { Property = SfAutocomplete.ClearButtonIconColorProperty, Value = Color.FromArgb("#8A8A8A") });
 
 VisualState focusedState = new VisualState { Name = "Focused" };
-focusedState.Setters.Add(new Setter { Property = SfComboBox.StrokeProperty, Value = Color.FromArgb("#f903e9") });
-focusedState.Setters.Add(new Setter { Property = SfComboBox.TextColorProperty, Value = Colors.Black });
-focusedState.Setters.Add(new Setter { Property = SfComboBox.ClearButtonIconColorProperty, Value = Color.FromArgb("#f903e9") });
-focusedState.Setters.Add(new Setter { Property = SfComboBox.DropDownIconColorProperty, Value = Color.FromArgb("#f903e9") });
+focusedState.Setters.Add(new Setter { Property = SfAutocomplete.StrokeProperty, Value = Color.FromArgb("#f903e9") });
+focusedState.Setters.Add(new Setter { Property = SfAutocomplete.TextColorProperty, Value = Colors.Black });
+focusedState.Setters.Add(new Setter { Property = SfAutocomplete.ClearButtonIconColorProperty, Value = Color.FromArgb("#f903e9") });
 
 VisualState disabledState = new VisualState { Name = "Disabled" };
-disabledState.Setters.Add(new Setter { Property = SfComboBox.StrokeProperty, Value = Color.FromArgb("#9E9E9E") });
-disabledState.Setters.Add(new Setter { Property = SfComboBox.TextColorProperty, Value = Colors.Black });
-disabledState.Setters.Add(new Setter { Property = SfComboBox.ClearButtonIconColorProperty, Value = Color.FromArgb("#9E9E9E") });
-disabledState.Setters.Add(new Setter { Property = SfComboBox.DropDownIconColorProperty, Value = Color.FromArgb("#9E9E9E") });
+disabledState.Setters.Add(new Setter { Property = SfAutocomplete.StrokeProperty, Value = Color.FromArgb("#9E9E9E") });
+disabledState.Setters.Add(new Setter { Property = SfAutocomplete.TextColorProperty, Value = Colors.Black });
+disabledState.Setters.Add(new Setter { Property = SfAutocomplete.ClearButtonIconColorProperty, Value = Color.FromArgb("#9E9E9E") });
 
 VisualState hoverState = new VisualState { Name = "Hover" };
-hoverState.Setters.Add(new Setter { Property = SfComboBox.StrokeProperty, Value = Color.FromArgb("#c372bd") });
-hoverState.Setters.Add(new Setter { Property = SfComboBox.TextColorProperty, Value = Colors.Black });
-hoverState.Setters.Add(new Setter { Property = SfComboBox.ClearButtonIconColorProperty, Value = Color.FromArgb("#c372bd") });
-hoverState.Setters.Add(new Setter { Property = SfComboBox.DropDownIconColorProperty, Value = Color.FromArgb("#c372bd") });
+hoverState.Setters.Add(new Setter { Property = SfAutocomplete.StrokeProperty, Value = Color.FromArgb("#c372bd") });
+hoverState.Setters.Add(new Setter { Property = SfAutocomplete.TextColorProperty, Value = Colors.Black });
+hoverState.Setters.Add(new Setter { Property = SfAutocomplete.ClearButtonIconColorProperty, Value = Color.FromArgb("#c372bd") });
 
 commonStateGroup.States.Add(normalState);
 commonStateGroup.States.Add(focusedState);
 commonStateGroup.States.Add(disabledState);
 commonStateGroup.States.Add(hoverState);
 visualStateGroupList.Add(commonStateGroup);
-VisualStateManager.SetVisualStateGroups(comboBox, visualStateGroupList);
-Content = comboBox;
+VisualStateManager.SetVisualStateGroups(autocomplete, visualStateGroupList);
+Content = autocomplete;
 
 
 {% endhighlight %}
@@ -171,23 +167,22 @@ public class SocialMedia
 
 ### Normal visual state
 
-![.NET MAUI ComboBox in the Normal visual state](Images/VisualStates/normal-visual-state-combobox.png)
+![.NET MAUI Autocomplete in the Normal visual state](Images/VisualStates/normal-visual-state-autocomplete.png)
 
 ### Hover visual state
 
-![.NET MAUI ComboBox in the Hover visual state](Images/VisualStates/hover-visual-state-combobox.png)
+![.NET MAUI Autocomplete in the Hover visual state](Images/VisualStates/hover-visual-state-autocomplete.png)
 
 ### Focused visual state
 
-![.NET MAUI ComboBox in the Focused visual state](Images/VisualStates/focused-visual-state-combobox.png)
+![.NET MAUI Autocomplete in the Focused visual state](Images/VisualStates/focused-visual-state-autocomplete.png)
 
 ### Disabled visual state
 
-![.NET MAUI ComboBox in the Disabled visual state](Images/VisualStates/disabled-visual-state-combobox.png)
-
+![.NET MAUI Autocomplete in the Disabled visual state](Images/VisualStates/disabled-visual-state-autocomplete.png)
 
 ## See Also
 
-- [Customization](https://help.syncfusion.com/maui/combobox/ui-customization)
-- [Selection](https://help.syncfusion.com/maui/combobox/selection)
-- [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+- [Customization](https://help.syncfusion.com/maui/autocomplete/ui-customization)
+- [Selection](https://help.syncfusion.com/maui/autocomplete/selection)
+- [Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)
