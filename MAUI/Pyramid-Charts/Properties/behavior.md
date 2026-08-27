@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Behaviors in .NET MAUI Pyramid Chart | Syncfusion®
-description: This section lists the public API members of the tooltip and selection behaviors available in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
+description: This section lists the public API members for Behavior in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# Behavior API in .NET MAUI Pyramid Chart
+# Behavior API Reference for .NET MAUI Pyramid Chart
 
 ## Properties
 

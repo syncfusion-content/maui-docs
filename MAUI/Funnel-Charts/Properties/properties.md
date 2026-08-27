@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Properties in .NET MAUI Funnel Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
+description: This section lists the public API members in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# API Reference for .NET MAUI Funnel Chart
+# API API Reference for .NET MAUI Funnel Chart
 
 The Funnel Chart API is documented across the pages below. Each page lists the public properties, methods, and events declared by a related group of classes.
 

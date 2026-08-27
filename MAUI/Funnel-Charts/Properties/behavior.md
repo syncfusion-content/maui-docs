@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Behaviors in .NET MAUI Funnel Chart | Syncfusion®
-description: This section lists the public API members of the tooltip and selection behaviors available in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
+description: This section lists the public API members for Behavior in the Syncfusion® .NET MAUI Funnel Chart (SfFunnelChart) API.
 platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
 
-# Behavior API in .NET MAUI Funnel Chart
+# Behavior API Reference for .NET MAUI Funnel Chart
 
 ## Properties
 

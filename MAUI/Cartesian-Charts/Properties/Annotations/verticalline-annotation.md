@@ -1,13 +1,13 @@
 ---
 layout: post
 title: VerticalLineAnnotation in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of shape, line, text, and view annotations available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# VerticalLineAnnotation API for .NET MAUI Cartesian Chart
+# VerticalLineAnnotation API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

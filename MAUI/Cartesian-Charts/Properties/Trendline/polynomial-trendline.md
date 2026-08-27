@@ -1,13 +1,13 @@
 ---
 layout: post
 title: PolynomialTrendline in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of trendlines and the individual trendline types available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# PolynomialTrendline API for .NET MAUI Cartesian Chart
+# PolynomialTrendline API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 

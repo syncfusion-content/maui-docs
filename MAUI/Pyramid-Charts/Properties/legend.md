@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Legend and styles in .NET MAUI Pyramid Chart | Syncfusion®
-description: This section lists the public API members of the  double range available in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
+description: This section lists the public API members for Legend in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# Legend API in .NET MAUI Pyramid Chart
+# Legend API Reference for .NET MAUI Pyramid Chart
 
 ## Properties
 

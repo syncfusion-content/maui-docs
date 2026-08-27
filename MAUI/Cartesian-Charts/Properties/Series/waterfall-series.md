@@ -1,13 +1,13 @@
 ---
 layout: post
 title: WaterfallSeries in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of the series base classes and every Cartesian series type available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# WaterfallSeries API in .NET MAUI Cartesian Chart
+# WaterfallSeries API Reference in .NET MAUI Cartesian Chart
 
 ## Properties
 

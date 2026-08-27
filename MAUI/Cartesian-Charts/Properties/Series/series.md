@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Series in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Series API in .NET MAUI Cartesian Chart
+# Series API Reference in .NET MAUI Cartesian Chart
 
 This page lists the public properties, methods, and events of the series base classes and every Cartesian series type.
 

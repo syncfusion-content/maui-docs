@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Trendlines in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of the control, grouped into focused reference pages available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Trendlines API in .NET MAUI Cartesian Chart
+# Trendlines API Reference for .NET MAUI Cartesian Chart
 
 This page lists the public properties, methods, and events of trendlines and the individual trendline types.
 

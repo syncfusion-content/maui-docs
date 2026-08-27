@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Chart in .NET MAUI Pyramid Chart | Syncfusion®
-description: This section lists the public API members of the SfPyramidChart control and its ChartBase base class available in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
+description: This section lists the public API members for Chart in the Syncfusion® .NET MAUI Pyramid Chart (SfPyramidChart) API.
 platform: maui
 control: SfPyramidChart
 documentation: ug
 ---
 
-# Chart API in .NET MAUI Pyramid Chart
+# Chart API Reference for .NET MAUI Pyramid Chart
 
 ## Properties
 

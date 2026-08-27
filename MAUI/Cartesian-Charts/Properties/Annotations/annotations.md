@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Annotations in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of shape, line, text, and view annotations available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Annotations API in .NET MAUI Cartesian Chart
+# Annotations API Reference for .NET MAUI Cartesian Chart
 
 This page lists the public properties, methods, and events of shape, line, text, and view annotations.
 

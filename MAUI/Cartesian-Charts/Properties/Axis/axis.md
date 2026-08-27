@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Axis in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members of chart axes, axis labels, ticks, titles, and multi-level labels available in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart) API.
+description: This section lists the public API members for Axis in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Axis API in .NET MAUI Cartesian Chart
+# Axis API Reference for .NET MAUI Cartesian Chart
 
 This page lists the public properties, methods, and events of chart axes, axis labels, ticks, titles, and multi-level labels.
 
