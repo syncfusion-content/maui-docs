@@ -1,0 +1,68 @@
+---
+layout: post
+title: TextAnnotation in .NET MAUI Cartesian Chart | Syncfusion®
+description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+platform: maui
+control: SfCartesianChart
+documentation: ug
+---
+
+# TextAnnotation API Reference for .NET MAUI Cartesian Chart
+
+## Properties
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_CoordinateUnit" aria-label="View CoordinateUnit property in API reference">CoordinateUnit</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCoordinateUnit.html" aria-label="View ChartCoordinateUnit type in API reference">ChartCoordinateUnit</a></td>
+    <td>Determines whether the annotation's position is measured in <code>axis data values</code> or <code>pixel coordinates</code> on the plot area.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_IsVisible" aria-label="View IsVisible property in API reference">IsVisible</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+    <td>Controls the <code>visibility</code> of the annotation on the chart.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TextAnnotation.html#Syncfusion_Maui_Charts_TextAnnotation_LabelStyle" aria-label="View LabelStyle property in API reference">LabelStyle</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotationLabelStyle.html" aria-label="View ChartAnnotationLabelStyle type in API reference">ChartAnnotationLabelStyle</a></td>
+    <td>Customizes the <code>font</code>, <code>color</code>, and <code>alignment</code> of the text label.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TextAnnotation.html#Syncfusion_Maui_Charts_TextAnnotation_Text" aria-label="View Text property in API reference">Text</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Sets the <code>content</code> to be displayed for the annotation.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_X1" aria-label="View X1 property in API reference">X1</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+    <td>Sets the <code>X position</code> of the annotation, which can be a numeric or date-time value matching the associated <code>X axis</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_XAxisName" aria-label="View XAxisName property in API reference">XAxisName</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Links the annotation to a specific <code>X axis</code> by its name, enabling it to target secondary or multiple axes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_Y1" aria-label="View Y1 property in API reference">Y1</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Sets the <code>Y position</code> of the annotation on the chart.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_YAxisName" aria-label="View YAxisName property in API reference">YAxisName</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Links the annotation to a specific <code>Y axis</code> by its name.</td>
+</tr>
+</table>
