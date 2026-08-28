@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in .NET MAUI Cartesian Chart | Syncfusion®
+title: Annotation API in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
