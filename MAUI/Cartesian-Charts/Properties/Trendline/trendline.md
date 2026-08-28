@@ -11,8 +11,6 @@ documentation: ug
 
 This page lists the public properties, methods, and events of trendlines and the individual trendline types.
 
-## Classes on this page
-
 <table>
 <tr>
     <th>Class</th>

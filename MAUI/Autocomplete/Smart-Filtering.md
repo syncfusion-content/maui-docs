@@ -11,108 +11,6 @@ documentation: ug
 
 This document will walk you through the implementation of an advanced filter functionality in the Syncfusion [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven filter experience.
 
-## Integrating Azure OpenAI with your .NET MAUI App
-
-First, ensure you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
-
-If you don’t have access, please refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account.
-
-Note down the deployment name, endpoint URL, and API key.
-
-we’ll use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). So, before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
-
-In your base service class (AzureBaseService), initialize the OpenAIClient. Replace the Endpoint, DeploymentName, Key with actual values from your Azure OpenAI resource.
-
-This creates a chat client using your endpoint, API key, and deployment name. It’s stored in the Client property for use in other methods.
-
-ComboBoxAzureAIService use this Client to send prompts and receive completions.
-
-In the `GetCompletion` method, we will construct the prompt and send it to the Azure OpenAI Service. The ChatHistory helps maintain context but is cleared for each new prompt in this implementation to ensure each filter is independent.
-
-{% tabs %}
-{% highlight c# %}
-
-// AzureBaseService.cs
-    public abstract class AzureBaseService
-    {        
-        internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-        internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-        internal const string Key = "API_KEY";
-
-        public AzureBaseService()
-        {
-        }
-                        
-        /// <summary>
-        /// To get the Azure open ai kernal method
-        /// </summary>
-        private void GetAzureOpenAIKernal()
-        {
-            try
-            {
-                var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
-                this.Client = client;
-            }
-            catch (Exception)
-            {
-            }
-        }
-        
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
-//AzureAIService.cs
-
-public class AzureAIService : AzureBaseService
-    {
-        /// <summary>
-        /// Gets a completion response from the AzureAI service based on the provided prompt.
-        /// </summary>
-        /// <param name="prompt"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
-        {
-            if (_chatCompletion != null)
-            {
-                // Use a fresh chat history per request to avoid stale context affecting results
-                var requestHistory = new ChatHistory();
-                requestHistory.AddUserMessage(prompt);
-                try
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
-                    var chatresponse = await _chatCompletion.GetChatMessageContentAsync(chatHistory: requestHistory, kernel: _kernel);
-                    cancellationToken.ThrowIfCancellationRequested();
-                    return chatresponse.ToString();
-                }
-                catch (RequestFailedException ex)
-                {
-                    // Log the error message and rethrow the exception or handle it appropriately
-                    Debug.WriteLine($"Request failed: {ex.Message}");
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    // Handle other potential exceptions
-                    Debug.WriteLine($"An error occurred: {ex.Message}");
-                    throw;
-                }
-            }
-            return "";
-        }
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Implementing custom filtering in .NET MAUI Autocomplete
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the `FilterBehavior` property, which is the entry point for our smart filter logic.
@@ -122,14 +20,10 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight c# %}
 
-// Model.cs
-
 public class AutocompleteModel
 {
     public string? Name { get; set; }
 }
-
-//ViewModel.cs
 
 public class AutocompleteViewModel : INotifyPropertyChanged
 {
@@ -184,8 +78,6 @@ The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI 
 {% tabs %}
 {% highlight c# %}
 
-//CustomFilter.cs
-
 public class AutocompleteFilterBehavior : IAutocompleteFilterBehavior
 {
     private readonly AzureOpenAIService _azureAIService;
@@ -199,8 +91,6 @@ public class AutocompleteFilterBehavior : IAutocompleteFilterBehavior
         Items = new ObservableCollection<AutocompleteModel>();
         _cancellationTokenSource = new CancellationTokenSource();
     }
-
-    
 
     /// <summary>
     ///  Finds matching items using the typed text
@@ -327,16 +217,16 @@ Applying custom filtering to the [Autocomplete](https://help.syncfusion.com/cr/m
 
 {% tabs %}
 {% highlight xaml %}
-    <input:SfAutocomplete x:Name="autoComplete"
-                        DropDownPlacement="Bottom"
-                        MaxDropDownHeight="200"
-                        TextSearchMode="StartsWith"
-                        DisplayMemberPath="Name"
-                        ItemsSource="{Binding Foods}">
-        <input:SfAutocomplete.FilterBehavior>
-            <local:AutocompleteFilterBehavior />
-        </input:SfAutocomplete.FilterBehavior>
-    </input:SfAutocomplete>
+<input:SfAutocomplete x:Name="autoComplete"
+                    DropDownPlacement="Bottom"
+                    MaxDropDownHeight="200"
+                    TextSearchMode="StartsWith"
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding Foods}">
+    <input:SfAutocomplete.FilterBehavior>
+        <local:AutocompleteFilterBehavior />
+    </input:SfAutocomplete.FilterBehavior>
+</input:SfAutocomplete>
 {% endhighlight %}
 
 {% endtabs %}
@@ -345,6 +235,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI AutoComplete With AI Smart filter.](Images/AISmartFilter/ai_smart_filter_autocomplete.gif)
 
-You can find the complete sample from this [link]().  
+You can find the complete sample from this [link](https://github.com/SyncfusionExamples/dotnet-maui-ai-autocomplete-smart-filtering/tree/master).  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.
