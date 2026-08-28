@@ -23,23 +23,8 @@ The Cartesian Chart API is documented across the pages below. Each page lists th
 </tr>
 
 <tr valign="top">
-    <td><a href="Axis/axis" aria-label="Chart axis API reference - scale, labels, and appearance">Axis</a></td>
-    <td>Exposes <code>axis members</code>, including <code>ChartAxis</code>, <code>CategoryAxis</code>, <code>NumericalAxis</code>, <code>DateTimeAxis</code>, <code>DateTimeCategoryAxis</code>, <code>LogarithmicAxis</code>, <code>tick</code> and <code>label configuration</code>, <code>axis titles</code>, <code>ranged axis labels</code>, <code>multi-level labels</code>, and <code>label style</code>. Use this reference for configuring <code>scale</code>, <code>label formatting</code>, and <code>axis appearance</code>.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="series/series" aria-label="Chart series API reference - data binding and appearance">Series</a></td>
-    <td>Lists members for the <code>series base classes</code> (<code>CartesianSeries</code>, <code>ChartSeries</code>, <code>XYDataSeries</code>, <code>StackingSeriesBase</code>) and the supported <code>CartesianSeries types</code> (column, line, area, scatter, bar, stacking, range, financial, etc.). Use this reference when <code>binding data points</code>, customizing <code>appearance</code>, or wiring <code>bindings</code> for a specific series type.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="Behavior/behaviors" aria-label="Chart behaviors API reference - tooltips, selection, zoom, and pan">Behaviors</a></td>
     <td>Lists members of the <code>behavior types</code> that extend chart interaction and display, including <code>ChartTooltipBehavior</code>, <code>ChartTrackballBehavior</code>, <code>ChartCrosshairBehavior</code>, <code>ChartSelectionBehavior</code>, <code>DataPointSelectionBehavior</code>, <code>SeriesSelectionBehavior</code>, <code>ChartZoomPanBehavior</code>, and <code>SeriesModel</code>. Use this reference for enabling <code>tooltips</code>, <code>selection</code>, or user-driven <code>pan</code> and <code>zoom</code>.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="Annotations/annotations" aria-label="Chart annotations API reference - labels, shapes, and views">Annotations</a></td>
-    <td>Lists members of the <code>chart annotation classes</code>, including <code>ShapeAnnotation</code>, <code>LineAnnotation</code>, <code>TextAnnotation</code>, <code>ViewAnnotation</code>, <code>EllipseAnnotation</code>, <code>RectangleAnnotation</code>, <code>VerticalLineAnnotation</code>, and <code>HorizontalLineAnnotation</code>. Use this reference for attaching <code>labels</code>, <code>callout</code>, <code>lines</code>, <code>shapes</code>, or <code>custom views</code> to chart coordinates.</td>
 </tr>
 
 <tr valign="top">
