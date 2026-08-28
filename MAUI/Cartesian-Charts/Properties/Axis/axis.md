@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis in .NET MAUI Cartesian Chart | Syncfusion®
+title: Axis API in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for Axis in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
