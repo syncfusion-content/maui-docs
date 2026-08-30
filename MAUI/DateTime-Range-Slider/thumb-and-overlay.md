@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Thumb Overlay in .NET MAUI DateTime Range Slider | Syncfusion®
+description: Learn here all about the Thumb and Thumb Overlay features of the Syncfusion® .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -11,12 +11,12 @@ documentation: ug
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Slider.
 
-* Thumb - It is one of the slider elements that can be used to drag and change the selected value of the range slider.
-* Thumb overlay - It is rendered around the thumbs while interacting with them.
+* Thumb - An element of the DateTime Range Slider that can be used to drag and change the selected value.
+* Thumb overlay - A visual indicator rendered around the thumb while interacting with it.
 
 ## Thumb size
 
-Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
+Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
 
 {% tabs %}
 
@@ -36,6 +36,8 @@ Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -43,7 +45,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Radius = 15;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -72,6 +74,9 @@ Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -79,7 +84,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -108,6 +113,9 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -116,7 +124,7 @@ rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.ThumbStyle.StrokeThickness = 2;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -145,6 +153,9 @@ Change the thumb stroke color while two thumbs overlap by using the [`OverlapStr
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -152,7 +163,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -181,6 +192,8 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -188,7 +201,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Radius = 18;
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -217,6 +230,9 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
@@ -224,7 +240,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
-        
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -233,7 +249,7 @@ rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD7
 
 ## Disabled thumb
 
-Change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the DateTime Range Slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 
@@ -304,6 +320,11 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 {% endhighlight %}
 
 {% highlight C# %}
+using System;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 VerticalStackLayout stackLayout = new();
 SfDateTimeRangeSlider defaultRangeSlider = new()
