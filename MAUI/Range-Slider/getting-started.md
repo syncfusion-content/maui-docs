@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Range Slider control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Slider (SfRangeSlider) control.
+description: This section explains how to get started with the Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Range Slider
 
-This section explains the steps required to add the [RangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion<sup>®</sup> Range Slider.
+This section explains the steps required to add the [RangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) control and its elements such as track, ticks, labels, and tooltip. This section covers only the basic features needed to get started with the Syncfusion® Range Slider.
 
 To quickly get started with the .NET MAUI Range Slider, watch this video.
 
@@ -49,10 +49,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET: New Project** and press **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
 
@@ -89,33 +89,33 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register Syncfusion handler
 
-Make sure to add the namespace.
+Add the required namespace.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
 
-Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+Register the Syncfusion® core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion® controls.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 builder.ConfigureSyncfusionCore();
-{% endhighlight %} 
+{% endhighlight %}
 {% endtabs %}
 
 ## Step 4: Import Range Slider namespace
 
-Add the following namespace in your XAML or C#.
+Add the following namespace in your XAML or C# code.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
-xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.Maui.Sliders;
 
@@ -124,18 +124,18 @@ using Syncfusion.Maui.Sliders;
 
 ## Step 5: Add the RangeSlider component
 
-Configure the `RangeSlider` component that allows you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
+Configure the Range Slider component that allows you to select a range of values within specified limits, providing a flexible and interactive input experience. The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels that are rendered on the given interval.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
                        RangeStart="2"
                        RangeEnd="8"
                        Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
+                       ShowLabels="true"
+                       ShowTicks="true"
                        MinorTicksPerInterval="1" />
 
 {% endhighlight %}
@@ -146,10 +146,9 @@ rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2;
 rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;
 rangeSlider.ShowLabels = true;
-rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
-rangeSlider.Interval = 2;
 rangeSlider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}

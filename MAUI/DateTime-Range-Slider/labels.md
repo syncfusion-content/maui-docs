@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels in .NET MAUI Range Slider control | Syncfusion®
+title: Labels in .NET MAUI DateTime Range Slider control | Syncfusion®
 description: Learn here all about the Labels and its customization feature of .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
