@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout in .NET MAUI DataForm control | Syncfusion
-description: Learn about the Layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Layout in .NET MAUI DataForm control | Syncfusion®
+description: Learn about the Layout support in Syncfusion® .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -27,7 +27,7 @@ When the label position is Top, the linear layout is shown as follows:
 
 ## Grid data form layout
 
-By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property which provides a grid-like layout for the data form. The column order of the data form field in a row can be changed using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ItemsOrderInRow).
+By default, the data form arranges one data field per row. You can have more than one data field per row by setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property, which provides a grid-like layout for the data form. The column order of the data form field in a row can be changed using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ItemsOrderInRow).
 
 {% tabs %}
 {% highlight XAML %}
@@ -73,7 +73,7 @@ public string Name { get; set; }
 #### Using event
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -97,7 +97,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 The label can be positioned either top or left side of the editor. By using the [DataFormDefaultLayoutSettings.LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_LabelPosition) property, lay out the label associated with the editor for the data form.
 
-By default, the label will be positioned at left side of the editor.
+By default, the label will be positioned at the left side of the editor.
 
 {% tabs %}
 {% highlight XAML %}
@@ -128,7 +128,7 @@ this.Content = dataForm;
 The label position of a particular editor can be changed by using the [DataFormDefaultLayoutSettings.LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_LabelPosition) property in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight XAML tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -140,7 +140,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 SfDataForm dataForm = new SfDataForm();
 dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
@@ -171,7 +171,7 @@ The image can be loaded instead of the label by using the [LeadingView](https://
 #### Using event
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -218,7 +218,7 @@ public string Name { get; set; }
 The data form editors' order can be changed by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -308,7 +308,7 @@ public string FirstName { get; set; }
 The row height of each [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) can also be increased by using the [RowSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowSpan) property, and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -355,7 +355,7 @@ public string FirstName { get; set; }
 When the grid layout is used, increase the column width of each [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) using the [ColumnSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ColumnSpan) property, and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -380,7 +380,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The data form editor visibility is changed by using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_IsVisible) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -405,21 +405,21 @@ Here, the `Name` field will be hidden.
 You can programmatically scroll to specific editor using the [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ScrollTo_System_String_) method by passing the `property name`.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 dataForm.ScrollTo("FirstName");
 
 {% endhighlight %}
 {% endtabs %}
 
-![Scroll To Editor](images\layout\Scroll.gif){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Scroll To Editor](images/layout/Scroll.gif){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Change the editor height
 
 The .NET MAUI DataForm allows you to modify the height of each editor to fit the height of the data form or to customize the height based on text size by using the [EditorHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_EditorHeight) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
