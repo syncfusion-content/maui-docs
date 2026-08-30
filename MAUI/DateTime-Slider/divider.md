@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding and customizing the slider divider feature in .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Dividers in .NET MAUI DateTime Slider control | Syncfusion®
+description: Learn here all about the slider divider feature in .NET MAUI DateTime Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
@@ -30,6 +30,8 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
@@ -70,6 +72,8 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
@@ -103,17 +107,20 @@ Change the active and inactive divider color of the slider using the [`ActiveFil
                           ShowDividers="True">
 
     <sliders:SfDateTimeSlider.DividerStyle>
-       <sliders:SliderDividerStyle ActiveRadius="7" 
-                                   InactiveRadius="7" 
-				                   ActiveFill="#EE3F3F" 
-				                   InactiveFill="#F7B1AE"/>
-      </sliders:SfDateTimeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7"
+                                    ActiveFill="#EE3F3F"
+                                    InactiveFill="#F7B1AE" />
+    </sliders:SfDateTimeSlider.DividerStyle>
 
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
@@ -166,6 +173,9 @@ Also, change the active and inactive divider stroke color of the slider using th
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
@@ -268,6 +278,9 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Syncfusion.Maui.Sliders;
 
 VerticalStackLayout stackLayout = new();
 SfDateTimeSlider defaultSlider = new()
