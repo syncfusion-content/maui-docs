@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about the labels and their customization features of the .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -13,7 +13,7 @@ This section explains how to add the labels in the Range Selector.
 
 ## Show labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels on given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels at the given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
 
 {% tabs %}
 
@@ -42,6 +42,9 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.R
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
@@ -92,6 +95,9 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
@@ -99,7 +105,7 @@ rangeSelector.Maximum = 10;
 rangeSelector.RangeStart = 2;
 rangeSelector.RangeEnd = 8;
 rangeSelector.Interval = 2;
-rangeSelector.NumberFormat = "$##";
+rangeSelector.NumberFormat = "$#";
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
@@ -143,6 +149,9 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
@@ -162,7 +171,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-selector/events-and-commands) to customize label text format through range slider events.
+N> Refer to [this page](https://help.syncfusion.com/maui/range-selector/events-and-commands) to customize label text format through Range Selector events.
 
 ## Edge labels placement
 
@@ -199,12 +208,15 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = "100";
-rangeSelector.Maximum = "1000";
-rangeSelector.RangeStart = "325";
-rangeSelector.RangeEnd = "725";
+rangeSelector.Minimum = 100;
+rangeSelector.Maximum = 1000;
+rangeSelector.RangeStart = 325;
+rangeSelector.RangeEnd = 775;
 rangeSelector.Interval = 225;
 rangeSelector.NumberFormat = "$#";
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
@@ -251,7 +263,7 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
                                       InactiveFontAttributes="Bold" 
                                       ActiveFontSize="16" 
                                       InactiveFontSize="16" />
-            </sliders:SfRangeSelector.LabelStyle>
+        </sliders:SfRangeSelector.LabelStyle>
 
         <charts:SfCartesianChart>
             ...
@@ -263,8 +275,11 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
-SfRangeSelector rangeSelector = new SfRangeSeletor();
+SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
 rangeSelector.Maximum = 10;
 rangeSelector.RangeStart = 2;
@@ -322,6 +337,9 @@ Adjust the space between ticks and labels of the Range Selector using the [`Offs
 {% endhighlight %}
 
 {% highlight C# %}
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Sliders;
+using Syncfusion.Maui.Charts;
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;

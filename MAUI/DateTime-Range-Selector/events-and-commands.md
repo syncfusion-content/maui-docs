@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Selector control | Syncfusion® 
+title: Events and Commands in.NET MAUI DateTime Range Selector | Syncfusion® 
 description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
