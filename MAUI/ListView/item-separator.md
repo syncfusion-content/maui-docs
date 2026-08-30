@@ -18,7 +18,7 @@ The SfListView displays separators between items when the `ShowItemSeparator` pr
 Separators for group headers can be enabled using the `ShowGroupItemSeparator` property. `ShowGroupItemSeparator` has no visible effect unless the SfListView is grouped (that is, `IsGrouped` is `true` and a `GroupTemplate` or grouping logic is configured). Both can be styled independently using the properties below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4,5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="4,5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="ListViewSample.MainPage">
     <syncfusion:SfListView x:Name="listView"
@@ -37,7 +37,7 @@ Separators for group headers can be enabled using the `ShowGroupItemSeparator` p
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2" %}
+{% highlight c# tabtitle="C#" hl_lines="1 2" %}
 listView.ShowItemSeparator = true;
 listView.ShowGroupItemSeparator = true;
 {% endhighlight %}
@@ -85,7 +85,7 @@ The styling properties listed in this section take effect only when the correspo
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="XAML" hl_lines="4 5 6 7 8 9 10 11" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="ListViewSample.MainPage">
     <syncfusion:SfListView x:Name="listView"
@@ -111,7 +111,7 @@ The styling properties listed in this section take effect only when the correspo
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 2 3 4 5 6 7 8" %}
+{% highlight c# tabtitle="C#" hl_lines="1 2 3 4 5 6 7 8" %}
 listView.ShowItemSeparator = true;
 listView.ItemSeparatorColor = Color.FromArgb("#D0BCFF");
 listView.ItemSeparatorThickness = 2;

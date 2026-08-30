@@ -29,7 +29,7 @@ Sort data by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syn
 * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer): Describes the comparer to be applied when sorting takes place. The type is `IComparer<object>` (from the `System.Collections.Generic` namespace), and `IComparer<object>` is also re-exported by the `Syncfusion.Maui.DataSource` namespace. You must `using System.Collections.Generic;` (or qualify the type) when implementing a custom comparer.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="6 7 8" %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
                xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
   <syncfusion:SfListView x:Name="listView">
@@ -43,7 +43,7 @@ Sort data by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syn
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 4" %}
+{% highlight c# tabtitle="C#" hl_lines="3 4" %}
 listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {
   PropertyName = "ContactName",
@@ -64,7 +64,7 @@ Sort the items based on custom logic. This can be applied using either the [SfLi
 N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) and the `GroupDescriptor` are the same, then the [GroupResult](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html) will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise, data objects are passed. To sort the data items alone, use a different `PropertyName` in both the `SortDescriptor` and the `GroupDescriptor` properties.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 11 12 13" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5 11 12 13" %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
                xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Resources>
@@ -83,7 +83,7 @@ N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {
   Comparer = new CustomSortComparer()
@@ -145,7 +145,7 @@ You can download the entire sample code from the [github](https://github.com/Syn
 To apply sorting when the header is tapped, handle the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event of the `SfListView`. The handler receives an [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) whose [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_ItemType) property indicates which item was tapped (`Header`, `Footer`, `GroupHeader`, `LoadMore`, or `Record`).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
                xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView" ItemSize="60"
@@ -162,7 +162,7 @@ To apply sorting when the header is tapped, handle the [ItemTapped](https://help
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 listView = new SfListView();
 listView.ItemsSource = viewModel.customerDetails;
 listView.ItemSize = 60;
@@ -182,7 +182,7 @@ listView.HeaderTemplate = new DataTemplate(() =>
 When the `ItemTapped` event is raised for the header, add the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) and refresh the view.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="7 8 9 10" %}
 private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
 {
   //Apply sorting when the header is tapped.
@@ -215,7 +215,7 @@ The `SfListView` allows sorting and grouping the items by adding the [DataSource
 Sort and group the items by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector) to return the year value of the date-time property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="XAML" hl_lines="8" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
                xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Content>
@@ -231,7 +231,7 @@ Sort and group the items by using [KeySelector](https://help.syncfusion.com/cr/m
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 public partial class MainPage : ContentPage
 {
    public MainPage()
@@ -281,7 +281,7 @@ The following screenshot shows the output when items are sorted by year. Downloa
 Sort and group the items by using `KeySelector` to return the month and year value of the date-time property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7 8 9 10 11 12" %}
+{% highlight xaml tabtitle="XAML" hl_lines="7 8 9 10 11 12" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Content>
@@ -300,7 +300,7 @@ Sort and group the items by using `KeySelector` to return the month and year val
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11 12 13" %}
+{% highlight c# tabtitle="C#" hl_lines="9 10 11 12 13" %}
 public partial class MainPage : ContentPage
 {
    public MainPage()
