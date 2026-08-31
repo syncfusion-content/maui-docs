@@ -636,6 +636,10 @@ When the user enters unstructured notes and taps the format button, the sample s
 
 The generated HTML is then assigned to the `SfRichTextEditor`, enabling the user to review and edit the final result in a rich text environment.
 
+![AI powered Smart .NET MAUI RTE](images/AI-Powered-RTE-formatter.gif)
+
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master).
+
 ## See also
 
 - [Getting Started](https://help.syncfusion.com/maui/rich-text-editor/getting-started) explains how to configure the Rich Text Editor control in a .NET MAUI application.
