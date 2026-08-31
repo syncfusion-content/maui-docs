@@ -58,7 +58,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider](images/labels-and-dividers/divider.png)
+![Range Selector divider](images/labels-and-dividers/divider.png)
 
 ## Divider radius
 
@@ -112,7 +112,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider radius](images/labels-and-dividers/divider-radius.png)
+![Range Selector divider radius](images/labels-and-dividers/divider-radius.png)
 
 ## Divider stroke width and stroke color
 
@@ -181,7 +181,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
+![Range Selector divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
 
 ## Divider color
 
@@ -239,4 +239,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector divider color](images/labels-and-dividers/divider-color.png)
+![Range Selector divider color](images/labels-and-dividers/divider-color.png)

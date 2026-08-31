@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Suggestion Display Mode in .NET MAUI SmartTextEditor | Syncfusion®
+title: Suggestion Display Mode in .NET MAUI Smart Text Editor | Syncfusion®
 description: Explore suggestion display modes in Syncfusion® .NET MAUI Smart Text Editor control with inline and popup modes for text completion display.
 platform: maui
 control: SfSmartTextEditor

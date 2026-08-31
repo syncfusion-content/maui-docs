@@ -9,14 +9,14 @@ documentation: ug
 
 # Migration from Xamarin Cards to .NET MAUI Cards
 
-To make the migration from the [Xamarin SfCards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin SfCards were kept in the.NET MAUI SfCards. However, to maintain the consistency of API naming in the .NET MAUI SfCards, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Cards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI Cards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin Cards were kept in the .NET MAUI Cards. However, to maintain the consistency of API naming in the .NET MAUI Cards, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th></tr>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th></tr>
 <tr>
 <td>Syncfusion.SfCards.XForms</td>
 <td>Syncfusion.Maui.Cards</td></tr>
@@ -100,12 +100,12 @@ this.Content = cardView;
 
 ### SfCards
 
-The following code example, explains how to initialize the properties of the `Xamarin SfCards` and `.NET MAUI SfCards` class.
+The following code example, explains how to initialize the properties of the `Xamarin Cards` and `.NET MAUI Cards` class.
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -184,8 +184,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCalendar</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -219,8 +219,8 @@ The following code example, explains how to initialize the properties of the `Xa
 
 <table>
 <tr>
-<th>Xamarin SfCards</th>
-<th>.NET MAUI SfCards</th>
+<th>Xamarin Cards</th>
+<th>.NET MAUI Cards</th>
 <th>Description</th>
 </tr>
 <tr>

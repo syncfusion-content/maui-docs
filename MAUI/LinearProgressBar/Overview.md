@@ -1,17 +1,17 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI Linear ProgressBar Control | Syncfusion®
-description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Linear ProgressBar control and more details.
+title: About Syncfusion® .NET MAUI Linear Progress Bar Control | Syncfusion®
+description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Linear Progress Bar control and more details.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# About Syncfusion® .NET MAUI Linear ProgressBar Control
+# About Syncfusion® .NET MAUI Linear Progress Bar Control
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with custom visuals. It displays progress as a rectangular bar in determinate and indeterminate states, supports segments, and includes smooth animation. You can also define ranges with different colors.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) shows the progress of a task with custom visuals. It displays progress as a rectangular bar in determinate and indeterminate states, supports segments, and includes smooth animation. You can also define ranges with different colors.
 
-![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Linear Progress Bar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 ## Business use cases
 
@@ -36,7 +36,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Linear ProgressBar](https://www.syncfu
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/linearprogressbar/getting-started) shows a step‑by‑step guide to begin using the Linear ProgressBar control.  
+- [Getting Started](https://help.syncfusion.com/maui/linearprogressbar/getting-started) shows a step‑by‑step guide to begin using the Linear Progress Bar control.  
 - [Appearance](https://help.syncfusion.com/maui/linearprogressbar/appearance) explains how to customize appearance and behavior.  
 - [States](https://help.syncfusion.com/maui/linearprogressbar/states) helps configure progress states and behavior.  
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready‑made UI examples.

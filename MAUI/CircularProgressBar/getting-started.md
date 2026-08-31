@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Circular ProgressBar | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI Circular ProgressBar control. Explore setup, features, examples, and customization options.
+title: Getting Started with .NET MAUI Circular Progress Bar | Syncfusion®
+description: Learn how to get started with the Syncfusion® .NET MAUI Circular Progress Bar control. Explore setup, features, examples, and customization options.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Circular ProgressBar
+# Getting Started with .NET MAUI Circular Progress Bar
 
 This section explains the steps required to add the Circular Progress Bar control and customize its elements, such as indeterminate state, segments, progress fill, and track fill. It covers the basic features needed to get started with the Syncfusion<sup>&reg;</sup> Circular Progress Bar. Follow the steps below to add a .NET MAUI Circular Progress Bar control to your project.
 
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Circular ProgressBar NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Progress Bar NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) and install the latest version.
@@ -56,7 +56,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name, and press **Enter**.
 4. Then choose **Create project**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Circular ProgressBar NuGet package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Progress Bar NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -81,7 +81,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Circular ProgressBar NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Progress Bar NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) and install the latest version.
@@ -109,7 +109,7 @@ builder.ConfigureSyncfusionCore();
 {% endtabs %}
  
 
-## Step 4: Import the Circular ProgressBar namespace
+## Step 4: Import the Circular Progress Bar namespace
 
 Add the following namespace in your XAML or C#.
 
@@ -122,7 +122,7 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the Circular ProgressBar component
+## Step 5: Add the Circular Progress Bar component
 
 Initialize the `SfCircularProgressBar` and set the `Progress` property to display the filling level of the bar.
 
@@ -145,10 +145,10 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Circular ProgressBar](images/getting-started/progress-bar.png)
+![.NET MAUI Circular Progress Bar](images/getting-started/progress-bar.png)
 
 You can download the Circular Progress Bar Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-)
 
 N> 
 * By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.
-* Refer to our [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.
+* Refer to our [.NET MAUI Circular Progress Bar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

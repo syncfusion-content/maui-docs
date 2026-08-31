@@ -61,9 +61,9 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates Range Slider with the glass effect visible on the thumb while it is pressed.
 
-![range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
+![Range Slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

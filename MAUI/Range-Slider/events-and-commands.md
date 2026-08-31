@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Slider
 
-This section explains how to add the events and commands for range slider.
+This section explains how to add the events and commands for Range Slider.
 
 ## Events
 
@@ -109,7 +109,7 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 {% endtabs %}
 
-![RangeSlider custom label](images/labels-and-dividers/custom-label.png)
+![Range Slider custom label](images/labels-and-dividers/custom-label.png)
 
 ### Tooltip text format
 
@@ -151,7 +151,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 
 {% endtabs %}
 
-![RangeSlider custom tooltip](images/tooltip/custom-tooltip.png)
+![Range Slider custom tooltip](images/tooltip/custom-tooltip.png)
 
 ## Commands and their parameter
 
