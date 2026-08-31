@@ -84,6 +84,7 @@ line-height: 1;
 .sf-icon-data-form:before { content: "\e73f"; }
 .sf-icon-data-grid:before { content: "\e742"; }
 .sf-icon-maps:before { content: "\e709"; }
+.sf-icon-date-picker:before { content: "\e73e"; }
 </style>
 
 <table id="table">
@@ -149,6 +150,12 @@ line-height: 1;
 
 <div class="controlanchorlink">
 <a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-maps"></span>Smart Location Search</a>
+</div>
+
+<div><p class="category-topics">DatePicker</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/SmartDatePicker/AI-powered-natural-language-date-Search" aria-label="DatePicker Natural-Language Date Search"><span class="sf-home-icon sf-icon-date-picker"></span>Natural-Language Date Search</a>
 </div>
 </td>
 </tr>
