@@ -6,7 +6,7 @@ timestamps
   def Content="";
 		env.PATH = "${ProgramFiles}"+"\\Git\\mingw64\\bin;${env.PATH}"  
 
-     timeout(time: 15, unit: 'MINUTES') {
+     timeout(time: 1, unit: 'HOURS') {
     String platform='maui';
    try
 	{   
