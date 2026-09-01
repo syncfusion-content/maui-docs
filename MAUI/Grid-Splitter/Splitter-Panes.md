@@ -15,9 +15,9 @@ Each pane can host any .NET MAUI view such as layouts, text controls, images, ch
 
 ## Add panes
 
-The `SplitterPanes` collection allows you to define multiple panes within the GridSplitter. A minimum of two panes is required to display a splitter separator.
+The `SplitterPanes` collection allows you to define multiple panes within the Grid Splitter. A minimum of two panes is required to display a splitter separator.
 
-The following example creates a GridSplitter with three panes.
+The following example creates a Grid Splitter with three panes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -25,15 +25,21 @@ The following example creates a GridSplitter with three panes.
 <gridSplitter:SfGridSplitter>
     <gridSplitter:SfGridSplitter.SplitterPanes>
         <gridSplitter:SplitterPane>
-            <Label Text="Pane 1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Pane 1" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"/>
         </gridSplitter:SplitterPane>
 
         <gridSplitter:SplitterPane>
-            <Label Text="Pane 2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Pane 2" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"/>
         </gridSplitter:SplitterPane>
 
         <gridSplitter:SplitterPane>
-            <Label Text="Pane 3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Pane 3"
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center"/>
         </gridSplitter:SplitterPane>
     </gridSplitter:SfGridSplitter.SplitterPanes>
 </gridSplitter:SfGridSplitter>
@@ -110,6 +116,7 @@ SplitterPane pane2 = new SplitterPane()
         HorizontalTextAlignment = TextAlignment.Center,
     }
 };
+
 gridSplitter.AddPane(pane1);
 gridSplitter.AddPane(pane2);
 Content = gridSplitter;
@@ -155,6 +162,7 @@ SplitterPane pane2 = new SplitterPane()
         HorizontalTextAlignment = TextAlignment.Center,
     }
 };
+
 gridSplitter.AddPane(pane1);
 gridSplitter.AddPane(pane2);
 gridSplitter.AddPane(pane3);
@@ -172,7 +180,7 @@ After the pane is removed, the control automatically updates its layout and sepa
 
 A `Grid Splitter` can be placed inside another `SplitterPane` to create advanced, multi-level layouts. This approach is useful for building IDE-style interfaces, dashboards, reporting applications, and workspace layouts where different sections need independent resizing behavior.
 
-The following example creates a nested GridSplitter inside the second pane.
+The following example creates a nested Grid Splitter inside the second pane.
 
 {% tabs %}
 {% highlight xaml %}
@@ -180,8 +188,9 @@ The following example creates a nested GridSplitter inside the second pane.
 <gridSplitter:SfGridSplitter>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Navigation Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Navigation Pane" 
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
@@ -189,13 +198,15 @@ The following example creates a nested GridSplitter inside the second pane.
         <gridSplitter:SfGridSplitter Orientation="Vertical">
 
             <gridSplitter:SplitterPane>
-                <Label Text="Top Content" HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />            
+                <Label Text="Top Content"
+                       VerticalTextAlignment="Center" 
+                       HorizontalTextAlignment="Center" />           
             </gridSplitter:SplitterPane>
 
             <gridSplitter:SplitterPane>
-                <Label Text="Bottom Content" HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
+                <Label Text="Bottom Content"
+                       VerticalTextAlignment="Center" 
+                       HorizontalTextAlignment="Center" />
             </gridSplitter:SplitterPane>
         </gridSplitter:SfGridSplitter>
 
@@ -301,11 +312,15 @@ The following simplified syntax produces the same result as the previous example
 <gridSplitter:SfGridSplitter>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label Text="Pane 1" 
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label Text="Pane 2" 
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>

@@ -2,7 +2,7 @@
 layout: post
 title: Splitter Customization in .NET MAUI Grid Splitter | Syncfusion®
 description: Learn how to customize the appearance and behavior of the Syncfusion® .NET MAUI Grid Splitter control.
-platform: MAUI
+platform: maui-toolkit
 control: SfGridSplitter
 documentation: UG
 ---
@@ -32,13 +32,15 @@ By default, the Grid Splitter uses horizontal orientation.
 <gridSplitter:SfGridSplitter Orientation="Horizontal">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Navigation Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Navigation Pane" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Content Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Content Pane"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -91,13 +93,15 @@ The following example arranges panes vertically in Grid Splitter.
 <gridSplitter:SfGridSplitter Orientation="Vertical">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Top Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Top Pane"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Bottom Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Bottom Pane"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -150,13 +154,15 @@ The `SeparatorSize` property specifies the thickness of the separator displayed 
 <gridSplitter:SfGridSplitter SeparatorSize="15">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 1" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 1" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 2" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 2"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -209,13 +215,15 @@ The `SeparatorBackground` property allows you to customize the appearance of the
 <gridSplitter:SfGridSplitter SeparatorBackground="LightBlue">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 1" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 1"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 2" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 2"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -281,13 +289,15 @@ The `ResizeIconColor` property customizes the color of the built-in resize indic
 <gridSplitter:SfGridSplitter ResizeIconColor="Blue">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 1" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 1"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 2" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 2"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -342,13 +352,15 @@ The icon is displayed only when the associated pane has its `IsCollapsible` prop
 <gridSplitter:SfGridSplitter ExpandCollapseIconColor="Red">
 
     <gridSplitter:SplitterPane IsCollapsible="True">
-        <Label Text="Collapsible Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Collapsible Pane"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Content Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Content Pane" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -396,7 +408,7 @@ Content = gridSplitter;
 
 The `ResizeIconTemplate` property allows you to replace the default resize icon with custom content.
 
-The template is applied to all separators created by the GridSplitter.
+The template is applied to all separators created by the Grid Splitter.
 
 {% tabs %}
 {% highlight c# %}
@@ -535,13 +547,15 @@ When RTL is enabled:
 <gridSplitter:SfGridSplitter FlowDirection="RightToLeft">
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 1" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 1" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane>
-        <Label Text="Pane 2" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 2"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -591,19 +605,23 @@ The following example demonstrates several customization properties together.
 {% tabs %}
 {% highlight xaml %}
 
-<gridSplitter:SfGridSplitter Orientation="Horizontal" SeparatorSize="8"
+<gridSplitter:SfGridSplitter Orientation="Horizontal"
                              SeparatorBackground="#E0E0E0"
+                             SeparatorSize="8"
                              ResizeIconColor="#6750A4"
                              ExpandCollapseIconColor="#6750A4">
 
-    <gridSplitter:SplitterPane IsCollapsible="True" Background="LightBlue">
-        <Label Text="Pane 1" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+    <gridSplitter:SplitterPane IsCollapsible="True" 
+                               Background="LightBlue">
+        <Label Text="Pane 1"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane Background="LightGreen">
-        <Label Text="Pane 2" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Pane 2" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>

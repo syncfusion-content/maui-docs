@@ -9,7 +9,7 @@ documentation: UG
 
 # Pane Sizing in .NET MAUI Grid Splitter
 
-The `.NET MAUI Grid Splitter` control provides flexible sizing options through the `Size`, `MinimumSize`, and `MaximumSize` properties of the `SplitterPane` class. These properties help define the initial pane size and control how far a pane can be resized at runtime.
+The [.NET MAUI Grid Splitter]() control provides flexible sizing options through the `Size`, `MinimumSize`, and `MaximumSize` properties of the `SplitterPane` class. These properties help define the initial pane size and control how far a pane can be resized at runtime.
 
 ## Size
 
@@ -97,7 +97,6 @@ Content = gridSplitter;
 
 ![.NET MAUI Grid Splitter Equal Sized Panes](Images/gridsplitter-equalsizedpanes.png)
 
-
 ### Proportional pane sizing
 
 You can assign different size values to allocate space proportionally.
@@ -174,7 +173,7 @@ Content = gridSplitter;
 ![.NET MAUI Grid Splitter Proportional Pane Sizing](Images/gridsplitter-proportionalpanesizing.png)
 
 
-In this example, the panes are distributed in a ratio of 1*:2*:3*.
+In this example, the panes are distributed in a ratio of **1:2:3**.
 
 ---
 
@@ -196,12 +195,14 @@ The following example prevents a pane from shrinking below 120 device-independen
 <gridSplitter:SfGridSplitter>
 
     <gridSplitter:SplitterPane MinimumSize="120">
-        <Label Text="Minimum Size = 120" HorizontalTextAlignment="Center"
+        <Label Text="Minimum Size = 120" 
+               HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane MinimumSize="120">
-        <Label Text="Additional Pane" HorizontalTextAlignment="Center"
+        <Label Text="Additional Pane" 
+               HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
@@ -262,13 +263,15 @@ When resizing, the pane cannot grow beyond the configured maximum size.
 <gridSplitter:SfGridSplitter>
 
     <gridSplitter:SplitterPane MaximumSize="600">
-        <Label Text="Maximum Size = 600" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Maximum Size = 600"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane MaximumSize="600">
-        <Label Text="Additional Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Additional Pane"
+               VerticalTextAlignment="Center" 
+               HorizontalTextAlignment="Center"/>
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -321,14 +324,18 @@ You can combine both properties to define a valid resizing range for a pane.
 
 <gridSplitter:SfGridSplitter>
 
-    <gridSplitter:SplitterPane Size="2*" MinimumSize="100" MaximumSize="400">
-        <Label Text="Resizable between 100 and 400" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+    <gridSplitter:SplitterPane Size="2*" 
+                               MinimumSize="100" 
+                               MaximumSize="400">
+        <Label Text="Resizable between 100 and 400"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
     <gridSplitter:SplitterPane Size="1*">
-        <Label Text="Additional Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+        <Label Text="Additional Pane"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
@@ -412,21 +419,29 @@ The following example demonstrates all sizing properties together.
 <gridSplitter:SfGridSplitter>
 
     <gridSplitter:SplitterPane Size="1*"
-                           MinimumSize="120"
-                           MaximumSize="250"
-                           Background="#E8DEF8">
-        <Label Text="Navigation Pane" HorizontalTextAlignment="Center" 
+                               MinimumSize="120"
+                               MaximumSize="250"
+                               Background="#E8DEF8">
+        <Label Text="Navigation Pane"  
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
+    </gridSplitter:SplitterPane>
+
+    <gridSplitter:SplitterPane Size="2*" 
+                               MinimumSize="250" 
+                               Background="#F7F2FA">
+        <Label Text="Content Pane" 
+               HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
-    <gridSplitter:SplitterPane Size="2*" MinimumSize="250" Background="#F7F2FA">
-        <Label Text="Content Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
-    </gridSplitter:SplitterPane>
-
-    <gridSplitter:SplitterPane Size="1*" MinimumSize="150" MaximumSize="350" Background="#D0BCFF">
-        <Label Text="Details Pane" HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center" />
+    <gridSplitter:SplitterPane Size="1*" 
+                               MinimumSize="150" 
+                               MaximumSize="350" 
+                               Background="#D0BCFF">
+        <Label Text="Details Pane" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" />
     </gridSplitter:SplitterPane>
 
 </gridSplitter:SfGridSplitter>
