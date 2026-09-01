@@ -9,7 +9,7 @@ documentation: UG
 
 # Methods in .NET MAUI Grid Splitter
 
-The [.NET MAUI Grid Splitter] control provides methods to add, remove, collapse, and expand panes programmatically. These methods enable you to dynamically modify the splitter layout at runtime based on user actions or application requirements.
+The [.NET MAUI Grid Splitter]() control provides methods to add, remove, collapse, and expand panes programmatically. These methods enable you to dynamically modify the splitter layout at runtime based on user actions or application requirements.
 
 ## AddPane
 
@@ -27,7 +27,7 @@ SplitterPane pane1 = new SplitterPane()
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 1",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }
@@ -38,7 +38,7 @@ SplitterPane pane2 = new SplitterPane()
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 2",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }
@@ -104,10 +104,10 @@ gridSplitter.AddPane(pane1);
 gridSplitter.AddPane(pane2);
 gridSplitter.AddPane(pane3);
 
+Content = gridSplitter;
+
 // Remove Pane
 gridSplitter.RemovePane(1);
-
-Content = gridSplitter;
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,21 +126,13 @@ The `CollapsePane` method collapses the pane at the specified index.
 {% tabs %}
 {% highlight c# %}
 
-void CollapsePane(int index)
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
 SfGridSplitter gridSplitter = new SfGridSplitter();
 SplitterPane pane1 = new SplitterPane()
 {
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 1",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }
@@ -151,7 +143,7 @@ SplitterPane pane2 = new SplitterPane()
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 2",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }
@@ -161,6 +153,7 @@ gridSplitter.AddPane(pane1);
 gridSplitter.AddPane(pane2);
 Content = gridSplitter;
 
+// Collapse Pane
 gridSplitter.CollapsePane(0);
 
 {% endhighlight %}
@@ -187,7 +180,7 @@ SplitterPane pane1 = new SplitterPane()
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 1",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }
@@ -198,7 +191,7 @@ SplitterPane pane2 = new SplitterPane()
     Size = "1*",
     Content = new Label()
     {
-        Text = "New Pane",
+        Text = "Pane 2",
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center
     }

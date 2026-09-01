@@ -52,12 +52,52 @@ The `GridSplitterResizeStartedEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.ResizeStarted += OnResizeStarted;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The `ResizeStarted` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnResizeStarted(object sender, GridSplitterResizeStartedEventArgs e)
 {
     e.Cancel = true;
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ---
@@ -100,12 +140,51 @@ The `GridSplitterResizingEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.Resizing += OnResizing;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Resizing` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnResizing(object sender, GridSplitterResizingEventArgs e)
 {
     Debug.WriteLine($"Resizing pane at index {e.Indexes}");
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ---
@@ -148,14 +227,52 @@ The `GridSplitterResizeStoppedEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.ResizeStopped += OnResizeStopped ;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `ResizeStopped` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnResizeStopped(object sender, GridSplitterResizeStoppedEventArgs e)
 {
     Debug.WriteLine($"Resize completed for pane {e.Indexes}");
 }
 
 {% endhighlight %}
-{% endtabs %}
 
+{% endtabs %}
 ---
 
 ## Collapsing
@@ -197,12 +314,51 @@ The `GridSplitterPaneCollapsingEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.Collapsing += OnCollapsing ;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Collapsing` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnCollapsing(object sender, GridSplitterPaneCollapsingEventArgs e)
 {
     e.Cancel = true;
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ---
@@ -245,14 +401,52 @@ The `GridSplitterPaneCollapsedEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.Collapsed += OnCollapsed;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Collapsed` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnCollapsed(object sender, GridSplitterPaneCollapsedEventArgs e)
 {
     Debug.WriteLine($"Pane {e.Indexes} collapsed.");
 }
 
 {% endhighlight %}
-{% endtabs %}
 
+{% endtabs %}
 ---
 
 ## Expanding
@@ -294,14 +488,52 @@ The `GridSplitterPaneExpandingEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.Expanding += OnExpanding;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Expanding` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnExpanding(object sender, GridSplitterPaneExpandingEventArgs e)
 {
     Debug.WriteLine($"Expanding pane {e.Indexes}");
 }
 
 {% endhighlight %}
-{% endtabs %}
 
+{% endtabs %}
 ---
 
 ## Expanded
@@ -342,14 +574,52 @@ The `GridSplitterPaneExpandedEventArgs` class contains the following members:
 
 {% highlight c# %}
 
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.Expanded += OnExpanded;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Expanded` event can be handled in C# as follows:
+
+{% tabs %} 
+
+{% highlight c# %}
+
 private void OnExpanded(object sender, GridSplitterPaneExpandedEventArgs e)
 {
     Debug.WriteLine($"Pane {e.Indexes} expanded.");
 }
 
 {% endhighlight %}
-{% endtabs %}
 
+{% endtabs %}
 ---
 
 ## Working with multiple events
@@ -381,6 +651,50 @@ The following example registers all available Grid Splitter events.
 </gridSplitter:SfGridSplitter>
 
 {% endhighlight %}
+{% highlight c# %}
+
+var gridSplitter = new SfGridSplitter();
+
+gridSplitter.ResizeStarted += GridSplitter_ResizeStarted;
+gridSplitter.Resizing += GridSplitter_Resizing;
+gridSplitter.ResizeStopped += GridSplitter_ResizeStopped;
+gridSplitter.Collapsing += GridSplitter_Collapsing;
+gridSplitter.Collapsed += GridSplitter_Collapsed;
+gridSplitter.Expanding += GridSplitter_Expanding;
+gridSplitter.Expanded += GridSplitter_Expanded;
+
+SplitterPane pane1 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 1",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+SplitterPane pane2 = new SplitterPane
+{
+    Content = new Label
+    {
+        Text = "Pane 2",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
+
+gridSplitter.AddPane(pane1);
+gridSplitter.AddPane(pane2);
+
+Content = gridSplitter;
+
+{% endhighlight %}
+{% endtabs %}
+
+All the events can be handled in C# as follows:
+
+{% tabs %} 
+
 {% highlight c# %}
 
 private void GridSplitter_ResizeStarted(object sender, GridSplitterResizeStartedEventArgs e)
@@ -419,6 +733,7 @@ private void GridSplitter_Expanded(object sender, GridSplitterPaneExpandedEventA
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## Event sequence
