@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Interactive Viewer NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.InteractiveViewer](https://www.nuget.org/packages/Syncfusion.Maui.InteractiveViewer/) and install the latest version.
+2. Search for **Syncfusion.Maui.InteractiveViewer** and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -79,7 +79,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Interactive Viewer NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.InteractiveViewer](https://www.nuget.org/packages/Syncfusion.Maui.InteractiveViewer/) and install the latest version.
+2. Search for **Syncfusion.Maui.InteractiveViewer** and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
