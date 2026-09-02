@@ -2,7 +2,7 @@
 layout: post
 title: Telemetry Usage Details in .NET MAUI | Syncfusion
 description: Syncfusion® Telemetry collects anonymous usage data in .NET MAUI to improve product quality, track feature adoption, and guide product planning.
-platform: .NET MAUI
+platform: maui
 component: Common
 documentation: ug
 ---
