@@ -40,4 +40,4 @@ private void OnResetImageClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Reset-in.net-maui-interactive-viewer](images\Reset\Reset-in.net-maui-interactive-viewer.gif){:width="313" height="444" .lazy .shadow-effect}
+![Reset-in.net-maui-interactive-viewer](images\Reset\Reset-in.net-maui-interactive-viewer.gif){:width="313" height="500" .lazy .shadow-effect}

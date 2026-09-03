@@ -10,7 +10,7 @@ keywords: .net maui interactiveviewer, image view maui.
 
 # About Syncfusion® .NET MAUI Interactive Viewer Control 
 
-The .NET MAUI Interactive Viewer provides intuitive navigation of visual content through zooming, panning, and rotating. It delivers a smooth viewing experience across desktop and mobile platforms, making it ideal for displaying large images, diagrams, and other graphical content.
+The `.NET MAUI Interactive Viewer` provides intuitive navigation of visual content through zooming, panning, and rotating. It delivers a smooth viewing experience across desktop and mobile platforms, making it ideal for displaying large images, diagrams, and other graphical content.
 
 ![overview-in.net-maui-interactive-viewer](images\overview\overview-in.net-maui-interactive-viewer.webp){:width="313" height="444" .lazy .shadow-effect}
 
@@ -36,10 +36,10 @@ The .NET MAUI Interactive Viewer provides intuitive navigation of visual content
 
 ## See Also
 
-- Getting Started shows how to begin using the Interactive Viewer control step by step.
-- Zooming and Panning shows how to navigate visual content using zoom and pan interactions.
-- Rotate shows how to rotate visual content to different orientations.
-- Reset shows how to restore the viewer to its default state.
+- [Getting Started](https://help.syncfusion.com/maui/interactive-viewer/getting-started)Getting Started shows how to begin using the Interactive Viewer control step by step.
+- [Zooming and Panning](https://help.syncfusion.com/maui/interactive-viewer/zooming)Zooming and Panning shows how to navigate visual content using zoom and pan interactions.
+- [Rotate](https://help.syncfusion.com/mauiinteractive-viewer/rotation)Rotate shows how to rotate visual content to different orientations.
+- [Reset](https://help.syncfusion.com/maui/interactive-viewer/reset)Reset shows how to restore the viewer to its default state.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and reference UI examples.
 
 ## Resources
