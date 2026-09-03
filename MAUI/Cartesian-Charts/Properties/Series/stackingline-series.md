@@ -33,7 +33,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings" aria-label="View DataLabelSettings property in API reference">DataLabelSettings</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html" aria-label="View CartesianDataLabelSettings type in API reference">CartesianDataLabelSettings</a></td>
-    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the cartesian series.</td>
+    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the Cartesian series.</td>
 </tr>
 
 <tr valign="top">
