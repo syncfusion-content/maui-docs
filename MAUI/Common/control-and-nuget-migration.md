@@ -3,7 +3,7 @@ layout: post
 title: Migrate Xamarin Controls and NuGets to .NET MAUI | Syncfusion®
 description: Learn how to map Syncfusion Xamarin.Forms controls and NuGet packages to their .NET MAUI equivalents.
 platform: MAUI
-control: Common
+control: Essential Studio®
 documentation: UG
 ---
 
