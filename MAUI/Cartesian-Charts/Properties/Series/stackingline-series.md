@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BoxAndWhiskerSeries in .NET MAUI Cartesian Chart | Syncfusion®
+title: StackingLineSeries in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# BoxAndWhiskerSeries API Reference in .NET MAUI Cartesian Chart
+# StackingLineSeries API Reference in .NET MAUI Cartesian Chart
 
 ## Properties
 
@@ -31,21 +31,15 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode" aria-label="View BoxPlotMode property in API reference">BoxPlotMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html" aria-label="View BoxPlotMode type in API reference">BoxPlotMode</a></td>
-    <td>Determines how the <code>quartiles</code> and <code>whiskers</code> of the box plot are calculated from the data.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings" aria-label="View DataLabelSettings property in API reference">DataLabelSettings</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html" aria-label="View CartesianDataLabelSettings type in API reference">CartesianDataLabelSettings</a></td>
-    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the Cartesian series.</td>
+    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the cartesian series.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_EmptyPointMode" aria-label="View EmptyPointMode property in API reference">EmptyPointMode</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html" aria-label="View EmptyPointMode type in API reference">EmptyPointMode</a></td>
-    <td>Determines how <code>null</code> or <code>NaN</code> data points are rendered, such as showing a <code>gap</code>, hiding the point, or drawing an <code>average value</code>.</td>
+    <td>Determines how <code>null</code> or <code>NaN</code> data points are rendered, such as showing a <code>gap</code>, hiding the point, or drawing a <code>zero</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -69,7 +63,13 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Fill" aria-label="View Fill property in API reference">Fill</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Paints the <code>interior</code> of the series segments.</td>
+    <td>Paints the <code>interior</code> of the stacked line segments of the series.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel" aria-label="View GroupingLabel property in API reference">GroupingLabel</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Groups stacking line series by giving matching <code>labels</code> to two or more series, allowing them to <code>stack on top</code> of another stacked group rather than stacking onto each other.</td>
 </tr>
 
 <tr valign="top">
@@ -121,15 +121,15 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Opacity" aria-label="View Opacity property in API reference">Opacity</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Controls the <code>transparency</code> of the series.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_MarkerSettings" aria-label="View MarkerSettings property in API reference">MarkerSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html" aria-label="View ChartMarkerSettings type in API reference">ChartMarkerSettings</a></td>
+    <td>Customizes the <code>appearance</code> of data point markers, such as their <code>shape</code>, <code>size</code>, <code>fill</code>, <code>stroke</code>, and <code>offset</code>.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_OutlierShapeType" aria-label="View OutlierShapeType property in API reference">OutlierShapeType</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html" aria-label="View ShapeType type in API reference">ShapeType</a></td>
-    <td>Defines the <code>geometric shape</code> used to render outliers that fall outside the whiskers.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Opacity" aria-label="View Opacity property in API reference">Opacity</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Controls the <code>transparency</code> of the series.</td>
 </tr>
 
 <tr valign="top">
@@ -157,15 +157,9 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian" aria-label="View ShowMedian property in API reference">ShowMedian</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingLineSeries.html#Syncfusion_Maui_Charts_StackingLineSeries_ShowMarkers" aria-label="View ShowMarkers property in API reference">ShowMarkers</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays a <code>horizontal line</code> across the box to indicate the <code>median value</code> of the dataset.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowOutlier" aria-label="View ShowOutlier property in API reference">ShowOutlier</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays <code>markers</code> for values that fall outside the <code>whisker range</code>, highlighting them as <code>outliers</code>.</td>
+    <td>Determines whether <code>markers</code> are rendered at each data point along the stacked line.</td>
 </tr>
 
 <tr valign="top">
@@ -175,15 +169,15 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Spacing" aria-label="View Spacing property in API reference">Spacing</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Controls the <code>horizontal spacing</code> between adjacent box plot segments.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Paints the <code>stroke</code> applied to the stacked line of the series.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Paints the <code>outline</code> of the box and whiskers.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_StrokeDashArray" aria-label="View StrokeDashArray property in API reference">StrokeDashArray</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.doublecollection" aria-label="View DoubleCollection type in API reference">DoubleCollection</a></td>
+    <td>Creates a <code>dashed</code> or <code>dotted stroke pattern</code> along the stacked line by specifying the lengths of alternating <code>dashes</code> and <code>gaps</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -208,12 +202,6 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Trendlines" aria-label="View Trendlines property in API reference">Trendlines</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendlineCollection.html" aria-label="View ChartTrendlineCollection type in API reference">ChartTrendlineCollection</a></td>
     <td>Adds <code>trendlines</code> to the series to visualize data trends and forecast future values.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Width" aria-label="View Width property in API reference">Width</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Adjusts the <code>horizontal width</code> of the box plot segment relative to the available segment space.</td>
 </tr>
 
 <tr valign="top">
@@ -263,6 +251,12 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_GetDataPointIndex_System_Single_System_Single_" aria-label="View GetDataPointIndex method in API reference">GetDataPointIndex(Single, Single)</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View int type in API reference">int</a></td>
+    <td>Retrieves the <code>index</code> of the data point closest to the specified <code>screen coordinates</code>.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_GetDataPoints_System_Double_System_Double_System_Double_System_Double_" aria-label="View GetDataPoints method in API reference">GetDataPoints(Double, Double, Double, Double)</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" aria-label="View List type in API reference">List&lt;</a><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" aria-label="View List type in API reference">&gt;</a></td>
     <td>Retrieves the data points that fall within the specified <code>x</code> and <code>y value ranges</code>.</td>
@@ -272,12 +266,6 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_GetDataPoints_Microsoft_Maui_Graphics_Rect_" aria-label="View GetDataPoints method in API reference">GetDataPoints(Rect)</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" aria-label="View List type in API reference">List&lt;</a><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" aria-label="View List type in API reference">&gt;</a></td>
     <td>Retrieves the data points that fall within the specified <code>rectangular region</code> of the plotting area.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_GetDataPointIndex_System_Single_System_Single_" aria-label="View GetDataPointIndex method in API reference">GetDataPointIndex(Single, Single)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View int type in API reference">int</a></td>
-    <td>Retrieves the <code>index</code> of the data point closest to the specified <code>screen coordinates</code>.</td>
 </tr>
 
 <tr valign="top">

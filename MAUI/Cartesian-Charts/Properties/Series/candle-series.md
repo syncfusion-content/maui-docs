@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BoxAndWhiskerSeries in .NET MAUI Cartesian Chart | Syncfusion®
+title: CandleSeries in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# BoxAndWhiskerSeries API Reference in .NET MAUI Cartesian Chart
+# CandleSeries API Reference in .NET MAUI Cartesian Chart
 
 ## Properties
 
@@ -31,15 +31,27 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode" aria-label="View BoxPlotMode property in API reference">BoxPlotMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html" aria-label="View BoxPlotMode type in API reference">BoxPlotMode</a></td>
-    <td>Determines how the <code>quartiles</code> and <code>whiskers</code> of the box plot are calculated from the data.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BearishFill" aria-label="View BearishFill property in API reference">BearishFill</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Paints the <code>interior</code> of the candlesticks when the <code>close price</code> is lower than the <code>open price</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_BullishFill" aria-label="View BullishFill property in API reference">BullishFill</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Paints the <code>interior</code> of the candlesticks when the <code>close price</code> is higher than the <code>open price</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Close" aria-label="View Close property in API reference">Close</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Maps a <code>property</code> from the data source to the <code>close price value</code> for each candlestick.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings" aria-label="View DataLabelSettings property in API reference">DataLabelSettings</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html" aria-label="View CartesianDataLabelSettings type in API reference">CartesianDataLabelSettings</a></td>
-    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the Cartesian series.</td>
+    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the cartesian series.</td>
 </tr>
 
 <tr valign="top">
@@ -61,6 +73,12 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_EnableSolidCandle" aria-label="View EnableSolidCandle property in API reference">EnableSolidCandle</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+    <td>Fills the candlesticks with the <code>bearish</code> and <code>bullish colors</code> instead of leaving the bullish candles hollow.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip" aria-label="View EnableTooltip property in API reference">EnableTooltip</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
     <td>Displays a <code>tooltip</code> when tapping or hovering over a data point to show its details.</td>
@@ -70,6 +88,12 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Fill" aria-label="View Fill property in API reference">Fill</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td>Paints the <code>interior</code> of the series segments.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_High" aria-label="View High property in API reference">High</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Maps a <code>property</code> from the data source to the <code>high price value</code> for each candlestick.</td>
 </tr>
 
 <tr valign="top">
@@ -121,15 +145,21 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Low" aria-label="View Low property in API reference">Low</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Maps a <code>property</code> from the data source to the <code>low price value</code> for each candlestick.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Opacity" aria-label="View Opacity property in API reference">Opacity</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
     <td>Controls the <code>transparency</code> of the series.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_OutlierShapeType" aria-label="View OutlierShapeType property in API reference">OutlierShapeType</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html" aria-label="View ShapeType type in API reference">ShapeType</a></td>
-    <td>Defines the <code>geometric shape</code> used to render outliers that fall outside the whiskers.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Open" aria-label="View Open property in API reference">Open</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td>Maps a <code>property</code> from the data source to the <code>open price value</code> for each candlestick.</td>
 </tr>
 
 <tr valign="top">
@@ -157,33 +187,21 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian" aria-label="View ShowMedian property in API reference">ShowMedian</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays a <code>horizontal line</code> across the box to indicate the <code>median value</code> of the dataset.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowOutlier" aria-label="View ShowOutlier property in API reference">ShowOutlier</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays <code>markers</code> for values that fall outside the <code>whisker range</code>, highlighting them as <code>outliers</code>.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ShowTrackballLabel" aria-label="View ShowTrackballLabel property in API reference">ShowTrackballLabel</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
     <td>Displays a <code>label</code> for the series when the trackball intersects it.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Spacing" aria-label="View Spacing property in API reference">Spacing</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Spacing" aria-label="View Spacing property in API reference">Spacing</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Controls the <code>horizontal spacing</code> between adjacent box plot segments.</td>
+    <td>Controls the <code>horizontal spacing</code> between adjacent candlesticks.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Paints the <code>outline</code> of the box and whiskers.</td>
+    <td>Paints the <code>outline</code> of the candlesticks.</td>
 </tr>
 
 <tr valign="top">
@@ -211,9 +229,9 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Width" aria-label="View Width property in API reference">Width</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FinancialSeriesBase.html#Syncfusion_Maui_Charts_FinancialSeriesBase_Width" aria-label="View Width property in API reference">Width</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Adjusts the <code>horizontal width</code> of the box plot segment relative to the available segment space.</td>
+    <td>Adjusts the <code>horizontal width</code> of the candlestick relative to the available segment space.</td>
 </tr>
 
 <tr valign="top">

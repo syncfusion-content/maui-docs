@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BoxAndWhiskerSeries in .NET MAUI Cartesian Chart | Syncfusion®
+title: HistogramSeries in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# BoxAndWhiskerSeries API Reference in .NET MAUI Cartesian Chart
+# HistogramSeries API Reference in .NET MAUI Cartesian Chart
 
 ## Properties
 
@@ -31,15 +31,15 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_BoxPlotMode" aria-label="View BoxPlotMode property in API reference">BoxPlotMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxPlotMode.html" aria-label="View BoxPlotMode type in API reference">BoxPlotMode</a></td>
-    <td>Determines how the <code>quartiles</code> and <code>whiskers</code> of the box plot are calculated from the data.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_CurveStyle" aria-label="View CurveStyle property in API reference">CurveStyle</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html" aria-label="View ChartLineStyle type in API reference">ChartLineStyle</a></td>
+    <td>Customizes the <code>appearance</code> of the normal distribution curve, such as its <code>stroke color</code>, <code>thickness</code>, and <code>dash pattern</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings" aria-label="View DataLabelSettings property in API reference">DataLabelSettings</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html" aria-label="View CartesianDataLabelSettings type in API reference">CartesianDataLabelSettings</a></td>
-    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the Cartesian series.</td>
+    <td>Customizes the <code>appearance</code>, <code>position</code>, and <code>formatting</code> of the data labels in the cartesian series.</td>
 </tr>
 
 <tr valign="top">
@@ -70,6 +70,12 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Fill" aria-label="View Fill property in API reference">Fill</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td>Paints the <code>interior</code> of the series segments.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_HistogramInterval" aria-label="View HistogramInterval property in API reference">HistogramInterval</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Defines the <code>width</code> of each histogram <code>bin</code> along the <code>x-axis</code>. Smaller values produce more bins and <code>finer detail</code>, while larger values produce wider bins that summarize <code>broader ranges</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -127,12 +133,6 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_OutlierShapeType" aria-label="View OutlierShapeType property in API reference">OutlierShapeType</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html" aria-label="View ShapeType type in API reference">ShapeType</a></td>
-    <td>Defines the <code>geometric shape</code> used to render outliers that fall outside the whiskers.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_PaletteBrushes" aria-label="View PaletteBrushes property in API reference">PaletteBrushes</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList type in API reference">IList&lt;</a><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList type in API reference">&gt;</a></td>
     <td>Applies a <code>sequence of brushes</code> to the series segments, cycling through the list for each point.</td>
@@ -157,15 +157,9 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowMedian" aria-label="View ShowMedian property in API reference">ShowMedian</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_ShowNormalDistributionCurve" aria-label="View ShowNormalDistributionCurve property in API reference">ShowNormalDistributionCurve</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays a <code>horizontal line</code> across the box to indicate the <code>median value</code> of the dataset.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_ShowOutlier" aria-label="View ShowOutlier property in API reference">ShowOutlier</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-    <td>Displays <code>markers</code> for values that fall outside the <code>whisker range</code>, highlighting them as <code>outliers</code>.</td>
+    <td>Determines whether to overlay a <code>normal distribution curve</code> on top of the histogram, making it easier to visualize how closely the data follows a <code>bell-curve distribution</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -175,15 +169,9 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Spacing" aria-label="View Spacing property in API reference">Spacing</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Controls the <code>horizontal spacing</code> between adjacent box plot segments.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td>Paints the <code>outline</code> of the box and whiskers.</td>
+    <td>Paints the <code>outline</code> of the histogram segments.</td>
 </tr>
 
 <tr valign="top">
@@ -208,12 +196,6 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Trendlines" aria-label="View Trendlines property in API reference">Trendlines</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendlineCollection.html" aria-label="View ChartTrendlineCollection type in API reference">ChartTrendlineCollection</a></td>
     <td>Adds <code>trendlines</code> to the series to visualize data trends and forecast future values.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html#Syncfusion_Maui_Charts_BoxAndWhiskerSeries_Width" aria-label="View Width property in API reference">Width</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
-    <td>Adjusts the <code>horizontal width</code> of the box plot segment relative to the available segment space.</td>
 </tr>
 
 <tr valign="top">
