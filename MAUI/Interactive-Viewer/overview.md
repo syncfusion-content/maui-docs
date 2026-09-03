@@ -36,10 +36,10 @@ The `.NET MAUI Interactive Viewer` provides intuitive navigation of visual conte
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/interactive-viewer/getting-started)Getting Started shows how to begin using the Interactive Viewer control step by step.
-- [Zooming and Panning](https://help.syncfusion.com/maui/interactive-viewer/zooming)Zooming and Panning shows how to navigate visual content using zoom and pan interactions.
-- [Rotate](https://help.syncfusion.com/mauiinteractive-viewer/rotation)Rotate shows how to rotate visual content to different orientations.
-- [Reset](https://help.syncfusion.com/maui/interactive-viewer/reset)Reset shows how to restore the viewer to its default state.
+- Getting Started shows how to begin using the Interactive Viewer control step by step.
+- Zooming and Panning shows how to navigate visual content using zoom and pan interactions.
+- Rotate shows how to rotate visual content to different orientations.
+- Reset shows how to restore the viewer to its default state.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and reference UI examples.
 
 ## Resources
