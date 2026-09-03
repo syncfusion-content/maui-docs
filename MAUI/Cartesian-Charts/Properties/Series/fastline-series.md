@@ -47,7 +47,7 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html" aria-label="View EmptyPointSettings type in API reference">EmptyPointSettings</a></td>
     <td>Configures how <code>empty</code> or <code>missing data points</code> are visually represented, such as their fill or stroke color.</td>
 </tr>
-
+ 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html#Syncfusion_Maui_Charts_FastLineSeries_EnableAntiAliasing" aria-label="View EnableAntiAliasing property in API reference">EnableAntiAliasing</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>

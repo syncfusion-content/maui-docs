@@ -11,7 +11,7 @@ documentation: ug
 
 This page lists the public properties, methods, and events of the series base classes and every Cartesian series type.
 
-<table>
+<table>  
 <tr>
     <th>Class</th>
     <th>Description</th>
