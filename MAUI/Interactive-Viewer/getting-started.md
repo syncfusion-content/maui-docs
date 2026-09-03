@@ -10,7 +10,7 @@ keywords: .net maui interactiveviewer, image view maui.
 
 # Getting Started with .NET MAUI Interactive Viewer
 
-This section provides a quick overview of how to get started with the `.NET MAUI Interactive Viewer` (SfInteractiveViewer) and a walkthrough to configure the control in a real-time scenario. Follow the steps below to add the .NET MAUI Interactive Viewer control to your project.
+This section provides a quick overview of how to get started with the `.NET MAUI Interactive Viewer (SfInteractiveViewer)` and a walkthrough to configure the control in a real-time scenario. Follow the steps below to add the .NET MAUI Interactive Viewer control to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
