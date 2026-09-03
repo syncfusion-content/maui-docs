@@ -150,6 +150,12 @@ line-height: 1;
 <div class="controlanchorlink">
 <a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-maps"></span>Smart Location Search</a>
 </div>
+
+<div><p class="category-topics">Rich Text Editor</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/SmartRichTextEditor/Smart-Formatting" aria-label="Rich Text Editor Smart Formatting"><span class="sf-home-icon sf-icon-rich-text-editor"></span>Smart Formatting</a>
+</div>
 </td>
 </tr>
 </table>
