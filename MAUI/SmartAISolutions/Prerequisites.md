@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prerequisites for the AI solution samples | Syncfusion®
-description: Learn about the prerequisites for AI solution samples in Syncfusion® .NET MAUI control.
+description: Learn the prerequisites for using AI solution samples with Syncfusion® .NET MAUI controls and get started quickly.
 platform: maui
 control: SfAutocomplete
 documentation: ug
