@@ -18,49 +18,8 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 Azure OpenAI can analyze historical stock data and predict future trends. The model identifies patterns and generates financial (Open, High, Low, Close) values for upcoming days.
 
-### 1. Configure Azure OpenAI Service
 
-Ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and a deployed model in the Azure portal. Set up the service endpoint and API key. You can find the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/).
-
-{% tabs %}
-
-{% highlight c# %}
-
-internal class AzureOpenAIService
-{
-
-    internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-    internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-    internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
-
-    internal const string Key = "API_KEY";
-
-    public AzureOpenAIService()
-    {
-
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-To set up a connection to the Azure OpenAI service, create an `OpenAIClient` instance when needed:
-
-{% tabs %}
-
-{% highlight c# %}
-
-//At the time of required.
-var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### 2. Generate Prompts and Retrieve AI Predictions
+### 1. Generate Prompts and Retrieve AI Predictions
 
 Prepare a structured prompt with historical data for the AI model, this helps to get more accurately predicted values.
 
@@ -121,7 +80,7 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
 
 {% endtabs %}
 
-### 3. Implement the Syncfusion .NET MAUI Cartesian Chart to display forecasted data.
+### 2. Implement the Syncfusion .NET MAUI Cartesian Chart to display forecasted data.
 
 The [Syncfusion .NET MAUI Cartesian Chart Candle series](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display financial data. Define the data Model that holds the financial data (High, Low, Open, Close) and ViewModel that holds the collection of data for binding.
 
@@ -188,7 +147,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 4. Display Data Using Syncfusion Cartesian Chart
+### 3. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display both historical and forecasted data:
 
@@ -229,7 +188,7 @@ Bind your ViewModel to the chart and display both historical and forecasted data
 
 {% endtabs %}
 
-### 5. Trigger AI Forecasting
+### 4. Trigger AI Forecasting
 
 Invoke the AI service when the user clicks a button:
 
