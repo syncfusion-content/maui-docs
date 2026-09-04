@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Integrate AI for anomaly detection in .NET MAUI Data Grid | Syncfusion
-description: Learn all about the Integrate AI for anomaly detection feature in Syncfusion® .NET MAUI Data Grid, including its capabilities, configuration, and usage.
-platform: MAUI
-control: SfDataGrid
+title: Prerequisites for the AI solution samples | Syncfusion®
+description: Learn the prerequisites for using AI solution samples with Syncfusion® .NET MAUI controls and get started quickly.
+platform: maui
+control: SfAutocomplete
 documentation: ug
 ---
-
 # Integrating Azure OpenAI with the .NET MAUI App
 
 ## Step 1: Set Up Azure OpenAI Service
