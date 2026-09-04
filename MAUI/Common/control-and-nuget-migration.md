@@ -3,7 +3,7 @@ layout: post
 title: Migrate Xamarin Controls and NuGets to .NET MAUI | Syncfusion®
 description: Learn how to map Syncfusion Xamarin.Forms controls and NuGet packages to their .NET MAUI equivalents.
 platform: MAUI
-control: Common
+control: Essential Studio®
 documentation: UG
 ---
 
@@ -55,7 +55,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfNumericTextBox | Syncfusion.Xamarin.SfNumericTextBox | [SfNumericEntry](/maui/NumericEntry/Overview) | [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) |
 | SfNumericUpDown | Syncfusion.Xamarin.SfNumericUpDown | [SfNumericEntry](/maui/NumericEntry/Overview) | [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) |
 | SfParallaxView | Syncfusion.Xamarin.SfParallaxView | [SfParallaxView](/maui/parallax-view/overview) | [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView) |
-| SfPdfViewer | Syncfusion.Xamarin.SfPdfViewer | [SfPdfViewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) | [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) |
+| SfPdfViewer | Syncfusion.Xamarin.SfPdfViewer | [SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started) | [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) |
 | SfPicker | Syncfusion.Xamarin.SfPicker | [SfPicker](/maui/Picker/overview) | [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) |
 | SfPopUpLayout | Syncfusion.Xamarin.SfPopupLayout | [SfPopup](/maui/Popup/overview) | [Syncfusion.Maui.Popup](https://www.nuget.org/packages/Syncfusion.Maui.Popup) |
 | SfPullToRefresh | Syncfusion.Xamarin.SfPullToRefresh | [SfPullToRefresh](/maui/Pull-to-Refresh/overview) | [Syncfusion.Maui.PullToRefresh](https://www.nuget.org/packages/Syncfusion.Maui.PullToRefresh) |
@@ -64,7 +64,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfRangeSlider | Syncfusion.Xamarin.SfRangeSlider | [SfRangeSlider](/maui/Range-Slider/overview) | [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) |
 | SfRating | Syncfusion.Xamarin.SfRating | [SfRating](/maui/Rating/Overview) | [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) |
 | SfRotator | Syncfusion.Xamarin.SfRotator | [SfRotator](/maui/Rotator/Overview) | [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) |
-| SfSchedule | Syncfusion.Xamarin.SfSchedule | [SfScheduler](https://help.syncfusion.com/maui/scheduler/getting-started) | [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) |
+| SfSchedule | Syncfusion.Xamarin.SfSchedule | [SfScheduler](https://help.syncfusion.com/scheduler-sdk/maui/schedule/overview) | [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) |
 | SfSegmentedControl | Syncfusion.Xamarin.Buttons | [SfSegmentedControl](/maui/Segmented-Control/overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
 | SfShimmer | Syncfusion.Xamarin.Core | [SfShimmer](/maui/shimmer/overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfSignaturePad | Syncfusion.Xamarin.SfSignaturePad | [SfSignaturePad](/maui/SignaturePad/overview) | [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) |
