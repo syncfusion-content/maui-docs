@@ -3,7 +3,7 @@ layout: post
 title: Prerequisites for the AI solution samples | Syncfusion®
 description: Learn the prerequisites for using AI solution samples with Syncfusion® .NET MAUI controls and get started quickly.
 platform: maui
-control: SfAutocomplete
+control: .NET MAUI
 documentation: ug
 ---
 # Integrating Azure OpenAI with the .NET MAUI App
@@ -18,7 +18,7 @@ Before enabling AI, ensure that you have access to [Azure OpenAI](https://azure.
 
 1. Log in to the [Azure Portal](https://portal.azure.com/)
 2. Create a new OpenAI resource (or use an existing one)
-3. Deploy a **GPT-4o** model (or GPT-4 Turbo) for text analysis
+3. Deploy the model you want (for example GPT-4o) for analysis
 4. Copy your deployment name, endpoint URL, and API key from the **Keys and Endpoint** section
 
 **Install NuGet Package:**
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
 internal class AzureOpenAIService
 {
     const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT-4O";
+    const string deploymentName = "Deployment Name";
     const string imageDeploymentName = "DALL-E";
     string key = "API key";
     
@@ -98,13 +98,13 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 {
     if (this.Client != null && this.chatCompletions != null)
     {
-        // Add the system message and user message to the options.
-        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
+        // Add the system and user messages to the chat request.
+        // These messages provide the assistant instructions and the user's prompt.
+
         this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
         try
         {
-            var response = await Client.GetChatCompletionsAsync(this.chatCompletions);
-            return response.Value.Choices[0].Message.Content;
+            // Send the chat completion request and return the AI-generated response.
         }
         catch
         {
