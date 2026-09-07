@@ -3,7 +3,7 @@ layout: post
 title: Migrate Xamarin Controls and NuGets to .NET MAUI | Syncfusion®
 description: Learn how to map Syncfusion Xamarin.Forms controls and NuGet packages to their .NET MAUI equivalents.
 platform: MAUI
-control: Essential Studio®
+control: Common
 documentation: UG
 ---
 
@@ -21,7 +21,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfBackdropPage | Syncfusion.Xamarin.SfBackdrop | [SfBackdropPage](/maui/Backdrop/overview) | [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop) |
 | SfBadgeView | Syncfusion.Xamarin.SfBadgeView | [SfBadgeView](/maui/Badge-View/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfBarcode | Syncfusion.Xamarin.SfBarcode | [SfBarcodeGenerator](/maui/Barcode-Generator/overview) | [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode) |
-| SfBorder | Syncfusion.Xamarin.Core | Obsolete. Use Border | – |
+| SfBorder | Syncfusion.Xamarin.Core | Obsolete. Use [Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) | – |
 | SfButton | Syncfusion.Xamarin.Buttons | [SfButton](/maui/Button/Overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
 | SfBusyIndicator | Syncfusion.Xamarin.SfBusyIndicator | [SfBusyIndicator](/maui/busy-indicator/overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfCalendar | Syncfusion.Xamarin.SfCalendar | [SfCalendar](/maui/calendar/overview) | [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar) |
@@ -30,7 +30,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfChart | Syncfusion.Xamarin.SfChart | [SfCartesianChart](/maui/cartesian-charts/overview)<br>[SfCircularChart](/maui/circular-charts/overview)<br>[SfFunnelChart](/maui/funnel-charts/overview)<br>[SfPolarChart](/maui/polar-charts/Overview)<br>[SfPyramidChart](/maui/pyramid-charts/overview) | [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts) |
 | SfChat | Syncfusion.Xamarin.SfChat | [SfChat](/maui/Chat/overview) | [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) |
 | SfCheckBox | Syncfusion.Xamarin.Buttons | [SfCheckBox](/maui/CheckBox/Overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
-| SfChips | Syncfusion.Xamarin.Buttons | [SfChip, SfChipGroup](/maui/Chips/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
+| SfChips | Syncfusion.Xamarin.Buttons | [SfChips](/maui/Chips/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfCircularGauge | Syncfusion.Xamarin.SfGauge | [SfRadialGauge](/maui/Radial-Gauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
 | SfCircularProgressBar | Syncfusion.Xamarin.SfProgressBar | [SfCircularProgressBar](/maui/CircularProgressBar/overview) | [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar) |
 | SfComboBox | Syncfusion.Xamarin.SfComboBox | [SfComboBox](/maui/ComboBox/Overview) | [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) |
@@ -39,11 +39,11 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfDatePicker | Syncfusion.Xamarin.SfPicker | [SfDatePicker](/maui/DatePicker/overview) | [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) |
 | SfDateTimePicker | Syncfusion.Xamarin.SfPicker | [SfDateTimePicker](/maui/DateTimePicker/overview) | [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) |
 | SfDateTimeRangeNavigator | Syncfusion.Xamarin.SfChart | [SfDateTimeRangeSlider](/maui/DateTime-Range-Slider/overview) | [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) |
-| SfDiagram | Syncfusion.Xamarin.SfDiagram | Obsolete. Use Syncfusion® Blazor Diagram. | – |
+| SfDiagram | Syncfusion.Xamarin.SfDiagram | Obsolete. Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview). | – |
 | SfDigitalGauge | Syncfusion.Xamarin.SfGauge | [SfDigitalGauge](/maui/digitalgauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
 | SfEffectsView | Syncfusion.Xamarin.Core | [SfEffectsView](/maui/Effects-View/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfExpander | Syncfusion.Xamarin.Expander | [SfExpander](/maui/Expander/overview) | [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) |
-| SfGradientView | Syncfusion.Xamarin.Core | Obsolete. Use Gradients | – |
+| SfGradientView | Syncfusion.Xamarin.Core | Obsolete. Use [Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) | – |
 | SfImageEditor | Syncfusion.Xamarin.SfImageEditor | [SfImageEditor](/maui/ImageEditor/overview) | [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor) |
 | SfKanban | Syncfusion.Xamarin.SfKanban | [SfKanban](/maui/kanban-board/overview) | [Syncfusion.Maui.Kanban](https://www.nuget.org/packages/Syncfusion.Maui.Kanban) |
 | SfLinearGauge | Syncfusion.Xamarin.SfGauge | [SfLinearGauge](/maui/Linear-Gauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
@@ -68,7 +68,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfSegmentedControl | Syncfusion.Xamarin.Buttons | [SfSegmentedControl](/maui/Segmented-Control/overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
 | SfShimmer | Syncfusion.Xamarin.Core | [SfShimmer](/maui/shimmer/overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfSignaturePad | Syncfusion.Xamarin.SfSignaturePad | [SfSignaturePad](/maui/SignaturePad/overview) | [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) |
-| SfSparkline | Syncfusion.Xamarin.SfSparkline | SfSparkChart - available in Toolkit | [Syncfusion.Maui.Toolkit](https://www.nuget.org/packages/Syncfusion.Maui.Toolkit) |
+| SfSparkline | Syncfusion.Xamarin.SfSparkline | [SfSparkChart](https://help.syncfusion.com/maui-toolkit/spark-charts/overview) - available in Toolkit | [Syncfusion.Maui.Toolkit](https://www.nuget.org/packages/Syncfusion.Maui.Toolkit) |
 | SfStepProgressBar | Syncfusion.Xamarin.SfProgressBar | [SfStepProgressBar](/maui/StepProgressBar/overview) | [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar) |
 | SfSunburstChart | Syncfusion.Xamarin.SfSunburstChart | [SfSunburstChart](/maui/SunburstChart/Overview) | [Syncfusion.Maui.SunburstChart](https://www.nuget.org/packages/Syncfusion.Maui.SunburstChart) |
 | SfSwitch | Syncfusion.Xamarin.Buttons | [SfSwitch](/maui/Switch/Overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
@@ -82,9 +82,9 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 
 The following Xamarin.Forms controls have no direct Syncfusion® .NET MAUI counterpart and are marked as obsolete:
 
-* **SfBorder** - Use the .NET MAUI **Border** element.
-* **SfGradientView** - Use .NET MAUI gradients (**LinearGradientBrush**, **RadialGradientBrush**).
-* **SfDiagram** - Use Syncfusion® Blazor Diagram hosted in the .NET MAUI application.
+* **SfBorder** - Use the [.NET MAUI Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) element.
+* **SfGradientView** - Use [.NET MAUI Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) (**LinearGradientBrush**, **RadialGradientBrush**).
+* **SfDiagram** - Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview) hosted in the .NET MAUI application.
 
 ## Notes on specific migrations
 
@@ -93,7 +93,7 @@ The following Xamarin.Forms controls have no direct Syncfusion® .NET MAUI count
 * **Pickers share one package**: [SfDatePicker](/maui/DatePicker/overview), [SfDateTimePicker](/maui/DateTimePicker/overview), [SfTimePicker](/maui/TimePicker/overview), and [SfPicker](/maui/Picker/overview) all ship in [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker).
 * **Gauges share one package**: [SfRadialGauge](/maui/Radial-Gauge/overview) (replaces **SfCircularGauge**), [SfLinearGauge](/maui/Linear-Gauge/overview), and [SfDigitalGauge](/maui/DigitalGauge/overview) all ship in [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges).
 * **Progress bars share one package**: [SfCircularProgressBar](/maui/CircularProgressBar/overview), [SfLinearProgressBar](/maui/LinearProgressBar/overview), and [SfStepProgressBar](/maui/StepProgressBar/overview) all ship in [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar).
-* **SfSparkline is now Toolkit-only**: The .NET MAUI equivalent, **SfSparkChart**, ships in the [Syncfusion.Maui.Toolkit](https://www.nuget.org/packages/Syncfusion.Maui.Toolkit) package rather than a chart-specific package.
+* **SfSparkline is now Toolkit-only**: The .NET MAUI equivalent, [SfSparkChart](https://help.syncfusion.com/maui-toolkit/spark-charts/overview) ships in the [Syncfusion.Maui.Toolkit](https://www.nuget.org/packages/Syncfusion.Maui.Toolkit) package rather than a chart-specific package.
 * **Shared package note**: [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a shared package used by several lightweight controls ([SfAvatarView](/maui/Avatar-view/Overview), [SfBadgeView](/maui/Badge-View/Overview), [SfBusyIndicator](/maui/busy-indicator/overview), [SfChips](/maui/Chips/Overview), [SfEffectsView](/maui/Effects-View/Overview), [SfShimmer](/maui/shimmer/overview), [SfTextInputLayout](/maui/TextInputLayout/Overview)) - a single install covers them all.
 
 ## See also
