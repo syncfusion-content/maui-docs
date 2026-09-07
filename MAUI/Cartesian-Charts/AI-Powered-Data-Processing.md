@@ -18,40 +18,41 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 ## Integrating Azure OpenAI for cleaning and preprocessing the data
 
-Azure OpenAI can process your raw data and return a cleaned version, handling missing values and outliers automatically. This integration allows you to focus on analysis and visualization, rather than manual data correction.
-
-### 1. Generate Prompts to clean the raw data
-
-Prepare your raw data and format a prompt for Azure OpenAI. The prompt should describe the cleaning task and provide the data in a clear format.
-
-Example raw data:
-
-| Date       | Visitors |
-|------------|----------|
-| 2024-08-01 | 1200     | 
-| 2024-08-02 |          | // Missing value
-| 2024-08-03 | 1300     | 
-| 2024-08-04 | 1500     |
-| 2024-08-05 | 10000    | // Outlier
-
-Send the prompt and receive the cleaned data from Azure OpenAI. Here’s an example of how you can frame your prompt and receive the response.
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
 
 {% tabs %}
-
 {% highlight c# %}
 
-var prompt = $"Clean the following e-commerce website traffic data, resolve outliers, and fill missing values:\n{string.Join("\n", rawData.Select(d => $"{d.DateTime:yyyy-MM-dd-HH-m-ss}: {d.Visitors}"))} and the output cleaned data should be in the yyyy-MM-dd-HH-m-ss:Value";
+public async Task<ObservableCollection<DataPreprocessingModel>> GetResultsFromAI(ObservableCollection<DataPreprocessingModel> rawData)
+{
+    ObservableCollection<DataPreprocessingModel> collection = new ObservableCollection<DataPreprocessingModel>();
 
-var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-var response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+    var prompt = $"Clean the following e-commerce website traffic data, resolve outliers and fill missing values:\n{string.Join("\n", rawData.Select(d => $"{d.DateTime:yyyy-MM-dd-HH-m-ss}: {d.Visitors}"))} and the output cleaned data should be in the yyyy-MM-dd-HH-m-ss:Value, not required explanations";
+
+    ChatHistory = string.Empty;
+    ChatHistory = ChatHistory + prompt;
+
+    try
+    {
+        //throw new NotImplementedException("");
+        if (IsCredentialValid && Client != null)
+        {
+            var response = await Client.CompleteAsync(ChatHistory);
+            return GetCleanedData(response.ToString(), collection);
+        }
+    }
+    catch (Exception)
+    {
+        return await Task.FromResult(GetDummyData(collection));
+    }
+
+    return await Task.FromResult(GetDummyData(collection));
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
-You can use this approach for any time-series or tabular data that needs preprocessing before visualization.
-
-### 2. Implement the Syncfusion .NET MAUI Cartesian Chart to display data.
+### 1. Implement the Syncfusion .NET MAUI Cartesian Chart to display data.
 
 Define classes to represent your website traffic data and manage both raw and cleaned datasets. This structure allows you to easily bind both raw and cleaned data to your chart.
 
@@ -106,7 +107,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 3. Display Data Using Syncfusion Cartesian Chart
+### 2. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display raw data and cleaned data. 
 
@@ -150,7 +151,7 @@ To visualize website traffic data, use two line series to show data for before a
 
 {% endtabs %}
 
-### 4. Trigger the AI Service for Data Cleaning
+### 3. Trigger the AI Service for Data Cleaning
 
 After your application loads, call the Azure OpenAI service to clean the raw data and update your chart with the results.
 

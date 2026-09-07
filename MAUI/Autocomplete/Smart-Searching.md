@@ -11,6 +11,8 @@ documentation: ug
 
 This document walks you through the implementation of an advanced search feature in the Syncfusion [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The example leverages Azure OpenAI for an intelligent, AI-driven search experience.
 
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](MAUI\SmartAISolutions\Prerequisites.md) and complete the required setup steps.
+
 ## Implementing custom filtering in .NET MAUI Autocomplete
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the `FilterBehavior` property, which is the entry point for our smart search logic.

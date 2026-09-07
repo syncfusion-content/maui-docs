@@ -11,6 +11,50 @@ documentation: ug
 
 This document will walk you through the implementation of an advanced filter functionality in the Syncfusion [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven filter experience.
 
+## Integrate Azure AI for Smart Search
+
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](MAUI\SmartAISolutions\Prerequisites.md) and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string> GetResultsFromAI(string prompt, CancellationToken cancellationToken)
+{
+    ChatHistory = string.Empty;
+    if(ChatHistory != null)
+    {
+        ChatHistory = ChatHistory + "You are a filtering assistant.";
+        ChatHistory = ChatHistory + prompt;
+        try
+        {
+            if (Client != null)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                var chatresponse = await Client.CompleteAsync(prompt);
+                return chatresponse.ToString();
+            }
+        }
+        catch (RequestFailedException ex)
+        {
+            // Log the error message and rethrow the exception or handle it appropriately
+            Debug.WriteLine($"Request failed: {ex.Message}");
+            throw;
+        }
+        catch (Exception ex)
+        {
+            // Handle other potential exceptions
+            Debug.WriteLine($"An error occurred: {ex.Message}");
+            throw;
+        }
+    }
+    return "";
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Implementing custom filtering in .NET MAUI Autocomplete
 
 The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the `FilterBehavior` property, which is the entry point for our smart filter logic.

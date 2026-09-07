@@ -44,7 +44,7 @@ using Azure.AI.OpenAI;
 using System;
 using System.Threading.Tasks;
 
-internal class AzureOpenAIService
+internal class AzureBaseService
 {
     const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
     const string deploymentName = "Deployment Name";
@@ -54,7 +54,7 @@ internal class AzureOpenAIService
     OpenAIClient? client;
     ChatCompletionsOptions? chatCompletions;
     
-    internal AzureOpenAIService()
+    internal AzureBaseService()
     {
         
     }
