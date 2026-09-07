@@ -153,4 +153,4 @@ Users can review highlighted records and take corrective actions such as deletin
 
 ![AI driven duplicate detection .NET MAUI DataGrid](Images\smart-ai-solutions\duplicate-detection-datagrid.gif)
 
-You can find the complete sample from this [link] (https://github.com/SyncfusionExamples/Duplicate-Detection-in-SfDataGrid-by-using-Azure-AI).
+You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Duplicate-Detection-in-SfDataGrid-by-using-Azure-AI).
