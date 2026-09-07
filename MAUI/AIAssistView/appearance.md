@@ -1280,3 +1280,30 @@ public partial class MainPage : ContentPage
 
 The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
 This behavior is enabled by default and does not require additional configuration.
+By default, image preview support is enabled. To disable image preview, set AllowImagePreview property to false.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AllowImagePreview="False"/>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView.AllowImagePreview = false;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* Set `AllowImagePreview` to `false` to suppress the overlay while still receiving `ImageTapped` and `AttachmentTapped` Events.

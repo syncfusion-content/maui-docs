@@ -62,6 +62,10 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 <td>{{'[Sources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Sources)'| markdownify }}</td>
 <td>Displays the list of reference sources associated with the assist item response.</td>
 </tr>
+<tr>
+<td>IsStreamingEnabled</td>
+<td>Gets or sets a value indicating whether the streaming response is enabled for the assist item.</td>
+</tr>
 </table>
 
 ## Text item
@@ -423,6 +427,33 @@ public class ViewModel
         {
             Text = "Types of Listening: For good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
             IsRequested = false,
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## IsStreamingEnabled
+
+The `IsStreamingEnabled` property enables streaming markdown rendering for response items.
+
+When `IsStreamingEnabled` is `true`, `ResponseTextView` (which hosts `SfMarkdownViewer`) uses streaming and defers supplemental response views until the markdown streaming completes. After streaming completes, `SfAIAssistView` adds the deferred views to the visual tree.
+
+{% tabs %}
+{% highlight c# tabtitle="Response item (C#)" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public class ViewModel
+{
+    public void CreateResponseItem()
+    {
+        AssistItem responseItem = new AssistItem()
+        {
+            Text = "Types of Listening: For good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
+            IsRequested = false,
+    IsStreamingEnabled = true,
         };
     }
 }
