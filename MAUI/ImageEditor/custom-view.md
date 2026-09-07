@@ -320,3 +320,25 @@ private void OnImageLoaded(object sender, EventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+## Thumb size appearance customization
+
+You can customize the thumb size to suit your application requirements. Customizing the thumb size helps provide a better user interaction experience and improves usability across different devices.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" tabtitle="XAML" %}
+
+<imageEditor:SfImageEditor x:Name="imageEditor"
+                           Source="image.jpeg"
+                           AnnotationThumbSize="100" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="3" tabtitle="C#" %}
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.jpeg");
+imageEditor.AnnotationThumbSize = 100;
+this.Content = imageEditor;
+
+{% endhighlight %}
+{% endtabs %}

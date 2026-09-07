@@ -723,3 +723,66 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 {% endhighlight %}
 
 {% endtabs %}
+
+### Tooltip appearance customization
+
+You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `ImageEditorToolbarItem`. This allows you to display a custom view for the tooltip.
+
+### Using DataTemplate
+
+You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `ImageEditorToolbarItem`. The template allows you to define a custom view and display content within the tooltip.
+
+The following code example shows the usage of `DataTemplate`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7 8 9 10 11" %}
+
+<imageEditor:SfImageEditor Source="image.png">
+
+    <imageEditor:SfImageEditor.ToolTipTemplate>
+        <DataTemplate>
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Toolbar Item"
+                       FontAttributes="Bold" />
+                <Label Text="{Binding Name}" />
+            </VerticalStackLayout>
+        </DataTemplate>
+    </imageEditor:SfImageEditor.ToolTipTemplate>
+
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
+
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+
+imageEditor.ToolTipTemplate = new DataTemplate(() =>
+{
+    Label titleLabel = new Label
+    {
+        Text = "Toolbar Item",
+        FontAttributes = FontAttributes.Bold
+    };
+
+    Label nameLabel = new Label();
+    nameLabel.SetBinding(Label.TextProperty, "Name");
+
+    return new VerticalStackLayout
+    {
+        Spacing = 4,
+        Children =
+        {
+            titleLabel,
+            nameLabel
+        }
+    };
+});
+
+{% endhighlight %}
+
+{% endtabs %}
