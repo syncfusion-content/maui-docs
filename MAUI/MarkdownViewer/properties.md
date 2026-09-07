@@ -17,6 +17,71 @@ documentation: ug
     <th>Type</th>
     <th>Description</th>
   </tr>
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings" aria-label="View Settings property in API reference">Settings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html" aria-label="View MarkdownStyleSettings type in API reference">MarkdownStyleSettings</a></td>
+    <td>Applies the provided <code>style settings</code> to control how the viewer <code>renders markdown</code> visually.</td>
+  </tr>
+
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source" aria-label="View Source property in API reference">Source</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Renders the supplied <code>markdown</code> and displays its supported elements such as <code>headings</code>, <code>lists</code>, <code>links</code>, <code>tables</code>, and formatted text.</td>
+  </tr>
+</table>
+
+## Methods
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText" aria-label="View GetHtmlText method in API reference">GetHtmlText()</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Generates the current rendered <code>markdown</code> content as an <code>HTML</code> string for reuse elsewhere.</td>
+  </tr>
+
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText" aria-label="View GetMarkdownText method in API reference">GetMarkdownText()</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Exports the current content back to <code>markdown</code> form so you can read it or persist it.</td>
+  </tr>
+
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetText" aria-label="View GetText method in API reference">GetText()</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Creates a <code>plain text</code> version of the content with <code>markdown formatting</code> removed.</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+
+  <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked" aria-label="View HyperlinkClicked event in API reference">HyperlinkClicked</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownHyperlinkClickedEventArgs.html" aria-label="View MarkdownHyperlinkClickedEventArgs type in API reference">EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</a></td>
+    <td>Handles taps on embedded <code>links</code> inside the rendered <code>markdown</code> so your app can decide what happens next.</td>
+  </tr>
+</table>
+
+## MarkdownStyleSettings Properties
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
 
   <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_BodyFontSize" aria-label="View BodyFontSize property in API reference">BodyFontSize</a></td>
@@ -73,18 +138,6 @@ documentation: ug
   </tr>
 
   <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Settings" aria-label="View Settings property in API reference">Settings</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html" aria-label="View MarkdownStyleSettings type in API reference">MarkdownStyleSettings</a></td>
-    <td>Applies the provided <code>style settings</code> to control how the viewer <code>renders markdown</code> visually.</td>
-  </tr>
-
-  <tr valign="top">
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View Source property in API reference">Source</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-    <td>Renders the supplied <code>markdown</code> and displays its supported elements such as <code>headings</code>, <code>lists</code>, <code>links</code>, <code>tables</code>, and formatted text.</td>
-  </tr>
-
-  <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableBackground" aria-label="View TableBackground property in API reference">TableBackground</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Controls the <code>background color</code> used behind rendered <code>markdown</code> tables.</td>
@@ -115,7 +168,7 @@ documentation: ug
   </tr>
 </table>
 
-## Methods
+## MarkdownStyleSettings Methods
 
 <table>
   <tr>
@@ -123,44 +176,9 @@ documentation: ug
     <th>Type</th>
     <th>Description</th>
   </tr>
-
-  <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetHtmlText" aria-label="View GetHtmlText method in API reference">GetHtmlText()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-    <td>Generates the current rendered <code>markdown</code> content as an <code>HTML</code> string for reuse elsewhere.</td>
-  </tr>
-
-  <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetMarkdownText" aria-label="View GetMarkdownText method in API reference">GetMarkdownText()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-    <td>Exports the current content back to <code>markdown</code> form so you can read it or persist it.</td>
-  </tr>
-
-  <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_GetText" aria-label="View GetText method in API reference">GetText()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-    <td>Creates a <code>plain text</code> version of the content with <code>markdown formatting</code> removed.</td>
-  </tr>
-
   <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_ResetToDefaults" aria-label="View ResetToDefaults method in API reference">ResetToDefaults()</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/void" aria-label="View Void type in API reference">void</a></td>
     <td>Restores the markdown <code>style settings</code> back to their baseline look so the viewer returns to its standard <code>rendering</code>.</td>
-  </tr>
-</table>
-
-## Events
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-
-  <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_HyperlinkClicked" aria-label="View HyperlinkClicked event in API reference">HyperlinkClicked</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownHyperlinkClickedEventArgs.html" aria-label="View MarkdownHyperlinkClickedEventArgs type in API reference">EventHandler&lt;MarkdownHyperlinkClickedEventArgs&gt;</a></td>
-    <td>Handles taps on embedded <code>links</code> inside the rendered <code>markdown</code> so your app can decide what happens next.</td>
   </tr>
 </table>
