@@ -349,7 +349,6 @@ public class SocialMedia
 The Autocomplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
 
 {% tabs %}
-
 {% highlight xaml %}
 
  ...
@@ -376,7 +375,6 @@ The Autocomplete control allows you to customize the style of the TokenItem gene
 </editors:SfAutocomplete>
 
 {% endhighlight %}
-
 {% endtabs %}
 
 The following image illustrates the result of the above code:
