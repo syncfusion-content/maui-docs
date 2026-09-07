@@ -13,6 +13,41 @@ This guide explains how to implement AI-powered smart data forms in a .NET MAUI 
 
 ## Integrating AI-powered smart DataForm Generation in .NET MAUI DataForm
 
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+internal async Task<string> GetResultsFromAI(string userPrompt)
+{
+    ChatHistory = string.Empty;
+    if (IsCredentialValid && Client != null && ChatHistory != null)
+    {
+        // Add the user's prompt as a user message to the conversation.
+        ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+        // Add the user's prompt as a user message to the conversation.
+        ChatHistory = ChatHistory + userPrompt;
+        try
+        {
+            //// Send the chat completion request to the OpenAI API and await the response.
+            var response = await Client.CompleteAsync(ChatHistory);
+            return response.ToString();
+        }
+        catch
+        {
+            // If an exception occurs (e.g., network issues, API errors), return an empty string.
+            return "";
+        }
+    }
+
+    return "";
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Step 1: Designing the User Interface
 
 #### Editor and Button - Capturing User Prompts

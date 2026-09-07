@@ -13,6 +13,51 @@ This document provides a comprehensive guide to implementing AI-driven anomaly d
 
 ## Integrating AI-Driven Anomaly Detection in .NET MAUI Data Grid
 
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string?> GetResultsFromAI(string prompt)
+{
+    if (IsCredentialValid)
+    {
+        try
+        {
+            ChatHistory = string.Empty;
+
+            if (ChatHistory != null)
+            {                    
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + prompt;
+                if (Client != null)
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+            }
+            return null;
+
+        }
+        catch
+        {
+            return null;
+        }
+    }
+    else
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 After completing the Azure OpenAI setup above, use the `.NET MAUI Data Grid` control to display data and visualize anomaly detection results. This section demonstrates how to style cells dynamically based on AI analysis and highlight outliers in real-time.
 
 Before proceeding, review the [.NET MAUI Data Grid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).

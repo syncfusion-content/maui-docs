@@ -11,6 +11,53 @@ documentation: ug
 
 This document walks you through implementing an AI-powered task prioritization engine using the Syncfusion [.NET MAUI Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. The example leverages Azure OpenAI to analyze task deadlines, impact, and dependencies, then automatically reorder tasks to help teams focus on the most important work items first.
 
+## Integrate Azure AI for Task Prioritize
+
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](MAUI\SmartAISolutions\Prerequisites.md) and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string?> GetResultsFromAI(string prompt)
+{
+    if (IsCredentialValid)
+    {
+        try
+        {
+            ChatHistory = string.Empty;
+
+            if (ChatHistory != null)
+            {                    
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + prompt;
+                if (Client != null)
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+            }
+            return null;
+
+        }
+        catch
+        {
+            return null;
+        }
+    }
+    else
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Creating the task model
 
 The `CardDetails` model stores task information such as title, description, due date, workflow category, assignee details, and visual properties used to highlight AI-prioritized tasks.
@@ -565,6 +612,6 @@ You can find the complete sample from this [link.](https://github.com/Syncfusion
 
 ## See also
 
-* [Getting Started](https://help.syncfusion.com/maui/kanban-board/getting-started)
-* [Sorting](https://help.syncfusion.com/maui/kanban-board/sorting)
-* [Workflow](https://help.syncfusion.com/maui/kanban-board/workflows)
+* [Kanban Board Getting Started](https://help.syncfusion.com/maui/kanban-board/getting-started)
+* [Sorting in Kanban Board](https://help.syncfusion.com/maui/kanban-board/sorting)
+* [Workflows of Kanban Board](https://help.syncfusion.com/maui/kanban-board/workflows)
