@@ -20,49 +20,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 Azure OpenAI can process your raw data and return a cleaned version, handling missing values and outliers automatically. This integration allows you to focus on analysis and visualization, rather than manual data correction.
 
-### 1. Configure Azure OpenAI Service
-
-To get started, ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have deployed a model in the Azure portal. You will need your endpoint and API key to connect your application to the service. You can find the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/).
-
-{% tabs %}
-
-{% highlight c# %}
-
-internal class AzureOpenAIService
-{
-
-    internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-    internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-    internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
-
-    internal const string Key = "API_KEY";
-
-    public AzureOpenAIService()
-    {
-
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-To set up a connection to the Azure OpenAI service, create an `OpenAIClient` instance when needed. This connection allows you to send prompts to the model and receive responses, which you can use for data-cleaning tasks.
-
-{% tabs %}
-
-{% highlight c# %}
-
-//At the time of required.
-var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### 2. Generate Prompts to clean the raw data
+### 1. Generate Prompts to clean the raw data
 
 Prepare your raw data and format a prompt for Azure OpenAI. The prompt should describe the cleaning task and provide the data in a clear format.
 
@@ -93,7 +51,7 @@ var response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
 
 You can use this approach for any time-series or tabular data that needs preprocessing before visualization.
 
-### 3. Implement the Syncfusion .NET MAUI Cartesian Chart to display data.
+### 2. Implement the Syncfusion .NET MAUI Cartesian Chart to display data.
 
 Define classes to represent your website traffic data and manage both raw and cleaned datasets. This structure allows you to easily bind both raw and cleaned data to your chart.
 
@@ -148,7 +106,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 4. Display Data Using Syncfusion Cartesian Chart
+### 3. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display raw data and cleaned data. 
 
@@ -192,7 +150,7 @@ To visualize website traffic data, use two line series to show data for before a
 
 {% endtabs %}
 
-### 5. Trigger the AI Service for Data Cleaning
+### 4. Trigger the AI Service for Data Cleaning
 
 After your application loads, call the Azure OpenAI service to clean the raw data and update your chart with the results.
 
