@@ -18,7 +18,6 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 Azure OpenAI can analyze historical stock data and predict future trends. The model identifies patterns and generates financial (Open, High, Low, Close) values for upcoming days.
 
-
 ### 1. Generate Prompts and Retrieve AI Predictions
 
 Prepare a structured prompt with historical data for the AI model, this helps to get more accurately predicted values.
