@@ -730,7 +730,7 @@ You can customize the toolbar tooltip content using the `TooltipTemplate` proper
 
 ### Using DataTemplate
 
-You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `ImageEditorToolbarItem`. The template allows you to define a custom view and display content within the tooltip.
+You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `SfImageEditor`. The template allows you to define a custom view and display content within the tooltip.
 
 The following code example shows the usage of `DataTemplate`.
 
