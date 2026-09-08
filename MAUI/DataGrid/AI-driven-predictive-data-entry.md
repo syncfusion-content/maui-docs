@@ -218,4 +218,4 @@ private async Task GetResponseAsync()
 
 ![AI driven Smart Predictive Data Entry .NET MAUI Data Grid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
-You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/PredictiveDataEntry).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataGrid).

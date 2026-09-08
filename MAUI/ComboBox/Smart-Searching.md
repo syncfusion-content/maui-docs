@@ -205,7 +205,7 @@ The following image demonstrates the output of the above AI-based search using a
 
 ![.NET MAUI Combobox With AI Smart Search.](Images/AISearch/ai_smart_search.gif)
 
-You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-ComboBox)
+You can find the complete sample from this [link.](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/ComboBoxGettingStarted)
 
 ## See also
 
