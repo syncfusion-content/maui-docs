@@ -41,7 +41,7 @@ Enhance .NET MAUI Circular Charts' accessibility with user-friendly design, ensu
 <tr>
 <td>Circular Chart</td>
 <td>Series Legend Item</td>
-<td>Lagend label</td>
+<td>Legend label</td>
 <td>"Sales"</td>
 </tr>
 </table>
