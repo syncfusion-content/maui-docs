@@ -18,7 +18,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 ## Integrating Azure OpenAI for cleaning and preprocessing the data
 
-Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
 
 {% tabs %}
 {% highlight c# %}
