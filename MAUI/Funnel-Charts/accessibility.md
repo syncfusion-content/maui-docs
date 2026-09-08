@@ -1,17 +1,17 @@
 ---
 layout: post
 platform: maui
-title: Accessibility in .NET MAUI Cartesian Charts | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Cartesian Charts for inclusive design and keyboard navigation.
-control: SfCartesianChart
+title: Accessibility in .NET MAUI Funnel Charts | Syncfusion®
+description: Learn about accessibility features in Syncfusion® .NET MAUI Funnel Charts for inclusive design and keyboard navigation.
+control: SfFunnelChart
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Cartesian Charts
+# Accessibility in .NET MAUI Funnel Charts
 
-Enhance .NET MAUI Cartesian Charts' accessibility with user-friendly design, ensuring inclusive features for seamless navigation and usability for all users.
+Enhance .NET MAUI Funnel Charts' accessibility with user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Funnel chart sections are fully accessible with individual focus and screen reader announcements.
 
-## Cartesian Chart Elements and Announcements
+## Chart Elements and Announcements
 
 <table>
 <tr>
@@ -20,43 +20,26 @@ Enhance .NET MAUI Cartesian Charts' accessibility with user-friendly design, ens
 <th>Example</th>
 </tr>
 <tr>
-<td>Chart Header/Title</td>
+<td>Chart Title</td>
 <td>Text</td>
-<td>"Q1 Sales Performance"</td>
+<td>"Sales Conversion Funnel"</td>
+</tr>
+<tr>
+<td>Funnel Section</td>
+<td>Label + Value</td>
+<td>"Conversion 1500 users"</td>
+</tr>
+<tr>
+<td>Section with Percentage</td>
+<td>Label + Value + Percentage</td>
+<td>"Leads 5000 users 100%"</td>
 </tr>
 <tr>
 <td>Series Legend Item</td>
 <td>Series Name</td>
-<td>"Sales Revenue", "Profit", "Expenses"</td>
-</tr>
-<tr>
-<td>Data Point (Without Series Label)</td>
-<td>X Value + Y Value</td>
-<td>"January 2500"</td>
-</tr>
-<tr>
-<td>Data Point (With Series Label)</td>
-<td>X Value + Y Value + Series Name</td>
-<td>"January 2500 North Region"</td>
-</tr>
-<tr>
-<td>Annotation (Without Label)</td>
-<td>Annotation type</td>
-<td>"Line annotation"</td>
-</tr>
-<tr>
-<td>Annotation (With Label)</td>
-<td>Annotation type + Label</td>
-<td>"Text annotation sales"</td>
-</tr>
-<tr>
-<td>Trendlines</td>
-<td>Trendline type</td>
-<td>"Power trendline"</td>
+<td>"Sales Pipeline"</td>
 </tr>
 </table>
-
-N> Accessibility support for chart segment navigation and screen reader announcements is not available for fast-type series, Area-type series, and ErrorBarSeries. For these series, individual data points cannot receive accessibility focus and their values are not announced by the screen reader.
 
 ## Keyboard Navigation
 

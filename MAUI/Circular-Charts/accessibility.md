@@ -1,62 +1,52 @@
 ---
 layout: post
 platform: maui
-title: Accessibility in .NET MAUI Cartesian Charts | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Cartesian Charts for inclusive design and keyboard navigation.
-control: SfCartesianChart
+title: Accessibility in .NET MAUI Circular Charts | Syncfusion®
+description: Learn about accessibility features in Syncfusion® .NET MAUI Circular Charts (Pie and Doughnut) for inclusive design and keyboard navigation.
+control: SfCircularChart
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Cartesian Charts
+# Accessibility in .NET MAUI Circular Charts
 
-Enhance .NET MAUI Cartesian Charts' accessibility with user-friendly design, ensuring inclusive features for seamless navigation and usability for all users.
+Enhance .NET MAUI Circular Charts' accessibility with user-friendly design, ensuring inclusive features for seamless navigation and usability for all users. Circular chart segments (Pie and Doughnut charts) are fully accessible with individual focus and screen reader announcements.
 
-## Cartesian Chart Elements and Announcements
+## Circular Chart Elements and Announcements
 
 <table>
-<tr>
+<th>Content</th>
 <th>Element</th>
 <th>Format</th>
 <th>Example</th>
-</tr>
 <tr>
-<td>Chart Header/Title</td>
+<td>Circular Chart</td>
+<td>Title</td>
 <td>Text</td>
-<td>"Q1 Sales Performance"</td>
+<td>"Device Distribution"</td>
 </tr>
 <tr>
+</tr>
+<tr>
+<td>Pie Series</td>
+<td>Segment</td>
+<td>Label + Value</td>
+<td>"iPad 1500"</td>
+</tr>
+<tr>
+<td>Doughnut Series</td>
+<td>Segment</td>
+<td>Label + Value</td>
+<td>"Mobile 2400"</td>
+</tr>
+<tr>
+<td>Circular Chart</td>
 <td>Series Legend Item</td>
-<td>Series Name</td>
-<td>"Sales Revenue", "Profit", "Expenses"</td>
-</tr>
-<tr>
-<td>Data Point (Without Series Label)</td>
-<td>X Value + Y Value</td>
-<td>"January 2500"</td>
-</tr>
-<tr>
-<td>Data Point (With Series Label)</td>
-<td>X Value + Y Value + Series Name</td>
-<td>"January 2500 North Region"</td>
-</tr>
-<tr>
-<td>Annotation (Without Label)</td>
-<td>Annotation type</td>
-<td>"Line annotation"</td>
-</tr>
-<tr>
-<td>Annotation (With Label)</td>
-<td>Annotation type + Label</td>
-<td>"Text annotation sales"</td>
-</tr>
-<tr>
-<td>Trendlines</td>
-<td>Trendline type</td>
-<td>"Power trendline"</td>
+<td>Lagend label</td>
+<td>"Sales"</td>
 </tr>
 </table>
 
-N> Accessibility support for chart segment navigation and screen reader announcements is not available for fast-type series, Area-type series, and ErrorBarSeries. For these series, individual data points cannot receive accessibility focus and their values are not announced by the screen reader.
+N> Accessibility support for chart segment navigation and screen reader announcements is not available for RadialBarSeries. For this series, individual data points cannot receive accessibility focus and their values are not announced by the screen reader.
 
 ## Keyboard Navigation
 
@@ -170,3 +160,4 @@ To enable accessibility support on your device:
 ## Related Documentation
 
 - [Syncfusion MAUI Cartesian Charts Getting Started](https://help.syncfusion.com/maui/cartesian-charts/getting-started)
+
