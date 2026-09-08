@@ -74,8 +74,6 @@ font-weight: normal;
 font-variant: normal;
 text-transform: none;
 line-height: 1;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
 }
 
 .sf-icon-anomaly-detection:before { content: "\e700"; }
