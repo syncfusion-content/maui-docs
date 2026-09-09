@@ -402,3 +402,31 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="DataGrid multi row drag and drop" src="Images\rowdragdrop\maui-datagrid-multi-dragging.gif" width="404">
+
+## Row drag animation
+
+When [AllowDraggingRowAnimation]() property is enabled, `SfDataGrid` displays a drag animation that allows users to visually move the selected row during the drag operation. The row follows the pointer as it is dragged, providing a smoother and more intuitive drag-and-drop experience.
+
+Unlike the default drag behavior that uses a drag indicator, the row itself is animated and moved during the drag operation, making it easier to identify the row being reordered.
+
+The default value of the `AllowDraggingRowAnimation` property is `false`.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowDraggingRow="True"
+                       AllowDraggingRowAnimation="True">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowDraggingRow = true;
+AllowDraggingRowAnimation = true;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid row drag animation" src="Images\rowdragdrop\maui-datagrid-row-drag-animation.gif" width="404">
