@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Properties in .NET MAUI Smart Text Editor | Syncfusion®
-description: Reference for properties, methods, and events of the Syncfusion® .NET MAUI SmartTextEditor.
+description: Reference for properties, methods, and events of the Syncfusion® .NET MAUI SmartTextEditor, including text, placeholder, suggestions, AI context, text style, and liquid glass configuration.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
