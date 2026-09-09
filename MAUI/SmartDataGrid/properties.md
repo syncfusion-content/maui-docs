@@ -33,11 +33,6 @@ documentation: ug
 		<td>Holds the DataGridAssistViewSettings used to configure the integrated AI AssistView, including suggested prompts, the initial prompt, smart-action enablement, styling, and AssistView life-cycle events.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_ShowAssistButton" aria-label="View ShowAssistButton property in API reference">ShowAssistButton</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Shows or hides the AI assist button that appears in the grid's toolbar. Behavior not documented in the current user guide — verify whether hiding the button also suppresses programmatic ShowAssistView calls and whether the default value is true.</td>
-	</tr>
-	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_ShowAssistButtonIcon" aria-label="View ShowAssistButtonIcon property in API reference">ShowAssistButtonIcon</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Shows or hides the icon inside the AI assist button. When set to false, the button still appears but with no icon; the default value is true.</td>
@@ -64,14 +59,14 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_CloseAssistView" aria-label="View CloseAssistView method in API reference">CloseAssistView</a>
+			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_CloseAssistView" aria-label="View CloseAssistView method in API reference">CloseAssistView()</a>
 		</td>
-		<td>void</td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
 		<td>Closes the AI AssistView popup if it is currently open on the Smart DataGrid.</td>
 	</tr>
 	<tr valign="top">
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_GetResponseAsync_System_String_" aria-label="View GetResponseAsync method in API reference">GetResponseAsync</a>
+			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_GetResponseAsync_System_String_" aria-label="View GetResponseAsync method in API reference">GetResponseAsync(String)</a>
 		</td>
 		<td>
 			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task" aria-label="View Task type in API reference">Task</a>
@@ -80,9 +75,9 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td>
-			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_ShowAssistView_Microsoft_Maui_Controls_View_" aria-label="View ShowAssistView method in API reference">ShowAssistView</a>
+			<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_ShowAssistView_Microsoft_Maui_Controls_View_" aria-label="View ShowAssistView method in API reference">ShowAssistView(View)</a>
 		</td>
-		<td>void</td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
 		<td>Opens the AssistView popup anchored to the default assist button. Pass a View to anchor the popup against a different UI element, such as a custom button.</td>
 	</tr>
 </table>

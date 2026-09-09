@@ -101,8 +101,10 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_TextChanged" aria-label="View TextChanged event in API reference">TextChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;TextChangedEventArgs&gt;</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.TextChangedEventArgs.html" aria-label="View EventHandler type in API reference">EventHandler&lt;TextChangedEventArgs&gt;</a></td>
     <td>Triggered whenever the editor's text changes, with TextChangedEventArgs exposing the previous and new text values for comparison.</td>
 </tr>
+
+
 
 </table>
