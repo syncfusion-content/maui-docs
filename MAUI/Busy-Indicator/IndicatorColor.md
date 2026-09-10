@@ -32,6 +32,7 @@ The `.NET MAUI Busy Indicator` allows you customize the indicator's color using 
                       IsRunning="True"
                       AnimationType="CircularMaterial"
                       Title="Searching..."
+                      HeightRequest="50"
                       IndicatorColor="Red" />
 {% endhighlight %}
 
@@ -42,6 +43,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
     Title = "Searching...",
+    HeightRequest = 50,
     IndicatorColor = Colors.Red,
 };
 
@@ -66,6 +68,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                       AnimationType="CircularMaterial"
                       Title="Searching..."
                       TextColor="White"
+                      HeightRequest="50"
                       IndicatorColor="White"
                       OverlayFill="#512BD4" />
 
@@ -79,6 +82,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     AnimationType = AnimationType.CircularMaterial,
     Title = "Searching...",
     TextColor = Colors.White,
+    HeightRequest = 50,
     IndicatorColor = Colors.White,
     OverlayFill = new SolidColorBrush(Color.FromArgb("#512BD4")),
 };
@@ -102,6 +106,7 @@ The `OverlayFill` property is of type `Brush`, which allows you to apply gradien
 <core:SfBusyIndicator IsRunning="True"
                       AnimationType="CircularMaterial"
                       IndicatorColor="#e64c93"
+                      HeightRequest="50"
                       Title="Searching...">
     <core:SfBusyIndicator.OverlayFill>
         <RadialGradientBrush>
@@ -122,6 +127,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
     Title = "Searching...",
+    HeightRequest = 50,
     IndicatorColor = Color.FromArgb("#e64c93"),
     OverlayFill = new RadialGradientBrush()
     {
