@@ -2,7 +2,7 @@
 
 layout: post
 title: Visual States in .NET MAUI Rating | Syncfusion®
-description: Learn here about visual states support in Syncfusion® .NET MAUI Rating control.
+description: Learn about visual state support in the Syncfusion® .NET MAUI Rating control and customize its appearance.
 platform: maui
 control: Rating
 documentation: ug

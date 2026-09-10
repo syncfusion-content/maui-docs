@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Autocomplete | Syncfusion®
-description: Learn all about Events support in Syncfusion® .NET MAUI Autocomplete control into .NET MAUI application and its features here.
+description: Learn about all events in the Syncfusion® .NET MAUI Autocomplete control and how to handle user interactions and state changes.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -23,8 +23,6 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 To get started quickly on customizing the appearance of the .NET MAUI Autocomplete, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
-
-# Events
 
 ## Completed Event
 
