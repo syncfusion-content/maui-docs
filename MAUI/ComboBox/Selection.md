@@ -562,7 +562,7 @@ The `SelectionChanging` event can be handled in C# as follows:
 
 private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
 {
-    await DisplayAlert("Alert", "Selecting Item has changing", "Ok");
+    await DisplayAlertAsync("Alert", "Selecting Item has changing", "Ok");
 }
 
 {% endhighlight %}
@@ -650,7 +650,7 @@ The `SelectionChanged` event can be handled in C# as follows:
 
 private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
-    await DisplayAlert("Alert", $"Selected Item has changed", "Ok");
+    await DisplayAlertAsync("Alert", $"Selected Item has changed", "Ok");
 }
 
 {% endhighlight %}

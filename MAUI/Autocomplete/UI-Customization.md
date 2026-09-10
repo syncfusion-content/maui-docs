@@ -667,7 +667,7 @@ public SocialMediaViewModel
 
     private async void OnAlertCommandExecuted(string parameter)
     {
-        await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
+        await DisplayAlertAsync("Alert", parameter, "OK");
     }
 }
 

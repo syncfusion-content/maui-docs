@@ -169,7 +169,7 @@ private void MaskedEntry_Completed(object sender, EventArgs e)
     // Place this handler in the code-behind of a ContentPage,
     // or resolve the current page via Application.Current?.Windows[0]?.Page.
     var page = Application.Current?.Windows[0]?.Page;
-    page?.DisplayAlert("Message", "Text entering Completed", "ok");
+    page?.DisplayAlertAsync("Message", "Text entering Completed", "ok");
 }
 
 {% endhighlight %}
@@ -215,7 +215,7 @@ private void MaskedEntry_ClearButtonClicked(object sender, EventArgs e)
     // Place this handler in the code-behind of a ContentPage,
     // or resolve the current page via Application.Current?.Windows[0]?.Page.
     var page = Application.Current?.Windows[0]?.Page;
-    page?.DisplayAlert("Message", "Clear Button Clicked", "ok");
+    page?.DisplayAlertAsync("Message", "Clear Button Clicked", "ok");
 }
 
 {% endhighlight %}

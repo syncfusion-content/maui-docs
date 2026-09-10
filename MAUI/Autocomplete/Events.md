@@ -44,7 +44,7 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 
 private async void Autocomplete_Completed(object sender, EventArgs e)
 {
-    await DisplayAlert("Message", "Text entering Completed", "close");
+    await DisplayAlertAsync("Message", "Text entering Completed", "close");
 }
 
 {% endhighlight %}
@@ -319,7 +319,7 @@ public class SocialMedia
     
     private void Autocomplete_DropDownClosed(object sender, EventArgs e)
     {
-        await DisplayAlert("Message", "DropDown Closed", "close");
+        await DisplayAlertAsync("Message", "DropDown Closed", "close");
     }
 
 {% endhighlight %}
@@ -393,7 +393,7 @@ The ValueChanged event can be handled as follows:
 
 private async void OnValueChanged(object sender, AutocompleteValueChangedEventArgs e)
 {
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
+    await DisplayAlertAsync("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
 }
 
 {% endhighlight %}
@@ -465,7 +465,7 @@ The `ClearButtonClicked` event can be handled as follows:
     
 private async void Autocomplete_ClearButtonClicked(object sender, EventArgs e)
 {
-   await DisplayAlert("Message", "Clear Button Clicked", "ok");
+   await DisplayAlertAsync("Message", "Clear Button Clicked", "ok");
 }
 
 {% endhighlight %}

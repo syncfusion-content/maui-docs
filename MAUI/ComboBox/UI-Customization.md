@@ -522,7 +522,7 @@ We can customize the size of the drop down button in [ComboBox](https://help.syn
                     Placeholder="Enter Social Media"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
-                    DisplayMemberPath="Name">
+                    DisplayMemberPath="Name"/>
     <editors:SfComboBox.DropDownButtonSettings>
         <editors:DropDownButtonSettings Width="50" Height="50" />
     </editors:SfComboBox.DropDownButtonSettings>
@@ -935,7 +935,7 @@ public SocialMediaViewModel
 
     private async void OnAlertCommandExecuted(string parameter)
     {
-        await Application.Current.MainPage.DisplayAlert("Alert", parameter, "OK");
+        await Application.Current.MainPage.DisplayAlertAsync("Alert", parameter, "OK");
     }
 }
 

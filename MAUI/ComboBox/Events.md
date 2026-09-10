@@ -93,7 +93,7 @@ The `Completed` event can be handled in C# as follows:
 
 private async void combobox_Completed(object sender, EventArgs e)
 {
-    await DisplayAlert("Message", "Text entering Completed", "close");
+    await DisplayAlertAsyncAsync("Message", "Text entering Completed", "close");
 }
 
 {% endhighlight %}
@@ -325,7 +325,7 @@ The `DropDownClosed` event can be handled in C# as follows:
     
 private void SfComboBox_DropDownClosed(object sender, EventArgs e)
 {
-    DisplayAlert("Message", "DropDown Closed", "close");
+    DisplayAlertAsync("Message", "DropDown Closed", "close");
 }
 
 {% endhighlight %}
@@ -401,7 +401,7 @@ The `ValueChanged` event can be handled as follows:
 
 private async void OnValueChanged(object sender, ComboBoxValueChangedEventArgs e)
 {
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
+    await DisplayAlertAsync("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
 }
 
 {% endhighlight %}
@@ -474,7 +474,7 @@ The `ClearButtonClicked` event can be handled as follows:
     
 private async void comboBox_ClearButtonClicked(object sender, EventArgs e)
 {
-   await DisplayAlert("Message", "Clear Button Clicked", "ok");
+   await DisplayAlertAsync("Message", "Clear Button Clicked", "ok");
 }
 
 {% endhighlight %}
