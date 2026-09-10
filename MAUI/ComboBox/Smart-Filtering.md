@@ -11,109 +11,48 @@ documentation: ug
 
 This document will walk you through the implementation of an advanced filter functionality in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven filter experience.
 
-## Integrating Azure OpenAI with your .NET MAUI App
+## Integrating Azure AI for Smart Filter
 
-First, ensure you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
 
-If you don’t have access, please refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account.
-
-Note down the deployment name, endpoint URL, and API key.
-
-we’ll use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/). So, before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
-
-In your base service class (AzureBaseService), initialize the OpenAIClient. Replace the Endpoint, DeploymentName, Key with actual values from your Azure OpenAI resource.
-
-This creates a chat client using your endpoint, API key, and deployment name. It’s stored in the Client property for use in other methods.
-
-ComboBoxAzureAIService use this Client to send prompts and receive completions.
-
-In the `GetCompletion` method, we will construct the prompt and send it to the Azure OpenAI Service. The ChatHistory helps maintain context but is cleared for each new prompt in this implementation to ensure each search is independent.
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
 
 {% tabs %}
 {% highlight c# %}
 
-// AzureBaseService.cs
-    public abstract class AzureBaseService
-    {        
-        internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-        internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-        internal const string Key = "API_KEY";
-
-        public AzureBaseService()
+public async Task<string> GetResultsFromAI(string prompt, CancellationToken cancellationToken)
+{
+    ChatHistory = string.Empty;
+    if (ChatHistory != null && Client != null)
+    {
+        ChatHistory = ChatHistory + "You are a filtering assistant.";
+        // Add the user message to the options
+        ChatHistory = ChatHistory + prompt;
+        try
         {
-
+            cancellationToken.ThrowIfCancellationRequested();
+            var chatresponse = await Client.CompleteAsync(ChatHistory);
+            cancellationToken.ThrowIfCancellationRequested();
+            return chatresponse.ToString();
         }
-
-        /// <summary>
-        /// To get the Azure open ai kernal method
-        /// </summary>
-        private void GetAzureOpenAIKernal()
+        catch (RequestFailedException ex)
         {
-            try
-            {
-                var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
-                this.Client = client;
-            }
-            catch (Exception)
-            {
-            }
+            // Log the error message and rethrow the exception or handle it appropriately
+            Debug.WriteLine($"Request failed: {ex.Message}");
+            throw;
         }
-        
+        catch (Exception ex)
+        {
+            // Handle other potential exceptions
+            Debug.WriteLine($"An error occurred: {ex.Message}");
+            throw;
+        }
     }
 
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
-//ComboBoxAzureAIService.cs
-
-public class ComboBoxAzureAIService : AzureBaseService
-{
-        /// <summary>
-        /// Gets a completion response from the AzureAI service based on the provided prompt.
-        /// </summary>
-        /// <param name="prompt"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
-        {
-            ChatHistory = string.Empty;
-            if (ChatHistory != null && Client != null)
-            {
-                ChatHistory = ChatHistory + "You are a filtering assistant.";
-                // Add the user message to the options
-                ChatHistory = ChatHistory + prompt;
-                try
-                {
-                    cancellationToken.ThrowIfCancellationRequested();
-                    var chatresponse = await Client.CompleteAsync(ChatHistory);
-                    cancellationToken.ThrowIfCancellationRequested();
-                    return chatresponse.ToString();
-                }
-                catch (RequestFailedException ex)
-                {
-                    // Log the error message and rethrow the exception or handle it appropriately
-                    Debug.WriteLine($"Request failed: {ex.Message}");
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    // Handle other potential exceptions
-                    Debug.WriteLine($"An error occurred: {ex.Message}");
-                    throw;
-                }
-            }
-            return "";
-        }
+    return "";
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Implementing custom filtering in .NET MAUI Combobox
@@ -125,13 +64,11 @@ The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% tabs %}
 {% highlight c# %}
 
-// Model.cs
 public class ComboBoxModel
 {
     public string? Name { get; set; }
 }
 
-//ViewModel.cs
 public class ComboBoxViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<ComboBoxModel> foods;
@@ -191,8 +128,6 @@ The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI 
 
 {% tabs %}
 {% highlight c# %}
-
-//ComboBoxCustomFilter.cs
 
 public class ComboBoxCustomFilter : IComboBoxFilterBehavior
 {
@@ -312,20 +247,19 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 
 {% tabs %}
 {% highlight xaml %}
-    <editors:SfComboBox x:Name="combobox" 
-                        DropDownPlacement="Bottom"
-                        MaxDropDownHeight="200"
-                        IsEditable="True"
-                        TextSearchMode="StartsWith"
-                        IsFilteringEnabled="True"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        ItemsSource="{Binding Foods}">
-        <editors:SfComboBox.FilterBehavior>
-            <local:ComboBoxCustomFilter/>
-        </editors:SfComboBox.FilterBehavior>
-    </editors:SfComboBox>
-</ContentPage.Content>
+<editors:SfComboBox x:Name="combobox" 
+                    DropDownPlacement="Bottom"
+                    MaxDropDownHeight="200"
+                    IsEditable="True"
+                    TextSearchMode="StartsWith"
+                    IsFilteringEnabled="True"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ItemsSource="{Binding Foods}">
+    <editors:SfComboBox.FilterBehavior>
+        <local:ComboBoxCustomFilter/>
+    </editors:SfComboBox.FilterBehavior>
+</editors:SfComboBox>
 
 {% endhighlight %}
 
@@ -335,6 +269,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI Combobox With AI Smart filter.](Images/AIFilter/ai_smart_filter.gif)
 
-You can find the complete sample from this [link.]()  
+You can find the complete sample from this [link.](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/ComboBoxGettingStarted)  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.

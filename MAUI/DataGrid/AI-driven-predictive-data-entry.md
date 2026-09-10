@@ -11,117 +11,52 @@ documentation: ug
 
 This document explains how to implement AI-assisted predictive data entry with the Syncfusion [.NET MAUI Data Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates using Azure OpenAI to predict GPA and grade values based on historical student performance data.
 
-## Integrating Azure OpenAI with the .NET MAUI App
+## Integrating AI-Driven Predictive Data Entry in .NET MAUI Data Grid
 
-### Step 1: Set Up Azure OpenAI Service
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
 
-First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
-
-**Configure Azure OpenAI:**
-
-1. Log in to the [Azure Portal](https://portal.azure.com/)
-2. Create a new OpenAI resource (or use an existing one)
-3. Deploy a **GPT-4o** model for text analysis
-4. Copy your deployment name, endpoint URL, and API key from the **Keys and Endpoint** section
-
-**Install NuGet Package:**
-
-Run the following command in the Package Manager Console or terminal:
-
-```
-dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
-```
-
-Alternatively, use the NuGet Package Manager in Visual Studio to install the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/) package.
-
-### Step 2: Create the Azure OpenAI Service Class
-
-To configure Azure OpenAI, use the GPT-4O model for text analysis. Set up the OpenAIClient as shown in the following code example. This class provides the foundation for making API calls to Azure OpenAI.
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
 
 {% tabs %}
-
 {% highlight c# %}
 
-using Azure;
-using Azure.AI.OpenAI;
-using System;
-using System.Threading.Tasks;
-
-internal class AzureOpenAIService
+public async Task<string?> GetResultsFromAI(string prompt)
 {
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT-4O";
-    const string imageDeploymentName = "DALL-E";
-    string key = "API key";
-    
-    OpenAIClient? client;
-    ChatCompletionsOptions? chatCompletions;
-    
-    internal AzureOpenAIService()
+    if (IsCredentialValid)
     {
-        
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Step 3: Initialize the OpenAI Client
-
-Initialize the OpenAIClient in your AzureOpenAIService constructor or initialization method. This establishes the connection to Azure OpenAI:
-
-{% tabs %}
-
-{% highlight c# %}
-
-// Initialize when required
-this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-
-{% endhighlight %}
-
-{% endtabs %}
-
-This connection allows you to send prompts to the model and receive predictions, which can then be used to populate your DataGrid with AI-generated values.
-
-### Step 4: Implement the GetResultsFromAI Method
-
-Implement a method to retrieve predictions from the Azure OpenAI API.
-
-{% tabs %}
-
-{% highlight c# %}
-
-using Azure;
-using Azure.AI.OpenAI;
-using System;
-using System.Threading.Tasks;
-
-public async Task<string> GetResultsFromAI(string userPrompt)
-{
-    if (this.Client != null && this.chatCompletions != null)
-    {
-        // Add the system message and user message to the options.
-        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-        this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
         try
         {
-            var response = await Client.GetChatCompletionsAsync(this.chatCompletions);
-            return response.Value.Choices[0].Message.Content;
+            ChatHistory = string.Empty;
+
+            if (ChatHistory != null)
+            {                    
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + prompt;
+                if (Client != null)
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+            }
+            return null;
+
         }
         catch
         {
-            return string.Empty;
+            return null;
         }
     }
-    return string.Empty;
+    else
+    {
+        return null;
+    }
 }
 
 {% endhighlight %}
-
 {% endtabs %}
-
-## Integrating AI-Driven Predictive Data Entry in .NET MAUI Data Grid
 
 After completing the Azure OpenAI setup above, use the [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
 
@@ -283,4 +218,4 @@ private async Task GetResponseAsync()
 
 ![AI driven Smart Predictive Data Entry .NET MAUI Data Grid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
-You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/PredictiveDataEntry).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataGrid).

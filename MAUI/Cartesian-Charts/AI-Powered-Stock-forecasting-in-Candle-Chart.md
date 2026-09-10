@@ -16,85 +16,12 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 ## Integrating Azure OpenAI for Stock Forecasting
 
-Azure OpenAI can analyze historical stock data and predict future trends. The model identifies patterns and generates financial (Open, High, Low, Close) values for upcoming days.
-
-### 1. Configure Azure OpenAI Service
-
-Ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and a deployed model in the Azure portal. Set up the service endpoint and API key. You can find the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/).
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
 
 {% tabs %}
-
 {% highlight c# %}
 
-internal class AzureOpenAIService
-{
-
-    internal const string Endpoint = "YOUR_END_POINT_NAME";
-
-    internal const string DeploymentName = "DEPLOYMENT_NAME";
-
-    internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
-
-    internal const string Key = "API_KEY";
-
-    public AzureOpenAIService()
-    {
-
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-To set up a connection to the Azure OpenAI service, create an `OpenAIClient` instance when needed:
-
-{% tabs %}
-
-{% highlight c# %}
-
-//At the time of required.
-var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### 2. Generate Prompts and Retrieve AI Predictions
-
-Prepare a structured prompt with historical data for the AI model, this helps to get more accurately predicted values.
-
-{% tabs %}
-
-{% highlight c# %}
-
-//AI service.
-
-internal string GeneratePrompt(List<DataModel> historicalData)
-{
-    var prompt = "Predicted OHLC values for the next 45 time step(s) for the following data:\n";
-    foreach (var data in historicalData)
-    {
-        prompt += $"{data.Date:yyyy-MM-dd}: {data.High}, {data.Low}, {data.Open}, {data.Close}\n";
-    }
-    prompt += "and the prediction output data should be in the yyyy-MM-dd:High:Low:Open:Close, no other explanation required\n";
-    return prompt;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Request predictions from Azure OpenAI using the 'GetChatCompletionsAsync':
-
-{% tabs %}
-
-{% highlight c# %}
-
-//AI service.
-
-//code omitted for brevity
-public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt, ViewModel viewModel, int index)
+public async Task<ObservableCollection<CompaniesModel>> GetResultsFromAI(string userPrompt, CompanyInfoRepo viewModel, int index)
 {
     try
     {
@@ -104,8 +31,6 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
             // Add the system message and user message to the options
             ChatHistory = ChatHistory + userPrompt;
             var response = await Client.CompleteAsync(ChatHistory);
-
-            //Helps to convert the response to respective data model
             return this.ConvertToCompaniesModelCollection(response.ToString());
         }
     }
@@ -118,10 +43,9 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-### 3. Implement the Syncfusion .NET MAUI Cartesian Chart to display forecasted data.
+### 1. Implement the Syncfusion .NET MAUI Cartesian Chart to display forecasted data.
 
 The [Syncfusion .NET MAUI Cartesian Chart Candle series](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display financial data. Define the data Model that holds the financial data (High, Low, Open, Close) and ViewModel that holds the collection of data for binding.
 
@@ -188,7 +112,7 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-### 4. Display Data Using Syncfusion Cartesian Chart
+### 2. Display Data Using Syncfusion Cartesian Chart
 
 Bind your ViewModel to the chart and display both historical and forecasted data:
 
@@ -229,7 +153,7 @@ Bind your ViewModel to the chart and display both historical and forecasted data
 
 {% endtabs %}
 
-### 5. Trigger AI Forecasting
+### 3. Trigger AI Forecasting
 
 Invoke the AI service when the user clicks a button:
 

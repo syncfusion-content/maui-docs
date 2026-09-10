@@ -40,7 +40,7 @@ N> The `AnimationCompleted` event is not raised for the `Selection` effect.
 
 {% tabs %} 
 
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="5" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
@@ -122,7 +122,7 @@ It fires both when the `Selection` effect is triggered by user interaction and w
 
 {% tabs %} 
 
-{% highlight xaml hl_lines="8" %}
+{% highlight xaml hl_lines="7" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
@@ -208,7 +208,7 @@ The [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEff
 
 {% tabs %} 
 
-{% highlight xaml hl_lines="7" %}
+{% highlight xaml hl_lines="6" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
@@ -290,7 +290,7 @@ The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffec
 
 {% tabs %} 
 
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="5" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
@@ -370,7 +370,7 @@ The [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects
 
 {% tabs %} 
 
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml hl_lines="5" %}
 
 <syncEffectsView:SfEffectsView x:Name="effectsView"
                                HorizontalOptions="Center" 
