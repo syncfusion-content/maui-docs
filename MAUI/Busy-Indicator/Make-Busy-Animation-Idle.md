@@ -29,6 +29,7 @@ Use `IsRunning="False"` to stop the animation and hide the indicator.
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       AnimationType="CircularMaterial"
+                      HeightRequest="50"
                       IsRunning="False" />
 
 {% endhighlight %}
@@ -38,6 +39,7 @@ Use `IsRunning="False"` to stop the animation and hide the indicator.
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     AnimationType = AnimationType.CircularMaterial,
+    HeightRequest = 50,
     IsRunning = false,
 };
 
@@ -57,6 +59,7 @@ Set `IsRunning="True"` to display the indicator and start the animation.
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       AnimationType="CircularMaterial"
+                      HeightRequest="50"
                       IsRunning="True" />
 
 {% endhighlight %}
@@ -66,6 +69,7 @@ Set `IsRunning="True"` to display the indicator and start the animation.
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     AnimationType = AnimationType.CircularMaterial,
+    HeightRequest = 50,
     IsRunning = true,
 };
 

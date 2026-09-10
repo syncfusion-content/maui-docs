@@ -131,6 +131,7 @@ The following example depicts the CircularMaterial type animation of .NET  MAUI 
 {% highlight xaml %}
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial">
 </core:SfBusyIndicator>
 {% endhighlight %}
@@ -139,6 +140,7 @@ The following example depicts the CircularMaterial type animation of .NET  MAUI 
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.CircularMaterial;
 };
 {% endhighlight %}

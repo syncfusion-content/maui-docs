@@ -17,6 +17,7 @@ The `.NET MAUI Busy Indicator` allows you customize the size of the indicator us
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
                       SizeFactor="0.7" />
@@ -28,6 +29,7 @@ The `.NET MAUI Busy Indicator` allows you customize the size of the indicator us
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.CircularMaterial,
     Title = "Loading...",
     SizeFactor = 0.7,
@@ -52,6 +54,7 @@ The following example sets `SizeFactor` to `0.3` to make the indicator smaller.
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
                       SizeFactor="0.3" />
@@ -64,6 +67,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
+    HeightRequest = 50,
     Title = "Loading...",
     SizeFactor = 0.3,
 };
