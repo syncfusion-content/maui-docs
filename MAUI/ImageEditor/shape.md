@@ -506,21 +506,23 @@ private void OnFreeHandDrawClicked(object sender, EventArgs e)
 
 ## Thumb size appearance customization
 
-You can customize the thumb size to suit your application requirements. Customizing the thumb size helps provide a better user interaction experience and improves usability across different devices.
+Use the `AnnotationThumbSize` property to customize the size of the selection handles displayed for crop regions, improving visibility and touch interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" tabtitle="XAML" %}
 
 <imageEditor:SfImageEditor x:Name="imageEditor"
                            Source="image.jpeg"
-                           AnnotationThumbSize="100" />
+                           AnnotationThumbSize="18" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="3" tabtitle="C#" %}
+{% highlight c# hl_lines="5" tabtitle="C#" %}
+
+using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.jpeg");
-imageEditor.AnnotationThumbSize = 100;
+imageEditor.AnnotationThumbSize = 18;
 this.Content = imageEditor;
 
 {% endhighlight %}

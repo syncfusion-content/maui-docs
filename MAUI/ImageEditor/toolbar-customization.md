@@ -726,25 +726,19 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 
 ### Tooltip appearance customization
 
-You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `ImageEditorToolbarItem`. This allows you to display a custom view for the tooltip.
-
-### Using DataTemplate
-
-You can customize the toolbar tooltip content using the `TooltipTemplate` property of the `SfImageEditor`. The template allows you to define a custom view and display content within the tooltip.
+You can customize the tooltip appearance by using the ToolTipTemplate property in the Image Editor.
 
 The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7 8 9" %}
 
 <imageEditor:SfImageEditor Source="image.png">
 
     <imageEditor:SfImageEditor.ToolTipTemplate>
         <DataTemplate>
             <VerticalStackLayout Spacing="4">
-                <Label Text="Toolbar Item"
-                       FontAttributes="Bold" />
                 <Label Text="{Binding Name}" />
             </VerticalStackLayout>
         </DataTemplate>
@@ -754,34 +748,13 @@ The following code example shows the usage of `DataTemplate`.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27" %}
+{% highlight c# tabtitle="C#"%}
 
 using Syncfusion.Maui.ImageEditor;
 
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
-
-imageEditor.ToolTipTemplate = new DataTemplate(() =>
-{
-    Label titleLabel = new Label
-    {
-        Text = "Toolbar Item",
-        FontAttributes = FontAttributes.Bold
-    };
-
-    Label nameLabel = new Label();
-    nameLabel.SetBinding(Label.TextProperty, "Name");
-
-    return new VerticalStackLayout
-    {
-        Spacing = 4,
-        Children =
-        {
-            titleLabel,
-            nameLabel
-        }
-    };
-});
+this.Content = imageEditor;
 
 {% endhighlight %}
 
