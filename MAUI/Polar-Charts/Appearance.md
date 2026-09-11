@@ -260,7 +260,7 @@ N> The property is not applicable to the `PolarAreaSeries` type.
 
 N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
 
-## Plotting Area Customization:
+## Plotting Area Customization
 
 [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
