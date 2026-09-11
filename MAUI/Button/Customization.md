@@ -963,4 +963,3 @@ public class CommandDemoViewModel : INotifyPropertyChanged
 
 - [Events](https://help.syncfusion.com/maui/button/events)
 - [Visual States](https://help.syncfusion.com/maui/button/visual-states)
-- [Command](https://help.syncfusion.com/maui/button/command)
