@@ -723,3 +723,37 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 {% endhighlight %}
 
 {% endtabs %}
+
+### Tooltip appearance customization
+
+You can customize the tooltip appearance by using the ToolTipTemplate property in the Image Editor.
+
+The following code example shows the usage of `DataTemplate`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 " %}
+
+<imageEditor:SfImageEditor Source="image.png">
+    <imageEditor:SfImageEditor.ToolTipTemplate>
+        <DataTemplate>
+            <VerticalStackLayout Spacing="4">
+                <Label Text="{Binding Name}" />
+            </VerticalStackLayout>
+        </DataTemplate>
+    </imageEditor:SfImageEditor.ToolTipTemplate>
+</imageEditor:SfImageEditor>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#"%}
+
+using Syncfusion.Maui.ImageEditor;
+
+SfImageEditor imageEditor = new SfImageEditor();
+imageEditor.Source = ImageSource.FromFile("image.png");
+this.Content = imageEditor;
+
+{% endhighlight %}
+
+{% endtabs %}
