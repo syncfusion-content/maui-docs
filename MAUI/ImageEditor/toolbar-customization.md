@@ -735,7 +735,6 @@ The following code example shows the usage of `DataTemplate`.
 {% highlight xaml tabtitle="XAML" hl_lines="3 4 5 6 7 8 9" %}
 
 <imageEditor:SfImageEditor Source="image.png">
-
     <imageEditor:SfImageEditor.ToolTipTemplate>
         <DataTemplate>
             <VerticalStackLayout Spacing="4">
@@ -743,7 +742,6 @@ The following code example shows the usage of `DataTemplate`.
             </VerticalStackLayout>
         </DataTemplate>
     </imageEditor:SfImageEditor.ToolTipTemplate>
-
 </imageEditor:SfImageEditor>
 
 {% endhighlight %}
