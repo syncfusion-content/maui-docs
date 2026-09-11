@@ -65,8 +65,8 @@ this.Content = chart;
 
 The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property customizes the rendering style of axis grid lines:
 
-* **Circle** (default) — Renders concentric circular grid lines, creating a target-like appearance
-* **Polygon** — Renders polygonal grid lines, creating a web or spider chart appearance
+* **Circle** (default) - Renders concentric circular grid lines, creating a target-like appearance
+* **Polygon** - Renders polygonal grid lines, creating a web or spider chart appearance
 
 {% tabs %}
 
