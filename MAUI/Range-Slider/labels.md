@@ -422,3 +422,59 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![Range Slider label disabled state](images/labels-and-dividers/labels-disabled.png)
+
+## Label appearance customization
+
+You can customize the appearance of range slider labels using the `LabelTemplate` property. This allows you to define a custom view for labels and display content based on the label value.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="2 3 4 5 6" %}
+
+<ContentPage.Resources>
+    <DataTemplate x:Key="LabelTemplate">
+        <Label Text="{Binding Text}"
+               TextColor="Red"
+               FontAttributes="Bold" />
+    </DataTemplate>
+</ContentPage.Resources>
+
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="100"
+                       RangeStart="20"
+                       RangeEnd="80"
+                       Interval="20"
+                       ShowLabels="True"
+                       LabelTemplate="{StaticResource LabelTemplate}" />
+
+{% endhighlight %}
+
+{% highlight C# hl_lines="11-22" %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider()
+{
+    Minimum = 0,
+    Maximum = 100,
+    RangeStart = 20,
+    RangeEnd = 80,
+    Interval = 20,
+    ShowLabels = true,
+};
+
+rangeSlider.LabelTemplate = new DataTemplate(() =>
+{
+    Label label = new Label()
+    {
+        TextColor = Colors.Red,
+        FontAttributes = FontAttributes.Bold
+    };
+
+    label.SetBinding(Label.TextProperty, "Text");
+
+    return label;
+});
+
+{% endhighlight %}
+
+{% endtabs %}
+`
