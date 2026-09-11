@@ -180,7 +180,7 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
             var prompt =
             $"You are a strict food item filtering engine." +
             $"Your job is to filter ONLY relevant items from the provided list." +
-            $"STEP 1 — CLASSIFY USER INTENT" +
+            $"STEP 1 - CLASSIFY USER INTENT" +
             $"Extract filters from the user query." +
             $"Possible filters:" +
 
@@ -188,7 +188,7 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
             $"Ingredients:- chicken- beef- mutton- fish- seafood- pork- paneer- cheese- rice- noodles- bread" +
             $"Other:- spicy- sweet- fried- grilled- healthy- breakfast- lunch- dinner- snack- drink- dessert" +
 
-            $"STEP 2 — CLASSIFY EACH ITEM" +
+            $"STEP 2 - CLASSIFY EACH ITEM" +
             $"For EACH item, determine:" +
             $"- Is it veg?- Is it non veg ?-Does it contain egg?-Main ingredients- Food category" +
             $"Use the ITEM NAME ONLY." +
@@ -198,7 +198,7 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
 
             $"IMPORTANT:- Cheeseburger is NOT automatically non veg-Only treat an item as non veg if the name explicitly contains: chicken, beef, mutton, fish, seafood, prawn, shrimp, pork, meat, turkey, lamb" +
             $"If meat is NOT explicitly mentioned, DO NOT assume non veg." +
-            $"STEP 3 — HARD FILTERING (MANDATORY)" +
+            $"STEP 3 - HARD FILTERING (MANDATORY)" +
             $"Apply strict exclusions BEFORE ranking." +
             $"RULES:" +
             $"1. If user asks 'veg': EXCLUDE any item containing: chicken, beef, mutton, fish, seafood, prawn, shrimp, pork, meat, egg" +
@@ -207,7 +207,7 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
             $" 3. NEVER infer meat from category names like: burger, pizza, sandwich, noodles, rice" +
             $" 4. If multiple filters exist, ALL must match." +
 
-            $" STEP 4 — MATCHING PRIORITY" +
+            $" STEP 4 - MATCHING PRIORITY" +
             $" Priority order:" +
             $" 1. Exact item name match" +
             $" 2.Fuzzy / spelling similarity" +
@@ -215,7 +215,7 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
             $" 4.Partial match" +
 
             $"Partial match is allowed ONLY if diet rules are satisfied." +
-            $"STEP 5 — OUTPUT RULES" +
+            $"STEP 5 - OUTPUT RULES" +
             $"- Return ONLY item names from the list, One per line, No numbering, No explanation, No extra text, NEVER generate new items, If no items match, return exactly: Empty" +
 
             $" User Input: {userInput} " +
