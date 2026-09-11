@@ -456,7 +456,7 @@ The event handler is implemented in the page's code-behind:
 
 private async void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
 {
-    await DisplayAlert("Alert", "Selecting item is changing", "Ok");
+    await DisplayAlertAsync("Alert", "Selecting item is changing", "Ok");
 }
 
 {% endhighlight %}
@@ -534,7 +534,7 @@ The event handler is implemented in the page's code-behind:
 
 private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
-    await DisplayAlert("Alert", "Selected item has changed", "Ok");
+    await DisplayAlertAsync("Alert", "Selected item has changed", "Ok");
 }
 
 {% endhighlight %}

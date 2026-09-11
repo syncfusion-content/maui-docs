@@ -232,7 +232,7 @@ The `Completed` event can be handled in C# as follows:
 
 private async void numericEntry_Completed(object sender, EventArgs e)
 {
-    await DisplayAlert("Message", "Text entering Completed", "OK");
+    await DisplayAlertAsync("Message", "Text entering Completed", "OK");
 }
 
 {% endhighlight %}
@@ -272,7 +272,7 @@ The `ClearButtonClicked` event can be handled in C# as follows:
 
 private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
 {
-    await DisplayAlert("Message", "Clear Button Clicked", "OK");
+    await DisplayAlertAsync("Message", "Clear Button Clicked", "OK");
 }
 
 {% endhighlight %}
@@ -497,7 +497,7 @@ public class CommandDemoViewModel
 
     private async void OnAlertCommandExecuted(string parameter)
     {
-        await Shell.Current.DisplayAlert("Alert", parameter, "OK");
+        await Shell.Current.DisplayAlertAsync("Alert", parameter, "OK");
     }
 }
 

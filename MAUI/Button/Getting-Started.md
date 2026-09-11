@@ -143,7 +143,7 @@ button.TextColor = Colors.White;
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Button](images/customization-images/Button_textcolor.png)
+![.NET MAUI Button](Images/customization-images/Button_textcolor.png)
 
 You can download the Button Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/maui-button-samples)
 

@@ -108,9 +108,7 @@ The `SelectedIndexChanged` event can be handled in C# as follows:
 private void Rotator_SelectedIndexChanged(object sender, SelectedIndexChangedEventArgs e)
 {
     // e.Index is the new index; e.OldIndex is the previous index.
-    DisplayAlert("Notification",
-        $"Selected index changed from {e.OldIndex} to {e.Index}",
-        "OK");
+    DisplayAlertAsync("Notification", $"Selected index changed from {e.OldIndex} to {e.Index}", "OK");
 }
     
 {% endhighlight %}
@@ -204,7 +202,7 @@ The `ItemTapped` event can be handled in C# as follows:
 
 private void Rotator_ItemTapped(object sender, EventArgs e)
 {
-    DisplayAlert("Notification", "Rotator Item is Tapped", "Ok");
+    DisplayAlertAsync("Notification", "Rotator Item is Tapped", "Ok");
 }
     
 {% endhighlight %}
