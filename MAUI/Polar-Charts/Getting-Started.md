@@ -151,8 +151,8 @@ public class PlantModel
 {% endtabs %} 
 
 **Data model properties:**
-- `Direction` — Category name displayed on the primary axis (N, NE, E, SE, etc.)
-- `Tree`, `Flower`, `Weed` — Numeric values plotted on the secondary (radial) axis for each direction
+- `Direction` - Category name displayed on the primary axis (N, NE, E, SE, etc.)
+- `Tree`, `Flower`, `Weed` - Numeric values plotted on the secondary (radial) axis for each direction
 
 Next, create a `PlantViewModel` class and initialize a list of `PlantModel` objects as follows.
 
