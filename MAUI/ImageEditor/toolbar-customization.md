@@ -746,7 +746,7 @@ The following code example shows the usage of `DataTemplate`.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Maui.ImageEditor;
 
