@@ -726,7 +726,7 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 
 ### Tooltip appearance customization
 
-You can customize the tooltip appearance by using the ToolTipTemplate property in the Image Editor.
+You can customize the tooltip appearance by using the `ToolTipTemplate` property in the `Image Editor`.
 
 The following code example shows the usage of `DataTemplate`.
 

@@ -323,7 +323,7 @@ private void OnImageLoaded(object sender, EventArgs e)
 
 ## Thumb size appearance customization
 
-Use the `AnnotationThumbSize` property to customize the size of the selection handles displayed for crop regions, improving visibility and touch interaction.
+Use the `AnnotationThumbSize` property to customize the size of the selection handles displayed around a selected annotation, improving visibility and touch interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" tabtitle="XAML" %}
