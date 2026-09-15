@@ -48,10 +48,10 @@ this.Content = barcode;
 
 The style of the text can be customized using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextStyle) property of the barcode generator. The `TextStyle` property accepts a [`BarcodeTextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html) object, which provides the following properties:
 
-- [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontAttributes) — Gets or sets the font attributes.
-- [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontFamily) — Gets or sets the font family.
-- [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontSize) — Gets or sets the font size.
-- [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_TextColor) — Gets or sets the text color.
+- [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontAttributes) - Gets or sets the font attributes.
+- [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontFamily) - Gets or sets the font family.
+- [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_FontSize) - Gets or sets the font size.
+- [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.BarcodeTextStyle.html#Syncfusion_Maui_Barcode_BarcodeTextStyle_TextColor) - Gets or sets the text color.
 
 {% tabs %}
 

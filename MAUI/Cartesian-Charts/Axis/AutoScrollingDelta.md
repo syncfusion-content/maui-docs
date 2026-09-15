@@ -58,8 +58,8 @@ this.Content = chart;
 
 The [AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) property of the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) class determines whether the axis scrolls from the start or end of the data. The [ChartAutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAutoScrollingMode.html) enum provides the following values:
 
-- `Start` — Scrolls from the start, keeping earlier data points visible as new data is added.
-- `End` — Scrolls from the end (default), keeping the latest data points visible as new data is added.
+- `Start` - Scrolls from the start, keeping earlier data points visible as new data is added.
+- `End` - Scrolls from the end (default), keeping the latest data points visible as new data is added.
 
 {% tabs %}
 
@@ -95,14 +95,14 @@ this.Content = chart;
 
 When using [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) in .NET MAUI Cartesian Chart, you can set the time unit for auto-scrolling delta using the [AutoScrollingDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_AutoScrollingDeltaType) property. The [DateTimeDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeDeltaType.html) enum provides the following values:
 
-- `Years` — Sets delta in years.
-- `Months` — Sets delta in months.
-- `Days` — Sets delta in days.
-- `Hours` — Sets delta in hours.
-- `Minutes` — Sets delta in minutes.
-- `Seconds` — Sets delta in seconds.
-- `Milliseconds` — Sets delta in milliseconds.
-- `Auto` (default) — Calculates the delta automatically based on the data range.
+- `Years` - Sets delta in years.
+- `Months` - Sets delta in months.
+- `Days` - Sets delta in days.
+- `Hours` - Sets delta in hours.
+- `Minutes` - Sets delta in minutes.
+- `Seconds` - Sets delta in seconds.
+- `Milliseconds` - Sets delta in milliseconds.
+- `Auto` (default) - Calculates the delta automatically based on the data range.
 
 {% tabs %}
 

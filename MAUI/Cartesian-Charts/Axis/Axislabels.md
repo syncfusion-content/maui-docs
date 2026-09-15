@@ -18,8 +18,8 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 The [LabelsPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsPosition) property is used to position the axis labels inside or outside the chart area. The [AxisElementPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisElementPosition.html) enum provides the following values:
 
-- `Inside` — Positions labels inside the chart area.
-- `Outside` (default) — Positions labels outside the chart area.
+- `Inside` - Positions labels inside the chart area.
+- `Outside` (default) - Positions labels outside the chart area.
 
 {% tabs %}
 
@@ -97,25 +97,25 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 
 **Appearance**
 
-* `Background` — Sets the background color of the labels.
-* `Stroke` — Sets the border stroke color of the labels.
-* `StrokeWidth` — Sets the border thickness of the label.
-* `CornerRadius` — Defines the rounded corners for labels.
-* `Margin` — Sets the margin of the label.
+* `Background` - Sets the background color of the labels.
+* `Stroke` - Sets the border stroke color of the labels.
+* `StrokeWidth` - Sets the border thickness of the label.
+* `CornerRadius` - Defines the rounded corners for labels.
+* `Margin` - Sets the margin of the label.
 
 **Text Styling**
 
-* `FontAttributes` — Sets the font style (Bold, Italic, None) for the label.
-* `FontFamily` — Sets the font family name for the label.
-* `FontSize` — Sets the font size for the label.
-* `TextColor` — Sets the color for the label text.
+* `FontAttributes` - Sets the font style (Bold, Italic, None) for the label.
+* `FontFamily` - Sets the font family name for the label.
+* `FontSize` - Sets the font size for the label.
+* `TextColor` - Sets the color for the label text.
 
 **Formatting and Alignment**
 
-* `LabelFormat` — Sets numeric or date-time format for the axis label.
-* `LabelAlignment` — Aligns labels at start, end, or center positions.
-* `MaxWidth` — Sets the wrap width of the axis labels.
-* `WrappedLabelAlignment` — Sets the horizontal rendering position of wrapped labels. Default is `Start`; other values are `Center` and `End`.
+* `LabelFormat` - Sets numeric or date-time format for the axis label.
+* `LabelAlignment` - Aligns labels at start, end, or center positions.
+* `MaxWidth` - Sets the wrap width of the axis labels.
+* `WrappedLabelAlignment` - Sets the horizontal rendering position of wrapped labels. Default is `Start`; other values are `Center` and `End`.
 
 
 ## Edge labels drawing mode
@@ -164,9 +164,9 @@ this.Content = chart;
 
 The [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) property controls the visibility of edge labels. The [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EdgeLabelsVisibilityMode.html) enum provides the following values:
 
-- `Default` (default) — Displays edge labels based on auto interval calculations.
-- `AlwaysVisible` — Shows edge labels even when the chart is zoomed.
-- `Visible` — Displays edge labels in normal state until zooming occurs.
+- `Default` (default) - Displays edge labels based on auto interval calculations.
+- `AlwaysVisible` - Shows edge labels even when the chart is zoomed.
+- `Visible` - Displays edge labels in normal state until zooming occurs.
 
 ### Always visible
 
@@ -238,10 +238,10 @@ this.Content = chart;
 
 Axis labels may overlap based on chart dimensions and label size. The [LabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelsIntersectAction) property prevents overlapping. The [AxisLabelsIntersectAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelsIntersectAction.html) enum provides the following values (default is `Hide`):
 
-- `Hide` — Hides overlapping labels.
-- `MultipleRows` — Arranges overlapping labels in multiple rows.
-- `None` — Displays all labels without any action.
-- `Wrap` — Wraps label text to fit within specified width (requires [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property). Alignment can be controlled using [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.
+- `Hide` - Hides overlapping labels.
+- `MultipleRows` - Arranges overlapping labels in multiple rows.
+- `None` - Displays all labels without any action.
+- `Wrap` - Wraps label text to fit within specified width (requires [MaxWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_MaxWidth) property). Alignment can be controlled using [WrappedLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelStyle.html#Syncfusion_Maui_Charts_ChartAxisLabelStyle_WrappedLabelAlignment) property.
 
 {% tabs %}
 
@@ -317,9 +317,9 @@ this.Content = chart;
 
 The [AxisLabelTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AxisLabelTapped) event occurs when a user taps on an axis label. The [AxisLabelTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html) class provides the following properties:
 
-* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Axis) — Gets the associated axis where the label was tapped.
-* [AxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_AxisLabel) — Gets the [ChartAxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabel.html) object containing details about the tapped label.
-* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Position) — Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
+* [Axis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Axis) - Gets the associated axis where the label was tapped.
+* [AxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_AxisLabel) - Gets the [ChartAxisLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabel.html) object containing details about the tapped label.
+* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AxisLabelTappedEventArgs.html#Syncfusion_Maui_Charts_AxisLabelTappedEventArgs_Position) - Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
 
 {% tabs %}
 

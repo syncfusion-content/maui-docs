@@ -15,6 +15,38 @@ N> **Prerequisite:** Ensure that the required NuGet packages are installed, the 
 
 ## Integrating AI-powered smart location search in .NET MAUI Autocomplete
 
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string> GetResultsFromAI(string userPrompt)
+{
+    if (IsCredentialValid && Client != null)
+    {
+        ChatHistory = string.Empty;
+        // Add the system message and user message to the options
+        ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+        ChatHistory = ChatHistory + userPrompt;
+        try
+        {
+            var response = await Client.CompleteAsync(ChatHistory);
+            return response.ToString();
+        }
+        catch
+        {
+            return string.Empty;
+        }
+    }
+
+    return string.Empty;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 To design the AI-powered smart location search UI using the [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control, and then map the selected location into the **.NET MAUI Maps** control. Before proceeding, please refer to the getting started documentation for both the Syncfusion **.NET MAUI Maps** and **Autocomplete** controls.
 
 ### Step 1: Create a custom marker model
@@ -374,4 +406,4 @@ private async Task GetRecommendationAsync(string userQuery)
 
 ![AI-driven smart location search in .NET MAUI Maps](images/smart-ai-solutions/ai-smart-location-search.gif)
 
-You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Integrating-AI-Driven-Location-Search-into-.NET-MAUI-Maps).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/Maps).
