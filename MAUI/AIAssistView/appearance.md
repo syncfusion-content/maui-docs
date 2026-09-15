@@ -1280,7 +1280,8 @@ public partial class MainPage : ContentPage
 
 The `SfAIAssistView` control provides built-in image preview support. When an image is associated with an `AssistImageItem` or an `AssistAttachmentItem`, tapping the image displays it in a preview view.
 This behavior is enabled by default and does not require additional configuration.
-To disable image preview support, set `AllowImagePreview` property to false.
+
+To disable image preview support, set `AllowImagePreview` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -1305,5 +1306,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N>
-* Set `AllowImagePreview` to `false` to suppress the overlay while still receiving `ImageTapped` and `AttachmentTapped` Events.
+N> When `AllowImagePreview` is set to `false`, image preview support is disabled, but `ImageTapped` and `AttachmentTapped` callbacks continue to be triggered.

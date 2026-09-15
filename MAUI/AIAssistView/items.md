@@ -434,11 +434,9 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## IsStreamingEnabled
+## Streaming the response
 
-The `IsStreamingEnabled` property enables streaming markdown rendering for response items.
-
-When `IsStreamingEnabled` is `true`, the `ResponseTextView` renders the markdown content progressively as it is streamed. The associated response views are displayed only after the markdown streaming is completed.
+By default, response content is rendered immediately. To stream and display response content in real time while it is being generated, set the `IsStreamingEnabled` property to `true`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}

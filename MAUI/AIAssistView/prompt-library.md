@@ -9,11 +9,11 @@ documentation: ug
 
 # Prompt Library in .NET MAUI AI AssistView
 
-The SfPromptLibrary control displays a collection of predefined prompts. It helps users quickly choose common prompts grouped by category and topic.
+The `SfPromptLibrary` displays a collection of predefined prompts, helping users quickly select commonly used prompts organized by category and topic.
 
-## Prompt library overview
+## Populate Items in PromptLibrary
 
-The PromptLibrary control accepts a PromptLibrary instance. Provide prompt data through its `ItemsSource` property.
+Set the `ItemsSource` property of the `SfPromptLibrary` to a collection to display the available items.
 
 Each item in the collection is a `PromptItem`. The prompt library uses the following members to group and display prompts:
 
@@ -34,8 +34,6 @@ Create a view model with a prompt collection and save it as `PromptLibraryViewMo
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
 
-namespace SampleBrowser.Maui.AIAssistView.SfAIAssistView;
-
 public class PromptLibraryViewModel
 {
     private ObservableCollection<PromptItem> promptItemsInfo;
@@ -49,6 +47,7 @@ public class PromptLibraryViewModel
     public ObservableCollection<PromptItem> PromptLibraryInfo
     {
         get => this.promptItemsInfo;
+        set => this.promptItemsInfo = value;
     }
 
     private void InitializePromptLibrary()
@@ -76,9 +75,9 @@ public class PromptLibraryViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Bind the prompt library
+### Bind to data source
 
-Assign the view model as the page `BindingContext`, then bind the prompt collection to the prompt library. Set the `ItemsSource` property of `SfPromptLibrary` to the prompt collection so the prompts are displayed in the prompt library.
+Assign the view model as the page `BindingContext`, then bind the collection to the prompt library. Set the` ItemsSource` property of `SfPromptLibrary` to the collection so the items are displayed in the prompt library.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -131,7 +130,7 @@ When a user selects a prompt, both the `PromptSelected` event and the `PromptSel
 </ContentPage.BindingContext>
 
 <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
-                               PromptSelected="OnPromptSelected" />
+                            PromptSelected="OnPromptSelected" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -165,7 +164,7 @@ public partial class MainPage : ContentPage
 </ContentPage.BindingContext>
 
 <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
-                               PromptSelectedCommand="{Binding PromptSelectedCommand}" />
+                            PromptSelectedCommand="{Binding PromptSelectedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="PromptLibraryViewModel.cs" %}
@@ -180,11 +179,8 @@ public class PromptLibraryViewModel
 
     public PromptLibraryViewModel()
     {
-        this.PromptLibraryInfo = new ObservableCollection<PromptItem>();
         this.promptSelectedCommand = new Command(ExecutePromptSelected);
     }
-
-    public ObservableCollection<PromptItem> PromptLibraryInfo { get; }
 
     public ICommand PromptSelectedCommand
     {
@@ -193,7 +189,7 @@ public class PromptLibraryViewModel
 
     private void ExecutePromptSelected(object parameter)
     {
-        if (parameter is PromptSelectedEventArgs args)
+        if (parameter is PromptItem selectedPrompt)
         {
             // Handle the PromptSelected command
         }
@@ -205,7 +201,7 @@ public class PromptLibraryViewModel
 
 ## Add PromptLibrary to SfAIAssistView
 
-To show the PromptLibrary UI inside the AssistView, embed `SfPromptLibrary` into the `SfAIAssistView.PromptLibrary` property.
+To show the `PromptLibrary` UI inside the AssistView, embed `SfPromptLibrary` into the `SfAIAssistView.PromptLibrary` property.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
@@ -225,4 +221,4 @@ To show the PromptLibrary UI inside the AssistView, embed `SfPromptLibrary` into
 
 {% endhighlight %}
 
-N> The PromptLibrary overlay is displayed only when common suggestions are configured.
+N> The `PromptLibrary` overlay is displayed only when common suggestions are configured. When common suggestions are configured, a menu icon is displayed in the suggestions area. Tapping the menu icon opens the `PromptLibrary` overlay.
