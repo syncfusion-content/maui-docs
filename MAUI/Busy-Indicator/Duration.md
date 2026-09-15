@@ -18,6 +18,7 @@ The [DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       DurationFactor="0.2" />
 
@@ -28,6 +29,7 @@ The [DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.CircularMaterial,
     DurationFactor = 0.2,
 };

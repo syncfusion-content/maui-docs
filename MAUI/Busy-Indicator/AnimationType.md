@@ -29,6 +29,7 @@ The CircularMaterial animation is one of the built-in animations in the [.NET MA
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial" />
 
 {% endhighlight %}
@@ -38,6 +39,7 @@ The CircularMaterial animation is one of the built-in animations in the [.NET MA
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.CircularMaterial,
 };
 
@@ -59,6 +61,7 @@ The Cupertino animation is one of the built-in animations in the [.NET MAUI Busy
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="Cupertino" />
 
 {% endhighlight %}
@@ -68,6 +71,7 @@ The Cupertino animation is one of the built-in animations in the [.NET MAUI Busy
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50
     AnimationType = AnimationType.Cupertino,
 };
 
@@ -89,6 +93,7 @@ The LinearMaterial animation is one of the built-in animations in the [.NET MAUI
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="LinearMaterial" />
 
 {% endhighlight %}
@@ -98,6 +103,7 @@ The LinearMaterial animation is one of the built-in animations in the [.NET MAUI
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.LinearMaterial,
 };
 
@@ -119,6 +125,7 @@ The SingleCircle animation is one of the built-in animations in the [.NET MAUI B
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="SingleCircle" />
 
 {% endhighlight %}
@@ -128,6 +135,7 @@ The SingleCircle animation is one of the built-in animations in the [.NET MAUI B
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.SingleCircle,
 };
 
@@ -149,6 +157,7 @@ The DoubleCircle animation is one of the built-in animations in the [.NET MAUI B
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="DoubleCircle" />
 
 {% endhighlight %}
@@ -158,6 +167,7 @@ The DoubleCircle animation is one of the built-in animations in the [.NET MAUI B
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.DoubleCircle,
 };
 
@@ -179,6 +189,7 @@ The Globe animation is one of the built-in animations in the [.NET MAUI Busy Ind
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="Globe" />
 
 {% endhighlight %}
@@ -188,6 +199,7 @@ The Globe animation is one of the built-in animations in the [.NET MAUI Busy Ind
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.Globe,
 };
 
@@ -209,6 +221,7 @@ The HorizontalPulsingBox animation is one of the built-in animations in the [.NE
 
 <core:SfBusyIndicator x:Name="busyIndicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="HorizontalPulsingBox" />
 
 {% endhighlight %}
@@ -218,6 +231,7 @@ The HorizontalPulsingBox animation is one of the built-in animations in the [.NE
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.HorizontalPulsingBox,
 };
 

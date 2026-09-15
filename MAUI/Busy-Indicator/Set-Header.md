@@ -30,6 +30,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <core:SfBusyIndicator x:Name="busyindicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..." />
 
@@ -41,6 +42,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
+    HeightRequest = 50,
     Title = "Loading...",
 };
 
@@ -63,6 +65,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 <core:SfBusyIndicator x:Name="busyindicator"
                       IsRunning="True"
                       AnimationType="CircularMaterial"
+                      HeightRequest="50"
                       Title="Loading..."
                       TextColor="Red" />
 
@@ -74,6 +77,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
+    HeightRequest = 50,
     Title = "Loading...",
     TextColor = Colors.Red,
 };
@@ -96,6 +100,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <core:SfBusyIndicator x:Name="busyindicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
                       TextColor="Red"
@@ -110,6 +115,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
     Title = "Loading...",
+    HeightRequest = 50,
     TextColor = Colors.Red,
     TitlePlacement = BusyIndicatorTitlePlacement.Top,
 };
@@ -132,6 +138,7 @@ You can set the space between the indicator and the title using the [TitleSpacin
 
 <core:SfBusyIndicator x:Name="busyindicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
                       TextColor="Red"
@@ -148,6 +155,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     AnimationType = AnimationType.CircularMaterial,
     Title = "Loading...",
     TextColor = Colors.Red,
+    HeightRequest = 50,
     TitlePlacement = BusyIndicatorTitlePlacement.Top,
     TitleSpacing = 20,
 };
@@ -173,6 +181,7 @@ The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                       IsRunning="True"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
+                      HeightRequest=50,
                       TextColor="Red"
                       FontSize="16"
                       FontAttributes="Bold"
@@ -188,6 +197,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
     AnimationType = AnimationType.CircularMaterial,
     Title = "Loading...",
     TextColor = Colors.Red,
+    HeightRequest = 50,
     FontSize = 16,
     FontAttributes = FontAttributes.Bold,
     FontFamily = "serif",
@@ -211,6 +221,7 @@ The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <core:SfBusyIndicator x:Name="busyindicator"
                       IsRunning="True"
+                      HeightRequest="50"
                       AnimationType="CircularMaterial"
                       Title="Loading..."
                       FontAutoScalingEnabled="True" />
@@ -222,6 +233,7 @@ The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
+    HeightRequest = 50,
     AnimationType = AnimationType.CircularMaterial,
     Title = "Loading...",
     FontAutoScalingEnabled = true,
