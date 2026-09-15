@@ -26,10 +26,10 @@ Each item in the collection is a `PromptItem`. The prompt library uses the follo
 
 ### Define the prompt collection
 
-Create a view model with a prompt collection and save it as `PromptLibraryModel.cs`.
+Create a view model with a prompt collection and save it as `PromptLibraryViewModel.cs`.
 
 {% tabs %}
-{% highlight c# tabtitle="PromptLibraryModel.cs" %}
+{% highlight c# tabtitle="PromptLibraryViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using Syncfusion.Maui.AIAssistView;
@@ -84,7 +84,7 @@ Assign the view model as the page `BindingContext`, then bind the prompt collect
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage.BindingContext>
-    <local:PromptLibraryModel />
+    <local:PromptLibraryViewModel />
 </ContentPage.BindingContext>
 
 <promptLibrary:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}" />
@@ -124,7 +124,7 @@ When a user selects a prompt, both the `PromptSelected` event and the `PromptSel
 ### Using PromptSelected event
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage.BindingContext>
     <local:PromptLibraryViewModel />
@@ -134,7 +134,7 @@ When a user selects a prompt, both the `PromptSelected` event and the `PromptSel
                             PromptSelected="OnPromptSelected" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -158,7 +158,7 @@ public partial class MainPage : ContentPage
 ### Using PromptSelectedCommand
 
 {% tabs %}
-{% highlight xaml hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage.BindingContext>
     <local:PromptLibraryViewModel />
@@ -168,7 +168,7 @@ public partial class MainPage : ContentPage
                             PromptSelectedCommand="{Binding PromptSelectedCommand}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="PromptLibraryViewModel.cs" %}
 
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -203,11 +203,15 @@ public class PromptLibraryViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Integrate SfPromptLibrary with SfAIAssistView
+## Add PromptLibrary to SfAIAssistView
 
 To show the PromptLibrary UI inside the AssistView, embed `SfPromptLibrary` into the `SfAIAssistView.PromptLibrary` property.
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage.BindingContext>
+    <local:PromptLibraryViewModel />
+</ContentPage.BindingContext>
 
 <aiAssist:SfAIAssistView x:Name="sfAIAssistView"
                         Suggestions="{Binding PromptSuggestions}">

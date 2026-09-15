@@ -438,10 +438,10 @@ public class ViewModel
 
 The `IsStreamingEnabled` property enables streaming markdown rendering for response items.
 
-When `IsStreamingEnabled` is `true`, `ResponseTextView` (which hosts `SfMarkdownViewer`) uses streaming and defers supplemental response views until the markdown streaming completes. After streaming completes, `SfAIAssistView` adds the deferred views to the visual tree.
+When `IsStreamingEnabled` is `true`, the `ResponseTextView` renders the markdown content progressively as it is streamed. The associated response views are displayed only after the markdown streaming is completed.
 
 {% tabs %}
-{% highlight c# tabtitle="Response item (C#)" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="11" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -453,7 +453,7 @@ public class ViewModel
         {
             Text = "Types of Listening: For good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skills. Common types of Listening are Active listening and Passive listening.",
             IsRequested = false,
-    IsStreamingEnabled = true,
+            IsStreamingEnabled = true,
         };
     }
 }
