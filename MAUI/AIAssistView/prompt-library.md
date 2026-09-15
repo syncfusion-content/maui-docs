@@ -87,7 +87,7 @@ Assign the view model as the page `BindingContext`, then bind the prompt collect
     <local:PromptLibraryViewModel />
 </ContentPage.BindingContext>
 
-<promptLibrary:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}" />
+<syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -130,8 +130,8 @@ When a user selects a prompt, both the `PromptSelected` event and the `PromptSel
     <local:PromptLibraryViewModel />
 </ContentPage.BindingContext>
 
-<promptLibrary:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
-                            PromptSelected="OnPromptSelected" />
+<syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
+                               PromptSelected="OnPromptSelected" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -164,8 +164,8 @@ public partial class MainPage : ContentPage
     <local:PromptLibraryViewModel />
 </ContentPage.BindingContext>
 
-<promptLibrary:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
-                            PromptSelectedCommand="{Binding PromptSelectedCommand}" />
+<syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"
+                               PromptSelectedCommand="{Binding PromptSelectedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="PromptLibraryViewModel.cs" %}
@@ -213,14 +213,14 @@ To show the PromptLibrary UI inside the AssistView, embed `SfPromptLibrary` into
     <local:PromptLibraryViewModel />
 </ContentPage.BindingContext>
 
-<aiAssist:SfAIAssistView x:Name="sfAIAssistView"
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                         Suggestions="{Binding PromptSuggestions}">
 
-    <aiAssist:SfAIAssistView.PromptLibrary>
-        <aiAssist:SfPromptLibrary ItemsSource="{Binding PromptLibrary.PromptLibraryInfo}" PromptSelectedCommand="{Binding PromptSelectedCommand}"/>
-    </aiAssist:SfAIAssistView.PromptLibrary>
+    <syncfusion:SfAIAssistView.PromptLibrary>
+        <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"/>
+    </syncfusion:SfAIAssistView.PromptLibrary>
 
-</aiAssist:SfAIAssistView>
+</syncfusion:SfAIAssistView>
 
 
 {% endhighlight %}
