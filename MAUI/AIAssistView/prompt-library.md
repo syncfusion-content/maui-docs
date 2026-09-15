@@ -36,11 +36,11 @@ using Syncfusion.Maui.AIAssistView;
 
 namespace SampleBrowser.Maui.AIAssistView.SfAIAssistView;
 
-public class PromptLibraryInfoRepository
+public class PromptLibraryViewModel
 {
     private ObservableCollection<PromptItem> promptItemsInfo;
 
-    public PromptLibraryInfoRepository()
+    public PromptLibraryViewModel()
     {
         this.promptItemsInfo = new ObservableCollection<PromptItem>();
         this.InitializePromptLibrary();
@@ -100,7 +100,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        var viewModel = new PromptLibraryInfoRepository();
+        var viewModel = new PromptLibraryViewModel();
         this.BindingContext = viewModel;
 
         var promptLibrary = new SfPromptLibrary
