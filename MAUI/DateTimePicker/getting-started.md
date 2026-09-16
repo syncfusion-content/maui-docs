@@ -13,7 +13,7 @@ This section explains how to add the Date Time Picker control. It covers only th
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
 {% youtube
-"youtube:https://youtu.be/fKuMBHegq7s?si=pDLQy52nILzOQUWC"%}
+"youtube:https://www.youtube.com/watch?si=pDLQy52nILzOQUWC&v=fKuMBHegq7s&feature=youtu.be"%}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
