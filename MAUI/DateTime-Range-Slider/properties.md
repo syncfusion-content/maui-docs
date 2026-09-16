@@ -84,7 +84,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter" aria-label="View DragCompletedCommandParameter property in API reference">DragCompletedCommandParameter</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a></td>
 		<td>Defines the parameter passed to the completed-drag command.</td>
 	</tr>
 	<tr valign="top">
@@ -94,7 +94,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter" aria-label="View DragStartedCommandParameter property in API reference">DragStartedCommandParameter</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a></td>
 		<td>Gets or sets the parameter passed to the started-drag command.</td>
 	</tr>
 	<tr valign="top">
@@ -149,7 +149,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval" aria-label="View MinorTicksPerInterval property in API reference">MinorTicksPerInterval</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.Int32" aria-label="View int type in API reference">int</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=net-10.0" aria-label="View int type in API reference">int</a></td>
 		<td>Specifies the number of minor ticks between each pair of major ticks.</td>
 	</tr>
 	<tr valign="top">
