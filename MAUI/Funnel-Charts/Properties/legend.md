@@ -38,7 +38,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate" aria-label="View ItemTemplate property in API reference">ItemTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Defines a custom <code>view template</code> to replace the default appearance of each legend item.</td>
 </tr>
 

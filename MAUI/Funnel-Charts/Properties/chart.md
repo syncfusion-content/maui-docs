@@ -56,7 +56,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_LabelTemplate" aria-label="View LabelTemplate property in API reference">LabelTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Defines a <code>custom data template</code> to replace the default appearance of the data labels.</td>
 </tr>
 
@@ -80,7 +80,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_PaletteBrushes" aria-label="View PaletteBrushes property in API reference">PaletteBrushes</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList type in API reference">IList&lt;</a><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList type in API reference">&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?view=net-10.0" aria-label="View IList type in API reference">IList&lt;</a><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?view=net-10.0" aria-label="View IList type in API reference">&gt;</a></td>
     <td>Applies a <code>sequence of brushes</code> to the funnel segments, cycling through the list for each segment.</td>
 </tr>
 
@@ -134,7 +134,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_TooltipTemplate" aria-label="View TooltipTemplate property in API reference">TooltipTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Defines a <code>custom data template</code> to replace the default appearance of the tooltip.</td>
 </tr>
 
@@ -168,7 +168,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_GetStreamAsync_Syncfusion_Maui_Core_ImageFileFormat_" aria-label="View GetStreamAsync method in API reference">GetStreamAsync(ImageFileFormat)</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task" aria-label="View Task type in API reference">Task&lt;</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.stream" aria-label="View Stream type in API reference">Stream</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task" aria-label="View Task type in API reference">&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-10.0" aria-label="View Task type in API reference">Task&lt;</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.stream" aria-label="View Stream type in API reference">Stream</a><a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-10.0" aria-label="View Task type in API reference">&gt;</a></td>
     <td>Captures the current chart view as an <code>image</code> and returns it as a <code>stream</code> in <code>JPEG</code> or <code>PNG</code> format. The chart view must be added to the visual tree.</td>
 </tr>
 

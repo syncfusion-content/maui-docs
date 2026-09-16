@@ -32,7 +32,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes?view=net-maui-10.0" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
     <td>Applies <code>bold</code>, <code>italic</code>, or <code>standard</code> font styling to the text displayed within the tooltip.</td>
 </tr>
 
