@@ -48,7 +48,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_CreateLayoutManager" aria-label="View CreateLayoutManager method in API reference">CreateLayoutManager()</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.layouts.ilayoutmanager" aria-label="View ILayoutManager type in API reference">ILayoutManager</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.layouts.ilayoutmanager?view=net-maui-10.0" aria-label="View ILayoutManager type in API reference">ILayoutManager</a></td>
     <td>Creates and returns the <code>layout manager</code> that measures and arranges <code>docked children</code> inside the <code>layout container</code>.</td>
 </tr>
 
