@@ -314,32 +314,32 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked" aria-label="View CancelButtonClicked event in API reference">CancelButtonClicked</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler</a></td>
     <td>Triggered when the user taps the Cancel button in the picker footer. This event is raised only when the footer and Cancel button are visible.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed" aria-label="View Closed event in API reference">Closed</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler</a></td>
     <td>Triggered after the picker popup has been closed.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing" aria-label="View Closing event in API reference">Closing</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs" aria-label="View CancelEventArgs type in API reference">CancelEventArgs&gt;</a></a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs" aria-label="View CancelEventArgs type in API reference">CancelEventArgs&gt;</a></a></td>
     <td>Triggered before the picker popup closes, allowing the close operation to be canceled and the popup to remain open.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked" aria-label="View OkButtonClicked event in API reference">OkButtonClicked</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler</a></td>
     <td>Triggered when the user taps the OK button to confirm the current selection. This event is raised only when the footer and OK button are visible.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened" aria-label="View Opened event in API reference">Opened</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler</a></td>
     <td>Triggered after the picker popup becomes visible.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html" aria-label="View DatePickerSelectionChangedEventArgs type in API reference">DatePickerSelectionChangedEventArgs&gt;</a></a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerSelectionChangedEventArgs.html" aria-label="View DatePickerSelectionChangedEventArgs type in API reference">DatePickerSelectionChangedEventArgs&gt;</a></a></td>
     <td>Triggered when the selected date changes, providing access to the previous and current date values.</td>
 </tr>
 </table>
