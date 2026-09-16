@@ -44,12 +44,12 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor" aria-label="View ColumnDividerColor property in API reference">ColumnDividerColor</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-10.0" aria-label="View Color type in API reference">Color</a></td>
     <td>Changes the color of the dividers that separate adjacent picker columns.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate" aria-label="View ColumnHeaderTemplate property in API reference">ColumnHeaderTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Replaces the default column header UI with custom content. When this template is used, column header style settings are not applied.</td>
 </tr>
 <tr valign="top">
@@ -89,7 +89,7 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate" aria-label="View FooterTemplate property in API reference">FooterTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Replaces the default footer UI with custom content. When this template is used, footer style settings are not applied.</td>
 </tr>
 <tr valign="top">
@@ -99,7 +99,7 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate" aria-label="View HeaderTemplate property in API reference">HeaderTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Replaces the default header UI with custom content. When this template is used, header style settings are not applied.</td>
 </tr>
 <tr valign="top">
