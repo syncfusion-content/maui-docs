@@ -32,7 +32,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterStroke" aria-label="View CharacterStroke property in API reference">CharacterStroke</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Brush</code> used to paint the <code>enabled (active) segments</code> of each <code>character</code>, controlling the primary <code>visible color</code> of the <code>lit portions</code>.</td>
 </tr>
 
@@ -56,7 +56,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_DisabledSegmentStroke" aria-label="View DisabledSegmentStroke property in API reference">DisabledSegmentStroke</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Brush</code> used to paint the <code>inactive segments</code> of each <code>character</code>, controlling the <code>off-state color</code> of the <code>digital glyphs</code>.</td>
 </tr>
 
@@ -68,7 +68,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text" aria-label="View Text property in API reference">Text</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-10.0" aria-label="View String type in API reference">string</a></td>
     <td><code>Text</code> rendered by the <code>gauge</code> as a <code>segmented digital display</code>. Values are drawn using the configured <code>CharacterType</code>.</td>
 </tr>
 </table>
