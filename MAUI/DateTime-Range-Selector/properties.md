@@ -137,7 +137,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter" aria-label="View DragCompletedCommandParameter property in API reference">DragCompletedCommandParameter</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a>
 		</td>
 		<td>Supplies the parameter passed to <code>DragCompletedCommand</code>.</td>
 	</tr>
@@ -155,7 +155,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter" aria-label="View DragStartedCommandParameter property in API reference">DragStartedCommandParameter</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a>
 		</td>
 		<td>Supplies the parameter passed to <code>DragStartedCommand</code>.</td>
 	</tr>
