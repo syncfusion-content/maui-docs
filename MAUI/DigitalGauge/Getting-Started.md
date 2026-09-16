@@ -13,7 +13,7 @@ This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfu
 
 To get started quickly with our .NET MAUI DigitalGauge, you can check the below video.
 
-{% youtube "https://youtu.be/kYZtmp3Mtkk?si=FUhFxyrNdpzRbxxC" %}
+{% youtube "https://www.youtube.com/watch?si=FUhFxyrNdpzRbxxC&v=kYZtmp3Mtkk&feature=youtu.be" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
