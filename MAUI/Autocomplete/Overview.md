@@ -80,7 +80,7 @@ The following table summarizes the globalization support available in this contr
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection with optional user input.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying filtered results in list format.
-- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting. 
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for structured numeric input with validation and formatting. 
 
 ## See Also
 
