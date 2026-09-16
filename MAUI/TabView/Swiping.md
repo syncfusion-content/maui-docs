@@ -92,5 +92,5 @@ SfTabView tabView = new SfTabView
 ## See also
 
 * [Events in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/events)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Nested Tabs in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/nested-tabs)
