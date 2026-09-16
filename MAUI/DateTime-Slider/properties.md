@@ -28,7 +28,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat" aria-label="View DateFormat property in API reference">DateFormat</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-10.0" aria-label="View string type in API reference">string</a>
 		</td>
 		<td>Formats the label text shown for each date value on the slider.</td>
 	</tr>
@@ -46,7 +46,7 @@ documentation: ug
 		  <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration" aria-label="View StepDuration property in API reference">StepDuration</a><br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-10.0" aria-label="View string type in API reference">string</a>
 		</td>
 		<td>Specifies the step used for discrete date selection when the thumb moves between valid date values.</td>
 	</tr>
@@ -55,7 +55,7 @@ documentation: ug
 		<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation" aria-label="View Orientation property in API reference">Orientation</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.textalignment?view=windowsdesktop-10.0" aria-label="View TextAlignment type in API reference">TextAlignment</a>
 		</td>
 		<td>Sets the layout direction of the slider to <code>Horizontal</code> or <code>Vertical</code>.</td>
 	</tr>
@@ -91,7 +91,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DividerStyle" aria-label="View DividerStyle property in API reference">DividerStyle</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a>
 		</td>
 		<td>Customizes the divider appearance between the selected range and the unselected track.</td>
 	</tr>
@@ -109,7 +109,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter" aria-label="View DragCompletedCommandParameter property in API reference">DragCompletedCommandParameter</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a>
 		</td>
 		<td>Provides the parameter passed to <code>DragCompletedCommand</code>.</td>
 	</tr>
@@ -127,7 +127,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter" aria-label="View DragStartedCommandParameter property in API reference">DragStartedCommandParameter</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a>
 		</td>
 		<td>Provides the parameter passed to <code>DragStartedCommand</code>.</td>
 	</tr>
@@ -136,7 +136,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement" aria-label="View EdgeLabelsPlacement property in API reference">EdgeLabelsPlacement</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color?view=net-maui-10.0" aria-label="View Color type in API reference">Color</a>
 		</td>
 		<td>Controls where the first and last labels appear on the slider track, such as <code>Inside</code> or <code>Outside</code>.</td>
 	</tr>
@@ -145,7 +145,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableDeferredUpdate" aria-label="View EnableDeferredUpdate property in API reference">EnableDeferredUpdate</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Defines whether value updates are deferred until interaction completes.</td>
 	</tr>
@@ -154,7 +154,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Determines whether the liquid glass visual effect is shown.</td>
 	</tr>
@@ -172,7 +172,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed" aria-label="View IsInversed property in API reference">IsInversed</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Reverses the date or time direction so later values appear toward the minimum side and earlier values appear toward the maximum side.</td>
 	</tr>
@@ -181,7 +181,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement" aria-label="View LabelsPlacement property in API reference">LabelsPlacement</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a>
 		</td>
 		<td>Controls where labels appear relative to the ticks, such as <code>None</code>, <code>Inside</code>, or <code>Outside</code>.</td>
 	</tr>
@@ -190,7 +190,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelStyle" aria-label="View LabelStyle property in API reference">LabelStyle</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" aria-label="View IEnumerable type in API reference">IEnumerable</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-10.0" aria-label="View IEnumerable type in API reference">IEnumerable</a>
 		</td>
 		<td>Customizes the appearance of the slider labels.</td>
 	</tr>
@@ -244,7 +244,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers" aria-label="View ShowDividers property in API reference">ShowDividers</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Defines whether dividers are shown between the selected range and the remaining track.</td>
 	</tr>
@@ -253,7 +253,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels" aria-label="View ShowLabels property in API reference">ShowLabels</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Determines whether date labels are visible on the slider.</td>
 	</tr>
@@ -262,7 +262,7 @@ documentation: ug
 		 <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks" aria-label="View ShowTicks property in API reference">ShowTicks</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a>
+			<a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View bool type in API reference">bool</a>
 		</td>
 		<td>Determines whether ticks are visible on the slider track.</td>
 	</tr>
