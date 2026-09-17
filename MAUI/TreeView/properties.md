@@ -320,7 +320,7 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors" aria-label="View SortDescriptors property in API reference">SortDescriptors</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SortDescriptorCollection.html" aria-label="View SortDescriptorCollection type in API reference">ObservableCollection&lt;SortDescriptors&gt;</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html" aria-label="View SortDescriptorCollection type in API reference">ObservableCollection&lt;SortDescriptors&gt;</a></td>
 <td>Collection of <code>sort rules</code> applied to <code>nodes</code>. Used to order nodes within each level.</td>
 </tr>
 

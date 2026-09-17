@@ -284,7 +284,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/maui" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
