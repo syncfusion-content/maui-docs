@@ -36,7 +36,7 @@ To initialize the control, import the Backdrop namespace and initialize the SfBa
 
 {% highlight xaml %}
 
-<backdrop:SfBackdropPage xmlns="http://xamarin.com/schemas/2014/forms"
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"

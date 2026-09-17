@@ -20,7 +20,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 To learn how to add and customize annotations in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
-{% youtube "https://youtu.be/v1u774lp9pQ" %}
+{% youtube "https://www.youtube.com/watch?v=v1u774lp9pQ" %}
 
 ## Adding Annotations
 
@@ -623,11 +623,11 @@ this.Content = chart;
 
 **AnnotationTapped**
 
-The [AnnotationTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnnotationTapped) event occurs when an annotation is tapped. The [AnnotationTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html) provides the following details:
+The [AnnotationTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnnotationTapped) event occurs when an annotation is tapped. The [AnnotationTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html) provides the following details:
 
-* [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Annotation) – the annotation instance that was tapped.
-* [X](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_X) – the X coordinate of the touch or mouse click position.
-* [Y](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Y) – the Y coordinate of the touch or mouse click position.
+* [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_Annotation) – the annotation instance that was tapped.
+* [X](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_X) – the X coordinate of the touch or mouse click position.
+* [Y](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_Y) – the Y coordinate of the touch or mouse click position.
 
 ## Public methods
 
