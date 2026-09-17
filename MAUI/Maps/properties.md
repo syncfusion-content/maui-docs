@@ -49,7 +49,7 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected" aria-label="View ShapeSelected event in API reference">ShapeSelected</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ShapeSelectedEventArgs.html" aria-label="View ShapeSelectedEventArgs type in API reference">&lt;ShapeSelectedEventArgs&gt;</a></a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ShapeSelectedEventArgs.html" aria-label="View ShapeSelectedEventArgs type in API reference">&lt;ShapeSelectedEventArgs&gt;</a></a></td>
     <td>Triggered when a map <code>shape</code> is selected or unselected, providing details about the affected shape. Use it to update <code>selection-dependent</code> UI or related data.</td>
 </tr>
 </table>
@@ -75,7 +75,7 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate" aria-label="View BubbleTooltipTemplate property in API reference">BubbleTooltipTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Custom template used to render bubble tooltip content. Supports richer <code>layouts</code>, <code>formatted values</code>, and bound <code>data</code>.</td>
 </tr>
 <tr valign="top">
@@ -90,12 +90,12 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource" aria-label="View DataSource property in API reference">DataSource</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
     <td><code>Data source</code> used to bind and populate the layer. Provides items for <code>shapes</code>, <code>bubbles</code>, and <code>labels</code>.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_EnableSelection" aria-label="View EnableSelection property in API reference">EnableSelection</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether shapes in the layer can be <code>selected</code>. When enabled, <code>tap</code> or <code>click</code> selects an individual shape.</td>
 </tr>
 <tr valign="top">
@@ -110,27 +110,27 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath" aria-label="View PrimaryValuePath property in API reference">PrimaryValuePath</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Field path used as the <code>primary value</code> when matching shapes to the data source. Required for <code>value-based coloring</code> and <code>lookups</code>.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedItems" aria-label="View SelectedItems property in API reference">SelectedItems</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;object&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;object&gt;</a></td>
     <td>Collection of currently <code>selected shapes</code>. Tracks the active selection and supports <code>multi-selection</code> scenarios.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill" aria-label="View SelectedShapeFill property in API reference">SelectedShapeFill</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Fill brush</code> applied to selected shapes. Distinct from the default fill to emphasize the selection.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStroke" aria-label="View SelectedShapeStroke property in API reference">SelectedShapeStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Stroke brush</code> applied to selected shapes. Combines with <code>SelectedShapeFill</code> to outline active shapes.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStrokeThickness" aria-label="View SelectedShapeStrokeThickness property in API reference">SelectedShapeStrokeThickness</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td><code>Thickness</code> of the stroke applied to selected shapes. Higher values create a stronger selection outline.</td>
 </tr>
 <tr valign="top">
@@ -140,32 +140,32 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath" aria-label="View ShapeColorValuePath property in API reference">ShapeColorValuePath</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Field path used to determine each shape's <code>color value</code>. Enables <code>value-driven coloring</code> from bound data.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField" aria-label="View ShapeDataField property in API reference">ShapeDataField</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Field from the data source used to <code>match</code> each shape. Required for linking source data to <code>map regions</code>.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill" aria-label="View ShapeFill property in API reference">ShapeFill</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td>Default <code>fill brush</code> used for map shapes. Provides the base appearance before <code>hover</code> or <code>selection styles</code> are applied.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverFill" aria-label="View ShapeHoverFill property in API reference">ShapeHoverFill</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Fill</code> applied when a shape is <code>hovered</code>. Gives clear pointer feedback without changing the selection.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStroke" aria-label="View ShapeHoverStroke property in API reference">ShapeHoverStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Stroke</code> applied when a shape is <code>hovered</code>. Improves visibility of the hovered region on pointer movement.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStrokeThickness" aria-label="View ShapeHoverStrokeThickness property in API reference">ShapeHoverStrokeThickness</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td><code>Thickness</code> of the stroke applied to <code>hovered shapes</code>. Larger values make the hover outline more visible.</td>
 </tr>
 <tr valign="top">
@@ -175,12 +175,12 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStroke" aria-label="View ShapeStroke property in API reference">ShapeStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td>Default <code>stroke brush</code> for map shapes. Outlines regions and improves map readability.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStrokeThickness" aria-label="View ShapeStrokeThickness property in API reference">ShapeStrokeThickness</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td><code>Thickness</code> of the default stroke applied to map shapes. Larger values create a stronger regional outline.</td>
 </tr>
 <tr valign="top">
@@ -190,27 +190,27 @@ documentation: ug
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate" aria-label="View ShapeTooltipTemplate property in API reference">ShapeTooltipTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Custom template used to render shape tooltip content. Supports richer <code>layouts</code> and formatted <code>properties</code> for each shape.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles" aria-label="View ShowBubbles property in API reference">ShowBubbles</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether bubbles are <code>displayed</code> on shapes. Use this to overlay an additional <code>value layer</code> on the map.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip" aria-label="View ShowBubbleTooltip property in API reference">ShowBubbleTooltip</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether bubble tooltips appear on <code>hover</code> or <code>tap</code>. Helps present bubble-specific details without cluttering the map.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels" aria-label="View ShowDataLabels property in API reference">ShowDataLabels</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether data labels are <code>displayed</code> on the map. Useful for showing <code>names</code>, <code>values</code>, or other <code>annotations</code>.</td>
 </tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip" aria-label="View ShowShapeTooltip property in API reference">ShowShapeTooltip</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether shape tooltips appear on <code>hover</code> or <code>tap</code>. Helps expose <code>shape-specific</code> details interactively.</td>
 </tr>
 </table>
