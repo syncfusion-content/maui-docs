@@ -17,12 +17,12 @@ Set the `ItemsSource` property of the `SfPromptLibrary` to a collection to displ
 
 Each item in the collection is a `PromptItem`. The prompt library uses the following members to group and display prompts:
 
-* `Title` - Displays the prompt name.
-* `PromptContent` - Inserts the prompt text when selected.
-* `Section` - Groups prompts into categories.
-* `Topic` - Filters prompts within a category.
-* `Description` - Shows a short summary for the prompt.
-* `Version` - Represents the version of the prompt.
+* `Title` - Specifies the prompt name.
+* `Topic` - Specifies the topic to which the prompt belongs.
+* `Description` - Specifies the prompt summary shown in the library.
+* `Section` - Specifies the section used to group related prompts.
+* `PromptContent` - Specifies the prompt text inserted or submitted when the user selects the prompt.
+* `Version` - Specifies the version of the prompt.
 
 ### Define the prompt collection
 
@@ -77,7 +77,7 @@ public class PromptLibraryViewModel
 
 ### Bind to data source
 
-Assign the view model as the page `BindingContext`, then bind the collection to the prompt library. Set the` ItemsSource` property of `SfPromptLibrary` to the collection so the items are displayed in the prompt library.
+Bind the view model collection to the `SfPromptLibrary.ItemsSource` property to display the items in the `PromptLibrary`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -147,7 +147,7 @@ public partial class MainPage : ContentPage
     private void OnPromptSelected(object sender, PromptSelectedEventArgs e)
     {
         PromptItem selectedPrompt = e.Prompt;
-        // TODO: Use the selected prompt text (selectedPrompt.PromptContent).
+        // Use the selected prompt text (selectedPrompt.PromptContent).
     }
 }
 
@@ -201,7 +201,7 @@ public class PromptLibraryViewModel
 
 ## Add PromptLibrary to SfAIAssistView
 
-To show the `PromptLibrary` UI inside the AssistView, embed `SfPromptLibrary` into the `SfAIAssistView.PromptLibrary` property.
+To show the `PromptLibrary` in `AssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
@@ -221,4 +221,6 @@ To show the `PromptLibrary` UI inside the AssistView, embed `SfPromptLibrary` in
 
 {% endhighlight %}
 
-N> The `PromptLibrary` overlay is displayed only when common suggestions are configured. When common suggestions are configured, a menu icon is displayed in the suggestions area. Tapping the menu icon opens the `PromptLibrary` overlay.
+N> Common suggestions must be configured for the `PromptLibrary` overlay to be displayed.
+
+![Syncfusion .NET MAUI SfAIAssistView Prompt Library](Images/maui-aiassistview-prompt-library.gif)

@@ -1306,4 +1306,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> When `AllowImagePreview` is set to `false`, image preview support is disabled, but `ImageTapped` and `AttachmentTapped` callbacks continue to be triggered.
+N> The `ImageTapped` and `AttachmentTapped` callbacks remain functional when `AllowImagePreview` is set to `false`.
