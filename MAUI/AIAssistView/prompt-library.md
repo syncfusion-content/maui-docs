@@ -201,7 +201,7 @@ public class PromptLibraryViewModel
 
 ## Add PromptLibrary to SfAIAssistView
 
-To show the `PromptLibrary` in `AssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
+To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
