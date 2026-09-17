@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FastLineSeries in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+title: FastScatterSeries in .NET MAUI Cartesian Chart | Syncfusion®
+description: This section lists the public API members for FastScatter series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# FastLineSeries API Reference in .NET MAUI Cartesian Chart
+# FastScatterSeries API Reference in .NET MAUI Cartesian Chart
 
 ## Properties
 

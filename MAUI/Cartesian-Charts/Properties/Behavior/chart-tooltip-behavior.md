@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ChartTooltipBehavior in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for ChartTooltip Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug

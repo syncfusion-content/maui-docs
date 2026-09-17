@@ -1,7 +1,7 @@
 ---
 layout: post
 title: StackingAreaSeries in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for StackingArea series in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
