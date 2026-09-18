@@ -240,6 +240,6 @@ N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui
 
 ## See also 
 
-[How to apply ripple effect on items in .NET MAUI ListView (SfListView)?](https://support.syncfusion.com/kb/article/15802/how-to-apply-ripple-effect-on-items-in-net-maui-listview-sflistview)
+[How to apply ripple effect on items in .NET MAUI ListView (SfListView)?](https://support.syncfusion.com/kb/article/15802/how-to-apply-ripple-effect-on-items-in-net-maui-listview)
 
 [How to get the selected item from .NET MAUI ListView?](https://support.syncfusion.com/kb/article/13469/how-to-get-the-selected-item-from-net-maui-listview)
