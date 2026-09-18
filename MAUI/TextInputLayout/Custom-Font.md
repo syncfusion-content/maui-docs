@@ -83,7 +83,7 @@ Content = inputLayout;
 
 ![SfTextInputLayout with the hint label rendered in the Lobster-Regular font at 16 units](images/CustomFont/HintLabelStyle.png)
 
-## Customize the Hint LineBreakMode
+## Customize the Hint Line Break Mode
 
 The floating hint label behavior is customized using the `HintLineBreakMode` property. This property controls how long hint text is displayed when the available space is limited by applying .NET MAUI `LineBreakMode` values such as wrapping and truncation.
 
