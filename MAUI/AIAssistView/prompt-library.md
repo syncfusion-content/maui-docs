@@ -204,7 +204,7 @@ public class PromptLibraryViewModel
 To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml hl_lines="8" %}
 
 <ContentPage.BindingContext>
     <local:PromptLibraryViewModel />
@@ -220,7 +220,7 @@ To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# hl_lines="19" %}
 
 using Syncfusion.Maui.AIAssistView;
 

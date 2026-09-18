@@ -1284,13 +1284,13 @@ This behavior is enabled by default and does not require additional configuratio
 To disable image preview support, set `AllowImagePreview` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AllowImagePreview="False"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+{% highlight c# hl_lines="8" %}
 
 using Syncfusion.Maui.AIAssistView;
 
