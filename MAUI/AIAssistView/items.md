@@ -459,8 +459,6 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion .NET MAUI SfAIAssistView Markdown](Images/maui-aiassistview-markdown.gif)
-
 ## Show error response
 
 The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.

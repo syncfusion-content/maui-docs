@@ -222,5 +222,3 @@ To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the
 {% endhighlight %}
 
 N> Common suggestions must be configured for the `PromptLibrary` overlay to be displayed.
-
-![Syncfusion .NET MAUI SfAIAssistView Prompt Library](Images/maui-aiassistview-prompt-library.gif)
