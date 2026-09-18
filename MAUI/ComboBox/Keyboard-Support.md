@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard Support in .NET MAUI ComboBox | Syncfusion®
-description: Learn how to configure the keyboard displayed by the Syncfusion® .NET MAUI ComboBox editor.
+description: Learn how to configure and customize the keyboard displayed in the Syncfusion® .NET MAUI ComboBox control for different data entry requirements.
 platform: maui
 control: SfComboBox
 documentation: ug

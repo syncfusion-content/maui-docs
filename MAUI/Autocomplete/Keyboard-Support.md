@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard Support in .NET MAUI Autocomplete | Syncfusion®
-description: Learn how to configure the keyboard displayed by the Syncfusion® .NET MAUI Autocomplete editor.
+description: Learn how to configure and customize the keyboard displayed in the Syncfusion® .NET MAUI Autocomplete control based on different input scenarios.
 platform: maui
 control: SfAutocomplete
 documentation: ug

@@ -12,7 +12,7 @@ keywords: .net maui textinputlayout hintlinebreakmode, syncfusion text input lay
 
 ## Overview
 
-The [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control provides the `HintLineBreakMode` property to control how long hint text is displayed when the available space is limited. It uses the standard .NET MAUI [LineBreakMode](https://learn.microsoft.com/dotnet/api/microsoft.maui.linebreakmode) values to wrap, truncate, or otherwise constrain the hint text.
+The [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control provides the `HintLineBreakMode` property to control how long hint text is displayed when the available space is limited. It uses the standard .NET MAUI `LineBreakMode` values to wrap, truncate, or otherwise constrain the hint text.
 
 ## XAML Example
 
