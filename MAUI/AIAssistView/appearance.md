@@ -1299,6 +1299,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+        SfAIAssistView sfAIAssistView = new SfAIAssistView();
         sfAIAssistView.AllowImagePreview = false;
     }
 }

@@ -203,6 +203,7 @@ public class PromptLibraryViewModel
 
 To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
 
+{% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage.BindingContext>
@@ -218,7 +219,39 @@ To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the
 
 </syncfusion:SfAIAssistView>
 
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        var viewModel = new PromptLibraryViewModel();
+        this.BindingContext = viewModel;
+
+        var promptLibrary = new SfPromptLibrary
+        {
+            ItemsSource = viewModel.PromptLibraryInfo,
+        };
+
+        // Create AssistView
+        SfAIAssistView assistView = new SfAIAssistView
+        {
+            Suggestions = viewModel.PromptSuggestions,
+            PromptLibrary = promptLibrary
+        };
+
+        this.Content = assistView;
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Common suggestions must be configured for the `PromptLibrary` overlay to be displayed.
+
+![Syncfusion .NET MAUI SfAIAssistView PromptLibrary](Images/maui-aiassistview-prompt-library.gif)
