@@ -460,4 +460,3 @@ this.Content = sfRangeSlider;
 {% endhighlight %}
 
 {% endtabs %}
-`
