@@ -125,6 +125,164 @@ SfTabView tabView = new SfTabView
 
 ![Tab item with custom content](images/TabItem_Content.png)
 
+### HeaderContent
+
+The `HeaderContent` property lets you assign any .NET MAUI `View` as the content of a tab header. When `HeaderContent` is provided, it replaces the default header presentation, including the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) text and [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource).
+
+Use `HeaderContent` to create tab headers with custom layouts, icons, badges, or interactive visual elements.
+
+{% tabs %}
+{% highlight xaml %}
+
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="Inbox"
+                       ImageSource="mail.png">
+        <tabView:SfTabItem.HeaderContent>
+            <HorizontalStackLayout Spacing="6">
+                <Image Source="mail.png"
+                       HeightRequest="18"
+                       WidthRequest="18" />
+                <Label Text="Inbox"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Border BackgroundColor="Red"
+                        StrokeShape="RoundRectangle 8"
+                        Padding="5,1">
+                    <Label Text="3"
+                           TextColor="White"
+                           FontSize="11" />
+                </Border>
+            </HorizontalStackLayout>
+        </tabView:SfTabItem.HeaderContent>
+        <tabView:SfTabItem.Content>
+            <Label Text="Inbox content"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </tabView:SfTabItem.Content>
+    </tabView:SfTabItem>
+    <tabView:SfTabItem Header="Sent">
+        <tabView:SfTabItem.HeaderContent>
+            <HorizontalStackLayout Spacing="6">
+                <Label Text="Sent"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Border BackgroundColor="Gray"
+                        StrokeShape="RoundRectangle 8"
+                        Padding="5,1">
+                    <Label Text="1"
+                           TextColor="White"
+                           FontSize="11" />
+                </Border>
+            </HorizontalStackLayout>
+        </tabView:SfTabItem.HeaderContent>
+        <tabView:SfTabItem.Content>
+            <Label Text="Sent content"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </tabView:SfTabItem.Content>
+    </tabView:SfTabItem>
+</tabView:SfTabView>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var headerContent = new HorizontalStackLayout
+{
+    Spacing = 6,
+    Children =
+    {
+        new Image
+        {
+            Source = "mail.png",
+            HeightRequest = 18,
+            WidthRequest = 18
+        },
+        new Label
+        {
+            Text = "Inbox",
+            FontAttributes = FontAttributes.Bold,
+            VerticalOptions = LayoutOptions.Center
+        },
+        new Border
+        {
+            BackgroundColor = Colors.Red,
+            StrokeShape = new RoundRectangle
+            {
+                CornerRadius = new CornerRadius(8)
+            },
+            Padding = new Thickness(5, 1),
+            Content = new Label
+            {
+                Text = "3",
+                TextColor = Colors.White,
+                FontSize = 11
+            }
+        }
+    }
+};
+
+var tabView = new SfTabView
+{
+    Items = new TabItemCollection
+    {
+        new SfTabItem
+        {
+            Header = "Inbox",
+            ImageSource = "mail.png",
+            HeaderContent = headerContent,
+            Content = new Label
+            {
+                Text = "Inbox content",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            }
+        },
+        new SfTabItem
+        {
+            Header = "Sent",
+            HeaderContent = new HorizontalStackLayout
+            {
+                Spacing = 6,
+                Children =
+                {
+                    new Label
+                    {
+                        Text = "Sent",
+                        FontAttributes = FontAttributes.Bold,
+                        VerticalOptions = LayoutOptions.Center
+                    },
+                    new Border
+                    {
+                        BackgroundColor = Colors.Gray,
+                        StrokeShape = new RoundRectangle
+                        {
+                            CornerRadius = new CornerRadius(8)
+                        },
+                        Padding = new Thickness(5, 1),
+                        Content = new Label
+                        {
+                            Text = "1",
+                            TextColor = Colors.White,
+                            FontSize = 11
+                        }
+                    }
+                }
+            },
+            Content = new Label
+            {
+                Text = "Sent content",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            }
+        }
+    }
+};
+
+Content = tabView;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ImagePosition options
 
 The .NET MAUI Tab View provides four options for determining how the image of the tab aligns relative to the text. The options are `Left`, `Top`, `Right`, and `Bottom`. These can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html). The property is of type `TabImagePosition` and the default value is `Left`.

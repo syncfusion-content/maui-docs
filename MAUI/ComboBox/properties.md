@@ -74,6 +74,12 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_Keyboard" aria-label="View Keyboard property in API reference">Keyboard</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.keyboard" aria-label="View Keyboard type in API reference">Keyboard</a></td>
+    <td>Specifies the keyboard shown when the editable ComboBox editor receives focus.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html" aria-label="View ComboBoxMultiSelectionDisplayMode enum in API reference">MultiSelectionDisplayMode</a></td>
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html" aria-label="View MultiSelectionDisplayMode property in API reference">ComboBoxMultiSelectionDisplayMode</a></td>
     <td>Defines how selected items are displayed when multiple selection is enabled by using the <code>ComboBoxMultiSelectionDisplayMode</code> enum.</td>
