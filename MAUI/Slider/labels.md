@@ -448,29 +448,11 @@ You can customize the appearance of slider labels using the `LabelTemplate` prop
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="10-21" %}
+{% highlight C# %}
 
-SfSlider slider = new SfSlider()
-{
-    Minimum = 0,
-    Maximum = 100,
-    Value = 50,
-    Interval = 20,
-    ShowLabels = true
-};
-
-slider.LabelTemplate = new DataTemplate(() =>
-{
-    Label label = new Label
-    {
-        TextColor = Colors.Red,
-        FontAttributes = FontAttributes.Bold
-    };
-
-    label.SetBinding(Label.TextProperty, "Text");
-
-    return label;
-});
+SfSlider slider = new SfSlider();
+slider.ShowLabels = true;
+this.Content = slider;
 
 {% endhighlight %}
 

@@ -449,30 +449,13 @@ You can customize the appearance of range slider labels using the `LabelTemplate
 
 {% endhighlight %}
 
-{% highlight C# hl_lines="11-22" %}
+{% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider()
-{
-    Minimum = 0,
-    Maximum = 100,
-    RangeStart = 20,
-    RangeEnd = 80,
-    Interval = 20,
-    ShowLabels = true,
-};
-
-rangeSlider.LabelTemplate = new DataTemplate(() =>
-{
-    Label label = new Label()
-    {
-        TextColor = Colors.Red,
-        FontAttributes = FontAttributes.Bold
-    };
-
-    label.SetBinding(Label.TextProperty, "Text");
-
-    return label;
-});
+SfRangeSlider sfRangeSlider = new SfRangeSlider();
+sfRangeSlider.ShowLabels = true;
+sfRangeSlider.RangeStart = 20;
+sfRangeSlider.RangeEnd = 80;
+this.Content = sfRangeSlider;
 
 {% endhighlight %}
 

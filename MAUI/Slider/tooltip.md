@@ -74,7 +74,7 @@ SfSlider slider = new SfSlider()
 
 N> Refer [here](https://help.syncfusion.com/maui/slider/events-and-commands#tooltip-text-format) to customize tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
-## position
+## Tooltip position
 
 You can customize the position of the tooltip using the `Position` property of `SliderTooltip`. For horizontal sliders, the tooltip can be displayed above or below the track, while for vertical sliders, it can be displayed on the left or right side of the track.
 
@@ -95,6 +95,7 @@ You can customize the position of the tooltip using the `Position` property of `
 SfSlider slider = new SfSlider();
 slider.Tooltip = new SliderTooltip();
 slider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = slider;
 
 {% endhighlight %}
 

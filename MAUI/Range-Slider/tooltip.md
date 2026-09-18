@@ -90,9 +90,10 @@ You can customize the position of the tooltip using the `Position` property of `
 
 {% highlight C# hl_lines="3" %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Tooltip = new SliderTooltip();
-rangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
+SfRangeSlider sfRangeSlider = new SfRangeSlider();
+sfRangeSlider.Tooltip = new SliderTooltip();
+sfRangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = sfRangeSlider;
 
 {% endhighlight %}
 
