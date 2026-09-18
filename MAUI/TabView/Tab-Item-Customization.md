@@ -125,163 +125,90 @@ SfTabView tabView = new SfTabView
 
 ![Tab item with custom content](images/TabItem_Content.png)
 
-### HeaderContent
+### Customizing tab header content
 
-The `HeaderContent` property lets you assign any .NET MAUI `View` as the content of a tab header. When `HeaderContent` is provided, it replaces the default header presentation, including the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) text and [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource).
+The `HeaderContent` property allows you to define a custom view for the tab header. When built-in view is not needed, it can be overridden by adding custom views to the header in tabs. The tab view header can be customized by adding different views such as image, button, and label inside the header content. The following code sample demonstrates how to customize the header content as needed.
 
-Use `HeaderContent` to create tab headers with custom layouts, icons, badges, or interactive visual elements.
+{% tabs %} 
 
-{% tabs %}
 {% highlight xaml %}
-
+<!-- Define the SfTabView control -->
 <tabView:SfTabView>
-    <tabView:SfTabItem Header="Inbox"
-                       ImageSource="mail.png">
-        <tabView:SfTabItem.HeaderContent>
-            <HorizontalStackLayout Spacing="6">
-                <Image Source="mail.png"
-                       HeightRequest="18"
-                       WidthRequest="18" />
-                <Label Text="Inbox"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center" />
-                <Border BackgroundColor="Red"
-                        StrokeShape="RoundRectangle 8"
-                        Padding="5,1">
-                    <Label Text="3"
-                           TextColor="White"
-                           FontSize="11" />
-                </Border>
-            </HorizontalStackLayout>
-        </tabView:SfTabItem.HeaderContent>
-        <tabView:SfTabItem.Content>
-            <Label Text="Inbox content"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-        </tabView:SfTabItem.Content>
-    </tabView:SfTabItem>
-    <tabView:SfTabItem Header="Sent">
-        <tabView:SfTabItem.HeaderContent>
-            <HorizontalStackLayout Spacing="6">
-                <Label Text="Sent"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center" />
-                <Border BackgroundColor="Gray"
-                        StrokeShape="RoundRectangle 8"
-                        Padding="5,1">
-                    <Label Text="1"
-                           TextColor="White"
-                           FontSize="11" />
-                </Border>
-            </HorizontalStackLayout>
-        </tabView:SfTabItem.HeaderContent>
-        <tabView:SfTabItem.Content>
-            <Label Text="Sent content"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-        </tabView:SfTabItem.Content>
-    </tabView:SfTabItem>
+	<!-- Define a tab item with the HeaderContent-->
+	<tabView:SfTabItem>
+		<!-- Define the HeaderContent of the tab item -->		
+		<tabView:SfTabItem.HeaderContent>
+			<Grid ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Image Source="call.png" HeightRequest="20" WidthRequest="20"/>
+				<Label Grid.Column="1" Text="Call" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+			</Grid>
+		</tabView:SfTabItem.HeaderContent>
+		<tabView:SfTabItem.Content>
+			<ListView>
+				<!-- Add your items here -->
+			</ListView>
+		</tabView:SfTabItem.Content>
+	</tabView:SfTabItem>
 </tabView:SfTabView>
-
 {% endhighlight %}
+
 {% highlight C# %}
+// Create an instance of the SfTabView control
+SfTabView tabView = new SfTabView();
 
-var headerContent = new HorizontalStackLayout
+var callHeader = new Grid
 {
-    Spacing = 6,
-    Children =
+    ColumnSpacing = 5,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    ColumnDefinitions =
     {
-        new Image
-        {
-            Source = "mail.png",
-            HeightRequest = 18,
-            WidthRequest = 18
-        },
-        new Label
-        {
-            Text = "Inbox",
-            FontAttributes = FontAttributes.Bold,
-            VerticalOptions = LayoutOptions.Center
-        },
-        new Border
-        {
-            BackgroundColor = Colors.Red,
-            StrokeShape = new RoundRectangle
-            {
-                CornerRadius = new CornerRadius(8)
-            },
-            Padding = new Thickness(5, 1),
-            Content = new Label
-            {
-                Text = "3",
-                TextColor = Colors.White,
-                FontSize = 11
-            }
-        }
+        new ColumnDefinition { Width = GridLength.Auto },
+        new ColumnDefinition { Width = GridLength.Star }
     }
 };
+var callImage = new Image { Source = "call.png", HeightRequest = 20, WidthRequest = 20 };
+Grid.SetColumn(callImage, 0);
 
-var tabView = new SfTabView
+var callLabel = new Label
 {
-    Items = new TabItemCollection
-    {
-        new SfTabItem
-        {
-            Header = "Inbox",
-            ImageSource = "mail.png",
-            HeaderContent = headerContent,
-            Content = new Label
-            {
-                Text = "Inbox content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        },
-        new SfTabItem
-        {
-            Header = "Sent",
-            HeaderContent = new HorizontalStackLayout
-            {
-                Spacing = 6,
-                Children =
-                {
-                    new Label
-                    {
-                        Text = "Sent",
-                        FontAttributes = FontAttributes.Bold,
-                        VerticalOptions = LayoutOptions.Center
-                    },
-                    new Border
-                    {
-                        BackgroundColor = Colors.Gray,
-                        StrokeShape = new RoundRectangle
-                        {
-                            CornerRadius = new CornerRadius(8)
-                        },
-                        Padding = new Thickness(5, 1),
-                        Content = new Label
-                        {
-                            Text = "1",
-                            TextColor = Colors.White,
-                            FontSize = 11
-                        }
-                    }
-                }
-            },
-            Content = new Label
-            {
-                Text = "Sent content",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }
-        }
-    }
+    Text = "Call",
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center
+};
+Grid.SetColumn(callLabel, 1);
+
+callHeader.Children.Add(callImage);
+callHeader.Children.Add(callLabel);
+
+// Create a collection of tab items with HeaderContent
+var tabItems = new TabItemCollection
+{
+	new SfTabItem
+	{
+		HeaderContent = callHeader,
+		Content = new ListView
+		{
+			// Add your items here
+		}
+	}
 };
 
-Content = tabView;
-
+// Set the Items property of the SfTabView to the collection of tab items
+tabView.Items = tabItems;
 {% endhighlight %}
+
 {% endtabs %}
+
+The following image shows a tab item with custom header content:
+
+![HeaderContent](images/HeaderContent.png)
+
+N> Ensure consistent sizing and alignment to achieve a visually balanced layout across all tabs in `HeaderContent`.
 
 ## ImagePosition options
 

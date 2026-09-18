@@ -83,6 +83,104 @@ Content = inputLayout;
 
 ![SfTextInputLayout with the hint label rendered in the Lobster-Regular font at 16 units](images/CustomFont/HintLabelStyle.png)
 
+## Customize the Hint LineBreakMode
+
+The floating hint label behavior is customized using the `HintLineBreakMode` property. This property controls how long hint text is displayed when the available space is limited by applying .NET MAUI `LineBreakMode` values such as wrapping and truncation.
+
+The following example wraps a long hint across multiple lines.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputLayout:SfTextInputLayout Hint="Business registration identification number"
+                               HintLineBreakMode="WordWrap"
+                               ContainerType="Outlined">
+    <Entry Keyboard="Numeric" />
+</inputLayout:SfTextInputLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout
+{
+    Hint = "Business registration identification number",
+    HintLineBreakMode = LineBreakMode.TailTruncation,
+    ContainerType = ContainerType.Outlined,
+    Content = new Entry { Keyboard = Keyboard.Numeric }
+};
+
+Content = inputLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the Hint View 
+
+The floating hint label is customized using the `HintView` property. This property allows any .NET MAUI `View` to be displayed as the floating hint label, enabling richer content such as styled text, icons, and other visual elements beyond a text-only hint.
+
+N> When `HintView` is assigned, it takes precedence over `Hint`. The custom view participates in the same floating behavior as the standard hint: it moves to the floating position when the input view receives focus or contains text, and returns to its resting position when appropriate.
+
+The following example uses a styled label as the floating hint view.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputLayout:SfTextInputLayout
+    ContainerType="Outlined"
+    EnableHintAnimation="True">
+
+    <inputLayout:SfTextInputLayout.HintView>
+        <Label
+            Text="Premium User"
+            FontSize="14"
+            FontAttributes="Bold"
+            TextColor="#512DA8"
+            BackgroundColor="#EDE7F6"
+            Padding="8,4"
+            Margin="2" />
+    </inputLayout:SfTextInputLayout.HintView>
+
+    <Entry Placeholder="Enter your name" />
+
+</inputLayout:SfTextInputLayout>
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout
+{
+    ContainerType = ContainerType.Outlined,
+    EnableHintAnimation = true,
+    HintView = new Label
+    {
+        Text = " Premium User",
+        FontSize = 14,
+        FontAttributes = FontAttributes.Bold,
+        TextColor = Color.FromArgb("#512DA8"),
+        BackgroundColor = Color.FromArgb("#EDE7F6"),
+        Padding = new Thickness(8, 4),
+        Margin = new Thickness(2)
+    },
+    Content = new Entry
+    {
+        Placeholder = "Enter your name"
+    }
+};
+
+Content = new VerticalStackLayout
+{
+    Padding = 20,
+    Children =
+    {
+        inputLayout
+    }
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Hint` value is included as a fallback, but it is not displayed while `HintView` is assigned.
+
 ## Customize the Helper Text Label
 
 The helper text below the input line is customized using [HelperLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperLabelStyle) property. When `HasError` is `true`, the helper text is replaced by the error text, so `HelperLabelStyle` has no visible effect in that state.
