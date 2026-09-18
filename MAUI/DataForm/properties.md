@@ -20,13 +20,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems" aria-label="View AutoGenerateItems property in API reference">AutoGenerateItems</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether <code>form items</code> are generated <code>automatically</code> from the bound <code>DataObject</code>. When <code>true</code>, the form builds an <code>editor</code> for every editable <code>property</code>; manually added items can still be merged with the generated ones.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount" aria-label="View ColumnCount property in API reference">ColumnCount</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
     <td>Number of <code>columns</code> used to arrange <code>form items</code> across the available <code>layout width</code>. Larger values place more <code>editors</code> side by side.</td>
 </tr>
 
@@ -38,7 +38,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject" aria-label="View DataObject property in API reference">DataObject</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
     <td><code>Source object</code> whose <code>properties</code> are exposed for <code>editing</code>, <code>validation</code>, and <code>data binding</code> in the <code>form</code>.</td>
 </tr>
 
@@ -62,13 +62,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GroupHeaderTemplate" aria-label="View GroupHeaderTemplate property in API reference">GroupHeaderTemplate</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td><code>Template</code> used to render <code>group headers</code>. Use it to customize the <code>visual presentation</code> of <code>sections</code> that organize related <code>form items</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly" aria-label="View IsReadOnly property in API reference">IsReadOnly</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether the displayed <code>fields</code> accept <code>editing input</code>. Set this to <code>true</code> to make the form <code>display-only</code>.</td>
 </tr>
 
@@ -86,7 +86,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsSourceProvider" aria-label="View ItemsSourceProvider property in API reference">ItemsSourceProvider</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormItemsSourceProvider.html" aria-label="View IDataFormItemsSourceProvider type in API reference">IDataFormItemsSourceProvider</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html" aria-label="View IDataFormSourceProvider type in API reference">IDataFormSourceProvider</a></td>
     <td>Custom <code>provider</code> that supplies <code>lookup data</code> or <code>selection lists</code> used by <code>editors</code> such as <code>drop-downs</code> and <code>pickers</code>.</td>
 </tr>
 
@@ -132,7 +132,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Commit" aria-label="View Commit method in API reference">Commit()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Commits pending <code>editor values</code> to the <code>data object</code> and applies the current <code>unsaved changes</code> to the <code>bound source</code>.</td>
 </tr>
 
@@ -150,43 +150,43 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_" aria-label="View RegisterEditor(String, DataFormEditorType) method in API reference">RegisterEditor(String, DataFormEditorType)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Maps the specified <code>property_name</code> to a predefined <code>DataFormEditorType</code> so the form uses that <code>built-in editor</code> for the <code>field</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_IDataFormEditor_" aria-label="View RegisterEditor(String, IDataFormEditor) method in API reference">RegisterEditor(String, IDataFormEditor)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Maps the specified <code>property_name</code> to a custom <code>IDataFormEditor</code> implementation, allowing a tailored <code>editor</code> to be associated with the <code>field</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_Type_Syncfusion_Maui_DataForm_DataFormEditorType_" aria-label="View RegisterEditor(Type, DataFormEditorType) method in API reference">RegisterEditor(Type, DataFormEditorType)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Maps the specified <code>CLR data type</code> to a predefined <code>DataFormEditorType</code>, applying the <code>editor</code> to every <code>property</code> of that <code>underlying type</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ScrollTo_System_String_" aria-label="View ScrollTo(String) method in API reference">ScrollTo(String)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Scrolls to the <code>data form item</code> associated with the specified <code>property_name</code> and brings the matching <code>field</code> into view within the current <code>layout</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_UpdateEditor_System_String_" aria-label="View UpdateEditor(String) method in API reference">UpdateEditor(String)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Refreshes the <code>editor state</code> for the specified <code>property_name</code> and re-syncs the <code>editor</code> with the current value of the <code>underlying data object</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate" aria-label="View Validate() method in API reference">Validate()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Validates all <code>data form items</code> using the active <code>validation rules</code> and returns whether every <code>field</code> satisfies them.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate_System_Collections_Generic_List_System_String__" aria-label="View Validate(List&lt;String&gt;) method in API reference">Validate(List&lt;String&gt;)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Validates only the <code>data form items</code> whose <code>property_names</code> are provided and returns whether the listed <code>fields</code> pass the active <code>rules</code>.</td>
 </tr>
 </table>
@@ -202,19 +202,19 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem" aria-label="View GenerateDataFormItem event in API reference">GenerateDataFormItem</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.GenerateDataFormItemEventArgs.html" aria-label="View GenerateDataFormItemEventArgs type in API reference">GenerateDataFormItemEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.GenerateDataFormItemEventArgs.html" aria-label="View GenerateDataFormItemEventArgs type in API reference">GenerateDataFormItemEventArgs</a>&gt;</a></td>
     <td>Triggered <code>while</code> a <code>data form item</code> is being generated, allowing the <code>field configuration</code> to be <code>observed</code> and <code>adjusted</code> before the <code>editor</code> is displayed.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateForm" aria-label="View ValidateForm event in API reference">ValidateForm</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidateFormEventArgs.html" aria-label="View DataFormValidateFormEventArgs type in API reference">DataFormValidateFormEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidateFormEventArgs.html" aria-label="View DataFormValidateFormEventArgs type in API reference">DataFormValidateFormEventArgs</a>&gt;</a></td>
     <td>Triggered when the <code>data form</code> is <code>validated</code>, providing <code>validation scope details</code> for the entire <code>form life cycle</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty" aria-label="View ValidateProperty event in API reference">ValidateProperty</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html" aria-label="View DataFormValidatePropertyEventArgs type in API reference">DataFormValidatePropertyEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html" aria-label="View DataFormValidatePropertyEventArgs type in API reference">DataFormValidatePropertyEventArgs</a>&gt;</a></td>
     <td>Triggered when an individual <code>property</code> is <code>validated</code>, providing <code>rule details</code> and <code>validation state</code> for the <code>field</code> under evaluation.</td>
 </tr>
 </table>
