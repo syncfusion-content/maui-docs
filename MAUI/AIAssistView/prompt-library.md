@@ -9,19 +9,19 @@ documentation: ug
 
 # Prompt Library in .NET MAUI AI AssistView
 
-The `SfPromptLibrary` displays a collection of predefined prompts, helping users quickly select commonly used prompts organized by category and topic.
+The `SfPromptLibrary` displays a collection of predefined prompts organized by section and topic, allowing users to quickly find and select prompts.
 
-## Populate Items in PromptLibrary
+## Populate prompts in PromptLibrary
 
-Set the `ItemsSource` property of the `SfPromptLibrary` to a collection to display the available items.
+Set the `ItemsSource` property of `SfPromptLibrary` to a collection of PromptItem objects to display the available prompts.
 
 Each item in the collection is a `PromptItem`. The prompt library uses the following members to group and display prompts:
 
-* `Title` - Specifies the prompt name.
-* `Topic` - Specifies the topic to which the prompt belongs.
-* `Description` - Specifies the prompt summary shown in the library.
+* `Title` - Specifies the title of the prompt.
+* `Topic` - Specifies the topic associated with the prompt.
+* `Description` - Specifies a brief description of the prompt displayed in the library.
 * `Section` - Specifies the section used to group related prompts.
-* `PromptContent` - Specifies the prompt text inserted or submitted when the user selects the prompt.
+* `PromptContent` - Specifies the prompt content used when the prompt is selected.
 * `Version` - Specifies the version of the prompt.
 
 ### Define the prompt collection
@@ -114,9 +114,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Event and Commands
+## Event and Command
 
-When a user selects a prompt, both the `PromptSelected` event and the `PromptSelectedCommand` are triggered. They provide a `PromptSelectedEventArgs` instance that contains the following details about the selected prompt item.
+When a user selects a prompt, both the `PromptSelected` event and the `PromptSelectedCommand` are triggered. Both provide a `PromptSelectedEventArgs` instance containing information about the selected prompt.
 
 * `Prompt` - The prompt item chosen by the user.
 
@@ -201,7 +201,7 @@ public class PromptLibraryViewModel
 
 ## Add PromptLibrary to SfAIAssistView
 
-To show the `PromptLibrary` in `SfAIAssistView`, assign `SfPromptLibrary` to the `SfAIAssistView.PromptLibrary` property. With common suggestions configured, a more icon appears in the suggestions area. Tapping the more icon displays the `PromptLibrary` overlay.
+To display `SfPromptLibrary` within `SfAIAssistView`, assign an `SfPromptLibrary` instance to the `PromptLibrary` property. When suggestions are configured, a `More` icon appears in the suggestions area. Tapping the icon opens the `PromptLibrary` overlay.
 
 {% tabs %}
 {% highlight xaml hl_lines="8" %}
@@ -252,6 +252,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> Common suggestions must be configured for the `PromptLibrary` overlay to be displayed.
+N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` overlay. For more information, refer to the [Common suggestions](https://help.syncfusion.com/maui/aiassistview/suggestions#displaying-common-suggestions) section.
 
 ![Syncfusion .NET MAUI SfAIAssistView PromptLibrary](Images/maui-aiassistview-prompt-library.gif)
