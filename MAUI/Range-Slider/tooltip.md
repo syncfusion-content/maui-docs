@@ -74,7 +74,7 @@ N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-command
 
 ## Tooltip position
 
-You can customize the position of the tooltip using the `Position` property of `SliderTooltip`. For horizontal range sliders, the tooltip can be displayed above or below the track, while for vertical range sliders, it can be displayed on the left or right side of the track.
+You can customize the tooltip position using the `Position` property of `SliderTooltip` in the Range Slider. In a horizontal range slider, the tooltip can be displayed above or below the track. In a vertical range slider, it can be displayed on the left or right side of the track.
 
 {% tabs %}
 
@@ -90,10 +90,10 @@ You can customize the position of the tooltip using the `Position` property of `
 
 {% highlight C# hl_lines="3" %}
 
-SfRangeSlider sfRangeSlider = new SfRangeSlider();
-sfRangeSlider.Tooltip = new SliderTooltip();
-sfRangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
-this.Content = sfRangeSlider;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Tooltip = new SliderTooltip();
+rangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = rangeSlider;
 
 {% endhighlight %}
 

@@ -76,7 +76,7 @@ N> Refer [here](https://help.syncfusion.com/maui/slider/events-and-commands#tool
 
 ## Tooltip position
 
-You can customize the position of the tooltip using the `Position` property of `SliderTooltip`. For horizontal sliders, the tooltip can be displayed above or below the track, while for vertical sliders, it can be displayed on the left or right side of the track.
+You can customize the tooltip position using the `Position` property of `SliderTooltip` in the Slider. In a horizontal slider, the tooltip can be displayed above or below the track. In a vertical slider, it can be displayed on the left or right side of the track.
 
 {% tabs %}
 

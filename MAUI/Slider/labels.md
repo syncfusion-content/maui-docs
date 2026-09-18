@@ -426,25 +426,26 @@ this.Content = stackLayout;
 
 ## Label appearance customization
 
-You can customize the appearance of slider labels using the `LabelTemplate` property. This allows you to define a custom view for labels and display content based on the label value.
+You can customize the appearance of slider labels using the `LabelTemplate` property, which lets you define a custom view and display content based on label values.
 
 {% tabs %}
 
-{% highlight xaml hl_lines="2 3 4 5 6" %}
-
-<ContentPage.Resources>
-    <DataTemplate x:Key="LabelTemplate">
-        <Label Text="{Binding Text}"
-               TextColor="Red"
-               FontAttributes="Bold" />
-    </DataTemplate>
-</ContentPage.Resources>
+{% highlight xaml hl_lines="6 7 8 9 10 11 12" %}
 
 <sliders:SfSlider Minimum="0"
                   Maximum="100"
                   Interval="20"
-                  ShowLabels="True"
-                  LabelTemplate="{StaticResource LabelTemplate}" />
+                  ShowLabels="True">
+
+    <sliders:SfSlider.LabelTemplate>
+        <DataTemplate>
+            <Label Text="{Binding Text}"
+                   TextColor="Red"
+                   FontAttributes="Bold" />
+        </DataTemplate>
+    </sliders:SfSlider.LabelTemplate>
+
+</sliders:SfSlider>
 
 {% endhighlight %}
 
