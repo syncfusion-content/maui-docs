@@ -95,7 +95,7 @@ Our tile layer is not limited or specific to any tile providers mentioned here. 
 
 For other map providers like TomTom, MapBox, etc., you can check the respective official websites and provide the URL in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/maui/maps/tile-layer#setting-url-template) section.
 
-Below is the example of adding TomTom map. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction).
+Below is the example of adding TomTom map. You can get the TomTom API key from this [`link`](https://docs.tomtom.com/map-display-api/documentation/tomtom-maps/v2/product-information/introduction).
 
 {% highlight c# %}
 
