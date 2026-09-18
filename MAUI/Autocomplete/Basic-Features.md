@@ -126,11 +126,8 @@ The following screenshot illustrates the AutomationIds of the inner elements:
 
 ## Keyboard
 
-The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control provides support for customizing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
-
-## XAML Example
-
-The following example displays a text keyboard for an employee name lookup.
+The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) 
+control provides support for changing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
 
 {% tabs %}
 {% highlight xaml %}

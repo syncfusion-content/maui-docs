@@ -239,10 +239,6 @@ The following image illustrates the result of the above code:
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides support for customizing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
 
-## XAML Example
-
-The following example configures an editable ComboBox for alphanumeric employee ID entry while displaying employee names.
-
 {% tabs %}
 {% highlight xaml %}
 

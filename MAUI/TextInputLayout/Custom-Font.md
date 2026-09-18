@@ -95,7 +95,7 @@ The following example wraps a long hint across multiple lines.
 <inputLayout:SfTextInputLayout Hint="Business registration identification number"
                                HintLineBreakMode="WordWrap"
                                ContainerType="Outlined">
-    <Entry Keyboard="Numeric" />
+    <Entry Text="2026001234" />
 </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
@@ -106,7 +106,7 @@ var inputLayout = new SfTextInputLayout
     Hint = "Business registration identification number",
     HintLineBreakMode = LineBreakMode.TailTruncation,
     ContainerType = ContainerType.Outlined,
-    Content = new Entry { Keyboard = Keyboard.Numeric }
+    Content = new Entry { Text = "2026001234" }
 };
 
 Content = inputLayout;

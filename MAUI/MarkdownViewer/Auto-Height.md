@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Auto-height in .NET MAUI Markdown Viewer | Syncfusion®
-description: Learn how to automatically size the Syncfusion® .NET MAUI Markdown Viewer based on its rendered Markdown content.
+title: Auto-Height in .NET MAUI Markdown Viewer | Syncfusion®
+description: Learn how to adjust height automatically in the Syncfusion® .NET MAUI Markdown Viewer based on its rendered Markdown content.
 platform: maui
 control: SfMarkdownViewer
 documentation: ug
@@ -14,9 +14,7 @@ keywords: .net maui markdownviewer autosize, syncfusion markdown viewer automati
 
 The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control supports automatic height adjustment through the `EnableAutoHeight` property. When enabled, the control measures the rendered Markdown content and automatically adjusts its height to fit the content without requiring a fixed `HeightRequest` value.
 
-## XAML Example
-
-The following example enables automatic sizing for Markdown content. 
+The following example enables automatic height adjustment for Markdown content.
 
 {% tabs %}
 {% highlight xaml %}
