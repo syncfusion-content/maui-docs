@@ -619,6 +619,71 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Annotation Z-Index
+
+The [ZIndex]() property of [ChartAnnotation]() is used to control the rendering order of annotations. Annotations with a higher [ZIndex]() value are displayed above annotations with lower [ZIndex]() values. Setting [ZIndex]() to `-1` renders the annotation behind the chart series.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Annotations>
+
+        <chart:TextAnnotation
+            X1="3.5"
+            Y1="15"
+            Text="WATERMARK"
+            ZIndex="-1" />
+
+        <chart:RectangleAnnotation
+            X1="2"
+            Y1="10"
+            X2="5"
+            Y2="20"
+            Fill="LightBlue"
+            ZIndex="1" />
+
+    </chart:SfCartesianChart.Annotations>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+var textAnnotation = new TextAnnotation()
+{
+    X1 = 3.5,
+    Y1 = 15,
+    Text = "WATERMARK",
+    FontSize = 24,
+    Opacity = 0.15,
+    ZIndex = -1
+};
+
+var rectangleAnnotation = new RectangleAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 5,
+    Y2 = 20,
+    Fill = Colors.LightBlue,
+    ZIndex = 1
+};
+
+chart.Annotations.Add(textAnnotation);
+chart.Annotations.Add(rectangleAnnotation);
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Annotation Z-Index in .NET MAUI Cartesian Chart](Annotation_image/Annotation_z_order.png)
+
 ## Event
 
 **AnnotationTapped**
