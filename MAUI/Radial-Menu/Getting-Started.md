@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Radial Men
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Radial Menu

@@ -5,6 +5,7 @@ description: Learn about navigation customization support in Syncfusion® .NET M
 platform: maui
 control: Rotator
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Navigation Customization in .NET MAUI Rotator

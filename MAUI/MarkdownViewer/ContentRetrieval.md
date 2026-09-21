@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer get text, syncfusion markdownviewer get html maui, sfmarkdownviewer get markdown text maui, .net maui markdown to html, .net maui markdown extract text, markdown viewer api maui
+appliesto: UI Component Suite
 ---
 
 # Content Retrieval in .NET MAUI Markdown Viewer

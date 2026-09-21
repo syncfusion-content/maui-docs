@@ -5,6 +5,7 @@ description: Learn how to use data annotations for validation in Syncfusion® .N
 platform: maui
 control: SfDataForm
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Data Annotations in .NET MAUI DataForm

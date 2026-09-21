@@ -5,6 +5,7 @@ description: Learn how to sort nodes in the Syncfusion® .NET MAUI TreeView (SfT
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Sorting in .NET MAUI TreeView

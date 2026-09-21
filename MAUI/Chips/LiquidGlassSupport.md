@@ -6,6 +6,7 @@ platform: MAUI
 control: chips
 documentation: ug
 keywords: .net maui sfchipgroup liquid glass effect, syncfusion chips glass effect maui, sfchipgroup enableliquidglasseffect maui, .net maui sfchip translucent background, sfchipgroup ios 26 macos 26 maui
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Chips

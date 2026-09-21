@@ -5,6 +5,7 @@ description: Learn about properties, events, and methods available in Syncfusion
 platform: maui
 control: SfAvatarView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Avatar View

@@ -5,6 +5,7 @@ description: This section explains the properties and methods with Syncfusion® 
 platform: maui
 control: SfDockLayout
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI DockLayout

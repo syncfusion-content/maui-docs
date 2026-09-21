@@ -5,6 +5,7 @@ description: Learn about enabling and customizing the liquid glass effect in Syn
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Linear Progress Bar

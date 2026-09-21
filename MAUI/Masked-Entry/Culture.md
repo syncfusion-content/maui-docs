@@ -5,6 +5,7 @@ description: Learn how to set the different culture for currency symbols, date, 
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Culture in .NET MAUI Masked Entry

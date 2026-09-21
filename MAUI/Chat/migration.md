@@ -5,6 +5,7 @@ description: Learn here all about Migrating from Syncfusion® Xamarin Chat to Sy
 platform: MAUI
 control: SfChat
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms Chat to .NET MAUI Chat

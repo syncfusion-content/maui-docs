@@ -5,6 +5,7 @@ description: Getting started with the Liquid Glass Effect UI in Syncfusion® .NE
 platform: MAUI
 control: General
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Getting Started with Liquid Glass for Modern UI

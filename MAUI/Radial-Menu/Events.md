@@ -5,6 +5,7 @@ description: Learn about Events in Syncfusion® .NET MAUI Radial Menu (SfRadialM
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Radial Menu

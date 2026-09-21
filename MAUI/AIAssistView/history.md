@@ -5,6 +5,7 @@ description: Learn here all about conversation history support in Syncfusion® .
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Conversation history in .NET MAUI AI AssistView

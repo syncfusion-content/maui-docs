@@ -5,6 +5,7 @@ description: Learn how to enable and customize the Liquid Glass visual effect in
 platform: MAUI
 control: General
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass UI for .NET MAUI Overview

@@ -5,6 +5,7 @@ description: Learn all about enabling swipe support in Syncfusion® .NET MAUI Ta
 platform: MAUI
 control: SfTabView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Swiping in .NET MAUI Tab View

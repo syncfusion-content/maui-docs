@@ -5,6 +5,7 @@ description: Learn how to customize the appearance of the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Appearance customization in .NET MAUI AI AssistView

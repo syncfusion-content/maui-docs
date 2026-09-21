@@ -6,6 +6,7 @@ platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, liquid glass, glass effect, acrylic, glass morphism, EnableLiquidGlassEffect
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Support in .NET MAUI Color Picker

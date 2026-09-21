@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Step Progress Bar t
 platform: maui
 control: SfStepProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Migration to .NET MAUI Step Progress Bar

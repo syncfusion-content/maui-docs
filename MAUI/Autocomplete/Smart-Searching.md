@@ -5,6 +5,7 @@ description: Learn about how to implement AI-powered smart search using Syncfusi
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # AI-Powered Smart Search in .NET MAUI Autocomplete

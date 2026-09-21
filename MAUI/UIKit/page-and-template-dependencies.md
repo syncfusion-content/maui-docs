@@ -5,6 +5,7 @@ description: The list of screen-wise resources and NuGet packages required for e
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Page Dependencies of Essential<sup>®</sup> UI Kit for .NET MAUI

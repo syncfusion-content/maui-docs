@@ -5,6 +5,7 @@ description: Learn here all about the introduction of the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfParallaxView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI Parallax View

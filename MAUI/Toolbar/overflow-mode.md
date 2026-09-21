@@ -5,6 +5,7 @@ description: Learn about overflow modes in Syncfusion® .NET MAUI Toolbar (SfToo
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Overflow Mode in .NET MAUI Toolbar

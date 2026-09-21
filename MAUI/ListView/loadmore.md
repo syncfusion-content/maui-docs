@@ -5,6 +5,7 @@ description: Learn here all about Load More items support in Syncfusion® .NET M
 platform: MAUI
 control: SfListView
 documentation: ug
+appliesto: UI Component Suite
 ---
 # Load More in .NET MAUI ListView
 

@@ -5,6 +5,7 @@ description: Learn here all about Migrating from Syncfusion® Xamarin Accordion 
 platform: MAUI
 control: SfAccordion
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Migrate from Xamarin.Forms Accordion to .NET MAUI Accordion

@@ -5,6 +5,7 @@ description: Learn how to customize the no-results-found message in the Syncfusi
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # No Results Found in .NET MAUI Autocomplete

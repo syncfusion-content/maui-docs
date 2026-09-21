@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion® Essential Studio .NET 
 platform: maui
 control: SfButton
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Button Control

@@ -5,6 +5,7 @@ description: Learn about visual style types and shape customization options in S
 platform: maui
 control: SfAvatarView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Visual Styles in .NET MAUI Avatar View 

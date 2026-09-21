@@ -5,6 +5,7 @@ description: Learn how to use predefined symbols and badge icons in Syncfusion®
 platform: maui
 control: SfBadgeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Predefined Symbols in .NET MAUI Badge View

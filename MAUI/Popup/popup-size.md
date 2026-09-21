@@ -5,6 +5,7 @@ description: Learn all about Popup Size support in the Syncfusion® .NET MAUI Po
 platform: MAUI
 control: SfPopup
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Sizing the .NET MAUI Popup

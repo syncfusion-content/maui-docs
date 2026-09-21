@@ -5,6 +5,7 @@ description: Learn how to customize the thumb and thumb overlay in the Syncfusio
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Thumb and Overlay in .NET MAUI Slider

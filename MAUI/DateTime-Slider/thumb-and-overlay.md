@@ -5,6 +5,7 @@ description: Learn how to customize the thumb and thumb overlay appearance in th
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Thumb and Overlay in .NET MAUI DateTime Slider

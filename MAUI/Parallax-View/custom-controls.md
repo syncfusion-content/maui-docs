@@ -5,6 +5,7 @@ description: Learn here all about scrolling support for custom controls in Syncf
 platform: MAUI
 control: SfParallaxView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Scrolling support for custom controls in .NET MAUI Parallax View

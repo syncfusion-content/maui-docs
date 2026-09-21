@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Circular Progress Bar Control

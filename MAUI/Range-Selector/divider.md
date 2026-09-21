@@ -5,6 +5,7 @@ description: Learn how to show and customize dividers in the Syncfusion® .NET M
 platform: maui
 control: SfRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI Range Selector

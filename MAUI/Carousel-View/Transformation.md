@@ -5,6 +5,7 @@ description: Learn about the transformation options available in the SyncfusionÂ
 platform: maui
 control: Carousel
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Transformation in .NET MAUI Carousel

@@ -5,6 +5,7 @@ description: Learn here all about features in the Syncfusion® .NET MAUI DockLay
 platform: MAUI
 control: SfDockLayout
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Features in .NET MAUI DockLayout

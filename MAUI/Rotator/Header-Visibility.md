@@ -5,6 +5,7 @@ description: Learn about the header visibility support in Syncfusion® .NET MAUI
 platform: maui
 control: Rotator
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Header Visibility in .NET MAUI Rotator

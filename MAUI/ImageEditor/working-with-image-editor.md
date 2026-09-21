@@ -5,6 +5,7 @@ description: Learn about working with Syncfusion® .NET MAUI Image Editor contro
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Working with .NET MAUI Image Editor

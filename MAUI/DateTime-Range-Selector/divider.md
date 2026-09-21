@@ -5,6 +5,7 @@ description: Learn about the Dividers feature in the .NET MAUI DateTime Range Se
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI DateTime Range Selector

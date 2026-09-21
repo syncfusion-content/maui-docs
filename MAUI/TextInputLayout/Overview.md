@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui leading icon entry.
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Text Input Layout Control

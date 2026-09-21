@@ -5,6 +5,7 @@ description: Learn here all about Styles support in the Syncfusion® .NET MAUI P
 platform: MAUI
 control: SfPopup
 documentation: ug
+appliesto: UI Component Suite
 --- 
 
 # Styles in .NET MAUI Popup

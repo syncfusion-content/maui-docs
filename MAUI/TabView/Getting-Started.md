@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Tab View (
 platform: MAUI
 control: SfTabView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Tab View

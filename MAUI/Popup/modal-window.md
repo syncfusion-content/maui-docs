@@ -5,6 +5,7 @@ description: Learn here all about Modal Window support in the Syncfusion® .NET 
 platform: MAUI
 control: SfPopup
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Modal Window in .NET MAUI Popup

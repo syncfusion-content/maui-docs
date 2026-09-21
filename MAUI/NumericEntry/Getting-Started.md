@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® .NET MAUI Numeric Entry 
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Numeric Entry

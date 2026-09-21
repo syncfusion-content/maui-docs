@@ -6,6 +6,7 @@ description: Learn here about getting started with Syncfusion® .NET MAUI ListVi
 platform: MAUI
 control: SfListView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI ListView

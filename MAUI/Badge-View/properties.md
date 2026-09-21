@@ -5,6 +5,7 @@ description: This section explains the properties with Syncfusion<sup>&reg;</sup
 platform: MAUI
 control: SfBadgeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Badge View

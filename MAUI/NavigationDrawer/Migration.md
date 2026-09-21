@@ -5,6 +5,7 @@ description: Learn all about migrating from Syncfusion® Xamarin Navigation Draw
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---  
 
 # Migrate from Xamarin Navigation Drawer to .NET MAUI Navigation Drawer 

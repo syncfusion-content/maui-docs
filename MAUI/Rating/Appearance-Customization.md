@@ -6,6 +6,7 @@ description: Learn here all about appearance customization support in Syncfusion
 platform: maui
 control: Rating
 documentation: ug
+appliesto: UI Component Suite
 
 ---
 

@@ -5,6 +5,7 @@ description: Learn about saving edited images in various formats (PNG, JPG, JPEG
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Save in .NET MAUI Image Editor

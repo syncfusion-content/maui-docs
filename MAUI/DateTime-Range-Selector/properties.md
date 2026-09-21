@@ -5,6 +5,7 @@ description: This section explains about the properties and events with Syncfusi
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI DateTime Range Selector

@@ -5,6 +5,7 @@ description: Learn here all about Working with the Syncfusion® .NET MAUI ListVi
 platform: MAUI
 control: SfListView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Working with .NET MAUI ListView

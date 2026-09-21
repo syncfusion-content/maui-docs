@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer load markdown, syncfusion markdownviewer source maui, sfmarkdownviewer load from url maui, .net maui markdown embedded resource, .net maui markdownviewer local file, markdown viewer binding maui
+appliesto: UI Component Suite
 ---
 
 # Load Markdown Content in .NET MAUI Markdown Viewer

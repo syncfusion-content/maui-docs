@@ -5,6 +5,7 @@ description: Learn how to customize the track in the Syncfusion® .NET MAUI Rang
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI Range Slider control

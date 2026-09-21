@@ -5,6 +5,7 @@ description: Learn here about Selection support in Syncfusion® .NET MAUI TreeVi
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Selection in .NET MAUI TreeView

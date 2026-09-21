@@ -5,6 +5,7 @@ description: Learn how to use the different states available in .NET MAUI Avatar
 platform: MAUI
 control: SfAvatarView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # How to Use Different States

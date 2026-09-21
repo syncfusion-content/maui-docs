@@ -5,6 +5,7 @@ description: Learn about the four ChipType values (Input, Choice, Filter, Action
 platform: maui
 control: Chips
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Chips Types in .NET MAUI Chips

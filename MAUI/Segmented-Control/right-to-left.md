@@ -5,6 +5,7 @@ description: Learn about right-to-left (RTL) flow direction support in Syncfusio
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
+appliesto: UI Component Suite
 ---
  
 # Right-To-Left in .NET MAUI Segmented Control

@@ -5,6 +5,7 @@ description: Learn about the properties, events, and methods available in Syncfu
 platform: maui
 control: SfBackdropPage
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Backdrop Page

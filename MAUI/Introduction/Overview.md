@@ -5,6 +5,7 @@ description: Basic overview of the list of available features on Syncfusion® .N
 platform: MAUI
 control: .NET MAUI
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Welcome to Syncfusion® Essential Studio® for .NET MAUI

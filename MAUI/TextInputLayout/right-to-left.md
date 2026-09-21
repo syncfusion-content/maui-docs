@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout right to left, syncfusion text input layout rtl maui, sftextinputlayout flowdirection maui, .net maui rtl localization, .net maui text input layout arabic hebrew, sftextinputlayout bidi maui
+appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI Text Input Layout

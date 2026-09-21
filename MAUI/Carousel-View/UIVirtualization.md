@@ -5,6 +5,7 @@ description: Learn how to enable UI virtualization in the Syncfusion® .NET MAUI
 platform : maui
 control : Carousel
 documentation : ug
+appliesto: UI Component Suite
 ---
 
 # UI Virtualization in .NET MAUI Carousel

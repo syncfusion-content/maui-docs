@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout stroke thickness, syncfusion text input layout focused stroke maui, sftextinputlayout unfocused stroke thickness maui, .net maui text input layout border width, sftextinputlayout outlined stroke maui
+appliesto: UI Component Suite
 ---
 
 # How to Customize Stroke Thickness in .NET MAUI Text Input Layout

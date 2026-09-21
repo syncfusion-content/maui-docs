@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Linear Pro
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Linear Progress Bar

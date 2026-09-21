@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Image Editor to .NE
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Migration from Xamarin Image Editor to .NET MAUI Image Editor

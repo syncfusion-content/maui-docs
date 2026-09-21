@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI DateTime Range Slider Control

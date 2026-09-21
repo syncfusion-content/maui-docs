@@ -5,6 +5,7 @@ description: Learn how to show and customize labels in the Syncfusion® .NET MAU
 platform: maui
 control: SfRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI Range Selector

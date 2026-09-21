@@ -5,6 +5,7 @@ description: Learn the events available in Syncfusion® .NET MAUI Masked Entry i
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Masked Entry

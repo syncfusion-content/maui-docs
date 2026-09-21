@@ -6,6 +6,7 @@ description: Learn about customizing item size, item count, item spacing, value,
 platform: maui
 control: Rating
 documentation: ug
+appliesto: UI Component Suite
 
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about AutoComplete Suggestions support in Syncfusion
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Display auto-complete suggestions in .NET MAUI AI AssistView

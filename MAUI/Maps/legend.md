@@ -5,6 +5,7 @@ description: Legend in .NET MAUI Maps displays map data categories with customiz
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI Maps

@@ -5,6 +5,7 @@ description: Enable and customize the Liquid Glass Effect in Syncfusion® .NET M
 platform: MAUI
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI DateTime Range Selector

@@ -5,6 +5,7 @@ description: Learn how to configure searching, filtering, custom filter logic, a
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Searching and Filtering in .NET MAUI Autocomplete

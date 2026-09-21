@@ -5,6 +5,7 @@ description: Learn about item population support in the Syncfusion® .NET MAUI R
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Populating Items in .NET MAUI Radial Menu

@@ -6,6 +6,7 @@ platform: MAUI
 control: SfSwitch
 documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch rtl, maui switch flow direction.
+appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI Switch

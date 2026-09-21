@@ -5,6 +5,7 @@ description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI St
 platform: maui
 control: SfStepProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Step Progress Bar

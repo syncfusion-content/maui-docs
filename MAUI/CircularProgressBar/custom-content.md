@@ -5,6 +5,7 @@ description: Learn about adding custom views and content in Syncfusion® .NET MA
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Custom Content in .NET MAUI Circular Progress Bar

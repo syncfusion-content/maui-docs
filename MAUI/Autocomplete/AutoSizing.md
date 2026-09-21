@@ -5,6 +5,7 @@ description: Learn about auto sizing support in the Syncfusion® .NET MAUI Autoc
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Auto Sizing in .NET MAUI Autocomplete

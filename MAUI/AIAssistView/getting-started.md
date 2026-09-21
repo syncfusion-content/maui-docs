@@ -6,6 +6,7 @@ description: Learn here about getting started with the Syncfusion® .NET MAUI AI
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI AI AssistView

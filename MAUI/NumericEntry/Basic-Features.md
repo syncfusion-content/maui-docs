@@ -5,6 +5,7 @@ description: Learn about the basic features in the Syncfusion® .NET MAUI Numeri
 platform: maui
 control: SfNumericEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Basic Features in .NET MAUI Numeric Entry

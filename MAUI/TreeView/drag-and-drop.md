@@ -5,6 +5,7 @@ description: Learn here all about Drag and drop support in the Syncfusion® .NET
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Drag and Drop in .NET MAUI TreeView

@@ -5,6 +5,7 @@ description: Learn about the localization feature in Syncfusion® .NET MAUI Imag
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI Image Editor

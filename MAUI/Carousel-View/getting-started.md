@@ -5,6 +5,7 @@ description: Learn here about getting started with Syncfusion® .NET MAUI Carous
 platform: maui
 control: Carousel
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Carousel

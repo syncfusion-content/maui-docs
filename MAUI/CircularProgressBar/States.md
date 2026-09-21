@@ -5,6 +5,7 @@ description: Learn about determinate and indeterminate states in Syncfusion® .N
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # States in .NET MAUI Circular Progress Bar

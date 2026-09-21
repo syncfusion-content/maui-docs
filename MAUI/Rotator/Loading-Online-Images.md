@@ -5,6 +5,7 @@ description: Learn about loading online images support in Syncfusion® .NET MAUI
 platform: maui
 control: Rotator
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Loading Online Images in .NET MAUI Rotator

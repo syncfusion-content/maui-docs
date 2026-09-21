@@ -5,6 +5,7 @@ description: Learn about events supported in Syncfusion® .NET MAUI Linear Progr
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Linear Progress Bar

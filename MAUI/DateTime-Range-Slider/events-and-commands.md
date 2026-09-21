@@ -5,6 +5,7 @@ description: Learn how to handle events and commands in Syncfusion® .NET MAUI D
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI DateTime Range Slider

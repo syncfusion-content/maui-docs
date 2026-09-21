@@ -5,6 +5,7 @@ description: Learn about the basic feature support in the Syncfusion® .NET MAUI
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Basic Features in .NET MAUI Autocomplete

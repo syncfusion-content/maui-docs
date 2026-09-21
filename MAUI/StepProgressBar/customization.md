@@ -5,6 +5,7 @@ description: Learn how to customize appearance, colors, sizes, animations, and l
 platform: maui
 control: SfStepProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Step Progress Bar

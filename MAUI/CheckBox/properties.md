@@ -5,6 +5,7 @@ description: This section explains the properties, events, and methods with Sync
 platform: maui
 control: SfCheckBox
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI CheckBox

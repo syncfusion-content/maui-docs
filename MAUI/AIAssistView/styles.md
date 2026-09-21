@@ -5,6 +5,7 @@ description: Learn about styles customization support in the Syncfusion® .NET M
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Style customization in NET MAUI AI AssistView

@@ -5,6 +5,7 @@ description: Learn here about Syncfusion® Essential® UI Kit for .NET MAUI lice
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Licensing in Essential<sup>®</sup> UI Kit for .NET MAUI

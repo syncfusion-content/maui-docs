@@ -5,6 +5,7 @@ description: Learn how to customize the appearance and behavior of the Syncfusio
 platform: maui-toolkit
 control: SfGridSplitter
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Splitter Customization in .NET MAUI Grid Splitter

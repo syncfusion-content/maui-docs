@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Range Slid
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Range Slider

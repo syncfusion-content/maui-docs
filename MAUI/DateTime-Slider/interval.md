@@ -5,6 +5,7 @@ description: Learn how to configure interval, date interval types, and auto inte
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI DateTime Slider

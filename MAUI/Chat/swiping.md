@@ -5,6 +5,7 @@ description: Learn here all about Swiping support in Syncfusion® .NET MAUI Chat
 platform: MAUI
 control: SfChat
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Swiping in .NET MAUI Chat

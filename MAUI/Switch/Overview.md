@@ -6,6 +6,7 @@ platform: MAUI
 control: SfSwitch
 documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch control, maui switch control.
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Switch Control

@@ -5,6 +5,7 @@ description: Learn how to customize the corners of the front layer to flat and c
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Corner Shape Customization in .NET MAUI Backdrop Page

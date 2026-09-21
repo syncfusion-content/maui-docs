@@ -5,6 +5,7 @@ description: Learn about zooming and panning actions on contents in Syncfusion®
 platform: MAUI
 control: SfInteractiveViewer
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Zoom and Pan in .NET MAUI Interactive Viewer

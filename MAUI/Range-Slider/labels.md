@@ -5,6 +5,7 @@ description: Learn how to show, format, and customize labels in the .NET MAUI Ra
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI Range Slider

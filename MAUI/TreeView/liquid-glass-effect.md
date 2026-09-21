@@ -5,6 +5,7 @@ description: Learn how to enable and customize the Liquid Glass Effect in the Sy
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI TreeView

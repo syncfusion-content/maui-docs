@@ -4,7 +4,8 @@ title: Appearance customization in .NET MAUI Accordion | Syncfusion®
 description: Learn here all about customizing the appearance of Syncfusion® MAUI Accordion control and more details.
 platform: MAUI
 control: SfAccordion
-documentation: ug   
+documentation: ug  
+appliesto: UI Component Suite 
 ---
 
 # Appearance customization in .NET MAUI Accordion

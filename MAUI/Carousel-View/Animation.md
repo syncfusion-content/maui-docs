@@ -5,6 +5,7 @@ description: Learn here all about animation support in Syncfusion® .NET MAUI Ca
 platform : maui
 control : Carousel
 documentation : ug
+appliesto: UI Component Suite
 ---
 
 # Animation in .NET MAUI Carousel

@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
+appliesto: UI Component Suite
 ---
  
 # About Syncfusion® .NET MAUI Toolbar Control

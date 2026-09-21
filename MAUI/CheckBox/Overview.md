@@ -4,6 +4,7 @@ title: About Syncfusion® .NET MAUI CheckBox Control | Syncfusion®
 platform: MAUI
 description: Learn about introduction of the Syncfusion® Essential Studio .NET MAUI CheckBox control and more details.
 control: SfCheckBox
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI CheckBox Control 

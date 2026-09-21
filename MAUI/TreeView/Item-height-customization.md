@@ -5,6 +5,7 @@ description: Learn here all about Item Height Customization support in Syncfusio
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Item Height Customization in .NET MAUI TreeView

@@ -5,6 +5,7 @@ description: Learn here all about assist items available in Syncfusion® .NET MA
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Assist items in .NET MAUI AI AssistView

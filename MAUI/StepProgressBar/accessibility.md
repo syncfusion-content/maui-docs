@@ -5,6 +5,7 @@ description: Learn about accessibility features in Syncfusion® .NET MAUI Step P
 platform: maui
 control: SfStepProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Accessibility in .NET MAUI Step Progress Bar

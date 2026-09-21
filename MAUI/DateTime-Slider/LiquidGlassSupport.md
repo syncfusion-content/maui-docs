@@ -5,6 +5,7 @@ description: Learn how to enable and customize the liquid glass effect in the Sy
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI DateTime Slider

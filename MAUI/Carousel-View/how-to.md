@@ -5,6 +5,7 @@ description: Learn how to perform an operation while changing the CarouselItem o
 platform : maui
 control : Carousel
 documentation : ug
+appliesto: UI Component Suite
 ---
 
 # How to Perform an Action When an Item Changes in .NET MAUI Carousel

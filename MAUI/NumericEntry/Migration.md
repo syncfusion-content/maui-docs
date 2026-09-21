@@ -5,6 +5,7 @@ description: Learn about Migrating from Syncfusion® Xamarin NumericTextBox and 
 platform: maui
 control: SfNumericEntry
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin to .NET MAUI Numeric Entry

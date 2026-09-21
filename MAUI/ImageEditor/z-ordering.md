@@ -5,6 +5,7 @@ description: Learn about Z-ordering support to arrange annotations in Syncfusion
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Z-Ordering in .NET MAUI Image Editor

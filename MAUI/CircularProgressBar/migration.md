@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Circular Progress B
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migration to .NET MAUI Circular Progress Bar

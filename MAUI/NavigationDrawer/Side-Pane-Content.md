@@ -5,6 +5,7 @@ description: Learn how to set the header, footer, and content areas of the side 
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Side Pane Content in .NET MAUI Navigation Drawer

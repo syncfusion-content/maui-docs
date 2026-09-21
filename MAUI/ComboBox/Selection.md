@@ -6,6 +6,7 @@ platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui multi selection combobox, .net maui multi selection token, .net maui multi selection delimiter.
+appliesto: UI Component Suite
 ---
 
 # Selection in .NET MAUI ComboBox

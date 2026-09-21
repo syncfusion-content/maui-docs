@@ -5,6 +5,7 @@ description: Learn about migration from Xamarin DateTime Range Navigator to the 
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migration from Xamarin to .NET MAUI DateTime Range Selector

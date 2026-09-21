@@ -6,6 +6,7 @@ platform: maui
 control: MaskedEntry
 documentation: ug 
 keywords: mask, SfMaskedEntry, maskedentry
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Masked Entry

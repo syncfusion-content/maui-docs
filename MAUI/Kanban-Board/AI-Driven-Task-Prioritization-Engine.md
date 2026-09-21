@@ -5,6 +5,7 @@ description: Learn how to implement an AI-Driven Task Prioritization Engine usin
 platform: maui
 control: SfKanban
 documentation: ug
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # AI-Driven Task Prioritization Engine in .NET MAUI Kanban Board

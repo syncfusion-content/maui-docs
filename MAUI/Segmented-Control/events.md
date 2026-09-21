@@ -5,6 +5,7 @@ description: Learn about Tapped and SelectionChanged events that allow interacti
 platform: maui
 control: SfSegmentedControl
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Segmented Control

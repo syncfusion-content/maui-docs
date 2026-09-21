@@ -5,6 +5,7 @@ description: Learn how to customize the input view in the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Customizing input view in .NET MAUI AI AssistView

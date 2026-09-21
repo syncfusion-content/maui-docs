@@ -5,6 +5,7 @@ description: Learn here all about Layouts support in Syncfusion® .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Layouts in .NET MAUI ListView

@@ -5,6 +5,7 @@ description: Learn about setting toggle animations support in the Syncfusion® .
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Setting Toggle Animations in .NET MAUI Navigation Drawer

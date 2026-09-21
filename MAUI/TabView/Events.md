@@ -5,6 +5,7 @@ description: Learn about event support in the Syncfusion® .NET MAUI Tab View (S
 platform: MAUI
 control: SfTabView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Tab View

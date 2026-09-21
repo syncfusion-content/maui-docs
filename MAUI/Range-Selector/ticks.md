@@ -5,6 +5,7 @@ description: Learn how to show and customize major and minor ticks in the Syncfu
 platform: maui
 control: SfRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Ticks in .NET MAUI Range Selector

@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Segmented Control t
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Migration to .NET MAUI Segmented Control

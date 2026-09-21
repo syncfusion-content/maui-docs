@@ -5,6 +5,7 @@ description: Learn here all about Migrating from Syncfusion® Xamarin Carousel t
 platform: maui
 control: Carousel
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Carousel to .NET MAUI Carousel

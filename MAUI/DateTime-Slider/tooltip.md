@@ -5,6 +5,7 @@ description: Learn how to enable and customize tooltips in the Syncfusion® .NET
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI DateTime Slider

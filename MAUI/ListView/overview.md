@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion® .NET MAUI ListVie
 platform: MAUI
 control: ListView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI ListView

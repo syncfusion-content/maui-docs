@@ -5,6 +5,7 @@ description: Learn about accessibility features and keyboard shortcuts in Syncfu
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Accessibility in .NET MAUI Image Editor

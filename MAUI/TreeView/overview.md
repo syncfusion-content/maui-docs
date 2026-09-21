@@ -5,6 +5,7 @@ description: Learn here all about introduction of the Syncfusion® .NET MAUI Tre
 platform: MAUI
 control: TreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI TreeView

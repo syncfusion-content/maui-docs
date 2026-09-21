@@ -5,6 +5,7 @@ description: Learn how to invert and change the orientation of the .NET MAUI Ran
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Inverse and Orientation in .NET MAUI Range Slider

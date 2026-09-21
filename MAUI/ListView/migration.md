@@ -5,6 +5,7 @@ platform: MAUI
 control: SfListView
 description: Learn here all about Migrating from Syncfusion® Xamarin SfListView to Syncfusion® .NET MAUI SfListView control.
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrate from Xamarin.Forms ListView to .NET MAUI ListView

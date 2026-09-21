@@ -5,6 +5,7 @@ description: Learn how to change the number format of the Syncfusion® .NET MAUI
 platform: maui
 control: SfNumericEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Value Formatting in .NET MAUI Numeric Entry

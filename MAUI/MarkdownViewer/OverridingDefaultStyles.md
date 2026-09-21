@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer css, syncfusion markdownviewer custom css maui, sfmarkdownviewer css style rules maui, .net maui markdown style override, markdownviewer webkit scrollbar maui, .net maui markdownviewer table css
+appliesto: UI Component Suite
 ---
 
 # How to Apply CSS Style in .NET MAUI Markdown Viewer

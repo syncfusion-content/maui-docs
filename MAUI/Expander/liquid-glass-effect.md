@@ -5,6 +5,7 @@ description: Learn here all about how to apply and customize the Liquid Glass Ef
 platform: MAUI
 control: SfExpander
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Expander

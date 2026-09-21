@@ -5,6 +5,7 @@ description: Learn how to add a header and footer view to the drop-down in the S
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Header and Footer in .NET MAUI Autocomplete

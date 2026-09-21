@@ -5,6 +5,7 @@ description: Learn here about Filtering support in Syncfusion® .NET MAUI TreeVi
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Filtering in .NET MAUI TreeView

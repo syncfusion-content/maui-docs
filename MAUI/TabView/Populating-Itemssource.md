@@ -5,6 +5,7 @@ description: Learn how to populate the ItemsSource of the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfTabView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Populating ItemsSource in .NET MAUI Tab View

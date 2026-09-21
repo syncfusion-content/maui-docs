@@ -6,6 +6,7 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator, maui busy indicator, .net maui activity indicator, maui activity indicator, .net maui loading indicator, maui loading indicator.
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Busy Indicator

@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout custom icons, syncfusion text input layout leading icon maui, sftextinputlayout trailing icon maui, .net maui text input layout view position, sftextinputlayout showleadingview maui, sftextinputlayout showtrailingview maui
+appliesto: UI Component Suite
 ---
 
 # Custom Icons in .NET MAUI Text Input Layout

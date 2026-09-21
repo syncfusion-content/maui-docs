@@ -5,6 +5,7 @@ description: Learn about Events support in Syncfusion® .NET MAUI Rotator (SfRot
 platform: maui
 control: Rotator
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Rotator

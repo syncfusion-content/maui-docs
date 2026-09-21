@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI DataForm c
 platform: maui
 control: SfDataForm
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI DataForm

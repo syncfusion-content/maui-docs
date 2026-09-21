@@ -6,6 +6,7 @@ description: Learn here all about the introduction of Syncfusion® Essential Stu
 platform: maui
 control: Rating
 documentation: ug
+appliesto: UI Component Suite
 
 ---
 # About Syncfusion® .NET MAUI Rating Control

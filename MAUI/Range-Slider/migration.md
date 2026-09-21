@@ -5,6 +5,7 @@ description: Learn about migration from Xamarin Range Slider to the .NET MAUI Ra
 platform: MAUI
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migration from Xamarin Range Slider to .NET MAUI Range Slider

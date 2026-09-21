@@ -5,6 +5,7 @@ description: Learn about the introduction of Syncfusion® Essential Studio .NET 
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Masked Entry Control

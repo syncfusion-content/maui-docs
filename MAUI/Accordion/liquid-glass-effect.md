@@ -5,6 +5,7 @@ description: Learn how to apply and customize the Liquid Glass Effect in the Syn
 platform: MAUI
 control: SfAccordion
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Accordion

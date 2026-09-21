@@ -5,6 +5,7 @@ description: Learn how to show, style, and customize dividers in the SyncfusionÂ
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI DateTime Slider

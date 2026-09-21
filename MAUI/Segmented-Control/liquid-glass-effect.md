@@ -5,6 +5,7 @@ description: Learn about the Liquid Glass Effect that provides a modern, translu
 platform: maui
 control: SfSegmentedControl
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Segmented Control

@@ -6,6 +6,7 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator color, maui busy indicator color, maui busy indicator customize.
+appliesto: UI Component Suite
 ---
 
 # Indicator Color and Background in .NET MAUI Busy Indicator

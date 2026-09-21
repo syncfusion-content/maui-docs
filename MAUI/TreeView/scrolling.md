@@ -5,6 +5,7 @@ description: Learn here all about Scrolling support in Syncfusion® .NET MAUI Tr
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Scrolling in .NET MAUI TreeView

@@ -5,6 +5,7 @@ description: Orientation in .NET MAUI Funnel Chart allows the funnel to be displ
 platform: maui
 control: SfFunnelChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Orientation in .NET MAUI Funnel Chart

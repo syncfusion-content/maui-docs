@@ -5,6 +5,7 @@ description: Learn about custom view support in Syncfusion® .NET MAUI Shimmer (
 platform: maui
 control: SfShimmer
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Custom View in .NET MAUI Shimmer

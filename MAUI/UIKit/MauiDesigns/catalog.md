@@ -5,6 +5,7 @@ description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML t
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI Catalog
 documentation: ug
+appliesto: UI Component Suite
 ---
 # Syncfusion<sup>®</sup> UI Kit for .NET MAUI Catalog Designs
 The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of **9 screens**, designed to streamline your development process and elevate your application’s user experience.

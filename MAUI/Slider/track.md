@@ -5,6 +5,7 @@ description: Learn how to customize the track in the Syncfusion® .NET MAUI Slid
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI Slider

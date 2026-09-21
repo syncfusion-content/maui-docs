@@ -5,6 +5,7 @@ description: Learn how to invert the Syncfusion® .NET MAUI Range Selector contr
 platform: maui
 control: SfRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Inverse Range in .NET MAUI Range Selector

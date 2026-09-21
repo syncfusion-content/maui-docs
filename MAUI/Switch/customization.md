@@ -5,7 +5,8 @@ description: Learn about the customization support in the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfSwitch
 documentation: UG
-keywords : .net maui switch, maui switch, .net maui switch customize, maui switch customize, maui switch color, maui switch size, maui switch icon.  
+keywords : .net maui switch, maui switch, .net maui switch customize, maui switch customize, maui switch color, maui switch size, maui switch icon.
+appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Switch

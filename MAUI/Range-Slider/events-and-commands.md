@@ -5,6 +5,7 @@ description: Learn how to use events and commands in the .NET MAUI Range Slider 
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI Range Slider

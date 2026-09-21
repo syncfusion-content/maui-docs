@@ -5,6 +5,7 @@ description: Learn about the key properties of the .NET MAUI Range Slider contro
 platform: maui
 control: SfRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Range Slider

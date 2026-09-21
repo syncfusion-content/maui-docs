@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer, syncfusion markdownviewer maui, markdown viewer .net maui, .net maui markdown rendering, sfmarkdownviewer example maui, .net maui markdown control, markdown content .net maui, markdown rendering .net maui
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Markdown Viewer

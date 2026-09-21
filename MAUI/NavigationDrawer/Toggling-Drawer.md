@@ -5,6 +5,7 @@ description: Learn how to programmatically open and close the drawer in the Sync
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Programmatically Toggling the Drawer in .NET MAUI Navigation Drawer

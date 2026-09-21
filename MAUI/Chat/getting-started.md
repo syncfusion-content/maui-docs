@@ -6,6 +6,7 @@ description: Learn here about how to get started with the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfChat
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Chat

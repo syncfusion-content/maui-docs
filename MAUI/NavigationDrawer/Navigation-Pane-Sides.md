@@ -5,6 +5,7 @@ description: Learn how to configure the drawer position in the Syncfusion® .NET
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Drawer Position in .NET MAUI Navigation Drawer

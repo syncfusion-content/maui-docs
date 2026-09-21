@@ -5,6 +5,7 @@ description: Learn about the events available in the Syncfusion® .NET MAUI Effe
 platform: MAUI
 control: SfEffectsView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Effects View

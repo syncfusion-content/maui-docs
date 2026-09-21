@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® .NET MAUI Effects View (
 platform: MAUI
 control: SfEffectsView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Effects View

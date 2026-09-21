@@ -5,6 +5,7 @@ description: this page contains details about Essential® UI Kit for .NET MAUI R
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Essential UI Kit for .NET MAUI Release Notes

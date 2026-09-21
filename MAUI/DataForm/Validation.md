@@ -5,6 +5,7 @@ description: Learn about data validation features in Syncfusion® .NET MAUI Data
 platform: maui
 control: SfDataForm
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Validation in .NET MAUI DataForm

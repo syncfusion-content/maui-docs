@@ -5,6 +5,7 @@ description: Learn how to customize track colors, sizes, extent, orientation, an
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI DateTime Slider

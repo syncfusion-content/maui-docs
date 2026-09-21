@@ -6,6 +6,7 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator size, maui busy indicator size
+appliesto: UI Component Suite
 ---
 # Sizing in .NET MAUI Busy Indicator
 

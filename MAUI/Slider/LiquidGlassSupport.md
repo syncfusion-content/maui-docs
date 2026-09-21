@@ -5,6 +5,7 @@ description: Enable and customize the Liquid Glass Effect in the Syncfusion® .N
 platform: MAUI
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Slider

@@ -5,6 +5,7 @@ description: Learn about the commands available in the Syncfusion® .NET MAUI Ef
 platform: MAUI
 control: SfEffectsView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Commands in .NET MAUI Effects View

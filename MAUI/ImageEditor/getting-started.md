@@ -6,6 +6,7 @@ platform: MAUI
 control: SfImageEditor
 documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Image Editor

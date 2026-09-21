@@ -5,6 +5,7 @@ description: Learn about events and event arguments in Syncfusion® .NET MAUI Ci
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Circular Progress Bar

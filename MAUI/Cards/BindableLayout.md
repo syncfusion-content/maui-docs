@@ -5,6 +5,7 @@ description: Learn about BindableLayout support in Syncfusion® .NET MAUI Cards 
 platform: MAUI
 control: Cards
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # BindableLayout in .NET MAUI Cards

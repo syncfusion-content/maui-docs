@@ -6,6 +6,7 @@ platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker inline, maui color picker inline
+appliesto: UI Component Suite
 ---
 
 # Inline Support in .NET MAUI Color Picker

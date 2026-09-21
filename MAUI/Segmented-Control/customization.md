@@ -5,6 +5,7 @@ description: Learn about appearance customization options to style background, t
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
+appliesto: UI Component Suite
 ---
  
 # Appearance Customization in .NET MAUI Segmented Control

@@ -5,6 +5,7 @@ description: Learn here about getting started with Syncfusion® Essential® UI K
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with Essential<sup>®</sup> UI Kit for .NET MAUI

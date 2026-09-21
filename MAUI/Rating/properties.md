@@ -5,6 +5,7 @@ description: This section explains the properties and events with Syncfusion<sup
 platform: maui
 control: SfRating
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Rating

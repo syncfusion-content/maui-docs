@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI DateTime R
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI DateTime Range Slider

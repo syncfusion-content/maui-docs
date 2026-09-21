@@ -5,6 +5,7 @@ description: Configure primary and secondary drawers on the Syncfusion® .NET MA
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Multi Drawer in .NET MAUI Navigation Drawer

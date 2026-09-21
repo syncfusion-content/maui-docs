@@ -5,6 +5,7 @@ description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI AI
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI AI AssistView

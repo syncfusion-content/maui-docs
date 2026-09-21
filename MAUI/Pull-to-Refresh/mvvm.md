@@ -5,6 +5,7 @@ description: Learn about working with MVVM support in Syncfusion® .NET MAUI Pul
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Working with MVVM in .NET MAUI Pull to Refresh

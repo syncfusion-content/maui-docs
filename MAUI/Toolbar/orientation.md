@@ -5,6 +5,7 @@ description: Learn about horizontal and vertical orientation in Syncfusion® .NE
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Orientation in .NET MAUI Toolbar

@@ -5,6 +5,7 @@ description: Learn about the liquid glass effect in the Syncfusion® .NET MAUI N
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Navigation Drawer

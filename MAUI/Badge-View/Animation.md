@@ -5,6 +5,7 @@ description: Learn about animation support in Syncfusion® .NET MAUI Badge View 
 platform: maui
 control: SfBadgeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Animation in .NET MAUI Badge View

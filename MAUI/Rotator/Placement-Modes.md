@@ -5,6 +5,7 @@ description: Learn about the Placement Modes support in Syncfusion® .NET MAUI R
 platform: maui
 control: Rotator
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Placement Modes in .NET MAUI Rotator

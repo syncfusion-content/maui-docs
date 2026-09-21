@@ -5,6 +5,7 @@ description: Learn about Migrating from Syncfusion® Xamarin Masked Edit to Sync
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Masked Edit to .NET MAUI Masked Entry

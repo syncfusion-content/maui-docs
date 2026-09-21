@@ -5,6 +5,7 @@ description: Discover customization options for Syncfusion® .NET MAUI Cards (Sf
 platform: MAUI
 control: Cards
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Cards

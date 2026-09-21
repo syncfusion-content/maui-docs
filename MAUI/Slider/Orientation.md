@@ -5,6 +5,7 @@ description: Configure horizontal and vertical orientations for the Syncfusion®
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Orientation in .NET MAUI Slider

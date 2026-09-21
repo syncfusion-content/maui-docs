@@ -5,6 +5,7 @@ description: Learn here all about populating agent collection in the SyncfusionÂ
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Working with agents in .NET MAUI AI AssistView

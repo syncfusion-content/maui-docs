@@ -5,6 +5,7 @@ description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI To
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Toolbar

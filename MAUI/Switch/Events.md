@@ -6,6 +6,7 @@ platform: MAUI
 control: SfSwitch
 documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch events, maui switch event.
+appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Switch

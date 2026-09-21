@@ -5,6 +5,7 @@ description: Learn here all about the Thumb and Thumb Overlay features of Syncfu
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Thumb and Overlay in .NET MAUI DateTime Range Selector

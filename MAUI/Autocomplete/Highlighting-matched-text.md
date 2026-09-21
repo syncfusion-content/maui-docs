@@ -5,6 +5,7 @@ description: Learn how to highlight matched text in the Syncfusion® .NET MAUI A
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Highlighting Matched Text in .NET MAUI Autocomplete

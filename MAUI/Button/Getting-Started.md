@@ -5,6 +5,7 @@ description: Learn here about getting started with the Syncfusion® .NET MAUI Bu
 platform: MAUI
 control: SfButton
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Button

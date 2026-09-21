@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Range Sele
 platform: maui
 control: SfRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Range Selector

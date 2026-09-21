@@ -5,6 +5,7 @@ description: This section explains the properties, events, and methods with Sync
 platform: MAUI
 control: SfChat
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Chat

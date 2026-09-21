@@ -5,6 +5,7 @@ description: Learn about how to implement AI-powered Smart filtering using Syncf
 platform: maui
 control: SfCombobox
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Implementing AI-Powered Smart Filter in .NET MAUI Combobox

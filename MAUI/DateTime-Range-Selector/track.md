@@ -5,6 +5,7 @@ description: Learn here all about adding the track feature of .NET MAUI DateTime
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI DateTime Range Selector

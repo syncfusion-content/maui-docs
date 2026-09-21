@@ -5,6 +5,7 @@ description: Learn all about Migrating from Syncfusion® Xamarin Chips to Syncfu
 platform: maui
 control: SfChips
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Chips to .NET MAUI Chips

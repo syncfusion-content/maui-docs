@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Slider to .NET MAUI
 platform: MAUI
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migration from Xamarin Slider to .NET MAUI Slider

@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Backdrop P
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Backdrop Page

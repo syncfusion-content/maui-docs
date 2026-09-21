@@ -5,6 +5,7 @@ description: Learn how to enable and customize the swipe gesture in the Syncfusi
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Swipe Gesture in .NET MAUI Navigation Drawer

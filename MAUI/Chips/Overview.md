@@ -4,6 +4,7 @@ title: About Syncfusion® .NET MAUI Chips Control | Syncfusion®
 platform: maui
 description: Learn about the introduction of Syncfusion® Essential Studio .NET MAUI Chips control and more details.
 control: SfChip
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Chips Control 

@@ -5,6 +5,7 @@ description: Learn here all about the events available in the Syncfusion .NET MA
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
+appliesto: UI Component Suite
 --- 
 
 # Events in .NET MAUI Pull to Refresh

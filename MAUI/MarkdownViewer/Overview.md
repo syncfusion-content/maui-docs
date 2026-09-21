@@ -5,6 +5,7 @@ description: Learn about the introduction of the Syncfusion® Essential Studio .
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Markdown Viewer Control

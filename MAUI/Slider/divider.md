@@ -5,6 +5,7 @@ description: Learn how to add and customize dividers in the Syncfusion® .NET MA
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI Slider

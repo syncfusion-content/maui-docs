@@ -5,6 +5,7 @@ description: Learn about the reset support in Syncfusion® .NET MAUI Interactive
 platform: MAUI
 control: SfInteractiveViewer
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Reset in .NET MAUI Interactive Viewer

@@ -5,6 +5,7 @@ description: Learn how to customize the track in the .NET MAUI DateTime Range Sl
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI DateTime Range Slider

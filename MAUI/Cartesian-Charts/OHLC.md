@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui ohlc chart, .net maui chart ohlc type, ohlc chart customization .net maui, syncfusion maui ohlc chart, .net maui chart ohlc visualization, .net maui bear and bull ohlc chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # OHLC Chart in .NET MAUI Cartesian Chart

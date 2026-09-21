@@ -5,6 +5,7 @@ description: This section explains the properties, events and methods with Syncf
 platform: maui
 control: SfExpander
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Expander

@@ -6,6 +6,7 @@ description: Learn here all about Precision Mode support in Syncfusion® .NET MA
 platform: maui
 control: Rating
 documentation: ug
+appliesto: UI Component Suite
 
 ---
 

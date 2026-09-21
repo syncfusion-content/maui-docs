@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion® Essential Studio .NET 
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Navigation Drawer Control

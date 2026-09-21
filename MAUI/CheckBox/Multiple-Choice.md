@@ -5,6 +5,7 @@ description: Learn Prerequisites in MAUI  using Syncfusion controls. It supports
 platform: MAUI
 control: SfCheckBox
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Multiple Choice in .NET MAUI CheckBox

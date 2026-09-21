@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer appearance, syncfusion markdownviewer styling maui, markdown viewer theme maui, sfmarkdownviewer style settings maui, .net maui markdown styling, markdownviewer css maui
+appliesto: UI Component Suite
 ---
 
 # Customize Appearance in .NET MAUI Markdown Viewer

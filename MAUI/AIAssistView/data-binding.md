@@ -5,6 +5,7 @@ description: Learn here about binding the Request and Response Items in Syncfusi
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Data binding in .NET MAUI AI AssistView

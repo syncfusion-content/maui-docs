@@ -5,6 +5,7 @@ description: Learn about customizing toolbar appearance, visibility, position, a
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Toolbar Customization in .NET MAUI Image Editor

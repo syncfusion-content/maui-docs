@@ -5,6 +5,7 @@ description: Learn here all about introduction of Syncfusion® Essential Studio 
 platform: maui
 control: SfSignaturePad
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Signature Pad Control

@@ -5,6 +5,7 @@ description: Learn about center button customization support in Syncfusion® .NE
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Center Button Customization in .NET MAUI Radial Menu

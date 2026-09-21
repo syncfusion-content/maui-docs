@@ -5,6 +5,7 @@ description: This section explains the properties and methods with Syncfusion<su
 platform: maui
 control: SfShimmer
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Shimmer

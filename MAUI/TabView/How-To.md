@@ -5,6 +5,7 @@ description: Learn all about selecting a tab item programmatically in the Syncfu
 platform: MAUI
 control: SfTabView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # How to Select a Tab Item Programmatically in .NET MAUI Tab View

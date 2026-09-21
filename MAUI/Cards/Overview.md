@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® .NET MAUI Cards control. E
 platform : maui
 control : Cards
 documentation : ug
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Cards Control  

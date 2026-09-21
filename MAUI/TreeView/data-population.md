@@ -5,6 +5,7 @@ description: Learn here all about Data Population support in the Syncfusion® .N
 platform: MAUI
 control: SfTreeView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Data Population in .NET MAUI TreeView

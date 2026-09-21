@@ -5,6 +5,7 @@ description: Learn about customizing appearance of Syncfusion® .NET MAUI Linear
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Appearance in .NET MAUI Linear Progress Bar

@@ -5,6 +5,7 @@ description: Learn about hiding prompt characters support in Syncfusion® .NET M
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Hiding Prompt Characters in .NET MAUI Masked Entry

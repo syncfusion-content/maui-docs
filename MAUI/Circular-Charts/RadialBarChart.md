@@ -5,6 +5,7 @@ description: Radial Bar Chart in .NET MAUI Circular Chart visualizes values as r
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Radial Bar Chart in .NET MAUI Circular Chart

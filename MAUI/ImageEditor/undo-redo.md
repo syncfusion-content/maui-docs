@@ -5,6 +5,7 @@ description: Learn about undo and redo support in Syncfusion® .NET MAUI Image E
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Undo Redo in .NET MAUI Image Editor

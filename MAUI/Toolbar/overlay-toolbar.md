@@ -5,6 +5,7 @@ description: Learn about overlay Toolbar support in Syncfusion® .NET MAUI Toolb
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Overlay in .NET MAUI Toolbar

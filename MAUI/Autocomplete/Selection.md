@@ -5,6 +5,7 @@ description: Learn how to configure single and multiple selection and related AP
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Selection in .NET MAUI Autocomplete

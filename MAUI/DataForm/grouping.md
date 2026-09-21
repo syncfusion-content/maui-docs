@@ -5,6 +5,7 @@ description: Learn about grouping editor support in Syncfusion® .NET MAUI DataF
 platform: maui
 control: SfDataForm
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Grouping in .NET MAUI DataForm

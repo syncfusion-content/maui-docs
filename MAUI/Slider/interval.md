@@ -5,6 +5,7 @@ description: Learn about configurable intervals in Syncfusion® .NET MAUI Slider
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI Slider

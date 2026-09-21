@@ -6,7 +6,7 @@ description: Learn here all about Restrict User Selection support in SyncfusionÂ
 platform: maui
 control: Rating
 documentation: ug
-
+appliesto: UI Component Suite
 ---
 
 # Restrict User Selection in .NET MAUI Rating

@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Step Progr
 platform: maui
 control: SfStepProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Step Progress Bar

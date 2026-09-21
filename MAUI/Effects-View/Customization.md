@@ -5,6 +5,7 @@ description: Learn about the customization options available in the Syncfusion®
 platform: MAUI
 control: SfEffectsView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Effects View

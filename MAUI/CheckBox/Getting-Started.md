@@ -5,6 +5,7 @@ description: Learn about setting up and configuring the Syncfusion® .NET MAUI C
 platform: MAUI
 control: SfCheckBox
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI CheckBox

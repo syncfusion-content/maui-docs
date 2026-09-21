@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout assistive labels, syncfusion text input layout helper text maui, sftextinputlayout error label maui, .net maui text input layout character counter, .net maui text input layout password toggle, sftextinputlayout reserve space maui
+appliesto: UI Component Suite
 ---
 
 # Assistive Labels in .NET MAUI Text Input Layout

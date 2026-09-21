@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® .NET MAUI Rating (SfRati
 platform: maui
 control: Rating
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Rating

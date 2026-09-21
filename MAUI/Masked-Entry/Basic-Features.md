@@ -5,6 +5,7 @@ description: Learn about basic features available in Syncfusion® .NET MAUI Mask
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Basic Features in .NET MAUI Masked Entry

@@ -5,6 +5,7 @@ description: Learn how to enable and customize the liquid glass effect in Syncfu
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Backdrop Page

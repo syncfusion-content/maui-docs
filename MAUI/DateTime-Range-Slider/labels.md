@@ -5,6 +5,7 @@ description: Learn how to show and customize labels in Syncfusion® .NET MAUI Da
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI DateTime Range Slider

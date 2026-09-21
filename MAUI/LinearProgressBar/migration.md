@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Linear Progress Bar
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migration to .NET MAUI Linear Progress Bar

@@ -5,6 +5,7 @@ description: Learn all about Popup Positioning support in the Syncfusion® .NET 
 platform: MAUI
 control: SfPopup
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Positioning the .NET MAUI Popup

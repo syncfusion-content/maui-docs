@@ -6,6 +6,7 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy indicator load, maui busy indicator running.
+appliesto: UI Component Suite
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator
 

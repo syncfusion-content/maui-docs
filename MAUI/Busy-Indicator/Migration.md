@@ -5,6 +5,7 @@ description: Learn here all about migrating from Syncfusion® Xamarin Busy Indic
 platform: MAUI
 control: SfBusyIndicator
 documentation: UG
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Busy Indicator to .NET MAUI Busy Indicator

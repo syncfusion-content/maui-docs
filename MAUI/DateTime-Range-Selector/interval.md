@@ -5,6 +5,7 @@ description: Learn how to configure interval values and interval types in the .N
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI DateTime Range Selector

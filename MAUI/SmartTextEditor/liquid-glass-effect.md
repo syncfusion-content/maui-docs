@@ -5,6 +5,7 @@ description: Learn how to apply liquid glass effect in Syncfusion® .NET MAUI Sm
 platform: MAUI
 control: SfSmartTextEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Smart Text Editor

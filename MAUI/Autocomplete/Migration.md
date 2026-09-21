@@ -5,6 +5,7 @@ description: Learn all about Migrating from Syncfusion® Xamarin Autocomplete to
 platform: maui
 control: SfAutocomplete
 documentation: ug
+appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Autocomplete to .NET MAUI Autocomplete

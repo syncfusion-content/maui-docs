@@ -5,6 +5,7 @@ description: Shape annotations in the Syncfusion® .NET MAUI Image Editor enable
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Shape Annotations in .NET MAUI Image Editor

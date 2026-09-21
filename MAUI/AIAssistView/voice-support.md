@@ -5,6 +5,7 @@ description: Learn about voice input and text-to-speech support in the Syncfusio
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Voice support in .NET MAUI AI AssistView

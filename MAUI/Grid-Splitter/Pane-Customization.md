@@ -5,6 +5,7 @@ description: Learn how to customize pane sizes using the Syncfusion® .NET MAUI 
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Pane Customization in .NET MAUI Grid Splitter

@@ -6,6 +6,7 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator animation type, maui busy indicator animation type, maui busy indicator animation.
+appliesto: UI Component Suite
 ---
 # Animation Type in .NET MAUI Busy Indicator
 

@@ -5,6 +5,7 @@ description: Text annotations in the Syncfusion® .NET MAUI Image Editor enable 
 platform: MAUI
 control: SfImageEditor
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Text Annotations in .NET MAUI Image Editor

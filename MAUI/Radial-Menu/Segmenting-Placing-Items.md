@@ -5,6 +5,7 @@ description: Learn about segmenting and placing items in the .NET MAUI Radial Me
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # Segmenting and Placing Items in .NET MAUI Radial Menu

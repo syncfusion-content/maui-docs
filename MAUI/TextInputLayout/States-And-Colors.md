@@ -6,6 +6,7 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout states and colors, syncfusion text input layout stroke maui, sftextinputlayout visual state manager maui, .net maui textinputlayout container background, sftextinputlayout isenabled maui, sftextinputlayout labelstyle textcolor maui
+appliesto: UI Component Suite
 ---
 
 # States and Colors in .NET MAUI Text Input Layout

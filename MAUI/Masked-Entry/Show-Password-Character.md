@@ -5,6 +5,7 @@ description: Learn how to show password characters in Syncfusion® .NET MAUI Mas
 platform: maui
 control: SfMaskedEntry
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Show Password Character in .NET MAUI Masked Entry

@@ -5,6 +5,7 @@ description: Learn here all about customizing the header appearance in Syncfusio
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Customizing header appearance in .NET MAUI AI AssistView

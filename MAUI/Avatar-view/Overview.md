@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: MAUI
 control: SfAvatarView
 documentation: UG
+appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Avatar View Control

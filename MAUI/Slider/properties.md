@@ -5,6 +5,7 @@ description: Reference for properties, methods, and events of the Syncfusion® .
 platform: maui
 control: SfSlider
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Slider

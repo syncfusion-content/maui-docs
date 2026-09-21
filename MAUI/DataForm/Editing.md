@@ -5,6 +5,7 @@ description: Learn about data editing and commit modes in Syncfusion® .NET MAUI
 platform: maui
 control: SfDataForm
 documentation: ug
+appliesto: UI Component Suite
 ---
 
 # Editing in .NET MAUI DataForm
