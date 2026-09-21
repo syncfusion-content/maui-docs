@@ -25,7 +25,7 @@ These tools speed up development and reinforce best practices for Syncfusion com
 
 Before beginning, ensure the following prerequisites are met:
 
-- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) or later
+- Microsoft [.NET SDK 9.0](https://dotnet.microsoft.com/download/dotnet/9.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **.NET MAUI application** (existing or new); see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
@@ -139,7 +139,7 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**For .NET 8 / .NET 9 (using a local tool):**
+**For .NET 9 (using a local tool):**
 
 You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/dotnet/core/tools/local-tools-how-to-use).
 
@@ -245,7 +245,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 | Issue | Solution |
 |-------|----------|
-| **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
+| **Server failed to start** | Update to .NET 9 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
@@ -264,4 +264,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
