@@ -17,7 +17,7 @@ You can wire up gestures or commands on the leading/trailing view to make the ic
 N> Refer to the following links to learn more about font icons:
 
 - [How to create font icons using Syncfusion Metro Studio and export them as TTF](https://help.syncfusion.com/metro-studio/export-icon-font)
-- [How to display font icons in MAUI labels](https://learn.microsoft.com/dotnet/maui/user-interface/fonts?view=net-maui-7.0#display-font-icons)
+- [How to display font icons in MAUI labels](https://learn.microsoft.com/dotnet/maui/user-interface/fonts#display-font-icons)
 
 ## Prerequisites
 

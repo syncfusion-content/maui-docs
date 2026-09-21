@@ -159,7 +159,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Change an empty view at runtime
 
-The `EmptyView` can be changed to a specific view at run time. Views can also be defined as [ContentView](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
+The `EmptyView` can be changed to a specific view at run time. Views can also be defined as [ContentView](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.contentview) objects in the [ResourceDictionary](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.resourcedictionary).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -214,7 +214,7 @@ checkBox.CheckedChanged += CheckBox_CheckedChanged;
 {% endhighlight %}
 {% endtabs %}
 
-`EmptyView` is changed based on the value of the [CheckBox.IsChecked](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
+`EmptyView` is changed based on the value of the [CheckBox.IsChecked](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.checkbox.ischecked) property at run time.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

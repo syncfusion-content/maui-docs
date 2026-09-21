@@ -47,7 +47,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -206,6 +206,6 @@ You can download the Backdrop page Getting Started sample from [GitHub](https://
 
 For more information about reveal height customization, please refer to this [`link`](https://help.syncfusion.com/maui/backdrop/reveal-height-customization).
 
-N> The [`Title`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page.title?view=net-maui-6.0) and [`ToolBarItems`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page.toolbaritems?view=net-maui-6.0) properties of the [`Page`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page?view=net-maui-6.0) can be used to customize the appearance of the header.
+N> The [`Title`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page.title) and [`ToolBarItems`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page.toolbaritems) properties of the [`Page`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.page) can be used to customize the appearance of the header.
 
 N> Refer to Syncfusion [.NET MAUI Backdrop](https://www.syncfusion.com/maui-controls/maui-backdrop) feature tour page for its groundbreaking feature representations.

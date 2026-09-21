@@ -46,7 +46,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -404,10 +404,10 @@ N> For better layout organization and future extensibility, it is recommended to
 
 For platform-specific configurations and advanced usage, refer to the following resources:
 
-1. [Android Platform Configuration](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#android)
-2. [iOS Platform Configuration](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#ios)
-3. [macOS Platform Configuration](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#macos)
-4. [Windows Platform Configuration](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code#windows)
+1. [Android Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code#android)
+2. [iOS Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code#ios)
+3. [macOS Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code#macos)
+4. [Windows Platform Configuration](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code#windows)
 
 For more information on customizing the Expander control, refer to the [Expander customization documentation](https://help.syncfusion.com/maui/expander/customization).
 

@@ -46,7 +46,7 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code).
+3. Ensure that the .NET MAUI workloads are installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI project
 

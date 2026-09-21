@@ -27,7 +27,7 @@ You can customize the auto-generated editor, label, and group settings by using 
 {{'[DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry)'| markdownify }}
 </td>
 <td>
 Generated for the string type and the properties with [DataType(DataType.Text)] attribute.
@@ -38,7 +38,7 @@ Generated for the string type and the properties with [DataType(DataType.Text)] 
 {{'[DataFormMultilineTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMultilineItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Editor](https://learn.microsoft.com/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
+{{'[Editor](https://learn.microsoft.com/dotnet/maui/user-interface/controls/editor)'| markdownify }}
 </td>
 <td>
 Generated for the string type properties with [DataType(DataType.MultilineText)] attribute. 
@@ -49,7 +49,7 @@ Generated for the string type properties with [DataType(DataType.MultilineText)]
 {{'[DataFormPasswordItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry)'| markdownify }}
 </td>
 <td>
 Generated for the string type properties with [DataType(DataType.Password)] attribute. 
@@ -82,7 +82,7 @@ Generated for the string type properties with [DataType(DataType.PhoneNumber)] a
 {{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }}
 </td>
 <td>
-{{'[DatePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
+{{'[DatePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/datepicker)'| markdownify }}
 </td>
 <td>
 Generated for the DateTime, DateTimeOffset, and DateOnly type properties and the properties with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
@@ -93,7 +93,7 @@ Generated for the DateTime, DateTimeOffset, and DateOnly type properties and the
 {{'[DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html)'| markdownify }}
 </td>
 <td>
-{{'[TimePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
+{{'[TimePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/timepicker&tabs=windows)'| markdownify }}
 </td>
 <td>
 Generated for TimeSpan and TimeOnly type properties and the properties with [DataType(DataType.Time)] attribute. 
@@ -104,7 +104,7 @@ Generated for TimeSpan and TimeOnly type properties and the properties with [Dat
 {{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html)'| markdownify }}
 </td>
 <td>
-{{'[CheckBox](https://learn.microsoft.com/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
+{{'[CheckBox](https://learn.microsoft.com/dotnet/maui/user-interface/controls/checkbox)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -115,7 +115,7 @@ Generated for the Bool type property.
 {{'[DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Switch](https://learn.microsoft.com/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
+{{'[Switch](https://learn.microsoft.com/dotnet/maui/user-interface/controls/switch)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -147,7 +147,7 @@ Generated for the enum type property.
 {{'[DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Picker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
+{{'[Picker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/picker)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property. 
@@ -158,7 +158,7 @@ Generated for the enum type property.
 {{'[DataFormRadioGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormRadioGroupItem.html)'| markdownify }}
 </td>
 <td>
-{{'[RadioButton](https://learn.microsoft.com/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
+{{'[RadioButton](https://learn.microsoft.com/dotnet/maui/user-interface/controls/radiobutton)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property.
