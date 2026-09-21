@@ -60,7 +60,7 @@ Generated for the string type properties with [DataType(DataType.Password)] attr
 {{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
 </td>
 <td>
-{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview)'| markdownify }}
 </td>
 <td>
 Generated for int, double, float type property. 
