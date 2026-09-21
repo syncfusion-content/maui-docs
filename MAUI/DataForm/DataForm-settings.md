@@ -174,7 +174,7 @@ You can cancel the specific data editor by handling the [GenerateDataFormItem](h
 
 **Using attributes**
 
-You can set [AutoGenerateField](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0) to `false` for canceling the data editor generation.
+You can set [AutoGenerateField](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield) to `false` for canceling the data editor generation.
 
 {% tabs %}
 {% highlight C# %}
@@ -270,7 +270,7 @@ You can display the watermark in the editor by defining the display attribute or
 
 **Using attribute**
 
-You can show the watermark in the editor by setting the [Prompt](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-7.0) in display attribute.
+You can show the watermark in the editor by setting the [Prompt](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt) in display attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -423,7 +423,7 @@ By default, the property name will be displayed as label text. You can change th
 
 **Using attribute**
 
-You can change the label text by setting the [Name](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-7.0) or [ShortName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-7.0) in display attribute.
+You can change the label text by setting the [Name](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.name) or [ShortName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname) in display attribute.
 
 {% tabs %}
 {% highlight C# %}

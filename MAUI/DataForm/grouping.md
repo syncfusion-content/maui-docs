@@ -11,7 +11,7 @@ documentation: ug
 
 The .NET MAUI DataForm supports the grouping of the editors, which are relevant to each other. Expand or collapse the group by tapping the group item.
 
-Grouping is achieved by defining the [Display](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+Grouping is achieved by defining the [Display](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute) attribute or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 **Using attributes**
 
@@ -62,7 +62,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 **Display attribute**
 
-The order of the editors in the group is changed by using attributes. Set the order of the DataForm items in the group by using the [Order](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0#system-componentmodel-dataannotations-displayattribute-order) property along with the [GroupName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0#system-componentmodel-dataannotations-displayattribute-groupname) property in the [Display](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
+The order of the editors in the group is changed by using attributes. Set the order of the DataForm items in the group by using the [Order](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.order#system-componentmodel-dataannotations-displayattribute-order) property along with the [GroupName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname#system-componentmodel-dataannotations-displayattribute-groupname) property in the [Display](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute) attribute.
 
 {% tabs %}
 {% highlight c# tabtitle="ContactsInfo.cs" %}

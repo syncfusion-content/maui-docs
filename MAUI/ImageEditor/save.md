@@ -49,7 +49,7 @@ In Windows, MacCatalyst, and iOS platforms, the image will be saved in the follo
 
 `System.Environment.SpecialFolder.MyPictures`
 
-For more information, see the [System.Environment.SpecialFolder](https://learn.microsoft.com/dotnet/api/system.environment.specialfolder?view=net-7.0) documentation.
+For more information, see the [System.Environment.SpecialFolder](https://learn.microsoft.com/dotnet/api/system.environment.specialfolder) documentation.
 
 On a Windows device, the image will be saved to:
 
@@ -134,7 +134,7 @@ The [`ImageSaving`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 
 #### Cancel
 
-Control the save functionality by setting the [`Cancel`](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) argument to `true`. It restricts the image save to the default location.
+Control the save functionality by setting the [`Cancel`](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs.cancel) argument to `true`. It restricts the image save to the default location.
 
 {% tabs %}
 

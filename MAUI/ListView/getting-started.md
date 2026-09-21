@@ -158,7 +158,7 @@ public class BookInfo : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface in your model class.
+N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) interface in your model class.
 
 
 ### View Model

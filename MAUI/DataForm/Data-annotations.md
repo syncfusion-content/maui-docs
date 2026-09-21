@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Annotations in .NET MAUI DataForm
 
-The DataForm supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
+The DataForm supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations) assembly.
 
 ## Display attribute
 
@@ -20,7 +20,7 @@ The DataForm supports the following attribute to handle the data, and these attr
 </tr>
 <tr>
 <td>
-{{'[Name](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-7.0)' |  markdownify }}
+{{'[Name](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.name)' |  markdownify }}
 </td>
 <td>
 Specifies the label text.
@@ -28,7 +28,7 @@ Specifies the label text.
 </tr>
 <tr>
 <td>
-{{'[GroupName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0)' |  markdownify }}
+{{'[GroupName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname)' |  markdownify }}
 </td>
 <td>
 Specifies the group name that identifies the fields in the DataForm.
@@ -36,7 +36,7 @@ Specifies the group name that identifies the fields in the DataForm.
 </tr>
 <tr>
 <td>
-{{'[ShortName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-7.0)' |  markdownify }}
+{{'[ShortName](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname)' |  markdownify }}
 </td>
 <td>
 Specifies the label text. It takes higher priority than Name.
@@ -44,7 +44,7 @@ Specifies the label text. It takes higher priority than Name.
 </tr>
 <tr>
 <td>
-{{'[AutoGenerateField](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0)' |  markdownify }}
+{{'[AutoGenerateField](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield)' |  markdownify }}
 </td>
 <td>
 Specifies whether the field should be auto-generated or not. 
@@ -52,7 +52,7 @@ Specifies whether the field should be auto-generated or not.
 </tr>
 <tr>
 <td>
-{{'[ResourceType](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0)' |  markdownify }}
+{{'[ResourceType](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype)' |  markdownify }}
 </td>
 <td>
 Specifies the Resources File (.Resx), which is used to localize the Display attribute of Name, ShortName, GroupName, Prompt and ItemsSource values.
@@ -60,7 +60,7 @@ Specifies the Resources File (.Resx), which is used to localize the Display attr
 </tr>
 <tr>
 <td>
-{{'[Prompt](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-7.0)' |  markdownify }}
+{{'[Prompt](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt)' |  markdownify }}
 </td>
 <td>
 Specifies watermark text for the editor.
@@ -68,7 +68,7 @@ Specifies watermark text for the editor.
 </tr>
 <tr>
 <td>
-{{'[Order](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0)' | markdownify }}
+{{'[Order](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.displayattribute.order)' | markdownify }}
 </td>
 <td>
 Specifies the order of field in the DataForm.
@@ -98,7 +98,7 @@ Details
 </tr>
 <tr>
 <td>
-{{'[MinLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.minlengthattribute?view=net-7.0)'| markdownify }}
+{{'[MinLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.minlengthattribute)'| markdownify }}
 </td>
 <td>
 Specifies the required minimum input string length.
@@ -106,7 +106,7 @@ Specifies the required minimum input string length.
 </tr>
 <tr>
 <td>
-{{'[MaxLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute?view=net-7.0)'| markdownify }}
+{{'[MaxLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute)'| markdownify }}
 
 </td>
 <td>
@@ -115,7 +115,7 @@ Specifies the required maximum input string length.
 </tr>
 <tr>
 <td>
-{{'[Required](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0)'| markdownify }}
+{{'[Required](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.requiredattribute)'| markdownify }}
 </td>
 <td>
 Specifies the required data field value. 
@@ -123,7 +123,7 @@ Specifies the required data field value.
 </tr>
 <tr>
 <td>
-{{'[StringLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-7.0)'| markdownify }}
+{{'[StringLength](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute)'| markdownify }}
 </td>
 <td>
 Specifies the required string length. 
@@ -131,7 +131,7 @@ Specifies the required string length.
 </tr>
 <tr>
 <td>
-{{'[EnumDataType](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.enumdatatypeattribute?view=net-7.0)'| markdownify }}
+{{'[EnumDataType](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.enumdatatypeattribute)'| markdownify }}
 </td>
 <td>
 Specifies the enum type for the data field.
