@@ -1,4 +1,13 @@
-# Overview
+---
+layout: post
+title: Overview of MAUI Diagram | Syncfusion®
+description: Overview of the Syncfusion® .NET MAUI Diagram control for creating, visualizing, and interacting with flowcharts and diagramming applications.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+# Overview of .NET MAUI Diagram
 
 The .NET MAUI Diagram control is a versatile component used to create, visualize, and interact with diagrams. It enables developers to build flowcharts, workflow designers, process diagrams, organizational charts, and other graphical applications using nodes, connectors, annotations, ports, and symbol palettes.
 

@@ -1,4 +1,13 @@
-# Save and load
+---
+layout: post
+title: Save and Load in MAUI Diagram | Syncfusion®
+description: Learn how to save and restore diagram state in the Syncfusion® .NET MAUI Diagram control, including nodes, connectors, ports, and annotations.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+# Save and load in .NET MAUI Diagram
 
 The Diagram control supports saving the current diagram state and restoring it later. Serialization preserves nodes, connectors, ports, annotations, styles, and connector settings so users can resume their work after closing the application.
 

@@ -1,4 +1,13 @@
-# Export and print
+---
+layout: post
+title: Export and Print in MAUI Diagram | Syncfusion®
+description: Learn how to export the Syncfusion® .NET MAUI Diagram control to an external format and print it using the ExportDiagramAsync and PrintAsync methods.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+# Export and print in .NET MAUI Diagram
 
 The Diagram control supports exporting the current diagram and sending it to the system printing pipeline. These capabilities let users share, archive, review, and distribute diagram content outside the application.
 

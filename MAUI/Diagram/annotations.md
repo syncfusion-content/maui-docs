@@ -1,4 +1,14 @@
-# Annotations
+---
+layout: post
+title: Annotations in MAUI Diagram | Syncfusion®
+description: Learn how to add and customize node and connector annotations in the Syncfusion® .NET MAUI Diagram control using ShapeAnnotation, PathAnnotation, and TextStyle.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+
+# Annotations in .NET MAUI Diagram
 
 Annotations display textual information on nodes and connectors. They help describe diagram elements and improve the readability of a diagram.
 
