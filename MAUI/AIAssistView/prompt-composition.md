@@ -85,7 +85,7 @@ public partial class MainPage : ContentPage
 
 ## PromptParts collection
 
-The [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection contains discrete prompt fragments contributed by application logic, tools, or plugins. The `PromptParts` property accepts an `IList<AssistPromptPart>` and can be bound to a collection in the view model.
+The [PromptParts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptParts) collection contains discrete prompt fragments contributed by application logic, tools, or plugin. The `PromptParts` property accepts an `IList<AssistPromptPart>` and can be bound to a collection in the view model.
 
 ### AssistPromptPart model
 
@@ -144,13 +144,13 @@ The [PromptComposing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
  * [Parts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_Parts) - Provides the enabled prompt parts in composition order.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            PromptComposing="OnPromptComposing" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 16" %}
+{% highlight c# hl_lines="15 16" %}
 
 using Syncfusion.Maui.AIAssistView;
 
