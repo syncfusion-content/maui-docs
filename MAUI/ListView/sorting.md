@@ -25,7 +25,7 @@ Sort data by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syn
 `SortDescriptor` object holds the following three properties:
 
 * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_PropertyName): Describes the name of the sorted property.
-* [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Direction): Describes an object of type [ListSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.ListSortDirection.html) that defines the sorting direction. Supported values are `Ascending` and `Descending`.
+* [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Direction): Describes an object of type [ListSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.ListSortDirection.html) that defines the sorting direction. Supported values are `Ascending` and `Descending`.
 * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer): Describes the comparer to be applied when sorting takes place. The type is `IComparer<object>` (from the `System.Collections.Generic` namespace), and `IComparer<object>` is also re-exported by the `Syncfusion.Maui.DataSource` namespace. You must `using System.Collections.Generic;` (or qualify the type) when implementing a custom comparer.
 
 {% tabs %}
@@ -61,7 +61,7 @@ N> **Live update behavior:** By default, changes to the underlying collection (f
 
 Sort the items based on custom logic. This can be applied using either the [SfListView.DataSource.SortComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_SortComparer) property or the [SortDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer), which is added to the [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) collection.
 
-N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) and the `GroupDescriptor` are the same, then the [GroupResult](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html) will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise, data objects are passed. To sort the data items alone, use a different `PropertyName` in both the `SortDescriptor` and the `GroupDescriptor` properties.
+N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) and the `GroupDescriptor` are the same, then the [GroupResult](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html) will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise, data objects are passed. To sort the data items alone, use a different `PropertyName` in both the `SortDescriptor` and the `GroupDescriptor` properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 11 12 13" %}

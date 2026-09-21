@@ -225,7 +225,7 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibility" aria-label="View HorizontalScrollBarVisibility property in API reference">HorizontalScrollBarVisibility</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.scrollbarvisibility" aria-label="View ScrollBarVisibility enum in API reference">ScrollBarVisibility</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.scrollbarvisibility" aria-label="View ScrollBarVisibility enum in API reference">ScrollBarVisibility</a></td>
         <td>Controls when the <code>horizontal scrollbar</code> is visible on <code>WinUI</code>.</td>
     </tr>
     <tr valign="top">
@@ -355,12 +355,12 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibility" aria-label="View VerticalScrollBarVisibility property in API reference">VerticalScrollBarVisibility</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.scrollbarvisibility" aria-label="View ScrollBarVisibility enum in API reference">ScrollBarVisibility</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.scrollbarvisibility" aria-label="View ScrollBarVisibility enum in API reference">ScrollBarVisibility</a></td>
         <td>Controls when the <code>vertical scrollbar</code> is visible on <code>WinUI</code>.</td>
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View" aria-label="View View property in API reference">View</a></td>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ICollectionViewAdv.html" aria-label="View ICollectionViewAdv type in API reference">ICollectionViewAdv</a></td>
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html" aria-label="View ICollectionViewAdv type in API reference">ICollectionViewAdv</a></td>
         <td>Provides the <code>collection view</code> through which the DataGrid applies sorting, grouping, and filtering to its records.</td>
     </tr>
 </table>

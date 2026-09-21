@@ -255,4 +255,4 @@ The following screenshot shows the filtering UI popup displayed in the SfListVie
 
 ## See also
 
-[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://www.syncfusion.com/kb/13060/)
+[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://support.syncfusion.com/kb/article/11354/how-to-filter-the-items-in-net-maui-listview-using-mvvm)

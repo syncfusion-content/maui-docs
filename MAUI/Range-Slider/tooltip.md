@@ -72,6 +72,33 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
+## Customize tooltip position
+
+You can customize the tooltip position using the `Position` property of `SliderTooltip` in the `Range Slider`. In a horizontal range slider, the tooltip can be displayed above or below the track. In a vertical range slider, it can be displayed on the left or right side of the track.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="3" %}
+
+<sliders:SfRangeSlider>
+    <sliders:SfRangeSlider.Tooltip>
+        <sliders:SliderTooltip Position="Bottom" />
+    </sliders:SfRangeSlider.Tooltip>
+</sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# hl_lines="3" %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Tooltip = new SliderTooltip();
+rangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = rangeSlider;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Tooltip label style
 
 Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Fill), [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Stroke), [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_StrokeThickness), and [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Position) properties. Also, customize the tooltip text using the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TextColor), [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontSize), [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontAttributes), [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontFamily), [`Padding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Padding), and [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_NumberFormat) properties of the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) class.
