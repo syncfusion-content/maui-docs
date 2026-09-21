@@ -20,7 +20,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ApplyButtonBackground" aria-label="View ApplyButtonBackground property in API reference">ApplyButtonBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Background brush</code> of the <code>Apply</code> button shown in the <code>picker footer</code>. Use it to customize the <code>confirmation action</code> surface.</td>
 </tr>
 
@@ -32,7 +32,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_CancelButtonBackground" aria-label="View CancelButtonBackground property in API reference">CancelButtonBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Background brush</code> of the <code>Cancel</code> button shown in the <code>picker footer</code>. Use it to customize the <code>dismissal action</code> surface.</td>
 </tr>
 
@@ -62,7 +62,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewStroke" aria-label="View DisplayViewStroke property in API reference">DisplayViewStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Stroke brush</code> applied to the <code>display view border</code> around the <code>selected color preview</code>.</td>
 </tr>
 
@@ -122,7 +122,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellCornerRadius" aria-label="View PaletteCellCornerRadius property in API reference">PaletteCellCornerRadius</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius?view=net-maui-10.0" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
     <td><code>Corner radius</code> applied to each <code>palette cell</code>. Larger values make <code>swatches</code> appear more <code>rounded</code>.</td>
 </tr>
 
@@ -140,7 +140,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors" aria-label="View PaletteColors property in API reference">PaletteColors</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList&lt;T&gt; type in API reference">IList&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color?view=net-maui-10.0" aria-label="View Color type in API reference">Color</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList&lt;T&gt; type in API reference">IList&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a>&gt;</a></td>
     <td><code>Collection</code> of <code>colors</code> displayed as <code>swatches</code> in the <code>palette mode</code>.</td>
 </tr>
 
@@ -170,7 +170,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PopupBackground" aria-label="View PopupBackground property in API reference">PopupBackground</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Background brush</code> of the <code>color picker drop-down popup</code>.</td>
 </tr>
 
@@ -188,7 +188,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor" aria-label="View SelectedColor property in API reference">SelectedColor</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color?view=net-maui-10.0" aria-label="View Color type in API reference">Color</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
     <td>Currently <code>selected color</code> in the <code>picker</code>. Updating this value updates the <code>display view</code>, <code>recent colors</code>, and <code>bound application state</code>.</td>
 </tr>
 
@@ -218,7 +218,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke" aria-label="View SelectionIndicatorStroke property in API reference">SelectionIndicatorStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Stroke brush</code> of the <code>selection indicator</code> drawn around the <code>active swatch</code>.</td>
 </tr>
 
@@ -254,7 +254,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill" aria-label="View SliderThumbFill property in API reference">SliderThumbFill</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Fill brush</code> of the <code>slider thumb</code> used in the <code>alpha</code> and <code>spectrum editors</code>.</td>
 </tr>
 
@@ -266,7 +266,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke" aria-label="View SliderThumbStroke property in API reference">SliderThumbStroke</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush?view=net-maui-10.0" aria-label="View Brush type in API reference">Brush</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td><code>Stroke brush</code> of the <code>slider thumb</code>.</td>
 </tr>
 

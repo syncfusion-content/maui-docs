@@ -260,7 +260,7 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TokenItemStyle" aria-label="View TokenItemStyle property in API reference">TokenItemStyle</a></td>
-<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.style?view=net-maui-10.0" aria-label="View TokenItemStyle type in API reference">Style</a></td>
+<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.style" aria-label="View TokenItemStyle type in API reference">Style</a></td>
 <td>Styles selected-item tokens when <code>SelectionMode</code> is <code>Multiple</code> and <code>MultiSelectionDisplayMode</code> is <code>Token</code>.</td>
 </tr>
 

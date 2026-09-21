@@ -82,7 +82,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped" aria-label="View Tapped event in API reference">Tapped</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;TappedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.tappedeventargs?view=net-maui-10.0" aria-label="View TappedEventArgs type in API reference">TappedEventArgs&gt;</a></a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler&lt;TappedEventArgs&gt; type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.tappedeventargs" aria-label="View TappedEventArgs type in API reference">TappedEventArgs&gt;</a></a></td>
     <td>Triggered when the <code>card layout</code> is tapped by the user. Use this event to respond to <code>selection</code> or open <code>card details</code>.</td>
 </tr>
 

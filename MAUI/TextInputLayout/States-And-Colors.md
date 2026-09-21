@@ -12,7 +12,7 @@ keywords: .net maui textinputlayout states and colors, syncfusion text input lay
 
 Customize the appearance of [Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) by setting stroke and background colors, applying visual states, and styling the labels. This page covers the following customization points:
 
-- The base [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) color and the per-state stroke values via the [Visual State Manager](https://learn.microsoft.com/dotnet/maui/user-interface/visual-states?view=net-maui-10.0).
+- The base [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) color and the per-state stroke values via the [Visual State Manager](https://learn.microsoft.com/dotnet/maui/user-interface/visual-states).
 - The [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) color for Filled and Outlined containers.
 - The text color of the hint, helper, and error labels via [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html).
 - The disabled appearance via [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsEnabled).

@@ -11,7 +11,7 @@ documentation: ug
 
 Visual states let you change the appearance of [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) in response to user interaction. Use them to apply different colors, borders, or other properties for each state without writing code-behind handlers.
 
-`Autocomplete` supports the following visual states through the [`VisualStateManager`](https://learn.microsoft.com/dotnet/maui/user-interface/visual-states?view=net-maui-10.0):
+`Autocomplete` supports the following visual states through the [`VisualStateManager`](https://learn.microsoft.com/dotnet/maui/user-interface/visual-states):
 
 * `Normal` - The default resting state of the Autocomplete.
 * `Focused` - The Autocomplete has keyboard or input focus.

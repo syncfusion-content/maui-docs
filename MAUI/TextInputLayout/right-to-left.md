@@ -32,7 +32,7 @@ N> When the layout direction changes, the hint label, helper text, error text, c
 
 ## Apply RTL to a single control
 
-Set the [FlowDirection](https://learn.microsoft.com/dotnet/api/microsoft.maui.flowdirection?view=net-maui-10.0) property directly on the `Text Input Layout` instance.
+Set the [FlowDirection](https://learn.microsoft.com/dotnet/api/microsoft.maui.flowdirection) property directly on the `Text Input Layout` instance.
 
 {% tabs %}
 {% highlight xaml %}

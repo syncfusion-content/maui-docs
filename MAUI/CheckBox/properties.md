@@ -84,12 +84,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.linebreakmode?view=net-maui-10.0" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.linebreakmode" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
 		<td>Controls how the label text is displayed when it exceeds the available space, such as wrapping or truncating the text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Padding" aria-label="View Padding property in API reference">Padding</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness?view=net-maui-10.0" aria-label="View Thickness type in API reference">Thickness</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
 		<td>Controls the space between the check box content and its outer boundary.</td>
 	</tr>
 	<tr valign="top">

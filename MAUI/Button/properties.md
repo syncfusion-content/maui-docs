@@ -29,7 +29,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius?view=net-maui-10.0" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.cornerradius" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
 		<td>Controls the radius used to round the button corners.</td>
 	</tr>
 	<tr valign="top">
@@ -109,12 +109,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.linebreakmode?view=net-maui-10.0" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.linebreakmode" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
 		<td>Controls how the button text wraps or truncates when it is too long.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Padding" aria-label="View Padding property in API reference">Padding</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness?view=net-maui-10.0" aria-label="View Thickness type in API reference">Thickness</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
 		<td>Controls the space between the button border and its content.</td>
 	</tr>
 	<tr valign="top">
@@ -144,7 +144,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment" aria-label="View VerticalTextAlignment property in API reference">VerticalTextAlignment</a></td>
-		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.textalignment?view=net-maui-10.0" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
+		<td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
 		<td>Controls the vertical alignment of the button text, such as <code>Start</code>, <code>Center</code>, or <code>End</code>.</td>
 	</tr>
 </table>

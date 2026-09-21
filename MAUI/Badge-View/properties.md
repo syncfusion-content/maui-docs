@@ -150,7 +150,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextPadding" aria-label="View TextPadding property in API reference">TextPadding</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness?view=net-maui-10.0" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
     <td>Padding around the <code>badge text</code>. Larger values give the label more internal space.</td>
 </tr>
 
