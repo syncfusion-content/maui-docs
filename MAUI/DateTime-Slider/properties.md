@@ -55,7 +55,7 @@ documentation: ug
 		<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation" aria-label="View Orientation property in API reference">Orientation</a> <br/>
 		</td>
 		<td>
-			<a href="https://learn.microsoft.com/dotnet/api/system.windows.textalignment?view=windowsdesktop-10.0" aria-label="View TextAlignment type in API reference">TextAlignment</a>
+			<a href="https://learn.microsoft.com/dotnet/api/system.windows.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a>
 		</td>
 		<td>Sets the layout direction of the slider to <code>Horizontal</code> or <code>Vertical</code>.</td>
 	</tr>
