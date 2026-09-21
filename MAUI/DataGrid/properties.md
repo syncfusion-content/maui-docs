@@ -115,7 +115,7 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowText" aria-label="View AddNewRowText property in API reference">AddNewRowText</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/system.string?view=net-10.0" aria-label="View string type in API reference">string</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
         <td>Sets the <code>prompt</code> shown in the <code>add-new row</code> before the user starts entering a record.</td>
     </tr>
     <tr valign="top">
@@ -180,7 +180,7 @@ keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagri
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyViewTemplate" aria-label="View EmptyViewTemplate property in API reference">EmptyViewTemplate</a></td>
-        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
         <td>Defines a reusable custom layout for the <code>empty state</code> shown when no records are available.</td>
     </tr>
     <tr valign="top">
