@@ -6,7 +6,6 @@ platform: MAUI
 control: SfInteractiveViewer
 documentation: ug
 keywords: .net maui interactiveviewer, image view maui.
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Interactive Viewer

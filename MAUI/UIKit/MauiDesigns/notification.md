@@ -5,7 +5,6 @@ description: Essential® UI Kit for .NET MAUI Notification contains elegantly de
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Syncfusion<sup>®</sup> UI Kit for .NET MAUI Notification Designs

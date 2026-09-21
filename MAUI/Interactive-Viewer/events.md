@@ -5,7 +5,6 @@ description: Learn about all events supported in Syncfusion® .NET MAUI Interact
 platform: MAUI
 control: SfInteractiveViewer
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Interactive Viewer

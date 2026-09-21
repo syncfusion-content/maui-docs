@@ -5,7 +5,6 @@ description: Learn about rotation support in the Syncfusion® .NET MAUI Interact
 platform: MAUI
 control: SfInteractiveViewer
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Rotation in .NET MAUI Interactive Viewer

@@ -5,7 +5,6 @@ description: Essential® UI Kit for .NET MAUI Social contains elegantly designed
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Syncfusion<sup>®</sup> UI Kit for .NET MAUI Social Designs
