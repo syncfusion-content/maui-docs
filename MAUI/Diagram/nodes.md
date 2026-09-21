@@ -4,8 +4,6 @@ Nodes are the primary visual elements used to represent processes, activities, d
 
 A node can be customized using built-in properties for position, size, rotation, annotations, ports, shape, and styling.
 
-This topic is the conceptual reference for the `Node` class. For step-by-step examples, see the [how-to guides](#see-also).
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler.
@@ -90,7 +88,7 @@ node.RotateAngle = 45;
 
 ## Style nodes
 
-For a complete beginner guide, see [Style nodes](How-To%20Guides/style-nodes.md). The conceptual styling properties are listed below.
+Use the `ShapeStyle` class to customize a node's fill, border, opacity, and dash pattern. The conceptual styling properties are listed below.
 
 | Property | Description |
 | --- | --- |
@@ -135,8 +133,6 @@ Supported basic shapes:
 - Diamond
 - Polygon
 
-For full usage examples, see [create basic shapes](How-To%20Guides/create-basic-shapes.md).
-
 ---
 
 ## Flow shapes
@@ -150,15 +146,10 @@ node.Shape = new FlowShape
 };
 ```
 
-For a full list of supported flow shapes and conventions, see [create flow shapes](How-To%20Guides/create-flow-shapes.md).
-
 ---
 
 ## See also
 
 - [Getting started](getting-started.md)
-- [Style nodes](How-To%20Guides/style-nodes.md)
-- [Create basic shapes](How-To%20Guides/create-basic-shapes.md)
-- [Create flow shapes](How-To%20Guides/create-flow-shapes.md)
 - [Add node annotations](annotations.md)
 - [Ports](ports.md)

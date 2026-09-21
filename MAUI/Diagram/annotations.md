@@ -11,8 +11,6 @@ Annotations can be customized using the `TextStyle` class and alignment options.
 
 > **Note:** The `TextAlign` property on `TextStyle` and the `TextDecoration` property on `TextStyle` are scheduled for a future release. They are not available in the current package version.
 
-This topic is the conceptual reference for annotations. For complete beginner examples, see the linked how-to guides.
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Annotation examples assume that the host node or connector has been assigned to an `SfDiagram` instance.
@@ -168,6 +166,5 @@ For `PathAnnotation`, the `Offset.X` value is a normalized position along the co
 
 ## See also
 
-- [Add connector labels](How-To%20Guides/add-connector-labels.md)
 - [Nodes](nodes.md)
 - [Connectors](connectors.md)

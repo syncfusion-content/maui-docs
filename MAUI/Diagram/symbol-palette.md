@@ -4,8 +4,6 @@ The Symbol Palette is a UI element that displays reusable symbols. Users drag sy
 
 A symbol palette organizes symbols into one or more palettes. Each palette belongs to a logical category, such as **Basic Shapes** or **Flow Shapes**.
 
-For a complete beginner tutorial, see [Create a symbol palette](How-To%20Guides/create-symbol-palette.md).
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Symbol examples assume that an `SfDiagram` instance is available.
@@ -118,10 +116,3 @@ Because the `SymbolPalette.Width` and `SymbolPalette.Height` properties are not 
 If `SymbolPalette` is hosted inside a layout container such as `Grid`, set the row or column size to control the height.
 
 ---
-
-## See also
-
-- [Create a symbol palette](How-To%20Guides/create-symbol-palette.md)
-- [Create basic shapes](How-To%20Guides/create-basic-shapes.md)
-- [Create flow shapes](How-To%20Guides/create-flow-shapes.md)
-- [Nodes](nodes.md)

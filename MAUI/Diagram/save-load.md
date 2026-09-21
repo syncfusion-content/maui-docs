@@ -2,8 +2,6 @@
 
 The Diagram control supports saving the current diagram state and restoring it later. Serialization preserves nodes, connectors, ports, annotations, styles, and connector settings so users can resume their work after closing the application.
 
-For a complete beginner tutorial with persistence and auto-save patterns, see [Save and restore diagram](How-To%20Guides/save-and-restore-diagram.md).
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Serialization examples assume that an `SfDiagram` instance named `diagram` is available.
@@ -106,6 +104,5 @@ protected override async void OnAppearing()
 
 ## See also
 
-- [Save and restore diagram](How-To%20Guides/save-and-restore-diagram.md)
 - [Diagram operations](diagram-operations.md)
 - [Events](events.md)

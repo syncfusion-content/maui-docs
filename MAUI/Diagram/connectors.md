@@ -4,8 +4,6 @@ Connectors establish relationships between nodes and define the flow of informat
 
 A connector can connect nodes, ports, or specific points within the diagram surface.
 
-This topic is the conceptual reference for the `Connector` class. For step-by-step examples, see [Add connector labels](How-To%20Guides/add-connector-labels.md) and [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md).
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Connector examples assume that the `Nodes` and `Connectors` collections have been assigned to an `SfDiagram` instance.
@@ -105,7 +103,7 @@ Use orthogonal connectors for flowcharts, workflow designers, and business-proce
 
 ## Connect using ports
 
-Ports provide precise control over where a connector begins and ends. See [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md) for a complete beginner example.
+Ports define explicit connection points on a node. Using ports instead of node-to-node connections keeps connector routing predictable, which is especially useful for workflow designers, flowcharts, and process diagrams.
 
 ```csharp
 var connector = new Connector
@@ -189,7 +187,7 @@ The Diagram control supports the following decorator shapes through the `Decorat
 
 ## Connector annotations
 
-Annotations display text along a connector through the `PathAnnotation` class. For a complete beginner guide, see [Add connector labels](How-To%20Guides/add-connector-labels.md).
+Annotations display text along a connector through the `PathAnnotation` class. Connector labels describe the relationship between connected nodes. They help visualize decision branches, transitions, and conditions.
 
 ```csharp
 connector.Annotations.Add(
@@ -234,8 +232,6 @@ connector.Annotations.Add(
 
 ## See also
 
-- [Add connector labels](How-To%20Guides/add-connector-labels.md)
-- [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md)
 - [Nodes](nodes.md)
 - [Ports](ports.md)
 - [Annotations](annotations.md)

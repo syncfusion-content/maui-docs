@@ -2,8 +2,6 @@
 
 The Diagram control supports exporting the current diagram and sending it to the system printing pipeline. These capabilities let users share, archive, review, and distribute diagram content outside the application.
 
-For step-by-step examples and platform notes, see the linked API references and the how-to guides.
-
 > **Note:** Visit the [export-print API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) for your package version to confirm the export format parameters and platform availability.
 
 ## Prerequisites

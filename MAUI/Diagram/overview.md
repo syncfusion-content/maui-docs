@@ -292,19 +292,5 @@ To start using the Diagram control:
 2. Install the Syncfusion Diagram package and register the handler.
 3. Create an instance of `SfDiagram` and [add nodes](nodes.md).
 4. [Connect nodes](connectors.md) using connectors.
-5. Customize nodes with [styles](How-To%20Guides/style-nodes.md), annotations, and ports.
 
 ---
-
-## See Also
-
-- [Getting started](getting-started.md)
-- [Nodes](nodes.md)
-- [Connectors](connectors.md)
-- [Annotations](annotations.md)
-- [Ports](ports.md)
-- [Symbol palette](symbol-palette.md)
-- [Diagram operations](diagram-operations.md)
-- [Save and load](save-load.md)
-- [Export and print](export-print.md)
-- [Events](events.md)

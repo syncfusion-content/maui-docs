@@ -4,8 +4,6 @@ Ports define specific connection points on a node. They provide precise control 
 
 Ports are commonly used in workflow designers, flowcharts, process diagrams, and node-based editors where connection locations must be predictable.
 
-For a complete beginner tutorial, see [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md).
-
 ## Prerequisites
 
 Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Port examples assume that the host node has been created in the diagram.
@@ -126,8 +124,6 @@ Connector connector = new Connector
 };
 ```
 
-For a complete beginner tutorial with placement examples, see [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md).
-
 ---
 
 ## Multiple ports
@@ -155,6 +151,5 @@ node.Ports.Add(new PointPort { ID = "RightPort",  Offset = new DiagramPoint { X 
 
 ## See also
 
-- [Connect nodes using ports](How-To%20Guides/connect-nodes-using-ports.md)
 - [Nodes](nodes.md)
 - [Connectors](connectors.md)

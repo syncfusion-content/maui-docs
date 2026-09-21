@@ -154,7 +154,5 @@ When you run the application, the Diagram control displays two nodes positioned 
 ## Next steps
 
 - Learn about [nodes](nodes.md) and [connectors](connectors.md).
-- [Style nodes](How-To%20Guides/style-nodes.md).
-- Create [basic shapes](How-To%20Guides/create-basic-shapes.md) and [flow shapes](How-To%20Guides/create-flow-shapes.md).
 - Connect nodes using [ports](ports.md).
 - Save and restore a diagram with [serialization](save-load.md).
