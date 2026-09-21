@@ -25,7 +25,7 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 
-* [.NET 8.0 SDK or later](https://dotnet.microsoft.com/en-us/download) with the .NET MAUI workload (`dotnet workload install maui`)
+* [.NET 8.0 SDK or later](https://dotnet.microsoft.com/download) with the .NET MAUI workload (`dotnet workload install maui`)
 
 ## Install through the Visual Studio Code Extensions
 The following instructions outline the process of installing the Syncfusion<sup>®</sup> .NET MAUI extensions from Visual Studio Code Extensions.

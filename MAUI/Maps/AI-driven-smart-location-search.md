@@ -219,7 +219,7 @@ public class MarkerTemplateSelector : DataTemplateSelector
 
 Add the .NET MAUI Autocomplete control to collect the user input, which can then be passed to an AI service to retrieve geometric details.
 
-N> The tooltip uses a custom `MauiSampleFontIcon` font family. Register custom fonts in `MauiProgram.cs` by adding them to the `ConfigureFonts` pipeline (see the [Fonts](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) documentation).
+N> The tooltip uses a custom `MauiSampleFontIcon` font family. Register custom fonts in `MauiProgram.cs` by adding them to the `ConfigureFonts` pipeline (see the [Fonts](https://learn.microsoft.com/dotnet/maui/user-interface/fonts) documentation).
 
 Refer to the following code example to add the .NET MAUI Autocomplete control and design a search button. The button is wired to the `OnSearchClicked` handler (shown in Step 5) that calls `GetRecommendationAsync`.
 

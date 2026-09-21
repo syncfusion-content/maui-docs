@@ -21,7 +21,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfBackdropPage | Syncfusion.Xamarin.SfBackdrop | [SfBackdropPage](/maui/Backdrop/overview) | [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop) |
 | SfBadgeView | Syncfusion.Xamarin.SfBadgeView | [SfBadgeView](/maui/Badge-View/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfBarcode | Syncfusion.Xamarin.SfBarcode | [SfBarcodeGenerator](/maui/Barcode-Generator/overview) | [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode) |
-| SfBorder | Syncfusion.Xamarin.Core | Obsolete. Use [Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) | – |
+| SfBorder | Syncfusion.Xamarin.Core | Obsolete. Use [Border](https://learn.microsoft.com/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) | – |
 | SfButton | Syncfusion.Xamarin.Buttons | [SfButton](/maui/Button/Overview) | [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) |
 | SfBusyIndicator | Syncfusion.Xamarin.SfBusyIndicator | [SfBusyIndicator](/maui/busy-indicator/overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfCalendar | Syncfusion.Xamarin.SfCalendar | [SfCalendar](/maui/calendar/overview) | [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar) |
@@ -43,7 +43,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfDigitalGauge | Syncfusion.Xamarin.SfGauge | [SfDigitalGauge](/maui/digitalgauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
 | SfEffectsView | Syncfusion.Xamarin.Core | [SfEffectsView](/maui/Effects-View/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfExpander | Syncfusion.Xamarin.Expander | [SfExpander](/maui/Expander/overview) | [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) |
-| SfGradientView | Syncfusion.Xamarin.Core | Obsolete. Use [Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) | – |
+| SfGradientView | Syncfusion.Xamarin.Core | Obsolete. Use [Gradients](https://learn.microsoft.com/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) | – |
 | SfImageEditor | Syncfusion.Xamarin.SfImageEditor | [SfImageEditor](/maui/ImageEditor/overview) | [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor) |
 | SfKanban | Syncfusion.Xamarin.SfKanban | [SfKanban](/maui/kanban-board/overview) | [Syncfusion.Maui.Kanban](https://www.nuget.org/packages/Syncfusion.Maui.Kanban) |
 | SfLinearGauge | Syncfusion.Xamarin.SfGauge | [SfLinearGauge](/maui/Linear-Gauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
@@ -82,8 +82,8 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 
 The following Xamarin.Forms controls have no direct Syncfusion® .NET MAUI counterpart and are marked as obsolete:
 
-* **SfBorder** - Use the [.NET MAUI Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) element.
-* **SfGradientView** - Use [.NET MAUI Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) (**LinearGradientBrush**, **RadialGradientBrush**).
+* **SfBorder** - Use the [.NET MAUI Border](https://learn.microsoft.com/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) element.
+* **SfGradientView** - Use [.NET MAUI Gradients](https://learn.microsoft.com/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) (**LinearGradientBrush**, **RadialGradientBrush**).
 * **SfDiagram** - Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview) hosted in the .NET MAUI application.
 
 ## Notes on specific migrations

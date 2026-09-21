@@ -168,7 +168,7 @@ public class DisplayBindingConverter : IValueConverter
 
 ### Load DataTemplate for Cells
 
-You can customize the display of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTemplate) property. This allows you to format data visually using MAUI controls and apply conditional styling using [DataTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.datatrigger?view=windowsdesktop-9.0) or Binding. In edit mode, the appropriate editor will be loaded based on the column type.
+You can customize the display of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTemplate) property. This allows you to format data visually using MAUI controls and apply conditional styling using [DataTrigger](https://learn.microsoft.com/dotnet/api/system.windows.datatrigger?view=windowsdesktop-9.0) or Binding. In edit mode, the appropriate editor will be loaded based on the column type.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -204,7 +204,7 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
 
 <img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate.png" width="404"/>
 
-The `SfDataGrid` also supports using a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate#choose-a-datatemplate-based-on-properties-of-the-data-object) to dynamically choose templates based on data. This is useful when you want to apply different styles or layouts depending on the properties of the data object.
+The `SfDataGrid` also supports using a [DataTemplateSelector](https://learn.microsoft.com/dotnet/maui/fundamentals/datatemplate#choose-a-datatemplate-based-on-properties-of-the-data-object) to dynamically choose templates based on data. This is useful when you want to apply different styles or layouts depending on the properties of the data object.
 
 In the following example, a custom DataTemplateSelector is used to apply different styles based on whether the OrderID is even or odd.
 
@@ -693,7 +693,7 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 
 ## DataGridCheckBoxColumn
 
-The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed to toggle the values shown in the CheckBox. The `SfDataGrid` automatically generates a `DataGridCheckBoxColumn` when a property in the underlying collection is of type `bool`.
+The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed to toggle the values shown in the CheckBox. The `SfDataGrid` automatically generates a `DataGridCheckBoxColumn` when a property in the underlying collection is of type `bool`.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

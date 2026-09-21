@@ -427,4 +427,4 @@ The following .NET versions are supported.
 
 > **Additional Information**
 >
-> Learn more about the [Windows UI Library (WinUI) 3](https://learn.microsoft.com/en-us/windows/apps/winui/winui3/).
+> Learn more about the [Windows UI Library (WinUI) 3](https://learn.microsoft.com/windows/apps/winui/winui3/).

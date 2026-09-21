@@ -17,7 +17,7 @@ The following software must be installed to develop Syncfusion<sup>®</sup> .NET
 
 * [JetBrains Rider 2025.1 or later](https://www.jetbrains.com/rider/)
 
-* [.NET 9.0 or later SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+* [.NET 9.0 or later SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 
 ## Install JetBrains Rider
 

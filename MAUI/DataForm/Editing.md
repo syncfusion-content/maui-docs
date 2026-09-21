@@ -174,7 +174,7 @@ The particular editor can be disabled using attributes and [GenerateDataFormItem
 
 **Using attribute**
 
-An editor can be disabled using the [EditableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-7.0) and [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.readonlyattribute?view=net-6.0).
+An editor can be disabled using the [EditableAttribute](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-7.0) and [ReadOnlyAttribute](https://learn.microsoft.com/dotnet/api/system.componentmodel.readonlyattribute?view=net-6.0).
 
 {% tabs %}
 {% highlight C# %}

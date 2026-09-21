@@ -9,7 +9,7 @@ documentation: ug
 
 # Right-to-Left in .NET MAUI Button
 
-The [.NET MAUI Button`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) supports right-to-left (RTL) layout by setting [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection?view=net-maui-11.0) to `RightToLeft`, or by changing the device language to an RTL language such as Arabic or Hebrew.
+The [.NET MAUI Button`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) supports right-to-left (RTL) layout by setting [FlowDirection](https://learn.microsoft.com/dotnet/api/microsoft.maui.flowdirection?view=net-maui-11.0) to `RightToLeft`, or by changing the device language to an RTL language such as Arabic or Hebrew.
 
 ## Prerequisites
 

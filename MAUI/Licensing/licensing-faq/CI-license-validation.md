@@ -63,7 +63,7 @@ Write-Host $result
 
 ## Azure Pipelines (YAML)
 
-* Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the `LicenseKeyValidation.ps1` script file as a value (for example, `D:\LicenseKeyValidator\LicenseKeyValidation.ps1`).
+* Create a new [User-defined Variable](https://learn.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the `LicenseKeyValidation.ps1` script file as a value (for example, `D:\LicenseKeyValidator\LicenseKeyValidation.ps1`).
 
 * Add a step that downloads and extracts the LicenseKeyValidator utility (or include it in your repository) before the PowerShell task.
 
@@ -87,7 +87,7 @@ steps:
 
 ## Azure Pipelines (Classic)
 
-* Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the `LicenseKeyValidation.ps1` script file as a value (for example, `D:\LicenseKeyValidator\LicenseKeyValidation.ps1`).
+* Create a new [User-defined Variable](https://learn.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the `LicenseKeyValidation.ps1` script file as a value (for example, `D:\LicenseKeyValidator\LicenseKeyValidation.ps1`).
 
 * Include the PowerShell task in the pipeline and execute the script to validate the license key.
 
@@ -176,7 +176,7 @@ N> Use `Platform.UIComponent` for UI component license validation in v34.1.29 an
 
 ![Unit Test projects](licensing-images/unit-test-projects.png)
 
-* For more details on creating unit test projects in Visual Studio, refer to the [Getting Started with Unit Testing guide](https://learn.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2022&tabs=dotnet%2Cmstest#create-unit-tests).
+* For more details on creating unit test projects in Visual Studio, refer to the [Getting Started with Unit Testing guide](https://learn.microsoft.com/visualstudio/test/getting-started-with-unit-testing?view=vs-2022&tabs=dotnet%2Cmstest#create-unit-tests).
 
 * Install the `Syncfusion.Licensing` NuGet package in the test project and reference `Syncfusion.Licensing.dll`.
 

@@ -25,7 +25,7 @@ The NuGet **Package Manager UI** in Visual Studio allows you to easily install, 
 
 2. In the Manage NuGet Packages window, navigate to the **Updates** tab. Search for the Syncfusion<sup>®</sup> MAUI NuGet packages using a term like **"Syncfusion<sup>®</sup>"** and select the appropriate package for your application.
 
-    N> The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the Package source drop-down. If your Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
+    N> The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the Package source drop-down. If your Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
 
 3. By default, the package will be selected with the latest version. Select the required version, click the **Update** button, and accept the license terms. The package will be upgraded to the selected version in your MAUI application.
 

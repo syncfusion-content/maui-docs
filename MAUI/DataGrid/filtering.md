@@ -52,7 +52,7 @@ public bool FilterRecords(object record)
 {% endhighlight %}
 {% endtabs %}
 
-**Important:** View filtering is not supported when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) is [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). Use UI filtering instead or convert your DataTable to an IEnumerable collection of data objects.
+**Important:** View filtering is not supported when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) is [DataTable](https://learn.microsoft.com/dotnet/api/system.data.datatable?view=net-6.0). Use UI filtering instead or convert your DataTable to an IEnumerable collection of data objects.
  
 ### Custom condition-based filtering
 
@@ -146,7 +146,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to create a [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions.
+The following code example illustrates how to create a [Picker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions.
 
 {% tabs %}
 {% highlight xaml %}

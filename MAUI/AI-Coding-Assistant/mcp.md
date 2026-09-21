@@ -25,7 +25,7 @@ These tools speed up development and reinforce best practices for Syncfusion com
 
 Before beginning, ensure the following prerequisites are met:
 
-- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
+- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **.NET MAUI application** (existing or new); see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
@@ -141,7 +141,7 @@ Create a configuration file in your project folder to install the server for you
 
 **For .NET 8 / .NET 9 (using a local tool):**
 
-You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/dotnet/core/tools/local-tools-how-to-use).
 
 1. Install the Syncfusion MAUI MCP tool locally:
 

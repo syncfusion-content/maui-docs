@@ -134,6 +134,6 @@ namespace ParallaxViewCustomControl
 
 {% endtabs %}
 
-By default, the Parallax View control supports [.NET MAUI ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview) and [Syncfusion ListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html). For custom controls, you need to implement the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface from Syncfusion.Maui.Core.
+By default, the Parallax View control supports [.NET MAUI ScrollView](https://learn.microsoft.com/dotnet/maui/user-interface/controls/scrollview) and [Syncfusion ListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html). For custom controls, you need to implement the [`IParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface from Syncfusion.Maui.Core.
 
 You can find the Parallax View control with custom ListView control from this [link](https://github.com/SyncfusionExamples/MAUI-Parallax-View-Sample-Demos).

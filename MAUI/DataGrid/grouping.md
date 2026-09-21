@@ -627,7 +627,7 @@ The [DataGridColumnGroupChangingEventArgs](https://help.syncfusion.com/cr/maui/S
 
  `Cancel`: Determines whether to cancel group expansion.
  
-Cancel the group expansion by setting [DataGridColumnGroupChangingEventArgs.Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) to `true`.
+Cancel the group expansion by setting [DataGridColumnGroupChangingEventArgs.Cancel](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0) to `true`.
 
 {% tabs %}
 {% highlight c# %}

@@ -820,7 +820,7 @@ You can set a gradient as the background of `Button` using the [`Background`](ht
 * Linear gradient
 * Radial gradient
 
-Refer to the [Microsoft gradient brush documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient) for more details.
+Refer to the [Microsoft gradient brush documentation](https://learn.microsoft.com/dotnet/maui/user-interface/brushes/gradient) for more details.
 
 {% tabs %}
 {% highlight xaml %}

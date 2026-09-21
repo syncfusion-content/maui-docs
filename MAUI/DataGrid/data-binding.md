@@ -40,17 +40,17 @@ dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-If the data source implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) implements this interface and automatically triggers UI updates. However, [List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0) does not, so changes will not refresh the view automatically.
+If the data source implements the [INotifyCollectionChanged](https://learn.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. [ObservableCollection](https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) implements this interface and automatically triggers UI updates. However, [List](https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1?view=net-6.0) does not, so changes will not refresh the view automatically.
 
-If the data model implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface, then the SfDataGrid responds to property changes at runtime and updates the view.
+If the data model implements the [INotifyPropertyChanged](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface, then the SfDataGrid responds to property changes at runtime and updates the view.
 
 ## Binding with IEnumerable
 
-The `SfDataGrid` control supports binding any collection that implements from [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when the binding collection is derived from `IEnumerable`.
+The `SfDataGrid` control supports binding any collection that implements from [IEnumerable](https://learn.microsoft.com/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when the binding collection is derived from `IEnumerable`.
 
 ## Binding with DataTable
 
-The `SfDataGrid` control supports binding to a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). The `SfDataGrid` automatically refreshes the UI when rows are added, removed, or cleared.
+The `SfDataGrid` control supports binding to a [DataTable](https://learn.microsoft.com/dotnet/api/system.data.datatable?view=net-6.0). The `SfDataGrid` automatically refreshes the UI when rows are added, removed, or cleared.
 
 {% tabs %}
 {% highlight c# %}
@@ -82,7 +82,7 @@ private DataTable GetDataTable()
 
 ## Binding with dynamic data object
 
-The `SfDataGrid` control supports binding to [dynamic data objects](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-9.0) using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
+The `SfDataGrid` control supports binding to [dynamic data objects](https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject?view=net-9.0) using [ExpandoObject](https://learn.microsoft.com/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
 
 ### Example: ViewModel with Dynamic Objects
 
@@ -328,7 +328,7 @@ void OnViewLoaded()
 
 The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event fires when the underlying collection is modified (add, remove, clear items).
 
-#### Event Arguments ([NotifyCollectionChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0))
+#### Event Arguments ([NotifyCollectionChangedEventArgs](https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0))
 - **Action**: Type of change (Add, Remove, Move, Replace, or Reset)
 - **NewItems**: Items added to the collection
 - **OldItems**: Items removed from the collection

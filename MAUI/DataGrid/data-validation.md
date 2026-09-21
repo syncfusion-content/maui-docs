@@ -24,11 +24,11 @@ Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo` can be 
 
 ## Built-in validation using IDataErrorInfo / INotifyDataErrorInfo
 
-[.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) provides support to validate the data based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) / [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0).
+[.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) (SfDataGrid) provides support to validate the data based on [IDataErrorInfo](https://learn.microsoft.com/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) / [INotifyDataErrorInfo](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0).
 
 ### Using IDataErrorInfo
 
-You can validate data by inheriting the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) interface in your model class.
+You can validate data by inheriting the [IDataErrorInfo](https://learn.microsoft.com/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight C# %}
@@ -103,7 +103,7 @@ this.Content = dataGrid;
 
 ### Using INotifyDataErrorInfo
 
-Data can be validated by inheriting the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) interface in your model class.
+Data can be validated by inheriting the [INotifyDataErrorInfo](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight C# %}
@@ -192,7 +192,7 @@ You can validate data using **data annotation attributes** by setting
 
 ### Using different annotations
 
-Numeric properties (int, double, decimal) can be validated using [Range attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0).
+Numeric properties (int, double, decimal) can be validated using [Range attributes](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}
@@ -217,7 +217,7 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-String properties can be validated using [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-5.0) and [StringLength attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0).
+String properties can be validated using [Required](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-5.0) and [StringLength attributes](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}
@@ -250,7 +250,7 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-Data with heterogeneous types (combinations of letters, numbers, and special characters) can be validated using [RegularExpression attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute?view=net-5.0).
+Data with heterogeneous types (combinations of letters, numbers, and special characters) can be validated using [RegularExpression attributes](https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute?view=net-5.0).
 
 {% tabs %}
 {% highlight c# %}

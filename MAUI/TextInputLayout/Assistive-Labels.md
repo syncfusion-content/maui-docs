@@ -24,7 +24,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 The following assistive labels are available:
 
-- **Password visibility toggle** - show or hide the characters in an [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
+- **Password visibility toggle** - show or hide the characters in an [Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry) control.
 - **Helper text** - additional guidance shown below the input line.
 - **Error text** - error message shown below the input line when `HasError` is set to `true`.
 - **Character counter** - live count of characters against a maximum length.
@@ -66,7 +66,7 @@ Content = new VerticalStackLayout
 
 ![SfTextInputLayout with the password visibility toggle enabled for the Entry control](images/GettingStarted/PasswordGettingStarted.png)
 
-N> The password visibility toggle can be enabled only for the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control. By default, the toggle is disabled.
+N> The password visibility toggle can be enabled only for the [Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry) control. By default, the toggle is disabled.
 
 ## Helper text
 

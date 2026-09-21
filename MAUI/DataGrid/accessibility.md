@@ -10,7 +10,7 @@ keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, g
 
 # Accessibility in .NET MAUI Data Grid
 
-SfDataGrid and SfDataPager provide built-in [AutomationId](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.element.automationid?view=net-maui-10.0) support for all their inner elements. The `AutomationId` property enables UI automation frameworks and test scripts to identify and interact with individual grid and pager elements. A unique `AutomationId` is automatically assigned to each inner element by combining the control's `AutomationId` with the element's identifier (row index, column index, or button name).
+SfDataGrid and SfDataPager provide built-in [AutomationId](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.element.automationid?view=net-maui-10.0) support for all their inner elements. The `AutomationId` property enables UI automation frameworks and test scripts to identify and interact with individual grid and pager elements. A unique `AutomationId` is automatically assigned to each inner element by combining the control's `AutomationId` with the element's identifier (row index, column index, or button name).
 
 ## DataGrid
 

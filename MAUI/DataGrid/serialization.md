@@ -10,7 +10,7 @@ keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, g
 
 # Serialization and Deserialization in .NET MAUI Data Grid
 
-SfDataGrid allows you to serialize and deserialize the SfDataGrid settings using [DataContractSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractserializer?view=net-9.0&redirectedfrom=MSDN).
+SfDataGrid allows you to serialize and deserialize the SfDataGrid settings using [DataContractSerializer](https://learn.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?view=net-9.0&redirectedfrom=MSDN).
 
 By default, SfDataGrid serializes the following properties: column configurations, sorting, grouping, caption summaries, group summaries, table summaries, stacked headers, DetailsViewDefinition, and unbound rows. You can customize which features are serialized/deserialized using serialization options.
 
@@ -30,7 +30,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize as stream
 
-You can store the SfDataGrid settings as [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-9.0) using [Serialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Serialize_System_IO_Stream_Syncfusion_Maui_DataGrid_DataGridSerializationOptions_) method by passing the stream.
+You can store the SfDataGrid settings as [Stream](https://learn.microsoft.com/dotnet/api/system.io.stream?view=net-9.0) using [Serialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Serialize_System_IO_Stream_Syncfusion_Maui_DataGrid_DataGridSerializationOptions_) method by passing the stream.
 
 {% tabs %}
 {% highlight c# %}
@@ -176,7 +176,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize from stream
 
-You can deserialize the SfDataGrid settings from [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-9.0) using [Deserialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_) method.
+You can deserialize the SfDataGrid settings from [Stream](https://learn.microsoft.com/dotnet/api/system.io.stream?view=net-9.0) using [Deserialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_) method.
 
 {% tabs %}
 {% highlight c# %}

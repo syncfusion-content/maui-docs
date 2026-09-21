@@ -603,7 +603,7 @@ The [SfListView.GroupExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.M
 The [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html) of the `GroupExpanding` event provides information about the expanding group, which has the following members:
 
 [Groups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html#Syncfusion_Maui_ListView_GroupExpandCollapseChangingEventArgs_Groups): Gets a list of groups that are being expanded.
-[Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): Decides whether to cancel the group expansion or not.
+[Cancel](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): Decides whether to cancel the group expansion or not.
 
 The `GroupExpanding` event is used in the following use case.
 
@@ -646,7 +646,7 @@ The [SfListView.GroupCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.
 The [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html) of the `GroupCollapsing` event provides information about the collapsing group, which contains the following members:
 
 [Groups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html#Syncfusion_Maui_ListView_GroupExpandCollapseChangingEventArgs_Groups): Gets a list of groups that are being collapsed.
-[Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): Decides whether to cancel the group collapsing or not.
+[Cancel](https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0): Decides whether to cancel the group collapsing or not.
 
 You can cancel the group collapsing by setting the `GroupExpandCollapseChangingEventArgs.Cancel` to `true`.
 
@@ -1117,7 +1117,7 @@ N> The binding context for `GroupHeaderTemplate` is `GroupResult`.
 
 ### Providing Indentation for GroupHeader items
 
-ListView allows you to provide space between the group header items by using the [Margin](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.view.margin?view=xamarin-forms) property of parent view in the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. For example, in the following code snippet, StackLayout is considered as parent view and spacing is provided by setting its margin.
+ListView allows you to provide space between the group header items by using the [Margin](https://learn.microsoft.com/dotnet/api/xamarin.forms.view.margin?view=xamarin-forms) property of parent view in the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. For example, in the following code snippet, StackLayout is considered as parent view and spacing is provided by setting its margin.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}

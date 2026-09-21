@@ -94,7 +94,7 @@ public class ViewModel
 
 ## Apply gradient
 
-The gradient for the pyramid chart can be set by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property of the chart with the help of the [LinearGradientBrush](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/lineargradient) or [RadialGradientBrush](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/radialgradient).
+The gradient for the pyramid chart can be set by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property of the chart with the help of the [LinearGradientBrush](https://learn.microsoft.com/dotnet/maui/user-interface/brushes/lineargradient) or [RadialGradientBrush](https://learn.microsoft.com/dotnet/maui/user-interface/brushes/radialgradient).
 
 {% tabs %}
 

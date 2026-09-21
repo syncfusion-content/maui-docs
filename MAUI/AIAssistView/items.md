@@ -177,7 +177,7 @@ public class ViewModel : INotifyPropertyChanged
         {
             // Adding a hyperlink item as a response from the AI service.
             Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
-            Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+            Url = "https://dotnet.microsoft.com/apps/maui",
         };
 
         // Add the response item to the collection

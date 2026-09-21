@@ -569,7 +569,7 @@ public class ViewModel : INotifyPropertyChanged
         {
             Author = new Author() { Name = "Michale", Avatar = "peoplecircle23.png" },
             Text = "You can check out this link to get started",
-            Url = "https://dotnet.microsoft.com/en-us/apps/maui",
+            Url = "https://dotnet.microsoft.com/apps/maui",
         });
         
         this.Messages.Add(new TextMessage()

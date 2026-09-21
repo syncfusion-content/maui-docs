@@ -92,7 +92,7 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
 
 **Prerequisites**
 
-* Install [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or later.
+* Install [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later.
 * [JetBrains Rider 2025.1](https://www.jetbrains.com/rider/whatsnew/2025-1/) or later is required.
 * Ensure the .NET MAUI workload (.NET 10 and later) is installed before proceeding.
 * Ensure the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>** plugin is installed in JetBrains Rider. To check, go to **Settings > Plugins > Installed**. If the plugin is not installed, follow the steps below:

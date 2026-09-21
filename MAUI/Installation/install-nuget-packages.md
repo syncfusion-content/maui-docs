@@ -31,7 +31,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
 2. The **Manage NuGet Packages** window will open. Navigate to the **Browse** tab, then search for the Syncfusion<sup>®</sup> MAUI NuGet packages using a term like **"Syncfusion Maui"** and select the appropriate Syncfusion<sup>®</sup> MAUI NuGet package for your development.
 
-    > The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the **Package source** drop-down. If Visual Studio does not have `nuget.org` configured, follow the instructions in the [Microsoft documentation](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
+    > The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the **Package source** drop-down. If Visual Studio does not have `nuget.org` configured, follow the instructions in the [Microsoft documentation](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
 
     ![MAUI NuGet packages search results](images/NuGetsearch.png)
 
@@ -45,7 +45,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
 ## Installation using the dotnet (.NET) CLI
 
-The [dotnet Command Line Interface (CLI)](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) allows you to add, restore, pack, publish, and manage packages without making any changes to your application files. [`dotnet add package`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package?tabs=netcore2x) adds a package reference to the project file, then runs [`dotnet restore`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) to install the package.
+The [dotnet Command Line Interface (CLI)](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-dotnet-cli) allows you to add, restore, pack, publish, and manage packages without making any changes to your application files. [`dotnet add package`](https://learn.microsoft.com/dotnet/core/tools/dotnet-add-package?tabs=netcore2x) adds a package reference to the project file, then runs [`dotnet restore`](https://learn.microsoft.com/dotnet/core/tools/dotnet-restore?tabs=netcore2x) to install the package.
 
 Follow the instructions below to use the dotnet CLI command to install the Syncfusion<sup>®</sup> MAUI NuGet packages.
 
@@ -72,7 +72,7 @@ Follow the instructions below to use the dotnet CLI command to install the Syncf
 
     ![MAUI package entry in .csproj file](images/packageentry.png)
 
-4. Run the [`dotnet restore`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the project file.
+4. Run the [`dotnet restore`](https://learn.microsoft.com/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the project file.
 
 5. Your application now has all the required Syncfusion<sup>®</sup> assemblies, and you are ready to start building a high-performance, responsive app with [Syncfusion<sup>®</sup> MAUI components](https://www.syncfusion.com/maui-controls). You can also refer to the [MAUI help documentation](https://help.syncfusion.com/maui/introduction/overview) for development.
 

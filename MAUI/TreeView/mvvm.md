@@ -439,7 +439,7 @@ public class CommandViewModel
 
 ## Event to command
 
-The `TreeView` event can be converted into commands using [Behaviors](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/behaviors). To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
+The `TreeView` event can be converted into commands using [Behaviors](https://learn.microsoft.com/dotnet/maui/fundamentals/behaviors). To achieve this, create a command in the `ViewModel` class and associate it to the TreeView event using `Behaviors`.
 
 {% tabs %}
 {% highlight xaml hl_lines="10" %}
@@ -518,4 +518,4 @@ public class CountriesViewModel : INotifyPropertyChanged
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/event-to-command-binding-in-.net-maui-treeview).
 
-For more information regarding the EventToCommand behavior in .NET MAUI, you can refer [this](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/event-to-command-behavior) link.
+For more information regarding the EventToCommand behavior in .NET MAUI, you can refer [this](https://learn.microsoft.com/dotnet/communitytoolkit/maui/behaviors/event-to-command-behavior) link.

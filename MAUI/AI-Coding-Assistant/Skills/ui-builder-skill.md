@@ -25,9 +25,9 @@ Before installing MAUI UI Builder, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 8.0
-- [MAUI](https://learn.microsoft.com/en-us/dotnet/maui) workload installed (`dotnet workload install maui`)
-- MAUI application (existing or new); see [Quick Start](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app)
+- Required [.NET SDK](https://dotnet.microsoft.com/download) version ≥ 8.0
+- [MAUI](https://learn.microsoft.com/dotnet/maui) workload installed (`dotnet workload install maui`)
+- MAUI application (existing or new); see [Quick Start](https://learn.microsoft.com/dotnet/maui/get-started/first-app)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Visual Studio, Cursor, Code Studio, etc.)
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
@@ -198,5 +198,5 @@ Yes. The skill automatically generates ViewModels with proper INotifyPropertyCha
 
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
-- [MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui)
+- [MAUI Documentation](https://learn.microsoft.com/dotnet/maui)
 - [Syncfusion MAUI Components](https://www.syncfusion.com/maui-controls)

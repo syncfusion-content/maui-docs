@@ -15,11 +15,11 @@ Host any `View` inside [.NET MAUI Text Input Layout](https://help.syncfusion.com
 
 | Input View | Source | Notes |
 |------------|--------|-------|
-| [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) | MAUI | Single-line text. |
-| [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor) | MAUI | Multi-line text. Set `AutoSize="TextChanges"` to grow with content. |
-| [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) | MAUI | Drop-down list. Not supported on Windows. |
-| [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker) | MAUI | Time selection. Not supported on Windows. |
-| [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker) | MAUI | Date selection. Not supported on Windows. |
+| [Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry) | MAUI | Single-line text. |
+| [Editor](https://learn.microsoft.com/dotnet/maui/user-interface/controls/editor) | MAUI | Multi-line text. Set `AutoSize="TextChanges"` to grow with content. |
+| [Picker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/picker) | MAUI | Drop-down list. Not supported on Windows. |
+| [TimePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/timepicker) | MAUI | Time selection. Not supported on Windows. |
+| [DatePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/datepicker) | MAUI | Date selection. Not supported on Windows. |
 | [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
 | [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
 | [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) | Syncfusion | Masked text input. Requires `Syncfusion.Maui.Inputs`. |
@@ -35,7 +35,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 ## Entry
 
-For single-line text input, host the .NET MAUI [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control inside `Text Input Layout`.
+For single-line text input, host the .NET MAUI [Entry](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry) control inside `Text Input Layout`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -73,7 +73,7 @@ Content = new VerticalStackLayout
 
 ## Editor
 
-For multi-line text input, host the .NET MAUI [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor) and set [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize) to `TextChanges` so the editor grows with the entered text.
+For multi-line text input, host the .NET MAUI [Editor](https://learn.microsoft.com/dotnet/maui/user-interface/controls/editor) and set [AutoSize](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.editor.autosize) to `TextChanges` so the editor grows with the entered text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -491,7 +491,7 @@ Content = new VerticalStackLayout
 
 ## Picker
 
-Host the MAUI [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) control for a drop-down list.
+Host the MAUI [Picker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/picker) control for a drop-down list.
 
 {% tabs %}
 {% highlight xaml %}
@@ -544,7 +544,7 @@ N> The Windows platform does not support the MAUI `Picker` as an input view of `
 
 ## TimePicker
 
-Host the MAUI [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker) for time selection.
+Host the MAUI [TimePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/timepicker) for time selection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -582,7 +582,7 @@ N> The Windows platform does not support the MAUI `TimePicker` as an input view 
 
 ## DatePicker
 
-Host the MAUI [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker) for date selection.
+Host the MAUI [DatePicker](https://learn.microsoft.com/dotnet/maui/user-interface/controls/datepicker) for date selection.
 
 {% tabs %}
 {% highlight xaml %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # BindableLayout in .NET MAUI Accordion
 
-The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control allows the use of [.NET MAUI BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout) to bind a data collection using `BindableLayout.ItemsSource` and `BindableLayout.ItemTemplate` properties.
+The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control allows the use of [.NET MAUI BindableLayout](https://learn.microsoft.com/dotnet/maui/user-interface/layouts/bindablelayout) to bind a data collection using `BindableLayout.ItemsSource` and `BindableLayout.ItemTemplate` properties.
 
 ## Creating the data model
 
@@ -289,7 +289,7 @@ public class ImageConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [.NET MAUI fonts documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) for details on how to add and register the `AccordionFontIcons.ttf` font used by the phone icon in the following template.
+N> Refer to the [.NET MAUI fonts documentation](https://learn.microsoft.com/dotnet/maui/user-interface/fonts) for details on how to add and register the `AccordionFontIcons.ttf` font used by the phone icon in the following template.
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}

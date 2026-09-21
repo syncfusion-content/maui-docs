@@ -10,7 +10,7 @@ keywords: .net maui sfchipgroup datatemplateselector, syncfusion chips template 
 
 # DataTemplateSelector in .NET MAUI Chips
 
-Use a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) to choose a different `DataTemplate` for each item rendered by [Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). This is useful when each chip needs to render different visuals based on the underlying data.
+Use a [DataTemplateSelector](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector) to choose a different `DataTemplate` for each item rendered by [Chip Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html). This is useful when each chip needs to render different visuals based on the underlying data.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ public class ChipViewModel
 
 ## Create a data template selector
 
-Create a custom class by inheriting `DataTemplateSelector` and override the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate) method to return a different `DataTemplate` based on the item. At runtime, the SfChipGroup invokes the OnSelectTemplate method for each item and passes the data object as parameter.
+Create a custom class by inheriting `DataTemplateSelector` and override the [OnSelectTemplate](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate) method to return a different `DataTemplate` based on the item. At runtime, the SfChipGroup invokes the OnSelectTemplate method for each item and passes the data object as parameter.
 
 The following selector exposes two templates - `HappyEmojiTemplate` for chips that can be selected, and `SadEmojiTemplate` for those that cannot.
 

@@ -172,7 +172,7 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 
 ### Customize Columns with Data Annotations
 
-SfDataGrid can auto-generate and customize columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
+SfDataGrid can auto-generate and customize columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
 
 > **Note:** Data annotations are only applied when `AutoGenerateColumnsMode` is not set to `None`. Ensure your model class includes `using System.ComponentModel.DataAnnotations;` at the top.
 
@@ -288,7 +288,7 @@ public class OrderInfo
 
 #### Format Columns with DisplayFormat
 
-You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property. The `{0}` placeholder represents the property value and follows standard [.NET composite format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting).
+You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property. The `{0}` placeholder represents the property value and follows standard [.NET composite format strings](https://learn.microsoft.com/dotnet/standard/base-types/composite-formatting).
 
 {% tabs %}
 {% highlight c# %}

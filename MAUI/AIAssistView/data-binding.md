@@ -209,7 +209,7 @@ public class ItemModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data objects to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-9.0) interface in your model class.
+N> If you want your data objects to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}

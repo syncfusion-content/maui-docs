@@ -198,11 +198,11 @@ public class MainPage : ContentPage
 
 ## ItemTemplate selector
 
-The `SfTreeView` allows you to customize the appearance of each item with different templates based on specific constraints using the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0). You can choose a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for each item at runtime based on the value of a data-bound property.
+The `SfTreeView` allows you to customize the appearance of each item with different templates based on specific constraints using the [DataTemplateSelector](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0). You can choose a [DataTemplate](https://learn.microsoft.com/dotnet/maui/fundamentals/datatemplate) for each item at runtime based on the value of a data-bound property.
 
 ### Create a data template selector
 
-Create a custom class that inherits from `DataTemplateSelector` and overrides the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfTreeView` invokes the [OnSelectTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate?view=net-maui-7.0) method for each item and passes the data object as the parameter.
+Create a custom class that inherits from `DataTemplateSelector` and overrides the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfTreeView` invokes the [OnSelectTemplate](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector.onselecttemplate?view=net-maui-7.0) method for each item and passes the data object as the parameter.
 
 Define different templates and select them inside `OnSelectTemplate` based on your requirements.
 
@@ -237,7 +237,7 @@ public class ItemTemplateSelector : DataTemplateSelector
 
 ### Applying a data template selector
 
-Assign a custom [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0) to the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) property, either in XAML or C#.
+Assign a custom [DataTemplateSelector](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0) to the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) property, either in XAML or C#.
 
 The following code example illustrates how to load different templates for treeview items using the `DataTemplateSelector` based on different levels.
 
@@ -366,7 +366,7 @@ public class MainPage : ContentPage
 
 ## Level based styling
 
-The `SfTreeView` allows you to customize the style of the `TreeViewItem` based on different levels by using the [IValueConverter](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.ivalueconverter?view=net-maui-7.0).
+The `SfTreeView` allows you to customize the style of the `TreeViewItem` based on different levels by using the [IValueConverter](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.ivalueconverter?view=net-maui-7.0).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

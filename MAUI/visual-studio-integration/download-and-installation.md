@@ -20,7 +20,7 @@ The following software prerequisites must be installed to use the Syncfusion<sup
 
 * [Visual Studio 2022 or later](https://visualstudio.microsoft.com/downloads/).
 
-* [.NET 9.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
+* [.NET 9.0 or later](https://dotnet.microsoft.com/download/dotnet/9.0).
 
 
 ## Install through the Visual Studio Manage Extensions

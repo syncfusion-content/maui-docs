@@ -10,7 +10,7 @@ keywords: .net maui textinputlayout events, syncfusion text input layout passwor
 
 # Events in .NET MAUI Text Input Layout
 
-[.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `Text Input Layout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [.NET MAUI Entry documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
+[.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) raises events to notify your application when the user interacts with the control. This page documents the events exposed directly by `Text Input Layout`. For events on the inner input view (such as `TextChanged`, `Focused`, and `Unfocused`), refer to the [.NET MAUI Entry documentation](https://learn.microsoft.com/dotnet/maui/user-interface/controls/entry).
 
 ## Prerequisites
 

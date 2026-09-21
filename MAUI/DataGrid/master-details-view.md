@@ -19,7 +19,7 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 <img alt="Master-Details-View" src="Images\master-details-view\maui-datagrid-detailsview-main.png" width="604"/>    
 
 ## Generating Master-Details View from IEnumerable
-The `Master-Details View` can be generated using properties of type [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-7.0) in the underlying data model.
+The `Master-Details View` can be generated using properties of type [IEnumerable](https://learn.microsoft.com/dotnet/api/system.collections.ienumerable?view=net-7.0) in the underlying data model.
 
 ### Steps to Generate Master-Details View for IEnumerable Properties
 1. Create a Data Model with Relations
@@ -29,7 +29,7 @@ The `Master-Details View` can be generated using properties of type [IEnumerable
    - **Manually Defining Relations:** Explicitly specify the relationships to customize the hierarchy.
 
 ### 1. Creating a Data Model with Relations
-Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the `SfDataGrid`.
+Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the `SfDataGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -267,7 +267,7 @@ dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
 <img alt="manual-generate-relation" src="Images\master-details-view\maui-datagrid-manual-generate-relation2.png" width="604" /> 
 
 ## Generating Master-Details View from DataTable
-A `Master-Details View` can be created using [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0) when a [DataRelation](https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelation?view=net-7.0) is established between two tables in the underlying [DataSet](https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-7.0).
+A `Master-Details View` can be created using [DataTable](https://learn.microsoft.com/dotnet/api/system.data.datatable?view=net-6.0) when a [DataRelation](https://learn.microsoft.com/dotnet/api/system.data.datarelation?view=net-7.0) is established between two tables in the underlying [DataSet](https://learn.microsoft.com/dotnet/api/system.data.dataset?view=net-7.0).
 
 ### Steps to Generate Master-Details Relations for DataTable
 1. **Create DataTables with Relations**

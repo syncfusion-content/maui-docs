@@ -331,7 +331,7 @@ N> When using a custom data model, the default card UI is not applicable. You mu
 
 ## Data template selector
 
-You can customize the appearance of each card with different templates based on specific constraints using [`DataTemplateSelector`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-8.0).
+You can customize the appearance of each card with different templates based on specific constraints using [`DataTemplateSelector`](https://learn.microsoft.com/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-8.0).
 
 ### Create a data template selector
 

@@ -124,15 +124,15 @@ this.Content = dataGrid;
 
 ## Support for IEditableObject
 
-The SfDataGrid supports committing and rolling back changes at the row level when the underlying data object implements the [IEditableObject](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject?view=net-6.0) interface.
+The SfDataGrid supports committing and rolling back changes at the row level when the underlying data object implements the [IEditableObject](https://learn.microsoft.com/dotnet/api/system.componentmodel.ieditableobject?view=net-6.0) interface.
 
 Editing changes in a row will be committed only when tapping on next row.
 
 The `IEditableObject` interface provides the following methods to capture editing:
 
- * [BeginEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.beginedit?view=net-6.0): Called to begin editing on the underlying data object when cells in a row enter edit mode.
- * [CancelEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.canceledit?view=net-6.0): Called when you cancel editing to discard the changes in a row since the last BeginEdit call.
- * [EndEdit](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.ieditableobject.endedit?view=net-6.0): Called when you move to the next row, tapping to commit changes in the underlying data object since the last `BeginEdit` call.
+ * [BeginEdit](https://learn.microsoft.com/dotnet/api/system.componentmodel.ieditableobject.beginedit?view=net-6.0): Called to begin editing on the underlying data object when cells in a row enter edit mode.
+ * [CancelEdit](https://learn.microsoft.com/dotnet/api/system.componentmodel.ieditableobject.canceledit?view=net-6.0): Called when you cancel editing to discard the changes in a row since the last BeginEdit call.
+ * [EndEdit](https://learn.microsoft.com/dotnet/api/system.componentmodel.ieditableobject.endedit?view=net-6.0): Called when you move to the next row, tapping to commit changes in the underlying data object since the last `BeginEdit` call.
 
 The following code snippet demonstrates a simple implementation of the `IEditableObject` interface:
 
