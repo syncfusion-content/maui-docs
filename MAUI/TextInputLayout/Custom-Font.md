@@ -94,7 +94,9 @@ The following example wraps a long hint across multiple lines.
 
 <inputLayout:SfTextInputLayout Hint="Business registration identification number"
                                HintLineBreakMode="WordWrap"
-                               ContainerType="Outlined">
+                               ContainerType="Outlined"
+                               HeightRequest="80"
+                               WidthRequest="150">
     <Entry Text="2026001234" />
 </inputLayout:SfTextInputLayout>
 
@@ -106,13 +108,17 @@ var inputLayout = new SfTextInputLayout
     Hint = "Business registration identification number",
     HintLineBreakMode = LineBreakMode.TailTruncation,
     ContainerType = ContainerType.Outlined,
-    Content = new Entry { Text = "2026001234" }
+    Content = new Entry { Text = "2026001234" },
+    HeightRequest= 80 ,
+    WidthRequest= 150
 };
 
 Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
+
+![SfTextInputLayout with the hint view](images/CustomFont/HintLinebreakMode.png)
 
 ## Customize the Hint View 
 
@@ -135,7 +141,6 @@ The following example uses a styled label as the floating hint view.
             FontSize="14"
             FontAttributes="Bold"
             TextColor="#512DA8"
-            BackgroundColor="#EDE7F6"
             Padding="8,4"
             Margin="2" />
     </inputLayout:SfTextInputLayout.HintView>
@@ -157,7 +162,6 @@ var inputLayout = new SfTextInputLayout
         FontSize = 14,
         FontAttributes = FontAttributes.Bold,
         TextColor = Color.FromArgb("#512DA8"),
-        BackgroundColor = Color.FromArgb("#EDE7F6"),
         Padding = new Thickness(8, 4),
         Margin = new Thickness(2)
     },
@@ -180,6 +184,8 @@ Content = new VerticalStackLayout
 {% endtabs %}
 
 The `Hint` value is included as a fallback, but it is not displayed while `HintView` is assigned.
+
+![SfTextInputLayout with the hint view](images/CustomFont/HintView.png)
 
 ## Customize the Helper Text Label
 
