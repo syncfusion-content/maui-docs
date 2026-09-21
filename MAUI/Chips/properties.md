@@ -205,7 +205,7 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate" aria-label="View ItemTemplate property in API reference">ItemTemplate</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
-    <td>Defines the <code>content and layout</code> of chips generated from <code>ItemsSource</c    ode>.</td>
+    <td>Defines the <code>content and layout</code> of chips generated from <code>ItemsSource</code>.</td>
 </tr>
 
 <tr valign="top">
