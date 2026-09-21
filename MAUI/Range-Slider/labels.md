@@ -429,7 +429,7 @@ You can customize the appearance of range slider labels using the `LabelTemplate
 
 {% tabs %}
 
-{% highlight xaml hl_lines="8 9 10 11 12 13 14" %}
+{% highlight xaml hl_lines="7 8 9 10 11 12 13" %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="100"
@@ -437,7 +437,6 @@ You can customize the appearance of range slider labels using the `LabelTemplate
                        RangeEnd="80"
                        Interval="20"
                        ShowLabels="True">
-
     <sliders:SfRangeSlider.LabelTemplate>
         <DataTemplate>
             <Label Text="{Binding Text}"
@@ -445,7 +444,6 @@ You can customize the appearance of range slider labels using the `LabelTemplate
                    FontAttributes="Bold" />
         </DataTemplate>
     </sliders:SfRangeSlider.LabelTemplate>
-
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -453,9 +451,12 @@ You can customize the appearance of range slider labels using the `LabelTemplate
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ShowLabels = true;
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 100;
 rangeSlider.RangeStart = 20;
 rangeSlider.RangeEnd = 80;
+rangeSlider.Interval = 20;
+rangeSlider.ShowLabels = true;
 this.Content = rangeSlider;
 
 {% endhighlight %}
