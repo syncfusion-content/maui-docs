@@ -5,7 +5,7 @@ description: Learn here all about Suggestions support in Syncfusion® .NET MAUI 
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
+appliesto: UI Component Suite
 ---
 
 # Suggestions in .NET MAUI Chat

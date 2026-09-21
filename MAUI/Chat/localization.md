@@ -5,7 +5,7 @@ description: Learn how to localize the Syncfusion® .NET MAUI Chat (SfChat) cont
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
+appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI Chat

@@ -5,7 +5,7 @@ description: Learn here all about Time break support in Syncfusion® .NET MAUI C
 platform: MAUI
 control: Chat
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
+appliesto: UI Component Suite
 ---
 # Time Break in .NET MAUI Chat
 

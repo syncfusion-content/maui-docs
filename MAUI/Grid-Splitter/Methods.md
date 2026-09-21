@@ -5,7 +5,6 @@ description: Learn about the methods available in the Syncfusion® .NET MAUI Gri
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Methods in .NET MAUI Grid Splitter

@@ -5,7 +5,6 @@ description: Learn how to customize panes in the Syncfusion® .NET MAUI Grid Spl
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Grid Splitter

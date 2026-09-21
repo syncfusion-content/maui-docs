@@ -5,7 +5,6 @@ description: Learn here all about introduction of Syncfusion® Essential Studio�
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Essential<sup>®</sup> UI Kit for .NET MAUI Overview

@@ -5,7 +5,6 @@ description: Learn about localization, RTL layout, time zone handling, screen re
 platform: MAUI
 control: .NET MAUI
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 

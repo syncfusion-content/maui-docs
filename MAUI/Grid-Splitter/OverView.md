@@ -5,7 +5,6 @@ description: Learn all about the Syncfusion® .NET MAUI Grid Splitter control, i
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Grid Splitter Control

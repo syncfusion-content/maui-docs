@@ -5,7 +5,7 @@ description: Learn here all about working with messages Syncfusion® .NET Maui C
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
+appliesto: UI Component Suite
 ---
 
 # Messages in .NET MAUI Chat

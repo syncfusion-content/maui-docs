@@ -5,7 +5,6 @@ description: Explore the Syncfusion® .NET MAUI controls that seamlessly integra
 platform: MAUI
 control: General
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Liquid glass integration with Syncfusion® .NET MAUI controls

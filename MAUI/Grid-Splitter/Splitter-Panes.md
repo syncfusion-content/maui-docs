@@ -5,7 +5,6 @@ description: Learn how to add and organize panes in the Syncfusion® .NET MAUI G
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Splitter Panes in .NET MAUI Grid Splitter

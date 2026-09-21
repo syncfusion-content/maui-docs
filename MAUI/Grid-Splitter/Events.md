@@ -5,7 +5,6 @@ description: Learn about the events available in the Syncfusion® .NET MAUI Grid
 platform: MAUI
 control: SfGridSplitter
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Grid Splitter
