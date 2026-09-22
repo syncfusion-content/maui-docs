@@ -216,6 +216,97 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Legend Title
+
+The legend title can be displayed above the legend items using the [Title]() property in the `ChartLegend` class. The `Title` property accepts either a `string` or a custom `View`.
+
+### Legend title as String
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart>
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend Title="Products"/>
+    </chart:SfPyramidChart.Legend>
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart();
+//code omitted for brevity
+chart.Legend = new ChartLegend()
+{
+    Title = "Products"
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Legend title as Custom view
+
+A custom `View` can be assigned to the `Title` property to display customized content, such as a layout containing a CheckBox and label, as the legend header.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart.Legend>
+    <chart:ChartLegend>
+        <chart:ChartLegend.Title>
+            <HorizontalStackLayout Spacing="2">
+                <CheckBox VerticalOptions="Center"/>
+                <Label Text="Products"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </chart:ChartLegend.Title>
+    </chart:ChartLegend>
+</chart:SfPyramidChart.Legend>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.Legend = new ChartLegend()
+{
+    Title = new HorizontalStackLayout()
+    {
+        Spacing = 2,
+        Children =
+        {
+            new CheckBox()
+            {
+                VerticalOptions = LayoutOptions.Center
+            },
+            new Label()
+            {
+                Text = "Products",
+                FontSize = 14,
+                FontAttributes = FontAttributes.Bold,
+                VerticalOptions = LayoutOptions.Center
+            }
+        }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
+
+If the available height is insufficient to display both the title and the legend items at their desired sizes, the available height is proportionally distributed between them based on their measured heights. This keeps both the title and legend items visible within the legend area.
+
+The `Title` property is bindable and can be updated at runtime. When the title changes, the chart automatically updates the legend layout.
+
 ## Floating legend
 
 The floating legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsFloating) is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the offset values, enabling precise control over the legend’s location.
