@@ -2,7 +2,7 @@
 layout: post
 platform: maui
 title: Accessibility in .NET MAUI Circular Charts | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Circular Charts (Pie and Doughnut) for inclusive design and keyboard navigation.
+description: Learn about accessibility features in Syncfusion® .NET MAUI Circular Charts for inclusive design and keyboard navigation.
 control: SfCircularChart
 documentation: ug
 ---
@@ -14,12 +14,10 @@ Enhance .NET MAUI Circular Charts' accessibility with user-friendly design, ensu
 ## Circular Chart Elements and Announcements
 
 <table>
-<th>Content</th>
 <th>Element</th>
 <th>Format</th>
 <th>Example</th>
 <tr>
-<td>Circular Chart</td>
 <td>Title</td>
 <td>Text</td>
 <td>"Device Distribution"</td>
@@ -27,19 +25,11 @@ Enhance .NET MAUI Circular Charts' accessibility with user-friendly design, ensu
 <tr>
 </tr>
 <tr>
-<td>Pie Series</td>
 <td>Segment</td>
 <td>Label + Value</td>
 <td>"iPad 1500"</td>
 </tr>
 <tr>
-<td>Doughnut Series</td>
-<td>Segment</td>
-<td>Label + Value</td>
-<td>"Mobile 2400"</td>
-</tr>
-<tr>
-<td>Circular Chart</td>
 <td>Series Legend Item</td>
 <td>Legend label</td>
 <td>"Sales"</td>
@@ -47,6 +37,15 @@ Enhance .NET MAUI Circular Charts' accessibility with user-friendly design, ensu
 </table>
 
 N> Accessibility support for chart segment navigation and screen reader announcements is not available for RadialBarSeries. For this series, individual data points cannot receive accessibility focus and their values are not announced by the screen reader.
+
+## Enable Accessibility
+To enable accessibility support on your device:
+| Platform | Steps |
+|----------|-------|
+| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
+| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
+| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
+| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Keyboard Navigation
 
@@ -147,15 +146,6 @@ N> Accessibility support for chart segment navigation and screen reader announce
 <td>Activate focused element (enable tooltip/selection)</td>
 </tr>
 </table>
-
-## Enable Accessibility
-To enable accessibility support on your device:
-| Platform | Steps |
-|----------|-------|
-| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
-| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
-| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
-| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Related Documentation
 

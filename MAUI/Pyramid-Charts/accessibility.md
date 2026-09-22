@@ -30,11 +30,20 @@ Enhance .NET MAUI Pyramid Charts' accessibility with user-friendly design, ensur
 <td>"Enterprise 5000"</td>
 </tr>
 <tr>
-<td>Series Legend Item</td>
-<td>Series Name</td>
+<td>Legend Item</td>
+<td>Legend Label</td>
 <td>"Customer Segments"</td>
 </tr>
 </table>
+
+## Enable Accessibility
+To enable accessibility support on your device:
+| Platform | Steps |
+|----------|-------|
+| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
+| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
+| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
+| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Keyboard Navigation
 
@@ -135,15 +144,6 @@ Enhance .NET MAUI Pyramid Charts' accessibility with user-friendly design, ensur
 <td>Activate focused element (enable tooltip/selection)</td>
 </tr>
 </table>
-
-## Enable Accessibility
-To enable accessibility support on your device:
-| Platform | Steps |
-|----------|-------|
-| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
-| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
-| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
-| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Related Documentation
 

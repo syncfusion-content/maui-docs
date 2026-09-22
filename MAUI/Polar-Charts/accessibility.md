@@ -26,17 +26,26 @@ Enhance .NET MAUI Polar Charts' accessibility with user-friendly design, ensurin
 </tr>
 <tr>
 <td>Series Legend Item</td>
-<td>Series Name</td>
+<td>Series Label</td>
 <td>"Morning Wind", "Evening Wind"</td>
 </tr>
 <tr>
 <td>Data Point</td>
-<td>XValue + YValue + Series Name</td>
+<td>XValue + YValue + Series Label</td>
 <td>"North 50 km/h Morning Wind"</td>
 </tr>
 </table>
 
 N> Accessibility support for chart segment navigation and screen reader announcements is not available for PolarAreaSeries. For this series, individual data points cannot receive accessibility focus and their values are not announced by the screen reader.
+
+## Enable Accessibility
+To enable accessibility support on your device:
+| Platform | Steps |
+|----------|-------|
+| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
+| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
+| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
+| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Keyboard Navigation
 
@@ -137,15 +146,6 @@ N> Accessibility support for chart segment navigation and screen reader announce
 <td>Activate focused element (enable tooltip/selection)</td>
 </tr>
 </table>
-
-## Enable Accessibility
-To enable accessibility support on your device:
-| Platform | Steps |
-|----------|-------|
-| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
-| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
-| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
-| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
 
 ## Related Documentation
 
