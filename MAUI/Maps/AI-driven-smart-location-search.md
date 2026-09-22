@@ -13,116 +13,39 @@ This document provides a comprehensive guide to implementing advanced search fun
 
 N> **Prerequisite:** Ensure that the required NuGet packages are installed, the necessary namespaces are imported, and the **.NET MAUI Maps** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[.NET MAUI Maps Getting Started](https://help.syncfusion.com/maui/maps/getting-started)** guide. Also, refer to the **[.NET MAUI Autocomplete Getting Started](https://help.syncfusion.com/maui/autocomplete/getting-started)** guide before proceeding with this documentation.
 
-## Integrating Azure OpenAI with the .NET MAUI app
+## Integrating AI-powered smart location search in .NET MAUI Autocomplete
 
-First, open [Visual Studio](https://visualstudio.microsoft.com/) and [create a new .NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-7.0&tabs=vswin&pivots=devices-android).
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
 
-To locate specific places effortlessly with AI, ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and have set up a deployment in the Azure portal. Install the following NuGet packages in the project from the [NuGet Gallery](https://www.nuget.org/):
-
-* [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) (v1.0.0-beta.12 or later)
-* [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) (for JSON parsing)
-* Syncfusion .NET MAUI Maps and Autocomplete NuGet packages
-
-Once you get your key and endpoint, follow these steps:
-
-### Step 1: Set up Azure OpenAI
-
-To configure **Azure OpenAI**, use the **GPT-4O** deployment for text and the **DALL-E** deployment for images. Set up the `OpenAIClient` and the `ChatCompletionsOptions` as shown in the following code example.
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
 
 {% tabs %}
-
-{% highlight c# %}
-
-internal class AzureOpenAIService
-{
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT-4O";
-    const string imageDeploymentName = "DALL-E";
-    string key = "API key";
-    
-    internal OpenAIClient? Client { get; private set; }
-    internal ChatCompletionsOptions? chatCompletions;
-    
-    internal AzureOpenAIService()
-    {
-        // Initialize the client and the chat completions options on demand.
-        this.Client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-        this.chatCompletions = new ChatCompletionsOptions(deploymentName, new List<ChatRequestMessage>());
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Step 2: Connect to the Azure OpenAI
-
-To set up the connection to Azure OpenAI. Refer to the following code.
-
-{% tabs %}
-
-{% highlight c# %}
-
-	// At the time of required.
-    this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-This connection allows you to send prompts to the model and **receive responses**, which can be used to generate map markers for .NET MAUI Maps.
-
-### Step 3: Get the result from the AI service
-
-Implement the `GetResultsFromAI` and `GetImageFromAI` methods to retrieve responses from the **OpenAI** API based on user input. Clear the previous messages on each call to avoid accumulating stale context across searches.
-
-{% tabs %}
-
 {% highlight c# %}
 
 public async Task<string> GetResultsFromAI(string userPrompt)
 {
-    if (this.Client != null && this.chatCompletions != null)
+    if (IsCredentialValid && Client != null)
     {
-        // Clear previous messages to avoid accumulating context across searches.
-        this.chatCompletions.Messages.Clear();
-        // Add the system message and user message to the options.
-        this.chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-        this.chatCompletions.Messages.Add(new ChatRequestUserMessage(userPrompt));
+        ChatHistory = string.Empty;
+        // Add the system message and user message to the options
+        ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+        ChatHistory = ChatHistory + userPrompt;
         try
         {
-            var response = await this.Client.GetChatCompletionsAsync(this.chatCompletions);
-            return response.Value.Choices[0].Message.Content;
+            var response = await Client.CompleteAsync(ChatHistory);
+            return response.ToString();
         }
         catch
         {
             return string.Empty;
         }
     }
+
     return string.Empty;
 }
 
-public async Task<Uri> GetImageFromAI(string? locationName)
-{
-    var imageGenerations = await this.Client!.GetImageGenerationsAsync(
-        new ImageGenerationOptions()
-        {
-            Prompt = $"Share the {locationName} image. If the image is not available share common image based on the location",
-            Size = ImageSize.Size1024x1024,
-            Quality = ImageGenerationQuality.Standard,
-            DeploymentName = imageDeploymentName,
-        });
-        var imageUrl = imageGenerations.Value.Data[0].Url;
-        return new Uri(imageUrl.ToString());
-}
-
 {% endhighlight %}
-
 {% endtabs %}
-
-The **AzureOpenAIService** class now offers a convenient way to interact with the **OpenAI** API and retrieve completion results based on the provided **prompt**.
-
-## Integrating AI-powered smart location search in .NET MAUI Autocomplete
 
 To design the AI-powered smart location search UI using the [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control, and then map the selected location into the **.NET MAUI Maps** control. Before proceeding, please refer to the getting started documentation for both the Syncfusion **.NET MAUI Maps** and **Autocomplete** controls.
 
@@ -483,4 +406,4 @@ private async Task GetRecommendationAsync(string userQuery)
 
 ![AI-driven smart location search in .NET MAUI Maps](images/smart-ai-solutions/ai-smart-location-search.gif)
 
-You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Integrating-AI-Driven-Location-Search-into-.NET-MAUI-Maps).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/Maps).
