@@ -13,7 +13,7 @@ This section explains how to populate the Polar chart with data, a title, data l
 
 To get started quickly with our [.NET MAUI Polar Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can check the below video.
 
-{% youtube "https://youtu.be/Ga9mytwCo_s" %}
+<style>#MAUIPolarChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPolarChartVideoTutorial' src='https://www.youtube.com/embed/Ga9mytwCo_s'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

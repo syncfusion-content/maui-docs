@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [SfSwitch](https://
 
 To quickly get started with the .NET MAUI Switch, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=BJDUlLdsQyo" %}
+<style>#MAUISwitchVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISwitchVideoTutorial' src='https://www.youtube.com/embed/BJDUlLdsQyo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

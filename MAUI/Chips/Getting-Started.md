@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Chips](https://hel
 
 To quickly get started with the .NET MAUI Chips, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=hr4GmmvS9EE" %}
+<style>#MAUIChipsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIChipsVideoTutorial' src='https://www.youtube.com/embed/hr4GmmvS9EE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

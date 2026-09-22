@@ -13,8 +13,7 @@ This section explains the steps required to add the [`.NET MAUI Radial Gauge`](h
 
 To get started quickly with our .NET MAUI Radial Gauge, you can check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=gagnYotFp48"%}
+<style>#MAUIRadialGaugeVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRadialGaugeVideoTutorial' src='https://www.youtube.com/embed/gagnYotFp48'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

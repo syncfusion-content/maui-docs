@@ -13,7 +13,7 @@ This section explains how to add the [.NET MAUI Time Picker](https://www.syncfus
 
 To get started quickly with our .NET MAUI Time Picker, see the video below.
 
-{% youtube "youtube:https://www.youtube.com/watch?si=AK9iY1m8G8sQ0zsA&v=m3Gn6S_8Oeo&feature=youtu.be" %}
+<style>#MAUITimePickerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUITimePickerVideoTutorial' src='https://www.youtube.com/embed/m3Gn6S_8Oeo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

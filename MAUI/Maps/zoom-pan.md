@@ -17,10 +17,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 To learn more about the .NET MAUI Maps zoom and pan, you can check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=uN9KUSpDMB0"
-%}
-
+<style>#MAUIMapsZoomPanVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsZoomPanVideoTutorial' src='https://www.youtube.com/embed/uN9KUSpDMB0'></iframe>
 
 **Shape layer**
 

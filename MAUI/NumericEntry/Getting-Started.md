@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Numeric Entry](htt
 
 To quickly get started with the .NET MAUI Numeric Entry, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=BHw8UpoUmoM&ab_channel=Syncfusion%2CInc" %}
+<style>#MAUINumericEntryVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUINumericEntryVideoTutorial' src='https://www.youtube.com/embed/BHw8UpoUmoM'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

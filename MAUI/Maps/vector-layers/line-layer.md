@@ -15,8 +15,7 @@ The line layer is a sublayer that renders a group of [`MapLine`](https://help.sy
 
 To learn more about the .NET MAUI Maps line layer, you can check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=CuI9bkGhBu8&t=483s"%}
+<style>#MAUIMapsLinearLayerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsLinearLayerVideoTutorial' src='https://www.youtube.com/embed/CuI9bkGhBu8'></iframe>
 
 ## Adding lines
 

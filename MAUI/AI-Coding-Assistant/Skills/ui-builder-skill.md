@@ -17,7 +17,7 @@ By combining intelligent code generation with best practices, accessibility stan
 
 To quickly get started with Agentic UI Builder, check out this video:
 
-{% youtube "https://www.youtube.com/watch?v=R5RmKe09pgc" %}
+<style>#MAUIAgenticUIBuilderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAgenticUIBuilderVideoTutorial' src='https://www.youtube.com/embed/R5RmKe09pgc'></iframe>
 
 ## Prerequisites
 

@@ -14,7 +14,7 @@ This guide details the initial setup and basic usage of the [Markdown Viewer](ht
 
 To get start quickly with our [.NET MAUI Markdown Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html), you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=4wHEDadFrxM" %}
+<style>#MAUIMarkdownViewerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMarkdownViewerVideoTutorial' src='https://www.youtube.com/embed/4wHEDadFrxM'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

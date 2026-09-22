@@ -13,7 +13,7 @@ This section explains how to populate the circular chart with data, a title, dat
 
 To get started quickly with our [.NET MAUI Circular Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=2WDZfXpMZsE&t=3s" %}
+<style>#MAUICircularChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICircularChartVideoTutorial' src='https://www.youtube.com/embed/2WDZfXpMZsE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

@@ -13,8 +13,7 @@ This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion
 
 To get start quickly with our .NET MAUI Calendar, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=kfQjKiD9Xas"%}
+<style>#MAUICalendarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICalendarVideoTutorial' src='https://www.youtube.com/embed/kfQjKiD9Xas'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
