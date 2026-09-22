@@ -88,5 +88,3 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
-![Axis Range Styles in .NET MAUI Cartesian Chart]()
