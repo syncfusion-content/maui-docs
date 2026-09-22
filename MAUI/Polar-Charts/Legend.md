@@ -322,7 +322,7 @@ The legend title can be displayed above the legend items using the [Title]() pro
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.Legend>
-        <chart:ChartLegend Title="Products"/>
+        <chart:ChartLegend Title="Plant Types"/>
     </chart:SfPolarChart.Legend>
 </chart:SfPolarChart>
 
@@ -334,7 +334,7 @@ SfPolarChart chart = new SfPolarChart();
 //code omitted for brevity
 chart.Legend = new ChartLegend()
 {
-    Title = "Products"
+    Title = "Plant Types"
 };
 
 this.Content = chart;
@@ -342,6 +342,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend Title Support as String in .NET MAUI Polar Chart](Legend-images/legend_title_as_string.png)
 
 ### Legend title as Custom view
 
@@ -356,7 +358,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
         <chart:ChartLegend.Title>
             <HorizontalStackLayout Spacing="2">
                 <CheckBox VerticalOptions="Center"/>
-                <Label Text="Products"
+                <Label Text="Plant Types"
                        FontSize="14"
                        FontAttributes="Bold"
                        VerticalOptions="Center"/>
@@ -382,7 +384,7 @@ chart.Legend = new ChartLegend()
             },
             new Label()
             {
-                Text = "Products",
+                Text = "Plant Types",
                 FontSize = 14,
                 FontAttributes = FontAttributes.Bold,
                 VerticalOptions = LayoutOptions.Center
@@ -394,6 +396,8 @@ chart.Legend = new ChartLegend()
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend Title Support as view in .NET MAUI Polar Chart](Legend-images/legend_title_as_view.png)
 
 The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
 

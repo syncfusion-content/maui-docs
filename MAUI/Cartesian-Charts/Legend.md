@@ -299,6 +299,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Legend Title Support as string in .NET MAUI Cartesian Chart](Legend-images/legend_title_as_string.png)
+
 ### Legend title as Custom view
 
 A custom `View` can be assigned to the `Title` property to display customized content, such as a layout containing a Checkbox and label, as the legend header.
@@ -350,6 +352,8 @@ chart.Legend = new ChartLegend()
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend Title Support as string in .NET MAUI Cartesian Chart](Legend-images/legend_title_as_view.png)
 
 The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
 

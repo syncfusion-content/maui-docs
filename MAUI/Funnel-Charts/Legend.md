@@ -227,7 +227,7 @@ The legend title can be displayed above the legend items using the [Title]() pro
 
 <chart:SfFunnelChart>
     <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend Title="Products"/>
+        <chart:ChartLegend Title="Admission Details" Placement="Right"/>
     </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 
@@ -239,7 +239,8 @@ SfFunnelChart chart = new SfFunnelChart();
 //code omitted for brevity
 chart.Legend = new ChartLegend()
 {
-    Title = "Products"
+    Title = "Admission Details",
+    Placement = LegendPlacement.Right
 };
 
 this.Content = chart;
@@ -247,6 +248,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend Title Support as string in .NET MAUI Funnel Chart](Legend-images/legend_title_as_string.png)
 
 ### Legend title as Custom view
 
@@ -257,11 +260,11 @@ A custom `View` can be assigned to the `Title` property to display customized co
 {% highlight xaml %}
 
 <chart:SfFunnelChart.Legend>
-    <chart:ChartLegend>
+    <chart:ChartLegend Placement="Bottom">
         <chart:ChartLegend.Title>
             <HorizontalStackLayout Spacing="2">
                 <CheckBox VerticalOptions="Center"/>
-                <Label Text="Products"
+                <Label Text="Admission Details"
                        FontSize="14"
                        FontAttributes="Bold"
                        VerticalOptions="Center"/>
@@ -276,6 +279,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
 
 chart.Legend = new ChartLegend()
 {
+    Placement = LegendPlacement.Bottom,
     Title = new HorizontalStackLayout()
     {
         Spacing = 2,
@@ -287,7 +291,7 @@ chart.Legend = new ChartLegend()
             },
             new Label()
             {
-                Text = "Products",
+                Text = "Admission Details",
                 FontSize = 14,
                 FontAttributes = FontAttributes.Bold,
                 VerticalOptions = LayoutOptions.Center
@@ -299,6 +303,8 @@ chart.Legend = new ChartLegend()
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend Title Support as string in .NET MAUI Funnel Chart](Legend-images/legend_title_as_view.png)
 
 The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
 
