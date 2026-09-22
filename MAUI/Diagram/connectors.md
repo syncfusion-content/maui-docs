@@ -1,4 +1,13 @@
-# Connectors
+---
+layout: post
+title: Connectors in MAUI Diagram | Syncfusion®
+description: Learn how to create and customize connectors in the Syncfusion® .NET MAUI Diagram control to define relationships and flow between nodes, ports, and points.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+# Connectors in .NET MAUI Diagram
 
 Connectors establish relationships between nodes and define the flow of information within a diagram. They are commonly used in flowcharts, workflow diagrams, process diagrams, organizational charts, and network diagrams.
 

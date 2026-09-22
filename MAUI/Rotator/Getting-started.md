@@ -131,7 +131,7 @@ Initialize the `Rotator` control and we can populate the rotator’s items by us
 
 * Through [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTemplate)
 
-Below is a simple example for adding rotator items using SfRotatorItem. For more details on populating data, click [Here](https://help.syncfusion.com/maui/rotator/Populating-data)
+Below is a simple example for adding rotator items using SfRotatorItem. For more details on populating data, click [Here](https://help.syncfusion.com/maui/rotator/populating-data)
 
 The following code example illustrates how to add a list of Images in a Rotator ,
 
