@@ -1,4 +1,13 @@
-# Ports
+---
+layout: post
+title: Ports in MAUI Diagram | Syncfusion®
+description: Learn how to add and customize PointPort connections in the Syncfusion® .NET MAUI Diagram control for precise node connector interactions.
+platform: diagram-sdk
+control: SfDiagram
+documentation: ug
+---
+
+# Ports in .NET MAUI Diagram
 
 Ports define specific connection points on a node. They provide precise control over where connectors begin and terminate, helping users build structured and visually organized diagrams.
 
