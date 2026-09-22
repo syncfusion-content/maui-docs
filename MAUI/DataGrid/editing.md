@@ -130,6 +130,8 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="maui-datagrid-movelast-behavior" src="Images\editing\maui-datagrid-movelast-behavior.gif" width="404" />
+
 ### SelectAll behavior
 
 When set to `SelectAll`, the entire text content is automatically selected when the cell enters edit mode. This is useful for scenarios where users want to quickly replace the entire cell value without manual selection.
@@ -154,6 +156,8 @@ dataGrid.EditorSelectionBehavior = DataGridEditorSelectionBehavior.SelectAll;
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="maui-datagrid-selectAll-behavior" src="Images\editing\maui-datagrid-selectall-behavior.gif" width="404" />
 
 ## Lost focus behavior
 
