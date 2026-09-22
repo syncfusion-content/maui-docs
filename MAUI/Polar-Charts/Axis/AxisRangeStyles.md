@@ -89,4 +89,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Axis Range Styles in .NET MAUI Cartesian Chart](Axis_Images/Polar_axis_range_style.png)
+![Axis Range Styles in .NET MAUI Cartesian Chart]()
