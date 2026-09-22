@@ -2,7 +2,7 @@
 layout: post
 platform: maui
 title: Accessibility in .NET MAUI Polar Charts | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Polar Charts for inclusive design and keyboard navigation.
+description: Accessibility in Syncfusion® .NET MAUI Polar Chart provides inclusive navigation and screen reader announcements support.
 control: SfPolarChart
 documentation: ug
 ---

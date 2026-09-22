@@ -2,7 +2,7 @@
 layout: post
 platform: maui
 title: Accessibility in .NET MAUI Pyramid Charts | Syncfusion®
-description: Learn about accessibility features in Syncfusion® .NET MAUI Pyramid Charts for inclusive design and keyboard navigation.
+description: Accessibility in Syncfusion® .NET MAUI Pyramid Charts provides inclusive navigation and screen reader announcements support.
 control: SfPyramidChart
 documentation: ug
 ---
