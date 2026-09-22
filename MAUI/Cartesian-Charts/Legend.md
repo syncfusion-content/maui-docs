@@ -278,7 +278,7 @@ The legend title can be displayed above the legend items using the [Title]() pro
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend  Title="Products"/>
+        <chart:ChartLegend Title="Products" Placement="Right"/>
     </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
 
@@ -290,7 +290,8 @@ SfCartesianChart chart = new SfCartesianChart();
 //code omitted for brevity
 chart.Legend = new ChartLegend()
 {
-    Title = "Products"
+    Title = "Products",
+    Placement = LegendPlacement.Right
 };
 
 this.Content = chart;
@@ -310,7 +311,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
 {% highlight xaml %}
 
 <chart:SfCartesianChart.Legend>
-    <chart:ChartLegend>
+    <chart:ChartLegend Placement="Right">
         <chart:ChartLegend.Title>
             <HorizontalStackLayout Spacing="2">
                 <CheckBox VerticalOptions="Center"/>
@@ -329,6 +330,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
 
 chart.Legend = new ChartLegend()
 {
+    Placement = LegendPlacement.Right,
     Title = new HorizontalStackLayout()
     {
         Spacing = 2,
