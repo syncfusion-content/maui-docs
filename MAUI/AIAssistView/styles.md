@@ -3589,3 +3589,79 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+## Filter button styling
+To style the filter button and related views based on their appearance, set values to the built-in keys in the resource dictionary.
+<table>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterButtonTextColor</td>
+<td>Text color of the filter button.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterIconTextColor</td>
+<td>Color of the filter icon.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterButtonStroke</td>
+<td>Stroke color of the filter button.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterButtonSelectedBackground</td>
+<td>Background color of the filter button when it is selected.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterButtonHoverColor</td>
+<td>Background color of the filter button when it is hovered.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterPopupSelectedItemBackground</td>
+<td>Background color of the selected item in the filter popup.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewFilterPopupSelectedItemTextColor</td>
+<td>Text color of the selected item in the filter popup.</td>
+</tr>
+</table>
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewFilterButtonTextColor">Purple</Color>
+                <Color x:Key="SfAIAssistViewFilterIconTextColor">Red</Color>
+                <Color x:Key="SfAIAssistViewFilterButtonStroke">Orange</Color>
+                <Color x:Key="SfAIAssistViewFilterButtonSelectedBackground">LightGreen</Color>
+                <Color x:Key="SfAIAssistViewFilterButtonHoverColor">LightPink</Color>
+                <Color x:Key="SfAIAssistViewFilterPopupSelectedItemBackground">Brown</Color>
+                <Color x:Key="SfAIAssistViewFilterPopupSelectedItemTextColor">Lime</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        ResourceDictionary dictionary = new ResourceDictionary();
+        dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+        dictionary.Add("SfAIAssistViewFilterButtonTextColor", Colors.Purple);
+        dictionary.Add("SfAIAssistViewFilterIconTextColor", Colors.Red);
+        dictionary.Add("SfAIAssistViewFilterButtonStroke", Colors.Orange);
+        dictionary.Add("SfAIAssistViewFilterButtonSelectedBackground", Colors.LightGreen);
+        dictionary.Add("SfAIAssistViewFilterButtonHoverColor", Colors.LightPink);
+        dictionary.Add("SfAIAssistViewFilterPopupSelectedItemBackground", Colors.Brown);
+        dictionary.Add("SfAIAssistViewFilterPopupSelectedItemTextColor", Colors.Lime);
+        this.Resources.Add(dictionary);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
