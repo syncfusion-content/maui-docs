@@ -217,7 +217,7 @@ this.Content = chart;
 ## Placement
 The legend can be positioned to the left, right, top, or bottom of the chart area using the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) property in the ChartLegend class. The default placement is `Top`.
 
-The `Placement` property uses the [LegendPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LegendPlacement.html) enum, which provides the following values:
+The `Placement` property uses the [LegendPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html) enum, which provides the following values:
 
 * `Top` - Positions the legend at the top of the chart area (default).
 * `Bottom` - Positions the legend at the bottom of the chart area.
@@ -408,7 +408,7 @@ this.Content = chart;
 ## Item template
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemTemplate is `null`.
 
-N> The BindingContext of the template is the corresponding underlying legend item provided in the [ChartLegendItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendItem.html) class. The following bindable properties are available on the legend item: `IconBrush`, `Text`, `Item`, and `Index`.
+N> The BindingContext of the template is the corresponding underlying legend item provided in the [ChartLegendItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) class. The following bindable properties are available on the legend item: `IconBrush`, `Text`, `Item`, and `Index`.
 
 {% tabs %}
 
