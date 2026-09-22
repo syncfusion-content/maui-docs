@@ -178,4 +178,4 @@ To localize `AI AssistView` based on `CurrentUICulture` using `resource`  files,
 
 ### Activation and behavior
 
-After configuration, the `AIAssistView` uses the localized strings when the application starts. Localization is applied based on the `CurrentUICulture` set in the App constructor. If a translated string is unavailable for a specific culture, `AIAssistView` falls back to the neutral resource file (SfAIAssistView.resx) or uses the hardcoded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.
+After configuration, the `AIAssistView` uses the localized strings when the application starts. Localization is applied based on the `CurrentUICulture` set in the App constructor. If a translated string is unavailable for a specific culture, `AIAssistView` falls back to the neutral resource file (SfAIAssistView.resx) or uses the hard coded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.
