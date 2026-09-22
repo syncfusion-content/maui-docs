@@ -12,7 +12,7 @@ This section explains how to add the [.NET MAUI Picker](https://www.syncfusion.c
 
 To get start quickly with our .NET MAUI Picker, you can check the below video.
 
-{% youtube "youtube:https://youtu.be/w_pIsZqy5Hs?si=yGY1b9YP5du2vgwy" %}
+{% youtube "youtube:https://www.youtube.com/watch?v=w_pIsZqy5Hs" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

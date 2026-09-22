@@ -219,7 +219,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>The number of non-scrolling columns at the left side of SfDataGrid.</td>
 </tr>
 <tr>
-<td>{{'[AppearanceManager](https://help.syncfusion.com/xamarin/sfdatagrid/paging#appearancemanager)'| markdownify }}</td>
+<td>{{'[AppearanceManager](https://help.syncfusion.com/xamarin/datagrid/paging)'| markdownify }}</td>
 <td>{{'[DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html#Syncfusion_Maui_DataGrid_DataPager_SfDataPager_DefaultStyle)'| markdownify }}</td>
 <td>This enables users to customize the appearance of the data pager.</td>
 </tr>

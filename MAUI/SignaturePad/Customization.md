@@ -82,6 +82,49 @@ this.Content = signaturePad;
 
 ![SignaturePad stroke thickness](images/getting-started/stroke-thickness.png)
 
+## IsEmpty property
+
+The `IsEmpty` property indicates whether the Signature Pad contains a signature. It returns `true` when no strokes have been drawn and `false` after the user adds a stroke. Use this property to validate that a signature has been provided before continuing a workflow.
+
+### Validate the signature
+
+The following example displays a validation message when the user tries to continue without signing.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout Padding="20" Spacing="12">
+    <signaturePad:SfSignaturePad x:Name="signaturePad"
+                                 HeightRequest="200" />
+    <Label x:Name="validationLabel"
+           TextColor="Red"
+           IsVisible="False" />
+    <Button Text="Continue"
+            Clicked="OnContinueClicked" />
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+private void OnContinueClicked(object? sender, EventArgs e)
+{
+    if (signaturePad.IsEmpty)
+    {
+        validationLabel.Text = "Please provide a signature.";
+        validationLabel.IsVisible = true;
+        return;
+    }
+
+    validationLabel.IsVisible = false;
+    // Continue to the next step.
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## See Also
 
 * [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
