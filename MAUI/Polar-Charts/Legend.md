@@ -322,7 +322,7 @@ The legend title can be displayed above the legend items using the [Title]() pro
 
 <chart:SfPolarChart>
     <chart:SfPolarChart.Legend>
-        <chart:ChartLegend Title="Plant Types"/>
+        <chart:ChartLegend Title="Plant Types" Placement="Bottom"/>
     </chart:SfPolarChart.Legend>
 </chart:SfPolarChart>
 
@@ -334,7 +334,8 @@ SfPolarChart chart = new SfPolarChart();
 //code omitted for brevity
 chart.Legend = new ChartLegend()
 {
-    Title = "Plant Types"
+    Title = "Plant Types",
+    Placement = LegendPlacement.Bottom
 };
 
 this.Content = chart;
@@ -354,7 +355,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
 {% highlight xaml %}
 
 <chart:SfPolarChart.Legend>
-    <chart:ChartLegend>
+    <chart:ChartLegend  Placement="Bottom">
         <chart:ChartLegend.Title>
             <HorizontalStackLayout Spacing="2">
                 <CheckBox VerticalOptions="Center"/>
@@ -373,6 +374,7 @@ A custom `View` can be assigned to the `Title` property to display customized co
 
 chart.Legend = new ChartLegend()
 {
+    Placement = LegendPlacement.Bottom,
     Title = new HorizontalStackLayout()
     {
         Spacing = 2,
@@ -398,12 +400,6 @@ chart.Legend = new ChartLegend()
 {% endtabs %}
 
 ![Legend Title Support as view in .NET MAUI Polar Chart](Legend-images/legend_title_as_view.png)
-
-The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
-
-If the available height is insufficient to display both the title and the legend items at their desired sizes, the available height is proportionally distributed between them based on their measured heights. This keeps both the title and legend items visible within the legend area.
-
-The `Title` property is bindable and can be updated at runtime. When the title changes, the chart automatically updates the legend layout.
 
 ## Toggle the series visibility
 The visibility of polar series can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.

@@ -355,12 +355,6 @@ chart.Legend = new ChartLegend()
 
 ![Legend Title Support as string in .NET MAUI Cartesian Chart](Legend-images/legend_title_as_view.png)
 
-The legend title participates in the legend measurement and arrangement. For left- and right-positioned legends, the title and legend items are vertically centered as a single group within the available legend area.
-
-If the available height is insufficient to display both the title and the legend items at their desired sizes, the available height is proportionally distributed between them based on their measured heights. This keeps both the title and legend items visible within the legend area.
-
-The `Title` property is bindable and can be updated at runtime. When the title changes, the chart automatically updates the legend layout.
-
 ## Floating legend
 
 The floating legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_IsFloating) is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the offset values, enabling precise control over the legend’s location.
