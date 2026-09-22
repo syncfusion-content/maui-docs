@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Picker to .NET MAUI
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Migration from Xamarin Picker to .NET MAUI Picker control 

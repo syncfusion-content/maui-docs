@@ -5,6 +5,7 @@ description: Animation in .NET MAUI Linear Gauge provides smooth transitions for
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Animation in .NET MAUI Linear Gauge

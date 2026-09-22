@@ -5,6 +5,7 @@ description: Learn about the properties and events of the Syncfusion .NET MAUI P
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # API details in .NET MAUI Picker control

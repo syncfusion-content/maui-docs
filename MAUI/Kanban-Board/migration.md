@@ -6,6 +6,7 @@ platform: maui
 control: SfKanban
 documentation: ug
 keywords: migrate from xamarin.Forms SfKanban to .net maui SfKanban, transitioning from xamarin.Forms SfKanban to .net maui SfKanban, move from xamarin.Forms SfKanban to .net maui SfKanban, upgrading xamarin.Forms to .net maui SfKanban.
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Migration from Xamarin to .NET MAUI Kanban Board

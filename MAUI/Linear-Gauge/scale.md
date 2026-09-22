@@ -4,8 +4,8 @@ title: Scale in .NET MAUI Linear Gauge | Syncfusion®
 description: Scale in .NET MAUI Linear Gauge defines the measurement axis for displaying values, supporting customizable intervals, labels, and visual styling.
 platform: maui
 control: SfLinearGauge
-
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Scale in .NET MAUI Linear Gauge

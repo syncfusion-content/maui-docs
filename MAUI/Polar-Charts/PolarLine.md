@@ -5,6 +5,7 @@ description: Polar Line Chart in .NET MAUI Polar Chart connects data points usin
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polar Line Chart in .NET MAUI Polar Chart

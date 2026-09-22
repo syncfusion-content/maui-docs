@@ -5,6 +5,7 @@ description: This section lists the public API members for Trendline in the Sync
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # LinearTrendline API Reference for .NET MAUI Cartesian Chart

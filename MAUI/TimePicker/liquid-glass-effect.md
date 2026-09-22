@@ -5,6 +5,7 @@ title: Liquid Glass Effect in .NET MAUI Time Picker control | Syncfusion®
 description: Enable liquid glass effect with adaptive color tinting and light refraction in the .NET MAUI Time Picker.
 control: SfTimePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Time Picker

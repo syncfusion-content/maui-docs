@@ -5,6 +5,7 @@ description: This section lists the public API members for Axis in the Syncfusio
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # NumericalAxis API Reference for .NET MAUI Cartesian Chart

@@ -5,6 +5,7 @@ description: Learn about Flow Direction support in Syncfusion® .NET MAUI Kanban
 platform: maui
 control: SfKanban
 documentation: ug
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Flow Direction in .NET MAUI Kanban Board

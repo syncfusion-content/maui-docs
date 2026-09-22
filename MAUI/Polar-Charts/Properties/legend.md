@@ -5,6 +5,7 @@ description: Customize legends, labels, markers, and related styles in .NET MAUI
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend API in .NET MAUI Polar Chart

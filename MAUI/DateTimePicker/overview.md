@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion<sup>&reg;</sup>Essential Stu
 platform: maui
 control: SfDateTimePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # About Syncfusion® .NET MAUI Date Time Picker Control
