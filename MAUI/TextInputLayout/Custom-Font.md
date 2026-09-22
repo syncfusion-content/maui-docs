@@ -132,20 +132,30 @@ The following example uses a styled label as the floating hint view.
 {% highlight xaml %}
 
 <inputLayout:SfTextInputLayout
-    ContainerType="Outlined"
-    EnableHintAnimation="True">
+            ContainerType="Outlined"
+            EnableHintAnimation="True" >
 
     <inputLayout:SfTextInputLayout.HintView>
-        <Label
-            Text="Premium User"
-            FontSize="14"
-            FontAttributes="Bold"
-            TextColor="#512DA8"
-            Padding="8,4"
-            Margin="2" />
+
+        <HorizontalStackLayout Spacing="4">
+
+            <Image Source="call.png"
+                WidthRequest="16"
+                HeightRequest="16"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+            <Label Text="Contact Number"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#2E7D32"
+                VerticalTextAlignment="Center" />
+
+        </HorizontalStackLayout>
+
     </inputLayout:SfTextInputLayout.HintView>
 
-    <Entry Placeholder="Enter your name" />
+    <Entry Placeholder="Enter your number" />
 
 </inputLayout:SfTextInputLayout>
 
@@ -155,30 +165,40 @@ The following example uses a styled label as the floating hint view.
 var inputLayout = new SfTextInputLayout
 {
     ContainerType = ContainerType.Outlined,
-    EnableHintAnimation = true,
-    HintView = new Label
-    {
-        Text = " Premium User",
-        FontSize = 14,
-        FontAttributes = FontAttributes.Bold,
-        TextColor = Color.FromArgb("#512DA8"),
-        Padding = new Thickness(8, 4),
-        Margin = new Thickness(2)
-    },
-    Content = new Entry
-    {
-        Placeholder = "Enter your name"
-    }
+    EnableHintAnimation = true
 };
 
-Content = new VerticalStackLayout
+var hintLayout = new HorizontalStackLayout
 {
-    Padding = 20,
-    Children =
-    {
-        inputLayout
-    }
+    Spacing = 4
 };
+
+hintLayout.Children.Add(new Image
+{
+    Source = "call.png",
+    WidthRequest = 16,
+    HeightRequest = 16,
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center
+});
+
+hintLayout.Children.Add(new Label
+{
+    Text = "Contact Number",
+    FontSize = 12,
+    FontAttributes = FontAttributes.Bold,
+    TextColor = Color.FromArgb("#2E7D32"),
+    VerticalTextAlignment = TextAlignment.Center
+});
+
+inputLayout.HintView = hintLayout;
+
+inputLayout.Content = new Entry
+{
+    Placeholder = "Enter your number"
+};
+
+Content = inputLayout;
 
 {% endhighlight %}
 {% endtabs %}
