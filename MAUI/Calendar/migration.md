@@ -289,7 +289,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DataSource)'| markdownify }}</td>
 <td>Nil</td>
-<td>For {{'[Datasource](https://help.syncfusion.com/maui/scheduler/appointments)' | markdownify }} related support suggesting to use .NET MAUI Scheduler</td>
+<td>For {{'[Datasource](https://help.syncfusion.com/scheduler-sdk/maui/schedule/appointments)' | markdownify }} related support suggesting to use .NET MAUI Scheduler</td>
 </tr>
 <tr>
 <td>{{'[DisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DisplayDate)'| markdownify }}</td>
@@ -344,7 +344,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[MaximumEventIndicatorCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaximumEventIndicatorCount)'| markdownify }}</td>
 <td>Nil</td>
-<td>For {{'[Datasource](https://help.syncfusion.com/maui/scheduler/appointments)' | markdownify }} related support suggesting to use .NET MAUI Scheduler</td>
+<td>For {{'[Datasource](https://help.syncfusion.com/scheduler-sdk/maui/schedule/appointments)' | markdownify }} related support suggesting to use .NET MAUI Scheduler</td>
 </tr>
 <tr>
 <td>{{'[MinDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MinDate)'| markdownify }}</td>
