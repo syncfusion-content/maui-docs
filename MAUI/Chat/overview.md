@@ -5,7 +5,6 @@ description: Learn here all about introduction of the Syncfusion® .NET MAUI Cha
 platform: MAUI
 control: Chat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI Chat

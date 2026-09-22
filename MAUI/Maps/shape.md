@@ -6,7 +6,6 @@ platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui shape maps.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Shapes in .NET MAUI Maps

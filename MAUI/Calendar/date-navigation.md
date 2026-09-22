@@ -5,7 +5,6 @@ title: Date Navigation in .NET MAUI Calendar control | Syncfusion®
 description: Learn about date navigation in Syncfusion® .NET MAUI Calendar control for programmatic and user-driven date interactions.
 control: SfCalendar
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Date Navigation in .NET MAUI Calendar control

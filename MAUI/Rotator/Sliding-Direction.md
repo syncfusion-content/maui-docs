@@ -5,7 +5,6 @@ description: Learn here all about Sliding Direction support in Syncfusion® .NET
 platform: maui
 control: Rotator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Sliding Direction in .NET MAUI Rotator

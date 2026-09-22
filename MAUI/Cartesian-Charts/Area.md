@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui area chart, .net maui chart area type, area chart customization .net maui, syncfusion maui area chart, cartesian area chart maui, .net maui chart filled line visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Area Chart in .NET MAUI Cartesian Chart

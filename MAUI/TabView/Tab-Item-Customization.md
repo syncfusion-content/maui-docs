@@ -5,7 +5,6 @@ description: Learn all about the appearance customization of Tab Item in the Syn
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Customize the Appearance of Tab Item in .NET MAUI Tab View

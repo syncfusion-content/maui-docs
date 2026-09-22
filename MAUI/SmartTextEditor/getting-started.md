@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Smart Text
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Smart Text Editor

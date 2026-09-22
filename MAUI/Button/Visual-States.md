@@ -5,7 +5,6 @@ description: Learn about visual states support in the Syncfusion® .NET MAUI But
 platform: maui
 control: SfButton
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Visual States in .NET MAUI Button

@@ -5,7 +5,6 @@ description: Learn here all about Customization in the Syncfusion® .NET MAUI Ex
 platform: MAUI
 control: SfExpander
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Expander

@@ -6,7 +6,6 @@ description: Learn here all about Rating Shape support in Syncfusion® .NET MAUI
 platform: maui
 control: Rating
 documentation: ug
-appliesto: UI Component Suite
 
 ---
 

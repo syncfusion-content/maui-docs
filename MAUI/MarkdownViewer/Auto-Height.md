@@ -6,7 +6,6 @@ platform: maui
 control: SfMarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer autosize, syncfusion markdown viewer automatic sizing, sfmarkdownviewer enableautoheight, .net maui markdown content measurement
-appliesto: UI Component Suite
 ---
 
 # Auto-Height in .NET MAUI Markdown Viewer

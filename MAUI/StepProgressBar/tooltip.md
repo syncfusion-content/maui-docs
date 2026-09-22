@@ -5,7 +5,6 @@ description: Learn how to customize and display tooltips in Syncfusion® .NET MA
 platform: maui
 control: SfStepProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI Step Progress Bar

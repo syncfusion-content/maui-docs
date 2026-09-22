@@ -5,7 +5,6 @@ description: Learn about the properties and events of the Syncfusion .NET MAUI T
 platform: maui
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Properties in .NET MAUI Time Picker control

@@ -5,7 +5,6 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Smart Text Editor Control

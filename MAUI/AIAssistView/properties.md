@@ -5,7 +5,6 @@ description: This section explains the properties, events, and methods with Sync
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI AI AssistView

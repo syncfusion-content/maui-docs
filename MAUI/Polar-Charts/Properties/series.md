@@ -5,7 +5,6 @@ description: PolarSeries displays data as filled regions in a polar coordinate s
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # PolarSeries API in .NET MAUI Polar Chart

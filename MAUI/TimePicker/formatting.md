@@ -5,7 +5,6 @@ title: Formatting in .NET MAUI Time Picker control | Syncfusion®
 description: Learn how to customize time display formats using predefined formatting options in the Syncfusion .NET MAUI Time Picker control.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Formatting in .NET MAUI Time Picker

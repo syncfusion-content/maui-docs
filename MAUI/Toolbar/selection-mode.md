@@ -5,7 +5,6 @@ description: Learn about selection modes in Syncfusion® .NET MAUI Toolbar (SfTo
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Selection Mode in .NET MAUI Toolbar

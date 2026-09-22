@@ -5,7 +5,6 @@ description: Learn about disabling segmented items to restrict selection and int
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
-appliesto: UI Component Suite
 ---
  
 # Disabled Segmented Item in .NET MAUI Segmented Control

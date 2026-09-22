@@ -5,7 +5,6 @@ description: Learn about how to implement AI-powered smart search using Syncfusi
 platform: maui
 control: SfCombobox
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # AI-Powered Smart Searching in .NET MAUI ComboBox 

@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui candle chart, candle chart customization .net maui, syncfusion maui candle chart, cartesian candle chart maui, .net maui chart candle visualization, .net maui stock chart, .net maui bear and bull candle chart.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Candle Chart in .NET MAUI Cartesian Chart

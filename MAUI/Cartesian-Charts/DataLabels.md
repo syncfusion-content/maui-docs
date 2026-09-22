@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart data label, maui chart data label, .net maui data label customization, syncfusion maui chart data label, cartesian data label maui, .net maui chart data label visualization, .net maui chart value label.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Cartesian Chart

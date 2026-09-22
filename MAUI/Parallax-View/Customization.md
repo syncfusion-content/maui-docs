@@ -5,7 +5,6 @@ description: Learn about Customization support in Syncfusion® .NET MAUI Paralla
 platform: MAUI
 control: SfParallaxView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Parallax View

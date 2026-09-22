@@ -5,7 +5,6 @@ description: Learn about description feature displaying primary and secondary te
 platform: maui
 control: SfStepProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Description in .NET MAUI Step Progress Bar

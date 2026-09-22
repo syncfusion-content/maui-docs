@@ -5,7 +5,6 @@ description: Learn about liquid glass effect in Syncfusion® .NET MAUI Picker co
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Picker control

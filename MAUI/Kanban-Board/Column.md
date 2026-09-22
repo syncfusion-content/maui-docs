@@ -5,7 +5,6 @@ description: Learn about Column support in Syncfusion® .NET MAUI Kanban Board w
 platform: maui
 control: Kanban
 documentation: ug
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Column in .NET MAUI Kanban Board

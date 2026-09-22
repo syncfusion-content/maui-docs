@@ -5,7 +5,6 @@ description: Learn here all about Load More support in Syncfusion® .NET MAUI Ca
 platform : maui
 control : Carousel
 documentation : ug
-appliesto: UI Component Suite
 ---
 
 # Load More in .NET MAUI Carousel

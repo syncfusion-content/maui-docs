@@ -5,7 +5,6 @@ description: Learn how to show and customize major and minor ticks in Syncfusion
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Ticks in .NET MAUI DateTime Range Slider

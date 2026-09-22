@@ -5,7 +5,6 @@ description: Learn about customization options in Syncfusion® .NET MAUI Shimmer
 platform: maui
 control: SfShimmer
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Shimmer

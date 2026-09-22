@@ -5,7 +5,6 @@ description: Learn about right-to-left (RTL) flow direction support in Syncfusio
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI DataForm

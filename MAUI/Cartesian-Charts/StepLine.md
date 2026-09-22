@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui step line chart, maui step line chart, step line chart customization .net maui, syncfusion maui step line chart, cartesian step line chart maui, .net maui chart step line visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Step Line Chart in .NET MAUI Cartesian Chart

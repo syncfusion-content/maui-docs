@@ -5,7 +5,6 @@ description: This section explains the properties and methods with Syncfusion® 
 platform: MAUI
 control: SfBarcodeGenerator
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Barcode Generator

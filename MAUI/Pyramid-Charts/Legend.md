@@ -6,7 +6,6 @@ platform: maui
 control: SfPyramidChart
 documentation: ug
 keywords: .net maui pyramid chart, legend, chart legend, legend items, legend customization, legend placement.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI Pyramid Chart

@@ -5,7 +5,6 @@ description: Customize the appearance and behavior of Syncfusion® .NET MAUI Sma
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Smart Text Editor

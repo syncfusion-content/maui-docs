@@ -5,7 +5,6 @@ description: Learn about properties in Syncfusion® .NET MAUI Cards (SfCards) co
 platform: maui
 control: SfCardLayout
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Cards

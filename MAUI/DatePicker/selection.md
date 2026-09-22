@@ -5,7 +5,6 @@ description: Learn about selection in Syncfusion® .NET MAUI Date Picker control
 platform: maui
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Selection in .NET MAUI Date Picker control

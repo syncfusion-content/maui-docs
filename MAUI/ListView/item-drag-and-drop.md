@@ -5,7 +5,6 @@ description: Learn here all about Item Reordering support in the Syncfusion® .N
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Item Reordering in .NET MAUI ListView

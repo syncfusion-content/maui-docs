@@ -6,7 +6,6 @@ platform: maui
 control: SfFunnelChart
 documentation: ug
 keywords: .net maui funnel chart, glass effect, liquid glass effect, funnel chart visualization, .net maui chart styling.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Funnel Chart

@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout container type, syncfusion text input layout filled maui, sftextinputlayout outlined maui, .net maui text input layout none, sftextinputlayout corner radius maui, sftextinputlayout inputview padding maui
-appliesto: UI Component Suite
 ---
 
 # Container Types in .NET MAUI Text Input Layout

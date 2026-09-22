@@ -5,7 +5,6 @@ description: Tooltip in .NET MAUI TreeMap displays detailed information for Tree
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI TreeMap

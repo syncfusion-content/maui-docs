@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart axis overview, .net maui cartesian chart control axis, .net maui cartesian chart axis features, .net maui cartesian chart control axis functionality.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis in .NET MAUI Cartesian Chart

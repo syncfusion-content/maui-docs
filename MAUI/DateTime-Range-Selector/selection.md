@@ -5,7 +5,6 @@ description: Learn how to manage range selection behavior in the .NET MAUI DateT
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Range selection in .NET MAUI DateTime Range Selector

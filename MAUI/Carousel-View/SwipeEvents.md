@@ -5,7 +5,6 @@ description: Learn here all about swipe event support in Syncfusion® .NET MAUI 
 platform: maui
 control: Carousel
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Swipe Events in .NET MAUI Carousel

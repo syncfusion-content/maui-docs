@@ -5,7 +5,6 @@ description: Learn about the built-in events in the Syncfusion® .NET MAUI Navig
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Navigation Drawer

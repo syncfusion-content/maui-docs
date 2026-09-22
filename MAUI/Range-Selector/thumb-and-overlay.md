@@ -5,7 +5,6 @@ description: Learn how to customize thumbs and overlays in the Syncfusion® .NET
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Thumb and Overlay in .NET MAUI Range Selector

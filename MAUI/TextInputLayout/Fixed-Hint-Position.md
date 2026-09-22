@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout ishintalwaysfloated, syncfusion text input layout fixed hint maui, sftextinputlayout always floated hint maui, .net maui text input layout hint position, sftextinputlayout hint floating maui
-appliesto: UI Component Suite
 ---
 
 # Fixed Hint Position in .NET MAUI Text Input Layout

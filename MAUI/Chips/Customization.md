@@ -5,7 +5,6 @@ description: Learn how to customize Syncfusion® .NET MAUI Chips, including SfCh
 platform: maui
 control: Chips
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Chips

@@ -5,7 +5,6 @@ description: Learn about visual states support in Syncfusion® Essential Studio 
 platform: MAUI
 control: SfCheckBox
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Visual States in .NET MAUI CheckBox

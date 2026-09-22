@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui text input layout, syncfusion text input layout, text input layout maui, .net maui hint label.
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Text Input Layout

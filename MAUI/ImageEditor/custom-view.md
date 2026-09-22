@@ -5,7 +5,6 @@ description: Learn about adding and customizing custom view annotations in Syncf
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Custom View Annotation in .NET MAUI Image Editor

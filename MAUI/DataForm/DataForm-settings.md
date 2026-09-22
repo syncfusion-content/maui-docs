@@ -5,7 +5,6 @@ description: Learn how to configure and customize editor settings in SyncfusionÂ
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Data Editor Settings in .NET MAUI DataForm

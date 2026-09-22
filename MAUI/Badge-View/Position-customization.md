@@ -5,7 +5,6 @@ description: Learn how to customize badge position in Syncfusion® .NET MAUI Bad
 platform: maui
 control: SfBadgeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Position Customization in .NET MAUI Badge View

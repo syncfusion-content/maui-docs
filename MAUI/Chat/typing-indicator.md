@@ -5,7 +5,6 @@ description: Learn here all about Typing indicator support in Syncfusion® .NET 
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Typing Indicator in .NET MAUI Chat

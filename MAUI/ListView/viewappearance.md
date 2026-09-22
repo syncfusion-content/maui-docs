@@ -5,7 +5,6 @@ description: Learn here all about Appearance support in Syncfusion® .NET MAUI L
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Appearance in .NET MAUI ListView

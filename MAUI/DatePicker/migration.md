@@ -5,7 +5,6 @@ title: Migration from Xamarin to .NET MAUI Date Picker control | Syncfusion®
 description: Learn about migration from Syncfusion® Xamarin Date Picker to .NET MAUI Date Picker control with API comparisons.
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---  
 
 # Migration from Xamarin Date Picker to .NET MAUI Date Picker control 

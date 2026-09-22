@@ -5,7 +5,6 @@ description: Tile Layer in .NET MAUI Maps displays map tiles from online or cust
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tile Layer in .NET MAUI Maps

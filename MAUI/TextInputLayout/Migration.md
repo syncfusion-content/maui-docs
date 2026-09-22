@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin to .NET MAUI Text Input Layout

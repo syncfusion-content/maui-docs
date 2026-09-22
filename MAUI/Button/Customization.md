@@ -5,7 +5,6 @@ description: Learn here all about customization support in Syncfusion® .NET MAU
 platform: maui
 control: SfButton
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Button

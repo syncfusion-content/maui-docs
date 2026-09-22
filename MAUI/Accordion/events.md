@@ -5,7 +5,6 @@ description: Learn here about all the Events available in Syncfusion® .NET MAUI
 platform: MAUI
 control: SfAccordion
 documentation: ug
-appliesto: UI Component Suite
 --- 
 
 # Events in .NET MAUI Accordion

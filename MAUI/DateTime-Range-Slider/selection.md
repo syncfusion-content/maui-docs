@@ -5,7 +5,6 @@ description: Learn how to configure range selection in Syncfusion® .NET MAUI Da
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Range Selection in .NET MAUI DateTime Range Slider

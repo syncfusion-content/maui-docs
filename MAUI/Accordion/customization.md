@@ -5,7 +5,6 @@ description: Learn here about how to customize the Syncfusion® .NET MAUI Accord
 platform: MAUI
 control: SfAccordion
 documentation: ug
-appliesto: UI Component Suite
 --- 
 
 # Customization in .NET MAUI Accordion

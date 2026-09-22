@@ -5,7 +5,6 @@ description: Learn here all about the events and commands available in the Syncf
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 --- 
 
 # Events and Commands in .NET MAUI Popup

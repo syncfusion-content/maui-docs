@@ -6,7 +6,6 @@ platform: maui
 control: SfSunburstChart
 documentation: ug
 keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino sunburst tooltip maui, .net maui chart visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Sunburst Chart

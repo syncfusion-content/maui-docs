@@ -5,7 +5,6 @@ description: Learn about layout options in Syncfusion® .NET MAUI DataForm (SfDa
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Layout in .NET MAUI DataForm

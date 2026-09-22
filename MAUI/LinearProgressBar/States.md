@@ -5,7 +5,6 @@ description: Learn about determinate and indeterminate states in Syncfusion® .N
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # States in .NET MAUI Linear Progress Bar

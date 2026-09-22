@@ -5,7 +5,6 @@ description: Tooltip in .NET MAUI Maps displays detailed information for map ele
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Maps

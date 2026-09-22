@@ -5,7 +5,6 @@ description: Learn here all about Layout Customizations support in Syncfusion® 
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Layout Customizations in MAUI Popup

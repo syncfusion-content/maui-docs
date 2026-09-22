@@ -5,7 +5,6 @@ description: Learn how to configure numeric intervals in the .NET MAUI Range Sli
 platform: maui
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI Range Slider

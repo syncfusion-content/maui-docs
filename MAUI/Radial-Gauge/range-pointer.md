@@ -5,7 +5,6 @@ description: Range Pointer in .NET MAUI Radial Gauge highlights values using a f
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Range Pointer in .NET MAUI Radial Gauge

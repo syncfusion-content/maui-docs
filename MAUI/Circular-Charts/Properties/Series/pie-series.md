@@ -5,7 +5,6 @@ description: This section lists the public API members of the pie series availab
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # PieSeries API in .NET MAUI Circular Chart

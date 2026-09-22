@@ -5,7 +5,6 @@ description: Learn here all about Appearance support in Syncfusion® .NET MAUI E
 platform: MAUI
 control: SfExpander
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Appearance in .NET MAUI Expander

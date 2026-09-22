@@ -5,7 +5,6 @@ description: Learn about defining range with minimum and maximum values in Syncf
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Range in .NET MAUI Linear Progress Bar

@@ -5,7 +5,6 @@ description: Learn here about getting started with Syncfusion® Essential Studio
 platform: maui
 control: Chips
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Chips

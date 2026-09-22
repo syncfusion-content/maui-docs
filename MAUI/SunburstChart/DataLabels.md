@@ -5,7 +5,6 @@ description: Data Labels in .NET MAUI Sunburst Chart display values directly on 
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Sunburst Chart

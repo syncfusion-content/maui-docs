@@ -5,7 +5,6 @@ description: Shape Selection in .NET MAUI Maps allows map shapes to be highlight
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Shape Selection in .NET MAUI Maps

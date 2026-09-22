@@ -5,7 +5,6 @@ description: Learn how to get started with .NET MAUI Signature Pad (SfSignatureP
 platform: maui
 control: SfSignaturePad
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Signature Pad

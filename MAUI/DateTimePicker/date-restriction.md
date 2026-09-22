@@ -5,7 +5,6 @@ title: Date Restriction in .NET MAUI Date Time Picker control | Syncfusion®
 description: Learn about date restriction in Syncfusion® .NET MAUI Date Time Picker control to manage selectable date and time ranges.
 control: SfDateTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Date Restriction in .NET MAUI Date Time Picker control

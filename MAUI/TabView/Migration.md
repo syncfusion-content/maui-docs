@@ -5,7 +5,6 @@ description: Learn all about migrating from Syncfusion® Xamarin Tab View to Syn
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Tab View to .NET MAUI Tab View

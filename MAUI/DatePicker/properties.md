@@ -5,7 +5,6 @@ description: Learn about the properties and events of the Syncfusion .NET MAUI D
 platform: maui
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Properties in .NET MAUI Date Picker control

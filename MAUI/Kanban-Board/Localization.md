@@ -6,7 +6,6 @@ platform: maui
 control: Kanban
 documentation: ug
 keywords: .net maui Kanban localization, sfKanban localization in .net maui, .net maui Kanban localization support, .net maui Kanban language settings, maui Kanban language support.
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Localization in .NET MAUI Kanban Board

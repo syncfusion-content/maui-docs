@@ -5,7 +5,6 @@ description: Learn here all about migrating from the Syncfusion® Xamarin.Forms 
 platform: MAUI
 control: SfExpander
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Migrate from Xamarin.Forms Expander to .NET MAUI Expander

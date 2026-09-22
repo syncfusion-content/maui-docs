@@ -5,7 +5,6 @@ description: Learn here all about how to bind data in Syncfusion® .NET Chat (Sf
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Data Binding in .NET MAUI Chat

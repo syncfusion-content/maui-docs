@@ -5,7 +5,6 @@ description: Learn here all about Migrating from Syncfusion Xamarin PullToRefres
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migrate from Xamarin to .NET MAUI Pull to Refresh

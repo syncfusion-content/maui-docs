@@ -5,7 +5,6 @@ description: Learn how to enable and customize the Liquid Glass Effect in the Sy
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Data Grid

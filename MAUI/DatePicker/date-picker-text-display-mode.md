@@ -5,7 +5,6 @@ title: Text Display Mode in .NET MAUI Date Picker control | Syncfusion®
 description: Learn about text display mode in Syncfusion® .NET MAUI Date Picker control with Default, Fade, Shrink options.
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Text Display Mode in .NET MAUI Date Picker control

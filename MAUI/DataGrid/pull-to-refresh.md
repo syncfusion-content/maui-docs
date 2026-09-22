@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui pull to refresh, maui pull to refresh
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Pull To Refresh in .NET MAUI Data Grid

@@ -5,7 +5,6 @@ description: Learn here about providing liquid glass support for Syncfusion® .N
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Tab View

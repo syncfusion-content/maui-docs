@@ -5,7 +5,6 @@ description: Learn how to restrict the number of items and load the remaining it
 platform: maui
 control: SfAutocomplete
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Load More in .NET MAUI Autocomplete

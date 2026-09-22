@@ -5,7 +5,6 @@ description: Learn here about Events and Methods in .NET MAUI Signature Pad (SfS
 platform: maui
 control: SfSignaturePad
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events and Methods in .NET MAUI Signature Pad

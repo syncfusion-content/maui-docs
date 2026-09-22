@@ -6,7 +6,6 @@ platform: maui
 control: SfFunnelChart
 documentation: ug
 keywords: .net maui funnel chart, export chart, save image, export stream, png, jpeg, image export.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Exporting in .NET MAUI Funnel Chart

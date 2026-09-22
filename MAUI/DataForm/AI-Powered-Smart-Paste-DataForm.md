@@ -5,7 +5,6 @@ description: Learn how to implement AI-powered smart paste functionality in .NET
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # AI-Powered Smart Paste in .NET MAUI DataForm

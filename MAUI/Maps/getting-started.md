@@ -6,7 +6,6 @@ platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui maps library.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Maps

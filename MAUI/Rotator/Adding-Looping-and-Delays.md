@@ -5,7 +5,6 @@ description: Learn about adding looping and delay support in the Syncfusion® .N
 platform: maui 
 control: Rotator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Adding Looping and Delays in .NET MAUI Rotator

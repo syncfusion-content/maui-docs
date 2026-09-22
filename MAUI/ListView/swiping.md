@@ -5,7 +5,6 @@ description: Learn here all about swiping support in Syncfusion® .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Swiping in .NET MAUI ListView

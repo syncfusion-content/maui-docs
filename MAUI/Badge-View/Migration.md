@@ -5,7 +5,6 @@ description: Learn about migration from Syncfusion® Xamarin Badge View to .NET 
 platform: maui
 control: SfBadgeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Migration from Xamarin Badge View to .NET MAUI Badge View 

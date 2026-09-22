@@ -6,7 +6,6 @@ platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui.
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin ComboBox to .NET MAUI ComboBox

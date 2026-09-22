@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Avatar Vie
 platform: MAUI
 control: SfAvatarView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Avatar View

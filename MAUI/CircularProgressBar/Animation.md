@@ -5,7 +5,6 @@ description: Learn about animation support and duration customization in Syncfus
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Animation in .NET MAUI Circular Progress Bar

@@ -5,7 +5,6 @@ description: Learn how to customize the active and inactive regions in the Syncf
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Regions in .NET MAUI Range Selector

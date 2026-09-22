@@ -5,7 +5,6 @@ description: Learn here about Checkbox support in Syncfusion® .NET MAUI TreeVie
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Checkbox in .NET MAUI TreeView

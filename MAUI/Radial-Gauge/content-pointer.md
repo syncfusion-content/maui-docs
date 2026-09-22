@@ -5,7 +5,6 @@ description: Content Pointers in .NET MAUI Radial Gauge display custom content a
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Content Pointers in .NET MAUI Radial Gauge

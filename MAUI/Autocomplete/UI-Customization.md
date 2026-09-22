@@ -5,7 +5,6 @@ description: Learn all about UI customization support in Syncfusion® .NET MAUI 
 platform: maui
 control: SfAutocomplete
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # UI Customization in .NET MAUI Autocomplete

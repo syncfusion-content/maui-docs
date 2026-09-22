@@ -5,7 +5,6 @@ description: Learn how to enable and customize the Liquid Glass Effect in Syncfu
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Image Editor

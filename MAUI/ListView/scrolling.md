@@ -5,7 +5,6 @@ description: Learn here all about Scrolling support in Syncfusion® .NET MAUI Li
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Scrolling in .NET MAUI ListView

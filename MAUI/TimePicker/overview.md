@@ -5,7 +5,6 @@ title: About Syncfusion .NET MAUI Time Picker Control | Syncfusion®
 description: Learn about introduction of Syncfusion<sup>&reg;</sup> Essential Studio .NET MAUI Time Picker control and more details.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # About Syncfusion® .NET MAUI Time Picker Control

@@ -5,7 +5,6 @@ description: Learn about events and commands in Syncfusion® .NET MAUI Toolbar (
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Toolbar

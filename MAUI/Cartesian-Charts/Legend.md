@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI Cartesian Chart

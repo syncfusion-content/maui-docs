@@ -5,7 +5,6 @@ description: Bar Pointer in .NET MAUI Linear Gauge represents values using a fil
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Bar Pointer in .NET MAUI Linear Gauge

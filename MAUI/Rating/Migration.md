@@ -5,7 +5,6 @@ description: Learn all about migrating from Syncfusion® Xamarin Rating to Syncf
 platform: maui
 control: SfRating
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Rating to .NET MAUI Rating

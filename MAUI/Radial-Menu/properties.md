@@ -5,7 +5,6 @@ description: This section explains the properties and events with Syncfusion® M
 platform: maui
 control: SfRadialMenu
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Radial Menu

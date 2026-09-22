@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Radial Gau
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Radial Gauge

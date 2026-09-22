@@ -5,7 +5,6 @@ description: Tooltip in .NET MAUI Sunburst Chart displays detailed information f
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Sunburst Chart

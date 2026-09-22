@@ -5,7 +5,6 @@ description: Learn how to get started with Syncfusion® .NET MAUI Autocomplete c
 platform: maui
 control: SfAutocomplete
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Autocomplete

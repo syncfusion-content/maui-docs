@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui fast line chart, .net maui performance line chart, fast line chart customization .net maui, syncfusion maui fast line chart, cartesian fast line chart maui, cartesian performance line chart maui, .net maui chart fast line visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Fast Line Chart in .NET MAUI Cartesian Chart

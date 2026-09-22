@@ -5,7 +5,6 @@ description: Learn how to enable and customize tooltips in the Syncfusion® .NET
 platform: maui
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI Range Slider control

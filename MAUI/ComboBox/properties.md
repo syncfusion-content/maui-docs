@@ -6,7 +6,6 @@ platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI ComboBox

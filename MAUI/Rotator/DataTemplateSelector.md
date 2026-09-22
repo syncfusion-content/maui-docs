@@ -5,7 +5,6 @@ description: Learn how to use a DataTemplateSelector to choose a DataTemplate in
 platform: maui 
 control: Rotator 
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # DataTemplateSelector in .NET MAUI Rotator

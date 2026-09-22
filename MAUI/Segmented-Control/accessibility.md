@@ -5,7 +5,6 @@ description: Learn about accessibility support that allows screen readers to des
 platform: maui
 control: SfSegmentedControl
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Accessibility in .NET MAUI Segmented Control

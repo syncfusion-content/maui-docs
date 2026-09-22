@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui bar chart, maui bar chart, .net maui chart bar type, bar chart customization .net maui, syncfusion maui bar chart, cartesian bar chart maui, .net maui chart bar visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Bar Chart in .NET MAUI Cartesian Chart

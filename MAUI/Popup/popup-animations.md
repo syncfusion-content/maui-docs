@@ -5,7 +5,6 @@ description: Learn here all about Animations support in the Syncfusion® .NET MA
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 --- 
 
 # Animations in .NET MAUI Popup

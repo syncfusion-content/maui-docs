@@ -5,7 +5,6 @@ title: Localization in .NET MAUI Calendar control | Syncfusion®
 description: Learn about localization in Syncfusion® .NET MAUI Calendar control for multi-language and culture support.
 control: SfCalendar
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Localization in .NET MAUI Calendar control

@@ -5,7 +5,6 @@ description: Learn here all about the available events and commands in Syncfusio
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI Chat

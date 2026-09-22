@@ -5,7 +5,6 @@ description: Learn here about Working with MVVM support in Syncfusion® .NET MAU
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Working with MVVM in .NET MAUI TreeView

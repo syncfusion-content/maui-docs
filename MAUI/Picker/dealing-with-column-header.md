@@ -5,7 +5,6 @@ description: Learn about column headers in the Syncfusion® .NET MAUI Picker con
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Column Header in .NET MAUI Picker control

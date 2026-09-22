@@ -5,7 +5,6 @@ description: Learn how to customize the appearance and behavior of Syncfusion® 
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Toolbar

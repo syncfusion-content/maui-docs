@@ -5,7 +5,6 @@ description: Learn here all about migrating from Syncfusion® Xamarin Effects Vi
 platform: MAUI
 control: SfEffectsView
 documentation: UG
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Effects View to .NET MAUI Effects View

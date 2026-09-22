@@ -6,7 +6,6 @@ platform: maui
 control: SfDataGrid
 documentation: ug
 keywords: .net maui datagrid, .net maui sfdatagrid, syncfusion datagrid, datagrid maui, .net maui grid, .net grid maui.
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # API Reference for .NET MAUI Data Grid

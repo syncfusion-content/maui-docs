@@ -5,7 +5,6 @@ description: Learn about image transformation like rotate and flip in Syncfusion
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Transformation in .NET MAUI Image Editor

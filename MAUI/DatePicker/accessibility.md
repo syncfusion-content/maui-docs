@@ -5,7 +5,6 @@ title: Accessibility in .NET MAUI Date Picker control | Syncfusion®
 description: Learn about accessibility in Syncfusion® .NET MAUI Date Picker control for inclusive design and user interaction.
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Accessibility in .NET MAUI Date Picker control

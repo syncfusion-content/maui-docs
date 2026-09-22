@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart trendlines, maui chart trendlines, cartesian trendlines, trend analysis, data forecasting, trend prediction, trendline customization, syncfusion maui charts, sfcartesianchart, maui data visualization, trend pattern recognition.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Trendlines in .NET MAUI Cartesian Chart

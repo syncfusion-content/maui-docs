@@ -5,7 +5,6 @@ description: Learn about how to implement AI-powered smart filter using Syncfusi
 platform: maui
 control: SfAutocomplete
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Implementing AI-Powered Smart filter in .NET MAUI Autocomplete

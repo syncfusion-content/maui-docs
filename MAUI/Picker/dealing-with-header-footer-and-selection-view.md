@@ -5,7 +5,6 @@ description: Learn how to customize header, footer, and selection views in .NET 
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Header and Footer in .NET MAUI Picker

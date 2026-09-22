@@ -5,7 +5,6 @@ description: Learn how to use events and commands in the Syncfusion® .NET MAUI 
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI Range Selector

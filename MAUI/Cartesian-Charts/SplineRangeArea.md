@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui spline range area chart, maui spline range area chart, spline range area chart customization .net maui, syncfusion maui spline range area chart, cartesian spline range area chart maui, .net maui chart spline range area visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Spline Range Area Chart in .NET MAUI Cartesian Chart

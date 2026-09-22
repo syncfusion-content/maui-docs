@@ -6,7 +6,6 @@ platform: maui
 control: SfPolarChart
 documentation: ug
 keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino polar tooltip maui, .net maui chart visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Polar Chart

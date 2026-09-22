@@ -5,7 +5,6 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Range Slider Control

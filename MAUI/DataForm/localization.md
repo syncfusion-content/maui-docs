@@ -5,7 +5,6 @@ description: Learn how to localize DataForm resources and validation messages in
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI DataForm

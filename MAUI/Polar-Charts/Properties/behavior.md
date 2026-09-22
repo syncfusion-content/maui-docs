@@ -5,7 +5,6 @@ description: This section lists the public API members of tooltip behaviors avai
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # ChartTooltipBehavior API in .NET MAUI Polar Chart

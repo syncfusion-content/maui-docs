@@ -6,7 +6,6 @@ platform: maui
 control: Kanban (SfKanban)
 documentation: ug
 keywords: .net maui Kanban sorting, sfKanban sorting in .net maui, .net maui Kanban sorting support.
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Sorting in .NET MAUI Kanban Board

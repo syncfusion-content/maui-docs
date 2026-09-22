@@ -5,7 +5,6 @@ description: Learn about supported data editors in Syncfusion® .NET MAUI DataFo
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Editors in .NET MAUI DataForm

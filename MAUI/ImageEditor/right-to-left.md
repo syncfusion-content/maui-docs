@@ -5,7 +5,6 @@ description: Learn about Right To Left flow direction support and rendering cont
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI Image Editor

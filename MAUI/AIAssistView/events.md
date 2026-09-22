@@ -5,7 +5,6 @@ description: Learn here all about the Events and Commands available in Syncfusio
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI AI AssistView

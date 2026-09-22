@@ -6,7 +6,6 @@ platform: maui
 control: SfPyramidChart
 documentation: ug
 keywords: .net maui pyramid chart, export chart, save image, export stream, png, jpeg, image export.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Exporting in .NET MAUI Pyramid Chart

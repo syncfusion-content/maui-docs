@@ -5,7 +5,6 @@ description: Learn here all about how to migrate from Syncfusion® Xamarin.Forms
 platform: MAUI
 control: SfParallaxView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Migrate from Xamarin.Forms Parallax View to .NET MAUI Parallax View

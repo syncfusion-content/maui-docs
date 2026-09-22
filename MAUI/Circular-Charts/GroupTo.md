@@ -5,7 +5,6 @@ description: Grouping data points in .NET MAUI Circular Chart combines smaller s
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Grouping Data Points in .NET MAUI Circular Chart

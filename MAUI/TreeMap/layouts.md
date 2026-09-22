@@ -5,7 +5,6 @@ description: Layouts in .NET MAUI TreeMap determine how hierarchical data is arr
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
  
 # Layouts in .NET MAUI TreeMap

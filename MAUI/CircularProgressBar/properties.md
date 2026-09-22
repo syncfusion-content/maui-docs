@@ -5,7 +5,6 @@ description: This section explains the properties, events, and methods with Sync
 platform: maui
 control: SfCircularProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Circular Progress Bar

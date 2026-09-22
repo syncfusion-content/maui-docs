@@ -6,7 +6,6 @@ description: Learn here all about getting started with the Syncfusion® .NET MAU
 platform: MAUI
 control: SfAccordion
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Accordion

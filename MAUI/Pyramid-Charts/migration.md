@@ -5,7 +5,6 @@ description: Migrate from Xamarin.Forms SfChart to .NET MAUI Pyramid Chart with 
 platform: maui
 control: SfPyramidChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI Pyramid Chart

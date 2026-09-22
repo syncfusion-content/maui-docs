@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Badge View
 platform: MAUI
 control: SfBadgeView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Badge View

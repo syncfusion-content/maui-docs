@@ -5,7 +5,6 @@ description: Learn how to configure the Interval, IntervalType, and DateFormat t
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI DateTime Range Slider

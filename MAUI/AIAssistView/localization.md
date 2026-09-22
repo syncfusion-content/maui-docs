@@ -5,7 +5,6 @@ description: Learn here all about the localization feature of Syncfusion® .NET 
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI AI AssistView

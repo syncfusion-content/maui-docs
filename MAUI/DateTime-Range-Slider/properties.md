@@ -5,7 +5,6 @@ description: Overview of properties and events for the .NET MAUI DateTime Range 
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI DateTime Range Slider

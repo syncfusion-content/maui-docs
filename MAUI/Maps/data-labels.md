@@ -5,7 +5,6 @@ description: Data Labels in .NET MAUI Maps display descriptive information for m
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Maps

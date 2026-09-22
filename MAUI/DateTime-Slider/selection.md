@@ -5,7 +5,6 @@ description: Learn how to control value selection, discrete steps, deferred upda
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Value Selection in .NET MAUI DateTime Slider

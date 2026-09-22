@@ -5,7 +5,6 @@ description: Learn how to show, style, and customize dividers in the .NET MAUI R
 platform: maui
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI Range Slider

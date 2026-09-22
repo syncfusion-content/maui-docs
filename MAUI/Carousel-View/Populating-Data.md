@@ -5,7 +5,6 @@ description: Learn here all about populating data support in Syncfusion® .NET M
 platform : maui
 control : Carousel
 documentation : ug
-appliesto: UI Component Suite
 ---
 
 # Populating Data in .NET MAUI Carousel

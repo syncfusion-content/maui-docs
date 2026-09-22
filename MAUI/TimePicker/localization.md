@@ -5,7 +5,6 @@ title: Localization in .NET MAUI Time Picker control | Syncfusion®
 description: Translate built-in strings to different languages and cultures in the .NET MAUI Time Picker control.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Localization in .NET MAUI Time Picker

@@ -5,7 +5,6 @@ description: Content Marker Pointer in .NET MAUI Linear Gauge displays custom co
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Content Marker Pointer in .NET MAUI Linear Gauge

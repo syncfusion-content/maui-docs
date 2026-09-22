@@ -5,7 +5,6 @@ description: Learn about visual states support in the Syncfusion® .NET MAUI Aut
 platform: maui
 control: SfAutocomplete
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Visual States in .NET MAUI Autocomplete

@@ -5,7 +5,6 @@ description: Customize legends, labels, and related styles in .NET MAUI Sunburst
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend API in .NET MAUI Sunburst Chart

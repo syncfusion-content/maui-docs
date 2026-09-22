@@ -5,7 +5,6 @@ description: Learn about layout support to customize width, height, and the numb
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
-appliesto: UI Component Suite
 ---
  
 # Layout in .NET MAUI Segmented Control

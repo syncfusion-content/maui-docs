@@ -5,7 +5,6 @@ description: Learn about tooltip support in Syncfusion® .NET MAUI Toolbar (SfTo
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI Toolbar

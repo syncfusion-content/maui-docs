@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui column chart, column chart customization .net maui, syncfusion maui column chart, cartesian column chart maui, .net maui chart column visualization
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Column Chart in .NET MAUI Cartesian Chart

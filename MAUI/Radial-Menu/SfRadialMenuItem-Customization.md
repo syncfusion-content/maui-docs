@@ -5,7 +5,6 @@ description: Learn how to customize Radial Menu Item in the Syncfusion® .NET MA
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Radial Menu Item Customization in .NET MAUI Radial Menu

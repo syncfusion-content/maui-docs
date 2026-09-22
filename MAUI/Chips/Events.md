@@ -6,7 +6,6 @@ platform: maui
 control: Chips
 documentation: ug
 keywords: .net maui sfchipgroup events, syncfusion chips selection changed maui, sfchipgroup chipclicked maui, .net maui sfchip close button clicked, sfchipgroup itemremoved maui, sfchip selection changing maui
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Chips

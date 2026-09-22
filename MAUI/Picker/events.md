@@ -5,7 +5,6 @@ description: Learn about events in the Syncfusion® .NET MAUI Picker control, in
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Events in .NET MAUI Picker control

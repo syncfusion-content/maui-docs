@@ -5,7 +5,6 @@ description: Learn how to show, style, and customize major and minor ticks in th
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Ticks in .NET MAUI DateTime Slider

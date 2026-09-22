@@ -5,7 +5,6 @@ description: Learn how to configure range selection in the Syncfusion® .NET MAU
 platform: maui
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Range selection in .NET MAUI Range Slider

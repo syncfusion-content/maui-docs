@@ -5,7 +5,6 @@ description: Learn about DataTemplateSelector in Syncfusion® .NET MAUI Picker c
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # DataTemplateSelector in .NET MAUI Picker control

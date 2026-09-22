@@ -5,7 +5,6 @@ description: Learn about populating items in Syncfusion® .NET MAUI Picker contr
 platform: maui
 control: SfPicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Populating Items in .NET MAUI Picker control

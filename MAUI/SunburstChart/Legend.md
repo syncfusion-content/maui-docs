@@ -5,7 +5,6 @@ description: Legend in .NET MAUI Sunburst Chart displays chart segment informati
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI Sunburst Chart

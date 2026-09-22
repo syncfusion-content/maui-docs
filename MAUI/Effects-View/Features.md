@@ -5,7 +5,6 @@ description: Learn about the features available in the Syncfusion® .NET MAUI Ef
 platform: MAUI
 control: SfEffectsView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Features in .NET MAUI Effects View

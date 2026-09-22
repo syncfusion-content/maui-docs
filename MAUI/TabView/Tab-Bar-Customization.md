@@ -5,7 +5,6 @@ description: Learn all about custom header support in the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Customize Tab Bar in .NET MAUI Tab View

@@ -5,7 +5,6 @@ description: Learn how to enable and customize tooltip appearance in the .NET MA
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI DateTime Range Selector

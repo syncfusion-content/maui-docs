@@ -5,7 +5,6 @@ description: Learn about event support in Syncfusion® Essential Studio .NET MAU
 platform: MAUI
 control: SfCheckBox
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI CheckBox

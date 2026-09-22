@@ -5,7 +5,6 @@ description: Learn here all about Migrating from Syncfusion® Xamarin Signature 
 platform: MAUI
 control: SfSignaturePad
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migrate from Xamarin Signature Pad to .NET MAUI Signature Pad

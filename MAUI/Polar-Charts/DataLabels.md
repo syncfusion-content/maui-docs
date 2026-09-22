@@ -5,7 +5,6 @@ description: Data Labels in .NET MAUI Polar Chart display values directly on dat
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Polar Chart

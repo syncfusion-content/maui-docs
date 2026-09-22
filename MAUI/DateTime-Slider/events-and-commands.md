@@ -5,7 +5,6 @@ description: Learn how to add and customize events and commands for the Syncfusi
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events and Commands in .NET MAUI DateTime Slider

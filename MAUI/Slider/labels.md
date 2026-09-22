@@ -5,7 +5,6 @@ description: Learn how to display and customize labels in the Syncfusion® .NET 
 platform: maui
 control: SfSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI Slider

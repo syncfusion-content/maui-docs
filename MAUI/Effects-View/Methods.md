@@ -5,7 +5,6 @@ description: Learn about the methods available in the Syncfusion® .NET MAUI Eff
 platform: MAUI
 control: SfEffectsView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Methods in .NET MAUI Effects View

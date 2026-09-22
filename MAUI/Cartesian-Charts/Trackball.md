@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart trackball, maui chart trackball, .net maui trackball customization, syncfusion maui trackball chart, cartesian trackball maui, .net maui trackball visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Trackball in .NET MAUI Cartesian Chart

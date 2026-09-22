@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart AI forecasting, maui chart stock, .net maui chart data options, syncfusion maui chart AI prediction, .net maui chart stock visualization, .net maui cartesian chart AI stock forecasting support.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # AI Powered Stock Forecasting in .NET MAUI Cartesian Chart

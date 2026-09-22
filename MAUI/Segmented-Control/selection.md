@@ -5,7 +5,6 @@ description: Learn about segment item selection, customizations of the selected 
 platform: maui
 control: SfSegmentedControl
 documentation: ug
-appliesto: UI Component Suite
 ---
  
 # Selection in .NET MAUI Segmented Control

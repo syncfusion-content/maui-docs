@@ -5,7 +5,6 @@ description: Learn about the interactions supported by the Syncfusion® .NET MAU
 platform: MAUI
 control: SfEffectsView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Interaction in .NET MAUI Effects View

@@ -5,7 +5,6 @@ description: Learn about all events supported in Syncfusion® .NET MAUI Image Ed
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Image Editor

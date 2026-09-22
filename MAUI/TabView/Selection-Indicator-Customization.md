@@ -5,7 +5,6 @@ description: Learn all about selection indicator customization support in the Sy
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Customize Indicator in .NET MAUI Tab View 

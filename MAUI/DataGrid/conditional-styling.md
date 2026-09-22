@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui conditional styling, maui conditional styling
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Conditional Styling in .NET MAUI Data Grid

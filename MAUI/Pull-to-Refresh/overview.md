@@ -5,7 +5,6 @@ description: Learn about the introduction of Syncfusion® .NET MAUI Pull to Refr
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI Pull to Refresh

@@ -5,7 +5,6 @@ description: Learn about the Navigation Modes support in Syncfusion® .NET MAUI 
 platform: maui
 control: Rotator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Navigation Modes in .NET MAUI Rotator

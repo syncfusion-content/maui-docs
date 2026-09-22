@@ -5,7 +5,6 @@ description: Learn here all about Localization feature of Syncfusion® .NET MAUI
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI ListView

@@ -5,7 +5,6 @@ description: Learn how to use visual states to customize the .NET MAUI Radio But
 platform: MAUI
 control: SfRadioButton
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Visual States in .NET MAUI Radio Button

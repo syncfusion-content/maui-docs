@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui load more, maui load more
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Load More in .NET MAUI Data Grid

@@ -5,7 +5,6 @@ description: Explore suggestion display modes in Syncfusion® .NET MAUI Smart Te
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Suggestion Display Mode in .NET MAUI Smart Text Editor

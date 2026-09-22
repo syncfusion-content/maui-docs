@@ -5,7 +5,6 @@ description: Learn about the events available in Syncfusion® .NET MAUI Backdrop
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Backdrop Page

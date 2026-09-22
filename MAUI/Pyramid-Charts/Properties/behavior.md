@@ -5,7 +5,6 @@ description: This section lists the public API members for Behavior in the Syncf
 platform: maui
 control: SfPyramidChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Behavior API Reference for .NET MAUI Pyramid Chart

@@ -5,7 +5,6 @@ description: Labels in .NET MAUI Linear Gauge display scale values with customiz
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Labels in .NET MAUI Linear Gauge

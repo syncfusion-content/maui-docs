@@ -5,7 +5,6 @@ description: Learn how to add and customize labels, label placement, format, sty
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI DateTime Slider

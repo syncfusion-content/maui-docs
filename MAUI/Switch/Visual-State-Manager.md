@@ -6,7 +6,6 @@ platform: MAUI
 control: SfSwitch
 documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch visual states, maui switch visuals.
-appliesto: UI Component Suite
 ---
 
 # Visual State Manager in .NET MAUI Switch

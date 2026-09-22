@@ -5,7 +5,6 @@ description: Learn here all about the suggestions support in Syncfusion® .NET M
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Suggestions in .NET MAUI AI AssistView

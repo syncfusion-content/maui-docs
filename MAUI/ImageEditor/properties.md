@@ -5,7 +5,6 @@ description: Learn about all properties and events in Syncfusion® .NET MAUI Ima
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Image Editor

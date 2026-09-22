@@ -5,7 +5,6 @@ description: Learn about the overview of Syncfusion® .NET MAUI Maps control, in
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Maps Control

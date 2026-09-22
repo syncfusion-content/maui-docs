@@ -5,7 +5,6 @@ description: Learn about Migrating from Syncfusion® Xamarin Button to the Syncf
 platform: maui
 control: SfButton
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Button to .NET MAUI Button

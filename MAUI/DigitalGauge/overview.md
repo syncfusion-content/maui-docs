@@ -6,7 +6,6 @@ platform: maui
 control: DigitalGauge
 documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
-appliesto: UI Component Suite, Chart SDK
 ---
 # About Syncfusion® .NET MAUI Digital Gauge Control
 

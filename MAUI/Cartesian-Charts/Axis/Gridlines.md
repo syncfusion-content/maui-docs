@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart grid lines, .net maui cartesian chart grid customization, syncfusion maui cartesian chart grid lines, cartesian chart grid lines maui, .net maui cartesian chart axis grid lines, customize grid lines .net maui cartesian chart.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Grid Lines in .NET MAUI Cartesian Chart

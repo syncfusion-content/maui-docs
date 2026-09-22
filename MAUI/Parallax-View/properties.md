@@ -5,7 +5,6 @@ description: This section explains the properties with Syncfusion<sup>&reg;</sup
 platform: maui
 control: SfParallaxView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Parallax View

@@ -5,7 +5,6 @@ description: Learn about event support in Syncfusion® .NET MAUI Radio Button (S
 platform: MAUI
 control: SfRadioButton
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Radio Button

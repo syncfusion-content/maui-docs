@@ -5,7 +5,6 @@ description: Doughnut chart in .NET MAUI Circular Chart displays data as proport
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Doughnut Chart in .NET MAUI Circular Chart

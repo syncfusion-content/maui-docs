@@ -5,7 +5,6 @@ description: Learn about Appearance support in Syncfusion® .NET MAUI TreeView (
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Appearance in .NET MAUI TreeView

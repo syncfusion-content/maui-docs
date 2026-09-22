@@ -5,7 +5,6 @@ description: Learn about Workflows support in Syncfusion® .NET MAUI Kanban Boar
 platform: maui
 control: Kanban
 documentation: ug
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Workflows in .NET MAUI Kanban Board

@@ -5,7 +5,6 @@ description: Learn about migration from Syncfusion® Xamarin Backdrop Page to .N
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migration from Xamarin Backdrop Page to .NET MAUI Backdrop Page

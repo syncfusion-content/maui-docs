@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui stacked area chart, maui stacked area chart, stacked area chart customization .net maui, syncfusion maui stacked area chart, cartesian stacked area chart maui, .net maui chart stacked area visualization, .net maui cumulative area chart
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Stacked Area Chart in .NET MAUI Cartesian Chart

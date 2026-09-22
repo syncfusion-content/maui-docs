@@ -5,7 +5,6 @@ description: Learn how to explicitly create and configure data editors in Syncfu
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Explicit Data Editors in .NET MAUI DataForm

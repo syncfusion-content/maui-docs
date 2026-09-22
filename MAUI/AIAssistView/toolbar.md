@@ -5,7 +5,6 @@ description: Learn here all about the Toolbar support and its customization in S
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Toolbar in .NET MAUI AI AssistView

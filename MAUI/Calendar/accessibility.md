@@ -5,7 +5,6 @@ title: Accessibility in .NET MAUI Calendar control | Syncfusion®
 description: Learn about accessibility features in Syncfusion® .NET MAUI Calendar control for inclusive design and keyboard navigation.
 control: SfCalendar
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Accessibility in .NET MAUI Calendar control

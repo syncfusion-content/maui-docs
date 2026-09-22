@@ -5,7 +5,6 @@ description: This section explains the properties and events with Syncfusion® M
 platform: maui
 control: SfDigitalGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Digital Gauge

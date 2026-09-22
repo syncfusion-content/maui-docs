@@ -5,7 +5,6 @@ description: Learn how to configure and customize the header, icons, and text in
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Header Configuration in .NET MAUI Backdrop Page

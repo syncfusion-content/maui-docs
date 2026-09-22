@@ -5,7 +5,6 @@ description: Learn here all about Accessibility support in Syncfusion® .NET MAU
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Accessibility in .NET MAUI Chat

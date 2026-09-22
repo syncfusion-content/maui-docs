@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout font customization, syncfusion text input layout font maui, sftextinputlayout hintlabelstyle maui, sftextinputlayout helperlabelstyle maui, sftextinputlayout errorlabelstyle maui, .net maui labelstyle fontfamily
-appliesto: UI Component Suite
 ---
 
 # Font Customization in .NET MAUI Text Input Layout

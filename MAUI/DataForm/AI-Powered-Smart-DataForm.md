@@ -5,8 +5,6 @@ description: Learn how to build AI-powered smart data entry forms in .NET MAUI D
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
-
 ---
 
 # AI-Powered Smart Data Entry in .NET MAUI DataForm

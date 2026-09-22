@@ -5,7 +5,6 @@ description: Learn how to customize the track in the Syncfusion® .NET MAUI Rang
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Track in .NET MAUI Range Selector

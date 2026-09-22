@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart in .net maui, exploring sfCartesianChart in .net maui.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Cartesian Chart Control

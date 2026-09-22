@@ -5,7 +5,6 @@ description: Learn how to get started with Syncfusion® .NET MAUI Rotator (SfRot
 platform: maui 
 control: Rotator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Rotator

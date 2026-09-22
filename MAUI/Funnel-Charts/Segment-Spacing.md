@@ -5,7 +5,6 @@ description: Segment spacing in .NET MAUI Funnel Chart controls the gap between 
 platform: maui
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Segment Spacing in .NET MAUI Funnel Chart

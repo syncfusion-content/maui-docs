@@ -5,7 +5,6 @@ description: Two-Dimensional Symbology in .NET MAUI Barcode Generator supports 2
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Two-Dimensional Symbology in .NET MAUI Barcode Generator

@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui error bar chart, error bar chart customization .net maui, syncfusion maui error bar chart, cartesian error bar chart maui, .net maui chart error bar visualization, .net maui uncertainty chart.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Error Bar in .NET MAUI Cartesian Chart

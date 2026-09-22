@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart annotations, .net maui annotations customization, syncfusion maui cartesian chart annotations, .net maui cartesian chart text annotation, .net maui cartesian chart shape annotation, .net maui cartesian chart view annotation.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Annotations in .NET MAUI Cartesian Chart

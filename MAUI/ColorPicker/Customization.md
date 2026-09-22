@@ -6,7 +6,6 @@ platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, .net maui color picker customization, maui color picker customization
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Color Picker

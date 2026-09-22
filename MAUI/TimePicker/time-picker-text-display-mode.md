@@ -5,7 +5,6 @@ title: Text Display Mode in .NET MAUI Time Picker control | Syncfusion®
 description: Configure text display modes including Default, Fade, Shrink, and FadeAndShrink in the .NET MAUI Time Picker.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Text Display Mode in .NET MAUI Time Picker

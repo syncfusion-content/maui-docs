@@ -5,7 +5,6 @@ description: Learn here all about adding the Tooltip feature of Syncfusion® .NE
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tooltip in .NET MAUI DateTime Range Slider

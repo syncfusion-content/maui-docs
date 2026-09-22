@@ -5,7 +5,6 @@ description: Learn all about the AI-driven predictive data entry feature in Sync
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # AI-Driven Predictive Data Entry in .NET MAUI Data Grid

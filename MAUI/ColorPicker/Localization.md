@@ -6,7 +6,6 @@ platform: MAUI
 control: SfColorPicker
 documentation: UG
 keywords : .net maui color picker, maui color picker, color picker, color palette, localization
-appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI Color Picker

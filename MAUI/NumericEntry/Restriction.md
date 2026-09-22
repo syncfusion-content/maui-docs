@@ -5,7 +5,6 @@ description: Learn how to restrict value changes in the Syncfusion® .NET MAUI N
 platform: maui
 control: SfNumericEntry
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Value Change Restriction in .NET MAUI Numeric Entry

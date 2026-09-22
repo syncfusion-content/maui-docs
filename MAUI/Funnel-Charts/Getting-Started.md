@@ -6,7 +6,6 @@ keywords: maui funnel chart, getting started, setup, project creation, initializ
 platform: maui
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Funnel Chart

@@ -5,7 +5,6 @@ description: Learn about right-to-left (RTL) directionality support in the Syncf
 platform: maui
 control: SfButton
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI Button

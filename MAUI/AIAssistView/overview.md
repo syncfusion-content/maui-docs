@@ -5,7 +5,6 @@ description: Learn here all about introduction to the Sncfusion® .NET MAUI AI A
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI AI AssistView

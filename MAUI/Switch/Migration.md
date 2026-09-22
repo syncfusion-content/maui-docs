@@ -5,7 +5,6 @@ description: Learn about migrating from Syncfusion® Xamarin Switch to the Syncf
 platform: MAUI
 control: SfSwitch
 documentation: UG
-appliesto: UI Component Suite
 ---  
 
 # Migrating from Xamarin Switch to .NET MAUI Switch

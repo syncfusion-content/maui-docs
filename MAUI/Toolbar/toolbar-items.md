@@ -5,7 +5,6 @@ description: Learn about Toolbar items in Syncfusion® .NET MAUI Toolbar (SfTool
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Toolbar Items in .NET MAUI Toolbar

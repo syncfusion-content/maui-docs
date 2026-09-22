@@ -5,7 +5,6 @@ description: Learn here all about EmptyView support in Syncfusion® .NET MAUI Li
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Empty view in .NET MAUI ListView

@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, Copy to clipboard, Cut to clipboard and Paste to clipboard
-appliesto: UI Component Suite, Grid SDK
 ---
 
 

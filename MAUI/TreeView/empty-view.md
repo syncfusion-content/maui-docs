@@ -5,7 +5,6 @@ description: Learn here about EmptyView support in Syncfusion® .NET MAUI TreeVi
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Empty view in .NET MAUI TreeView

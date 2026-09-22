@@ -5,7 +5,6 @@ description: Learn how to customize appearance, colors, fonts, and text in Syncf
 platform: maui
 control: SfBadgeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Badge View

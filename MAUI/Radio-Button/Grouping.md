@@ -6,7 +6,6 @@ platform: MAUI
 control: SfRadioButton
 documentation: UG
 keywords : .net maui radio button, maui radio button, maui radio button group, maui radio button grouping, maui radio group.
-appliesto: UI Component Suite
 ---
 
 # Grouping in .NET MAUI Radio Button

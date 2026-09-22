@@ -5,7 +5,6 @@ description: Learn about zooming and panning actions on images in Syncfusion® .
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Zoom in .NET MAUI Image Editor

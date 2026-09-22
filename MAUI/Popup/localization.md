@@ -5,7 +5,6 @@ description: Learn here all about Localization support in the Syncfusion® .NET 
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Localization in .NET MAUI Popup

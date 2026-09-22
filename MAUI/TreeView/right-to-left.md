@@ -5,7 +5,6 @@ description: Learn how to enable Right-to-Left (RTL) layout support in the Syncf
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Right-to-Left in .NET MAUI TreeView

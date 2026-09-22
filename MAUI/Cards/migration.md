@@ -5,7 +5,6 @@ description: Learn about migration from Syncfusion® Xamarin Cards control to .N
 platform: maui
 control: SfCards
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migration from Xamarin Cards to .NET MAUI Cards

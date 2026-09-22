@@ -5,7 +5,6 @@ description: Pointers in .NET MAUI Linear Gauge indicate values along the gauge 
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Pointers in .NET MAUI Linear Gauge

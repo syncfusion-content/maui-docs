@@ -5,7 +5,6 @@ description: Learn how to enable the Liquid Glass visual effect on Syncfusion® 
 platform: MAUI
 control: SfRadialMenu
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Radial Menu

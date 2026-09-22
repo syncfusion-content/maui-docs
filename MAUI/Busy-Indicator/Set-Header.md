@@ -6,7 +6,6 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator title, maui busy indicator title, maui busy indicator header, maui busy indicator title placement
-appliesto: UI Component Suite
 ---
 
 # Set Header in .NET MAUI Busy Indicator

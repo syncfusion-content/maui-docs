@@ -5,7 +5,6 @@ description: Learn about events in Syncfusion® .NET MAUI Step Progress Bar (SfS
 platform: maui
 control: SfStepProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Step Progress Bar

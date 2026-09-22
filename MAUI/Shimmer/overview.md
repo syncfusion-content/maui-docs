@@ -5,7 +5,6 @@ description: Learn about introduction of Syncfusion® .NET MAUI Shimmer control 
 platform: maui
 control: SfShimmer
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Shimmer Control

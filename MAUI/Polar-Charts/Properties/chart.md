@@ -5,7 +5,6 @@ description: Polar Chart visualizes data using polar coordinates, making it easy
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polar Chart API in .NET MAUI Polar Chart

@@ -5,7 +5,6 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: MAUI
 control: SfBadgeView
 documentation: UG
-appliesto: UI Component Suite
 
 ---
 

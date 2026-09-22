@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart zooming and panning, .net maui zooming and panning customization, syncfusion maui chart zooming and panning, cartesian zooming and panning maui, .net maui cartesian chart zoom and pan visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Zooming and Panning in .NET MAUI Cartesian Chart

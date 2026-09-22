@@ -6,7 +6,6 @@ keywords: maui funnel chart, appearance, palette, gradient, title, customization
 platform: maui
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Appearance in .NET MAUI Funnel Chart

@@ -6,7 +6,6 @@ platform: maui
 control: SfTextInputLayout
 documentation: ug
 keywords: .net maui textinputlayout events, syncfusion text input layout password toggled maui, sftextinputlayout passwordvisibilitytoggled maui, .net maui text input layout eventargs, sftextinputlayout ispasswordvisible maui
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Text Input Layout

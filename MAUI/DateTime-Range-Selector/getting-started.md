@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI DateTime R
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI DateTime Range Selector

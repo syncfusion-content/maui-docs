@@ -5,7 +5,6 @@ description: Learn about the validation support in the Syncfusion® .NET MAUI Ma
 platform: maui
 control: SfMaskedEntry
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Validation in .NET MAUI Masked Entry

@@ -5,7 +5,6 @@ description: Learn all about the nested tab support in Syncfusion® .NET MAUI Ta
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Nested Tab in .NET MAUI Tab View

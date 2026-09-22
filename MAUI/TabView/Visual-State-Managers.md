@@ -5,7 +5,6 @@ description: Learn how to use the Visual State Manager to customize the appearan
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Visual State Manager in .NET MAUI Tab View

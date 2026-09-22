@@ -5,7 +5,6 @@ description: Bubbles in .NET MAUI Maps visualize data using scalable markers, ma
 platform: MAUI
 control: SfMaps
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Bubbles in .NET MAUI Maps

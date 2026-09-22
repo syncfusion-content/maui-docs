@@ -5,7 +5,6 @@ description: Learn all about header display mode support in the Syncfusion® .NE
 platform: MAUI
 control: SfTabView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Header Display Mode in .NET MAUI Tab View

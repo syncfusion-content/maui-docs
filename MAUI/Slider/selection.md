@@ -5,7 +5,6 @@ description: Learn how to configure value selection in the Syncfusion® .NET MAU
 platform: maui
 control: SfSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Value Selection in .NET MAUI Slider

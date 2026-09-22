@@ -5,7 +5,6 @@ description: Learn here all about linear arrangement support in Syncfusion® .NE
 platform : maui
 control : Carousel
 documentation : ug
-appliesto: UI Component Suite
 ---
 
 # Linear Arrangement in .NET MAUI Carousel

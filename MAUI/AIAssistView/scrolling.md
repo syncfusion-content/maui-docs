@@ -5,7 +5,6 @@ description: Learn how to manage scrolling in the Syncfusion® .NET MAUI AI Assi
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Scrolling in .NET MAUI AI AssistView

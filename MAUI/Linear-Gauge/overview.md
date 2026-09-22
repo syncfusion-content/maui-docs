@@ -5,7 +5,6 @@ description: Learn about the overview of Syncfusion® .NET MAUI Linear Gauge con
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Linear Gauge Control

@@ -5,7 +5,6 @@ description: Learn here all about Attachment button support in Syncfusion® .NET
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Attachment button in .NET MAUI Chat

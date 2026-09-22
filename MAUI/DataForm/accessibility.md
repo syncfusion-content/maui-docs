@@ -5,7 +5,6 @@ description: Learn about accessibility features, screen reader support, and keyb
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Accessibility in .NET MAUI DataForm

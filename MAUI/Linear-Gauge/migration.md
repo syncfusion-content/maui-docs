@@ -5,7 +5,6 @@ description: Migrate from Xamarin.Forms SfLinearGauge to .NET MAUI SfLinearGauge
 platform: MAUI
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---  
 
 # Migrate from Xamarin.Forms SfLinearGauge to .NET MAUI SfLinearGauge

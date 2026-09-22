@@ -5,7 +5,6 @@ description: This section lists the public API members for Chart in the Syncfusi
 platform: maui
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Chart API Reference for .NET MAUI Funnel Chart

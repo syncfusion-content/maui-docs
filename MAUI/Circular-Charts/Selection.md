@@ -5,7 +5,6 @@ description: Selection in .NET MAUI Circular Chart allows users to highlight and
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Selection in .NET MAUI Circular Chart

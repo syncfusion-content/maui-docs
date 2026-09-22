@@ -5,7 +5,6 @@ description: Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart with up
 platform: MAUI
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart

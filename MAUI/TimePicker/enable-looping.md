@@ -5,7 +5,6 @@ title: Looping in .NET MAUI Time Picker control | Syncfusion®
 description: Enable seamless looping support to navigate between first and last items in the .NET MAUI Time Picker.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Looping Support in .NET MAUI Time Picker

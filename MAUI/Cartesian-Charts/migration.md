@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: migrate from xamarin.Forms sfChart to .net maui sfCartesianChart, transitioning from xamarin.Forms sfChart to .net maui sfCartesianChart, move from xamarin.Forms sfChart to .net maui sfCartesianChart, upgrading xamarin.Forms s to .net maui sfCartesianChart.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI Cartesian Chart

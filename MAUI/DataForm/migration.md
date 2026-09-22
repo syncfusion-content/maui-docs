@@ -5,7 +5,6 @@ description: Learn about migration from Syncfusion® Xamarin DataForm to .NET MA
 platform: maui
 control: SfDataForm
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Migration from Xamarin DataForm to .NET MAUI DataForm

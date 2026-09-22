@@ -6,7 +6,6 @@ platform: maui
 control: Chips
 documentation: ug
 keywords: .net maui sfchipgroup datatemplateselector, syncfusion chips template selector maui, sfchipgroup itemtemplate maui, .net maui datatemplate selector, sfchipgroup template binding maui, .net maui chip data template
-appliesto: UI Component Suite
 ---
 
 # DataTemplateSelector in .NET MAUI Chips

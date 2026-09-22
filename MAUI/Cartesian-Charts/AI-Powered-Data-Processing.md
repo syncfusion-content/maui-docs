@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart AI data cleaning, maui chart data, .net maui chart data preprocessing, syncfusion maui chart AI preprocessing, .net maui chart data visualization, .net maui cartesian chart AI empty point preprocessing support.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # AI Data Cleaning and Preprocessing in .NET MAUI Cartesian Chart

@@ -5,7 +5,6 @@ title: Customizations in .NET MAUI Date Picker control | Syncfusion®
 description: Learn about customizations in Syncfusion® .NET MAUI Date Picker control for headers, footers, and visual elements.
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Customizations in .NET MAUI Date Picker control

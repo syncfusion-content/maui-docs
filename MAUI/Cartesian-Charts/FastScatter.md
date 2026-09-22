@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui fast scatter chart, .net maui performance scatter chart, fast scatter chart customization .net maui, syncfusion maui fast scatter chart, cartesian fast scatter chart maui, cartesian performance scatter chart maui, .net maui chart fast scatter visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Fast Scatter Chart in .NET MAUI Cartesian Chart

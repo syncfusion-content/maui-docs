@@ -5,7 +5,6 @@ description: Learn how to size the side pane in the Syncfusion® .NET MAUI Navig
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Side Pane Sizing in .NET MAUI Navigation Drawer

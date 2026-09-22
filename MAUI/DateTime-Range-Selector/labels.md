@@ -5,7 +5,6 @@ description: Learn how to show and customize labels in the .NET MAUI DateTime Ra
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Labels in .NET MAUI DateTime Range Selector

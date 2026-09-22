@@ -5,7 +5,6 @@ description: Learn about populating segment items with text, icons, or a combina
 platform: maui
 control: Segmented (SfSegmented) Control
 documentation: ug
-appliesto: UI Component Suite
 ---
  
 # Create Segment Content in .NET MAUI Segmented Control

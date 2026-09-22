@@ -5,7 +5,6 @@ description: Learn how to enable and customize the Liquid Glass Effect in the Sy
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Range Selector

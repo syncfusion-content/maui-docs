@@ -5,7 +5,6 @@ description: Learn about the clicked event in the Syncfusion® .NET MAUI Button 
 platform: maui
 control: SfButton
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Button

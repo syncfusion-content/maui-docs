@@ -5,7 +5,6 @@ description: Learn here all about Item Border Customization support in Syncfusio
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Item Border Customization in .NET MAUI ListView

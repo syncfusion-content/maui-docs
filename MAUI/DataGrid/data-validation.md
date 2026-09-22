@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui data validation, maui data validation
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Data Validation in .NET MAUI Data Grid

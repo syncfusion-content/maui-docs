@@ -5,7 +5,6 @@ description: Mirroring in .NET MAUI Linear Gauge reverses the gauge direction an
 platform: maui
 control: SfLinearGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Mirroring in .NET MAUI Linear Gauge

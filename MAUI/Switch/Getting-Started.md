@@ -5,8 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Switch (Sf
 platform: MAUI
 control: SfSwitch
 documentation: UG
-keywords : .net maui switch, maui switch, .net maui switch control, maui switch control.
-appliesto: UI Component Suite
+keywords : .net maui switch, maui switch, .net maui switch control, maui switch control.  
 ---
 
 # Getting Started with .NET MAUI Switch

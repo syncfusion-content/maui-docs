@@ -5,7 +5,6 @@ title: Time Interval in .NET MAUI Time Picker control | Syncfusion®
 description: Learn how to configure hour, minute, and second intervals to control time selection behavior in the Syncfusion .NET MAUI Time Picker control.
 control: SfTimePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Time Interval in .NET MAUI Time Picker

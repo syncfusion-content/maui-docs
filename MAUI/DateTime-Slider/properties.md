@@ -5,7 +5,6 @@ description: Learn about the properties and events available in the Syncfusion®
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI DateTime Slider

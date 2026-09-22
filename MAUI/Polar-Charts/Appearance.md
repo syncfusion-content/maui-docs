@@ -5,7 +5,6 @@ description: Appearance in .NET MAUI Polar Chart allows customization of chart v
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Appearance in .NET MAUI Polar Chart

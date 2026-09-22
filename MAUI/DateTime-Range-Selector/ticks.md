@@ -5,7 +5,6 @@ description: Learn how to add and customize major and minor ticks in the Syncfus
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Tick in .NET MAUI DateTime Range Selector

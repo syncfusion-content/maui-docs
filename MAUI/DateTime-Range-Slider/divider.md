@@ -5,7 +5,6 @@ description: Learn how to show and customize dividers in the .NET MAUI DateTime 
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Dividers in .NET MAUI DateTime Range Slider

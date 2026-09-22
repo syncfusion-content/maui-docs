@@ -5,7 +5,6 @@ description: Learn about available events in Syncfusion® .NET MAUI Cards (SfCar
 platform: MAUI
 control: Cards
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Cards

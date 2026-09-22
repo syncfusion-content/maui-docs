@@ -5,7 +5,6 @@ description: Learn how to customize appearance, colors, sizes, and shapes in Syn
 platform: maui
 control: SfAvatarView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Avatar View

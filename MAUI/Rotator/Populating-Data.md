@@ -5,7 +5,6 @@ description: Learn about the Populating Data support in Syncfusion® .NET MAUI R
 platform: maui
 control: Rotator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Populating Data in .NET MAUI Rotator

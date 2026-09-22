@@ -5,7 +5,6 @@ description: Learn how to set the main content of the Syncfusion® .NET MAUI Nav
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Setting Main Content in .NET MAUI Navigation Drawer

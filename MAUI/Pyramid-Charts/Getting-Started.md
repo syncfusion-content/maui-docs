@@ -6,7 +6,6 @@ keywords: maui pyramid chart, getting started, setup, project creation, initiali
 platform: maui
 control: SfPyramidChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Pyramid Chart

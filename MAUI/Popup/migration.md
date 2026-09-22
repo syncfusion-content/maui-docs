@@ -5,7 +5,6 @@ description: Learn here all about Migrating from Syncfusion® Xamarin SfPopupLay
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Migrate from Xamarin.Forms PopupLayout to .NET MAUI Popup

@@ -5,7 +5,6 @@ description: Learn here all about Migrating from Syncfusion® Xamarin TreeView t
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---  
 
 # Migrate from Xamarin.Forms TreeView to .NET MAUI TreeView

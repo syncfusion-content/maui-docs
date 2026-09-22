@@ -5,7 +5,6 @@ description: Selection in .NET MAUI Sunburst Chart allows chart segments to be h
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 # Selection in .NET MAUI Sunburst Chart
 

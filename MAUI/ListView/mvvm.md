@@ -5,7 +5,6 @@ description: Learn here all about Working with MVVM support in Syncfusion® .NET
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # MVVM in .NET MAUI ListView

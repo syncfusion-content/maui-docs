@@ -5,7 +5,6 @@ description: Migrate from Xamarin.Forms SfChart to .NET MAUI Funnel Chart with u
 platform: MAUI
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI Funnel Chart

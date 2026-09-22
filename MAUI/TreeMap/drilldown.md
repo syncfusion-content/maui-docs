@@ -5,7 +5,6 @@ description: Drilldown in .NET MAUI TreeMap enables interactive navigation throu
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Drilldown in .NET MAUI TreeMap

@@ -5,7 +5,6 @@ description: This section lists the public API members for series in the Syncfus
 platform: maui
 control: SfCartesianChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # ColumnSeries API Reference in .NET MAUI Cartesian Chart

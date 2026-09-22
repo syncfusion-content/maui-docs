@@ -5,7 +5,6 @@ description: Learn here all about Working with Syncfusion® .NET MAUI TreeView (
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Working with .NET MAUI TreeView

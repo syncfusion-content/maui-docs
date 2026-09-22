@@ -5,7 +5,6 @@ description: Appearance in .NET MAUI Sunburst Chart allows customization of char
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Appearance in .NET MAUI Sunburst Chart

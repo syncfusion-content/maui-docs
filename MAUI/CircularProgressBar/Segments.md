@@ -5,7 +5,6 @@ description: Learn about segmented progress visualization and multiple progress 
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Segments in .NET MAUI Circular Progress Bar

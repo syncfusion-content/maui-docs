@@ -5,7 +5,6 @@ description: Radial Range in .NET MAUI Radial Gauge highlights specific value in
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Radial Range in .NET MAUI Radial Gauge

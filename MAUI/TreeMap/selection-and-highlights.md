@@ -5,7 +5,6 @@ description: Selection and Highlights in .NET MAUI TreeMap allow TreeMap items t
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
  
 # Selection and Highlights in .NET MAUI TreeMap

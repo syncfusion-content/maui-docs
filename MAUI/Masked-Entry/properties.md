@@ -5,7 +5,6 @@ description: This section explains the properties, events, and methods with Sync
 platform: MAUI
 control: SfMaskedEntry
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Masked Entry

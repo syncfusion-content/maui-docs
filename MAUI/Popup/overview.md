@@ -5,7 +5,6 @@ description: Learn here all about the introduction of Syncfusion® .NET MAUI Pop
 platform: MAUI
 control: SfPopup
 documentation: ug
-appliesto: UI Component Suite
 --- 
 
 # Overview of .NET MAUI Popup

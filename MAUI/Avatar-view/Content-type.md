@@ -5,7 +5,6 @@ description: Learn about supported avatar content types in Syncfusion® .NET MAU
 platform: maui
 control: SfAvatarView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Content Types in .NET MAUI Avatar View

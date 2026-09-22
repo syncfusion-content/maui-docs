@@ -6,7 +6,6 @@ platform: MAUI
 control: SfSmartDataGrid
 documentation: UG
 keywords : maui datagrid, ai assist, natural language commands, sorting, grouping, filtering, highlighting
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # AI-Powered features in .NET MAUI Smart Data Grid

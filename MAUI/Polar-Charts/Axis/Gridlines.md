@@ -5,7 +5,6 @@ description: Grid lines in .NET MAUI Polar Chart provide visual references acros
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Grid Lines in .NET MAUI Polar Chart

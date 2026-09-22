@@ -5,7 +5,6 @@ description: Learn here all about visual customization support in Syncfusion® .
 platform: MAUI
 control: SfRadioButton
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Visual Customization in .NET MAUI Radio Button 

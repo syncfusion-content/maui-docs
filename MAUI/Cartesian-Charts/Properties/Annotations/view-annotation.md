@@ -5,7 +5,6 @@ description: This section lists the public API members for Annotations in the Sy
 platform: maui
 control: SfCartesianChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # ViewAnnotation API Reference for .NET MAUI Cartesian Chart

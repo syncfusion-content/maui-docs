@@ -5,7 +5,6 @@ description: Learn here all about introduction of the Syncfusion® .NET MAUI Acc
 platform: MAUI
 control: SfAccordion
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI Accordion

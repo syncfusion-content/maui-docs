@@ -5,7 +5,6 @@ description: Learn about events in Syncfusion® .NET MAUI Smart Text Editor cont
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Events in .NET MAUI Smart Text Editor

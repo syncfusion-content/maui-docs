@@ -5,7 +5,6 @@ description: Learn how to configure numeric intervals in the Syncfusion® .NET M
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Interval in .NET MAUI Range Selector

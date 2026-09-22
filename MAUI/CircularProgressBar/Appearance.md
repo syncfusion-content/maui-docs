@@ -5,7 +5,6 @@ description: Learn about appearance customization including angles, colors, thic
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Appearance in .NET MAUI Circular Progress Bar

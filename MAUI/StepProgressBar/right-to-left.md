@@ -5,7 +5,6 @@ description: Learn about right-to-left support in Syncfusion® .NET MAUI Step Pr
 platform: maui
 control: SfStepProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
  
 # Right-to-Left in .NET MAUI Step Progress Bar

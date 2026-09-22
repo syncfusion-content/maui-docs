@@ -5,7 +5,6 @@ description: Learn how to enable liquid glass effect in Syncfusion® .NET MAUI C
 platform: MAUI
 control: SfCardView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Cards

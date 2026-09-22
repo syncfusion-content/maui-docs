@@ -6,7 +6,6 @@ platform: MAUI
 control: SfBusyIndicator
 documentation: UG
 keywords : .net maui busy indicator duration, maui busy indicator duration
-appliesto: UI Component Suite
 ---
 
 # Animation Duration in .NET MAUI Busy Indicator

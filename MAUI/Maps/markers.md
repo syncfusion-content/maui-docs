@@ -6,7 +6,6 @@ platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui interactive map marker.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Markers in .NET MAUI Maps

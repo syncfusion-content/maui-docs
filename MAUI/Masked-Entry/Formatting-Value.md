@@ -5,7 +5,6 @@ description: Learn how to format the value in the Syncfusion® .NET MAUI Masked 
 platform: maui
 control: SfMaskedEntry
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Formatting Value in .NET MAUI Masked Entry

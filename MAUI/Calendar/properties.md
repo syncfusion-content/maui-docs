@@ -5,7 +5,6 @@ description: Learn about the properties, methods, and events of the Syncfusion .
 platform: maui
 control: SfCalendar
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Properties in .NET MAUI Calendar control

@@ -5,7 +5,6 @@ description: Learn here about the introduction of Syncfusion® Essential Studio 
 platform: MAUI
 control: SfEffectsView
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Effects View Control

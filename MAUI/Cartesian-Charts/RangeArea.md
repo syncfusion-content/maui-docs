@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui range area chart, maui range area chart, .net maui chart range area type, range area chart customization .net maui, syncfusion maui range area chart, cartesian range area chart maui, .net maui chart range area visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Range Area Chart in .NET MAUI Cartesian Chart

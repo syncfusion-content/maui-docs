@@ -5,7 +5,6 @@ description: Learn more about the various mask types available in the Syncfusion
 platform: maui
 control: SfMaskedEntry
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Mask Types in .NET MAUI Masked Entry

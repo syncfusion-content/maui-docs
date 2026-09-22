@@ -5,7 +5,6 @@ description: Learn about the Duration property in the Syncfusion® .NET MAUI Nav
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
-appliesto: UI Component Suite
 ---
 # Animation Duration in .NET MAUI Navigation Drawer
 

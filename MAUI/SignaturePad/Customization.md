@@ -5,7 +5,6 @@ description: Learn here about customization with .NET MAUI Signature Pad (SfSign
 platform: maui
 control: SfSignaturePad
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Signature Pad

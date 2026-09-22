@@ -5,7 +5,6 @@ description: Explode segments in .NET MAUI Circular Chart highlights specific da
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Explode Segments in .NET MAUI Circular Chart

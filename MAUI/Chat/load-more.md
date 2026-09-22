@@ -5,7 +5,6 @@ description: Learn here all about how to load more conversations in Syncfusion®
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Load More in .NET MAUI Chat

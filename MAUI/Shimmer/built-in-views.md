@@ -5,7 +5,6 @@ description: Learn about built-in shimmer view types in Syncfusion® .NET MAUI S
 platform: maui
 control: SfShimmer
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Built-in Views in .NET MAUI Shimmer

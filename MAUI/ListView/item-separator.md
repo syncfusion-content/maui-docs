@@ -5,7 +5,6 @@ description: Learn all about Item Separator support in Syncfusion® .NET MAUI Li
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Item separator customization in .NET MAUI ListView

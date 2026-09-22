@@ -5,7 +5,6 @@ description: Learn here all about Grouping support in Syncfusion® .NET MAUI Lis
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Grouping in .NET MAUI ListView

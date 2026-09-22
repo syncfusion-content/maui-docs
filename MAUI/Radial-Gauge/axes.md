@@ -5,7 +5,6 @@ description: Axis in .NET MAUI Radial Gauge defines the gauge scale and supports
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis in .NET MAUI Radial Gauge

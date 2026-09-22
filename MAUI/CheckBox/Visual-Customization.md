@@ -5,7 +5,6 @@ description: Learn about customization support in Syncfusion® Essential Studio 
 platform: MAUI
 control: SfCheckBox
 documentation: UG
-appliesto: UI Component Suite
 ---
 
 # Visual Customization in .NET MAUI CheckBox

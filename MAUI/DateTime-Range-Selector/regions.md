@@ -5,7 +5,6 @@ description: Learn how to customize active and inactive regions in the .NET MAUI
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Regions in .NET MAUI DateTime Range Selector

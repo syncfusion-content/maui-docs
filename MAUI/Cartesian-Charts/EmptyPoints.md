@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart empty points, .net maui empty points customization, syncfusion maui chart empty points, maui chart empty points, .net maui chart empty points visualization, cartesian empty points maui, missing data handling
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Empty Points in .NET MAUI Cartesian Chart

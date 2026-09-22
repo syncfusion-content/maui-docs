@@ -5,7 +5,6 @@ title: Events in .NET MAUI Date Picker control | Syncfusion®
 description: Learn about events in Syncfusion® .NET MAUI Date Picker control for SelectionChanged and user interactions.
 control: SfDatePicker
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Events in .NET MAUI Date Picker control

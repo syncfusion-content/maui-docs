@@ -5,7 +5,6 @@ description: Learn here all about introduction of Syncfusion® .NET MAUI Expande
 platform: MAUI
 control: SfExpander
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Overview of .NET MAUI Expander

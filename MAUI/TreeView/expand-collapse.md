@@ -5,7 +5,6 @@ description: Learn here all about Expand and Collapse support in the SyncfusionÂ
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Expand and collapse in .NET MAUI TreeView

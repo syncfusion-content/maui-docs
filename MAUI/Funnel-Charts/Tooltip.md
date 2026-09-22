@@ -5,7 +5,6 @@ description: Tooltip in .NET MAUI Funnel Chart displays detailed information for
 platform: maui
 control: SfFunnelChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Funnel Chart

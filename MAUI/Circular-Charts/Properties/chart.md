@@ -5,7 +5,6 @@ description: Create interactive circular charts in .NET MAUI to visualize propor
 platform: maui
 control: SfCircularChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Chart API in .NET MAUI Circular Chart

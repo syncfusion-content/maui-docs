@@ -5,7 +5,6 @@ description: Learn here all about styles customization in Syncfusion® .NET MAUI
 platform: MAUI
 control: SfChat
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Styles in .NET MAUI Chat

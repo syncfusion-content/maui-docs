@@ -5,7 +5,6 @@ description: Learn here all about Selection support in Syncfusion® .NET MAUI Li
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Selection in .NET MAUI ListView

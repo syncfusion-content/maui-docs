@@ -5,7 +5,6 @@ description: Learn about all about Item Size Customization support in the Syncfu
 platform: MAUI
 control: SfListView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Item Size Customization in .NET MAUI ListView

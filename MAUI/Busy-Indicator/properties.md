@@ -5,7 +5,6 @@ description: This section explains the properties and methods with Syncfusion® 
 platform: MAUI
 control: SfBusyIndicator
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # API Reference for .NET MAUI Busy Indicator

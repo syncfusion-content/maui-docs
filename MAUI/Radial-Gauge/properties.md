@@ -5,7 +5,6 @@ description: This section explains the properties with Syncfusion<sup>&reg;</sup
 platform: maui
 control: SfRadialGauge
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Radial Gauge

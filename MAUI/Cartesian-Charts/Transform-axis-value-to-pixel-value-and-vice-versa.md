@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart transform axis value to pixel, maui chart axis value to pixel conversion, .net maui chart axis pixel to value, syncfusion maui chart axis coordinate transformation, sfCartesianChart axis value to pixel conversion in .net maui
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Convert Axis and Pixel Values in .NET MAUI Chart

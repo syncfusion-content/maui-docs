@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Sunburst C
 platform: maui
 control: SfSunburstChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Sunburst Chart

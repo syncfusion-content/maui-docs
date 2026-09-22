@@ -5,7 +5,6 @@ description: Learn here all about Load on Demand support in Syncfusion® .NET MA
 platform: MAUI
 control: SfTreeView
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Load on Demand in .NET MAUI TreeView

@@ -6,7 +6,6 @@ platform: maui
 control: SfChip
 documentation: ug
 keywords: .net maui sfchipgroup populating items, syncfusion chips itemssource maui, sfchipgroup items maui, .net maui sfchip list binding, .net maui chip displaymemberpath, sfchipgroup chip type maui
-appliesto: UI Component Suite
 ---
 
 # Populating Items in .NET MAUI Chips

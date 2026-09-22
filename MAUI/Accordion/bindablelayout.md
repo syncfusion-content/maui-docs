@@ -5,7 +5,6 @@ description: Learn here about how to bind AccordionItem to Syncfusion® .NET MAU
 platform: MAUI
 control: SfAccordion
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # BindableLayout in .NET MAUI Accordion

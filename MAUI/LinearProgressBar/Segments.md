@@ -5,7 +5,6 @@ description: Learn about segmented progress visualization and multiple progress 
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Segments in .NET MAUI Linear Progress Bar

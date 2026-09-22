@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui bubble chart, maui bubble chart, bubble chart customization .net maui, syncfusion maui bubble chart, cartesian bubble chart maui, .net maui chart bubble visualization.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Bubble Chart in .NET MAUI Cartesian Chart

@@ -5,7 +5,6 @@ platform: maui
 description: Learn about events in Syncfusion® .NET MAUI Calendar control including ViewChanged, SelectionChanged, and gesture events.
 control: SfCalendar
 documentation: ug
-appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Events in .NET MAUI Calendar control

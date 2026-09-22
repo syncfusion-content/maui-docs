@@ -5,7 +5,6 @@ description: Tooltip in .NET MAUI Polar Chart displays detailed information for 
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Polar Chart

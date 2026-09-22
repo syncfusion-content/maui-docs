@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui row drag and drop, maui row drag and drop
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Row Drag and Drop in .NET MAUI Data Grid

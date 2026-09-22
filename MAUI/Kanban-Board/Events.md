@@ -5,7 +5,6 @@ description: Learn about Events support in Syncfusion® .NET MAUI Kanban Board, 
 platform: maui
 control: Kanban
 documentation: ug
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Events in .NET MAUI Kanban Board

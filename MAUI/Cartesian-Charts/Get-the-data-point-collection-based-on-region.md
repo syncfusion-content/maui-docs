@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart data point collection, get data points by region, sfCartesianChart get data points rectangle, .net maui chart point collection by axis range
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Get Region Data Points in .NET MAUI Cartesian Chart

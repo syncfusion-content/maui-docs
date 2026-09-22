@@ -5,7 +5,6 @@ description: Learn here all about customization features support in Syncfusion®
 platform: MAUI
 control: SfPullToRefresh
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Customization in .NET MAUI Pull to Refresh

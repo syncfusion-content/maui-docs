@@ -5,7 +5,6 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: Kanban
 documentation: ug
-appliesto: UI Component Suite, Gantt SDK
 ---
 
 # About Syncfusion .NET MAUI Kanban Board control

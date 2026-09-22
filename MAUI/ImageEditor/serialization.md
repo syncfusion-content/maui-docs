@@ -5,7 +5,6 @@ description: Learn about serializing and deserializing annotations in Syncfusion
 platform: MAUI
 control: SfImageEditor
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Serialization in .NET MAUI Image Editor

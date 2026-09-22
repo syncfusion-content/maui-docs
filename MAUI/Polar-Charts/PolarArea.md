@@ -5,7 +5,6 @@ description: Polar Area Chart in .NET MAUI Polar Chart displays data as proporti
 platform: maui
 control: SfPolarChart
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polar Area Chart in .NET MAUI Polar Chart

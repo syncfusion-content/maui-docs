@@ -5,7 +5,6 @@ description: Learn how to enable and customize the liquid glass effect in the .N
 platform: MAUI
 control: SfRangeSlider
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Liquid Glass Effect in .NET MAUI Range Slider

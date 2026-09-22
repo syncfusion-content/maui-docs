@@ -5,7 +5,6 @@ description: Learn how to configure and customize the reveal height in Syncfusio
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Reveal Height Customization in .NET MAUI Backdrop Page

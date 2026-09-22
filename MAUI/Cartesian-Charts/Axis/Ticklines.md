@@ -6,7 +6,6 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart tick lines, .net maui cartesian chart tick customization, .net maui cartesian chart tickline guide, syncfusion maui cartesian chart tick lines, cartesian chart tick lines maui, .net maui cartesian chart axis tick lines, customize tick lines .net maui cartesian chart.
-appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tick Lines in .NET MAUI Cartesian Chart

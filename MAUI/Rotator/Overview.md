@@ -5,7 +5,6 @@ description: Learn here all about introduction of Syncfusion® Essential Studio 
 platform: maui 
 control: Rotator 
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # About Syncfusion® .NET MAUI Rotator Control 

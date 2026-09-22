@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Circular P
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Getting Started with .NET MAUI Circular Progress Bar

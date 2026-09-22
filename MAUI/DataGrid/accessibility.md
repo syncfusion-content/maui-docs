@@ -6,7 +6,6 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui accessibility, maui accessibility
-appliesto: UI Component Suite, Grid SDK
 ---
 
 # Accessibility in .NET MAUI Data Grid

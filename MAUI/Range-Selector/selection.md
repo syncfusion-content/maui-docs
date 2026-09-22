@@ -5,7 +5,6 @@ description: Learn how to configure range selection behavior in the Syncfusion®
 platform: maui
 control: SfRangeSelector
 documentation: ug
-appliesto: UI Component Suite
 ---
 
 # Range Selection in .NET MAUI Range Selector

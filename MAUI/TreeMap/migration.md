@@ -5,7 +5,6 @@ description: Migrate from Xamarin.Forms TreeMap to .NET MAUI TreeMap with update
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
-appliesto: UI Component Suite, Chart SDK
 ---
  
 # Migrate from Xamarin.Forms SfTreeMap to .NET MAUI SfTreeMap 
