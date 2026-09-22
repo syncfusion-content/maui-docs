@@ -3591,7 +3591,9 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Filter button styling
+
 To style the filter button and related views based on their appearance, set values to the built-in keys in the resource dictionary.
+
 <table>
 <tr>
 <th>Key</th>
@@ -3626,6 +3628,7 @@ To style the filter button and related views based on their appearance, set valu
 <td>Text color of the selected item in the filter popup.</td>
 </tr>
 </table>
+
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.Resources>
@@ -3644,8 +3647,10 @@ To style the filter button and related views based on their appearance, set valu
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
 </ContentPage.Resources>
+
 {% endhighlight %}
 {% highlight c# %}
+
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -3663,5 +3668,6 @@ public partial class MainPage : ContentPage
         this.Resources.Add(dictionary);
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
