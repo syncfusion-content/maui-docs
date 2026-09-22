@@ -25,14 +25,9 @@ Enhance .NET MAUI Funnel Charts' accessibility with user-friendly design, ensuri
 <td>"Sales Conversion Funnel"</td>
 </tr>
 <tr>
-<td>Funnel Section</td>
+<td>Funnel Layer</td>
 <td>Label + Value</td>
 <td>"Conversion 1500 users"</td>
-</tr>
-<tr>
-<td>Section with Percentage</td>
-<td>Label + Value + Percentage</td>
-<td>"Leads 5000 users 100%"</td>
 </tr>
 <tr>
 <td>Legend Item</td>
