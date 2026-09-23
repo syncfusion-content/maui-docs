@@ -72,7 +72,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/diagram/overview">Diagram</a></td>
+<td><a href="/maui/diagram/overview" aria-label="MAUI Diagram overview">Diagram</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -87,9 +87,9 @@ The following table summarizes the globalization support available in this contr
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui/diagram/getting-started) shows how to begin using the Diagram step by step.
-- [Nodes](https://help.syncfusion.com/maui/diagram/nodes) explains how to create and customize the nodes in Diagram.
-- [Connectors](https://help.syncfusion.com/maui/diagram/connectors) show how creace, connect and customize connector and represent relationship between nodes.
+- [Getting Started](https://help.syncfusion.com/maui/) shows how to begin using the Diagram step by step.
+- [Nodes](https://help.syncfusion.com/maui/) explains how to create and customize the nodes in Diagram.
+- [Connectors](https://help.syncfusion.com/maui/) show how creace, connect and customize connector and represent relationship between nodes.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
