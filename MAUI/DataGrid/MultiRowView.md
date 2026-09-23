@@ -22,13 +22,9 @@ You can enable Multi-Row View by defining a `DataGridMultiRowViewDefinition` in 
 {% highlight xaml %}
 
 <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
-
     <syncfusion:SfDataGrid.MultiRowViewDefinition>
-        <syncfusion:DataGridMultiRowViewDefinition
-            RowsCount="2"
-            ColumnsCount="2" />
+        <syncfusion:DataGridMultiRowViewDefinition RowsCount="2" ColumnsCount="2" />
     </syncfusion:SfDataGrid.MultiRowViewDefinition>
-
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
