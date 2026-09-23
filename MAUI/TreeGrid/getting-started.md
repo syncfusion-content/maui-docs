@@ -295,7 +295,7 @@ Add the following namespace in your XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid"
+xmlns:syncfusion = "clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid"
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.Maui.TreeGrid;

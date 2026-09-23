@@ -49,7 +49,7 @@ Filter will be applied to all the nodes in SfTreeGrid. If a parent node does not
 
 **Extended**
 
-Filtering is applied based on the node hierarchy. Child nodes are included in filtering only when their parent node is expanded. If a node matches the filter condition, all of its ancestor nodes are displayed to preserve the hierarchy, even if those ancestor nodes do not match the filter condition. In such cases, the ancestor node's `IsFiltered` property is set to `false`.
+Filtering is applied based on the node hierarchy. If a node matches the filter condition, all of its ancestor nodes are displayed to preserve the hierarchy, even if those ancestor nodes do not match the filter condition. In such cases, the ancestor node's `IsFiltered` property is set to `false`.
 
 > **Note:** You can change the `FilterLevel` at run time.
 
