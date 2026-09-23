@@ -220,6 +220,31 @@ public partial class MainPage : ContentPage
 
 <img alt="All the rows selected in .NET MAUI Data Grid" src="Images\selection\maui-datagrid-selectall.png" width="404" />
 
+## Programmatic Navigation
+The `SfDataGrid` supports navigation programmatically without using keys. Using the below methods, users can navigate to the adjacent cells of the current cell in the DataGrid.
+
+- [MoveToNextCell]() - The current cell is navigated to the next cell when `NavigationMode` is `Cell`.
+- [MoveToPreviousCell]() - The current cell is navigated to the previous cell when `NavigationMode` is `Cell`.
+- [MoveToNextRow]() - The current cell is navigated to the next row when `NavigationMode` is `Cell` and the current row is navigated to the next row when `NavigationMode` is `Row`.
+- [MoveToPreviousRow]() - The current cell is navigated to the previous row when `NavigationMode` is `Cell` and the current row is navigated to the previous row when `NavigationMode` is `Row`.
+
+{% tabs %}
+{% highlight XAML tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       SelectionMode="Single"
+                       SelectionUnit="Cell"
+                       NavigationMode="Cell">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+   
+// Current cell is navigate to the next cell
+this.dataGrid.MoveToNextCell();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Column selection
 The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection) property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
 

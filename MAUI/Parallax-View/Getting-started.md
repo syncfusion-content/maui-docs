@@ -14,7 +14,7 @@ This section explains the steps required to configure the [`SfParallaxView`](htt
 
 To get started quickly with our .NET MAUI Parallax View, you can check the below video.
 
-{% youtube "https://youtu.be/ezzIDWYYrUc" %}
+{% youtube "https://www.youtube.com/watch?v=ezzIDWYYrUc" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
