@@ -13,7 +13,7 @@ This section explains how to populate the Polar chart with data, a title, data l
 
 To get started quickly with our [.NET MAUI Polar Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html), you can check the below video.
 
-{% youtube "https://youtu.be/Ga9mytwCo_s" %}
+{% youtube "https://www.youtube.com/watch?v=Ga9mytwCo_s" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -151,8 +151,8 @@ public class PlantModel
 {% endtabs %} 
 
 **Data model properties:**
-- `Direction` — Category name displayed on the primary axis (N, NE, E, SE, etc.)
-- `Tree`, `Flower`, `Weed` — Numeric values plotted on the secondary (radial) axis for each direction
+- `Direction` - Category name displayed on the primary axis (N, NE, E, SE, etc.)
+- `Tree`, `Flower`, `Weed` - Numeric values plotted on the secondary (radial) axis for each direction
 
 Next, create a `PlantViewModel` class and initialize a list of `PlantModel` objects as follows.
 

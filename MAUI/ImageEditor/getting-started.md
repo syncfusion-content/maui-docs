@@ -15,7 +15,7 @@ This section explains the steps to create and load an image in the [.NET MAUI Im
 To get started quickly with the .NET MAUI Image Editor, you can check the video below.
 
 {% youtube
-"youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
+"youtube:https://www.youtube.com/watch?si=_WKWcnGgob0DofXe&v=Gkkh52xSehM&feature=youtu.be"%}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

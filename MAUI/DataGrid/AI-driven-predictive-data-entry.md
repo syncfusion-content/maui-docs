@@ -13,6 +13,51 @@ This document explains how to implement AI-assisted predictive data entry with t
 
 ## Integrating AI-Driven Predictive Data Entry in .NET MAUI Data Grid
 
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string?> GetResultsFromAI(string prompt)
+{
+    if (IsCredentialValid)
+    {
+        try
+        {
+            ChatHistory = string.Empty;
+
+            if (ChatHistory != null)
+            {                    
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + prompt;
+                if (Client != null)
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+            }
+            return null;
+
+        }
+        catch
+        {
+            return null;
+        }
+    }
+    else
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 After completing the Azure OpenAI setup above, use the [.NET MAUI Data Grid](https://www.syncfusion.com/maui-controls/maui-datagrid) control to display student data and enable AI-powered predictions. This section demonstrates how to leverage AI services to automatically predict and populate values based on historical patterns and existing student data.
 
 Before proceeding, review the [.NET MAUI Data Grid getting started guide](https://www.syncfusion.com/maui-controls/maui-datagrid).
@@ -173,4 +218,4 @@ private async Task GetResponseAsync()
 
 ![AI driven Smart Predictive Data Entry .NET MAUI Data Grid](Images/smart-ai-solutions/predictive-data-entry.gif)
 
-You can find the complete sample from this [link](https://github.com/SyncfusionExamples/MAUI-DataGrid-Features/tree/master/AI%20Demos/PredictiveDataEntry).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataGrid).

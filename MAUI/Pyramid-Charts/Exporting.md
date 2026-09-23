@@ -42,8 +42,8 @@ T> Change the file extension (.jpg, .jpeg, or .png) to export in a different ima
 
 The exported image will be saved in different locations across platforms:
 
-* **Windows and Android** — The image is saved in the Pictures directory.
-* **macOS and iOS** — The image is saved in the Photos/Album directory.
+* **Windows and Android** - The image is saved in the Pictures directory.
+* **macOS and iOS** - The image is saved in the Photos/Album directory.
 
 ### Platform-specific permissions
 
@@ -100,8 +100,8 @@ Stream stream = await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 ## Related resources
 
-* [.NET MAUI Charts feature tour](https://www.syncfusion.com/maui-controls) — Explore groundbreaking features and capabilities.
-* [.NET MAUI Charts examples](https://github.com/syncfusion/maui-demos) — Discover various chart types and their configurations.
+* [.NET MAUI Charts feature tour](https://www.syncfusion.com/maui-controls) - Explore groundbreaking features and capabilities.
+* [.NET MAUI Charts examples](https://github.com/syncfusion/maui-demos) - Discover various chart types and their configurations.
 
 
 
