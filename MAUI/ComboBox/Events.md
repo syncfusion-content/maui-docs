@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI ComboBox | Syncfusion®
-description: Learn about all events in the Syncfusion® .NET MAUI ComboBox control and how to handle user interactions and state changes.
+description: Learn the events in the Syncfusion® .NET MAUI ComboBox control including Selection Events and Dropdown events.
 platform: maui
 control: SfComboBox
 documentation: ug
