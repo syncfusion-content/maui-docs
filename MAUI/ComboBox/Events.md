@@ -24,6 +24,199 @@ Before using the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
+## Selection events
+
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) raises events before and after the selection changes. The following sections describe each event and its arguments.
+
+### SelectionChanging
+
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event fires before the selection changes. Use this event to cancel or modify the selection based on predefined criteria.
+
+The [SelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html) provides the following members:
+
+* [CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_CurrentSelection) - The items that are about to be selected.
+* [PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_PreviousSelection) - The items that were previously selected.
+* `Cancel` - Set to `true` to cancel the selection change.
+
+The XAML below references an event handler defined in the page code-behind. The C# samples show the page constructor (which wires up the ComboBox and event) and the event handler.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    HeightRequest="40"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    SelectionChanging="OnSelectionChanging">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+// Run this code in a ContentPage code-behind file (MainPage.xaml.cs).
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
+
+comboBox.SelectionChanging += OnSelectionChanging;
+Content = comboBox;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanging` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    await DisplayAlertAsync("Alert", "Selecting Item has changing", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox SelectionChanging event](Images/Selection/net-maui-combobox-selection-changing-notification.gif)
+
+### SelectionChanged
+
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event fires after the selection changes. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html) provides the following members:
+
+* `AddedItems` - The items that were just selected.
+* `RemovedItems` - The items that were unselected.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    TextMemberPath="Name"
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding SocialMedias}"
+                    SelectionChanged="OnSelectionChanged">
+    <editors:SfComboBox.BindingContext>
+        <local:SocialMediaViewModel />
+    </editors:SfComboBox.BindingContext>
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    BindingContext = socialMediaViewModel,
+};
+
+comboBox.SelectionChanged += OnSelectionChanged;
+Content = comboBox;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanged` event can be handled in C# as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    await DisplayAlertAsync("Alert", $"Selected Item has changed", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox SelectionChanged event](Images/Selection/net-maui-combobox-selection-changed-event.gif)
+
+N>
+SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
 
 ## Completed Event
 

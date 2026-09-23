@@ -24,6 +24,165 @@ To get started quickly on customizing the appearance of the .NET MAUI Autocomple
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
+## Selection changing notification
+
+When the user attempts to select an item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is raised. The event lets you intercept the selection and optionally cancel it. The `SelectionChangingEventArgs` provides the following data:
+
+- [CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_CurrentSelection) - the items that are about to be selected.
+- [PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_PreviousSelection) - the items that were previously selected.
+- `Cancel` - set to `true` to prevent the selection change.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        SelectionChanging="OnSelectionChanging" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name"
+};
+autocomplete.SelectionChanging += OnSelectionChanging;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The event handler is implemented in the page's code-behind:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void OnSelectionChanging(object sender, SelectionChangingEventArgs e)
+{
+    await DisplayAlertAsync("Alert", "Selecting item is changing", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![Selection changing notification in the SfAutocomplete](Images/Selection/net-maui-autocomplete-selection-changing-notification.gif)
+
+## Selection changed notification
+
+When the selection changes, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is raised. The `SelectionChangedEventArgs` provides the newly selected and removed items in the following collections:
+
+- `AddedItems` - the items that were selected.
+- `RemovedItems` - the items that were unselected.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        SelectionChanged="OnSelectionChanged" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ItemsSource = new SocialMediaViewModel().SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name"
+};
+autocomplete.SelectionChanged += OnSelectionChanged;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+// ViewModel
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>
+        {
+            new SocialMedia { Name = "Facebook", ID = 0 },
+            new SocialMedia { Name = "Google Plus", ID = 1 },
+            new SocialMedia { Name = "Instagram", ID = 2 },
+            new SocialMedia { Name = "LinkedIn", ID = 3 },
+            new SocialMedia { Name = "Skype", ID = 4 },
+            new SocialMedia { Name = "Telegram", ID = 5 },
+            new SocialMedia { Name = "Twitter", ID = 6 },
+            new SocialMedia { Name = "WhatsApp", ID = 7 },
+            new SocialMedia { Name = "YouTube", ID = 8 }
+        };
+    }
+}
+
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The event handler is implemented in the page's code-behind:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    await DisplayAlertAsync("Alert", "Selected item has changed", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![Selection changed notification in the SfAutocomplete](Images/Selection/net-maui-autocomplete-selection-changed-notification.gif)
+
+N> The `CurrentSelection` and `PreviousSelection` members of the legacy `SelectionChangedEventArgs` are obsolete. Use the `AddedItems` and `RemovedItems` collections instead.
+
 ## Completed Event
 
 The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`:
