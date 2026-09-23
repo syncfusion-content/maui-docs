@@ -10,11 +10,11 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Filtering in .NET MAUI Tree Grid
 
-Filtering is the process of retrieving values in a collection that satisfy specified conditions. The [SfTreeGrid]() provides programmatic filtering via predicates.
+Filtering is the process of retrieving values from a collection that satisfy specified conditions. The [SfTreeGrid]() provides programmatic filtering through predicates.
 
 ## Filter Level
 
-You can filter the nodes based on level using the [SfTreeGrid.FilterLevel]() property.
+You can filter nodes by level using the [SfTreeGrid.FilterLevel]() property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -41,11 +41,11 @@ treeGrid.FilterLevel = FilterLevel.All;
 
 **Root**
 
-Filter will be applied to root nodes only in SfTreeGrid. For other nodes, `IsFiltered` value will be false, and they always will be displayed in view.
+The filter is applied only to root nodes in SfTreeGrid. For other nodes, the value of `IsFiltered` is false, and they are always displayed in the view.
 
 **All**
 
-Filter will be applied to all the nodes in SfTreeGrid. If a parent node does not match the filter condition, filter will not be applied for child nodes. Else, filter will be applied to its child nodes also.
+The filter is applied to all nodes in SfTreeGrid. If a parent node does not match the filter condition, the filter is not applied to its child nodes. Otherwise, the filter is also applied to its child nodes.
 
 **Extended**
 
@@ -55,13 +55,13 @@ Filtering is applied based on the node hierarchy. If a node matches the filter c
 
 ## Programmatic Filtering
 
-Programmatic filtering allows you to apply custom filter predicates directly through code. This approach is useful when you need dynamic filtering logic or want to filter based on complex conditions not available in the UI.
+Programmatic filtering allows you to apply custom filter predicates directly in code. This approach is useful when you need dynamic filtering logic or want to filter based on complex conditions that are not available in the UI.
 
 ### View Filtering
 
 The `SfTreeGrid` supports filtering records by setting the [SfTreeGrid.View.Filter]() property to a filter predicate.
 
-> **Note:** The View property is automatically initialized when ItemsSource is set on the TreeGrid. Ensure the TreeGrid has loaded and ItemsSource is assigned before accessing the View.
+> **Note:** The View property is automatically initialized when ItemsSource is set on the TreeGrid. Ensure that the TreeGrid has loaded and that ItemsSource is assigned before accessing the View.
 
 {% tabs %}
 {% highlight c# %}
@@ -99,7 +99,7 @@ Common filtering conditions include:
 * Does not equal
 * Contains
 
-To implement additional conditions beyond these, modify the code samples below based on your requirements.
+To implement additional conditions beyond these, modify the code samples below to suit your requirements.
 
 {% tabs %}
 {% highlight c# %}
@@ -150,9 +150,9 @@ public bool FilterRecords(object record)
         else
         {
             var value = record.GetType().GetProperty(columns.SelectedItem.ToString().Replace(" ", ""));
-            if (value == null) return false; // Handle case where property doesn't exist
+            if (value == null) return false; // Handles the case where the property does not exist
             var exactValue = value.GetValue(record, null);
-            if (exactValue == null) return false; // Handle null values
+            if (exactValue == null) return false; // Handles null values
             if (conditions.SelectedItem.ToString() == "Contains")
             {
                 var vm = this.BindingContext as EmployeeInfoViewModel;
@@ -185,7 +185,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to create a [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions.
+The following code example illustrates how to create a [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions, add the appropriate strings to it, and filter records based on the selected conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -244,7 +244,7 @@ The following code example illustrates how to create a [Picker](https://learn.mi
 
 ### Clearing Filters
 
-To remove all applied filters and show the complete dataset:
+To remove all applied filters and display the complete dataset:
 
 {% tabs %}
 {% highlight c# %}
@@ -256,4 +256,4 @@ private void ClearFilter(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Filters are applied before sorting operation. When you clear a filter, the view is refreshed and sorting will be reapplied to the full dataset.
+> **Note:** Filters are applied before the sorting operation. When you clear a filter, the view is refreshed, and sorting is reapplied to the full dataset.

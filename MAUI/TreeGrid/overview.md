@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # About Syncfusion .NET MAUI Tree Grid Control
 
-The [.NET MAUI Tree Grid]() control is used to display and manipulate hierarchical data in a tabular view. It combines the clarity of a grid with the ability to present parent-child relationships in an organized structure. Built from the ground up to achieve the best possible performance, it handles large datasets efficiently while maintaining smooth interaction.
+The [.NET MAUI Tree Grid]() control is used to display and manipulate hierarchical data in a tabular view. It combines the clarity of a grid with the ability to present parent-child relationships in an organized structure. Built from the ground up to deliver excellent performance, it handles large datasets efficiently while maintaining smooth interaction.
 
 <img alt="MAUI Tree Grid" src="Images/overview/maui-treegrid.png"/>
 

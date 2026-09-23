@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Getting Started with .NET MAUI Tree Grid
 
-This section provides a quick overview for working with the [SfTreeGrid]() for .NET MAUI.  Follow the steps below to add a basic TreeGrid to your project.
+This section provides a quick overview of working with the [SfTreeGrid]() for .NET MAUI. Follow the steps below to add a basic TreeGrid to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Tree Grid NuGet package
 
-1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.  Search for [Syncfusion.Maui.TreeGrid]() and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
@@ -56,7 +56,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Tree Grid NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
+2. Ensure that you are in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.TreeGrid` to install the Syncfusion<sup>®</sup> .NET MAUI Tree Grid package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
@@ -70,19 +70,19 @@ Before proceeding, ensure the following are set up:
 
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with JetBrains Rider 2024.3 or later.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, select .NET (C#), and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Tree Grid NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeGrid]() and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run `dotnet restore`.
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -109,7 +109,7 @@ builder.ConfigureSyncfusionCore();
 
 ## Step 4: Define Model and View Model
 
-Create a simple data model as shown in the following code example, and save it as `EmployeeInfo.cs` file:
+Create a simple data model as shown in the following code example, and save it as the `EmployeeInfo.cs` file:
 
 {% tabs %}
 {% highlight c# %}
@@ -169,7 +169,7 @@ public class EmployeeInfo
     }
 
     /// <summary>
-    /// Gets or sets the hike
+    /// Gets or sets the hike.
     /// </summary>
     public double Hike
     {
@@ -191,7 +191,7 @@ public class EmployeeInfo
 
 > **Note:** If you want your data model to respond to property changes, implement the [`INotifyPropertyChanged`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged) interface in your model class. This enables the TreeGrid to refresh automatically when data properties are updated.
 
-Next, create a data repository class that manages a collection of `EmployeeInfo` objects. This repository serves as a simple data source for the TreeGrid. Create a new class file and save it as `EmployeeInfoViewModel.cs` in the same `Models` folder or project root:
+Next, create a data repository class that manages a collection of `EmployeeInfo` objects. This repository serves as a simple data source for the TreeGrid. Create a new class file and save it as `EmployeeInfoViewModel.cs` in the same `Models` folder or in the project root:
 
 {% tabs %}
 {% highlight c# %}
