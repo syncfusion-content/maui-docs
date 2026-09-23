@@ -175,3 +175,10 @@ private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Limitations
+
+- UI Filtering is not supported. You can implement filtering at the application level.
+- Data processing operations (Sorting, Grouping) are performed only on the current page data.
+- Row deletion is not supported through the UI. You can implement deletion at the application level.
+- Only navigated pages are exported when OnDemandPaging is enabled. If you call `ResetCache()` to clear a page's data, that page will not be included in exports.

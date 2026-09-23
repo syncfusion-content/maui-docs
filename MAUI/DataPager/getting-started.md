@@ -120,11 +120,7 @@ using Syncfusion.Maui.DataPager;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add the DataPager component
-
-The DataPager is typically used with a data display control like SfDataGrid. To enable basic paging, follow these steps:
-
-## Step 6: Define Model and ViewModel
+## Step 5: Define Model and ViewModel
 
 First, create a data model class and a repository to manage the data. Create a simple data model as shown in the following code example, and save it as `OrderInfo.cs` file:
 
@@ -215,7 +211,7 @@ public class OrderInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Step 7: Add the DataPager with DataGrid
+## Step 6: Add the DataPager with DataGrid
 
 Create a DataPager instance and bind your data collection to the `Source` property. Then, bind the `PagedSource` to a data display control like SfDataGrid.
 
