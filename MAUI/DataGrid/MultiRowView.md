@@ -1,22 +1,22 @@
 ---
 layout: post
-title: MultiRow View in .NET MAUI Data Grid | Syncfusion
-description: Learn how to display records across multiple rows in Syncfusion® .NET MAUI Data Grid using MultiRow View and create rich, card-like layouts.
+title: Multi-Row View in .NET MAUI Data Grid | Syncfusion
+description: Learn how to display records across multiple rows in Syncfusion® .NET MAUI Data Grid using Multi-Row View and create rich, card-like layouts.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, multirow view, multi row view, maui grid layout, maui datagrid layout, .net maui datagrid
 ---
 
-# MultiRow View in .NET MAUI Data Grid
+# Multi-Row View in .NET MAUI Data Grid
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) supports displaying a record across multiple rows by using the `MultiRowViewDefinition`. This feature enables you to arrange columns in a customized layout and create card-like views within each record row.
 
-The MultiRow View is useful when displaying a large number of fields, improving readability by organizing data into multiple rows and columns.
+The Multi-Row View is useful when displaying a large number of fields, improving readability by organizing data into multiple rows and columns.
 
-## Enabling MultiRow View
+## Enabling Multi-Row View
 
-You can enable MultiRow View by defining a `DataGridMultiRowViewDefinition` in the `SfDataGrid.MultiRowViewDefinition` property.
+You can enable Multi-Row View by defining a `DataGridMultiRowViewDefinition` in the `SfDataGrid.MultiRowViewDefinition` property. The `RowsCount` and `ColumnsCount` properties specify the number of rows and columns in the layout. The available cell space is divided based on these values.
 
 {% tabs %}
 {% highlight xaml %}
@@ -47,18 +47,20 @@ var dataGrid = new SfDataGrid
 {% endhighlight %}
 {% endtabs %}
 
-## Defining column positions
+## Defining Column Positions
 
-Each column can be placed within the MultiRow layout by using the following properties:
+The column positions in a Multi-Row View layout can be customized using the positioning properties available in the `DataGridColumn` class. These properties determine where a cell is displayed within the Multi-Row View structure.
 
-- `Row` - Specifies the row position.
-- `Column` - Specifies the column position.
+- `Row` - Specifies the row index where the column is placed.
+- `Column` - Specifies the column index where the column is placed.
 - `RowSpan` - Specifies the number of rows occupied by the column.
 - `ColumnSpan` - Specifies the number of columns occupied by the column.
 
-## MultiRow layout example
+The `Row` and `Column` properties use zero-based indexing to position cells within the layout. The `Row` property arranges cells vertically from top to bottom, while the `Column` property arranges cells horizontally from left to right. The `RowSpan` and `ColumnSpan` properties can be used to make a cell span across multiple rows or columns.
 
-The following example arranges record data in a 2 × 3 layout.
+## Multi-Row layout example
+
+In the following example, the record data is displayed in a layout containing 2 rows and 3 columns. Each column is positioned using the `Row` and `Column` properties, and can span multiple rows or columns using the `RowSpan` and `ColumnSpan` properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -155,13 +157,13 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-The above configuration displays each record using a two-row and three-column arrangement.
-
 <img alt="MAUI Data Grid with MultiRowView" src="Images\multiRowView\maui-datagrid-multirowview.png" width="404" />  
+
+In this layout, the **Profile** column spans two rows using `RowSpan = 2`, and the **Customer ID** column spans two columns using `ColumnSpan = 2`. The remaining columns are positioned based on their assigned `Row` and `Column` indexes.
 
 ## Limitations
 
-- The `Row` value must be within the range specified by `RowsCount`.
-- The `Column` value must be within the range specified by `ColumnsCount`.
-- `RowSpan` and `ColumnSpan` values should not exceed the defined MultiRow layout boundaries.
-- Multiple columns cannot occupy the same layout cell.
+- The `Row` and `Column` values must be within the ranges specified by `RowsCount` and `ColumnsCount`.
+- `RowSpan` and `ColumnSpan` values should not exceed the defined layout boundaries, and multiple columns cannot occupy the same layout cell.
+- Multi-Row View does not support column resizing, row resizing, frozen columns, Details View, stacked headers, column drag and drop, column chooser, row headers, and serialization.
+- Only `Fill` `ColumnWidthMode` is supported.
