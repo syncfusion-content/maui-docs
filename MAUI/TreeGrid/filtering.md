@@ -20,7 +20,7 @@ You can filter the nodes based on level using the [SfTreeGrid.FilterLevel]() pro
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-    <local:EmployeeViewModel x:Name = "viewModel"/>
+    <local:EmployeeInfoViewModel x:Name = "viewModel"/>
 </ContentPage.BindingContext>
 
 <syncfusion:SfTreeGrid ItemsSource = "{Binding PersonDetails}"
@@ -33,7 +33,7 @@ You can filter the nodes based on level using the [SfTreeGrid.FilterLevel]() pro
 {% highlight xaml %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
-treeGrid.ItemsSource = viewModel.EmployeeInfoViewModel;
+treeGrid.ItemsSource = viewModel.PersonDetails;
 treeGrid.ChildPropertyName = "Children";
 treeGrid.FilterLevel = FilterLevel.All;
 {% endhighlight %}
@@ -190,7 +190,7 @@ The following code example illustrates how to create a [Picker](https://learn.mi
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.BindingContext>
-    <local:EmployeeViewModel x:Name = "viewModel"/>
+    <local:EmployeeInfoViewModel x:Name = "viewModel"/>
 </ContentPage.BindingContext>
 
 <Grid RowDefinitions = "50, *">

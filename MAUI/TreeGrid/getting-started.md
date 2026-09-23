@@ -323,7 +323,7 @@ The following code example binds the collection created in the previous step to 
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
-treeGrid.ItemsSource = viewModel.EmployeeInfoViewModel;
+treeGrid.ItemsSource = viewModel.PersonDetails;
 treeGrid.ChildPropertyName = "Children";
 {% endhighlight %}
 {% endtabs %}
