@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Numeric Entry | Syncfusion®
-description: Learn the events available in Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control.
+description: Learn the events available in Syncfusion® .NET MAUI Numeric Entry including ValueChanged, Completed, and ClearButtonClicked.
 platform: maui
 control: SfNumericEntry
 documentation: ug
