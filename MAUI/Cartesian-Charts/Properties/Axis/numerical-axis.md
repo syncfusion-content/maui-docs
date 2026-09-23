@@ -5,6 +5,7 @@ description: This section lists the public API members for Numerical Axis in the
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # NumericalAxis API Reference for .NET MAUI Cartesian Chart

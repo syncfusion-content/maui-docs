@@ -5,6 +5,7 @@ description: This section lists the public API members of selection behaviors av
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # ChartSelectionBehavior API in .NET MAUI Circular Chart

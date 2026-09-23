@@ -5,6 +5,7 @@ description: AI-Driven Smart Location Search in .NET MAUI Maps enables intellige
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # AI-Driven Smart Location Search in .NET MAUI Maps

@@ -5,6 +5,7 @@ description: Learn all about the AI-driven anomaly detection feature in Syncfusi
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # AI-Driven Anomaly Detection in .NET MAUI Data Grid

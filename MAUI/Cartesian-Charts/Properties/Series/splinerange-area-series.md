@@ -5,6 +5,7 @@ description: This section lists the public API members for SplineRangeArea serie
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # SplineRangeAreaSeries API Reference in .NET MAUI Cartesian Chart

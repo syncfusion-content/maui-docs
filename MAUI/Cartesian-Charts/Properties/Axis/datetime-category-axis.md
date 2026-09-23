@@ -5,6 +5,7 @@ description: This section lists the public API members for DateTimeCategory Axis
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # DateTimeCategoryAxis API Reference for .NET MAUI Cartesian Chart

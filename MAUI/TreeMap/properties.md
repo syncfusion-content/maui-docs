@@ -5,6 +5,7 @@ description: API Reference in .NET MAUI TreeMap provides detailed information ab
 platform: maui
 control: SfTreeMap
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI TreeMap

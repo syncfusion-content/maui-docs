@@ -5,6 +5,7 @@ description: This section lists the public API members for Histogram series in t
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # HistogramSeries API Reference in .NET MAUI Cartesian Chart

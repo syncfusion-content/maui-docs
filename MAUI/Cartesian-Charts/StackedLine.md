@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui stacked line chart, maui stacked line chart, stacked line chart customization .net maui, syncfusion maui stacked line chart, cartesian stacked line chart maui, .net maui chart stacked line visualization, .net maui cumulative line chart
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Stacked Line Chart in .NET MAUI Cartesian Chart

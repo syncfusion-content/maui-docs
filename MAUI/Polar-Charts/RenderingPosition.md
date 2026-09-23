@@ -5,6 +5,7 @@ description: Rendering position in .NET MAUI Polar Chart controls how series are
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Rendering Position in .NET MAUI Polar Chart

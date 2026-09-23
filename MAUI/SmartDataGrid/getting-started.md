@@ -6,6 +6,7 @@ platform: MAUI
 control: SfSmartDataGrid
 documentation: ug
 keywords: maui smart datagrid getting started, ai datagrid maui, .net maui smart datagrid setup, Syncfusion.Maui.SmartDataGrid
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Getting Started with .NET MAUI Smart Data Grid

@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip customization, syncfusion maui chart tooltip, cartesian tooltip maui, .net maui chart hover info, .net maui chart tooltip options
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Cartesian Chart

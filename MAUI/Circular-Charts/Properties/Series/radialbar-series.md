@@ -5,6 +5,7 @@ description: This section lists the public API members of the radial bar series 
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # RadialBarSeries API in .NET MAUI Circular Chart

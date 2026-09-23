@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 Keywords: .net maui chart custom axis labels, .net maui chart axis label customization, sfCartesianchart custom axis labels in .net maui, .net maui chart axis label customization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Add Custom Axis Labels in .NET MAUI Cartesian Chart 

@@ -5,6 +5,7 @@ description: This section lists the public API members for Logarithmic Axis in t
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # LogarithmicAxis API Reference for .NET MAUI Cartesian Chart

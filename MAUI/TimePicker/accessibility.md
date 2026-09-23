@@ -5,6 +5,7 @@ description: Provide accessibility support with screen readers and keyboard navi
 platform: maui
 control: SfTimePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Accessibility in .NET MAUI Time Picker

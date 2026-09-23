@@ -5,6 +5,7 @@ description: Learn about mode in Syncfusion® .NET MAUI Picker control with Defa
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Mode in .NET MAUI Picker control

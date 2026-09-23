@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian charts, .net maui axis types, cartesian chart axis types, syncfusion cartesian charts maui, maui chart axis customization, .NET MAUI Cartesian Chart axis, cartesian chart axis guide maui, .net maui sfCartesianChart axis.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Types of Axis in .NET MAUI Cartesian Chart
