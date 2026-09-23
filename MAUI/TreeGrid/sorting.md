@@ -73,7 +73,7 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Multi sorting .NET MAUI Data Grid" src="Images\sorting\maui-treegrid-multi-sorting.gif" width="404">
+<img alt="Multi sorting .NET MAUI Data Grid" src="Images\sorting\maui-treegrid-multi-sorting.png" width="404">
 
 ## Tri-state sorting
 
@@ -97,8 +97,6 @@ treeGrid.AllowTriStateSorting = true;
 this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
-
-<img alt="Tri-state sorting .NET MAUI Data Grid" src="Images\sorting\maui-treegrid-tristate-sorting.gif" width="404">
 
 ## Show sort number
 
