@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in .NET MAUI Tree Grid | Syncfusion®
-description: Learn all about data binding in Syncfusion® .NET MAUI Tree Grid, including binding hierarchical data sources, expanding and collapsing nodes, and customization options.
+description: Learn all about data binding in Syncfusion® .NET MAUI Tree Grid, including binding hierarchical data sources, expanding and collapsing nodes.
 platform: MAUI
 control: SfTreeGrid
 documentation: UG
