@@ -424,7 +424,7 @@ SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.AllowDraggingRow = true;
-AllowDraggingRowAnimation = true;
+dataGrid.AllowDraggingRowAnimation = true;
 this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
