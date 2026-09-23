@@ -1616,6 +1616,38 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
+#### Number of decimal digits
+You can change the number of decimal digits to be displayed after the decimal point using [DataGridNumericColumn.NumberDecimalDigits]() property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridNumericColumn MappingName="UnitPrice"
+                                           HeaderText="Unit Price"
+                                           NumberDecimalDigits="4" />
+     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+DataGridNumericColumn numericColumn = new DataGridNumericColumn()
+{
+    MappingName = "UnitPrice",
+    HeaderText = "Unit Price",
+    NumberDecimalDigits = 4,
+};
+dataGrid.Columns.Add(numericColumn);
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Number of decimal digits in numeric column" src="Images\column-types\maui-datagrid-number-decimal-digits-numeric-column.png" width="404"/>
+
 ## DataGridPercentColumn
 
 `DataGridPercentColumn` is a specialized column for displaying and editing percentage values consistently across platforms. It supports two display modes, culture-aware formatting, numeric filtering, and serialization.
