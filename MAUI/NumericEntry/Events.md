@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Numeric Entry | Syncfusion®
-description: Learn how to change the number format of the Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control.
+description: Learn the events available in Syncfusion® .NET MAUI Numeric Entry (SfNumericEntry) control.
 platform: maui
 control: SfNumericEntry
 documentation: ug
