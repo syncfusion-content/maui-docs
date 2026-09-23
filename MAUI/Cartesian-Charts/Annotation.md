@@ -21,7 +21,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 To learn how to add and customize annotations in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
-{% youtube "https://youtu.be/v1u774lp9pQ" %}
+{% youtube "https://www.youtube.com/watch?v=v1u774lp9pQ" %}
 
 ## Adding Annotations
 
@@ -620,15 +620,80 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Annotation Z-Index
+
+The [ZIndex]() property of [ChartAnnotation]() is used to control the rendering order of annotations. Annotations with a higher [ZIndex]() value are displayed above annotations with lower [ZIndex]() values. Setting [ZIndex]() to `-1` renders the annotation behind the chart series.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Annotations>
+
+        <chart:TextAnnotation
+            X1="3.5"
+            Y1="15"
+            Text="WATERMARK"
+            ZIndex="-1" />
+
+        <chart:RectangleAnnotation
+            X1="2"
+            Y1="10"
+            X2="5"
+            Y2="20"
+            Fill="LightBlue"
+            ZIndex="1" />
+
+    </chart:SfCartesianChart.Annotations>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+var textAnnotation = new TextAnnotation()
+{
+    X1 = 3.5,
+    Y1 = 15,
+    Text = "WATERMARK",
+    FontSize = 24,
+    Opacity = 0.15,
+    ZIndex = -1
+};
+
+var rectangleAnnotation = new RectangleAnnotation()
+{
+    X1 = 2,
+    Y1 = 10,
+    X2 = 5,
+    Y2 = 20,
+    Fill = Colors.LightBlue,
+    ZIndex = 1
+};
+
+chart.Annotations.Add(textAnnotation);
+chart.Annotations.Add(rectangleAnnotation);
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Annotation Z-Index in .NET MAUI Cartesian Chart](Annotation_image/Annotation_z_order.png)
+
 ## Event
 
 **AnnotationTapped**
 
-The [AnnotationTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnnotationTapped) event occurs when an annotation is tapped. The [AnnotationTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html) provides the following details:
+The [AnnotationTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnnotationTapped) event occurs when an annotation is tapped. The [AnnotationTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html) provides the following details:
 
-* [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Annotation) – the annotation instance that was tapped.
-* [X](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_X) – the X coordinate of the touch or mouse click position.
-* [Y](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Y) – the Y coordinate of the touch or mouse click position.
+* [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_Annotation) – the annotation instance that was tapped.
+* [X](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_X) – the X coordinate of the touch or mouse click position.
+* [Y](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_AnnotationTappedEventArgs_Y) – the Y coordinate of the touch or mouse click position.
 
 ## Public methods
 

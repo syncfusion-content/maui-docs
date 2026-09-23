@@ -311,6 +311,97 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Legend Title
+
+The legend title can be displayed above the legend items using the [Title]() property in the `ChartLegend` class. The `Title` property accepts either a `string` or a custom `View`.
+
+### Legend title as String
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    <chart:SfPolarChart.Legend>
+        <chart:ChartLegend Title="Plant Types" Placement="Bottom"/>
+    </chart:SfPolarChart.Legend>
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+//code omitted for brevity
+chart.Legend = new ChartLegend()
+{
+    Title = "Plant Types",
+    Placement = LegendPlacement.Bottom
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend Title Support as String in .NET MAUI Polar Chart](Legend-images/legend_title_as_string.png)
+
+### Legend title as Custom view
+
+A custom `View` can be assigned to the `Title` property to display customized content, such as a layout containing a CheckBox and label, as the legend header.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart.Legend>
+    <chart:ChartLegend  Placement="Bottom">
+        <chart:ChartLegend.Title>
+            <HorizontalStackLayout Spacing="2">
+                <CheckBox VerticalOptions="Center"/>
+                <Label Text="Plant Types"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </chart:ChartLegend.Title>
+    </chart:ChartLegend>
+</chart:SfPolarChart.Legend>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.Legend = new ChartLegend()
+{
+    Placement = LegendPlacement.Bottom,
+    Title = new HorizontalStackLayout()
+    {
+        Spacing = 2,
+        Children =
+        {
+            new CheckBox()
+            {
+                VerticalOptions = LayoutOptions.Center
+            },
+            new Label()
+            {
+                Text = "Plant Types",
+                FontSize = 14,
+                FontAttributes = FontAttributes.Bold,
+                VerticalOptions = LayoutOptions.Center
+            }
+        }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend Title Support as view in .NET MAUI Polar Chart](Legend-images/legend_title_as_view.png)
+
 ## Toggle the series visibility
 The visibility of polar series can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
 

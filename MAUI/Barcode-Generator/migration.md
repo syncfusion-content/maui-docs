@@ -125,7 +125,7 @@ The following code example explains how to initialize symbology and customize sy
 
 {% highlight xml %}
 
-<syncfusion:SfBarcode Text="http://www.syncfusion.com"
+<syncfusion:SfBarcode Text="https://www.syncfusion.com/"
                       BackgroundColor="Gray"
                       Symbology="QRCode">
     <syncfusion:SfBarcode.SymbologySettings>
@@ -142,7 +142,7 @@ The following code example explains how to initialize symbology and customize sy
 
 SfBarcode barcode = new SfBarcode();
 barcode.BackgroundColor = Color.Gray;
-barcode.Text = "http://www.syncfusion.com";
+barcode.Text = "https://www.syncfusion.com/";
 barcode.Symbology = BarcodeSymbolType.QRCode;
 QRBarcodeSettings settings = new QRBarcodeSettings();
 settings.XDimension = 6;
@@ -161,7 +161,7 @@ this.Content = barcode;
 
 {% highlight xml %}
 
-<barcode:SfBarcodeGenerator Value="http://www.syncfusion.com"
+<barcode:SfBarcodeGenerator Value="https://www.syncfusion.com/"
                             ShowText="True"
                             BackgroundColor="Gray">
     <barcode:SfBarcodeGenerator.Symbology>
@@ -177,7 +177,7 @@ this.Content = barcode;
 {% highlight c# %}
 
 SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.Value = "http://www.syncfusion.com";
+barcode.Value = "https://www.syncfusion.com/";
 barcode.BackgroundColor = Colors.Gray;
 barcode.ShowText = true;
 barcode.Symbology = new QRCode() 

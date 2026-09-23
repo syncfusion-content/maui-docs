@@ -218,7 +218,7 @@ this.Content = chart;
 ## Placement
 The legend can be positioned to the left, right, top, or bottom of the chart area using the [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) property in the ChartLegend class. The default placement is `Top`.
 
-The `Placement` property uses the [LegendPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LegendPlacement.html) enum, which provides the following values:
+The `Placement` property uses the [LegendPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendPlacement.html) enum, which provides the following values:
 
 * `Top` - Positions the legend at the top of the chart area (default).
 * `Bottom` - Positions the legend at the bottom of the chart area.
@@ -253,6 +253,97 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Legend Title
+
+The legend title can be displayed above the legend items using the [Title]() property in the `ChartLegend` class. The `Title` property accepts either a `string` or a custom `View`.
+
+### Legend title as String
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend Title="Browsers" Placement="Bottom" />
+    </chart:SfCircularChart.Legend>
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+//code omitted for brevity
+chart.Legend = new ChartLegend()
+{
+    Title="Browsers",
+    Placement = LegendPlacement.Bottom
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend Title Support as View in .NET MAUI Circular Chart](Legend-images/legend_title_as_string.png)
+
+### Legend title as Custom view
+
+A custom `View` can be assigned to the `Title` property to display customized content, such as a layout containing a CheckBox and label, as the legend header.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart.Legend>
+    <chart:ChartLegend Placement="Bottom">
+        <chart:ChartLegend.Title>
+            <HorizontalStackLayout Spacing="2">
+                <CheckBox VerticalOptions="Center"/>
+                <Label Text="Browsers"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </chart:ChartLegend.Title>
+    </chart:ChartLegend>
+</chart:SfCircularChart.Legend>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.Legend = new ChartLegend()
+{
+    Placement = LegendPlacement.Bottom,
+    Title = new HorizontalStackLayout()
+    {
+        Spacing = 2,
+        Children =
+        {
+            new CheckBox()
+            {
+                VerticalOptions = LayoutOptions.Center
+            },
+            new Label()
+            {
+                Text = "Browsers",
+                FontSize = 14,
+                FontAttributes = FontAttributes.Bold,
+                VerticalOptions = LayoutOptions.Center
+            }
+        }
+    }
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend Title Support as View in .NET MAUI Circular Chart](Legend-images/legend_title_as_view.png)
 
 ## Floating legend
 
@@ -409,7 +500,7 @@ this.Content = chart;
 ## Item template
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemTemplate is `null`.
 
-N> The BindingContext of the template is the corresponding underlying legend item provided in the [ChartLegendItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendItem.html) class. The following bindable properties are available on the legend item: `IconBrush`, `Text`, `Item`, and `Index`.
+N> The BindingContext of the template is the corresponding underlying legend item provided in the [ChartLegendItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) class. The following bindable properties are available on the legend item: `IconBrush`, `Text`, `Item`, and `Index`.
 
 {% tabs %}
 

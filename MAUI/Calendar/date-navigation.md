@@ -98,6 +98,67 @@ this.calendar.AllowViewNavigation = true;
 {% endhighlight %}
 {% endtabs %}
 
+## Minimum display mode
+It allows you to restrict the lowest display level that can be navigated to in the calendar control using the [MinimumDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDisplayMode) property of [`SfCalendar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). For example, when `MinimumDisplayMode` is set to `Year`, the user cannot drill down from the `Year` view to the `Month` view.
+
+The following code example shows how to restrict navigation to the `Year` view and above.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
+                        MinimumDisplayMode="Year">
+    </calendar:SfCalendar>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
+
+this.calendar.MinimumDisplayMode = CalendarView.Year;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Maximum display mode
+It allows you to restrict the highest display level that can be navigated to in the calendar control using the [MaximumDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDisplayMode) property of [`SfCalendar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). For example, when `MaximumDisplayMode` is set to `Decade`, the user cannot navigate from the `Decade` view up to the `Century` view.
+
+The following code example shows how to restrict navigation from going above the `Decade` view.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar x:Name="calendar"
+                        MaximumDisplayMode="Decade">
+    </calendar:SfCalendar>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
+
+this.calendar.MaximumDisplayMode = CalendarView.Decade;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+When the `View` is set to a value outside the `[MinimumDisplayMode, MaximumDisplayMode]` range, it is automatically adjusted to the nearest valid value within the range.
+
 ## Navigating Adjacent Months with Leading and Trailing Dates
 You can navigate to the next or previous month in the Calendar control by tapping on the leading or trailing dates. Tapping on a leading date moves the calendar to the previous month, while tapping on a trailing date moves it to the next month. In `SfCalendar`, this functionality can be enabled or disabled using the [NavigateToAdjacentMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigateToAdjacentMonth) property.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ChartTrackballBehavior in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for ChartTrackball Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -51,19 +51,19 @@ appliesto: UI Component Suite, Chart SDK
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowLabel" aria-label="View ShowLabel property in API reference">ShowLabel</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
     <td>Controls the <code>visibility</code> of the text labels associated with the trackball.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowLine" aria-label="View ShowLine property in API reference">ShowLine</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
     <td>Controls the <code>visibility</code> of the vertical line drawn across the chart plot area by the trackball.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowMarkers" aria-label="View ShowMarkers property in API reference">ShowMarkers</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
     <td>Controls the <code>visibility</code> of the markers drawn at data points intersected by the trackball line.</td>
 </tr>
 </table>
@@ -79,13 +79,13 @@ appliesto: UI Component Suite, Chart SDK
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Hide" aria-label="View Hide method in API reference">Hide()</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
     <td>Programmatically <code>removes</code> the trackball, along with its line, labels, and markers, from the chart if it is currently visible.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Show_System_Single_System_Single_" aria-label="View Show method in API reference">Show(Single, Single)</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
     <td>Displays the trackball at the <code>data point</code> closest to the specified x and y <code>coordinates</code> within the chart plot area.</td>
 </tr>
 </table>

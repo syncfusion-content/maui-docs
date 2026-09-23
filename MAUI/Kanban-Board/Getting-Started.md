@@ -14,7 +14,7 @@ This section provides a quick overview for working with Essential<sup>®</sup> K
 
 To get started quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
 
-{% youtube "https://youtu.be/Mq55vjT7ZEA" %}
+{% youtube "https://www.youtube.com/watch?v=Mq55vjT7ZEA&feature=youtu.be" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
