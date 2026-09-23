@@ -13,6 +13,8 @@ The **.NET MAUI Diagram** control is a versatile component used to create, visua
 
 The Diagram control provides built-in support for shape rendering, diagram interaction, serialization, exporting, printing, and event notifications, helping developers create rich diagramming experiences with minimal effort.
 
+![Syncfusion .NET MAUI accordion overview ](Images/overview_images/diagram_overview.png)
+
 ---
 
 ## Business use cases
@@ -72,7 +74,7 @@ The following table summarizes the globalization support available in this contr
 <tr>
 <td><a href="/maui/diagram/overview">Diagram</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
