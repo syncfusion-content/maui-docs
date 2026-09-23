@@ -74,8 +74,6 @@ The following example shows how to set the France culture for the currency symbo
 {% tabs %}
 {% highlight C# %}
 
-using System.Globalization;
-
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;

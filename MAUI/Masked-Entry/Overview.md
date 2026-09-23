@@ -76,7 +76,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selecting values from predefined lists with optional input.
-- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting.  
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for structured numeric input with validation and formatting.  
 - [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
 
 ## See Also
