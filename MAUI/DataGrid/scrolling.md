@@ -330,6 +330,34 @@ this.Content = dataGrid;
 
 > **Note:** These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
 
+## Scroll orientation
+The [ScrollOrientation]() property in `SfDataGrid` controls the direction in which the grid can be scrolled. You can allow scrolling vertically, horizontally, in both directions, or disable scrolling completely. The default value of `ScrollOrientation` property is `Both`.
+
+- Both - Enables both vertical and horizontal scrolling.
+- Vertical - Enables vertical scrolling only.
+- Horizontal - Enables horizontal scrolling only.
+- Neither - Disables scrolling.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ScrollOrientation="Vertical">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight C# %}
+using Syncfusion.Maui.DataGrid;
+
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.ScrollOrientation = ScrollOrientation.Vertical;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Scroll orientation- vertical" src="Images\scrolling\maui-datagrid-scrollOrientation-Vertical.gif" width="404">
 
 ## Over-Scroll Mode
 The `SfDataGrid` supports over-scroll behavior that controls the bounce effect when the user scrolls past the edges of its content. Use the `VerticalOverScrollMode` and `HorizontalOverScrollMode` properties to enable or disable bounce effects independently for each axis. Over-scroll behavior is platform-specific: iOS uses `Bounce` by default, while Android uses `None`.
@@ -435,5 +463,31 @@ private void dataGrid_ScrollStateChanged(object sender, DataGridScrollStateChang
             break;
     }
 }
+{% endhighlight %}
+{% endtabs %}
+
+## Shrink wrap rows and columns
+
+When the height or width of the DataGrid is unbounded (infinite), the DataGrid sets its height or width to 300 by default. Users can automatically size the DataGrid based on its content by enabling `ShrinkWrapRows` to adjust the height according to the available rows and `ShrinkWrapColumns` to adjust the width according to the available columns.
+
+> **Note:** Shrink wrapping is considerably more expensive than specifying a fixed height or width because the DataGrid must measure all rows or columns to determine its size. For optimal performance, use these properties only when the DataGrid contains a relatively small number of rows and columns.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShrinkWrapRows="True"
+                       ShrinkWrapColumns="True">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight C# %}  
+using Syncfusion.Maui.DataGrid;
+
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.ShrinkWrapRows = true;
+dataGrid.ShrinkWrapColumns = true;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
