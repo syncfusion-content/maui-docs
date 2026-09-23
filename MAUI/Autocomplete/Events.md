@@ -24,7 +24,13 @@ To get started quickly on customizing the appearance of the .NET MAUI Autocomple
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
-## Selection changing notification
+
+## Selection events
+
+The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) raises events before and after the selection changes. The following sections describe each event and its arguments.
+
+
+### SelectionChanging Event
 
 When the user attempts to select an item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is raised. The event lets you intercept the selection and optionally cancel it. The `SelectionChangingEventArgs` provides the following data:
 
@@ -103,7 +109,7 @@ The following image illustrates the result of the above code:
 
 ![Selection changing notification in the SfAutocomplete](Images/Selection/net-maui-autocomplete-selection-changing-notification.gif)
 
-## Selection changed notification
+### SelectionChanged Event
 
 When the selection changes, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is raised. The `SelectionChangedEventArgs` provides the newly selected and removed items in the following collections:
 

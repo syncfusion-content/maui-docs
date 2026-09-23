@@ -28,7 +28,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) raises events before and after the selection changes. The following sections describe each event and its arguments.
 
-### SelectionChanging
+### SelectionChanging Event
 
 The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event fires before the selection changes. Use this event to cancel or modify the selection based on predefined criteria.
 
@@ -61,7 +61,6 @@ The XAML below references an event handler defined in the page code-behind. The 
 
 // Run this code in a ContentPage code-behind file (MainPage.xaml.cs).
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 250,
@@ -126,7 +125,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox SelectionChanging event](Images/Selection/net-maui-combobox-selection-changing-notification.gif)
 
-### SelectionChanged
+### SelectionChanged Event
 
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event fires after the selection changes. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangedEventArgs.html) provides the following members:
 
