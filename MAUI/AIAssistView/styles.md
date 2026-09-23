@@ -2420,22 +2420,6 @@ To style the conversation drawer and search panel based on their appearance, set
 <td>Font attributes of the search panel group header.</td>
 </tr>
 <tr>
-<td>SfAIAssistViewSearchPanelSearchbarStroke</td>
-<td>Stroke color of the search bar in the search panel.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewSearchPanelSearchbarStrokeThickness</td>
-<td>Stroke thickness of the search bar in the search panel.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewSearchPanelSearchbarFocusedStroke</td>
-<td>Stroke color of the search bar when it is focused.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewSearchPanelSearchbarFocusedStrokeThickness</td>
-<td>Stroke thickness of the search bar when it is focused.</td>
-</tr>
-<tr>
 <td>SfAIAssistViewSearchPanelSearchIconTextColor</td>
 <td>Color of the search icon in the search panel.</td>
 </tr>
@@ -2488,10 +2472,6 @@ To style the conversation drawer and search panel based on their appearance, set
                 <x:Double x:Key="SfAIAssistViewSearchPanelGroupHeaderFontSize">18</x:Double>
                 <x:String x:Key="SfAIAssistViewSearchPanelGroupHeaderFontFamily">Roboto-Medium</x:String>
                 <FontAttributes x:Key="SfAIAssistViewSearchPanelGroupHeaderFontAttributes">Bold</FontAttributes>
-                <Color x:Key="SfAIAssistViewSearchPanelSearchbarStroke">Orange</Color>
-                <x:Double x:Key="SfAIAssistViewSearchPanelSearchbarStrokeThickness">2</x:Double>
-                <Color x:Key="SfAIAssistViewSearchPanelSearchbarFocusedStroke">Blue</Color>
-                <x:Double x:Key="SfAIAssistViewSearchPanelSearchbarFocusedStrokeThickness">3</x:Double>
                 <Color x:Key="SfAIAssistViewSearchPanelSearchIconTextColor">Green</Color>
                 <Color x:Key="SfAIAssistViewSearchPanelCancelIconTextColor">Red</Color>
                 <Color x:Key="SfAIAssistViewSearchBarTextColor">DarkViolet</Color>
@@ -2527,10 +2507,6 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewSearchPanelGroupHeaderFontSize", 18.0);
         dictionary.Add("SfAIAssistViewSearchPanelGroupHeaderFontFamily", "Roboto-Medium");
         dictionary.Add("SfAIAssistViewSearchPanelGroupHeaderFontAttributes", FontAttributes.Bold);
-        dictionary.Add("SfAIAssistViewSearchPanelSearchbarStroke", Colors.Orange);
-        dictionary.Add("SfAIAssistViewSearchPanelSearchbarStrokeThickness", 2.0);
-        dictionary.Add("SfAIAssistViewSearchPanelSearchbarFocusedStroke", Colors.Blue);
-        dictionary.Add("SfAIAssistViewSearchPanelSearchbarFocusedStrokeThickness", 3.0);
         dictionary.Add("SfAIAssistViewSearchPanelSearchIconTextColor", Colors.Green);
         dictionary.Add("SfAIAssistViewSearchPanelCancelIconTextColor", Colors.Red);
         dictionary.Add("SfAIAssistViewSearchBarTextColor", Colors.DarkViolet);
