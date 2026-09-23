@@ -9,7 +9,7 @@ documentation: ug
 
 # About Syncfusion .NET MAUI Kanban Board control
 
-The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/maui-controls/maui-kanban) control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at every stage of completion. It facilitates effective planning and provides a clear visualization of work progress.
+The Syncfusion® [.NET MAUI Kanban](https://www.syncfusion.com/gantt-sdk/maui-kanban) control is a highly interactive and customizable tool designed to streamline task management. It provides an efficient way to visualize workflows at every stage of completion. It facilitates effective planning and provides a clear visualization of work progress.
 
 ![.NET MAUI kanban overview ](images/overview/kanban-overview.png)
 
@@ -63,7 +63,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/kanban-board/overview">Kanban Board</a></td>
+<td><a href="/maui/kanban-board/overview" aria-label="View Kanban Board overview">Kanban Board</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -76,7 +76,7 @@ The following table summarizes the globalization support available in this contr
 
 - [DataGrid](https://help.syncfusion.com/maui/datagrid/overview) for managing structured task data in tabular format.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying task lists in scrollable layouts.
-- [Scheduler](https://help.syncfusion.com/maui/scheduler/overview) for managing timelines and scheduling tasks.
+- [Scheduler](https://help.syncfusion.com/scheduler-sdk/maui/schedule/overview) for managing timelines and scheduling tasks.
 
 ## See Also
 
@@ -222,7 +222,7 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of the key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-kanban" class="explore-link">
+<a href="https://www.syncfusion.com/gantt-sdk/maui-kanban" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>

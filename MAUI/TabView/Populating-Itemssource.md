@@ -419,5 +419,5 @@ N> The full sample is available on [GitHub](https://github.com/SyncfusionExample
 
 ## See also
 
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)

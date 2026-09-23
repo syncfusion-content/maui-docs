@@ -253,4 +253,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Funnel chart in .NET MAUI Funnel Chart](Getting-Started_Images/MAUI_funnel_chart.png)
 
-You can download the FunnelCharts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_FunnelChart_MAUI).
+You can download the FunnelCharts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Funnel-Chart).

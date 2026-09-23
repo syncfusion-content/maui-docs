@@ -18,9 +18,9 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 The [AxisLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AxisLineStyle) property allows you to customize the axis line appearance. The [ChartLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html) class provides the following properties:
 
-* `Stroke` — Sets the color of the axis line.
-* `StrokeWidth` — Sets the width of the axis line in pixels.
-* `DashArray` — Sets the dash pattern for the axis line (e.g., solid, dotted, dashed).
+* `Stroke` - Sets the color of the axis line.
+* `StrokeWidth` - Sets the width of the axis line in pixels.
+* `DashArray` - Sets the dash pattern for the axis line (e.g., solid, dotted, dashed).
 
 {% tabs %}
 
