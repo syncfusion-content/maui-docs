@@ -896,7 +896,7 @@ To style the send item button based on its state, set values to the built-in key
 </table>
 
 {% tabs %}
-{% highlight xaml hl_lines="6 7 8 9" %}
+{% highlight xaml %}
 
 <ContentPage.Resources>
     <syncTheme:SyncfusionThemeDictionary>
@@ -3576,10 +3576,6 @@ To style the filter button and related views based on their appearance, set valu
 <th>Description</th>
 </tr>
 <tr>
-<td>SfAIAssistViewFilterButtonTextColor</td>
-<td>Text color of the filter button.</td>
-</tr>
-<tr>
 <td>SfAIAssistViewFilterIconTextColor</td>
 <td>Color of the filter icon.</td>
 </tr>
@@ -3612,7 +3608,6 @@ To style the filter button and related views based on their appearance, set valu
         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewFilterButtonTextColor">Purple</Color>
                 <Color x:Key="SfAIAssistViewFilterIconTextColor">Red</Color>
                 <Color x:Key="SfAIAssistViewFilterButtonStroke">Orange</Color>
                 <Color x:Key="SfAIAssistViewFilterButtonSelectedBackground">LightGreen</Color>
@@ -3634,7 +3629,6 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
-        dictionary.Add("SfAIAssistViewFilterButtonTextColor", Colors.Purple);
         dictionary.Add("SfAIAssistViewFilterIconTextColor", Colors.Red);
         dictionary.Add("SfAIAssistViewFilterButtonStroke", Colors.Orange);
         dictionary.Add("SfAIAssistViewFilterButtonSelectedBackground", Colors.LightGreen);
