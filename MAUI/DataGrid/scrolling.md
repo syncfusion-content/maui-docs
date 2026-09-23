@@ -438,7 +438,7 @@ private void dataGrid_ScrollStateChanged(object sender, DataGridScrollStateChang
 {% endhighlight %}
 {% endtabs %}
 
-## Set the height and width of the DataGrid based on the available rows and columns
+## Shrink wrap rows and columns
 
 When the height or width of the DataGrid is unbounded (infinite), the DataGrid sets its height or width to 300 by default. Users can automatically size the DataGrid based on its content by enabling `ShrinkWrapRows` to adjust the height according to the available rows and `ShrinkWrapColumns` to adjust the width according to the available columns.
 
