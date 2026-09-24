@@ -1106,7 +1106,55 @@ The `ContextMenuOpening` event occurs before the context menu is displayed, allo
 
 -   **Cancel**: Set to `true` to cancel the display of the context menu.
 -   **Column**: Represents the column for which the context menu is opening. This property will be `null` if the context menu is not opened for a column header.
+-   **RowType**: Represents the row type for which the context menu is opening. This property can be used when we need to modify a particular type of context menu.
+-   **RowData**: Represents the data of the row for which the context menu is opening. The property will be helpful when context menu needs to be updated based on the data present in the row.
+-   **RowIndex**: Represents the index of the row for which the context menu is opening.
 -   **MenuItems**: Provides access to the collection of `MenuItem` objects that will be displayed in the context menu. You can add, remove, or modify these items to customize the menu.
+
+#### Conditional Visibility of the Menu Items using ContextMenuOpening
+
+The visibility of an item when a context menu is opening can be set based on the properties of `ContextMenuOpeningEventArgs`. An item's visibility can be set using [IsVisible]() property in the `MenuItem`.
+
+The following is an example of how an item's visibility can be set.
+
+{% tabs %}
+{% highlight C# %}
+private void ContextMenu_opening(object sender, ContextMenuOpeningEventArgs e)
+{
+    if (e.RowIndex % 2 == 0 && e.RowType == RowType.DefaultRow)
+    {
+        e.MenuItems[0]?.IsVisible = false;
+        if(e.MenuItems.Count > 3)
+            e.MenuItems[2].IsVisible = false;
+    }
+
+    if(e.RowType == RowType.HeaderRow)
+    {
+        if(e.Column.MappingName == "ShipCity")
+        {
+            e.MenuItems.Add(new Syncfusion.Maui.DataGrid.MenuItem() { Text = "Locate" });
+        }
+
+        if (e.Column.MappingName == "Customer")
+        {
+            e.MenuItems.RemoveAt(3);
+        }
+    }
+    if (e.RowData is OrderInfo orderInfo)
+    {
+        if (orderInfo.ShipCountry == "Germany")
+        {
+            e.MenuItems = new System.Collections.ObjectModel.ObservableCollection<Syncfusion.Maui.DataGrid.MenuItem>()
+            {
+                new Syncfusion.Maui.DataGrid.MenuItem() { Text = "Menu Item 1" },
+                new Syncfusion.Maui.DataGrid.MenuItem() { Text = "Menu Item 2" },
+                new Syncfusion.Maui.DataGrid.MenuItem() { Text = "Menu Item 3" }
+            };
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ### ContextMenuOpened
 

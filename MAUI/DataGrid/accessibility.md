@@ -44,9 +44,20 @@ The following table illustrates the predefined automation identifier patterns fo
 <td>R 4 C 2 Thomas</td>
 </tr>
 <tr>
+<tr>
+<td>Element when Grid Cell enters Edit state</td>
+<td>"R " + RowIndex + " C " + ColumnIndex + " " + CellValue</td>
+<td>R 4 C 2 Thomas</td>
+</tr>
+<tr>
 <td>Group Header</td>
 <td>"Row" + RowIndex</td>
 <td>Row5</td>
+</tr>
+<tr>
+<td>Filter Icon</td>
+<td>ColumnMappingName + FilterIcon</td>
+<td>FirstName FilterIcon</td>
 </tr>
 <tr>
 <td>LoadMore View</td>
@@ -124,6 +135,12 @@ public void SfDataGrid_AccessElements()
     cell.Click();
     Thread.Sleep(200);
     cell.Click();
+
+    // Edit element for a cell
+    driver.FindElemenet(MobileBy.AccessibilityId("SfDataGrid R 4 C 2 Berglund")).Click();
+
+    // Filter Icon
+    driver.FindElemenet(MobileBy.AccessibilityId("SfDataGrid Customer FilterIcon")).Click();
 
     // Expand/Collapse group at row 5
     driver.FindElement(MobileBy.AccessibilityId("SfDataGrid Row5")).Click();
