@@ -97,6 +97,15 @@ The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabI
         <tabView:SfTabItem.Content>
             <ListView>
                 <!-- ListView content here -->
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>James</x:String>
+                        <x:String>Richard</x:String>
+                        <x:String>Michael</x:String>
+                        <x:String>Alex</x:String>
+                        <x:String>Clara</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
             </ListView>
         </tabView:SfTabItem.Content>
     </tabView:SfTabItem>
@@ -115,6 +124,14 @@ SfTabView tabView = new SfTabView
             Content = new ListView()
             {
                 // ListView content here
+                ItemsSource = new string[]
+                {
+                    "James",
+                    "Richard",
+                    "Michael",
+                    "Alex",
+                    "Clara"
+                }
             }
         }
     }
@@ -749,9 +766,9 @@ To select the tab items programmatically, you can use the [SelectedIndex](https:
 {% tabs %}
 {% highlight xaml %}
 <tabView:SfTabView SelectedIndex="1">
-     <tabView:SfTabItem />
-     <tabView:SfTabItem />
-     <tabView:SfTabItem />
+    <tabView:SfTabItem Header="ITEM 1"/>
+    <tabView:SfTabItem Header="ITEM 2"/>
+    <tabView:SfTabItem Header="ITEM 3"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
