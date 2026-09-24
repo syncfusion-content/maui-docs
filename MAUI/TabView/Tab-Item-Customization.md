@@ -725,14 +725,29 @@ The [EnableRippleAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% tabs %}
 {% highlight xaml %}
+
 <!-- Define the SfTabView control with the ripple animation disabled -->
 <tabView:SfTabView EnableRippleAnimation="False">
     <tabView:SfTabItem Header="Item1" />
     <tabView:SfTabItem Header="Item2" />
     <tabView:SfTabItem Header="Item3" />
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView()
+{
+    EnableRippleAnimation = false,
+    Items = new TabItemCollection
+    { 
+        new SfTabItem { Header = "ITEM 1" },
+        new SfTabItem { Header = "ITEM 2" },
+        new SfTabItem { Header = "ITEM 3" }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
 ## How to
@@ -756,7 +771,24 @@ To disable the hover effect when the mouse pointer is over a [SfTabItem](https:/
 </ContentPage.Content>
 
 {% endhighlight %}
+{% highlight C# %}
 
+Resources = new ResourceDictionary
+{
+    { "SfTabViewHoverBackground", Colors.Transparent }
+};
+SfTabView tabView = new SfTabView
+{
+    EnableRippleAnimation = false,
+    Items = new TabItemCollection
+    { 
+        new SfTabItem { Header = "ITEM 1" },
+        new SfTabItem { Header = "ITEM 2" },
+        new SfTabItem { Header = "ITEM 3" }
+    }
+};
+
+{% endhighlight %}
 {% endtabs %}
 
 ### Select tab items programmatically
@@ -770,14 +802,22 @@ To select the tab items programmatically, you can use the [SelectedIndex](https:
     <tabView:SfTabItem Header="ITEM 2"/>
     <tabView:SfTabItem Header="ITEM 3"/>
 </tabView:SfTabView>
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight C# %}
-SfTabView tabView = new SfTabView();
-tabView.SelectedIndex = 1;
+
+SfTabView tabView = new SfTabView()
+{
+    SelectedIndex = 1,
+    Items = new TabItemCollection
+    { 
+        new SfTabItem { Header = "ITEM 1" },
+        new SfTabItem { Header = "ITEM 2" },
+        new SfTabItem { Header = "ITEM 3" }
+    }
+};
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## See also

@@ -129,6 +129,18 @@ Call the [ToggleSecondaryDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight c# %}
 
+SfNavigationDrawernavigationDrawer = new SfNavigationDrawer
+{
+    DrawerSettings = new DrawerSettings
+    {
+        Position = Position.Left
+    },
+    SecondaryDrawerSettings = new DrawerSettings
+    {
+        Position = Position.Right
+    }
+};
+
 Button button = new Button
 {
     Text = "Toggle Secondary",
@@ -138,21 +150,11 @@ Button button = new Button
 
 button.Clicked += OnToggleSecondaryClicked;
 
-Grid grid = new Grid
+Content = new Grid
 {
     Children =
     {
-        new SfNavigationDrawer
-        {
-            DrawerSettings = new DrawerSettings
-            {
-                Position = Position.Left
-            },
-            SecondaryDrawerSettings = new DrawerSettings
-            {
-                Position = Position.Right
-            }
-        },
+        navigationDrawer,
         button
     }
 };
