@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [ComboBox](https://
 
 To quickly get started with the .NET MAUI ComboBox, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
+<style>#MAUIComboBoxVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIComboBoxVideoTutorial' src='https://www.youtube.com/embed/jcfaI0PFmSo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

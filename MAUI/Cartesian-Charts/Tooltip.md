@@ -17,7 +17,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 To learn how to customize the tooltips in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=tDwQ7h9jwWk" %}
+<style>#MAUICartesianChartTooltipVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartTooltipVideoTutorial' src='https://www.youtube.com/embed/tDwQ7h9jwWk'></iframe>
 
 ## Define Tooltip
 

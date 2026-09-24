@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Navigation Drawer]
 
 To quickly get started with the .NET MAUI Navigation Drawer, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=fhVe129Hc6o" %}
+<style>#MAUINavigationDrawerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUINavigationDrawerVideoTutorial' src='https://www.youtube.com/embed/fhVe129Hc6o'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

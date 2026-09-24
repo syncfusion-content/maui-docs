@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [Text Input Layout]
 
 To quickly get started with the .NET MAUI Text Input Layout, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=VKo3vNBzNbw" %}
+<style>#MAUITextInputLayoutVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUITextInputLayoutVideoTutorial' src='https://www.youtube.com/embed/VKo3vNBzNbw'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

@@ -13,8 +13,7 @@ This section explains the steps required to add the Linear Progress Bar control 
 
 To get started quickly with our .NET MAUI Linear Progress Bar, check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=DY29ko7PTXg&t"%}
+<style>#MAUILinearProgressBarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUILinearProgressBarVideoTutorial' src='https://www.youtube.com/embed/DY29ko7PTXg'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

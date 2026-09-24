@@ -15,7 +15,7 @@ This section explains how to populate the Cartesian chart with data, a title, da
 
 To get started quickly with the [.NET MAUI Cartesian Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can check the following video.
 
-{% youtube "https://www.youtube.com/watch?v=o616GkzdPJk&t=7s" %}
+<style>#MAUICartesianChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartVideoTutorial' src='https://www.youtube.com/embed/o616GkzdPJk'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

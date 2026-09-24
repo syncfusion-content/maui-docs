@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Radial Menu](https
 
 To quickly get started with the .NET MAUI Radial Menu, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=VxufXFzSh0M" %}
+<style>#MAUIRadialMenuVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRadialMenuVideoTutorial' src='https://www.youtube.com/embed/VxufXFzSh0M'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

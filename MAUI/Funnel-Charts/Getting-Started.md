@@ -15,7 +15,7 @@ This section explains how to populate the funnel chart with data, a title, data 
 
 To get started quickly with the [.NET MAUI Funnel Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html), you can check the following video.
 
-{% youtube "https://www.youtube.com/watch?v=wJhqKHduXTI&t=2s" %}
+<style>#MAUIFunnelChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIFunnelChartVideoTutorial' src='https://www.youtube.com/embed/wJhqKHduXTI'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

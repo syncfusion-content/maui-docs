@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [SfAvatarView](http
 
 To quickly get started with the .NET MAUI Avatar View, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=XrTvIgeeUm0" %}
+<style>#MAUIAvatarViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAvatarViewVideoTutorial' src='https://www.youtube.com/embed/XrTvIgeeUm0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
