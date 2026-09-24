@@ -284,7 +284,9 @@ You can write custom style for the properties in the `SfTreeGrid.DefaultStyle` c
 
 <img alt="Default style- App page resource" src="Images\styling\maui-treegrid-default-style-app-page-resource.png" width="404"/>
 
-## Grid line visibility Customization
+## Grid line customization
+
+### Visibility
 
 The TreeGrid provides support to change the visibility of the vertical and horizontal borders. Set desired value to [SfTreeGrid.GridLinesVisibility]() for data rows or [SfTreeGrid.HeaderGridLinesVisibility]() for header row.
 
@@ -319,7 +321,7 @@ this.Content = treeGrid;
 
 <img alt="Grid line visibility" src="Images\styling\maui-treegrid-gridline-visibility.png" width="404"/>
 
-## Changing the Border Color
+### Stroke
 
 The grid line color of column header and data row cells can be customized by setting [TreeGridStyle.GridLineColor]() and [TreeGridStyle.HeaderGridLineColor]() properties.
 
@@ -352,7 +354,7 @@ this.Content = treeGrid;
 
 <img alt="Changing the border color" src="Images\styling\maui-treegrid-grid-line-customization.png" width="404"/>
 
-## Changing the Border Width
+### Stroke Thickness
 
 The grid line stroke thickness of column header and data row cells can be customized by setting [TreeGridStyle.GridLineStrokeThickness]() and [TreeGridStyle.HeaderGridLineStrokeThickness]() properties.
 
