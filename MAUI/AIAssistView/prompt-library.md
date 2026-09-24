@@ -80,7 +80,7 @@ public class PromptLibraryViewModel
 Bind the view model collection to the `SfPromptLibrary.ItemsSource` property to display the items in the `PromptLibrary`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <ContentPage.BindingContext>
     <local:PromptLibraryViewModel />
@@ -89,7 +89,7 @@ Bind the view model collection to the `SfPromptLibrary.ItemsSource` property to 
 <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -133,7 +133,7 @@ When a user selects a prompt, both the `PromptSelected` event and the `PromptSel
                             PromptSelected="OnPromptSelected" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -220,7 +220,7 @@ To display `SfPromptLibrary` within `SfAIAssistView`, assign an `SfPromptLibrary
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-{% highlight c# hl_lines="19" %}
+{% highlight c# hl_lines="21" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -252,6 +252,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` overlay. For more information, refer to the [Common suggestions](https://help.syncfusion.com/maui/aiassistview/suggestions#displaying-common-suggestions) section.
-
 ![Syncfusion .NET MAUI SfAIAssistView PromptLibrary](Images/maui-aiassistview-prompt-library.gif)
+
+N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` overlay. For more information, refer to the [Common suggestions](https://help.syncfusion.com/maui/aiassistview/suggestions#displaying-common-suggestions) section.
