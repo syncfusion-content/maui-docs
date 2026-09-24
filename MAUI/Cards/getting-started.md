@@ -12,7 +12,7 @@ This section details the process of integrating the [.NET MAUI Cards](https://ww
 
 To get start quickly with our .NET MAUI Cards, you can check the below video.
 
-{% youtube "youtube:https://www.youtube.com/watch?v=hveapZxnOFY" %}
+<style>#MAUICardsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICardsVideoTutorial' src='https://www.youtube.com/embed/hveapZxnOFY'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [SfBadgeView](https
 
 To quickly get started with the .NET MAUI Badge View, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=wlh2eMPYZY0" %}
+<style>#MAUIBadgeViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIBadgeViewVideoTutorial' src='https://www.youtube.com/embed/wlh2eMPYZY0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

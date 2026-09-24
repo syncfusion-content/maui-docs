@@ -13,7 +13,7 @@ This section explains how to configure a [Rating](https://help.syncfusion.com/cr
 
 To quickly get started with the .NET MAUI Rating, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=yEJzdjPNjBs" %}
+<style>#MAUIRatingVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRatingVideoTutorial' src='https://www.youtube.com/embed/yEJzdjPNjBs'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

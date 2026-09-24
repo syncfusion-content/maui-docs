@@ -13,8 +13,7 @@ This section explains how to add the [.NET MAUI Shimmer](https://www.syncfusion.
 
 To get start quickly with our .NET MAUI Shimmer, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=NGGQhUA9Bu0"%}
+<style>#MAUIShimmerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIShimmerVideoTutorial' src='https://www.youtube.com/embed/NGGQhUA9Bu0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

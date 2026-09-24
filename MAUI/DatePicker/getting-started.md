@@ -14,7 +14,7 @@ This section explains how to add the [.NET MAUI Date Picker](https://www.syncfus
 
 To get start quickly with our .NET MAUI Date Picker, you can check the below video.
 
-{% youtube "youtube:https://youtu.be/PeQf-5pPCWo?si=KlwcdMcLN634G_AA" %}
+<style>#MAUIDatePickerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDatePickerVideoTutorial' src='https://www.youtube.com/embed/PeQf-5pPCWo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
