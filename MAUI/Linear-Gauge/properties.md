@@ -5,6 +5,7 @@ description: This section explains the properties, events and methods with Syncf
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Linear Gauge

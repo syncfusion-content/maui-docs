@@ -5,6 +5,7 @@ description: Ticks in .NET MAUI Linear Gauge indicate scale intervals and measur
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Ticks in .NET MAUI Linear Gauge

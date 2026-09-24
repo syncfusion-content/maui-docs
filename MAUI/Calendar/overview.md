@@ -5,6 +5,7 @@ title: About Syncfusion .NET MAUI Calendar Control | Syncfusion®
 description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI Calendar control and more details.
 control: SfCalendar
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # About Syncfusion® .NET MAUI Calendar Control

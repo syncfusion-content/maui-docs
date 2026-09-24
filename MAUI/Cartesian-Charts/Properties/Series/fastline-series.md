@@ -5,6 +5,7 @@ description: This section lists the public API members for FastLine series in th
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # FastLineSeries API Reference in .NET MAUI Cartesian Chart

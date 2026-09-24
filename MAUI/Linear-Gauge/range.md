@@ -5,6 +5,7 @@ description: Range in .NET MAUI Linear Gauge highlights specific value intervals
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Range in .NET MAUI Linear Gauge

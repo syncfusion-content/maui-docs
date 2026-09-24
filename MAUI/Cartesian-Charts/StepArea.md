@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui step area chart, maui step area chart, .net maui chart step area type, step area chart customization .net maui, syncfusion maui step area chart, cartesian step area chart maui, .net maui chart step area visualization, syncfusion maui stair-step area chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Step Area Chart in .NET MAUI Cartesian Chart

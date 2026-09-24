@@ -5,6 +5,7 @@ description: This section lists the public API members for RangeColumn series in
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # RangeColumnSeries API Reference in .NET MAUI Cartesian Chart

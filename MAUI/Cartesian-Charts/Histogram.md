@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui histogram chart, histogram chart customization .net maui, syncfusion maui histogram chart, cartesian histogram chart maui, .net maui chart histogram , .net maui frequency distribution chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Histogram Chart in .NET MAUI Cartesian Chart

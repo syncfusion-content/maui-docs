@@ -5,6 +5,7 @@ description: This section lists the public API members for Spline series in the 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # SplineSeries API Reference in .NET MAUI Cartesian Chart

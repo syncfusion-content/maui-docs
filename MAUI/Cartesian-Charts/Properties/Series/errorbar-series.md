@@ -5,6 +5,7 @@ description: This section lists the public API members for ErrorBar series in th
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # ErrorBarSeries API Reference in .NET MAUI Cartesian Chart

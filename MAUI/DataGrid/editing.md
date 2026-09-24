@@ -6,6 +6,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui editing, maui editing
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Editing in .NET MAUI Data Grid
@@ -95,6 +96,69 @@ this.Content = dataGrid;
 {% endtabs %}
 
 > **Note:** On iOS and Android, the keyboard will collapse when the editing grid cell loses focus.
+
+## Editor Selection Behavior
+
+The [SfDataGrid.EditorSelectionBehavior]() property controls how the cursor is positioned and how text is selected when a cell enters edit mode. This feature enhances the editing experience by allowing users to customize text handling behavior.
+
+The supported values are:
+
+ * `DataGridEditorSelectionBehavior.MoveLast` — Places the cursor at the end of the existing text without selecting it.
+ * `DataGridEditorSelectionBehavior.SelectAll` — Selects the entire text within the editor, allowing quick replacement of existing values (default).
+
+### MoveLast behavior
+
+When set to `MoveLast`, the cursor is positioned at the end of the existing text, allowing users to append or edit text from the end.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       NavigationMode="Cell"
+                       SelectionMode="Multiple"
+                       EditorSelectionBehavior="MoveLast"
+                       ItemsSource="{Binding Orders}"/>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.EditorSelectionBehavior = DataGridEditorSelectionBehavior.MoveLast;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-movelast-behavior" src="Images\editing\maui-datagrid-movelast-behavior.gif" width="404" />
+
+### SelectAll behavior
+
+When set to `SelectAll`, the entire text content is automatically selected when the cell enters edit mode. This is useful for scenarios where users want to quickly replace the entire cell value without manual selection.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       NavigationMode="Cell"
+                       SelectionMode="Multiple"
+                       EditorSelectionBehavior="SelectAll"
+                       ItemsSource="{Binding Orders}"/>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.EditorSelectionBehavior = DataGridEditorSelectionBehavior.SelectAll;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-selectAll-behavior" src="Images\editing\maui-datagrid-selectall-behavior.gif" width="404" />
 
 ## Lost focus behavior
 

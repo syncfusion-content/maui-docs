@@ -5,6 +5,7 @@ description: Learn about the overview of Syncfusion® .NET MAUI TreeMap control,
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
  
 # About Syncfusion® .NET MAUI TreeMap Control

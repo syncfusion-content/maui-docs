@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion® Essential Studio .NET MAUI
 platform: maui
 control: SfDatePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # About Syncfusion® .NET MAUI Date Picker Control

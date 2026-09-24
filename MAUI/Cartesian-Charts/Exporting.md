@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart exporting, maui chart exporting, .net maui chart exporting options, syncfusion maui chart exporting, .net maui chart exporting visualization, .net maui cartesian chart export support.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Exporting in .NET MAUI Cartesian Chart
