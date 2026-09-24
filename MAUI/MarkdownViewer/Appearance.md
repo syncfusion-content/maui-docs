@@ -67,6 +67,9 @@ The Source property of SfMarkdownViewer can be bound to a string property in the
                                         TableBackground="#FFE2ED"
                                         TableHeaderTextColor="HotPink" />
     </markdown:SfMarkdownViewer.Settings>
+    <markdown:SfMarkdownViewer.BindingContext>
+        <local:MarkDownViewModel/>
+    </markdown:SfMarkdownViewer.BindingContext>
 </markdown:SfMarkdownViewer>
 
 {% endhighlight %}
@@ -95,7 +98,12 @@ Content = markdownViewer;
 public class MarkDownViewModel : INotifyPropertyChanged
 {
     public string MarkdownContent{ get; set; }
+    
+    public event PropertyChangedEventHandler? PropertyChanged;
 
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    
     public MarkDownViewModel()
     {
 

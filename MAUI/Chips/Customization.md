@@ -551,6 +551,9 @@ The [InputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipG
                Margin="10,10,0,0"
                WidthRequest="110" />
     </chip:SfChipGroup.InputView>
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
 </chip:SfChipGroup>
 
 {% endhighlight %}
@@ -630,7 +633,11 @@ The [ChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
                   DisplayMemberPath="Name"
                   ChipTextColor="White"
                   CloseButtonColor="White"
-                  ChipBackground="#512dcd" />
+                  ChipBackground="#512dcd">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -715,6 +722,9 @@ To customize the background color of the **selected** chip, set `ChipType="Choic
             </VisualState>
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
 </chip:SfChipGroup>
 
 {% endhighlight %}
@@ -801,6 +811,10 @@ The [SelectedChipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
                   ChipBackground="#512dcd"
                   ChipType="Filter"
                   SelectedChipBackground="#E8DEF8" />
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -871,7 +885,11 @@ The [ChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfC
 
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
-                  ChipTextColor="Red" />
+                  ChipTextColor="Red">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -954,6 +972,9 @@ To customize the text color of the **selected** chip, set `ChipType="Choice"` or
             </VisualState>
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
 </chip:SfChipGroup>
 
 {% endhighlight %}
@@ -1040,7 +1061,11 @@ The [SelectedChipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                   ChipType="Filter"
                   SelectionIndicatorColor="White"
                   SelectedChipBackground="#512dcd"
-                  SelectedChipTextColor="White" />
+                  SelectedChipTextColor="White">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1113,7 +1138,11 @@ The [ChipStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
                   ChipStroke="Red"
-                  ChipBackground="LightYellow" />
+                  ChipBackground="LightYellow">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1182,7 +1211,11 @@ The [ChipTextSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCh
 
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
-                  ChipTextSize="10" />
+                  ChipTextSize="10">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1251,7 +1284,11 @@ The [ChipFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
                   ChipFontAttributes="Bold"
-                  ChipType="Choice" />
+                  ChipType="Choice">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1320,7 +1357,11 @@ The [ChipFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
-                  ChipFontFamily="OpenSans-Semibold" />
+                  ChipFontFamily="OpenSans-Semibold">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1388,7 +1429,11 @@ The [ChipPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   DisplayMemberPath="Name"
-                  ChipPadding="8,0,0,0" />
+                  ChipPadding="8,0,0,0">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1457,7 +1502,11 @@ The [ChipStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   ChipStrokeThickness="7"
                   DisplayMemberPath="Name"
-                  ChipStroke="Red" />
+                  ChipStroke="Red">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1531,6 +1580,9 @@ The `Chip Group` creates a chip for each item and arranges the chips in a `Stack
             <FlexLayout HorizontalOptions="Start"
                         VerticalOptions="Center" />
         </chip:SfChipGroup.ChipLayout>
+        <chip:SfChipGroup.BindingContext>
+            <local:EmployeeViewModel/>
+        </chip:SfChipGroup.BindingContext>
     </chip:SfChipGroup>
 </Grid>
 
@@ -1608,7 +1660,11 @@ The [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip
 
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   ItemHeight="60"
-                  DisplayMemberPath="Name" />
+                  DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1679,7 +1735,11 @@ The [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGr
                   ImageMemberPath="Image"
                   ChipImageSize="30"
                   ShowIcon="True"
-                  DisplayMemberPath="Name" />
+                  DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1749,7 +1809,11 @@ The [CloseButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 <chip:SfChipGroup ItemsSource="{Binding Employees}"
                   CloseButtonColor="Red"
                   ChipBackground="LightYellow"
-                  DisplayMemberPath="Name" />
+                  DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1818,7 +1882,11 @@ The [SelectionIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 <chip:SfChipGroup x:Name="sfChipGroup"
                   ItemsSource="{Binding Employees}"
                   SelectionIndicatorColor="White"
-                  DisplayMemberPath="Name" />
+                  DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -1888,7 +1956,11 @@ The [ChipImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfC
                   ImageMemberPath="Image"
                   ChipImageSize="50"
                   ShowIcon="True"
-                  DisplayMemberPath="Name" />
+                  DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight c# %}

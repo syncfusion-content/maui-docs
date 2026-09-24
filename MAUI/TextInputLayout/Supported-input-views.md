@@ -79,9 +79,9 @@ For multi-line text input, host the .NET MAUI [Editor](https://learn.microsoft.c
 {% highlight xaml %}
 
 <VerticalStackLayout>
-    <inputLayout:SfTextInputLayout Hint="Notes"
-                                   HelperText="Enter the brief description"
-                                   ContainerType="Outlined">
+    <inputLayout:SfTextInputLayout Hint="About TextInputLayout"
+                        HelperText="Enter the brief description of the text input layout"
+                        ContainerType="Outlined">
         <Editor AutoSize="TextChanges" />
     </inputLayout:SfTextInputLayout>
 </VerticalStackLayout>

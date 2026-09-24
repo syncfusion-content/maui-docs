@@ -233,7 +233,10 @@ The [ItemRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
                       ChipType="Input"
                       DisplayMemberPath="Name"
                       ItemRemoved="OnChipItemRemoved"
-                      ItemsSource="{Binding Employees}"/>
+                      ItemsSource="{Binding Employees}">
+    <chip:SfChipGroup.BindingContext>
+        <local:EmployeeViewModel/>
+    </chip:SfChipGroup.BindingContext>
 </VerticalStackLayout>
 
 {% endhighlight %}
