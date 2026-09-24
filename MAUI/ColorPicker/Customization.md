@@ -80,6 +80,21 @@ You can clear all colors shown in the Recent Colors section of the Color Picker 
 
 {% tabs %}
 
+{% highlight xaml %}
+
+<VerticalStackLayout Spacing="10"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+    <inputs:SfColorPicker ShowRecentColors="True"/>
+    <Button  x:Name="clearRecentColorsButton"
+        Text="Clear Recent Colors"
+        WidthRequest="160"
+        HeightRequest="50"
+        Clicked="OnClearRecentColorsClicked" />
+</VerticalStackLayout>
+
+{% endhighlight %}
+
 {% highlight c# %}
 
 // Create SfColorPicker

@@ -171,92 +171,109 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
 {% endhighlight %}
 {% highlight c# %}
 
-        SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-        var drawerSettings = new DrawerSettings
-        {
-            DrawerWidth = 250,
-            DrawerHeaderHeight = 160
-        };
+SfNavigationDrawer navigationDrawer;
+Label headerLabel;
+Label contentLabel;
+CollectionView collectionView;
 
-        var headerGrid = new Grid
-        {
-            BackgroundColor = Color.FromArgb("#6750A4"),
-            RowDefinitions =
-            {
-                new RowDefinition { Height = 120 },
-                new RowDefinition { Height = 40 }
-            }
-        };
+navigationDrawer = new SfNavigationDrawer();
 
-        var userImage = new Image { Source = "user.png" };
-        var userLabel = new Label { Text = "James Pollock" };
-        Grid.SetRow(userLabel, 1);
+var drawerSettings = new DrawerSettings
+{
+    DrawerWidth = 250,
+    DrawerHeaderHeight = 160
+};
 
-        headerGrid.Children.Add(userImage);
-        headerGrid.Children.Add(userLabel);
+var headerGrid = new Grid
+{
+    BackgroundColor = Color.FromArgb("#6750A4"),
+    RowDefinitions =
+    {
+        new RowDefinition { Height = 120 },
+        new RowDefinition { Height = 40 }
+    }
+};
 
-        drawerSettings.DrawerHeaderView = headerGrid;
-        collectionView = new CollectionView
-        {
-            SelectionMode = SelectionMode.Single,
-            ItemsSource = new List<string>
-            {
-                "Home",
-                "Profile",
-                "Settings",
-                "About"
-            }
-        };
-        collectionView.SelectionChanged += CollectionView_SelectionChanged;
+var userImage = new Image { Source = "user.png" };
+var userLabel = new Label { Text = "James Pollock" };
+Grid.SetRow(userLabel, 1);
 
-        drawerSettings.DrawerContentView = collectionView;
+headerGrid.Children.Add(userImage);
+headerGrid.Children.Add(userLabel);
 
-        navigationDrawer.DrawerSettings = drawerSettings;
-        var mainGrid = new Grid
-        {
-            RowDefinitions =
-            {
-                new RowDefinition { Height = GridLength.Auto },
-                new RowDefinition { Height = GridLength.Star }
-            }
-        };
+drawerSettings.DrawerHeaderView = headerGrid;
 
-        var topBar = new HorizontalStackLayout
-        {
-            BackgroundColor = Color.FromArgb("#6750A4"),
-            Spacing = 10,
-            Padding = new Thickness(5, 0, 0, 0)
-        };
+collectionView = new CollectionView
+{
+    SelectionMode = SelectionMode.Single,
+    ItemsSource = new List<string>
+    {
+        "Home",
+        "Profile",
+        "Settings",
+        "About"
+    }
+};
+collectionView.SelectionChanged += collectionView_SelectionChanged;
 
-        var hamburgerButton = new ImageButton();
-        hamburgerButton.Clicked += HamburgerButton_Clicked;
+drawerSettings.DrawerContentView = collectionView;
 
-        private void hamburgerButton_Clicked(object sender, EventArgs e)
-        {
-            navigationDrawer.ToggleDrawer();
-        }
+navigationDrawer.DrawerSettings = drawerSettings;
 
-        private void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.CurrentSelection.FirstOrDefault() is string selectedItem)
-            {
-                headerLabel.Text = selectedItem;
-                contentLabel.Text = $"{selectedItem} Content";
-                navigationDrawer.ToggleDrawer();
-            }
-        }
+var mainGrid = new Grid
+{
+    RowDefinitions =
+    {
+        new RowDefinition { Height = GridLength.Auto },
+        new RowDefinition { Height = GridLength.Star }
+    }
+};
 
-        headerLabel = new Label();
+var topBar = new HorizontalStackLayout
+{
+    BackgroundColor = Color.FromArgb("#6750A4"),
+    Spacing = 10,
+    Padding = new Thickness(5, 0, 0, 0)
+};
 
-        topBar.Children.Add(hamburgerButton);
-        topBar.Children.Add(headerLabel);
-        contentLabel = new Label();
-        Grid.SetRow(contentLabel, 1);
+var hamburgerButton = new ImageButton();
+hamburgerButton.Clicked += hamburgerButton_Clicked;
 
-        mainGrid.Children.Add(topBar);
-        mainGrid.Children.Add(contentLabel);
+headerLabel = new Label();
 
-        navigationDrawer.ContentView = mainGrid;
+topBar.Children.Add(hamburgerButton);
+topBar.Children.Add(headerLabel);
+
+contentLabel = new Label();
+Grid.SetRow(contentLabel, 1);
+
+mainGrid.Children.Add(topBar);
+mainGrid.Children.Add(contentLabel);
+
+navigationDrawer.ContentView = mainGrid;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `hamburgerButton_Clicked` and `collectionView_SelectionChanged` event handlers can be added in the code-behind as follows:
+
+{% tabs %}
+{% highlight c# %}
+
+private void hamburgerButton_Clicked(object sender, EventArgs e)
+{
+    navigationDrawer.ToggleDrawer();
+}
+
+private void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    if (e.CurrentSelection.FirstOrDefault() is string selectedItem)
+    {
+        headerLabel.Text = selectedItem;
+        contentLabel.Text = $"{selectedItem} Content";
+        navigationDrawer.ToggleDrawer();
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

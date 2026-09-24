@@ -424,9 +424,12 @@ The width of a tab is set to fit the text or image that it contains when `TabWid
 
 {% highlight xaml %}
 <tabView:SfTabView TabWidthMode="SizeToContent">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
+    <tabView:SfTabItem Header="Alexandar" />
+    <tabView:SfTabItem Header="Gabirell" />
+    <tabView:SfTabItem Header="Clara" />
+    <tabView:SfTabItem Header="Tye" />
+    <tabView:SfTabItem Header="Nor" />
+    <tabView:SfTabItem Header="Sebastin" />
 </tabView:SfTabView>
 
 {% endhighlight %}
@@ -437,9 +440,12 @@ SfTabView tabView = new SfTabView
     TabWidthMode = TabWidthMode.SizeToContent,
     Items = new TabItemCollection
     {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
+        new SfTabItem { Header = "Alexandar" },
+        new SfTabItem { Header = "Gabirell" },
+        new SfTabItem { Header = "Clara" },
+        new SfTabItem { Header = "Tye" },
+        new SfTabItem { Header = "Nor" },
+        new SfTabItem { Header = "Sebastin" }
     }
 };
 
@@ -528,9 +534,10 @@ The horizontal text alignment of the tab header can be customized by setting the
 
 {% highlight xaml %}
 <tabView:SfTabView HeaderHorizontalTextAlignment="Center">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
+    <tabView:SfTabItem Header="Document" />
+    <tabView:SfTabItem Header="Excel" />
+    <tabView:SfTabItem Header="PDF" />
+    <tabView:SfTabItem Header="PowerPoint" />
 </tabView:SfTabView>
 
 {% endhighlight %}
@@ -541,9 +548,10 @@ SfTabView tabView = new SfTabView
     HeaderHorizontalTextAlignment = TextAlignment.Center,
     Items = new TabItemCollection
     {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
+        new SfTabItem { Header = "Document" },
+        new SfTabItem { Header = "Excel" },
+        new SfTabItem { Header = "PDF" },
+        new SfTabItem { Header = "PowerPoint" }
     }
 };
 
@@ -665,6 +673,9 @@ The tab bar background can be customized with a linear gradient, as shown in the
 
 {% highlight xaml %}
 <tabView:SfTabView>
+    <tabView:SfTabItem Header="Item1" />
+    <tabView:SfTabItem Header="Item2" />
+    <tabView:SfTabItem Header="Item3" />
     <tabView:SfTabView.TabBarBackground>
         <LinearGradientBrush EndPoint="0,1">
             <GradientStop Color="#009FFF" Offset="0.1" />
@@ -678,6 +689,12 @@ The tab bar background can be customized with a linear gradient, as shown in the
 
 SfTabView tabView = new SfTabView
 {
+    Items = new TabItemCollection
+    {
+        new SfTabItem { Header = "Item1" },
+        new SfTabItem { Header = "Item2" },
+        new SfTabItem { Header = "Item3" }
+    },
     TabBarBackground = new LinearGradientBrush
     {
         EndPoint = new Point(0, 1),
@@ -720,9 +737,9 @@ You can customize the border of the tab header area in .NET MAUI Tab View using 
                    TabBarBorderColor="#7C3AED"
                    TabBarBorderThickness="2"
                    TabBarCornerRadius="24">
-    <tabView:SfTabItem Header="Item1" />
-    <tabView:SfTabItem Header="Item2" />
-    <tabView:SfTabItem Header="Item3" />
+    <tabView:SfTabItem Header="Favorites" />
+    <tabView:SfTabItem Header="Recents" />
+    <tabView:SfTabItem Header="Cotacts" />
 </tabView:SfTabView>
 
 {% endhighlight %}
@@ -736,9 +753,9 @@ SfTabView tabView = new SfTabView
     TabBarCornerRadius = new CornerRadius(24),
     Items = new TabItemCollection
     {
-        new SfTabItem { Header = "Item1" },
-        new SfTabItem { Header = "Item2" },
-        new SfTabItem { Header = "Item3" }
+        new SfTabItem { Header = "Favorites" },
+        new SfTabItem { Header = "Recents" },
+        new SfTabItem { Header = "Cotacts" }
     }
 };
 

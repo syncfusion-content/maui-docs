@@ -39,21 +39,34 @@ The events fire in the following order during a state change:
 
 ## DrawerOpening event
 
-The [DrawerOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpening) event is triggered before the drawer pane opens. You can cancel the open operation by setting the `Cancel` property of the event argument to `true`. The event argument is of type `DrawerCancelEventArgs`.
+The [DrawerOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpening) event is triggered before the drawer pane opens. You can cancel the open operation by setting the `Cancel` property of the event argument to `true`. The event argument is of type [DrawerCancelEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerCancelEventArgs.html), which exposes the following properties:
 
 * `Cancel`: Determines if the drawer opening should be canceled.
-
 {% tabs %}
 
 {% highlight xaml %}
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer" 
-                                     DrawerOpening="OnDrawerOpening" />
+                                     DrawerOpening="OnDrawerOpening">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings>
+            <navigationDrawer:DrawerSettings.DrawerContentView>
+                <Label Text="Drawer Content" />
+            </navigationDrawer:DrawerSettings.DrawerContentView>
+        </navigationDrawer:DrawerSettings>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
+{
+    DrawerSettings = new DrawerSettings
+    {
+        DrawerContentView = new Label { Text = "Drawer Content" }
+    }
+};
 navigationDrawer.DrawerOpening += OnDrawerOpening;
 
 {% endhighlight %}
@@ -66,7 +79,11 @@ The `DrawerOpening` event can be handled in C# as follows:
 
 private void OnDrawerOpening(object sender, DrawerCancelEventArgs e)
 {
-    e.Cancel = true;
+    // Cancel opening of the secondary drawer only.
+    if (!e.IsPrimary)
+    {
+        e.Cancel = true;
+    }
 }
 
 {% endhighlight %}
@@ -74,20 +91,34 @@ private void OnDrawerOpening(object sender, DrawerCancelEventArgs e)
 
 ## DrawerOpened event
 
-The [DrawerOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpened) event is triggered after a drawer is opened. You can execute your own set of codes once the drawer is opened.
+The [DrawerOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpened) event is triggered after a drawer is opened. You can execute your own set of codes once the drawer is opened. The event argument is of type [DrawerEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerEventArgs.html), which exposes the following property:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer"               
-                                     DrawerOpened="OnDrawerOpened" />
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer"
+                                     DrawerOpened="OnDrawerOpened">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings>
+            <navigationDrawer:DrawerSettings.DrawerContentView>
+                <Label Text="Drawer Content" />
+            </navigationDrawer:DrawerSettings.DrawerContentView>
+        </navigationDrawer:DrawerSettings>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
+{
+    DrawerSettings = new DrawerSettings
+    {
+        DrawerContentView = new Label { Text = "Drawer Content" }
+    }
+};
 navigationDrawer.DrawerOpened += OnDrawerOpened;
 
 {% endhighlight %}
@@ -108,20 +139,33 @@ private void OnDrawerOpened(object sender, DrawerEventArgs e)
 
 ## DrawerClosing event
 
-The [DrawerClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosing) event is triggered before the drawer pane closes. You can cancel the close operation by setting the `Cancel` property of the event argument to `true`. The event argument is of type `DrawerCancelEventArgs`.
+The [DrawerClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosing) event is triggered before the drawer pane closes. You can cancel the close operation by setting the `Cancel` property of the event argument to `true`. The event argument is of type [DrawerCancelEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerCancelEventArgs.html), which exposes the following properties:
 
 * `Cancel`: Determines if the drawer closing should be canceled.
-
 {% tabs %}
 {% highlight xaml %}
 
 <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer" 
-                                     DrawerClosing="OnDrawerClosing" />
+                                     DrawerClosing="OnDrawerClosing">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings>
+            <navigationDrawer:DrawerSettings.DrawerContentView>
+                <Label Text="Drawer Content" />
+            </navigationDrawer:DrawerSettings.DrawerContentView>
+        </navigationDrawer:DrawerSettings>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 {% highlight c# %}
 
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
+{
+    DrawerSettings = new DrawerSettings
+    {
+        DrawerContentView = new Label { Text = "Drawer Content" }
+    }
+};
 navigationDrawer.DrawerClosing += OnDrawerClosing;
 
 {% endhighlight %}
