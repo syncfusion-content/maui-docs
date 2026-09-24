@@ -80,12 +80,12 @@ The `Navigating` and `Navigated` events can be handled in C# as follows:
 
 private async void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemNavigating", "Ok");
+    await DisplayAlertAsync("Alert", "ItemNavigating", "Ok");
 }
 
 private async void SfRadialMenu_Navigated(object sender, NavigatedEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemNavigated", "Ok");
+    await DisplayAlertAsync("Alert", "ItemNavigated", "Ok");
 }
 
 {% endhighlight %}
@@ -139,12 +139,12 @@ The `Opening` and `Opened` events can be handled in C# as follows:
 
 private async void SfRadialMenu_Opening(object sender, OpeningEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemOpening", "Ok");
+    await DisplayAlertAsync("Alert", "ItemOpening", "Ok");
 }
 
 private async void SfRadialMenu_Opened(object sender, OpenedEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemOpened", "Ok");
+    await DisplayAlertAsync("Alert", "ItemOpened", "Ok");
 }
 
 {% endhighlight %}
@@ -196,12 +196,12 @@ The `Closing` and `Closed` events can be handled in C# as follows:
 
 private async void SfRadialMenu_Closing(object sender, ClosingEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemClosing", "Ok");
+    await DisplayAlertAsync("Alert", "ItemClosing", "Ok");
 }
 
 private async void SfRadialMenu_Closed(object sender, ClosedEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemClosed", "Ok");
+    await DisplayAlertAsync("Alert", "ItemClosed", "Ok");
 }
 
 {% endhighlight %}
@@ -251,7 +251,7 @@ The `CenterButtonBackTapped` event can be handled in C# as follows:
 
 private async void SfRadialMenu_CenterButtonBackTapped(object sender, CenterButtonBackTappedEventArgs e)
 {
-    await DisplayAlert("Alert", "CenterButtonTapped", "Ok");
+    await DisplayAlertAsync("Alert", "CenterButtonTapped", "Ok");
 }
 
 {% endhighlight %}
@@ -302,7 +302,7 @@ The `ItemTapped` event can be handled in C# as follows:
 
 private async void SfRadialMenuItem_ItemTapped(object sender, Syncfusion.Maui.RadialMenu.ItemTappedEventArgs e)
 {
-    await DisplayAlert("Alert", "ItemTapped", "Ok");
+    await DisplayAlertAsync("Alert", "ItemTapped", "Ok");
 }
 
 {% endhighlight %}
@@ -355,12 +355,12 @@ The `TouchDown` and `TouchUp` events can be handled in C# as follows:
 
 private async void SfRadialMenuItemTouchDown(object? sender, RadialMenuItemEventArgs e)
 {
-    await DisplayAlert("Alert", "The RadialMenuItem is pressed.", "Ok");
+    await DisplayAlertAsync("Alert", "The RadialMenuItem is pressed.", "Ok");
 }
 
 private async void SfRadialMenuItemTouchUp(object? sender, RadialMenuItemEventArgs e)
 {
-    await DisplayAlert("Alert", "The RadialMenuItem is released.", "Ok");
+    await DisplayAlertAsync("Alert", "The RadialMenuItem is released.", "Ok");
 }
 
 {% endhighlight %}

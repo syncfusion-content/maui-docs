@@ -159,7 +159,7 @@ The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsVi
 {% highlight xaml %}
 
 <VerticalStackLayout Padding="10" 
-                     Spacing="10" >
+                     Spacing="10">
     <syncEffectsView:SfEffectsView x:Name="effectsView"
                                    HorizontalOptions="Center" 
                                    VerticalOptions="Center"
@@ -172,9 +172,9 @@ The [Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsVi
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,1">
                     <GradientStop Color="#FF6B6B" 
-                                  Offset="0.0" />
+                                  Offset="0.0"/>
                     <GradientStop Color="#4ECDC4" 
-                                  Offset="1.0" />
+                                  Offset="1.0"/>
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>
