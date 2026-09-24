@@ -11,8 +11,6 @@ documentation: ug
 
 The **.NET MAUI Diagram** control is a versatile component used to create, visualize, and interact with diagrams. It enables developers to build flowcharts, workflow designers, process diagrams, organizational charts, and other graphical applications using nodes, connectors, annotations, ports, and symbol palettes.
 
-The Diagram control provides built-in support for shape rendering, diagram interaction, serialization, exporting, printing, and event notifications, helping developers create rich diagramming experiences with minimal effort.
-
 ![Syncfusion .NET MAUI accordion overview ](Images/overview_images/diagram_overview.png)
 
 ---
@@ -30,7 +28,8 @@ The Diagram control provides built-in support for shape rendering, diagram inter
 - **Connectors**: Connect nodes using straight or orthogonal connectors with customizable appearance and decorators.
 - **Annotations and Labels**: Add and customize text labels on nodes and connectors with flexible positioning options.
 - **Ports and Connection Points**: Define precise connection points and create accurate workflow relationships between elements.
-- **Symbol Palette and Diagram Operations**: Drag-and-drop reusable symbols, zoom, pan, undo/redo, copy/paste, serialize, export, and print diagrams.
+- **Symbol Palette**: Provides categorized palettes of reusable symbols with optional search support, enabling users to quickly locate and drag-and-drop symbols onto the diagram surface to create new nodes.
+- **Export & Print**: Export diagrams to files or streams for sharing, reporting, archiving, and offline review, and print diagrams through the system printing pipeline using asynchronous APIs with optional fit-to-page support for complete diagram visibility.
 
 ## Globalization
 
@@ -230,7 +229,7 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">
+<!--<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">-->
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
@@ -246,7 +245,7 @@ Explore Features
     <h3 class="form-title">Demos</h3>
 </div>
     <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">
+    <!--<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">-->
     View Demos
   <span class="card-icon card-arrow"></span>
 </a>
@@ -264,7 +263,7 @@ Explore Features
     <div class="form-description">
       Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <a href="https://www.syncfusion.com/tutorial-videos/maui/diagram" class="explore-link">
+    <a href="https://www.syncfusion.com/tutorial-videos/maui/" class="explore-link">
     Watch now
   <span class="card-icon card-arrow"></span>
 </a>
@@ -282,7 +281,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/cross-platforms/section/1299" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>
