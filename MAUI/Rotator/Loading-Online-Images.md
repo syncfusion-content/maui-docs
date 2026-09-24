@@ -35,6 +35,9 @@ Bind the `RotatorViewModel.ImageCollection` to the [`ItemsSource`](https://help.
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}

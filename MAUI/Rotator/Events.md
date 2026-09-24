@@ -38,6 +38,9 @@ The [`SelectedIndexChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}
@@ -132,6 +135,9 @@ The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
