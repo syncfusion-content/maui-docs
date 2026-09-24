@@ -1,10 +1,11 @@
 ---
 layout: post
 title: ChartCrosshairBehavior in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for ChartCrosshair Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # ChartCrosshairBehavior API Reference for .NET MAUI Cartesian Chart

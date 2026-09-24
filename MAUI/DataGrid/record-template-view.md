@@ -5,6 +5,7 @@ description: Learn how to use Record Template View in Syncfusion® .NET MAUI Dat
 platform: MAUI
 control: SfDataGrid
 documentation: UG
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Record Template View in .NET MAUI Data Grid

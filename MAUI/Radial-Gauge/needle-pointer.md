@@ -5,6 +5,7 @@ description: Needle Pointer in .NET MAUI Radial Gauge indicates values using a n
 platform: maui
 control: SfRadialGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Needle Pointer in .NET MAUI Radial Gauge

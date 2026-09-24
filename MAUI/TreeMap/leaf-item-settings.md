@@ -5,6 +5,7 @@ description: Leaf Item Settings in .NET MAUI TreeMap customize the appearance an
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
  
 # Leaf Item Settings in .NET MAUI TreeMap

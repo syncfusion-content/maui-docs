@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Circular C
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Circular Chart
@@ -264,4 +265,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Pie chart in .NET MAUI Circular Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
-You can download the Circular Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).
+You can download the Circular Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-Chart).

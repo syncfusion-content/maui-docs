@@ -6,6 +6,7 @@ keywords: maui pyramid chart, getting started, setup, project creation, initiali
 platform: maui
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Pyramid Chart
@@ -248,4 +249,4 @@ this.Content = chart;
 
 ![Pyramid chart in .NET MAUI Pyramid Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
 
-You can download the Pyramid Charts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).
+You can download the Pyramid Charts Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Pyramid-Chart).

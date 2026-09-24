@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart auto scrolling, .net maui chart scrolling customization, .net maui chart auto scroll feature, syncfusion maui chart auto scrolling, cartesian chart auto scroll maui, .net maui chart dynamic scrolling, enable auto scrolling .net maui chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Auto Scrolling in .NET MAUI Cartesian Chart
@@ -93,7 +94,7 @@ this.Content = chart;
 
 ## Auto scrolling delta type
 
-When using [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) in .NET MAUI Cartesian Chart, you can set the time unit for auto-scrolling delta using the [AutoScrollingDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_AutoScrollingDeltaType) property. The [DateTimeDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeDeltaType.html) enum provides the following values:
+When using [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) in .NET MAUI Cartesian Chart, you can set the time unit for auto-scrolling delta using the [AutoScrollingDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_AutoScrollingDeltaType) property. The [DateTimeIntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html) enum provides the following values:
 
 - `Years` - Sets delta in years.
 - `Months` - Sets delta in months.

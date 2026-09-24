@@ -5,6 +5,7 @@ description: Learn about the properties, methods, and events of the Syncfusion .
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 <br>

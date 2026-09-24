@@ -85,12 +85,12 @@ SfTabView tabView = new SfTabView
 
 ![Swiping between tabs in the .NET MAUI Tab View](images/tabview-swiping.gif)
 
-### Limitations
+## Limitations
 
 * **Interference between child controls and Tab View swiping:** When a child control within a Tab View supports horizontal swiping or interaction (e.g., a horizontal ScrollView, a custom swipe-enabled control, or a carousel), it can interfere with the Tab View's touch gesture. This may result in unintended behavior, such as the Tab View swiping when the child control is meant to handle the gesture, or vice versa. The overlapping gestures can cause confusion and disrupt the expected user experience, leading to a less intuitive interface.
 
 ## See also
 
 * [Events in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/events)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Nested Tabs in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/nested-tabs)
