@@ -2727,9 +2727,6 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewConversationNewChatLabelTextColor", Colors.Purple);
         dictionary.Add("SfAIAssistViewConversationNewChatLabelFontSize", 19.0);
 
-        dictionary.Add("SfAIAssistViewIncognitoIconColor", Colors.Orange);
-        dictionary.Add("SfAIAssistViewNormalIncognitoIconColor", Colors.Green);
-
         dictionary.Add("SfAIAssistViewSearchPanelConversationItemTextColor", Colors.DarkViolet);
         dictionary.Add("SfAIAssistViewSearchPanelConversationItemFontSize", 18.0);
         dictionary.Add("SfAIAssistViewSearchPanelConversationItemFontFamily", "Roboto-Medium");
