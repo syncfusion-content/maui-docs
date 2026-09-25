@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expander Column Customization in .NET MAUI Tree Grid | Syncfusion®
-description: Learn how to customize the expander column in Syncfusion® .NET MAUI Tree Grid, including changing the expander column, customizing expander icons, setting expander column width, and expanding nodes using a model property.
+description: Learn how to customize the expander column in Syncfusion® .NET MAUI Tree Grid, including icons, width, column placement, and node expansion.
 platform: maui
 control: SfTreeGrid
 documentation: ug
@@ -120,6 +120,9 @@ public class ExpanderIconTemplateSelector : DataTemplateSelector
 }
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:**
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 <img alt="TreeGrid expander icon template selector" src="Images\expander\maui-treegrid-expander-icon-template-selector.png" width="404">
 
