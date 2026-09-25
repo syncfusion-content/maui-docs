@@ -233,7 +233,7 @@ this.BindingContext = new EmployeeDetails();
 The following code example binds the collection created in the previous step to the `BindableLayout.ItemsSource` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml hl_lines="7" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -244,9 +244,6 @@ The following code example binds the collection created in the previous step to 
 </ContentPage>      
 {% endhighlight %}
 {% highlight c# hl_lines="3" %}
-using Syncfusion.Maui.Accordion;
-using System.Collections.ObjectModel;
-
 EmployeeDetails viewModel = new EmployeeDetails();
 SfAccordion Accordion = new SfAccordion();
 BindableLayout.SetItemsSource(Accordion, viewModel.Employees ?? new ObservableCollection<EmployeeInfo>());
@@ -340,7 +337,7 @@ N> Refer to the [.NET MAUI fonts documentation](https://learn.microsoft.com/en-u
     </BindableLayout.ItemTemplate>
 </syncfusion:SfAccordion>    
 {% endhighlight %}
-{% highlight c# hl_lines="27 28" %}
+{% highlight c# hl_lines="95 96" %}
 using Syncfusion.Maui.Accordion;
 using System.Collections.ObjectModel;
 

@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian charts, .net maui axis types, cartesian chart axis types, syncfusion cartesian charts maui, maui chart axis customization, .NET MAUI Cartesian Chart axis, cartesian chart axis guide maui, .net maui sfCartesianChart axis.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Types of Axis in .NET MAUI Cartesian Chart
@@ -64,7 +65,7 @@ this.Content = chart;
 
 To customize the [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=BJAEtUZSK_c" %}
+<style>#MAUICartesianChartNumericAxisVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartNumericAxisVideoTutorial' src='https://www.youtube.com/embed/BJAEtUZSK_c'></iframe>
 
 ### Interval
 
@@ -187,7 +188,7 @@ this.Content = chart;
 
 To customize the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=D_8MHoglBVI" %}
+<style>#MAUICartesianChartCategoryAxisVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartCategoryAxisVideoTutorial' src='https://www.youtube.com/embed/D_8MHoglBVI'></iframe>
 
 ### Label placement
 
@@ -371,7 +372,7 @@ this.Content = chart;
 
 To customize the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=Z_ZIJ1zlVg0" %}
+<style>#MAUICartesianChartDateTimeAxisVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartDateTimeAxisVideoTutorial' src='https://www.youtube.com/embed/Z_ZIJ1zlVg0'></iframe>
 
 ### Interval
 
@@ -568,7 +569,7 @@ this.Content = chart;
 
 To customize the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=HWPRuTYThDc" %}
+<style>#MAUICartesianChartLogarithmicAxisVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartLogarithmicAxisVideoTutorial' src='https://www.youtube.com/embed/HWPRuTYThDc'></iframe>
 
 ### Interval
 
@@ -687,7 +688,7 @@ this.Content = chart;
 
 To customize the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in .NET MAUI Cartesian Charts, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=IGLyuQS18iQ" %}
+<style>#MAUIChartAxisCustomizationVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIChartAxisCustomizationVideoTutorial' src='https://www.youtube.com/embed/IGLyuQS18iQ'></iframe>
 
 ## Inverse axis
 

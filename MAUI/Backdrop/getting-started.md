@@ -13,8 +13,7 @@ This section explains the steps required to add the Backdrop page and its elemen
 
 To get start quickly with our .NET MAUI Backdrop, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=99VGii8CFmw"%}
+<style>#MAUIBackdropPageVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIBackdropPageVideoTutorial' src='https://www.youtube.com/embed/99VGii8CFmw'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

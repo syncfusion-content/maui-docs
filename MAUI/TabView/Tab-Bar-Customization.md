@@ -752,5 +752,5 @@ SfTabView tabView = new SfTabView
 
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
 * [Header Display Mode in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/header-display-mode)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Populating ItemsSource in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/populating-itemssource)

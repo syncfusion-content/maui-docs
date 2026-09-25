@@ -6,6 +6,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui conditional styling, maui conditional styling
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Conditional Styling in .NET MAUI Data Grid
@@ -637,7 +638,7 @@ public class ForeColorConverter : IValueConverter
 
 ### Conditional styling of caption summary cells using converter
 
-The appearance of caption summary cells can be customized conditionally based on the [SummaryValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SummaryDetails.html#Syncfusion_Maui_DataGrid_SummaryDetails_SummaryValues) property by using a converter that returns values based on summary aggregates. 
+The appearance of caption summary cells can be customized conditionally based on the [SummaryValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.SummaryRecordEntry.html#Syncfusion_Maui_Data_SummaryRecordEntry_SummaryValues) property by using a converter that returns values based on summary aggregates. 
 
 {% tabs %}
 {% highlight xaml %}

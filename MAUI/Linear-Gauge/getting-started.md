@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Linear Gau
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Linear Gauge
@@ -13,8 +14,7 @@ This section explains the steps required to add the [`.NET MAUI Linear Gauge`](h
 
 To get started quickly with our .NET MAUI Linear Gauge, you can check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=wclf360zOPc"%}
+<style>#MAUILinearGaugeVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUILinearGaugeVideoTutorial' src='https://www.youtube.com/embed/wclf360zOPc'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

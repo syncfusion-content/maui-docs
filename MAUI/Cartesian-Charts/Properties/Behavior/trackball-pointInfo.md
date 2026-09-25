@@ -1,10 +1,11 @@
 ---
 layout: post
 title: TrackballPointInfo in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for TrackballPoint Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # TrackballPointInfo API Reference for .NET MAUI Cartesian Chart
@@ -20,13 +21,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TrackballPointInfo.html#Syncfusion_Maui_Charts_TrackballPointInfo_DataItem" aria-label="View DataItem property in API reference">DataItem</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object?view=net-10.0" aria-label="View object type in API reference">object</a></td>
     <td>Provides access to the underlying <code>data object</code> bound to the chart segment intersected by the trackball.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TrackballPointInfo.html#Syncfusion_Maui_Charts_TrackballPointInfo_Label" aria-label="View Label property in API reference">Label</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
     <td>Defines the <code>text</code> displayed inside the trackball label for the intersected data point.</td>
 </tr>
 
@@ -60,7 +61,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TrackballPointInfo.html#Syncfusion_Maui_Charts_TrackballPointInfo_PropertyChanged" aria-label="View PropertyChanged event in API reference">PropertyChanged</a></td>
-    <td><a href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler" aria-label="View PropertyChangedEventHandler type in API reference">PropertyChangedEventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventhandler" aria-label="View PropertyChangedEventHandler type in API reference">PropertyChangedEventHandler</a></td>
     <td>Raised whenever a property of the <code>TrackballPointInfo</code> object is modified, allowing listeners to react to dynamic updates.</td>
 </tr>
 </table>

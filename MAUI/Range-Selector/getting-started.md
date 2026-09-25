@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Range Selector](ht
 
 To quickly get started with the .NET MAUI Range Selector, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=LrnvOOjQ7jE" %}
+<style>#MAUIRangeSelectorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/LrnvOOjQ7jE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

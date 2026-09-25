@@ -5,6 +5,7 @@ title: Looping in .NET MAUI Date Picker control | Syncfusion®
 description: Learn about looping in Syncfusion® .NET MAUI Date Picker control for seamless navigation in both directions.
 control: SfDatePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Looping in .NET MAUI Date Picker control

@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® .NET MAUI Kanban Board c
 platform: maui
 control: Kanban
 documentation: ug
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Getting Started with .NET MAUI Kanban Board
@@ -13,7 +14,7 @@ This section provides a quick overview for working with Essential<sup>®</sup> K
 
 To get started quickly with our [.NET MAUI Kanban Board](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), you can check the below video.
 
-{% youtube "https://youtu.be/Mq55vjT7ZEA" %}
+<style>#MAUIKanbanVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIKanbanVideoTutorial' src='https://www.youtube.com/embed/Mq55vjT7ZEA'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

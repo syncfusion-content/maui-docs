@@ -23,7 +23,7 @@ Host any `View` inside [.NET MAUI Text Input Layout](https://help.syncfusion.com
 | [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
 | [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) | Syncfusion | Single or multiple selection. Requires `Syncfusion.Maui.Inputs`. |
 | [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) | Syncfusion | Masked text input. Requires `Syncfusion.Maui.Inputs`. |
-| [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) | Syncfusion | Numeric input with up/down. Requires `Syncfusion.Maui.Inputs`. |
+| [SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview) | Syncfusion | Numeric input with up/down. Requires `Syncfusion.Maui.Inputs`. |
 
 ## Prerequisites
 
@@ -628,4 +628,4 @@ N> The Windows platform does not support the MAUI `DatePicker` as an input view 
 - [SfAutocomplete documentation](https://help.syncfusion.com/maui/autocomplete/overview)
 - [SfComboBox documentation](https://help.syncfusion.com/maui/combobox/overview)
 - [SfMaskedEntry documentation](https://help.syncfusion.com/maui/masked-entry/overview)
-- [SfNumericEntry documentation](https://help.syncfusion.com/maui/numeric-entry/overview)
+- [SfNumericEntry documentation](https://help.syncfusion.com/maui/numericentry/overview)

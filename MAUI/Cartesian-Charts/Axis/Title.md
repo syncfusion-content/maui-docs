@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian charts, .net maui axis title, cartesian chart axis title, syncfusion cartesian charts maui, maui cartesian chart axis labeling, .net maui cartesian chart axis title, cartesian chart axis title guide maui, .net maui sfCartesianChart axis title.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Title in .NET MAUI Cartesian Chart

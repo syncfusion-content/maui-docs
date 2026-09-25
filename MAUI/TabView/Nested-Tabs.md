@@ -27,7 +27,7 @@ For step-by-step setup, refer to the [Getting Started](https://help.syncfusion.c
 
 To get started quickly with nested tabs in the .NET MAUI Tab View, watch this video walkthrough:
 
-{% youtube "https://www.youtube.com/watch?v=batfDt1S8Mc&ab_channel=Syncfusion%2CInc" "Walkthrough: nested tabs in the .NET MAUI Tab View" %}
+<style>#MAUITabViewNestedTabVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUITabViewNestedTabVideoTutorial' src='https://www.youtube.com/embed/batfDt1S8Mc'></iframe>
 
 {% tabs %}
 
@@ -218,5 +218,5 @@ SfTabView tabView = new SfTabView
 ## See also
 
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)

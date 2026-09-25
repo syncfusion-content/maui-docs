@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET MAUI Barcode Ge
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Barcode Generator
@@ -13,7 +14,7 @@ This section explains how to add the [`.NET MAUI Barcode Generator`](https://hel
 
 To get started quickly with the [.NET MAUI Barcode Generator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html), you can check the following video.
 
-{% youtube "https://www.youtube.com/watch?v=WwdtIotODpE" %}
+<style>#MAUIBarcodeGeneratorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIBarcodeGeneratorVideoTutorial' src='https://www.youtube.com/embed/WwdtIotODpE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

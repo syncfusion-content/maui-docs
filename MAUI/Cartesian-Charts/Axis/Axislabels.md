@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart axis labels, axis labels customization .net maui, syncfusion maui chart axis labels, cartesian chart axis labels maui, customize axis labels .net maui chart, .net maui chart labels per 100 pixels.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Labels in .NET MAUI Cartesian Chart

@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [ComboBox](https://
 
 To quickly get started with the .NET MAUI ComboBox, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
+<style>#MAUIComboBoxVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIComboBoxVideoTutorial' src='https://www.youtube.com/embed/jcfaI0PFmSo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -158,7 +158,7 @@ using Syncfusion.Maui.Inputs;
 
 ## Step 6: Add the ComboBox component
 
-Create an instance and set it as the ComboBox's [ItemsSource]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource)) property.
+Create an instance and set it as the ComboBox's [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control is populated with a list of social media. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display the value in the selection box portion of the `[ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected.
 

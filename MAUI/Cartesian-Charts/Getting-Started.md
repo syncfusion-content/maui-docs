@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, syncfusion cartesian chart maui, maui chart control, .net maui data visualization, cartesian chart example maui.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Cartesian Chart
@@ -14,7 +15,7 @@ This section explains how to populate the Cartesian chart with data, a title, da
 
 To get started quickly with the [.NET MAUI Cartesian Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can check the following video.
 
-{% youtube "https://www.youtube.com/watch?v=o616GkzdPJk&t=7s" %}
+<style>#MAUICartesianChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartVideoTutorial' src='https://www.youtube.com/embed/o616GkzdPJk'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -306,4 +307,4 @@ The following screenshot illustrates the result of the above code.
 
 ![Getting started for .NET MAUI Cartesian Chart](Getting-Started_Images/MAUI_chart.jpg)
 
-You can download the Cartesian Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).
+You can download the Cartesian Chart Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Cartesian-Chart).

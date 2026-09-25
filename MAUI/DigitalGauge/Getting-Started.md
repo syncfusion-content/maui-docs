@@ -6,6 +6,7 @@ platform: maui
 control: DigitalGauge
 documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
+appliesto: UI Component Suite, Chart SDK
 ---
 # Getting Started with .NET MAUI Digital Gauge
 
@@ -13,7 +14,7 @@ This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfu
 
 To get started quickly with our .NET MAUI DigitalGauge, you can check the below video.
 
-{% youtube "https://youtu.be/kYZtmp3Mtkk?si=FUhFxyrNdpzRbxxC" %}
+<style>#MAUIDigitalGaugeVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDigitalGaugeVideoTutorial' src='https://www.youtube.com/embed/kYZtmp3Mtkk'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

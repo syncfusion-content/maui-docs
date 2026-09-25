@@ -5,6 +5,7 @@ description: Accessibility in .NET MAUI TreeMap provides support for keyboard na
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI TreeMap
