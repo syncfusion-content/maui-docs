@@ -133,7 +133,7 @@ This page lists the keys associated with each control and the respective UI elem
         </th>
     </tr>
     <tr>
-        <td rowspan="90">
+        <td rowspan="83">
             SfAIAssistViewStyles  
             <br/>
             <br/>
@@ -179,22 +179,6 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Background color of the assist view.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewHeaderTextColor <br/><br/></td>
-    <td> Text color of the assist view header.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewHeaderFontFamily <br/><br/></td>
-    <td> Font family used for the header.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewHeaderFontAttributes <br/><br/></td>
-    <td> Font attributes used for the header.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewHeaderFontSize <br/><br/></td>
-    <td> Font size of the header.<br/><br/></td>
-</tr>
-<tr>
     <td> SfAIAssistViewRequestItemBackground <br/><br/></td>
     <td> Background color of a request item.<br/><br/></td>
 </tr>
@@ -229,10 +213,6 @@ This page lists the keys associated with each control and the respective UI elem
 <tr>
     <td> SfAIAssistViewRequestItemAuthorFontAttributes <br/><br/></td>
     <td> Font attributes of the author name in a request item.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewRequestItemEditingBorder <br/><br/></td>
-    <td> Border of the request item when editing.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewResponseItemBackground <br/><br/></td>
@@ -315,10 +295,6 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Stroke color of the editor.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewFocusedEditorStroke <br/><br/></td>
-    <td> Stroke color of the editor when focused.<br/><br/></td>
-</tr>
-<tr>
     <td> SfAIAssistViewEditorFontFamily <br/><br/></td>
     <td> Font family used for the editor.<br/><br/></td>
 </tr>
@@ -331,12 +307,12 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Font attributes used for the editor.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewDisabledSendButtonColor <br/><br/></td>
-    <td> Background color of the disabled state of the send button.<br/><br/></td>
-</tr>
-<tr>
     <td> SfAIAssistViewDisabledSendButtonIconColor <br/><br/></td>
     <td> Icon color of the disabled state of the send button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewDisabledSendButtonBackground <br/><br/></td>
+    <td> Background color of the send button in the disabled state.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewRequestHyperlinkColor <br/><br/></td>
@@ -467,22 +443,6 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Icon color for the stop responding view.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewStopRespondingTextColor <br/><br/></td>
-    <td> Text color for the stop responding view.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewStopRespondingFontFamily <br/><br/></td>
-    <td> Font family used for the stop responding text.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewStopRespondingFontSize <br/><br/></td>
-    <td> Font size of the stop responding text.<br/><br/></td>
-</tr>
-<tr>
-    <td> SfAIAssistViewStopRespondingFontAttributes <br/><br/></td>
-    <td> Font attributes used for the stop responding text.<br/><br/></td>
-</tr>
-<tr>
     <td> SfAIAssistViewStopRespondingStroke <br/><br/></td>
     <td> Stroke color for the stop responding view.<br/><br/></td>
 </tr>
@@ -525,6 +485,970 @@ This page lists the keys associated with each control and the respective UI elem
 <tr>
 <td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
 <td> Font attributes of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseHyperlinkColor<br/><br/></td>
+<td> Text color of the URL in an outgoing hyperlink item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewEditorStrokeThickness<br/><br/></td>
+<td> Thickness of the border in the editor.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSendButtonBackground<br/><br/></td>
+<td> Background color of the send button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSendButtonIconColor<br/><br/></td>
+<td> Icon color of the send button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSendViewHoverBackground<br/><br/></td>
+<td> Background color of the send button in the hover state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSendViewPressedBackground<br/><br/></td>
+<td> Background color of the send button in the pressed state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewScrollToBottomButtonBackground<br/><br/></td>
+<td> Background color of the scroll to bottom button view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewScrollToBottomButtonIconColor<br/><br/></td>
+<td> Color of the scroll to bottom button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHoveredScrollToBottomButtonBackground<br/><br/></td>
+<td> Background color of the scroll to bottom button in the hover state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewPressedScrollToBottomButtonBackground<br/><br/></td>
+<td> Background color of the scroll to bottom button in the pressed state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonBackground<br/><br/></td>
+<td> Background color of the action button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonIconColor<br/><br/></td>
+<td> Color of the action button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonViewTextColor<br/><br/></td>
+<td> Text color of an item in the action button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonItemBackground<br/><br/></td>
+<td> Background color of an item in the action buttons view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonItemFontFamily<br/><br/></td>
+<td> Font family of an item in the action buttons view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonItemFontSize<br/><br/></td>
+<td> Font size of an item in the action buttons view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the action buttons view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonsPopupBackground<br/><br/></td>
+<td> Background color of the action buttons view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderTextColor<br/><br/></td>
+<td> Text color of the response suggestion header text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderBackground<br/><br/></td>
+<td> Background color of the response suggestion header text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontSize<br/><br/></td>
+<td> Font size of the response suggestion header text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontFamily<br/><br/></td>
+<td> Font family of the response suggestion header text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontAttributes<br/><br/></td>
+<td> Font attributes of the response suggestion header text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionBackground<br/><br/></td>
+<td> Background color of the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemBackground<br/><br/></td>
+<td> Background color of an item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemTextColor<br/><br/></td>
+<td> Text color of an item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontFamily<br/><br/></td>
+<td> Font family of an item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontSize<br/><br/></td>
+<td> Font size of an item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionItemSelectionBackground<br/><br/></td>
+<td> Background color of the selected item in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionGroupHeaderTextColor<br/><br/></td>
+<td> Text color of the group header in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionGroupHeaderBackground<br/><br/></td>
+<td> Background color of the group header in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionGroupHeaderFontFamily<br/><br/></td>
+<td> Font family of the group header in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionGroupHeaderFontSize<br/><br/></td>
+<td> Font size of the group header in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoCompleteSuggestionGroupHeaderFontAttributes<br/><br/></td>
+<td> Font attributes of the group header in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoSuggestionDividerBackground<br/><br/></td>
+<td> Background color of the divider in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAutoSuggestionDividerStrokeThickness<br/><br/></td>
+<td> Stroke thickness of the divider in the autocomplete suggestion overlay.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelTextColor<br/><br/></td>
+<td> Text color of the time break label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontSize<br/><br/></td>
+<td> Font size of the time break label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontFamily<br/><br/></td>
+<td> Font family of the time break label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakLabelFontAttributes<br/><br/></td>
+<td> Font attributes of the time break label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorHeightRequest<br/><br/></td>
+<td> Height of the time break separator line.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewTimeBreakSeparatorBackground<br/><br/></td>
+<td> Background color of the time break separator line.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandViewBackground<br/><br/></td>
+<td> Background color of the editor expansion button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandViewStroke<br/><br/></td>
+<td> Stroke color of the editor expansion button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewExpandIconColor<br/><br/></td>
+<td> Icon color of the editor expansion button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewNormalBackground<br/><br/></td>
+<td> Background color of the microphone view in the normal state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewHoverBackground<br/><br/></td>
+<td> Background color of the microphone view in the hover state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewPressedBackground<br/><br/></td>
+<td> Background color of the microphone view in the pressed state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewStroke<br/><br/></td>
+<td> Stroke color of the microphone view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicViewStrokeThickness<br/><br/></td>
+<td> Stroke thickness of the microphone view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicButtonDefaultIconColor<br/><br/></td>
+<td> Default icon color of the microphone button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMicButtonPressedIconColor<br/><br/></td>
+<td> Icon color of the microphone button in the pressed state.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorIcon<br/><br/></td>
+<td> Icon displayed in the error message view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorIconColor<br/><br/></td>
+<td> Color of the error icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorIconFontSize<br/><br/></td>
+<td> Font size of the error icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorIconFontFamily<br/><br/></td>
+<td> Font family of the error icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorIconFontAttributes<br/><br/></td>
+<td> Font attributes of the error icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorMessageTextColor<br/><br/></td>
+<td> Text color of the error message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorMessageFontSize<br/><br/></td>
+<td> Font size of the error message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorMessageFontFamily<br/><br/></td>
+<td> Font family of the error message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewErrorMessageFontAttributes<br/><br/></td>
+<td> Font attributes of the error message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuPopupBackground<br/><br/></td>
+<td> Background color of the response context menu popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuItemBackground<br/><br/></td>
+<td> Background color of an item in the response context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuItemTextColor<br/><br/></td>
+<td> Text color of an item in the response context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuItemFontFamily<br/><br/></td>
+<td> Font family of an item in the response context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuItemFontSize<br/><br/></td>
+<td> Font size of an item in the response context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseContextMenuItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the response context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuPopupBackground<br/><br/></td>
+<td> Background color of the request context menu popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuItemBackground<br/><br/></td>
+<td> Background color of an item in the request context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuItemTextColor<br/><br/></td>
+<td> Text color of an item in the request context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuItemFontFamily<br/><br/></td>
+<td> Font family of an item in the request context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuItemFontSize<br/><br/></td>
+<td> Font size of an item in the request context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRequestContextMenuItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the request context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuPopupBackground<br/><br/></td>
+<td> Background color of the chat mode context menu popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuItemBackground<br/><br/></td>
+<td> Background color of an item in the chat mode context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuItemTextColor<br/><br/></td>
+<td> Text color of an item in the chat mode context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuItemFontFamily<br/><br/></td>
+<td> Font family of an item in the chat mode context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuItemFontSize<br/><br/></td>
+<td> Font size of an item in the chat mode context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeContextMenuItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the chat mode context menu.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemBackground<br/><br/></td>
+<td> Background color of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemTextColor<br/><br/></td>
+<td> Text color of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemFontFamily<br/><br/></td>
+<td> Font family of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemFontSize<br/><br/></td>
+<td> Font size of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemFontAttributes<br/><br/></td>
+<td> Font attributes of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionListItemStroke<br/><br/></td>
+<td> Stroke color of an item in the footer suggestion list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionScrollLeftIconColor<br/><br/></td>
+<td> Color of the footer suggestion scroll-left icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionScrollRightIconColor<br/><br/></td>
+<td> Color of the footer suggestion scroll-right icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionScrollLeftIconDisabledColor<br/><br/></td>
+<td> Disabled color of the footer suggestion scroll-left icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionScrollRightIconDisabledColor<br/><br/></td>
+<td> Disabled color of the footer suggestion scroll-right icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFooterSuggestionScrollIconBackground<br/><br/></td>
+<td> Background color of the footer suggestion scroll icons.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemBackground<br/><br/></td>
+<td> Background color of an attachment item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentBackground<br/><br/></td>
+<td> Background color of the attachment view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemThumbnailColor<br/><br/></td>
+<td> Color of the attachment item thumbnail.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemStroke<br/><br/></td>
+<td> Stroke color of an attachment item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemFileNameTextColor<br/><br/></td>
+<td> Text color of the attachment item file name.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemRemoveBackground<br/><br/></td>
+<td> Background color of the attachment item remove button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAttachmentItemRemoveIconColor<br/><br/></td>
+<td> Icon color of the attachment item remove button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolBarViewBackground<br/><br/></td>
+<td> Background color of the toolbar view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolBarTitleTextColor<br/><br/></td>
+<td> Text color of the toolbar title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolBarTitleFontFamily<br/><br/></td>
+<td> Font family of the toolbar title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolBarTitleFontSize<br/><br/></td>
+<td> Font size of the toolbar title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolBarTitleFontAttributes<br/><br/></td>
+<td> Font attributes of the toolbar title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolbarStroke<br/><br/></td>
+<td> Stroke color of the toolbar.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChatModeLabelTextColor<br/><br/></td>
+<td> Text color of the chat mode label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewChevronIconColor<br/><br/></td>
+<td> Color of the chevron icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewNewChatIconColor<br/><br/></td>
+<td> Color of the new chat icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolbarSeparatorStroke<br/><br/></td>
+<td> Stroke color of the toolbar separator.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToolbarMenuIconColor<br/><br/></td>
+<td> Color of the toolbar menu icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDrawerBackground<br/><br/></td>
+<td> Background color of the conversation drawer.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewDefaultConversationDrawerBackground<br/><br/></td>
+<td> Default background color of the conversation drawer.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelBackground<br/><br/></td>
+<td> Background color of the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelEmptyViewTextColor<br/><br/></td>
+<td> Text color of the search panel empty view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelEmptyViewFontSize<br/><br/></td>
+<td> Font size of the search panel empty view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelEmptyViewFontFamily<br/><br/></td>
+<td> Font family of the search panel empty view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelEmptyViewFontAttributes<br/><br/></td>
+<td> Font attributes of the search panel empty view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelGroupHeaderTextColor<br/><br/></td>
+<td> Text color of the search panel group header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelGroupHeaderFontSize<br/><br/></td>
+<td> Font size of the search panel group header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelGroupHeaderFontFamily<br/><br/></td>
+<td> Font family of the search panel group header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelGroupHeaderFontAttributes<br/><br/></td>
+<td> Font attributes of the search panel group header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelSearchIconTextColor<br/><br/></td>
+<td> Color of the search icon in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelCancelIconTextColor<br/><br/></td>
+<td> Color of the cancel icon in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchBarTextColor<br/><br/></td>
+<td> Text color of the search bar.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchBarFontSize<br/><br/></td>
+<td> Font size of the search bar text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchBarFontFamily<br/><br/></td>
+<td> Font family of the search bar text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchBarFontAttributes<br/><br/></td>
+<td> Font attributes of the search bar text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchBarPlaceholderTextColor<br/><br/></td>
+<td> Text color of the search bar placeholder.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewOverlayBackground<br/><br/></td>
+<td> Color for the flyout overlay background.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDrawerHeaderTextColor<br/><br/></td>
+<td> Text color of the conversation drawer header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDrawerHeaderFontSize<br/><br/></td>
+<td> Font size of the conversation drawer header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDrawerHeaderFontFamily<br/><br/></td>
+<td> Font family of the conversation drawer header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDrawerHeaderFontAttributes<br/><br/></td>
+<td> Font attributes of the conversation drawer header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationItemTextColor<br/><br/></td>
+<td> Text color of the conversation item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationItemFontSize<br/><br/></td>
+<td> Font size of the conversation item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationItemFontFamily<br/><br/></td>
+<td> Font family of the conversation item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationItemFontAttributes<br/><br/></td>
+<td> Font attributes of the conversation item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationNewChatIconColor<br/><br/></td>
+<td> Color of the new chat icon in the conversation drawer.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationNewChatLabelTextColor<br/><br/></td>
+<td> Text color of the new chat label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationNewChatLabelFontSize<br/><br/></td>
+<td> Font size of the new chat label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelConversationItemTextColor<br/><br/></td>
+<td> Text color of the conversation item in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelConversationItemFontSize<br/><br/></td>
+<td> Font size of the conversation item in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelConversationItemFontFamily<br/><br/></td>
+<td> Font family of the conversation item in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSearchPanelConversationItemFontAttributes<br/><br/></td>
+<td> Font attributes of the conversation item in the search panel.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSearchSelectionBackground<br/><br/></td>
+<td> Background color of the selected conversation search item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSearchTextColor<br/><br/></td>
+<td> Text color of the conversation search item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSearchFontSize<br/><br/></td>
+<td> Font size of the conversation search item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSearchFontFamily<br/><br/></td>
+<td> Font family of the conversation search item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSearchFontAttributes<br/><br/></td>
+<td> Font attributes of the conversation search item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDividerBackground<br/><br/></td>
+<td> Background color of the conversation divider.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDividerStrokeThickness<br/><br/></td>
+<td> Stroke thickness of the conversation divider.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSectionLabelTextColor<br/><br/></td>
+<td> Text color of the conversation section label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSectionLabelFontSize<br/><br/></td>
+<td> Font size of the conversation section label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSectionLabelFontFamily<br/><br/></td>
+<td> Font family of the conversation section label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationSectionLabelFontAttributes<br/><br/></td>
+<td> Font attributes of the conversation section label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewRenameViewEntryTextColor<br/><br/></td>
+<td> Text color of the rename view entry.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewMoreBorderIconPressedBackground<br/><br/></td>
+<td> Background color of the more icon when it is pressed.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDeleteMessageTextColor<br/><br/></td>
+<td> Text color of the conversation delete message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationDeleteButtonTextColor<br/><br/></td>
+<td> Text color of the delete button in the conversation delete popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationCancelButtonTextColor<br/><br/></td>
+<td> Text color of the cancel button in the conversation delete popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAssistViewDisclaimerTextColor<br/><br/></td>
+<td> Text color of the disclaimer.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastSuccessBackground<br/><br/></td>
+<td> Background color of the success toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastSuccessIcon<br/><br/></td>
+<td> Icon color of the success toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastSuccessBorder<br/><br/></td>
+<td> Border color of the success toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastErrorBackground<br/><br/></td>
+<td> Background color of the error toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastErrorIcon<br/><br/></td>
+<td> Icon color of the error toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastErrorBorder<br/><br/></td>
+<td> Border color of the error toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastWarningBackground<br/><br/></td>
+<td> Background color of the warning toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastWarningIcon<br/><br/></td>
+<td> Icon color of the warning toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastWarningBorder<br/><br/></td>
+<td> Border color of the warning toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastDefaultBackground<br/><br/></td>
+<td> Background color of the default toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastDefaultBorder<br/><br/></td>
+<td> Border color of the default toast.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageSuccessTextColor<br/><br/></td>
+<td> Text color of the success toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageErrorTextColor<br/><br/></td>
+<td> Text color of the error toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageWarningTextColor<br/><br/></td>
+<td> Text color of the warning toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageDefaultTextColor<br/><br/></td>
+<td> Text color of the default toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageFontSize<br/><br/></td>
+<td> Font size of the toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageFontFamily<br/><br/></td>
+<td> Font family of the toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastMessageFontAttributes<br/><br/></td>
+<td> Font attributes of the toast message.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastCancelIconColor<br/><br/></td>
+<td> Color of the toast cancel icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewToastDefaultCancelIconColor<br/><br/></td>
+<td> Default color of the toast cancel icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseLoaderViewBackground<br/><br/></td>
+<td> Background color of the response loader view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseLoaderViewTextColor<br/><br/></td>
+<td> Text color of the response loader view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseLoaderViewFontSize<br/><br/></td>
+<td> Font size of the response loader view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseLoaderViewFontFamily<br/><br/></td>
+<td> Font family of the response loader view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewResponseLoaderViewFontAttributes<br/><br/></td>
+<td> Font attributes of the response loader view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewBackground<br/><br/></td>
+<td> Background color of the source preview view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewStroke<br/><br/></td>
+<td> Stroke color of the source preview view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewHeaderTextColor<br/><br/></td>
+<td> Text color of the source preview header.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewCloseIconColor<br/><br/></td>
+<td> Color of the source preview close icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewItemTitleTextColor<br/><br/></td>
+<td> Text color of the source preview item title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSourcePreviewItemDomainTextColor<br/><br/></td>
+<td> Text color of the source preview item domain.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewPauseIconColor<br/><br/></td>
+<td> Color of the pause icon in the audio player.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewPlayIconColor<br/><br/></td>
+<td> Color of the play icon in the audio player.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewPlayAudioStrokeColor<br/><br/></td>
+<td> Stroke color of the play audio button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentStroke<br/><br/></td>
+<td> Stroke color of the agent view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentStrokeThickness<br/><br/></td>
+<td> Stroke thickness of the agent view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentBackground<br/><br/></td>
+<td> Background color of the agent view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentTextColor<br/><br/></td>
+<td> Text color of the agent view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentFontFamily<br/><br/></td>
+<td> Font family of the agent view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentFontAttributes<br/><br/></td>
+<td> Font attributes of the agent view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentFontSize<br/><br/></td>
+<td> Font size of the agent view text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewCloseButtonColor<br/><br/></td>
+<td> Color of the close button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationAgentTextColor<br/><br/></td>
+<td> Text color of the conversation agent.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationAgentFontFamily<br/><br/></td>
+<td> Font family of the conversation agent text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewConversationAgentFontSize<br/><br/></td>
+<td> Font size of the conversation agent text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAssistViewAgentListSelectionBackground<br/><br/></td>
+<td> Background color of the selected item in the agent list.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentListTextColor<br/><br/></td>
+<td> Text color of the agent list item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentListFontFamily<br/><br/></td>
+<td> Font family of the agent list item text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewAgentListFontSize<br/><br/></td>
+<td> Font size of the agent list item text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewDefaultBannerTextColor<br/><br/></td>
+<td> Text color of the default banner.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewDefaultBannerFontFamily<br/><br/></td>
+<td> Font family of the default banner text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewDefaultBannerFontSize<br/><br/></td>
+<td> Font size of the default banner text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewDefaultBannerFontAttributes<br/><br/></td>
+<td> Font attributes of the default banner text.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSkeletonLoadingColor<br/><br/></td>
+<td> Color of the skeleton loading view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSkeletonLoadingBackground<br/><br/></td>
+<td> Background color of the skeleton loading view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterIconTextColor<br/><br/></td>
+<td> Color of the filter icon.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterButtonStroke<br/><br/></td>
+<td> Stroke color of the filter button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterButtonSelectedBackground<br/><br/></td>
+<td> Background color of the filter button when it is selected.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterButtonHoverColor<br/><br/></td>
+<td> Background color of the filter button when it is hovered.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterPopupSelectedItemBackground<br/><br/></td>
+<td> Background color of the selected item in the filter popup.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewFilterPopupSelectedItemTextColor<br/><br/></td>
+<td> Text color of the selected item in the filter popup.<br/><br/></td>
+</tr>
+</table>
+
+## SfPromptLibrary
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>
+        <th>
+          Keys
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="12">
+            SfPromptLibraryStyles
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfPromptLibraryTheme
+        </td>
+        <td>
+            By merging this key in application resources, you can customize the appearance of the prompt library without merging common theme resource and control style resource dictionaries.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+<tr>
+<td> SfPromptLibraryCategoryPaneBackground<br/><br/></td>
+<td> Background color of the category pane.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryCardBackground<br/><br/></td>
+<td> Background color of the prompt card.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryCardTitleTextColor<br/><br/></td>
+<td> Text color of the prompt card title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryCardDescriptionTextColor<br/><br/></td>
+<td> Text color of the prompt card description.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryCardTitleFontFamily<br/><br/></td>
+<td> Font family of the prompt card title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryCategoryLabelTextColor<br/><br/></td>
+<td> Text color of the category label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryChevronLabelTextColor<br/><br/></td>
+<td> Color of the chevron label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryPromptLabelTextColor<br/><br/></td>
+<td> Text color of the prompt label.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryDividerColor<br/><br/></td>
+<td> Color of the divider.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryFlyoutTitleTextColor<br/><br/></td>
+<td> Text color of the flyout title.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryFlyoutCloseButtonTextColor<br/><br/></td>
+<td> Color of the flyout close button.<br/><br/></td>
+</tr>
+<tr>
+<td> SfPromptLibraryOverlayBackground<br/><br/></td>
+<td> Background color of the overlay view.<br/><br/></td>
 </tr>
 </table>
 

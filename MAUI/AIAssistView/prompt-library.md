@@ -114,6 +114,63 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Add PromptLibrary to SfAIAssistView
+
+To display `SfPromptLibrary` within `SfAIAssistView`, assign an `SfPromptLibrary` instance to the `PromptLibrary` property. When suggestions are configured, a `More` icon appears in the suggestions area. Tapping the icon opens the `PromptLibrary` overlay.
+
+{% tabs %}
+{% highlight xaml hl_lines="8" %}
+
+<ContentPage.BindingContext>
+    <local:PromptLibraryViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                        Suggestions="{Binding PromptSuggestions}">
+
+    <syncfusion:SfAIAssistView.PromptLibrary>
+        <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"/>
+    </syncfusion:SfAIAssistView.PromptLibrary>
+
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# hl_lines="21" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+
+        var viewModel = new PromptLibraryViewModel();
+        this.BindingContext = viewModel;
+
+        var promptLibrary = new SfPromptLibrary
+        {
+            ItemsSource = viewModel.PromptLibraryInfo,
+        };
+
+        // Create AssistView
+        SfAIAssistView assistView = new SfAIAssistView
+        {
+            Suggestions = viewModel.PromptSuggestions,
+            PromptLibrary = promptLibrary
+        };
+
+        this.Content = assistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Syncfusion .NET MAUI SfAIAssistView PromptLibrary](Images/maui-aiassistview-prompt-library.gif)
+
+N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` overlay. For more information, refer to the [Common suggestions](https://help.syncfusion.com/maui/aiassistview/suggestions#displaying-common-suggestions) section.
+
 ## Event and Command
 
 When a user selects a prompt, both the `PromptSelected` event and the `PromptSelectedCommand` are triggered. Both provide a `PromptSelectedEventArgs` instance containing information about the selected prompt.
@@ -198,60 +255,3 @@ public class PromptLibraryViewModel
 
 {% endhighlight %}
 {% endtabs %}
-
-## Add PromptLibrary to SfAIAssistView
-
-To display `SfPromptLibrary` within `SfAIAssistView`, assign an `SfPromptLibrary` instance to the `PromptLibrary` property. When suggestions are configured, a `More` icon appears in the suggestions area. Tapping the icon opens the `PromptLibrary` overlay.
-
-{% tabs %}
-{% highlight xaml hl_lines="8" %}
-
-<ContentPage.BindingContext>
-    <local:PromptLibraryViewModel />
-</ContentPage.BindingContext>
-
-<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                        Suggestions="{Binding PromptSuggestions}">
-
-    <syncfusion:SfAIAssistView.PromptLibrary>
-        <syncfusion:SfPromptLibrary ItemsSource="{Binding PromptLibraryInfo}"/>
-    </syncfusion:SfAIAssistView.PromptLibrary>
-
-</syncfusion:SfAIAssistView>
-
-{% endhighlight %}
-{% highlight c# hl_lines="21" %}
-
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        var viewModel = new PromptLibraryViewModel();
-        this.BindingContext = viewModel;
-
-        var promptLibrary = new SfPromptLibrary
-        {
-            ItemsSource = viewModel.PromptLibraryInfo,
-        };
-
-        // Create AssistView
-        SfAIAssistView assistView = new SfAIAssistView
-        {
-            Suggestions = viewModel.PromptSuggestions,
-            PromptLibrary = promptLibrary
-        };
-
-        this.Content = assistView;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Syncfusion .NET MAUI SfAIAssistView PromptLibrary](Images/maui-aiassistview-prompt-library.gif)
-
-N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` overlay. For more information, refer to the [Common suggestions](https://help.syncfusion.com/maui/aiassistview/suggestions#displaying-common-suggestions) section.

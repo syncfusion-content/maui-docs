@@ -955,22 +955,6 @@ To style the stop responding view based on its appearance, set values to the bui
 <td>Icon color of the stop responding view.</td>
 </tr>
 <tr>
-<td>SfAIAssistViewStopRespondingTextColor</td>
-<td>Text color of the stop responding view.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewStopRespondingFontFamily</td>
-<td>Font family used for the stop responding text.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewStopRespondingFontSize</td>
-<td>Font size of the stop responding text.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewStopRespondingFontAttributes</td>
-<td>Font attributes used for the stop responding text.</td>
-</tr>
-<tr>
 <td>SfAIAssistViewStopRespondingStroke</td>
 <td>Stroke color of the stop responding view.</td>
 </tr>
@@ -990,10 +974,6 @@ To style the stop responding view based on its appearance, set values to the bui
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfAIAssistViewStopRespondingBackground">LightYellow</Color>
                 <Color x:Key="SfAIAssistViewStopRespondingIconColor">Red</Color>
-                <Color x:Key="SfAIAssistViewStopRespondingTextColor">DarkBlue</Color>
-                <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Segoe UI</x:String>
-                <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">14</x:Double>
-                <FontAttributes x:Key="SfAIAssistViewStopRespondingFontAttributes">Italic</FontAttributes>
                 <Color x:Key="SfAIAssistViewStopRespondingStroke">Violet</Color>
                 <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
             </ResourceDictionary>
@@ -1013,10 +993,6 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
         dictionary.Add("SfAIAssistViewStopRespondingBackground", Colors.LightYellow);
         dictionary.Add("SfAIAssistViewStopRespondingIconColor", Colors.Red);
-        dictionary.Add("SfAIAssistViewStopRespondingTextColor", Colors.DarkBlue);
-        dictionary.Add("SfAIAssistViewStopRespondingFontFamily", "Segoe UI");
-        dictionary.Add("SfAIAssistViewStopRespondingFontSize", 14.0);
-        dictionary.Add("SfAIAssistViewStopRespondingFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfAIAssistViewStopRespondingStroke", Colors.Violet);
         dictionary.Add("SfAIAssistViewStopRespondingStrokeThickness", 2.0);
         this.Resources.Add(dictionary);

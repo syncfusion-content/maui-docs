@@ -1290,7 +1290,7 @@ To disable image preview support, set `AllowImagePreview` property to `false`.
                            AllowImagePreview="False"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
+{% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.AIAssistView;
 
