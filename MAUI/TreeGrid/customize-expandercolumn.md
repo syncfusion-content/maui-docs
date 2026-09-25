@@ -10,7 +10,7 @@ keywords : maui treegrid expander column, maui tree grid expander, .net maui tre
 
 # Expander Column Customization in .NET MAUI Tree Grid
 
-The [.NET MAUI Tree Grid]() displays hierarchical data using an expander column that allows users to expand and collapse parent nodes. The SfTreeGrid provides various customization options for the expander column, including customizing the expander icon, changing the expander column, modifying the expander column width, and controlling the initial expansion state through a data source property.
+The [.NET MAUI Tree Grid]() displays hierarchical data using an expander column that allows users to expand and collapse parent nodes. The `SfTreeGrid` provides various customization options for the expander column, including customizing the expander icon, changing the expander column, modifying the expander column width, and controlling the initial expansion state through a data source property.
 
 ## Load expander icon through template
 
@@ -24,8 +24,8 @@ The `SfTreeGrid` allows you to customize the expand and collapse indicator by us
     <syncfusion:SfTreeGrid.ExpanderIcon>
         <DataTemplate>
             <Image Source="expand_icon.png"
-                   HeightRequest="20"
-                   WidthRequest="20"/>
+                   HeightRequest="15"
+                   WidthRequest="15"/>
         </DataTemplate>
     </syncfusion:SfTreeGrid.ExpanderIcon>
 </syncfusion:SfTreeGrid>
@@ -40,13 +40,15 @@ treeGrid.ExpanderIcon = new DataTemplate(() =>
     return new Image
     {
         Source = "expand_icon.png",
-        HeightRequest = 20,
-        WidthRequest = 20
+        HeightRequest = 15,
+        WidthRequest = 15
     };
 });
 this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="TreeGrid expander icon template" src="Images\expander\maui-treegrid-expander-icon-template.png" width="404">
 
 ## Load expander icon through template selector
 
@@ -56,18 +58,70 @@ The following example shows how to load separate templates for expanded and coll
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel/>
+</ContentPage.BindingContext>
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="Collapsed">
+            <Image HeightRequest="12"
+                   WidthRequest="12">
+                <Image.Source>
+                    <FontImageSource Color="Black"
+                                     Glyph="&#xe704;"
+                                     FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"/>
+                </Image.Source>
+            </Image>
+        </DataTemplate>
+        <DataTemplate x:Key="Expanded">
+            <Image HeightRequest="12"
+                   WidthRequest="12">
+                <Image.Source>
+                    <FontImageSource Color="Black"
+                                     Glyph="&#xe701;"
+                                     FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"/>
+                </Image.Source>
+            </Image>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children">
+
+    <syncfusion:SfTreeGrid.ExpanderIcon>
+        <local:ExpanderIconTemplateSelector ExpandedTemplate="{StaticResource Expanded}"
+                                            CollapsedTemplate="{StaticResource Collapsed}"/>
+    </syncfusion:SfTreeGrid.ExpanderIcon>
+
+</syncfusion:SfTreeGrid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+public class ExpanderIconTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate? ExpandedTemplate { get; set; }
 
+    public DataTemplate? CollapsedTemplate { get; set; }
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        if (item is TreeNode treeNode)
+        {
+            return treeNode.IsExpanded
+                ? ExpandedTemplate
+                : CollapsedTemplate;
+        }
+
+        return CollapsedTemplate;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-{% endhighlight %}
-{% endtabs %}
+<img alt="TreeGrid expander icon template selector" src="Images\expander\maui-treegrid-expander-icon-template-selector.png" width="404">
 
 ## Change the expander column
 
@@ -91,6 +145,8 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="Change expander column in .NET MAUI TreeGrid" src="Images\expander\maui-treegrid-expander-column.png" width="404">
+
 ## Customize the width of the expander column
 
 The `SfTreeGrid` provides support to customize the width of the expander column by using the [SfTreeGrid.ExpanderWidth]() property.
@@ -112,6 +168,8 @@ treeGrid.ExpanderWidth = 50;
 this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="TreeGrid with customized expander column width" src="Images\expander\maui-treegrid-expander-width.png" width="404">
 
 ## Expand nodes using a model property
 
@@ -135,3 +193,5 @@ treeGrid.ExpandStateMappingName = "Availability";
 this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="TreeGrid expand nodes using model property" src="Images\expander\maui-treegrid-expand-state-mapping.png" width="404">
