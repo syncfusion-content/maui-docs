@@ -144,13 +144,13 @@ The [PromptComposing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
  * [Parts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html#Syncfusion_Maui_AIAssistView_PromptComposingEventArgs_Parts) - Provides the enabled prompt parts in composition order.
 
 {% tabs %}
-{% highlight xaml hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            PromptComposing="OnPromptComposing" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="15 16" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13 14" %}
 
 using Syncfusion.Maui.AIAssistView;
 
