@@ -44,6 +44,39 @@ The table below shows the column type created for the respective data types. For
 </tr>
 </table>
 
+### Auto-generation Modes
+
+The auto generation of columns in `SfTreeGrid` is controlled by the `AutoGenerateColumnsMode` property. The default value is `AutoGenerateColumnsMode.Reset`.
+
+The following modes are available:
+
+<table>
+<tr>
+<th>Modes</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td>Maintains only the columns that are explicitly defined in the <code>SfTreeGrid.Columns</code> collection.</td>
+</tr>
+<tr>
+<td><code>Reset</code></td>
+<td>Retains the columns defined at the application level and automatically generates columns for the remaining properties available in the data source.</td>
+</tr>
+<tr>
+<td><code>ResetAll</code></td>
+<td>Clears all existing columns when the <code>ItemsSource</code> changes and regenerates columns based on the new data source. Any manually defined columns are ignored and recreated from the underlying collection.</td>
+</tr>
+<tr>
+<td><code>RetainOld</code></td>
+<td>Generates columns for all properties in the data source only when the TreeGrid does not contain explicit column definitions. If columns are already defined, those columns are retained and no additional columns are generated.</td>
+</tr>
+<tr>
+<td><code>SmartReset</code></td>
+<td>Retains explicitly defined columns as well as columns whose <code>MappingName</code> matches properties in the new data source. Columns for newly introduced properties are generated automatically.</td>
+</tr>
+</table>
+
 ### Customize Auto-generated Columns
 
 Auto-generated columns can be customized by handling the `AutoGeneratingColumn` event, which is raised when each column is auto-generated.
@@ -105,7 +138,7 @@ private void TreeGrid_AutoGeneratingColumn(object sender,
 
 ## Manually generate columns
 
-The `SfTreeGrid` allows defining columns manually by adding `TreeGridColumn` objects to the `SfTreeGrid.Columns` collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfDataGrid.AutoGenerateColumnsMode` property to `None`.
+The `SfTreeGrid` allows defining columns manually by adding `TreeGridColumn` objects to the `SfTreeGrid.Columns` collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfTreeGrid.AutoGenerateColumnsMode` property to `None`.
 
 There are different types of columns available. Any column can be created based on the requirements from both XAML and code.
 
