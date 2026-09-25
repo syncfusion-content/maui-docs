@@ -18,7 +18,7 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 
 To customize the .NET MAUI Radial Bar Chart, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=KO7LfFuIwHE" %}
+<style>#MAUIRadialBarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRadialBarVideoTutorial' src='https://www.youtube.com/embed/KO7LfFuIwHE'></iframe>
 
 The following properties can be used to customize the appearance of the radial bar segment:
 

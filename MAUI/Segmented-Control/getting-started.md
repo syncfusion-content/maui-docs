@@ -13,8 +13,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 To get start quickly with our .NET MAUI Segment, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=CVFBv5eE_RY"%}
+<style>#MAUISegmentedControlVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISegmentedControlVideoTutorial' src='https://www.youtube.com/embed/CVFBv5eE_RY'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

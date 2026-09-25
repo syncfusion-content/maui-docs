@@ -17,8 +17,7 @@ There are two ways for including the UI Kit screens into your application:
 
 To get start quickly with our **Essential<sup>®</sup> UI Kit for .NET MAUI**, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=WvlfHnXLOjI"%}
+<style>#MAUIUIKitVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIUIKitVideoTutorial' src='https://www.youtube.com/embed/WvlfHnXLOjI'></iframe>
 
 ## Essential<sup>®</sup> UI Kit for .NET MAUI Extension
 

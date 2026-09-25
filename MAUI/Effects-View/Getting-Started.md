@@ -13,7 +13,7 @@ This section guides you through setting up and configuring the [Effects View](ht
 
 To quickly get started with the .NET MAUI Effects View, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=IOieyRMCuAo" %}
+<style>#MAUIEffectsViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIEffectsViewVideoTutorial' src='https://www.youtube.com/embed/IOieyRMCuAo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

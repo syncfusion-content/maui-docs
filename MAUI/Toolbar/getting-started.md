@@ -13,8 +13,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 To get start quickly with our .NET MAUI Toolbar, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=U4ZFNr0nsB0"%}
+<style>#MAUIToolbarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIToolbarVideoTutorial' src='https://www.youtube.com/embed/U4ZFNr0nsB0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

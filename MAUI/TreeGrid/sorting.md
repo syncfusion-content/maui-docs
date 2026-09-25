@@ -39,6 +39,7 @@ The `SortColumnDescription` object holds the following two properties:
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortColumnDescriptions.Add(new SortColumnDescription() { ColumnName = "FirstName", SortDirection = System.ComponentModel.ListSortDirection.Ascending });
 this.Content = treeGrid;
 {% endhighlight %}
@@ -68,6 +69,7 @@ To apply sorting to multiple columns, tap the desired column headers after setti
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Multiple;
 this.Content = treeGrid;
 {% endhighlight %}
@@ -92,6 +94,7 @@ In addition, to sort the data in ascending or descending order, the SfTreeGrid a
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Single;
 treeGrid.AllowTriStateSorting = true;
 this.Content = treeGrid;
@@ -115,6 +118,7 @@ The `SfTreeGrid` provides support to display the sequence numbers to denote the 
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Multiple;
 treeGrid.ShowSortNumbers = true;
 this.Content = treeGrid;
@@ -140,6 +144,7 @@ By default, the column gets sorted when the column header is clicked. This behav
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Single;
 treeGrid.SortingGestureType = TreeGridSortingGestureType.DoubleTap;
 this.Content = treeGrid;
@@ -234,6 +239,7 @@ To disable sorting for an individual column, set the `TreeGridColumn.AllowSortin
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Single;
 treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 treeGrid.Columns.Add(new TreeGridTextColumn { MappingName = "FirstName", HeaderText = "First Name", AllowSorting = false });
@@ -375,6 +381,7 @@ The default sort icon color can be customized by setting the `TreeGridStyle.Sort
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.DefaultStyle.SortIconColor = Colors.DodgerBlue;
 treeGrid.Columns.Add(new TreeGridTextColumn { MappingName = "FirstName", HeaderText = "First Name", AllowSorting = true });
 treeGrid.Columns.Add(new TreeGridTextColumn { MappingName = "LastName", HeaderText = "Last Name" });
@@ -411,6 +418,7 @@ The SfTreeGrid uses an icon to indicate the ascending and descending states of s
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Multiple;
 treeGrid.SortIconTemplate = new DataTemplate(() =>
 {
@@ -468,7 +476,7 @@ When choosing a `SortIconTemplate` as a DataTemplateSelector, you have the optio
                        SortingMode="Multiple">
 
     <syncfusion:SfTreeGrid.SortIconTemplate>
-        <local:SortIconTemplate AscendingTemplate="{StaticResource Ascending }"
+        <local:SortIconTemplate AscendingTemplate="{StaticResource Ascending}"
                                 DescendingTemplate="{StaticResource Descending}"/>
     </syncfusion:SfTreeGrid.SortIconTemplate>
 
@@ -534,6 +542,7 @@ The size of the sort icon can be customized when the icon is loaded through `Sor
 SfTreeGrid treeGrid = new SfTreeGrid();
 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
 treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.SortingMode = TreeGridSortingMode.Multiple;
 treeGrid.SortIconTemplate = new DataTemplate(() =>
 {
