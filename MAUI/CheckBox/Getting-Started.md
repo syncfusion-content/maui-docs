@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [CheckBox](https://
 
 To quickly get started with the .NET MAUI CheckBox, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=dgekGX8eYMo" %}
+<style>#MAUICheckBoxVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICheckBoxVideoTutorial' src='https://www.youtube.com/embed/dgekGX8eYMo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

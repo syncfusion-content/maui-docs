@@ -5,6 +5,7 @@ description: This section lists the public API members of the SfSunburstChart co
 platform: maui
 control: SfSunburstChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Chart API in .NET MAUI Sunburst Chart

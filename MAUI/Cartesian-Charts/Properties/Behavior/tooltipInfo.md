@@ -5,6 +5,7 @@ description: This section lists the public API members for Tooltip Behaviors in 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # TooltipInfo API Reference for .NET MAUI Cartesian Chart

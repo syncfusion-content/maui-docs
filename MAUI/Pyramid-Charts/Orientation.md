@@ -5,6 +5,7 @@ description: Orientation in .NET MAUI Pyramid Chart allows you to display the py
 platform: maui
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Orientation in .NET MAUI Pyramid Chart

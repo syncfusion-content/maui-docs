@@ -5,6 +5,7 @@ description: This section lists the public API members for Category Axis in the 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # CategoryAxis API Reference for .NET MAUI Cartesian Chart

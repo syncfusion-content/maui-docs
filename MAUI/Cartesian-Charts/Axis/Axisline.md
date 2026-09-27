@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart axis line, .net maui chart axis customization, .net maui chart axisline guide, maui chart axis line settings, syncfusion maui chart axis line, .net maui chart axis styling, customize axis line .net maui chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Line in .NET MAUI Cartesian Chart

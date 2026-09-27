@@ -5,6 +5,7 @@ description: This section explains the properties, events and methods with Syncf
 platform: maui
 control: SfKanban
 documentation: ug
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # API Reference for .NET MAUI Kanban Board

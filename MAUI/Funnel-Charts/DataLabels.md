@@ -6,6 +6,7 @@ platform: maui
 control: SfFunnelChart
 documentation: ug
 keywords: .net maui funnel chart, data labels, label customization, label placement, label formatting.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Funnel Chart

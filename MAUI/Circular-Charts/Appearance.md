@@ -5,6 +5,7 @@ description: Appearance customization in .NET MAUI Circular Chart allows you to 
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Appearance in .NET MAUI Circular Chart

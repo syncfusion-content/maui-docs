@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Tab View](https://
 
 To quickly get started with the .NET MAUI Tab View, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=DYJmZ3eKfsc&ab_channel=Syncfusion%2CInc" %}
+<style>#MAUITabViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUITabViewVideoTutorial' src='https://www.youtube.com/embed/DYJmZ3eKfsc'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

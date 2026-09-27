@@ -5,6 +5,7 @@ description: This section lists the public API members for Line series in the Sy
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # LineSeries API Reference in .NET MAUI Cartesian Chart

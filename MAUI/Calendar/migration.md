@@ -5,6 +5,7 @@ title: Migration from Xamarin to .NET MAUI Calendar control | Syncfusion®
 description: Learn about migration from Syncfusion® Xamarin Calendar to .NET MAUI Calendar control with API comparisons.
 control: SfCalendar
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---  
 
 # Migration from Xamarin Calendar to .NET MAUI Calendar control 

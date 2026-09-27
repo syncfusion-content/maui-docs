@@ -5,6 +5,7 @@ description: Tooltip in .NET MAUI Circular Chart displays detailed information f
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Circular Chart

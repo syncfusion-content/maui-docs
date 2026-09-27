@@ -5,6 +5,7 @@ description: Learn how to integrate AI-driven duplicate detection with the Syncf
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # AI-Driven Duplicate Detection in .NET MAUI DataGrid

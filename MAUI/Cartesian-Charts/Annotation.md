@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart annotations, .net maui annotations customization, syncfusion maui cartesian chart annotations, .net maui cartesian chart text annotation, .net maui cartesian chart shape annotation, .net maui cartesian chart view annotation.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Annotations in .NET MAUI Cartesian Chart
@@ -20,7 +21,7 @@ N> **Prerequisite:** Ensure that the required NuGet package is installed, the ne
 
 To learn how to add and customize annotations in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=v1u774lp9pQ" %}
+<style>#MAUICartesianChartVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICartesianChartVideoTutorial' src='https://www.youtube.com/embed/v1u774lp9pQ'></iframe>
 
 ## Adding Annotations
 

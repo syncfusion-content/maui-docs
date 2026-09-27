@@ -6,6 +6,7 @@ platform: maui
 control: SfPolarChart
 documentation: ug
 keywords: .net maui polar chart, polar-chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI Polar Chart

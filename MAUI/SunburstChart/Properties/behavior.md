@@ -5,6 +5,7 @@ description: This section lists the public API members of the SunburstTooltipSet
 platform: maui
 control: SfSunburstChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # SunburstTooltipBehaviors API in .NET MAUI Sunburst Chart

@@ -5,6 +5,7 @@ title: Getting Started with .NET MAUI Date Time Picker | Syncfusion®
 description: Learn how to get started with the Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker control. Explore setup, features, examples, and customization options.
 control: SfDateTimePicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Getting Started with .NET MAUI Date Time Picker
@@ -12,8 +13,7 @@ This section explains how to add the Date Time Picker control. It covers only th
 
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
-{% youtube
-"youtube:https://youtu.be/fKuMBHegq7s?si=pDLQy52nILzOQUWC"%}
+<style>#MAUIDatePickerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDatePickerVideoTutorial' src='https://www.youtube.com/embed/fKuMBHegq7s'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

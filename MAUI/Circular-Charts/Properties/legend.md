@@ -5,6 +5,7 @@ description: Customize legends, labels, and connector line styles in .NET MAUI C
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend API in .NET MAUI Circular Chart

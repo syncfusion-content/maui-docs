@@ -5,6 +5,7 @@ description: Tooltip in .NET MAUI Pyramid Chart displays detailed information fo
 platform: maui
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Pyramid Chart

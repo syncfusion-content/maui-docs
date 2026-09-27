@@ -5,6 +5,7 @@ description: Migrate from Xamarin.Forms Sunburst Chart to .NET MAUI Sunburst Cha
 platform: MAUI
 control: SfSunburstChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms Sunburst Chart to .NET MAUI Sunburst Chart

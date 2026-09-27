@@ -5,6 +5,7 @@ description: This section lists the public API members for Behavior in the Syncf
 platform: maui
 control: SfFunnelChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Behavior API Reference for .NET MAUI Funnel Chart
