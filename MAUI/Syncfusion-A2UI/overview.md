@@ -7,7 +7,6 @@ control: A2UI Overview
 documentation: ug
 ---
 
-
 # About Syncfusion® A2UI Overview
 
 The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent-to-UI protocol to .NET MAUI applications, enabling AI agents to dynamically generate rich, interactive user interfaces using Syncfusion controls. Instead of rendering plain text or HTML, applications can display fully functional controls such as **DataGrid**, **Charts**, **Scheduler**, and more through structured UI messages, significantly reducing manual UI development effort.
