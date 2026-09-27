@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Syncfusion® A2UI for .NET MAUI | Syncfusion®
 description: Step-by-step guide to install the Syncfusion® A2UI for .NET MAUI package and render your first A2UI v0.9 surface as a Syncfusion® .NET MAUI control.
 control: A2UI Getting Started
-platform: .NET MAUI
+platform: MAUI
 documentation: ug
 ---
 
@@ -265,7 +265,7 @@ using Syncfusion.Maui.A2UI.Hosting;
 {% endhighlight %}
 {% endtabs %}
 
-The page renders a Syncfusion® .NET MAUI `SfDataGrid` populated with sample `Orders` rows (Order ID, Customer, Freight, Order Date, Ship Country). The grid enables single-column sorting, filtering, grouping, single-row selection, alternating rows, and grid lines - all driven from a static A2UI v0.9 JSON message list. No agent or backend is involved.
+The page renders a Syncfusion® .NET MAUI `SfDataGrid` populated with sample `Orders` rows (Order ID, Customer, Freight, Order Date, Ship Country). The grid enables single-column sorting, filtering, grouping, single-row selection, alternating rows, and grid lines - all driven from a static A2UI v0.9 JSON message list. No agent is involved.
 
 > In production, replace the embedded JSON with messages streamed from an [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/). See [AI Integration](./ai-integration) for the agent round-trip pattern.
 
