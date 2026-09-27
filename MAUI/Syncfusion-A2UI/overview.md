@@ -31,14 +31,14 @@ Modern AI agents are expected to do more than return text. A user who asks "Show
 
 A2UI is an open protocol that uses a lightweight JSON-RPC–based message format. It allows AI agents to describe user interfaces declaratively rather than generating raw markup or platform-specific UI code.
 
-The protocol defines four message types: `CreateSurface`, `UpdateComponents`, `UpdateDataModel`, and `DeleteSurface`, along with a tree of named components. The host application processes these messages through a `MessageProcessor` to build a `SurfaceModel`, which is then rendered as native UI.
+The protocol defines four message types: `CreateSurface`, `UpdateComponents`, `UpdateDataModel`, and `DeleteSurface`, along with a tree of named components. The host application processes these messages through a `MessageProcessor` to build a `SurfaceModel`, which is then rendered as UI.
 
 The package provides the Syncfusion implementation of the rendering layer:
 
  - Ships a catalog of 50+ Syncfusion .NET MAUI control adapters that implement the A2UI component contract.
  - Validates incoming A2UI messages against predefined schemas and reports malformed agent output with clear errors.
  - Synchronizes data and user interactions between Syncfusion controls and the A2UI `DataModel` automatically.
- - Renders AI-generated surfaces as fully native .NET MAUI controls and delivers a consistent experience across Android, iOS, macOS, and Windows.
+ - Renders AI-generated surfaces as fully .NET MAUI controls and delivers a consistent experience across Android, iOS, macOS, and Windows.
  - Offers a configurable rendering framework that allows developers to extend, customize, and integrate AI-driven experiences into existing .NET MAUI applications.
 
 As a result, AI agents can dynamically generate rich, interactive user experiences with controls such as DataGrid, Charts, Scheduler, Kanban, PDF Viewer, DataForm, and more, without requiring developers to manually create and connect each UI element.
@@ -53,16 +53,6 @@ Before diving into the end-to-end workflow, here are the terms used throughout t
 - **DataModel**: A reactive data store that maintains values used by generated UI elements and keeps the interface synchronized with application data.
 - **Catalog**: A registry that maps A2UI component definitions (for example, **DataGrid**, **Chart**) to corresponding .NET MAUI renderers and Syncfusion controls.
 - **Actions**: User interactions generated from rendered components and sent back to the agent, enabling bidirectional communication between the user interface and the AI system.
-
-Before diving into the end-to-end workflow, here are the terms used throughout this documentation.
-
- - Agent: An AI application that consumes a user prompt and produces A2UI v0.9 messages. For example, a chat backend powered by a large language model (LLM).
- - MessageProcessor: A runtime component that receives A2UI messages, validates them against the supported schemas, and incrementally builds a `SurfaceModel`.
- - SurfaceModel: An in-memory representation of the UI surface that contains the components, layouts, properties, and data defined by the agent.
- - Catalog: A registry that maps A2UI component names (for example, DataGrid, Chart) to concrete renderer implementations. The package ships `SyncfusionCatalog`, which extends `BasicCatalog` with Syncfusion .NET MAUI adapters.
- - DataModel: A reactive key-value store that backs A2UI bindings, where paths such as "${user.name}" resolve to values stored in the `DataModel` and update automatically when those values change.
- - Renderer: A component that converts a `SurfaceModel` into native Syncfusion .NET MAUI controls and layouts.
- - SyncfusionA2UIRenderer: The .NET MAUI rendering component that displays a `SurfaceModel` as interactive Syncfusion controls and manages synchronization between the rendered UI and the underlying `DataModel`.
 
 ## How it works
 
@@ -84,12 +74,12 @@ The package is for teams that want to combine the power of a generative AI agent
  * Customer support / CRM teams that need the agent to show real, interactive forms and reports, not just text suggestions.
  * Anyone shipping Syncfusion .NET MAUI UIs who wants the same controls to be reachable from a chat surface, an MCP server, or an autonomous agent.
 
-Because each adapter renders a Syncfusion .NET MAUI control, generated surfaces inherit the capabilities of the underlying controls, including accessibility support, keyboard navigation, platform-specific interactions, and consistent behavior across Android, iOS, macOS, and Window
+Because each adapter renders a Syncfusion .NET MAUI control, generated surfaces inherit the capabilities of the underlying controls, including accessibility support, keyboard navigation, platform-specific interactions, and consistent behavior across Android, iOS, macOS, and Window platforms.
 
 ## What you get in the package
 
  * A2UI primitives: Column, Row, Text, Image, Icon, Divider, and other layout primitives, included in the `SyncfusionCatalog`, which extends the base A2UI component catalog.
- * SyncfusionA2UIRenderer: A renderer that converts a SurfaceModel into interactive Syncfusion .NET MAUI controls. It includes built-in error handling that displays render failures as graceful inline messages instead of crashing the host application.
+ * `SyncfusionA2UIRenderer`: A renderer that converts a `SurfaceModel` into interactive Syncfusion .NET MAUI controls. It includes built-in error handling that displays render failures as graceful inline messages instead of crashing the host application.
  * Syncfusion Catalog: The A2UI catalog instance, ready to pass directly to MessageProcessor.
  * Schemas and strongly typed models: Schema definitions and strongly typed models for supported components, enabling the host application and agent implementation to share a single source of truth for the A2UI wire format.
 
