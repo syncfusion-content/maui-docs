@@ -17,12 +17,7 @@ The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2u
 
 Before installing Syncfusion® A2UI for .NET MAUI, ensure you have:
 
-- An existing **.NET MAUI application** running on `.NET 9` or `.NET 10`. The package supports 10 framework combinations in a single `csproj`:
-  - `net9.0`, `net10.0` (cross-platform)
-  - `net9.0-android`, `net10.0-android`
-  - `net9.0-ios`, `net10.0-ios`
-  - `net9.0-maccatalyst`, `net10.0-maccatalyst`
-  - `net9.0-windows10.0.19041.0`, `net10.0-windows10.0.19041.0`
+- An existing **.NET MAUI application** targeting **.NET 9** or **.NET 10** on Android, iOS, Mac Catalyst, or Windows.
 - The companion `Syncfusion.A2UI.Core` runtime - a framework-agnostic protocol engine that ships as a transitive dependency of the MAUI package. The Core engine also supports Blazor, WPF, WinForms, and ASP.NET Core hosts.
 - The Syncfusion® .NET MAUI packages that back the controls the agent is expected to render - for example, DataGrid, Charts, Scheduler, PDF Viewer, DataForm, Rich Text Editor, Image Editor, Maps, TreeMap, and Gauges. Install only the packages for the controls you intend to use.
 - An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/) that emits messages conforming to the four-message lifecycle - `createSurface`, `updateComponents`, `updateDataModel`, and `deleteSurface`.
@@ -91,7 +86,7 @@ Because each adapter renders a Syncfusion® .NET MAUI control, generated surface
   - **Inputs** — Button, CheckBox, RadioButton, Switch, Segmented, ChipGroup, Sliders, Range Sliders, Range Selector, Date/Time Pickers, ColorPicker, ComboBox, Rating, Autocomplete, MaskedEntry, NumericEntry.
   - **Layout & Navigation** - Card, CardLayout, TabView, Toolbar, ListView, Popup, NavigationDrawer, Rotator, Carousel.
   - **Display & Feedback** - BadgeView, AvatarView, BusyIndicator, Shimmer, ProgressBar variants, EffectsView, TextInputLayout.
-- **MAUI app-builder extensions** - `UseA2uiWithSyncfusionComponents()` and `AddSyncfusionComponents()` register the `SurfaceHost`, the combined catalog, and the markdown renderer.
+- **MAUI app-builder extensions** - `UseA2UIWithSyncfusionComponents()` and `AddSyncfusionComponents()` register the `SurfaceHost`, the combined catalog, and the markdown renderer.
 - **AOT-friendly chart data plumbing** - A cached dynamic row-type factory lets `SfCartesianChart` bind to strongly typed rows without `dynamic` or runtime reflection, keeping the package AOT-compatible.
 - **Schemas and strongly typed models** - Schema definitions for every supported component, giving the host application and the agent implementation a single source of truth for the A2UI wire format.
 
