@@ -6,6 +6,7 @@ platform: MAUI
 control: SfMaps
 documentation: ug
 keywords: .net maui maps, .net maui maps library.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Getting Started with .NET MAUI Maps
@@ -14,8 +15,7 @@ This section explains the steps required to add the maps control with the shape 
 
 To get started quickly with our .NET MAUI Maps, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=ibUB70vM5DU"%}
+<style>#MAUIMapsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMapsVideoTutorial' src='https://www.youtube.com/embed/ibUB70vM5DU'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

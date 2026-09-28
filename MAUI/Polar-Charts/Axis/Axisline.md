@@ -5,6 +5,7 @@ description: Axis line in .NET MAUI Polar Chart defines the visual representatio
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Line in .NET MAUI Polar Chart

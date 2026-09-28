@@ -6,6 +6,7 @@ platform: maui
 control: SfCircularChart
 documentation: ug
 keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino circular tooltip maui, .net maui chart visualization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Circular Chart

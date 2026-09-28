@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart performance, maui chart optimization, .net maui fast line chart, .net maui fast scatter chart, .net maui suspend notification, syncfusion maui chart performance, cartesian performance maui, .net maui chart real-time updates, maui chart large dataset.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Performance in .NET MAUI Cartesian Chart

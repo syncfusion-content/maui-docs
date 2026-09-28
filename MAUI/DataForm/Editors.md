@@ -11,7 +11,7 @@ documentation: ug
 
 To get start quickly with data editors in .NET MAUI DataForm, you can check on this video:
 
-{% youtube "https://www.youtube.com/watch?v=Fv__sIKRsIA" %}
+<style>#MAUIDataFormVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataFormVideoTutorial' src='https://www.youtube.com/embed/Fv__sIKRsIA'></iframe>
 
 The DataForm supports the following built-in editors to edit the data:
 

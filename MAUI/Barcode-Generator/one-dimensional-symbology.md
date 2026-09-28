@@ -5,6 +5,7 @@ description: One-Dimensional Symbology in .NET MAUI Barcode Generator supports l
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # One-Dimensional Symbology in .NET MAUI Barcode Generator

@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui range column chart, maui range column chart, range column chart customization .net maui, syncfusion maui range column chart, cartesian range column chart maui, .net maui chart range column visualization, .net maui interval column chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Range Column Chart in .NET MAUI Cartesian Chart

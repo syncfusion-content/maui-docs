@@ -5,6 +5,7 @@ description: Learn about localization in Syncfusion® .NET MAUI Picker control f
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Localization in .NET MAUI Picker control

@@ -5,6 +5,7 @@ description: This section explains the properties, events, and methods with Sync
 platform: maui
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Maps

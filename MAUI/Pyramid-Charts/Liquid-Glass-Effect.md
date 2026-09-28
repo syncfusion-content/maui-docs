@@ -6,6 +6,7 @@ platform: maui
 control: SfPyramidChart
 documentation: ug
 keywords: .net maui pyramid chart, glass effect, liquid glass effect, pyramid chart visualization, .net maui chart styling.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Pyramid Chart

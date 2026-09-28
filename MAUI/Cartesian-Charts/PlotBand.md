@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui plot band, maui plot band, .net maui chart plot band type, plot band customization .net maui, syncfusion maui plot band, cartesian plot band maui, .net maui chart plot band visualization, .net maui shaded region chart, .net maui recurrence plot band.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Plot Band in .NET MAUI Cartesian Chart

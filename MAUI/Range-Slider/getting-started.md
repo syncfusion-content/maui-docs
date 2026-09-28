@@ -13,7 +13,7 @@ This section explains the steps required to add the [Range Slider](https://help.
 
 To quickly get started with the .NET MAUI Range Slider, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=9W1N5rH0zD0" %}
+<style>#MAUIRangeSliderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRangeSliderVideoTutorial' src='https://www.youtube.com/embed/9W1N5rH0zD0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
