@@ -128,7 +128,6 @@ xmlns:a2ui="clr-namespace:Syncfusion.Maui.A2UI.Hosting;assembly=Syncfusion.Maui.
  
 using System.Text.Json;
 using Syncfusion.A2UI.Core.Common;
-using Syncfusion.A2UI.Core.Processing;
 using Syncfusion.A2UI.Core.Serialization;
 using Syncfusion.Maui.A2UI.Hosting;
  
@@ -157,110 +156,97 @@ Open **MainPage.xaml** and add an `<a2ui:A2uiSurface>` view.
 
 using System.Text.Json;
 using Syncfusion.A2UI.Core.Common;
-using Syncfusion.A2UI.Core.Processing;
 using Syncfusion.A2UI.Core.Serialization;
 using Syncfusion.Maui.A2UI.Hosting;
 
-  private readonly MessageProcessor _processor;
-  private readonly SurfaceHost _host;
+      private readonly SurfaceHost _host;
 
-  public MainPage(MessageProcessor processor, SurfaceHost host)
-  {
-    InitializeComponent();
-    _processor = processor;
-    _host = host;
-  }
+      public MainPage(SurfaceHost host)
+      {
+          InitializeComponent();
+          _host = host;
+      }
 
-  protected override void OnAppearing()
-  {
-    base.OnAppearing();
+      protected override void OnAppearing()
+      {
+          base.OnAppearing();
 
-    try { _processor.Model.DeleteSurface("orders"); } catch { /* surface didn't exist */ }
-    var messages = A2uiJson.ParseMessages(JsonDocument.Parse(Json).RootElement);
-    _processor.ProcessMessages(messages);
+          try { _host.Processor.Model.DeleteSurface("orders"); } catch { /* surface didn't exist */ }
+          var messages = A2uiJson.ParseMessages(JsonDocument.Parse(Json).RootElement);
+          _host.Processor.ProcessMessages(messages);
 
-    var surface = _processor.Model.GetSurface("orders");
-    OrdersSurface.Surface = surface;
-    OrdersSurface.Host = _host;
-  }
+          var surface = _host.Processor.Model.GetSurface("orders");
+          OrdersSurface.Host = _host;
+          OrdersSurface.Surface = surface;
+          OrdersSurface.Rebuild();
+      }
 
-  private const string Json = """
-  {
-    "version": "v0.9",
-    "messages": [
-      { "version": "v0.9", "createSurface": { "surfaceId": "orders", "catalogId": "syncfusion-maui", "sendDataModel": true } },
-      { "version": "v0.9", "updateDataModel": {
-         "surfaceId": "orders",
-          "path": "/orders",
-          "value": [
-            { "OrderID": 10248, "CustomerID": "VINET",  "Freight":  32.38, "OrderDate": "1996-07-04", "ShipCountry": "France"     },
-            { "OrderID": 10249, "CustomerID": "TOMSP",  "Freight":  11.61, "OrderDate": "1996-07-05", "ShipCountry": "Germany"    },
-            { "OrderID": 10250, "CustomerID": "HANAR",  "Freight":  65.83, "OrderDate": "1996-07-08", "ShipCountry": "Brazil"     },
-            { "OrderID": 10251, "CustomerID": "VICTE",  "Freight":  41.34, "OrderDate": "1996-07-08", "ShipCountry": "France"     },
-            { "OrderID": 10252, "CustomerID": "SUPRD",  "Freight":  51.30, "OrderDate": "1996-07-09", "ShipCountry": "Belgium"    },
-            { "OrderID": 10253, "CustomerID": "HANAR",  "Freight":  58.17, "OrderDate": "1996-07-10", "ShipCountry": "Brazil"     },
-            { "OrderID": 10254, "CustomerID": "CHOPS",  "Freight":  22.98, "OrderDate": "1996-07-11", "ShipCountry": "Switzerland"},
-            { "OrderID": 10255, "CustomerID": "RICSU",  "Freight": 148.33, "OrderDate": "1996-07-12", "ShipCountry": "Switzerland"},
-            { "OrderID": 10256, "CustomerID": "WELLI",  "Freight":  13.97, "OrderDate": "1996-07-15", "ShipCountry": "Brazil"     },
-            { "OrderID": 10257, "CustomerID": "HILAA",  "Freight":  81.91, "OrderDate": "1996-07-16", "ShipCountry": "Venezuela"  },
-            { "OrderID": 10258, "CustomerID": "ERNSH",  "Freight": 140.51, "OrderDate": "1996-07-17", "ShipCountry": "Austria"    },
-            { "OrderID": 10259, "CustomerID": "CENTC",  "Freight":   3.25, "OrderDate": "1996-07-18", "ShipCountry": "Mexico"     },
-            { "OrderID": 10260, "CustomerID": "OTTIK",  "Freight":  55.09, "OrderDate": "1996-07-19", "ShipCountry": "Germany"    },
-            { "OrderID": 10261, "CustomerID": "QUEDE",  "Freight":   3.05, "OrderDate": "1996-07-19", "ShipCountry": "Brazil"     },
-            { "OrderID": 10262, "CustomerID": "RATTC",  "Freight":  48.29, "OrderDate": "1996-07-22", "ShipCountry": "USA"        }
-          ]
-      }},
+      private const string Json = """
+{
+  "version": "v0.9",
+  "messages": [
+    { "version": "v0.9", "createSurface": { "surfaceId": "orders", "catalogId": "syncfusion-maui", "sendDataModel": true } },
+    { "version": "v0.9", "updateDataModel": {
+       "surfaceId": "orders",
+        "path": "/orders",
+        "value": [
+          { "OrderID": 10248, "CustomerID": "VINET",  "Freight":  32.38, "OrderDate": "1996-07-04", "ShipCountry": "France"     },
+          { "OrderID": 10249, "CustomerID": "TOMSP",  "Freight":  11.61, "OrderDate": "1996-07-05", "ShipCountry": "Germany"    },
+          { "OrderID": 10250, "CustomerID": "HANAR",  "Freight":  65.83, "OrderDate": "1996-07-08", "ShipCountry": "Brazil"     },
+          { "OrderID": 10251, "CustomerID": "VICTE",  "Freight":  41.34, "OrderDate": "1996-07-08", "ShipCountry": "France"     },
+          { "OrderID": 10252, "CustomerID": "SUPRD",  "Freight":  51.30, "OrderDate": "1996-07-09", "ShipCountry": "Belgium"    },
+          { "OrderID": 10253, "CustomerID": "HANAR",  "Freight":  58.17, "OrderDate": "1996-07-10", "ShipCountry": "Brazil"     },
+          { "OrderID": 10254, "CustomerID": "CHOPS",  "Freight":  22.98, "OrderDate": "1996-07-11", "ShipCountry": "Switzerland"},
+          { "OrderID": 10255, "CustomerID": "RICSU",  "Freight": 148.33, "OrderDate": "1996-07-12", "ShipCountry": "Switzerland"},
+          { "OrderID": 10256, "CustomerID": "WELLI",  "Freight":  13.97, "OrderDate": "1996-07-15", "ShipCountry": "Brazil"     },
+          { "OrderID": 10257, "CustomerID": "HILAA",  "Freight":  81.91, "OrderDate": "1996-07-16", "ShipCountry": "Venezuela"  },
+          { "OrderID": 10258, "CustomerID": "ERNSH",  "Freight": 140.51, "OrderDate": "1996-07-17", "ShipCountry": "Austria"    },
+          { "OrderID": 10259, "CustomerID": "CENTC",  "Freight":   3.25, "OrderDate": "1996-07-18", "ShipCountry": "Mexico"     },
+          { "OrderID": 10260, "CustomerID": "OTTIK",  "Freight":  55.09, "OrderDate": "1996-07-19", "ShipCountry": "Germany"    },
+          { "OrderID": 10261, "CustomerID": "QUEDE",  "Freight":   3.05, "OrderDate": "1996-07-19", "ShipCountry": "Brazil"     },
+          { "OrderID": 10262, "CustomerID": "RATTC",  "Freight":  48.29, "OrderDate": "1996-07-22", "ShipCountry": "USA"        }
+        ]
+    }},
 
-      { "version": "v0.9", "updateDataModel": {
-        "surfaceId": "orders",
-        "path": "/selectedRowJson",
-        "value": ""
-      }},
+    { "version": "v0.9", "updateDataModel": {
+      "surfaceId": "orders",
+      "path": "/selectedRowJson",
+      "value": ""
+    }},
 
-      { "version": "v0.9", "updateComponents": {
-        "surfaceId": "orders",
-        "components": [
-        {
-          "id": "root",
-          "component": "Column",
-          "children": ["grid", "selected-json"]
-        },
-        {
-          "id": "grid",
-          "component": "SyncfusionDataGrid",
-          "dataSource": { "path": "/orders" },
-
-         "sortingMode":     "single",
-         "allowFiltering":  true,
-         "allowGrouping":   true,
-         "selectionMode":   "single",
-         "navigationMode":  "row",
-         "gridLinesVisibility": "both",
-         "alternationRowCount": 1,
-
-         "sortDescriptions": [
-         { "columnName": "OrderID", "direction": "ascending" }
-       ],
-
-      "columns": [
-        { "mappingName": "OrderID",    "headerText": "Order ID",    "width": 110, "textAlign": "end",   "format": "N0" },
-        { "mappingName": "CustomerID", "headerText": "Customer",    "width": 140 },
-        { "mappingName": "Freight",    "headerText": "Freight",     "width": 120, "textAlign": "end",   "format": "C2" },
-        { "mappingName": "OrderDate",  "headerText": "Order Date",  "width": 150 },
-        { "mappingName": "ShipCountry","headerText": "Ship Country","width": 150 }
-       ]
+    { "version": "v0.9", "updateComponents": {
+      "surfaceId": "orders",
+      "components": [
+      {
+        "id": "root",
+        "component": "Column",
+        "children": ["grid", "selected-json"]
       },
       {
-        "id": "selected-json",
-        "component": "Text",
-        "text": { "path": "/selectedRowJson" },
-        "variant": "caption"
-      }
-     ]
-    }}
+        "id": "grid",
+        "component": "SyncfusionDataGrid",
+        "dataSource": { "path": "/orders" },
+        "columns": [
+          { "mappingName": "OrderID", "headerText": "Order ID", "textAlign": "end", "format": "N0" },
+          { "mappingName": "CustomerID", "headerText": "Customer" },
+          { "mappingName": "Freight", "headerText": "Freight", "textAlign": "end", "format": "C2" },
+          { "mappingName": "OrderDate", "headerText": "Order Date" },
+          { "mappingName": "ShipCountry", "headerText": "Ship Country" }
+        ],
+        "selectionMode": "single",
+        "columnWidthMode": "auto"
+    },
+    {
+      "id": "selected-json",
+      "component": "Text",
+      "text": { "path": "/selectedRowJson" },
+      "variant": "caption"
+    }
    ]
-  }
- """;
+  }}
+ ]
+}
+""";
 
 {% endhighlight %}
 {% endtabs %}
