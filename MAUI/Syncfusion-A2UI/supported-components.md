@@ -29,7 +29,7 @@ See [Getting Started](./getting-started) to register the catalog and render a su
 
 | Component ID | Description |
 | --- | --- |
-| `SyncfusionCartesianChart` | Cartesian chart with line, spline, column, bar, and area series. |
+| `SyncfusionCartesianChart` | Cartesian chart with line, column, bar, and area series. |
 | `SyncfusionPieChart` | Pie or doughnut chart for proportional data. |
 | `SyncfusionLinearProgressBar` | Linear determinate or indeterminate progress. |
 | `SyncfusionCircularProgressBar` | Circular determinate or indeterminate progress. |
@@ -54,7 +54,7 @@ See [Getting Started](./getting-started) to register the catalog and render a su
 | `SyncfusionNumericEntry` | Numeric input with formatting and value constraints. |
 | `SyncfusionMaskedEntry` | Input constrained by a mask pattern. |
 | `SyncfusionComboBox` | Searchable single-selection input with editable text support. |
-| `SyncfusionPicker` | Modal picker for selecting an item from a list. |
+| `SyncfusionPicker` | Selecting an item from a list. |
 | `SyncfusionAutocomplete` | Type-ahead input with filtered suggestions. |
 | `SyncfusionColorPicker` | Color selection control. |
 | `SyncfusionRating` | Symbol or star rating input with read-only support. |
@@ -68,7 +68,7 @@ See [Getting Started](./getting-started) to register the catalog and render a su
 | `SyncfusionDatePicker` | Date selection input. |
 | `SyncfusionDateTimePicker` | Date and time selection input. |
 | `SyncfusionTimePicker` | Time-only selection input. |
-| `SyncfusionScheduler` | Day, week, month, agenda, and timeline appointment views. |
+| `SyncfusionScheduler` | Day, Week, Month, Agenda, and Timeline views. |
 
 ## Buttons and selection
 
