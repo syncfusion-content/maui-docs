@@ -3490,7 +3490,7 @@ To style the prompt library based on its appearance, set values to the built-in 
     <syncTheme:SyncfusionThemeDictionary>
         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
-                <x:String x:Key="SfPromptLibraryTheme">CustomTheme</x:String>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfPromptLibraryCategoryPaneBackground">LightGreen</Color>
                 <Color x:Key="SfPromptLibraryCardBackground">SkyBlue</Color>
                 <Color x:Key="SfPromptLibraryCardTitleTextColor">Red</Color>
@@ -3518,7 +3518,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfPromptLibraryTheme", "CustomTheme");
+        dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
         dictionary.Add("SfPromptLibraryCategoryPaneBackground", Colors.LightGreen);
         dictionary.Add("SfPromptLibraryCardBackground", Colors.SkyBlue);
         dictionary.Add("SfPromptLibraryCardTitleTextColor", Colors.Red);
