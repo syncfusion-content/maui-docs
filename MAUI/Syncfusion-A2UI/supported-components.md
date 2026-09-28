@@ -13,13 +13,7 @@ The Syncfusion® A2UI for .NET MAUI package includes **56 Syncfusion® .NET MAUI
 
 An agent can send these adapters in `createSurface` or `updateComponents` messages. `A2uiSurface` renders them through `SurfaceHost`. Use the exact adapter ID from this page in the payload's `component` property. Supported properties and events vary by adapter.
 
-> **Important:** Use the A2UI component IDs listed in this page, such as `SyncfusionButton`, `SyncfusionCartesianChart`, and `SyncfusionCardLayout`. Do not use the native control names, such as `SfButton`, `SfCartesianChart`, or `SfCardView`, in A2UI messages.
-
 See [Getting Started](./getting-started) to register the catalog and render a surface. The Composer sample shows how to author and preview A2UI messages.
-
-The default catalog ID is `syncfusion-maui`. The `catalogId` in every `createSurface` message must match the registered ID. The Composer sample uses `syncfusion-a2ui-catalog`.
-
-The runtime packages are `Syncfusion.A2UI.Core` and `Syncfusion.Maui.A2UI`. The Syncfusion® control packages used by the adapters are brought in transitively by the renderer package.
 
 ## Data and collections
 
