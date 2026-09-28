@@ -1,13 +1,13 @@
 ---
 layout: post
-title: ChartSelectionBehavior in .NET MAUI Cartesian Chart | Syncfusion®
+title: SeriesSelectionBehavior in .NET MAUI Cartesian Chart | Syncfusion®
 description: This section lists the public API members for Behaviors in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# ChartSelectionBehavior API Reference for .NET MAUI Cartesian Chart
+# SeriesSelectionBehavior API Reference for .NET MAUI Cartesian Chart
 
 ## Properties
 
