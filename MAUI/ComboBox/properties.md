@@ -1,7 +1,7 @@
 ﻿---
 layout: post
-title: Properties in .NET MAUI ComboBox | SyncfusionÂ®
-description: This section explains the properties, events, and methods with SyncfusionÂ® .NET MAUI ComboBox (SfComboBox) control.
+title: Properties in .NET MAUI ComboBox | Syncfusion®
+description: This section explains the properties, events, and methods with Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
