@@ -20,6 +20,7 @@ The runtime is composed of two NuGet packages:
 
 > Syncfusion® A2UI for .NET MAUI is currently in **preview (beta)** and will be published on NuGet under the package `Syncfusion.Maui.A2UI` (with `Syncfusion.A2UI.Core` as a transitive dependency).
 
+{% tabcontents %}
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
