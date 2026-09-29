@@ -139,7 +139,7 @@ using Syncfusion.Maui.A2UI.Hosting;
 Open **MainPage.xaml** and add an `<a2ui:A2uiSurface>` view.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="4" %}
 
 <ScrollView>
   <VerticalStackLayout Spacing="12" Padding="12">
@@ -157,29 +157,26 @@ using Syncfusion.A2UI.Core.Common;
 using Syncfusion.A2UI.Core.Serialization;
 using Syncfusion.Maui.A2UI.Hosting;
 
-      private readonly SurfaceHost _host;
+ private readonly SurfaceHost _host;
+ public MainPage(SurfaceHost host)
+ {
+    InitializeComponent();
+    _host = host;
+ }
+ 
+protected override void OnAppearing()
+{
+    base.OnAppearing();
+    try { _host.Processor.Model.DeleteSurface("orders"); } catch { /* surface didn't exist */ }
+    var messages = A2uiJson.ParseMessages(JsonDocument.Parse(Json).RootElement);
+    _host.Processor.ProcessMessages(messages);
+    var surface = _host.Processor.Model.GetSurface("orders");
+    OrdersSurface.Host = _host;
+    OrdersSurface.Surface = surface;
+    OrdersSurface.Rebuild();
+ }
 
-      public MainPage(SurfaceHost host)
-      {
-          InitializeComponent();
-          _host = host;
-      }
-
-      protected override void OnAppearing()
-      {
-          base.OnAppearing();
-
-          try { _host.Processor.Model.DeleteSurface("orders"); } catch { /* surface didn't exist */ }
-          var messages = A2uiJson.ParseMessages(JsonDocument.Parse(Json).RootElement);
-          _host.Processor.ProcessMessages(messages);
-
-          var surface = _host.Processor.Model.GetSurface("orders");
-          OrdersSurface.Host = _host;
-          OrdersSurface.Surface = surface;
-          OrdersSurface.Rebuild();
-      }
-
-      private const string Json = """
+private const string Json = """
 {
   "version": "v0.9",
   "messages": [
@@ -206,13 +203,13 @@ using Syncfusion.Maui.A2UI.Hosting;
         ]
     }},
 
-    { "version": "v0.9", "updateDataModel": {
+   { "version": "v0.9", "updateDataModel": {
       "surfaceId": "orders",
       "path": "/selectedRowJson",
       "value": ""
-    }},
+   }},
 
-    { "version": "v0.9", "updateComponents": {
+   { "version": "v0.9", "updateComponents": {
       "surfaceId": "orders",
       "components": [
       {
@@ -248,14 +245,12 @@ using Syncfusion.Maui.A2UI.Hosting;
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="App.xaml.cs" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="5 8 9 10 11" %}
 
   private readonly IServiceProvider _services;
-
   public App(IServiceProvider services)
   {
       InitializeComponent();
-
       _services = services;
   }
 
