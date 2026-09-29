@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Properties in .NET MAUI ComboBox | Syncfusion®
 description: This section explains the properties, events, and methods with Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
