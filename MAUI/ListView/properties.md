@@ -109,6 +109,12 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Enables or disables the <code>liquid glass</code> effect.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EndSwipeTemplate" aria-label="View EndSwipeTemplate property in API reference">EndSwipeTemplate</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
     <td>Displays custom actions when an item is swiped <code>right</code> in a vertical ListView or <code>down</code> in a horizontal ListView. <code>AllowSwiping</code> must be enabled.</td>
@@ -175,6 +181,24 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorColor" aria-label="View GroupItemSeparatorColor property in API reference">GroupItemSeparatorColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Sets the separator <code>color</code> below group headers; when <code>null</code>, the ListView uses <code>ItemSeparatorColor</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorMargin" aria-label="View GroupItemSeparatorMargin property in API reference">GroupItemSeparatorMargin</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Sets the horizontal <code>margin</code> of group-header separators; when <code>null</code>, the ListView uses <code>ItemSeparatorMargin</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupItemSeparatorThickness" aria-label="View GroupItemSeparatorThickness property in API reference">GroupItemSeparatorThickness</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the <code>thickness</code> of group-header separators; when <code>null</code>, the ListView uses <code>ItemSeparatorThickness</code>.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderSize" aria-label="View HeaderSize property in API reference">HeaderSize</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td>Controls the header's <code>height</code> in a vertical ListView or <code>width</code> in a horizontal ListView.</td>
@@ -190,6 +214,300 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading" aria-label="View IsLazyLoading property in API reference">IsLazyLoading</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Keeps the <code>load-more</code> indicator visible while additional items are being loaded; clear it when the loading operation finishes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsScrollingEnabled" aria-label="View IsScrollingEnabled property in API reference">IsScrollingEnabled</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Enables or disables ListView <code>scrolling</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter" aria-label="View IsStickyFooter property in API reference">IsStickyFooter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Displays the footer as <code>sticky</code> or scrollable content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyGroupHeader" aria-label="View IsStickyGroupHeader property in API reference">IsStickyGroupHeader</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Displays group headers as <code>sticky</code> or scrollable content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader" aria-label="View IsStickyHeader property in API reference">IsStickyHeader</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Displays the header as <code>sticky</code> or scrollable content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColor" aria-label="View ItemBorderColor property in API reference">ItemBorderColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Sets the border <code>color</code> around each list item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMargin" aria-label="View ItemBorderMargin property in API reference">ItemBorderMargin</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Sets the <code>margin</code> around each list item's border.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadius" aria-label="View ItemBorderRadius property in API reference">ItemBorderRadius</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.cornerradius?view=net-maui-10.0" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
+    <td>Sets the corner <code>radius</code> of each list item's border.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThickness" aria-label="View ItemBorderThickness property in API reference">ItemBorderThickness</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Sets the border <code>thickness</code> on each side of a list item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemGenerator" aria-label="View ItemGenerator property in API reference">ItemGenerator</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsGenerator.html" aria-label="View ItemsGenerator type in API reference">ItemsGenerator</a></td>
+    <td>Sets the <code>item generator</code> used to create or update ListView items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorColor" aria-label="View ItemSeparatorColor property in API reference">ItemSeparatorColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Sets the separator <code>color</code> between list items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorMargin" aria-label="View ItemSeparatorMargin property in API reference">ItemSeparatorMargin</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Sets the horizontal <code>margin</code> of item separators; the left and right values are used.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSeparatorThickness" aria-label="View ItemSeparatorThickness property in API reference">ItemSeparatorThickness</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the separator line <code>thickness</code> in device-independent pixels.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSize" aria-label="View ItemSize property in API reference">ItemSize</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the item <code>height</code> in a vertical ListView or <code>width</code> in a horizontal ListView.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout" aria-label="View ItemsLayout property in API reference">ItemsLayout</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html" aria-label="View ListViewLayout type in API reference">ListViewLayout</a></td>
+    <td>Sets the ListView <code>layout</code>, such as a linear or grid arrangement.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSpacing" aria-label="View ItemSpacing property in API reference">ItemSpacing</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Sets the <code>spacing</code> between list items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource" aria-label="View ItemsSource property in API reference">ItemsSource</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>data source</code> containing the items displayed by the ListView.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSourceChangeCachingStrategy" aria-label="View ItemsSourceChangeCachingStrategy property in API reference">ItemsSourceChangeCachingStrategy</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html" aria-label="View ItemsSourceChangeCachingStrategy type in API reference">ItemsSourceChangeCachingStrategy</a></td>
+    <td>Controls how item templates are <code>cached</code> when <code>ItemsSource</code> changes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate" aria-label="View ItemTemplate property in API reference">ItemTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to display each list item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand" aria-label="View LoadMoreCommand property in API reference">LoadMoreCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Sets the command executed when a <code>load-more</code> operation is triggered.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommandParameter" aria-label="View LoadMoreCommandParameter property in API reference">LoadMoreCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>parameter</code> passed to <code>LoadMoreCommand</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption" aria-label="View LoadMoreOption property in API reference">LoadMoreOption</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html" aria-label="View LoadMoreOption enum in API reference">LoadMoreOption</a></td>
+    <td>Sets whether loading more items is disabled, triggered <code>automatically</code>, or triggered by a <code>manual</code> action.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMorePosition" aria-label="View LoadMorePosition property in API reference">LoadMorePosition</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMorePosition.html" aria-label="View LoadMorePosition enum in API reference">LoadMorePosition</a></td>
+    <td>Sets whether the load-more item appears at the <code>start</code> or <code>end</code> of the ListView.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreTemplate" aria-label="View LoadMoreTemplate property in API reference">LoadMoreTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template for the <code>load-more</code> item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand" aria-label="View LongPressCommand property in API reference">LongPressCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Sets the command executed when a list item is <code>long-pressed</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter" aria-label="View LongPressCommandParameter property in API reference">LongPressCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>parameter</code> passed to <code>LongPressCommand</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation" aria-label="View Orientation property in API reference">Orientation</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.itemslayoutorientation" aria-label="View ItemsLayoutOrientation type in API reference">ItemsLayoutOrientation</a></td>
+    <td>Sets the ListView's <code>vertical</code> or <code>horizontal</code> orientation.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RightTapCommand" aria-label="View RightTapCommand property in API reference">RightTapCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Sets the command executed when a list item is <code>right-tapped</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RightTapCommandParameter" aria-label="View RightTapCommandParameter property in API reference">RightTapCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>parameter</code> passed to <code>RightTapCommand</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollBarVisibility" aria-label="View ScrollBarVisibility property in API reference">ScrollBarVisibility</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.scrollbarvisibility" aria-label="View ScrollBarVisibility type in API reference">ScrollBarVisibility</a></td>
+    <td>Controls whether the vertical or horizontal <code>scroll bar</code> is displayed.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem" aria-label="View SelectedItem property in API reference">SelectedItem</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Gets or sets the first <code>selected</code> item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems" aria-label="View SelectedItems property in API reference">SelectedItems</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1" aria-label="View ObservableCollection type in API reference">ObservableCollection&lt;object&gt;</a></td>
+    <td>Gets the collection of <code>selected</code> items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate" aria-label="View SelectedItemTemplate property in API reference">SelectedItemTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Defines the template used to display a <code>selected</code> item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground" aria-label="View SelectionBackground property in API reference">SelectionBackground</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+    <td>Sets the background <code>brush</code> for a selected item.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommand" aria-label="View SelectionChangedCommand property in API reference">SelectionChangedCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Sets the command executed when the item <code>selection</code> changes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommandParameter" aria-label="View SelectionChangedCommandParameter property in API reference">SelectionChangedCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>parameter</code> passed to <code>SelectionChangedCommand</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionController" aria-label="View SelectionController property in API reference">SelectionController</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionController.html" aria-label="View SelectionController type in API reference">SelectionController</a></td>
+    <td>Sets the controller that manages item <code>selection</code> and related operations.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionGesture" aria-label="View SelectionGesture property in API reference">SelectionGesture</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html" aria-label="View TouchGesture type in API reference">TouchGesture</a></td>
+    <td>Sets the touch gesture that triggers item <code>selection</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode" aria-label="View SelectionMode property in API reference">SelectionMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html" aria-label="View SelectionMode enum in API reference">SelectionMode</a></td>
+    <td>Sets whether selection is disabled, single, or <code>multiple</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowFilteringUICommand" aria-label="View ShowFilteringUICommand property in API reference">ShowFilteringUICommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Provides a command that displays the built-in filtering <code>UI</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowGroupHeaderBorder" aria-label="View ShowGroupHeaderBorder property in API reference">ShowGroupHeaderBorder</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Shows or hides borders around group headers.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowGroupItemSeparator" aria-label="View ShowGroupItemSeparator property in API reference">ShowGroupItemSeparator</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Shows or hides a separator below group headers when grouping and item separators are enabled.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorder" aria-label="View ShowItemBorder property in API reference">ShowItemBorder</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Shows or hides the border around each item; applies only to <code>LinearLayout</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemSeparator" aria-label="View ShowItemSeparator property in API reference">ShowItemSeparator</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Shows or hides separator lines between list items.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_StartSwipeTemplate" aria-label="View StartSwipeTemplate property in API reference">StartSwipeTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Displays custom actions when an item is swiped <code>left</code> in a vertical ListView or <code>up</code> in a horizontal ListView. <code>AllowSwiping</code> must be enabled.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_StickyFooterPosition" aria-label="View StickyFooterPosition property in API reference">StickyFooterPosition</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterPosition.html" aria-label="View ListViewFooterPosition type in API reference">ListViewFooterPosition</a></td>
+    <td>Sets where the sticky footer is placed when the items do not fill the ListView body.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset" aria-label="View SwipeOffset property in API reference">SwipeOffset</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the distance an item moves and remains offset when <code>swiped</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeThreshold" aria-label="View SwipeThreshold property in API reference">SwipeThreshold</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the distance used to determine when a swipe is considered <code>stuck</code> or complete.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand" aria-label="View TapCommand property in API reference">TapCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Sets the command executed when a list item is <code>tapped</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter" aria-label="View TapCommandParameter property in API reference">TapCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Sets the <code>parameter</code> passed to <code>TapCommand</code>.</td>
 </tr>
 </table>
 
