@@ -344,3 +344,5 @@ this.Content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Thumb size appearance](images/custom-view/Custom-Thumb.png)
