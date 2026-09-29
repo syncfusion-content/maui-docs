@@ -149,9 +149,7 @@ Open **MainPage.xaml** and add an `<a2ui:A2uiSurface>` view.
 </ScrollView>
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight C# %}
 
 using System.Text.Json;
@@ -247,6 +245,24 @@ using Syncfusion.Maui.A2UI.Hosting;
  ]
 }
 """;
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="App.xaml.cs" %}
+
+  private readonly IServiceProvider _services;
+
+  public App(IServiceProvider services)
+  {
+      InitializeComponent();
+
+      _services = services;
+  }
+
+  protected override Window CreateWindow(IActivationState? activationState)
+  {
+      return new Window(new AppShell(_services.GetRequiredService<MainPage>()));
+  }
 
 {% endhighlight %}
 {% endtabs %}
