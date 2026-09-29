@@ -1,7 +1,7 @@
----
+﻿---
 layout: post
-title: Properties in .NET MAUI ComboBox | Syncfusion®
-description: This section explains the properties, events, and methods with Syncfusion® .NET MAUI ComboBox (SfComboBox) control.
+title: Properties in .NET MAUI ComboBox | SyncfusionÂ®
+description: This section explains the properties, events, and methods with SyncfusionÂ® .NET MAUI ComboBox (SfComboBox) control.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -17,6 +17,24 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
     <th>Name</th>
     <th>Type</th>
     <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor" aria-label="View ClearButtonIconColor property in API reference">ClearButtonIconColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Gets or sets a color that describes the color of the clear button.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonPath" aria-label="View ClearButtonPath property in API reference">ClearButtonPath</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.shapes.path" aria-label="View Path type in API reference">Path</a></td>
+    <td>Gets or sets the value of the clear button path. This property can be used to customize the clear button.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition" aria-label="View CursorPosition property in API reference">CursorPosition</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
+    <td>Gets or sets the position of the cursor in the control.</td>
 </tr>
 
 <tr valign="top">
@@ -44,21 +62,51 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings" aria-label="View DropDownButtonSettings property in API reference">DropDownButtonSettings</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownButtonSettings.html" aria-label="View DropDownButtonSettings type in API reference">DropDownButtonSettings</a></td>
+    <td>Customizes the appearance and behavior of the drop-down button.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownCornerRadius" aria-label="View DropDownCornerRadius property in API reference">DropDownCornerRadius</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td>Controls the <code>corner radius</code> of the suggestion dropdown.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings" aria-label="View DropDownButtonSettings type in API reference">DropDownButtonSettings</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownButtonSettings.html" aria-label="View DropDownButtonSettings property in API reference">DropDownButtonSettings</a></td>
-    <td>Customizes the appearance and behavior of the drop-down button.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownIconColor" aria-label="View DropDownIconColor property in API reference">DropDownIconColor</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
     <td>Applies a color to the drop-down button icon.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontAttributes" aria-label="View DropDownItemFontAttributes property in API reference">DropDownItemFontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td>Sets the font attributes used for the suggestion dropdown item text.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontFamily" aria-label="View DropDownItemFontFamily property in API reference">DropDownItemFontFamily</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Sets the font family used for the suggestion dropdown item text.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize" aria-label="View DropDownItemFontSize property in API reference">DropDownItemFontSize</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the font size used for the suggestion dropdown item text.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight" aria-label="View DropDownItemHeight property in API reference">DropDownItemHeight</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Sets the height of each item displayed in the suggestion dropdown.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemTextColor" aria-label="View DropDownItemTextColor property in API reference">DropDownItemTextColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Sets the text color used for suggestion dropdown items.</td>
 </tr>
 
 <tr valign="top">
@@ -104,45 +152,9 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontAttributes" aria-label="View DropDownItemFontAttributes property in API reference">DropDownItemFontAttributes</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
-    <td>Sets the font attributes used for the suggestion dropdown item text.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontFamily" aria-label="View DropDownItemFontFamily property in API reference">DropDownItemFontFamily</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
-    <td>Sets the font family used for the suggestion dropdown item text.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemFontSize" aria-label="View DropDownItemFontSize property in API reference">DropDownItemFontSize</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
-    <td>Sets the font size used for the suggestion dropdown item text.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight" aria-label="View DropDownItemHeight property in API reference">DropDownItemHeight</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
-    <td>Sets the height of each item displayed in the suggestion dropdown.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemTextColor" aria-label="View DropDownItemTextColor property in API reference">DropDownItemTextColor</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
-    <td>Sets the text color used for suggestion dropdown items.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropdownWidth" aria-label="View DropdownWidth property in API reference">DropdownWidth</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td>Sets the width of the suggestion dropdown.</td>
-</tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
-    <td>Enables the liquid glass effect for the control appearance.</td>
 </tr>
 
 <tr valign="top">
@@ -152,9 +164,39 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior" aria-label="View IComboBoxFilterBehavior type in API reference">FilterBehavior</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IComboBoxFilterBehavior.html" aria-label="View FilterBehavior property in API reference">IComboBoxFilterBehavior</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Enables the liquid glass effect for the control appearance.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior" aria-label="View FilterBehavior property in API reference">FilterBehavior</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.IComboBoxFilterBehavior.html" aria-label="View FilterBehavior type in API reference">IComboBoxFilterBehavior</a></td>
     <td>Controls how items are filtered when text is entered in an editable ComboBox.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td>Gets or sets a font attributes for text.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_FontAutoScalingEnabled" aria-label="View FontAutoScalingEnabled property in API reference">FontAutoScalingEnabled</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Enables automatic font size adjustment based on device settings.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_FontFamily" aria-label="View FontFamily property in API reference">FontFamily</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Gets or sets a font family for text.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_FontSize" aria-label="View FontSize property in API reference">FontSize</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Gets or sets a font size for text.</td>
 </tr>
 
 <tr valign="top">
@@ -173,6 +215,18 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment" aria-label="View HorizontalTextAlignment property in API reference">HorizontalTextAlignment</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
     <td>Aligns the displayed text horizontally within the ComboBox.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisible" aria-label="View IsClearButtonVisible property in API reference">IsClearButtonVisible</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Gets or sets a value indicating whether the clear button should be visible or not.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen" aria-label="View IsDropDownOpen property in API reference">IsDropDownOpen</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Gets or sets a value indicating whether the drop-down is in the open or closed state.</td>
 </tr>
 
 <tr valign="top">
@@ -236,14 +290,20 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight" aria-label="View MaxDropDownHeight property in API reference">MaxDropDownHeight</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Gets or sets the maximum height for a drop-down.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MinimumPrefixCharacters" aria-label="View MinimumPrefixCharacters property in API reference">MinimumPrefixCharacters</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
     <td>Determines the minimum number of characters needed before the dropdown opens.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode" aria-label="View ComboBoxMultiSelectionDisplayMode enum in API reference">MultiSelectionDisplayMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html" aria-label="View MultiSelectionDisplayMode property in API reference">ComboBoxMultiSelectionDisplayMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_MultiSelectionDisplayMode" aria-label="View MultiSelectionDisplayMode property in API reference">MultiSelectionDisplayMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxMultiSelectionDisplayMode.html" aria-label="View MultiSelectionDisplayMode type in API reference">ComboBoxMultiSelectionDisplayMode</a></td>
     <td>Defines how selected items are displayed when multiple selection is enabled by using the <code>ComboBoxMultiSelectionDisplayMode</code> enum.</td>
 </tr>
 
@@ -257,6 +317,18 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText" aria-label="View NoResultsFoundText property in API reference">NoResultsFoundText</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Sets the text displayed when no matching items are found.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder" aria-label="View Placeholder property in API reference">Placeholder</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Gets or sets the text that is displayed in the control until the value is changed by a user action or some other operation.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor" aria-label="View PlaceholderColor property in API reference">PlaceholderColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Gets or sets a color that describes the color of placeholder text.</td>
 </tr>
 
 <tr valign="top">
@@ -292,7 +364,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedIndex" aria-label="View SelectedIndex property in API reference">SelectedIndex</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
-    <td>Identifies the currently selected item by its position in the items source.</td>
+    <td>Identifies the currently selected item by its position in the item source.</td>
 </tr>
 
 <tr valign="top">
@@ -320,15 +392,15 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor" aria-label="View SelectionTextHighlightColor property in API reference">SelectionTextHighlightColor</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
-    <td>Sets the highlight color used in the selected text area.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode" aria-label="View SelectionMode property in API reference">SelectionMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html" aria-label="View ComboBoxSelectionMode type in API reference">ComboBoxSelectionMode</a></td>
+    <td>Defines the item selection mode used by the control by using the <code>ComboBoxSelectionMode</code> enum.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode" aria-label="View ComboBoxSelectionMode enum in API reference">SelectionMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html" aria-label="View SelectionMode property in API reference">ComboBoxSelectionMode</a></td>
-    <td>Defines the item selection mode used by the control by using the <code>ComboBoxSelectionMode</code> enum.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor" aria-label="View SelectionTextHighlightColor property in API reference">SelectionTextHighlightColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Sets the highlight color used in the selected text area.</td>
 </tr>
 
 <tr valign="top">
@@ -356,15 +428,21 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode" aria-label="View ComboBoxTextSearchMode enum in API reference">TextSearchMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html" aria-label="View TextSearchMode property in API reference">ComboBoxTextSearchMode</a></td>
-    <td>Specifies the search mode used to match typed text with items by using the <code>ComboBoxTextSearchMode</code> enum.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Gets or sets a color that describes the stroke.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text" aria-label="View Text property in API reference">Text</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Gets or sets the text displayed in the text box portion of the control.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_TextColor" aria-label="View TextColor property in API reference">TextColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Gets or sets a text color for text.</td>
 </tr>
 
 <tr valign="top">
@@ -380,9 +458,9 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode" aria-label="View ComboBoxTokensWrapMode enum in API reference">TokensWrapMode</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html" aria-label="View TokensWrapMode property in API reference">ComboBoxTokensWrapMode</a></td>
-    <td>Determines how selected item tokens wrap in multiple selection mode by using the <code>ComboBoxTokensWrapMode</code> enum.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode" aria-label="View ComboBoxTextSearchMode enum in API reference">TextSearchMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html" aria-label="View TextSearchMode property in API reference">ComboBoxTextSearchMode</a></td>
+    <td>Specifies the search mode used to match typed text with items by using the <code>ComboBoxTextSearchMode</code> enum.</td>
 </tr>
 
 <tr valign="top">
@@ -392,9 +470,15 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TokensWrapMode" aria-label="View ComboBoxTokensWrapMode enum in API reference">TokensWrapMode</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTokensWrapMode.html" aria-label="View TokensWrapMode property in API reference">ComboBoxTokensWrapMode</a></td>
+    <td>Determines how selected item tokens wrap in multiple selection mode by using the <code>ComboBoxTokensWrapMode</code> enum.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment" aria-label="View VerticalTextAlignment property in API reference">VerticalTextAlignment</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
-    <td>Controls the vertical alignment of the text inside the control and controls how the text is positioned within the available height.</td>
+    <td>Controls the vertical alignment of the text inside the control and how the text is positioned within the available height.</td>
 </tr>
 </table>
 
@@ -419,3 +503,5 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
     <td>Triggered when the selected value or displayed text changes.</td>
 </tr>
 </table>
+
+
