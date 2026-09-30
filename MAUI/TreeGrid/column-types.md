@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, tree grid maui, maui gridview, grid in
 
 # Column Types in .NET MAUI Tree Grid
 
-The [.NET MAUI SfTreeGrid]() supports a variety of column types, each designed to handle specific data formats and presentation requirements. By leveraging the appropriate column type, you can effectively display hierarchical data based on your application's needs.
+The [.NET MAUI SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) supports a variety of column types, each designed to handle specific data formats and presentation requirements. By leveraging the appropriate column type, you can effectively display hierarchical data based on your application's needs.
 
 The table below outlines the available column types with their respective renderers and use cases:
 
@@ -22,32 +22,32 @@ The table below outlines the available column types with their respective render
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[TreeGridTextColumn]()'| markdownify }}</td>
-<td>{{'[TreeGridTextBoxRenderer]()' | markdownify }}</td>
+<td>{{'[TreeGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTextColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridTextCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTextCellRenderer.html)' | markdownify }}</td>
 <td>Text</td>
 <td>Display text or alphanumeric values across rows in the hierarchical structure.</td>
 </tr>
 <tr>
-<td>{{'[TreeGridCheckBoxColumn]()'| markdownify }}</td>
-<td>{{'[TreeGridCheckBoxRenderer]()'| markdownify }}</td>
+<td>{{'[TreeGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCheckBoxColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridCheckBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCheckBoxCellRenderer.html)'| markdownify }}</td>
 <td>CheckBox</td>
 <td>Present boolean flags or toggle states with built-in checkbox controls for each node.</td>
 </tr>
 <tr>
-<td>{{'[TreeGridTemplateColumn]()'| markdownify }}</td>
-<td>{{'[TreeGridCellTemplateRenderer]()'| markdownify }}</td>
+<td>{{'[TreeGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTemplateColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridTemplateCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTemplateCellRenderer.html)'| markdownify }}</td>
 <td>Template</td>
 <td>Create highly customizable cells with complex layouts, combining multiple controls and visual elements.</td>
 </tr>
 <tr>
-<td>{{'[TreeGridNumericColumn]()'| markdownify }}</td>
-<td>{{'[TreeGridNumericCellRenderer]()'| markdownify }}</td>
+<td>{{'[TreeGridNumericColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNumericColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridNumericCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNumericCellRenderer.html)'| markdownify }}</td>
 <td>Numeric</td>
 <td>Render numerical values with formatting capabilities and numeric editing support.</td>
 </tr>
 <tr>
-<td>{{'[TreeGridDateColumn]()'| markdownify }}</td>
-<td>{{'[TreeGridDateCellRenderer]()'| markdownify }}</td>
+<td>{{'[TreeGridDateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDateColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridDateCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDateCellRenderer.html)'| markdownify }}</td>
 <td>DateTime</td>
 <td>Display temporal data including dates, times, and datetime values with format customization.</td>
 </tr>
@@ -55,15 +55,15 @@ The table below outlines the available column types with their respective render
 
 ## TreeGridColumn
 
-As the base column type for SfTreeGrid, [TreeGridColumn]() provides the core functionality inherited by all specialized column types. This section details the key properties and customization techniques available through the base column class:
+As the base column type for SfTreeGrid, [TreeGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html) provides the core functionality inherited by all specialized column types. This section details the key properties and customization techniques available through the base column class:
 
 ### Binding options
 
-The [TreeGridColumn.DisplayBinding]() property controls how data is rendered within cells. This binding mechanism connects your data source properties to the visual representation shown in the tree grid.
+The [TreeGridColumn.DisplayBinding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_DisplayBinding) property controls how data is rendered within cells. This binding mechanism connects your data source properties to the visual representation shown in the tree grid.
 
 #### Mapping column to particular property
 
-The [TreeGridColumn.MappingName]() property links a column to a corresponding property in your data model. When you assign only the MappingName, SfTreeGrid automatically generates an appropriate `DisplayBinding` based on that property name. Sorting and filtering operations within the grid rely on the `MappingName` to identify which data field to operate on.
+The [TreeGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_MappingName) property links a column to a corresponding property in your data model. When you assign only the MappingName, SfTreeGrid automatically generates an appropriate `DisplayBinding` based on that property name. Sorting and filtering operations within the grid rely on the `MappingName` to identify which data field to operate on.
 
 To transform or format the displayed data, use value converters attached to the `TreeGridColumn.DisplayBinding` property:
 
@@ -113,7 +113,7 @@ public class DisplayBindingConverter : IValueConverter
 
 #### Setting manual column width
 
-The SfTreeGrid allows you to customize the width of each TreeGridColumn in the [SfTreeGrid.Columns]() collection. To customize the column width, use the [TreeGridColumn.Width]() property. By default, this property is not assigned any value, and the TreeGridColumn renders based on the [DefaultColumnWidth]() property.
+The SfTreeGrid allows you to customize the width of each TreeGridColumn in the [SfTreeGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_Columns) collection. To customize the column width, use the [TreeGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_Width) property. By default, this property is not assigned any value, and the TreeGridColumn renders based on the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_DefaultColumnWidth) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -153,11 +153,11 @@ treeGrid.Columns.Add(new TreeGridTextColumn() { MappingName = "EmployeeID", Widt
 
 #### TextAlignment
 
-To configure the text alignment for header cells and data row cells, use the [TreeGridColumn.HeaderTextAlignment]() and [TreeGridColumn.CellTextAlignment]() properties. The default text alignment is based on the column type: numeric and date columns are right-aligned by default, while text columns are left-aligned.
+To configure the text alignment for header cells and data row cells, use the [TreeGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderTextAlignment) and [TreeGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_CellTextAlignment) properties. The default text alignment is based on the column type: numeric and date columns are right-aligned by default, while text columns are left-aligned.
 
 #### Padding
 
-The SfTreeGrid allows users to set padding for the Header and cells in display mode by using the [TreeGridColumn.HeaderPadding]() and [TreeGridColumn.CellPadding]() properties.
+The SfTreeGrid allows users to set padding for the Header and cells in display mode by using the [TreeGridColumn.HeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderPadding) and [TreeGridColumn.CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_CellPadding) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -179,11 +179,11 @@ employeeID.HeaderPadding = new Thickness(10, 0, 0, 0);
 ### Header Customization
 #### HeaderText
 
-To customize the display content of the header cell, use the [TreeGridColumn.HeaderText]() property. It specifies the text displayed in the column header. If the header text is not defined, the `TreeGridColumn.MappingName` will be assigned to the header text and displayed as the column header.
+To customize the display content of the header cell, use the [TreeGridColumn.HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderText) property. It specifies the text displayed in the column header. If the header text is not defined, the `TreeGridColumn.MappingName` will be assigned to the header text and displayed as the column header.
 
 #### Header template
 
-Based on the requirement, the header cell can be customized using the [TreeGridColumn.HeaderTemplate]() property.
+Based on the requirement, the header cell can be customized using the [TreeGridColumn.HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderTemplate) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -207,7 +207,7 @@ Based on the requirement, the header cell can be customized using the [TreeGridC
 
 To hide a particular column, use the `TreeGridColumn.Visible` property. The default value is `True`.
 
-N> Set the [Visible]() property to `False` instead of setting column width to `0` to hide a column.
+N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_Visible) property to `False` instead of setting column width to `0` to hide a column.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -249,7 +249,7 @@ treeGrid.Columns.Add(new TreeGridTextColumn() { MappingName = "EmployeeID", Visi
 
 ### Formatting
 
-To format values displayed in the TreeGridColumn, use the [TreeGridColumn.Format]() property. The format string is applied to the underlying data type. Common format strings include:
+To format values displayed in the TreeGridColumn, use the [TreeGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_Format) property. The format string is applied to the underlying data type. Common format strings include:
 
 * **C or C2** - Currency format (e.g., $1,234.56)
 * **N or N2** - Number format with decimal places (e.g., 1,234.56)
@@ -331,11 +331,11 @@ public class SalaryConverter : IValueConverter
 {% endhighlight%}
 {% endtabs %}
 
-N> For AutoGenerated columns, formatting can be applied by handling the [SfTreeGrid.AutoGeneratingColumn]() event.
+N> For AutoGenerated columns, formatting can be applied by handling the [SfTreeGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoGeneratingColumn) event.
 
 #### Formatting TreeGridColumn with different culture
 
-To apply a different `CultureInfo` for TreeGridColumns, use the [TreeGridColumn.CultureInfo]() property. Assign the desired string format to this property. The column will format the value based on the type of the associated property. You can use different `StringFormats` to customize the values displayed in cells.
+To apply a different `CultureInfo` for TreeGridColumns, use the [TreeGridColumn.CultureInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_CultureInfo) property. Assign the desired string format to this property. The column will format the value based on the type of the associated property. You can use different `StringFormats` to customize the values displayed in cells.
 
 To apply different cultures for the TreeGridColumns, follow the code example:
 
@@ -385,7 +385,7 @@ private void treeGrid_AutoGeneratingColumn(object sender, TreeGridAutoGenerating
 
 ## TreeGridTextColumn
 
-The [TreeGridTextColumn]() serves as the standard choice for rendering text-based and numeric content within the hierarchy. Being the default column type, it seamlessly binds to any data property without requiring special configuration. This versatile column type is ideal for displaying identifiers, names, descriptions, and other text information throughout your tree structure.
+The [TreeGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTextColumn.html) serves as the standard choice for rendering text-based and numeric content within the hierarchy. Being the default column type, it seamlessly binds to any data property without requiring special configuration. This versatile column type is ideal for displaying identifiers, names, descriptions, and other text information throughout your tree structure.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -401,7 +401,7 @@ The [TreeGridTextColumn]() serves as the standard choice for rendering text-base
 
 ## TreeGridNumericColumn
 
-The [TreeGridNumericColumn]() is specifically engineered for presenting numerical data with comprehensive formatting and editing capabilities. Inheriting from `TreeGridColumn`, it provides all base properties while adding numeric-specific features for validation, rounding, and display precision.
+The [TreeGridNumericColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNumericColumn.html) is specifically engineered for presenting numerical data with comprehensive formatting and editing capabilities. Inheriting from `TreeGridColumn`, it provides all base properties while adding numeric-specific features for validation, rounding, and display precision.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -433,7 +433,7 @@ Apply custom number formats to control how numeric values appear. The `Format` p
 
 ## TreeGridDateColumn
 
-The [TreeGridDateColumn]() handles temporal data with integrated date selection and editing. Building on `TreeGridColumn` functionality, it adds specialized capabilities for date/time validation, picker integration, and format customization suited for calendar-based information.
+The [TreeGridDateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDateColumn.html) handles temporal data with integrated date selection and editing. Building on `TreeGridColumn` functionality, it adds specialized capabilities for date/time validation, picker integration, and format customization suited for calendar-based information.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -465,7 +465,7 @@ Control how dates render using the `Format` property with .NET date format patte
 
 ## TreeGridCheckBoxColumn
 
-The [TreeGridCheckBoxColumn]() simplifies the presentation and modification of boolean states. Extending `TreeGridColumn`, it furnishes a native checkbox control for toggling true/false values, making it the go-to choice for feature flags, status indicators, and permission toggles.
+The [TreeGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCheckBoxColumn.html) simplifies the presentation and modification of boolean states. Extending `TreeGridColumn`, it furnishes a native checkbox control for toggling true/false values, making it the go-to choice for feature flags, status indicators, and permission toggles.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -483,7 +483,7 @@ The [TreeGridCheckBoxColumn]() simplifies the presentation and modification of b
 
 ## TreeGridTemplateColumn
 
-The [TreeGridTemplateColumn]() unlocks unlimited design possibilities by allowing you to define entirely custom cell layouts. This column type stands as the pinnacle of customization, enabling you to craft sophisticated, interactive cells that go beyond standard data presentation.
+The [TreeGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTemplateColumn.html) unlocks unlimited design possibilities by allowing you to define entirely custom cell layouts. This column type stands as the pinnacle of customization, enabling you to craft sophisticated, interactive cells that go beyond standard data presentation.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

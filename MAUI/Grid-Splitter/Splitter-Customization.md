@@ -9,13 +9,13 @@ documentation: UG
 
 # Splitter Customization in .NET MAUI Grid Splitter
 
-The [.NET MAUI Grid Splitter]() control provides several customization options that allow you to modify the layout behavior and appearance of splitter separators. You can control pane arrangement, separator thickness, colors, resize icons, and right-to-left layout behavior.
+The [.NET MAUI Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control provides several customization options that allow you to modify the layout behavior and appearance of splitter separators. You can control pane arrangement, separator thickness, colors, resize icons, and right-to-left layout behavior.
 
 ## Orientation
 
-The `Orientation` property determines how the panes are arranged within the Grid Splitter.
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Orientation) property determines how the panes are arranged within the Grid Splitter.
 
-The `GridSplitterOrientation` enum contains the following values:
+The [GridSplitterOrientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterOrientation.html) enum contains the following values:
 
 | Value | Description |
 |---------|---------|
@@ -146,7 +146,7 @@ Content = gridSplitter;
 
 ## SeparatorSize
 
-The `SeparatorSize` property specifies the thickness of the separator displayed between adjacent panes. The default value is `8`.
+The [SeparatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_SeparatorSize) property specifies the thickness of the separator displayed between adjacent panes. The default value is `8`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -207,7 +207,7 @@ Content = gridSplitter;
 
 ## SeparatorBackground
 
-The `SeparatorBackground` property allows you to customize the appearance of the separator between panes.
+The [SeparatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_SeparatorBackground) property allows you to customize the appearance of the separator between panes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -281,7 +281,7 @@ You can use any solid color, dynamic resource, or theme resource to style the se
 
 ## ResizeIconColor
 
-The `ResizeIconColor` property customizes the color of the built-in resize indicator displayed in the separator.
+The [ResizeIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeIconColor) property customizes the color of the built-in resize indicator displayed in the separator.
 
 {% tabs %}
 {% highlight xaml %}
@@ -342,9 +342,9 @@ Content = gridSplitter;
 
 ## ExpandCollapseIconColor
 
-The `ExpandCollapseIconColor` property customizes the color of the expand and collapse icon displayed on collapsible panes.
+The [ExpandCollapseIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ExpandCollapseIconColor) property customizes the color of the expand and collapse icon displayed on collapsible panes.
 
-The icon is displayed only when the associated pane has its `IsCollapsible` property set to `True`.
+The icon is displayed only when the associated pane has its [IsCollapsible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsible) property set to `True`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -406,7 +406,7 @@ Content = gridSplitter;
 
 ## ResizeIconTemplate
 
-The `ResizeIconTemplate` property allows you to replace the default resize icon with custom content.
+The [ResizeIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeIconTemplate) property allows you to replace the default resize icon with custom content.
 
 The template is applied to all separators created by the Grid Splitter.
 

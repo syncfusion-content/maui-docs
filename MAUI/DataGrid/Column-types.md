@@ -1618,7 +1618,7 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
 #### Number of decimal digits
-You can change the number of decimal digits to be displayed after the decimal point using [DataGridNumericColumn.NumberDecimalDigits]() property.
+You can change the number of decimal digits to be displayed after the decimal point using [DataGridNumericColumn.NumberDecimalDigits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NumberDecimalDigits) property.
 
 {% tabs %}
 {% highlight xaml %}

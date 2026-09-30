@@ -10,7 +10,7 @@ keywords : maui datapager, datapager maui, maui paging, .net maui datapager, .ne
 
 # Getting Started with .NET MAUI DataPager
 
-This section provides a quick overview for working with the [SfDataPager]() for .NET MAUI. Follow the steps below to add a basic DataPager to your project.
+This section provides a quick overview for working with the [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html) for .NET MAUI. Follow the steps below to add a basic DataPager to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI DataPager NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.DataPager]() and install the latest version.
+2. Search for [Syncfusion.Maui.DataPager](https://www.nuget.org/packages/Syncfusion.Maui.DataPager/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -81,7 +81,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI DataPager NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.DataPager]() and install the latest version.
+2. Search for [Syncfusion.Maui.DataPager](https://www.nuget.org/packages/Syncfusion.Maui.DataPager/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
@@ -290,7 +290,4 @@ The following screenshot shows the result of running the above code:
 
 <img alt="Normal paging .NET MAUI DataPager." src="Images\paging-mode\net-maui-datapager-normal-paging.png" width="404" Height = "429"/>
 
-You can download the DataPager Getting Started sample from [GitHub]().
-
-> **Note:** You can refer to our [.NET MAUI DataPager]() feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataPager Example]() that shows you how to render the DataPager in .NET MAUI.
-
+> **Note:** You can refer to our [.NET MAUI DataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DataPager Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataPager) that shows you how to render the DataPager in .NET MAUI.

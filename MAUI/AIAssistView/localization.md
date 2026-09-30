@@ -25,6 +25,102 @@ documentation: ug
 <td> Type here... </td>
 </tr>
 <tr>
+<td>Processing</td>
+<td>Processing</td>
+</tr>
+<tr>
+<td>AttachFiles</td>
+<td>Attach Files</td>
+</tr>
+<tr>
+<td>Chat</td>
+<td>Chat</td>
+</tr>
+<tr>
+<td>NewChat</td>
+<td>New chat</td>
+</tr>
+<tr>
+<td>TemporaryChat</td>
+<td>Temporary chat</td>
+</tr>
+<tr>
+<td>RequestCopied</td>
+<td>Request copied!</td>
+</tr>
+<tr>
+<td> ResponseCopied </td>
+<td> Response copied! </td>
+</tr>
+<tr>
+<td> ConversationDeleteSuccess </td>
+<td> Chat deleted successfully </td>
+</tr>
+<tr>
+<td> MaximumUploadItemsExceeded </td>
+<td> Maximum {0} items can be uploaded at a time. </td>
+</tr>
+<tr>
+<td> NetworkError </td>
+<td> Network error. Please check your connection. </td>
+</tr>
+<tr>
+<td> MicrophonePermissionDenied </td>
+<td> Microphone permission denied </td>
+</tr>
+<tr>
+<td> NoSpeechDetected </td>
+<td> No speech detected. Please try again. </td>
+</tr>
+<tr>
+<td> VoiceRecognitionError </td>
+<td> Voice recognition failed </td>
+</tr>
+<tr>
+<td> VoiceRecognitionTimeout </td>
+<td> Recognition timeout. Please try again. </td>
+</tr>
+<tr>
+<td>MyChatsTitle</td>
+<td>My Chats</td>
+</tr>
+<tr>
+<td> AgentsTitle </td>
+<td> Agents </td>
+</tr>
+<tr>
+<td>SearchChat</td>
+<td>Search Chat</td>
+</tr>
+<tr>
+<td>ConversationSearchPlaceholder</td>
+<td>Search conversations</td>
+</tr>
+<tr>
+<td>SearchNoResults</td>
+<td>No results found</td>
+</tr>
+<tr>
+<td>SearchHistoryToday</td>
+<td>Today</td>
+</tr>
+<tr>
+<td>SearchHistoryYesterday</td>
+<td>Yesterday</td>
+</tr>
+<tr>
+<td>SearchHistoryLastWeek</td>
+<td>Last Week</td>
+</tr>
+<tr>
+<td>SearchHistoryLastMonth</td>
+<td>Last Month</td>
+</tr>
+<tr>
+<td>SearchHistoryOlder</td>
+<td>Older</td>
+</tr>
+<tr>
 <td> Filter </td>
 <td> Filter </td>
 </tr>
@@ -49,72 +145,76 @@ documentation: ug
 <td> Last 30 days </td>
 </tr>
 <tr>
-<td> AgentsTitle </td>
-<td> Agents </td>
+<td>RenameConversation</td>
+<td>Rename</td>
 </tr>
 <tr>
-<td> ConversationDeleteSuccess </td>
-<td> Chat deleted successfully </td>
+<td>PinConversation</td>
+<td>Pin</td>
 </tr>
 <tr>
-<td> ConversationFilterNoResults </td>
-<td> No results found </td>
+<td>UnpinConversation</td>
+<td>Unpin</td>
 </tr>
 <tr>
-<td> ConversationFilterPinned </td>
-<td> Pinned </td>
+<td>DeleteConversation</td>
+<td>Delete</td>
 </tr>
 <tr>
-<td> SuccessAnnouncement </td>
-<td> Success </td>
+<td>RenameChatTitle</td>
+<td>Rename this chat</td>
 </tr>
 <tr>
-<td> ErrorAnnouncement </td>
-<td> Error </td>
+<td>RenameChatPlaceholder</td>
+<td>Conversation name</td>
 </tr>
 <tr>
-<td> WarningAnnouncement </td>
-<td> Warning </td>
+<td>RenameChatButton</td>
+<td>Rename</td>
 </tr>
 <tr>
-<td> NetworkError </td>
-<td> Network error. Please check your connection. </td>
+<td>RenameChatCancelButton</td>
+<td>Cancel</td>
 </tr>
 <tr>
-<td> FileSizeExceeded </td>
-<td> Error: File size must not exceed 5 MB. </td>
+<td>DeleteChatTitle</td>
+<td>Delete chat?</td>
 </tr>
 <tr>
-<td> FileUploadFailed </td>
-<td> Upload failed </td>
+<td>DeleteChatConfirmation</td>
+<td>Do you want to delete this chat permanently?</td>
 </tr>
 <tr>
-<td> FileUploadSuccess </td>
-<td> Uploaded successfully </td>
+<td>DeleteChatButton</td>
+<td>Delete</td>
 </tr>
 <tr>
-<td> ResponseCopied </td>
-<td> Response copied! </td>
+<td>DeleteChatCancelButton</td>
+<td>Cancel</td>
 </tr>
 <tr>
-<td> MaximumUploadItemsExceeded </td>
-<td> Maximum {0} items can be uploaded at a time. </td>
+<td>PromptGallery</td>
+<td>Prompt Gallery</td>
 </tr>
 <tr>
-<td> MicrophonePermissionDenied </td>
-<td> Microphone permission denied </td>
+<td>PromptLibrarySearchPlaceholder</td>
+<td>Search prompts</td>
 </tr>
 <tr>
-<td> NoSpeechDetected </td>
-<td> No speech detected. Please try again. </td>
+<td>PromptLibraryEmptyView</td>
+<td>No prompts available</td>
 </tr>
 <tr>
-<td> VoiceRecognitionError </td>
-<td> Voice recognition failed </td>
+<td>Sources</td>
+<td>Sources</td>
 </tr>
 <tr>
-<td> VoiceRecognitionTimeout </td>
-<td> Recognition timeout. Please try again. </td>
+<td>SourcesTitle</td>
+<td>Sources</td>
+</tr>
+<tr>
+<td>CitationsTitle</td>
+<td>Citations</td>
 </tr>
 </table>
 
