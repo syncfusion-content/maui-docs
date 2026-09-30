@@ -5,6 +5,8 @@ description: Overview of the Syncfusion® .NET MAUI Diagram control for creating
 platform: MAUI
 control: SfDiagram
 documentation: ug
+keywords : maui diagram, maui diagram control, diagram in maui, .net maui diagram, .net maui flowchart, maui flowchart, flowchart in maui, workflow diagram in maui, maui org chart, organizational chart in maui, maui graph editor
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Overview of .NET MAUI Diagram
@@ -229,10 +231,10 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<!--<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">-->
+<!--<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
-</a>
+</a>-->
   </div>
 </div>
 <!-- Card 2 -->
@@ -245,10 +247,10 @@ Explore Features
     <h3 class="form-title">Demos</h3>
 </div>
     <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
-    <!--<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">-->
+    <!--<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">
     View Demos
   <span class="card-icon card-arrow"></span>
-</a>
+</a>-->
   </div>
 </div>
 <!-- Card 3 -->
