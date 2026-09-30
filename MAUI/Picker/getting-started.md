@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion<sup>&reg;</sup> .NET M
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Getting Started with .NET MAUI Picker
@@ -12,7 +13,7 @@ This section explains how to add the [.NET MAUI Picker](https://www.syncfusion.c
 
 To get start quickly with our .NET MAUI Picker, you can check the below video.
 
-{% youtube "youtube:https://youtu.be/w_pIsZqy5Hs?si=yGY1b9YP5du2vgwy" %}
+<style>#MAUIPickerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIPickerVideoTutorial' src='https://www.youtube.com/embed/w_pIsZqy5Hs'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

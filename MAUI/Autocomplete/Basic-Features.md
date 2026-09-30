@@ -124,6 +124,79 @@ The following screenshot illustrates the AutomationIds of the inner elements:
 
 ![AutomationIds of inner elements in .NET MAUI Autocomplete](Images/GettingStarted/AutoComplete_AutomationID.png)
 
+## Keyboard
+
+The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) 
+control provides support for changing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="employeeName"
+                        Placeholder="Enter an employee name"
+                        Keyboard="Text"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        ItemsSource="{Binding Employees}" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+var viewModel = new EmployeeViewModel();
+
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter an employee name",
+    Keyboard = Keyboard.Text,
+    ItemsSource = viewModel.Employees
+};
+
+Content = autocomplete;
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel" %}
+
+using System.Collections.ObjectModel;
+
+public class Employee
+{
+    public string Name { get; set; }
+    public string ProfilePicture { get; set; }
+    public string Designation { get; set; }
+    public string ID { get; set; }
+}
+
+public class EmployeeViewModel
+{
+    public ObservableCollection<Employee> Employees { get; set; }
+
+    public EmployeeViewModel()
+    {
+        Employees = new ObservableCollection<Employee>
+        {
+            new Employee
+            {
+                Name = "Anne Dodsworth",
+                ProfilePicture = "people_circle1.png",
+                Designation = "Developer",
+                ID = "E001"
+            },
+            new Employee
+            {
+                Name = "Andrew Fuller",
+                ProfilePicture = "people_circle8.png",
+                Designation = "Team Lead",
+                ID = "E002"
+            }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 - [Selection](https://help.syncfusion.com/maui/autocomplete/selection)

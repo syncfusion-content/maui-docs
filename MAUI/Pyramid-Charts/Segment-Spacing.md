@@ -5,6 +5,7 @@ description: Segment spacing in .NET MAUI Pyramid Chart lets you control the gap
 platform: maui
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Segment Spacing in .NET MAUI Pyramid Chart

@@ -5,6 +5,7 @@ description: Learn about the overview of Syncfusion® .NET MAUI Circular Chart c
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Circular Chart Control

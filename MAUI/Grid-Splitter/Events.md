@@ -189,27 +189,27 @@ private void OnResizing(object sender, GridSplitterResizingEventArgs e)
 
 ---
 
-## ResizeStopped
+## ResizeEnded
 
-The `ResizeStopped` event occurs when a user finishes a resize operation and releases the separator.
+The `ResizeEnded` event occurs when a user finishes a resize operation and releases the separator.
 
 This event provides the indexes and references of the affected panes after the resize operation completes. It is useful for saving layout changes or persisting pane sizes.
 
 ### Event arguments
 
-The `GridSplitterResizeStoppedEventArgs` class contains the following members:
+The `GridSplitterResizeEndedEventArgs` class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
 | `Indexes` | Gets the zero-based indexes of the panes involved in the resize operation. The first value represents the leading pane, and the second value represents the trailing pane. |
 | `Panes` | Gets the affected panes involved in the resize operation. The first item is the leading pane, and the second item is the trailing pane. |
 
-### Handle ResizeStopped event
+### Handle ResizeEnded event
 
 {% tabs %}
 {% highlight xaml %}
 
-<gridSplitter:SfGridSplitter ResizeStopped="OnResizeStopped">
+<gridSplitter:SfGridSplitter ResizeEnded="OnResizeEnded">
 
     <gridSplitter:SplitterPane>
         <Label Text="Pane 1" HorizontalTextAlignment="Center"
@@ -229,7 +229,7 @@ The `GridSplitterResizeStoppedEventArgs` class contains the following members:
 
 var gridSplitter = new SfGridSplitter();
 
-gridSplitter.ResizeStopped += OnResizeStopped ;
+gridSplitter.ResizeEnded += OnResizeEnded ;
 
 SplitterPane pane1 = new SplitterPane
 {
@@ -259,13 +259,13 @@ Content = gridSplitter;
 {% endhighlight %}
 {% endtabs %}
 
-The `ResizeStopped` event can be handled in C# as follows:
+The `ResizeEnded` event can be handled in C# as follows:
 
 {% tabs %} 
 
 {% highlight c# %}
 
-private void OnResizeStopped(object sender, GridSplitterResizeStoppedEventArgs e)
+private void OnResizeEnded(object sender, GridSplitterResizeEndedEventArgs e)
 {
     Debug.WriteLine($"Resize completed for pane {e.Indexes}");
 }
@@ -632,7 +632,7 @@ The following example registers all available Grid Splitter events.
 <gridSplitter:SfGridSplitter
     ResizeStarted="GridSplitter_ResizeStarted"
     Resizing="GridSplitter_Resizing"
-    ResizeStopped="GridSplitter_ResizeStopped"
+    ResizeEnded="GridSplitter_ResizeEnded"
     Collapsing="GridSplitter_Collapsing"
     Collapsed="GridSplitter_Collapsed"
     Expanding="GridSplitter_Expanding"
@@ -657,7 +657,7 @@ var gridSplitter = new SfGridSplitter();
 
 gridSplitter.ResizeStarted += GridSplitter_ResizeStarted;
 gridSplitter.Resizing += GridSplitter_Resizing;
-gridSplitter.ResizeStopped += GridSplitter_ResizeStopped;
+gridSplitter.ResizeEnded += GridSplitter_ResizeEnded;
 gridSplitter.Collapsing += GridSplitter_Collapsing;
 gridSplitter.Collapsed += GridSplitter_Collapsed;
 gridSplitter.Expanding += GridSplitter_Expanding;
@@ -707,7 +707,7 @@ private void GridSplitter_Resizing(object sender, GridSplitterResizingEventArgs 
     Debug.WriteLine($"Resizing pane at index {e.Indexes}");
 }
 
-private void GridSplitter_ResizeStopped(object sender, GridSplitterResizeStoppedEventArgs e)
+private void GridSplitter_ResizeEnded(object sender, GridSplitterResizeEndedEventArgs e)
 {
     Debug.WriteLine($"Resize completed for pane {e.Indexes}");
 }
@@ -751,7 +751,7 @@ ResizeStarted
       ↓
    Resizing
       ↓
- ResizeStopped
+ ResizeEnded
 ```
 
 ### Collapse operation

@@ -5,6 +5,7 @@ description: Pointers in .NET MAUI Radial Gauge indicate values along the gauge 
 platform: maui
 control: SfRadialGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Pointers in .NET MAUI Radial Gauge

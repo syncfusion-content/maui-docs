@@ -125,6 +125,91 @@ SfTabView tabView = new SfTabView
 
 ![Tab item with custom content](images/TabItem_Content.png)
 
+### Customizing tab header content
+
+The `HeaderContent` property allows you to define a custom view for the tab header. When built-in view is not needed, it can be overridden by adding custom views to the header in tabs. The tab view header can be customized by adding different views such as image, button, and label inside the header content. The following code sample demonstrates how to customize the header content as needed.
+
+{% tabs %} 
+
+{% highlight xaml %}
+<!-- Define the SfTabView control -->
+<tabView:SfTabView>
+	<!-- Define a tab item with the HeaderContent-->
+	<tabView:SfTabItem>
+		<!-- Define the HeaderContent of the tab item -->		
+		<tabView:SfTabItem.HeaderContent>
+			<Grid ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Image Source="call.png" HeightRequest="20" WidthRequest="20"/>
+				<Label Grid.Column="1" Text="Call" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+			</Grid>
+		</tabView:SfTabItem.HeaderContent>
+		<tabView:SfTabItem.Content>
+			<ListView>
+				<!-- Add your items here -->
+			</ListView>
+		</tabView:SfTabItem.Content>
+	</tabView:SfTabItem>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+// Create an instance of the SfTabView control
+SfTabView tabView = new SfTabView();
+
+var callHeader = new Grid
+{
+    ColumnSpacing = 5,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    ColumnDefinitions =
+    {
+        new ColumnDefinition { Width = GridLength.Auto },
+        new ColumnDefinition { Width = GridLength.Star }
+    }
+};
+var callImage = new Image { Source = "call.png", HeightRequest = 20, WidthRequest = 20 };
+Grid.SetColumn(callImage, 0);
+
+var callLabel = new Label
+{
+    Text = "Call",
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center
+};
+Grid.SetColumn(callLabel, 1);
+
+callHeader.Children.Add(callImage);
+callHeader.Children.Add(callLabel);
+
+// Create a collection of tab items with HeaderContent
+var tabItems = new TabItemCollection
+{
+	new SfTabItem
+	{
+		HeaderContent = callHeader,
+		Content = new ListView
+		{
+			// Add your items here
+		}
+	}
+};
+
+// Set the Items property of the SfTabView to the collection of tab items
+tabView.Items = tabItems;
+{% endhighlight %}
+
+{% endtabs %}
+
+The following image shows a tab item with custom header content:
+
+![HeaderContent](images/HeaderContent.png)
+
+N> Ensure consistent sizing and alignment to achieve a visually balanced layout across all tabs in `HeaderContent`.
+
 ## ImagePosition options
 
 The .NET MAUI Tab View provides four options for determining how the image of the tab aligns relative to the text. The options are `Left`, `Top`, `Right`, and `Bottom`. These can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html). The property is of type `TabImagePosition` and the default value is `Left`.

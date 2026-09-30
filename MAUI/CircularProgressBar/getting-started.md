@@ -13,8 +13,7 @@ This section explains the steps required to add the Circular Progress Bar contro
 
 To get started quickly with our .NET MAUI Circular Progress Bar, check the following video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=lH_0-2JEKcM"%}
+<style>#MAUICircularProgressBarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICircularProgressBarVideoTutorial' src='https://www.youtube.com/embed/lH_0-2JEKcM'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

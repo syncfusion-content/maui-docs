@@ -5,6 +5,7 @@ description: Learn how to integrate AI-driven duplicate detection with the Syncf
 platform: MAUI
 control: SfDataGrid
 documentation: ug
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # AI-Driven Duplicate Detection in .NET MAUI DataGrid
@@ -12,6 +13,51 @@ documentation: ug
 This document provides a comprehensive guide to implementing AI-driven duplicate detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It demonstrates how to integrate Azure OpenAI services to analyze customer records, identify exact and near-duplicate entries, and automatically highlight duplicate rows in real time.
 
 ## Integrating AI-Driven Duplicate Detection in .NET MAUI DataGrid
+
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string?> GetResultsFromAI(string prompt)
+{
+    if (IsCredentialValid)
+    {
+        try
+        {
+            ChatHistory = string.Empty;
+
+            if (ChatHistory != null)
+            {                    
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + prompt;
+                if (Client != null)
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+            }
+            return null;
+
+        }
+        catch
+        {
+            return null;
+        }
+    }
+    else
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 After completing the Azure OpenAI setup, use the `.NET MAUI DataGrid` control to display customer records and visualize duplicate detection results. The AI service analyzes customer information such as name, email, phone number, and address, then classifies potential duplicates as likely duplicates or possible duplicates. The results are displayed directly in the DataGrid with confidence scores and visual indicators.
 
@@ -153,4 +199,4 @@ Users can review highlighted records and take corrective actions such as deletin
 
 ![AI driven duplicate detection .NET MAUI DataGrid](Images\smart-ai-solutions\duplicate-detection-datagrid.gif)
 
-You can find the complete sample from this [link] (https://github.com/SyncfusionExamples/Duplicate-Detection-in-SfDataGrid-by-using-Azure-AI).
+You can find the complete sample from this [link]().

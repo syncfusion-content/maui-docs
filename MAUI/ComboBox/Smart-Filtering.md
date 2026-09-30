@@ -11,6 +11,50 @@ documentation: ug
 
 This document will walk you through the implementation of an advanced filter functionality in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven filter experience.
 
+## Integrating Azure AI for Smart Filter
+
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites]() and complete the required setup steps.
+
+The `GetResultsFromAI` method sends the user's prompt to the Azure OpenAI service and retrieves the AI-generated response. It processes the request asynchronously, supports cancellation, and includes exception handling to ensure reliable communication with the AI model.
+
+{% tabs %}
+{% highlight c# %}
+
+public async Task<string> GetResultsFromAI(string prompt, CancellationToken cancellationToken)
+{
+    ChatHistory = string.Empty;
+    if (ChatHistory != null && Client != null)
+    {
+        ChatHistory = ChatHistory + "You are a filtering assistant.";
+        // Add the user message to the options
+        ChatHistory = ChatHistory + prompt;
+        try
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            var chatresponse = await Client.CompleteAsync(ChatHistory);
+            cancellationToken.ThrowIfCancellationRequested();
+            return chatresponse.ToString();
+        }
+        catch (RequestFailedException ex)
+        {
+            // Log the error message and rethrow the exception or handle it appropriately
+            Debug.WriteLine($"Request failed: {ex.Message}");
+            throw;
+        }
+        catch (Exception ex)
+        {
+            // Handle other potential exceptions
+            Debug.WriteLine($"An error occurred: {ex.Message}");
+            throw;
+        }
+    }
+
+    return "";
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Implementing custom filtering in .NET MAUI Combobox
 
 The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property, which is the entry point for our natural language filtering logic.
@@ -225,6 +269,6 @@ The following image demonstrates the output of the above AI-based filter using a
 
 ![.NET MAUI Combobox With AI Smart filter.](Images/AIFilter/ai_smart_filter.gif)
 
-You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Filtering-using-.NET-MAUI-ComboBox/tree/master)  
+You can find the complete sample from this [link.](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/ComboBoxGettingStarted)  
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.

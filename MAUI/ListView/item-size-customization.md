@@ -353,4 +353,4 @@ private void ListView_Loaded(object sender, ListViewLoadedEventArgs e)
 
 ## See also 
 
-[How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui)
+[How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui-)

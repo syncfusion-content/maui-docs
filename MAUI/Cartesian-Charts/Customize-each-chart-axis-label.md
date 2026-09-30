@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart customize axis label callback, .net maui chart axis label callback event, sfcartesianchart axis label callback customization in .net maui, sfcartesianchart custom axis label event handling in .net maui.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Use Callback Event for Axis Labels in MAUI Chart

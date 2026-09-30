@@ -5,6 +5,7 @@ description: Legend in .NET MAUI TreeMap displays hierarchical data categories w
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Legend in .NET MAUI TreeMap

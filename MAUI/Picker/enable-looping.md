@@ -5,6 +5,7 @@ description: Learn about looping in Syncfusion .NET MAUI Picker control for seam
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Looping in .NET MAUI Picker control

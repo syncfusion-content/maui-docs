@@ -86,7 +86,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsSourceProvider" aria-label="View ItemsSourceProvider property in API reference">ItemsSourceProvider</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormItemsSourceProvider.html" aria-label="View IDataFormItemsSourceProvider type in API reference">IDataFormItemsSourceProvider</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html" aria-label="View IDataFormSourceProvider type in API reference">IDataFormSourceProvider</a></td>
     <td>Custom <code>provider</code> that supplies <code>lookup data</code> or <code>selection lists</code> used by <code>editors</code> such as <code>drop-downs</code> and <code>pickers</code>.</td>
 </tr>
 
