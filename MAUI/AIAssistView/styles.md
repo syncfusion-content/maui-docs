@@ -2986,6 +2986,14 @@ To style the response loader view based on its appearance, set values to the bui
 <td>SfAIAssistViewResponseLoaderViewFontAttributes</td>
 <td>Font attributes of the response loader view text.</td>
 </tr>
+<tr>
+<td>SfAIAssistViewSkeletonLoadingColor</td>
+<td>Color of the skeleton loading view.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewSkeletonLoadingBackground</td>
+<td>Background color of the skeleton loading view.</td>
+</tr>
 </table>
 
 {% tabs %}
@@ -3001,6 +3009,8 @@ To style the response loader view based on its appearance, set values to the bui
                 <x:Double x:Key="SfAIAssistViewResponseLoaderViewFontSize">18</x:Double>
                 <x:String x:Key="SfAIAssistViewResponseLoaderViewFontFamily">Roboto-Medium</x:String>
                 <FontAttributes x:Key="SfAIAssistViewResponseLoaderViewFontAttributes">Bold</FontAttributes>
+                <Color x:Key="SfAIAssistViewSkeletonLoadingColor">Purple</Color>
+                <Color x:Key="SfAIAssistViewSkeletonLoadingBackground">LightBlue</Color>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -3022,6 +3032,8 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewResponseLoaderViewFontSize", 18.0);
         dictionary.Add("SfAIAssistViewResponseLoaderViewFontFamily", "Roboto-Medium");
         dictionary.Add("SfAIAssistViewResponseLoaderViewFontAttributes", FontAttributes.Bold);
+        dictionary.Add("SfAIAssistViewSkeletonLoadingColor", Colors.Purple);
+        dictionary.Add("SfAIAssistViewSkeletonLoadingBackground", Colors.LightBlue);
         this.Resources.Add(dictionary);
     }
 }
@@ -3361,61 +3373,6 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewDefaultBannerFontFamily", "Roboto-Medium");
         dictionary.Add("SfAIAssistViewDefaultBannerFontSize", 20.0);
         dictionary.Add("SfAIAssistViewDefaultBannerFontAttributes", FontAttributes.Bold);
-
-        this.Resources.Add(dictionary);
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Skeleton loading styling
-
-To style the skeleton loading view based on its appearance, set values to the built-in keys in the resource dictionary.
-
-<table>
-<tr>
-<th>Key</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>SfAIAssistViewSkeletonLoadingColor</td>
-<td>Color of the skeleton loading view.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewSkeletonLoadingBackground</td>
-<td>Background color of the skeleton loading view.</td>
-</tr>
-</table>
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage.Resources>
-    <syncTheme:SyncfusionThemeDictionary>
-        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-            <ResourceDictionary>
-                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewSkeletonLoadingColor">Purple</Color>
-                <Color x:Key="SfAIAssistViewSkeletonLoadingBackground">LightBlue</Color>
-            </ResourceDictionary>
-        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
-    </syncTheme:SyncfusionThemeDictionary>
-</ContentPage.Resources>
-
-{% endhighlight %}
-{% highlight c# %}
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-
-        ResourceDictionary dictionary = new ResourceDictionary();
-        dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
-        dictionary.Add("SfAIAssistViewSkeletonLoadingColor", Colors.Purple);
-        dictionary.Add("SfAIAssistViewSkeletonLoadingBackground", Colors.LightBlue);
 
         this.Resources.Add(dictionary);
     }
