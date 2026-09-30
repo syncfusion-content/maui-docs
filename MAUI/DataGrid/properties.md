@@ -963,12 +963,12 @@ Identifies the PasteOption bindable property.</td>
 <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_" aria-label="View Deserialize(Stream) method in API reference">Deserialize(Stream)</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-        <td>Deserializes the SfDataGrid based on the XML document contained by the specified Stream.</td>
+        <td>Deserialize the SfDataGrid based on the XML document contained by the specified Stream.</td>
     </tr>
 <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Deserialize_System_IO_Stream_Syncfusion_Maui_DataGrid_DataGridDeserializationOptions_" aria-label="View Deserialize(Stream, DataGridDeserializationOptions) method in API reference">Deserialize(Stream, DataGridDeserializationOptions)</a></td>
         <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View void type in API reference">void</a></td>
-        <td>Deserializes the SfDataGrid based on the XML document of the specified Stream with DataGridDeserializationOptions.</td>
+        <td>Deserialize the SfDataGrid based on the XML document of the specified Stream with DataGridDeserializationOptions.</td>
     </tr>
 <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EndEdit" aria-label="View EndEdit() method in API reference">EndEdit()</a></td>
