@@ -84,7 +84,7 @@ this.Content = signaturePad;
 
 ## IsEmpty property
 
-The `IsEmpty` property indicates whether the Signature Pad contains a signature. It returns `true` when no strokes have been drawn and `false` after the user adds a stroke. Use this property to validate that a signature has been provided before continuing a workflow.
+The [IsEmpty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_IsEmpty) property indicates whether the Signature Pad contains a signature. It returns `true` when no strokes have been drawn and `false` after the user adds a stroke. Use this property to validate that a signature has been provided before continuing a workflow.
 
 ### Validate the signature
 

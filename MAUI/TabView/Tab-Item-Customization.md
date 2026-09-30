@@ -127,7 +127,7 @@ SfTabView tabView = new SfTabView
 
 ### Customizing tab header content
 
-The `HeaderContent` property allows you to define a custom view for the tab header. When built-in view is not needed, it can be overridden by adding custom views to the header in tabs. The tab view header can be customized by adding different views such as image, button, and label inside the header content. The following code sample demonstrates how to customize the header content as needed.
+The [HeaderContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_HeaderContent) property allows you to define a custom view for the tab header. When built-in view is not needed, it can be overridden by adding custom views to the header in tabs. The tab view header can be customized by adding different views such as image, button, and label inside the header content. The following code sample demonstrates how to customize the header content as needed.
 
 {% tabs %} 
 
