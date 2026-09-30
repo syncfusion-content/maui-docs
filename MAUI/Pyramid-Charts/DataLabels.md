@@ -6,6 +6,7 @@ platform: maui
 control: SfPyramidChart
 documentation: ug
 keywords: .net maui pyramid chart, data labels, label customization, label placement, label formatting.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Pyramid Chart

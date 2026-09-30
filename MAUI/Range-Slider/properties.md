@@ -29,22 +29,22 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EndThumbIcon" aria-label="View EndThumbIcon property in API reference">EndThumbIcon</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view?view=net-maui-10.0" aria-label="View View type in API reference">View</a></td>
 		<td>Displays a custom icon inside the thumb that represents the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeEnd" aria-label="View RangeEnd property in API reference">RangeEnd</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Defines the value represented by the end thumb and the end of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeStart" aria-label="View RangeStart property in API reference">RangeStart</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Defines the value represented by the start thumb and the beginning of the selected range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_StartThumbIcon" aria-label="View StartThumbIcon property in API reference">StartThumbIcon</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view?view=net-maui-10.0" aria-label="View View type in API reference">View</a></td>
 		<td>Displays a custom icon inside the thumb that represents the start of the selected range.</td>
 	</tr>
 	<tr valign="top">
@@ -94,7 +94,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval" aria-label="View Interval property in API reference">Interval</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Defines the spacing between major intervals used for labels, ticks, and interval-based selection.</td>
 	</tr>
 	<tr valign="top">
@@ -119,12 +119,12 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum" aria-label="View Maximum property in API reference">Maximum</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Specifies the upper bound of the selectable range.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum" aria-label="View Minimum property in API reference">Minimum</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Specifies the lower bound of the selectable range.</td>
 	</tr>
 	<tr valign="top">
@@ -169,7 +169,7 @@ documentation: ug
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent" aria-label="View TrackExtent property in API reference">TrackExtent</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double?view=net-10.0" aria-label="View double type in API reference">double</a></td>
 		<td>Extends the track beyond its normal start and end edges by the specified number of pixels.</td>
 	</tr>
 	<tr valign="top">

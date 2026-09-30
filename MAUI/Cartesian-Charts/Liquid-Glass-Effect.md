@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino cartesian tooltip maui, .net maui chart visualization, cupertino cartesian trackball maui.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Cartesian Chart

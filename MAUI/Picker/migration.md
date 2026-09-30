@@ -5,6 +5,7 @@ description: Learn about migration from Syncfusion® Xamarin Picker to .NET MAUI
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Migration from Xamarin Picker to .NET MAUI Picker control 
@@ -92,7 +93,7 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 <td>The SfPicker class that represents a control, that allows you pick an item among a list of items.</td>
 </tr>
 <tr>
-<td>{{'[PickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerChangedEventArgs.html)' | markdownify }}</td>
+<td>{{'[PickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SelectionChangedEventArgs.html)' | markdownify }}</td>
 <td>{{'[PickerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionChangedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the selection changed event details.</td>
 </tr> 
@@ -429,27 +430,27 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>Occurs after the selected index changed on SfPicker.</td>
 </tr>
 <tr>
-<td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_Opened)'| markdownify }}</td>
+<td>{{'[Opened](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_Opened)'| markdownify }}</td>
 <td>{{'[Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Opened)'| markdownify }}</td>
 <td>Occurs whenever the opened on Picker. </td>
 </tr>
 <tr>
-<td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_Closed)'| markdownify }}</td>
+<td>{{'[Closed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_Closed)'| markdownify }}</td>
 <td>{{'[Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closed)'| markdownify }}</td>
 <td>Occurs whenever the closed on Picker.</td>
 </tr>
 <tr>
-<td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_Closing)'| markdownify }}</td>
+<td>{{'[Closing](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_Closing)'| markdownify }}</td>
 <td>{{'[Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing)'| markdownify }}</td>
 <td>Occurs whenever the closing on Picker.</td>
 </tr>
 <tr>
-<td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_OkButtonClicked)'| markdownify }}</td>
+<td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OkButtonClicked)'| markdownify }}</td>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked)'| markdownify }}</td>
 <td>Occurs whenever the footer ok button is clicked in Picker.</td>
 </tr>
 <tr>
-<td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_CancelButtonClicked)'| markdownify }}</td>
+<td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
 <td>Occurs whenever the footer cancel button is clicked in Picker.</td>
 </tr>

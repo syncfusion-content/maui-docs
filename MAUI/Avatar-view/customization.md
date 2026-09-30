@@ -13,7 +13,7 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 To learn how to customize the .NET MAUI Avatar View quickly, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=xD28viNV2bI" %}
+<style>#MAUIAvatarViewCustomizationVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAvatarViewCustomizationVideoTutorial' src='https://www.youtube.com/embed/xD28viNV2bI'></iframe>
 
 The control can be customized using the following properties:
 

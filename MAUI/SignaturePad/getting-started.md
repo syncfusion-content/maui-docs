@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Signature Pad](htt
 
 To quickly get started with the .NET MAUI Signature Pad, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=gV2stNPCgYo" %}
+<style>#MAUISignaturePadVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISignaturePadVideoTutorial' src='https://www.youtube.com/embed/gV2stNPCgYo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

@@ -5,6 +5,7 @@ description: This section lists the public API members in the Syncfusion® .NET 
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API Reference for .NET MAUI Cartesian Chart

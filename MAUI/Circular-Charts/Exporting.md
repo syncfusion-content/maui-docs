@@ -5,6 +5,7 @@ description: Exporting in .NET MAUI Circular Chart enables you to save charts as
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Exporting in .NET MAUI Circular Chart

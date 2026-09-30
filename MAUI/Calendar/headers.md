@@ -5,6 +5,7 @@ title: Headers in .NET MAUI Calendar control | Syncfusion®
 description: Learn about headers in Syncfusion® .NET MAUI Calendar control to customize header view styling and navigation.
 control: SfCalendar
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Headers in .NET MAUI Calendar control

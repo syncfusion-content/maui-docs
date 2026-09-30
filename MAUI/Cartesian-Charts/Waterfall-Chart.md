@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui waterfall chart, .net maui bridge chart, waterfall chart customization .net maui, syncfusion maui waterfall chart, cartesian waterfall chart maui, .net maui chart waterfall visualization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Waterfall Chart in .NET MAUI Cartesian Chart

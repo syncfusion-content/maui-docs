@@ -5,6 +5,7 @@ description: Customization in .NET MAUI Barcode Generator allows barcode appeara
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Customization in .NET MAUI Barcode Generator

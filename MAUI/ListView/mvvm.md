@@ -871,4 +871,4 @@ namespace ListViewSample.ViewModel
 
 N> Similarly, you can bind the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped), [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDoubleTapped), and [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event.
 
-[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://support.syncfusion.com/kb/article/11354/how-to-filter-the-items-in-net-maui-listview-sflistview-using-mvvm)                                                                                                            
+[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://support.syncfusion.com/kb/article/11354/how-to-filter-the-items-in-net-maui-listview-using-mvvm)                                                                                                            

@@ -1029,6 +1029,6 @@ To disable the ripple effect when clicking a `ListViewItem`, set color value `Tr
 
 ## See also
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
-[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listview-sflistview)
-[How to apply the item text color in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview)
+[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-sflistview)
+[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11575/how-to-apply-alternate-item-background-in-net-maui-listviewsflistview)
+[How to apply the item text color in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11526/how-to-apply-the-item-text-color-in-net-maui-listview-sflistview-)
