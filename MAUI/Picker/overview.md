@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion<sup>&reg;</sup> Essential St
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # About Syncfusion® .NET MAUI Picker Control

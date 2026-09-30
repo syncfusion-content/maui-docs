@@ -5,6 +5,7 @@ description: Learn about text display mode in Syncfusion® .NET MAUI Picker cont
 platform: maui
 control: SfPicker
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Text Display Mode in .NET MAUI Picker control

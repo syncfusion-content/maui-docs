@@ -5,6 +5,7 @@ description: This section lists the public API members of the DoughnutSeries ava
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # DoughnutSeries API in .NET MAUI Circular Chart

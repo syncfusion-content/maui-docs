@@ -5,6 +5,7 @@ description: Migrate from Xamarin.Forms SfBarcode to .NET MAUI SfBarcodeGenerato
 platform: MAUI
 control: SfBarcodeGenerator
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---  
 
 # Migrate from Xamarin.Forms SfBarcode to .NET MAUI SfBarcodeGenerator

@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Rotator](https://h
 
 To quickly get started with the .NET MAUI Rotator, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=EjyvLta5u4o" %}
+<style>#MAUIRotatorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRotatorVideoTutorial' src='https://www.youtube.com/embed/EjyvLta5u4o'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

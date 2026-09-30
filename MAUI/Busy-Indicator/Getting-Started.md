@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [SfBusyIndicator](h
 
 To quickly get started with the .NET MAUI Busy Indicator, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=EY1y5PUBkCw" %}
+<style>#MAUIBusyIndicatorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIBusyIndicatorVideoTutorial' src='https://www.youtube.com/embed/EY1y5PUBkCw'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

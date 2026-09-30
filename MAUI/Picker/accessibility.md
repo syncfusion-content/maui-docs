@@ -5,6 +5,7 @@ description: Learn about accessibility in Syncfusion® .NET MAUI Picker control 
 control: SfPicker
 platform: maui
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Accessibility in .NET MAUI Picker control

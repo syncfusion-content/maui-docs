@@ -7,6 +7,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Getting Started with .NET MAUI Data Grid

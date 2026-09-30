@@ -50,3 +50,5 @@ Content = markdownViewer;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Markdown Viewer Auto Height](Images/maui-markdown-viewer-auto-height.png)

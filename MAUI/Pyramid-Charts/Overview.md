@@ -5,6 +5,7 @@ description: Learn about the overview of Syncfusion® .NET MAUI Pyramid Chart co
 platform: maui
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Pyramid Chart Control

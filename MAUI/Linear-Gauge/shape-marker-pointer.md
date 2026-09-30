@@ -5,6 +5,7 @@ description: Shape Marker Pointer in .NET MAUI Linear Gauge displays values usin
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Shape Marker Pointer in .NET MAUI Linear Gauge

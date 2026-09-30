@@ -88,3 +88,5 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis Range Styles in .NET MAUI Polar Chart](Axis_Images/Polar_axis_range_style.png)

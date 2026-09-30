@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui line chart, maui line chart, .net maui chart line type, line chart customization .net maui, syncfusion maui line chart, cartesian line chart maui, .net maui chart line visualization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Line Chart in .NET MAUI Cartesian Chart

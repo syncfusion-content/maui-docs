@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart axis padding, .net maui cartesian chart axis spacing, .net maui cartesian chart axis padding guide, syncfusion maui cartesian chart axis padding, cartesian chart axis padding maui, .net maui cartesian chart axis margin, customize axis padding .net maui cartesian chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Padding in .NET MAUI Cartesian Chart

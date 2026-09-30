@@ -14,7 +14,7 @@ This section explains the different UI customizations available in [.NET MAUI Co
 
 To get started quickly with customizing the appearance of the .NET MAUI ComboBox, you can watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
+<style>#MAUIComboBoxCustomizationVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIComboBoxCustomizationVideoTutorial' src='https://www.youtube.com/embed/_yk7El0Seu8'></iframe>
 
 ## Prerequisites
 

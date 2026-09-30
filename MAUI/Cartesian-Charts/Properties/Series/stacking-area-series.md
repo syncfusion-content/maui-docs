@@ -5,6 +5,7 @@ description: This section lists the public API members for StackingArea series i
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # StackingAreaSeries API Reference in .NET MAUI Cartesian Chart

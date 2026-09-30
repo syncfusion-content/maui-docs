@@ -5,6 +5,7 @@ title: Selections in .NET MAUI Calendar control | Syncfusion®
 description: Learn about selections in Syncfusion® .NET MAUI Calendar control with Single, Multiple, and Range selection modes.
 control: SfCalendar
 documentation: ug
+appliesto: UI Component Suite, Scheduler SDK
 ---
 
 # Selections in .NET MAUI Calendar control

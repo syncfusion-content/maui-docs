@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart tooltip, .net maui cartesian chart data label, tooltipinfo item binding, chartdatalabel item binding, release mode trimming, preserve attribute maui
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Preserve Template Bindings in .NET MAUI Cartesian Chart

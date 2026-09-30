@@ -13,7 +13,7 @@ This section explains how to add the [.NET MAUI Step Progress Bar](https://www.s
 
 To get started quickly with the .NET MAUI Step Progress Bar, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?si=qbCQnMl1urV0DeLB&v=KQFPBITPTM4&feature=youtu.be" %}
+<style>#MAUIStepProgressBarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIStepProgressBarVideoTutorial' src='https://www.youtube.com/embed/KQFPBITPTM4'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
