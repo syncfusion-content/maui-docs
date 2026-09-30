@@ -247,7 +247,6 @@ public class EmployeeInfoViewModel
         childCollection3.Add(new EmployeeInfo() { FirstName = "Anne", LastName = "Dodsworth", EmpId = 1016, Salary = 80000, Title = "Sales Coordinator", Hike = 10 });
         childCollection3.Add(new EmployeeInfo() { FirstName = "Albert", LastName = "Hellstern", EmpId = 1017, Salary = 75000, Title = "Sales Representative", Hike = 12 });
         childCollection3.Add(new EmployeeInfo() { FirstName = "Seves", LastName = "Smith", EmpId = 1018, Salary = 40000, Title = "Inside Sales Coordinator", Hike = 7 });
-
         childCollection3.Add(new EmployeeInfo() { FirstName = "Justin", LastName = "Brid", EmpId = 1019, Salary = 70000, Title = "Sales Supervisor", Hike = 11 });
 
         // Marketing
