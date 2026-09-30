@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, maui hierarchical grid, treegrid maui,
 
 # Data Binding in .NET MAUI Tree Grid
 
-The [.NET MAUI Tree Grid]() is designed primarily to display self-relational and hierarchical data in a tree structure with columns. The [SfTreeGrid.ItemsSource]() property helps bind this control with a collection of objects, and the [ChildPropertyName]() property establishes the hierarchical relationship.
+The [.NET MAUI Tree Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) is designed primarily to display self-relational and hierarchical data in a tree structure with columns. The [SfTreeGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) property helps bind this control with a collection of objects, and the [ChildPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ChildPropertyName) property establishes the hierarchical relationship.
 
 Below are the ways to bind the data source to SfTreeGrid:
 
@@ -19,12 +19,12 @@ Below are the ways to bind the data source to SfTreeGrid:
 
 ## Binding self-relational data
 
-The `SfTreeGrid` supports binding self-relational data by setting the [ParentPropertyName]() and [ChildPropertyName]() properties. In self-relational data, the tree structure is formed based on matching relationships between parent and child items within a single data collection.
+The `SfTreeGrid` supports binding self-relational data by setting the [ParentPropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ParentPropertyName) and `ChildPropertyName` properties. In self-relational data, the tree structure is formed based on matching relationships between parent and child items within a single data collection.
 
 * `ParentPropertyName` – Denotes the property in data object which is used to identify the root nodes.
 * `ChildPropertyName` - Denotes the property in the data object that references the parent. This value is matched against the `ParentPropertyName` of other objects to establish the hierarchy.
 
-Data objects which have unique values in `ParentPropertyName` or values matching the [SelfRelationRootValue]() are treated as root nodes.
+Data objects which have unique values in `ParentPropertyName` or values matching the [SelfRelationRootValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelfRelationRootValue) are treated as root nodes.
 
 ### Creating Model class for Self-Relational Collection
 
@@ -321,7 +321,7 @@ The `SfTreeGrid` control supports binding any collection that implements the [IE
 
 ## AutoExpandMode
 
-By default, the items in the TreeGrid load in a collapsed state. You can control how nodes expand when the TreeGrid loads by using the [AutoExpandMode]() property.
+By default, the items in the TreeGrid load in a collapsed state. You can control how nodes expand when the TreeGrid loads by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoExpandMode) property.
 
 The `AutoExpandMode` property accepts the following values of the `TreeGridExpandMode` enum:
 
@@ -348,15 +348,15 @@ You can expand a node based on its level or programmatically. The TreeGrid provi
 
 | Method | Description |
 |--------|-------------|
-| [ExpandAllNodes()]() | Expands all nodes in the TreeGrid including all child nodes |
-| [ExpandAllNodes(int level)]() | Expands all the nodes in TreeGrid up to given level |
-| [ExpandAllNodes(TreeNode node)]() | Expands the particular node and all its child nodes |
-| [ExpandNode(int level)]() | Expands the node in particular level |
-| [ExpandNode(TreeNode node)]() | Expands the particular node |
+| [ExpandAllNodes()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes) | Expands all nodes in the TreeGrid including all child nodes |
+| [ExpandAllNodes(int level)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes_System_Int32_) | Expands all the nodes in TreeGrid up to given level |
+| [ExpandAllNodes(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes_Syncfusion_Maui_TreeGrid_TreeNode_) | Expands the particular node and all its child nodes |
+| [ExpandNode(int rowIndex)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandNode_System_Int32_) | Expands the node in particular level |
+| [ExpandNode(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandNode_Syncfusion_Maui_TreeGrid_TreeNode_) | Expands the particular node |
 
 ### Expand all the nodes
 
-You can expand all the nodes programmatically at runtime by using the [ExpandAllNodes()]() method:
+You can expand all the nodes programmatically at runtime by using the [ExpandAllNodes()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -364,7 +364,7 @@ treeGrid.ExpandAllNodes();
 {% endhighlight %}
 {% endtabs %}
 
-You can expand the specific node and all its child nodes by using [ExpandAllNodes(TreeNode node)]() method:
+You can expand the specific node and all its child nodes by using [ExpandAllNodes(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes_Syncfusion_Maui_TreeGrid_TreeNode_) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -375,21 +375,21 @@ treeGrid.ExpandAllNodes(node);
 
 ### Expand nodes based on level
 
-You can expand all nodes at a specific level by using the [ExpandNode(int level)]() method. Level 0 represents the root level:
+You can expand all nodes at a specific level by using the [ExpandAllNode(int level)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandAllNodes_System_Int32_) method. Level 0 represents the root level.
 
 {% tabs %}
 {% highlight c# %}
 // Expand all nodes at root level (level 0)
-treeGrid.ExpandNode(0);
+treeGrid.ExpandAllNode(0);
 
 // Expand all nodes at level 1
-treeGrid.ExpandNode(1);
+treeGrid.ExpandAllNode(1);
 {% endhighlight %}
 {% endtabs %}
 
 ### Expand a specific node
 
-You can expand a specific node by passing the corresponding data object to the [ExpandNode(TreeNode node)]() method:
+You can expand a specific node by passing the corresponding data object to the [ExpandNode(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandNode_Syncfusion_Maui_TreeGrid_TreeNode_) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -403,7 +403,7 @@ if (node != null)
 {% endhighlight %}
 {% endtabs %}
 
-You can expand the node at specific index also by using [ExpandNode(int rowIndex)]() method.
+You can expand the node at specific index also by using [ExpandNode(int rowIndex)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandNode_System_Int32_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -426,9 +426,9 @@ treeGrid.ExpandNode(node);
 
 ### NodeExpanding Event
 
-The [NodeExpanding]() event is triggered before a node is expanded. This is a cancelable event, allowing you to prevent specific nodes from expanding based on your business logic.
+The [NodeExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeExpanding) event is triggered before a node is expanded. This is a cancelable event, allowing you to prevent specific nodes from expanding based on your business logic.
 
-The event receives [TreeGridNodeExpandingEventArgs]() which contains:
+The event receives [TreeGridNodeExpandingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeExpandingEventArgs.html) which contains:
 
 * `Cancel` - Set to true to cancel the node expansion
 * `Node` - The node being expanded
@@ -465,7 +465,7 @@ private void treeGrid_NodeExpanding(object sender, TreeGridNodeExpandingEventArg
 
 ### NodeExpanded Event
 
-The [NodeExpanded]() event is triggered after a node has been successfully expanded. This event is useful for performing actions after a node expansion completes.
+The [NodeExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeExpanded) event is triggered after a node has been successfully expanded. This event is useful for performing actions after a node expansion completes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -496,14 +496,14 @@ You can collapse a node or all nodes in the TreeGrid. The TreeGrid provides mult
 
 | Method | Description |
 |--------|-------------|
-| [CollapseAllNodes()]() | Collapses all nodes in the TreeGrid |
-| [CollapseAllNodes(TreeNode node)]() | Collapses the particular node and all its child nodes |
-| [CollapseNode(int rowIndex)]() | Collapses the node in particular rowIndex |
-| [CollapseNode(TreeNode node)]() | Collapses the particular node |
+| [CollapseAllNodes()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseAllNodes) | Collapses all nodes in the TreeGrid |
+| [CollapseAllNodes(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseAllNodes_Syncfusion_Maui_TreeGrid_TreeNode_) | Collapses the particular node and all its child nodes |
+| [CollapseNode(int rowIndex)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseNode_System_Int32_) | Collapses the node in particular rowIndex |
+| [CollapseNode(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseNode_Syncfusion_Maui_TreeGrid_TreeNode_) | Collapses the particular node |
 
 ### Collapse all the nodes
 
-You can collapse all the nodes programmatically at runtime by using the [CollapseAllNodes()]() method:
+You can collapse all the nodes programmatically at runtime by using the [CollapseAllNodes()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseAllNodes) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -511,7 +511,7 @@ treeGrid.CollapseAll();
 {% endhighlight %}
 {% endtabs %}
 
-You can collapse the particular node and all its child nodes using the [CollapseAllNodes(TreeNode node)]() method:
+You can collapse the particular node and all its child nodes using the [CollapseAllNodes(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseAllNodes_Syncfusion_Maui_TreeGrid_TreeNode_) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -522,7 +522,7 @@ treeGrid.CollapseAllNodes(node);
 
 ### Collapse nodes based on level
 
-You can collapse all nodes at a specific level by using the [CollapseNode(int level)]() method. Level 0 represents the root level:
+You can collapse all nodes at a specific level by using the [CollapseNode(int level)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseNode_System_Int32_) method. Level 0 represents the root level:
 
 {% tabs %}
 {% highlight c# %}
@@ -536,7 +536,7 @@ treeGrid.CollapseNode(1);
 
 ### Collapse a specific node
 
-You can collapse a specific node by passing the corresponding data object to the [CollapseNode(TreeNode node)]() method:
+You can collapse a specific node by passing the corresponding data object to the [CollapseNode(TreeNode node)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CollapseNode_Syncfusion_Maui_TreeGrid_TreeNode_) method:
 
 {% tabs %}
 {% highlight c# %}
@@ -562,9 +562,9 @@ treeGrid.CollapseNode(node);
 
 ### NodeCollapsing Event
 
-The [NodeCollapsing]() event is triggered before a node is collapsed. This is a cancelable event, allowing you to prevent specific nodes from collapsing.
+The [NodeCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeCollapsing) event is triggered before a node is collapsed. This is a cancelable event, allowing you to prevent specific nodes from collapsing.
 
-The event receives [TreeGridNodeCollapsingEventArgs]() which contains:
+The event receives [TreeGridNodeCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeCollapsingEventArgs.html) which contains:
 
 * `Cancel` - Set to true to cancel the node collapse
 * `Node` - The node being collapsed
@@ -601,7 +601,7 @@ private void treeGrid_NodeCollapsing(object sender, TreeGridNodeCollapsingEventA
 
 ### NodeCollapsed Event
 
-The [NodeCollapsed]() event is triggered after a node has been successfully collapsed. This event is useful for performing actions after a node collapse completes.
+The [NodeCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeCollapsed) event is triggered after a node has been successfully collapsed. This event is useful for performing actions after a node collapse completes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -628,7 +628,7 @@ private void treeGrid_NodeCollapsed(object sender, TreeGridNodeCollapsedEventArg
 
 ## Expand/Collapse a node based on mapping property
 
-The TreeGrid supports expanding or collapsing nodes based on the value of a boolean mapping property in the underlying data object by using the [ExpandStateMappingName]() property. The TreeGrid will automatically expand or collapse a node when the specified property value in the underlying data object changes.
+The TreeGrid supports expanding or collapsing nodes based on the value of a boolean mapping property in the underlying data object by using the [ExpandStateMappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandStateMappingName) property. The TreeGrid will automatically expand or collapse a node when the specified property value in the underlying data object changes.
 
 ### Setting up the data model with expansion state
 
@@ -678,7 +678,7 @@ N>
 
 ### ItemsSourceChanged Event
 
-The [ItemsSourceChanged]() event occurs when the data source is changed by using the [ItemsSource]() property. This event receives two arguments: sender (the TreeGrid control) and [TreeGridItemsSourceChangedEventArgs]().
+The [ItemsSourceChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSourceChanged) event occurs when the data source is changed by using the `ItemsSource` property. This event receives two arguments: sender (the TreeGrid control) and [TreeGridItemsSourceChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridItemsSourceChangedEventArgs.html).
 
 The `TreeGridItemsSourceChangedEventArgs` object contains the following properties:
 

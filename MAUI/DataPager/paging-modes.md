@@ -28,7 +28,7 @@ The DataPager performs data paging using the `SfDataPager`. To enable paging, fo
 * Set the `SfDataPager.PageSize` property to determine the number of rows to be displayed on each page.
 * Set the `SfDataPager.NumericButtonCount` property to specify the number of buttons that should be displayed in view.
 
-> **Note:** The [SfDataPager.PageSize]() property should not be assigned with value 0. Setting PageSize to 0 will throw an `ArgumentException`.
+> **Note:** The [SfDataPager.PageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PageSize) property should not be assigned with value 0. Setting PageSize to 0 will throw an `ArgumentException`.
 
 The following code example illustrates using `SfDataPager` with the data grid control:
 
@@ -99,7 +99,7 @@ The following screenshot shows the result of running the above code:
 
 ### On-Demand Paging	
 
-In normal paging, the data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting [SfDataPager.UseOnDemandPaging]() to `true`.
+In normal paging, the data collection is entirely loaded initially into the `SfDataPager`. However, the control also allows for dynamically loading the data for the current page by setting [SfDataPager.UseOnDemandPaging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_UseOnDemandPaging) to `true`.
 
 To load the current page items dynamically, hook into the `OnDemandLoading` event. In the `OnDemandLoading` event, use the `LoadDynamicItems` method to load data for the corresponding page in the `SfDataPager`.
 
@@ -194,22 +194,22 @@ private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e
 
 ### Move to the first page
 
-The [MoveToFirstPage()]() method allows you to programmatically navigate to the first page.
+The [MoveToFirstPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToFirstPage) method allows you to programmatically navigate to the first page.
 
 ### Move to the last page
 
-The [MoveToLastPage()]() method allows you to programmatically navigate to the last page.
+The [MoveToLastPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToLastPage) method allows you to programmatically navigate to the last page.
 
 ### Move to the next page
 
-The [MoveToNextPage()]() method allows you to programmatically navigate to the next page.
+The [MoveToNextPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToNextPage) method allows you to programmatically navigate to the next page.
 
 ### Move to the previous page
 
-The [MoveToPreviousPage()]() method allows you to programmatically navigate to the previous page.
+The [MoveToPreviousPage()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToPreviousPage) method allows you to programmatically navigate to the previous page.
 
 ### Move to page
 
-The [MoveToPage(Int32)]() method allows you to programmatically navigate to a specific page. You can also navigate to a page with animation using the [MoveToPage(Int32, Int32, Boolean)]() method, where the second parameter specifies the duration in milliseconds and the Boolean parameter indicates whether to animate the transition.
+The [MoveToPage(Int32)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToPage_System_Int32_) method allows you to programmatically navigate to a specific page. You can also navigate to a page with animation using the [MoveToPage(Int32, Int32, Boolean)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_MoveToPage_System_Int32_System_Int32_System_Boolean_) method, where the second parameter specifies the duration in milliseconds and the Boolean parameter indicates whether to animate the transition.
 
 **Boundary Behavior:** When calling `MoveToNextPage()` on the last page, the pager remains on the last page. Similarly, calling `MoveToPreviousPage()` on the first page keeps the pager on the first page. These methods handle boundary conditions gracefully without throwing exceptions.
