@@ -3424,6 +3424,69 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Image preview styling
+To style the image preview and related views based on their appearance, set values to the built-in keys in the resource dictionary.
+
+<table>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>SfAIAssistViewImagePreviewBackground</td>
+<td>Background color of the image preview.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewImagePreviewHeaderBackground</td>
+<td>Background color of the image preview header.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewImagePreviewCloseButtonColor</td>
+<td>Color of the close button in the image preview.</td>
+</tr>
+<tr>
+<td>SfAIAssistViewImagePreviewCaptionTextColor</td>
+<td>Text color of the caption in the image preview.</td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewImagePreviewBackground">LightBlue</Color>
+                <Color x:Key="SfAIAssistViewImagePreviewHeaderBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewImagePreviewCloseButtonColor">Red</Color>
+                <Color x:Key="SfAIAssistViewImagePreviewCaptionTextColor">Green</Color>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        ResourceDictionary dictionary = new ResourceDictionary();
+        dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+        dictionary.Add("SfAIAssistViewImagePreviewBackground", Colors.LightBlue);
+        dictionary.Add("SfAIAssistViewImagePreviewHeaderBackground", Colors.Orange);
+        dictionary.Add("SfAIAssistViewImagePreviewCloseButtonColor", Colors.Red);
+        dictionary.Add("SfAIAssistViewImagePreviewCaptionTextColor", Colors.Green);
+        this.Resources.Add(dictionary);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Prompt library styling
 
 To style the prompt library based on its appearance, set values to the built-in keys in the resource dictionary.
