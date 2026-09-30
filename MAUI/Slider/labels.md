@@ -462,4 +462,4 @@ this.Content = slider;
 
 {% endtabs %}
 
-![Slider labels Label appearance customization](images/labels-and-dividers/Slider-label-template.png)
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png)

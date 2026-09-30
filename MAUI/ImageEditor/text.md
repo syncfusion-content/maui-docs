@@ -378,4 +378,4 @@ this.Content = imageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-![Thumb size appearance](images/text/Text-thumb.png)
+![Thumb size appearance customization](images/text/imageeditor-text-thumb-customization.png)

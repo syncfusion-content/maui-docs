@@ -465,4 +465,4 @@ this.Content = rangeSlider;
 
 {% endtabs %}
 
-![Label appearance customization](<images/labels-and-dividers/Range-Slider label- template.png>)
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png)

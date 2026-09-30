@@ -99,7 +99,7 @@ this.Content = rangeSlider;
 
 {% endtabs %}
 
-![Customize tooltip position](images/tooltip/RangeSlider-Tooltip.png)
+![Customize tooltip position](images/tooltip/custom-tooltip-position.png)
 
 ## Tooltip label style
 
