@@ -101,23 +101,23 @@ documentation: ug
 <td>No results found</td>
 </tr>
 <tr>
-<td>SearchGroupToday</td>
+<td>SearchHistoryToday</td>
 <td>Today</td>
 </tr>
 <tr>
-<td>SearchGroupYesterday</td>
+<td>SearchHistoryYesterday</td>
 <td>Yesterday</td>
 </tr>
 <tr>
-<td>SearchGroupLastWeek</td>
+<td>SearchHistoryLastWeek</td>
 <td>Last Week</td>
 </tr>
 <tr>
-<td>SearchGroupLastMonth</td>
+<td>SearchHistoryLastMonth</td>
 <td>Last Month</td>
 </tr>
 <tr>
-<td>SearchGroupOlder</td>
+<td>SearchHistoryOlder</td>
 <td>Older</td>
 </tr>
 <tr>
@@ -205,7 +205,7 @@ documentation: ug
 <td>No prompts available</td>
 </tr>
 <tr>
-<td>SourcesButton</td>
+<td>Sources</td>
 <td>Sources</td>
 </tr>
 <tr>
