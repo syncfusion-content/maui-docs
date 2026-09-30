@@ -735,13 +735,25 @@ The following code example shows the usage of `DataTemplate`.
 {% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 " %}
 
 <imageEditor:SfImageEditor Source="image.png">
-    <imageEditor:SfImageEditor.ToolTipTemplate>
-        <DataTemplate>
-            <VerticalStackLayout Spacing="4">
-                <Label Text="{Binding Name}" />
-            </VerticalStackLayout>
-        </DataTemplate>
-    </imageEditor:SfImageEditor.ToolTipTemplate>
+  <imageEditor:SfImageEditor.ToolTipTemplate>
+    <DataTemplate>
+        <Grid RowDefinitions="Auto">
+            <HorizontalStackLayout Spacing="2">
+                <Label
+                    Text="Tooltip Name :"
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    TextColor="White" />
+
+                <Label
+                    Text="{Binding Name}"
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    TextColor="White" />
+            </HorizontalStackLayout>
+        </Grid>
+    </DataTemplate>
+</imageEditor:SfImageEditor.ToolTipTemplate>
 </imageEditor:SfImageEditor>
 
 {% endhighlight %}
