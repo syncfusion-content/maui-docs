@@ -406,7 +406,7 @@ this.Content = dataGrid;
 
 ## Row drag animation
 
-When [AllowDraggingRowAnimation]() property is enabled, `SfDataGrid` displays a drag animation that allows users to visually move the selected row during the drag operation. The row follows the pointer as it is dragged, providing a smoother and more intuitive drag-and-drop experience.
+When [AllowDraggingRowAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRowAnimation) property is enabled, `SfDataGrid` displays a drag animation that allows users to visually move the selected row during the drag operation. The row follows the pointer as it is dragged, providing a smoother and more intuitive drag-and-drop experience.
 
 Unlike the default drag behavior that uses a drag indicator, the row itself is animated and moved during the drag operation, making it easier to identify the row being reordered.
 
