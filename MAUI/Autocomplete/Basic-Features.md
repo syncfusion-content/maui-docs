@@ -127,7 +127,7 @@ The following screenshot illustrates the AutomationIds of the inner elements:
 ## Keyboard
 
 The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) 
-control provides support for changing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
+control provides support for changing the keyboard type through the `Keyboard` property. By default, the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Keyboard) property is set to `Keyboard.Default`.
 
 {% tabs %}
 {% highlight xaml %}
