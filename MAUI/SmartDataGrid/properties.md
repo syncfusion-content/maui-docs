@@ -30,7 +30,7 @@ documentation: ug
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_AssistViewSettings" aria-label="View AssistViewSettings property in API reference">AssistViewSettings</a></td>
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.DataGridAssistViewSettings.html" aria-label="View DataGridAssistViewSettings type in API reference">DataGridAssistViewSettings</a></td>
-		<td>Holds the DataGridAssistViewSettings used to configure the integrated AI AssistView, including suggested prompts, the initial prompt, smart-action enablement, styling, and AssistView life-cycle events.</td>
+		<td>Holds the DataGridAssistViewSettings used to configure the integrated AI AssistView, including suggested prompts, the initial prompt, smart-action support, styling, and AssistView life-cycle events.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartDataGrid.SfSmartDataGrid.html#Syncfusion_Maui_SmartDataGrid_SfSmartDataGrid_ShowAssistButtonIcon" aria-label="View ShowAssistButtonIcon property in API reference">ShowAssistButtonIcon</a></td>
