@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Getting Started with .NET MAUI Tree Grid
 
-This section provides a quick overview of working with the [SfTreeGrid]() for .NET MAUI. Follow the steps below to add a basic TreeGrid to your project.
+This section provides a quick overview of working with the [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) for .NET MAUI. Follow the steps below to add a basic TreeGrid to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -31,11 +31,10 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Tree Grid NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2.  Search for [Syncfusion.Maui.TreeGrid]() and install the latest version.
+2.  Search for [Syncfusion.Maui.TreeGrid](https://www.nuget.org/packages/Syncfusion.Maui.TreeGrid/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
@@ -81,7 +80,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Tree Grid NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.TreeGrid]() and install the latest version.
+2. Search for [Syncfusion.Maui.TreeGrid](https://www.nuget.org/packages/Syncfusion.Maui.TreeGrid/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run `dotnet restore`.
 
 {% endtabcontent %}
@@ -232,8 +231,8 @@ public class EmployeeInfoViewModel
         //Management
         var childCollection1 = new ObservableCollection<EmployeeInfo>();
         childCollection1.Add(new EmployeeInfo() { FirstName = "Robert", LastName = "Fuller", EmpId = 1008, Salary = 120000, Title = "Design Engineer", Hike = 13 });
-        employeeList.Add(new EmployeeInfo() { FirstName = "Janet", LastName = "Leverling", EmpId = 1009, Salary = 100000, Title = "Engineering Manager", Hike = 10 });
-        employeeList.Add(new EmployeeInfo() { FirstName = "Steven", LastName = "Buchanan", EmpId = 1010, Salary = 35000, Title = "Business Manager", Hike = 7 });
+        childCollection1.Add(new EmployeeInfo() { FirstName = "Janet", LastName = "Leverling", EmpId = 1009, Salary = 100000, Title = "Engineering Manager", Hike = 10 });
+        childCollection1.Add(new EmployeeInfo() { FirstName = "Steven", LastName = "Buchanan", EmpId = 1010, Salary = 35000, Title = "Business Manager", Hike = 7 });
 
         // Accounts
         var childCollection2 = new ObservableCollection<EmployeeInfo>();
@@ -248,7 +247,8 @@ public class EmployeeInfoViewModel
         childCollection3.Add(new EmployeeInfo() { FirstName = "Anne", LastName = "Dodsworth", EmpId = 1016, Salary = 80000, Title = "Sales Coordinator", Hike = 10 });
         childCollection3.Add(new EmployeeInfo() { FirstName = "Albert", LastName = "Hellstern", EmpId = 1017, Salary = 75000, Title = "Sales Representative", Hike = 12 });
         childCollection3.Add(new EmployeeInfo() { FirstName = "Seves", LastName = "Smith", EmpId = 1018, Salary = 40000, Title = "Inside Sales Coordinator", Hike = 7 });
-        childCollection3.Add(new EmployeeInfo() { FirstName = "Justin", LastName = "Brid", EmpId = 1019, Salary = 70000, Title = "Sales Supervisor" Hike = 11 });
+
+        childCollection3.Add(new EmployeeInfo() { FirstName = "Justin", LastName = "Brid", EmpId = 1019, Salary = 70000, Title = "Sales Supervisor", Hike = 11 });
 
         // Marketing
         var childCollection4 = new ObservableCollection<EmployeeInfo>();
@@ -306,7 +306,7 @@ using Syncfusion.Maui.TreeGrid;
 
 Create a `ViewModel` instance and set it as the TreeGrid's `BindingContext`. This enables property binding from `ViewModel` class.
 
-To populate the `SfTreeGrid`, bind the item collection from its `BindingContext` to [SfTreeGrid.ItemsSource]() property. 
+To populate the `SfTreeGrid`, bind the item collection from its `BindingContext` to [SfTreeGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) property. 
 
 The following code example binds the collection created in the previous step to the `SfTreeGrid.ItemsSource` property:
 
@@ -331,8 +331,8 @@ treeGrid.ChildPropertyName = "Children";
 
 The following screenshot shows the TreeGrid populated with sample data:
 
-<img src="Images\getting-started\net-maui-treegrid-getting-started.png" alt="Getting started with .NET MAUI Tree Grid">
+<img src="Images\getting-started\net-maui-treegrid-getting-started.png" alt="Getting started with .NET MAUI Tree Grid" width="567">
 
-You can download the TreeGrid Getting Started sample from [GitHub]().
+You can download the TreeGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TreeGrid).
 
-> **Note:** You can refer to our [.NET MAUI TreeGrid Grid]() feature tour page for its groundbreaking feature representations.
+> **Note:** You can refer to our [.NET MAUI TreeGrid](https://www.syncfusion.com/maui-controls/maui-treegrid) feature tour page for its groundbreaking feature representations.

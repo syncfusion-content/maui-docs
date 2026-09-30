@@ -1113,7 +1113,7 @@ The `ContextMenuOpening` event occurs before the context menu is displayed, allo
 
 #### Conditional Visibility of the Menu Items using ContextMenuOpening
 
-The visibility of an item when a context menu is opening can be set based on the properties of `ContextMenuOpeningEventArgs`. An item's visibility can be set using [IsVisible]() property in the `MenuItem`.
+The visibility of an item when a context menu is opening can be set based on the properties of `ContextMenuOpeningEventArgs`. An item's visibility can be set using [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.MenuItem.html#Syncfusion_Maui_DataGrid_MenuItem_IsVisible) property in the `MenuItem`.
 
 The following is an example of how an item's visibility can be set.
 
