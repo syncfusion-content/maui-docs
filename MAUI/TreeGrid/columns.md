@@ -10,16 +10,16 @@ keywords : maui treegrid, maui tree grid, treegrid maui, maui hierarchical grid,
 
 # Columns in .NET MAUI Tree Grid
 
-The `SfTreeGrid` allows users to create and add columns in the following two ways:
+The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.html) allows users to create and add columns in the following two ways:
 
 * Automatically generating columns
 * Manually defining columns
 
 ## Automatic columns generation
 
-The `SfTreeGrid` creates columns automatically based on the bindable property `AutoGenerateColumnsMode`. The columns are generated based on the type of individual properties in the underlying collection that is set as ItemsSource.
+The `SfTreeGrid` creates columns automatically based on the bindable property [AutoGenerateColumnsMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoGenerateColumnsMode). The columns are generated based on the type of individual properties in the underlying collection that is set as ItemsSource.
 
-The table below shows the column type created for the respective data types. For all other data types, `TreeGridTextColumn` will be created.
+The table below shows the column type created for the respective data types. For all other data types, [TreeGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridTextColumn.html) will be created.
 
 <table>
 <tr>
@@ -46,7 +46,7 @@ The table below shows the column type created for the respective data types. For
 
 ### Auto-generation Modes
 
-The auto generation of columns in `SfTreeGrid` is controlled by the `AutoGenerateColumnsMode` property. The default value is `AutoGenerateColumnsMode.Reset`.
+The auto generation of columns in `SfTreeGrid` is controlled by the `AutoGenerateColumnsMode` property. The default value is [AutoGenerateColumnsMode.Reset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.AutoGenerateColumnsMode.html#Syncfusion_Maui_TreeGrid_AutoGenerateColumnsMode_Reset).
 
 The following modes are available:
 
@@ -79,9 +79,9 @@ The following modes are available:
 
 ### Customize Auto-generated Columns
 
-Auto-generated columns can be customized by handling the `AutoGeneratingColumn` event, which is raised when each column is auto-generated.
+Auto-generated columns can be customized by handling the [AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoGeneratingColumn) event, which is raised when each column is auto-generated.
 
-The `TreeGridAutoGeneratingColumnEventArgs` object contains the following properties:
+The [TreeGridAutoGeneratingColumnEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridAutoGeneratingColumnEventArgs.html) object contains the following properties:
 
 * **Column**: Returns the created column that can be customized.
 * **Cancel**: Cancels the column creation.
@@ -121,8 +121,7 @@ treeGrid.AutoGeneratingColumn += TreeGrid_AutoGeneratingColumn;
 
 this.Content = treeGrid;
 
-private void TreeGrid_AutoGeneratingColumn(object sender,
-                                           TreeGridAutoGeneratingColumnEventArgs e)
+private void TreeGrid_AutoGeneratingColumn(object sender, TreeGridAutoGeneratingColumnEventArgs e)
 {
     if (e.Column.MappingName == "Salary")
     {
@@ -138,7 +137,7 @@ private void TreeGrid_AutoGeneratingColumn(object sender,
 
 ## Manually generate columns
 
-The `SfTreeGrid` allows defining columns manually by adding `TreeGridColumn` objects to the `SfTreeGrid.Columns` collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfTreeGrid.AutoGenerateColumnsMode` property to `None`.
+The `SfTreeGrid` allows defining columns manually by adding [TreeGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html) objects to the [SfTreeGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_Columns) collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfTreeGrid.AutoGenerateColumnsMode` property to `None`.
 
 There are different types of columns available. Any column can be created based on the requirements from both XAML and code.
 
@@ -217,7 +216,7 @@ this.treeGrid.Columns.Add(new TreeGridTextColumn()
 
 ### Accessing a column
 
-You can access a column through its column index or `TreeGridColumn.MappingName` from the `SfTreeGrid.Columns` collection.
+You can access a column through its column index or [TreeGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_MappingName) from the `SfTreeGrid.Columns` collection.
 
 {% tabs %}
 {% highlight c# %}
