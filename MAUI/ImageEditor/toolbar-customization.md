@@ -744,7 +744,6 @@ The following code example shows the usage of `DataTemplate`.
                     FontAttributes="Bold"
                     FontSize="12"
                     TextColor="White" />
-
                 <Label
                     Text="{Binding Name}"
                     FontAttributes="Bold"
