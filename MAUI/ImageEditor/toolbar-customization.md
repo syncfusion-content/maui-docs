@@ -757,3 +757,5 @@ this.Content = imageEditor;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip customization](images/toolbar/TooltipCustomization.png)

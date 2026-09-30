@@ -401,4 +401,4 @@ this.Content = imageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-![Thumb size appearance](images/crop/Custom-Thumb.png)
+![Thumb size appearance](images/crop/Crop-thumb.png)
