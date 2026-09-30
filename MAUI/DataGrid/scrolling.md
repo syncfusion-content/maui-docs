@@ -332,7 +332,7 @@ this.Content = dataGrid;
 > **Note:** These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
 
 ## Scroll orientation
-The [ScrollOrientation]() property in `SfDataGrid` controls the direction in which the grid can be scrolled. You can allow scrolling vertically, horizontally, in both directions, or disable scrolling completely. The default value of `ScrollOrientation` property is `Both`.
+The [ScrollOrientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollOrientation) property in `SfDataGrid` controls the direction in which the grid can be scrolled. You can allow scrolling vertically, horizontally, in both directions, or disable scrolling completely. The default value of `ScrollOrientation` property is `Both`.
 
 - Both - Enables both vertical and horizontal scrolling.
 - Vertical - Enables vertical scrolling only.
