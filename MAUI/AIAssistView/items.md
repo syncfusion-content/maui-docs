@@ -63,7 +63,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 <td>Displays the list of reference sources associated with the assist item response.</td>
 </tr>
 <tr>
-<td>IsStreamingEnabled</td>
+<td>{{'[IsStreamingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsStreamingEnabled)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the streaming response is enabled for the assist item.</td>
 </tr>
 </table>

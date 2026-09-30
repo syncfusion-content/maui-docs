@@ -50,7 +50,7 @@ documentation: ug
 <td>Enables the editor to expand into a <code>full-screen</code> mode for larger text input.</td>
 </tr>
 <tr valign="top">
-<td><a href="" aria-label="View AllowImagePreview property in API reference">AllowImagePreview</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowImagePreview" aria-label="View AllowImagePreview property in API reference">AllowImagePreview</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 <td>Shows or hides the built-in <code>image preview</code> when an image associated with an assist item is tapped.</td>
 
@@ -279,7 +279,7 @@ documentation: ug
 <td>Blocks users from attaching the <code>same file</code> more than once.</td>
 </tr>
 <tr valign="top">
-<td><a href="" aria-label="View PromptLibrary property in API reference">PromptLibrary</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptLibrary" aria-label="View PromptLibrary property in API reference">PromptLibrary</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfPromptLibrary.html" aria-label="View SfPromptLibrary type in API reference">SfPromptLibrary</a></td>
 <td>Provides a collection of <code>predefined prompts</code> that users can choose from in the assist view.</td>
 
