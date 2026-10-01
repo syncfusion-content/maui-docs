@@ -726,7 +726,7 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 
 ### Tooltip appearance customization
 
-You can customize the tooltip appearance by using the `ToolTipTemplate` property in the `Image Editor`.
+You can customize the tooltip appearance by using the [`ToolTipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolTipTemplate) property in the [`Image Editor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
 
 The following code example shows the usage of `DataTemplate`.
 
