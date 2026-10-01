@@ -426,7 +426,7 @@ this.Content = stackLayout;
 
 ## Label appearance customization
 
-You can customize the appearance of slider labels using the `LabelTemplate` property, which lets you define a custom view and display content based on label values.
+You can customize the appearance of slider labels using the [`LabelTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SfSlider_LabelTemplate) property, which lets you define a custom view and display content based on label values.
 
 {% tabs %}
 
