@@ -401,4 +401,4 @@ this.Content = imageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-![Thumb size appearance customization](images/crop/imageeditor-crop-thumb-customization.png)
+![Thumb size appearance customization](images/crop/imageeditor-crop-thumb-customization.png){:width="320" height="550" .lazy .shadow-effect}

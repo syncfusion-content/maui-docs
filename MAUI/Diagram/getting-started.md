@@ -15,7 +15,7 @@ This guide shows how to add the Syncfusion .NET MAUI Diagram control to an appli
 
 Before you begin, make sure that you have:
 
-- A .NET MAUI development environment. See the [official .NET MAUI installation guide](https://learn.microsoft.com/dotnet/maui/get-started/installation).
+- A .NET MAUI development environment. See the [official .NET MAUI installation guide](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&tabs=visual-studio).
 - A supported version of the .NET SDK and Visual Studio for your Syncfusion release.
 - A Syncfusion license key. See [licensing](https://help.syncfusion.com/maui/licensing/overview).
 
@@ -102,7 +102,7 @@ public partial class MainPage : ContentPage
 
         var startNode = new Node
         {
-            ID = "Start",
+            Id = "Start",
             OffsetX = 150,
             OffsetY = 150,
             Width = 120,
@@ -111,7 +111,7 @@ public partial class MainPage : ContentPage
 
         var processNode = new Node
         {
-            ID = "Process",
+            Id = "Process",
             OffsetX = 400,
             OffsetY = 150,
             Width = 120,
@@ -120,9 +120,9 @@ public partial class MainPage : ContentPage
 
         var connector = new Connector
         {
-            ID = "Connector1",
-            SourceID = startNode.ID,
-            TargetID = processNode.ID
+            Id = "Connector1",
+            SourceID = startNode.Id,
+            TargetID = processNode.Id
         };
 
         diagram.Nodes = new ObservableCollection<Node>
@@ -138,7 +138,7 @@ public partial class MainPage : ContentPage
     }
 }
 ```
-
+![Add nodes and a connector](diagram_images/getting_started_nodes_and_connectors.png)
 `OffsetX` and `OffsetY` position the nodes on the diagram surface. `SourceID` and `TargetID` connect the connector to the corresponding node IDs.
 
 ## Expected result

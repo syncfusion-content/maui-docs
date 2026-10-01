@@ -101,7 +101,7 @@ this.Content = slider;
 
 {% endtabs %}
 
-![Slider tooltip position](images/tooltip/custom-tooltip-position.png)
+![Tooltip position customization](images/tooltip/custom-tooltip-position.png)
 
 ## Tooltip label style
 
