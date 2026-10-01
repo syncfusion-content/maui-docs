@@ -425,7 +425,7 @@ this.Content = stackLayout;
 
 ## Label appearance customization
 
-You can customize the appearance of range slider labels using the `LabelTemplate` property, which lets you define a custom view and display content based on label values.
+You can customize the appearance of range slider labels using the [`LabelTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_LabelTemplate) property, which lets you define a custom view and display content based on label values.
 
 {% tabs %}
 
