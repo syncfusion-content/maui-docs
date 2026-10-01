@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI-Powered Context-Aware Suggestions in .NET MAUI AI AssistView | Syncfusion®
+title: Context-Aware AI Suggestions in SfAIAssistView | Syncfusion®
 description: Learn how to implement AI-powered context aware suggestions using Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control.
 platform: maui
 control: SfAIAssistView
@@ -254,10 +254,10 @@ The following image demonstrates AI-generated responses with context-aware follo
 * Continue conversations with minimal typing.
 * Provide feedback using built-in like and dislike actions.
 
-You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples)..
+You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples).
 
 ## See also
 
-* [Getting Started](https://help.syncfusion.com/maui/ai-assistview/getting-started)
-* [Templates in AIAssistView](https://help.syncfusion.com/maui/ai-assistview/templates)
-* [Learn about Azure AI](https://learn.microsoft.com/azure/ai-services/openai/)
+* [Getting Started with AIAssistView](https://help.syncfusion.com/maui/aiassistview/getting-started)
+* [Customization in .NET MAUI AIAssistView](https://help.syncfusion.com/maui/aiassistview/appearance)
+* [Suggestions in .NET MAUI AIAssistView](https://help.syncfusion.com/maui/aiassistview/suggestions)
