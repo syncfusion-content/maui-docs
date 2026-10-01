@@ -269,7 +269,7 @@ this.Content = chart;
 
 ## Legend Title
 
-The legend title can be displayed above the legend items using the [Title]() property in the `ChartLegend` class. The `Title` property accepts either a `string` or a custom `View`.
+The legend title can be displayed above the legend items using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Title) property in the `ChartLegend` class. The `Title` property accepts either a `string` or a custom `View`.
 
 ### Legend title as String
 
