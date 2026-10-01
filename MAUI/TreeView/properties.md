@@ -205,6 +205,12 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HorizontalScrollBarVisibility" aria-label="View HorizontalScrollBarVisibility property in API reference">HorizontalScrollBarVisibility</a></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.scrollbarvisibility?view=net-maui-10.0" aria-label="View ScrollBarVisibility type in API reference">ScrollBarVisibility</a></td>
+<td>Controls when the horizontal <code>scroll bar</code> is visible. Applies only when <code>EnableHorizontalScrolling</code> is <code>true</code>.</td>
+</tr>
+
+<tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Indentation" aria-label="View Indentation property in API reference">Indentation</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
 <td>Horizontal <code>space</code> added for each <code>child level</code> in hierarchy. Larger values indent deeper levels more strongly.</td>
@@ -328,6 +334,12 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_TapCommand" aria-label="View TapCommand property in API reference">TapCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 <td><code>Command</code> executed when a <code>node</code> is <code>tapped</code>. Use this to react to common tap interactions.</td>
+</tr>
+
+<tr valign="top">
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_VerticalScrollBarVisibility" aria-label="View VerticalScrollBarVisibility property in API reference">VerticalScrollBarVisibility</a></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.scrollbarvisibility?view=net-maui-10.0" aria-label="View ScrollBarVisibility type in API reference">ScrollBarVisibility</a></td>
+<td>Controls when the vertical <code>scroll bar</code> is visible in the tree view.</td>
 </tr>
 
 </table>
