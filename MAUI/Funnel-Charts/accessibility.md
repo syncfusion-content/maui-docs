@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Funnel Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Funnel Charts provides inclusive navigation and screen reader announcements support.
 control: SfFunnelChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Funnel Charts

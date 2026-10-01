@@ -5,6 +5,7 @@ description: Lines Layer in .NET MAUI Maps displays connections between geograph
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Lines Layer in .NET MAUI Maps

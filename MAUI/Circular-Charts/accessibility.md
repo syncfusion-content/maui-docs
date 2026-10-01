@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Circular Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Circular Chart provides inclusive navigation and screen reader announcements support.
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Circular Charts
