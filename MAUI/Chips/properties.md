@@ -3,13 +3,15 @@ layout: post
 title: Properties of .NET MAUI Chip control | Syncfusion®
 description: This section explains the properties, events, and methods with Syncfusion® MAUI Chip (SfChip) control.
 platform: maui
-control: SfChip
+control: SfChips
 documentation: ug
 ---
 
 # API Reference for .NET MAUI Chip
 
-## Properties
+## Chips
+
+### Properties
 
 <table>
 <tr>
@@ -18,6 +20,16 @@ documentation: ug
     <th>Description</th>
 </tr>
 
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Background" aria-label="View Background property in API reference">Background</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+		<td>Sets the background color used to display the button background.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource" aria-label="View BackgroundImageSource property in API reference">BackgroundImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td>Displays an image behind the button content as the button background.</td>
+	</tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_CloseButtonColor" aria-label="View CloseButtonColor property in API reference">CloseButtonColor</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
@@ -29,13 +41,76 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Defines the <code>vector path</code> used to draw the <code>chip's close icon</code>, allowing the default icon shape to be replaced.</td>
 </tr>
-
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Command" aria-label="View Command property in API reference">Command</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+		<td>Executes the command when the button is activated.</td>
+	</tr>
+    <tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_CommandParameter" aria-label="View CommandParameter property in API reference">CommandParameter</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+		<td>Provides the parameter passed to the command when the button is activated.</td>
+	</tr>
+    <tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_CornerRadius" aria-label="View CornerRadius property in API reference">CornerRadius</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.cornerradius?view=net-maui-10.0" aria-label="View CornerRadius type in API reference">CornerRadius</a></td>
+		<td>Controls the radius used to round the button corners.</td>
+	</tr>
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect" aria-label="View EnableRippleEffect property in API reference">EnableRippleEffect</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+		<td>Enables the ripple effect for the button.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+		<td>Controls the font style used for the button text, such as <code>None</code>, <code>Bold</code>, <code>Italic</code>, or <code>Bold, Italic</code>.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAutoScalingEnabled" aria-label="View FontAutoScalingEnabled property in API reference">FontAutoScalingEnabled</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+		<td>Enables automatic scaling of the button text with system settings.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontFamily" aria-label="View FontFamily property in API reference">FontFamily</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+		<td>Displays the button text using the specified font family.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontSize" aria-label="View FontSize property in API reference">FontSize</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td>Specifies the size of the button text.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_HorizontalTextAlignment" aria-label="View HorizontalTextAlignment property in API reference">HorizontalTextAlignment</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
+		<td>Controls the horizontal alignment of the button text, such as <code>Start</code>, <code>Center</code>, or <code>End</code>.</td>
+	</tr>
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageAlignment" aria-label="View ImageAlignment property in API reference">ImageAlignment</a></td>
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Alignment.html" aria-label="View Alignment type in API reference">Alignment</a></td>
+		<td>Controls the placement of the image relative to the text, such as <code>Start</code> or <code>End</code>.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSize" aria-label="View ImageSize property in API reference">ImageSize</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td>Controls the displayed size of the button image or icon.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource" aria-label="View ImageSource property in API reference">ImageSource</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
+		<td>Displays an image with the button.</td>
+	</tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_IsSelected" aria-label="View IsSelected property in API reference">IsSelected</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Reports whether the chip is currently selected. Selection is managed by the containing <code>SfChipGroup</code>; this property is <code>read-only</code>.</td>
 </tr>
-
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Padding" aria-label="View Padding property in API reference">Padding</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness?view=net-maui-10.0" aria-label="View Thickness type in API reference">Thickness</a></td>
+		<td>Controls the space between the button border and its content.</td>
+	</tr>	
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_SelectionIndicatorColor" aria-label="View SelectionIndicatorColor property in API reference">SelectionIndicatorColor</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
@@ -47,15 +122,44 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Shows or hides the close button inside the chip. Activating the button triggers <code>CloseButtonClicked</code>; a standalone <code>SfChip</code> is <code>not removed automatically</code>.</td>
 </tr>
-
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon" aria-label="View ShowIcon property in API reference">ShowIcon</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+		<td>Controls whether the button's icon is displayed alongside its content.</td>
+	</tr>
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html#Syncfusion_Maui_Core_SfChip_ShowSelectionIndicator" aria-label="View ShowSelectionIndicator property in API reference">ShowSelectionIndicator</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Shows or hides the visual indicator that identifies the <code>chip's selected state</code>.</td>
 </tr>
+<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Stroke" aria-label="View Stroke property in API reference">Stroke</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+		<td>Specifies the brush used to paint the button border.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_StrokeThickness" aria-label="View StrokeThickness property in API reference">StrokeThickness</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+		<td>Specifies the thickness of the button border.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Text" aria-label="View Text property in API reference">Text</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
+		<td>Displays text on the button.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextColor" aria-label="View TextColor property in API reference">TextColor</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+		<td>Specifies the color of the button text.</td>
+	</tr>
+    <tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment" aria-label="View VerticalTextAlignment property in API reference">VerticalTextAlignment</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.textalignment?view=net-maui-10.0" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
+		<td>Controls the vertical alignment of the button text, such as <code>Start</code>, <code>Center</code>, or <code>End</code>.</td>
+	</tr>
 </table>
 
-## Events
+### Events
 
 <table>
 <tr>
@@ -167,9 +271,21 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_Command" aria-label="View Command property in API reference">Command</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Executes the command when the chip get activated.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_DisplayMemberPath" aria-label="View DisplayMemberPath property in API reference">DisplayMemberPath</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Identifies the <code>data-item property</code> displayed as each <code>chip's text</code> when the group is populated through <code>ItemsSource</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_EnableLiquidGlassEffect" aria-label="View DisplayMemberPath property in API reference">EnableLiquidGlassEffect</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View String type in API reference">bool</a></td>
+    <td>Apply liquid glass effect to the chips.</td>
 </tr>
 
 <tr valign="top">
