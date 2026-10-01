@@ -1,10 +1,11 @@
 ---
 layout: post
 title: PowerTrendline in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for Power Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # PowerTrendline API Reference for .NET MAUI Cartesian Chart

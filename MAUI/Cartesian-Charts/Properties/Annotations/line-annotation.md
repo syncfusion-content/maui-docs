@@ -1,10 +1,11 @@
 ---
 layout: post
 title: LineAnnotation in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Annotations in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for Line Annotation in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # LineAnnotation API Reference for .NET MAUI Cartesian Chart

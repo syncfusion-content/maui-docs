@@ -1,10 +1,11 @@
 ---
 layout: post
 title: LogarithmicTrendline in .NET MAUI Cartesian Chart | Syncfusion®
-description: This section lists the public API members for Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
+description: This section lists the public API members for Logarithmic Trendline in the Syncfusion® .NET MAUI Cartesian Chart (SfCartesianChart).
 platform: maui
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # LogarithmicTrendline API Reference for .NET MAUI Cartesian Chart
