@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Polar Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Polar Chart provides inclusive navigation and screen reader announcements support.
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Polar Charts

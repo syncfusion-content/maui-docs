@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Cartesian Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Cartesian Chart provides inclusive navigation and screen reader announcements support.
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Cartesian Charts
