@@ -99,7 +99,7 @@ this.Content = dataGrid;
 
 ## Editor Selection Behavior
 
-The [SfDataGrid.EditorSelectionBehavior]() property controls how the cursor is positioned and how text is selected when a cell enters edit mode. This feature enhances the editing experience by allowing users to customize text handling behavior.
+The [SfDataGrid.EditorSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditorSelectionBehavior) property controls how the cursor is positioned and how text is selected when a cell enters edit mode. This feature enhances the editing experience by allowing users to customize text handling behavior.
 
 The supported values are:
 

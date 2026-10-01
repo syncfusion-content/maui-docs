@@ -10,7 +10,7 @@ keywords : maui datapager, datapager maui, maui paging, .net maui datapager, .ne
 
 # About Syncfusion .NET MAUI DataPager Control
 
-The [.NET MAUI DataPager]() control is a standalone pagination control used to efficiently navigate through large datasets by dividing them into manageable pages. It provides a seamless user experience with intuitive navigation options and can be seamlessly integrated with data display controls like the SfDataGrid.
+The [.NET MAUI DataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html) control is a standalone pagination control used to efficiently navigate through large datasets by dividing them into manageable pages. It provides a seamless user experience with intuitive navigation options and can be seamlessly integrated with data display controls like the SfDataGrid.
 
 ## Key features
 
