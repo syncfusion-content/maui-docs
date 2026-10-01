@@ -13,6 +13,8 @@ appliesto: UI Component Suite, DataPager SDK
 
 The Syncfusion® [.NET MAUI DataPager](https://www.syncfusion.com/maui-controls/maui-pager) control is a standalone pagination control used to efficiently navigate through large datasets by dividing them into manageable pages. It provides a seamless user experience with intuitive navigation options and can be seamlessly integrated with data display controls like the SfDataGrid.
 
+![.NET MAUI data pager overview ](Images/overview/data_pager.png)
+
 ## Business use cases
 
 - E-commerce applications that require efficient navigation through large product catalogs.
