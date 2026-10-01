@@ -297,12 +297,6 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Removes all <code>recently selected colors</code> from the <code>recent colors list</code> and refreshes the <code>picker</code>.</td>
 </tr>
-
-<tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_GetThemeDictionary" aria-label="View GetThemeDictionary method in API reference">GetThemeDictionary()</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary" aria-label="View ResourceDictionary type in API reference">ResourceDictionary</a></td>
-    <td>Returns the <code>theme ResourceDictionary</code> associated with the <code>color picker</code>. Useful for accessing the <code>control-specific theme resources</code>.</td>
-</tr>
 </table>
 
 ## Events
