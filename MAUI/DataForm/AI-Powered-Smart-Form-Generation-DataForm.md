@@ -489,6 +489,6 @@ This approach enables the Syncfusion® .NET MAUI DataForm to adapt dynamically t
 
 The AI identifies the structure and extracts only the information supplied by the user. Fields without values remain empty, allowing the user to complete the missing information directly in the generated DataForm.
 
-![AI-Powered Dynamic Form Generation in .NET MAUI DataForm](images/smart-ai-samples/c:\Users\SudarsanMuthuselvan\Downloads\AI-Powered-Smart-Form-Generation-DataForm.gif)
+![AI-Powered Dynamic Form Generation in .NET MAUI DataForm](images/smart-ai-samples/AI-Powered-Smart-Form-Generation-DataForm.gif)
 
 You can download the complete sample from this [link]().
