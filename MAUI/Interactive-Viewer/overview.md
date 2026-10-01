@@ -10,7 +10,7 @@ keywords: .net maui interactiveviewer, image view maui.
 
 # About Syncfusion® .NET MAUI Interactive Viewer Control 
 
-The `.NET MAUI Interactive Viewer` provides intuitive navigation of visual content through zooming, panning, and rotating. It delivers a smooth viewing experience across desktop and mobile platforms, making it ideal for displaying large images, diagrams, and other graphical content.
+The [`.NET MAUI Interactive Viewer`](https://www.syncfusion.com/maui-controls/maui-interactive-viewer) provides intuitive navigation of visual content through zooming, panning, and rotating. It delivers a smooth viewing experience across desktop and mobile platforms, making it ideal for displaying large images, diagrams, and other graphical content.
 
 ![overview-in.net-maui-interactive-viewer](images\overview\overview-in.net-maui-interactive-viewer.webp){:width="313" height="444" .lazy .shadow-effect}
 
@@ -36,10 +36,10 @@ The `.NET MAUI Interactive Viewer` provides intuitive navigation of visual conte
 
 ## See Also
 
-- Getting Started shows how to begin using the Interactive Viewer control step by step.
-- Zooming and Panning shows how to navigate visual content using zoom and pan interactions.
-- Rotate shows how to rotate visual content to different orientations.
-- Reset shows how to restore the viewer to its default state.
+- [Getting Started](https://help.syncfusion.com/maui/interactive-viewer/getting-started) shows how to begin using the Interactive Viewer control step by step.
+- [Zooming and Panning](https://help.syncfusion.com/maui/interactive-viewer/zooming) shows how to navigate visual content using zoom and pan interactions.
+- [Rotate](https://help.syncfusion.com/maui/interactive-viewer/rotation) shows how to rotate visual content to different orientations.
+- [Reset](https://help.syncfusion.com/maui/interactive-viewer/reset) shows how to restore the viewer to its default state.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and reference UI examples.
 
 ## Resources
@@ -179,7 +179,7 @@ The `.NET MAUI Interactive Viewer` provides intuitive navigation of visual conte
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<a href="https://www.syncfusion.com/maui-controls" class="explore-link">
+<a href="https://www.syncfusion.com/maui-controls/maui-interactive-viewer" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
 </a>
