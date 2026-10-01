@@ -436,7 +436,8 @@ You can customize the appearance of range slider labels using the `LabelTemplate
                        RangeStart="20"
                        RangeEnd="80"
                        Interval="20"
-                       ShowLabels="True">
+                       ShowLabels="True"
+                       ShowTicks="True">
     <sliders:SfRangeSlider.LabelTemplate>
         <DataTemplate>
             <Label Text="{Binding Text}"
@@ -456,9 +457,12 @@ rangeSlider.Maximum = 100;
 rangeSlider.RangeStart = 20;
 rangeSlider.RangeEnd = 80;
 rangeSlider.Interval = 20;
+rangeSlider.ShowTicks="True"
 rangeSlider.ShowLabels = true;
 this.Content = rangeSlider;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png)
