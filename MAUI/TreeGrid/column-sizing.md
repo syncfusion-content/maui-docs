@@ -10,7 +10,7 @@ keywords : maui treegrid, maui tree grid, .net maui treegrid, .net maui tree gri
 
 # Column Sizing in .NET MAUI Tree Grid
 
-The [.NET MAUI Tree Grid]() allows you to set the column widths based on certain logics using the [SfTreeGrid.ColumnWidthMode]() or [TreeGridColumn.ColumnWidthMode]() property.
+The [.NET MAUI Tree Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) allows you to set the column widths based on certain logics using the [SfTreeGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ColumnWidthMode) or [TreeGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_ColumnWidthMode) property.
 
 Below is the list of predefined column sizing options available:
 
@@ -73,9 +73,9 @@ Default column width or defined width set to a column.
 </tr>
 </table>
 
-N> `ColumnWidthMode` will not work when the column width is defined explicitly. The `ColumnWidthMode` calculates the column width based on [MinimumWidth]() and [MaximumWidth]() properties.
+N> `ColumnWidthMode` will not work when the column width is defined explicitly. The `ColumnWidthMode` calculates the column width based on [MinimumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_MinimumWidth) and [MaximumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_MaximumWidth) properties.
 
-The code below applies the [ColumnWidthMode.Fill]() to equally set the width for `SfTreeGrid.Columns`.
+The code below applies the [TreeGridColumnWidthMode.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnWidthMode.html#Syncfusion_Maui_TreeGrid_TreeGridColumnWidthMode_Fill) to equally set the width for `SfTreeGrid.Columns`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -99,7 +99,7 @@ this.Content = treeGrid;
 
 ## Change the default column width for columns
 
-If you want to set the common width for all the columns, you can use the [DefaultColumnWidth]() property.
+If you want to set the common width for all the columns, you can use the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_DefaultColumnWidth) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -121,7 +121,7 @@ this.Content = treeGrid;
 
 ## Retrieve the auto-calculated width of columns
 
-You can retrieve the width of the columns when it is auto-calculated based on the `ColumnWidthMode` property using the [ActualWidth]() property. The `ActualWidth` is only accurate after the TreeGrid has been loaded and laid out.
+You can retrieve the width of the columns when it is auto-calculated based on the `ColumnWidthMode` property using the [ActualWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_ActualWidth) property. The `ActualWidth` is only accurate after the TreeGrid has been loaded and laid out.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -174,7 +174,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Apply ColumnWidthMode for a particular column
 
-To apply column sizing to an individual column, use the `TreeGridColumn.ColumnWidthMode` property. The `TreeGridColumn.ColumnWidthMode` property is also a type of the `ColumnWidthMode`. If the `TreeGridColumn.ColumnWidthMode` is not explicitly set to a value, then it takes the value of the `SfTreeGrid.ColumnWidthMode` and applies the width to the columns accordingly.
+To apply column sizing to an individual column, use the [TreeGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_ColumnWidthMode) property. The `TreeGridColumn.ColumnWidthMode` property is of type [TreeGridColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnWidthMode.html). If the `TreeGridColumn.ColumnWidthMode` is not explicitly set to a value, then it takes the value of the `SfTreeGrid.ColumnWidthMode` and applies the width to the columns accordingly.
 
 To apply `ColumnWidthMode` for a particular column, follow the code example:
 
@@ -270,9 +270,9 @@ this.Content = treeGrid;
 
 ## Refreshing ColumnSizer at runtime
 
-To refresh the column sizing for [SfTreeGrid.Columns]() at runtime, use the [SfTreeGrid.ColumnSizer.Refresh]() method.
+To refresh the column sizing for [SfTreeGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_Columns) at runtime, use the [SfTreeGrid.ColumnSizer.Refresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnSizer.html#Syncfusion_Maui_TreeGrid_TreeGridColumnSizer_Refresh_System_Boolean_) method.
 
-Consider that [ColumnWidthMode.Auto]() is applied to the SfTreeGrid. If the underlying values are changed at run time, refresh the column sizer as follows:
+Consider that [ColumnWidthMode.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnWidthMode.html#Syncfusion_Maui_TreeGrid_TreeGridColumnWidthMode_Auto) is applied to the `SfTreeGrid`. If the underlying values are changed at run time, refresh the column sizer as follows:
 
 {% tabs %}
 {% highlight xaml %}   
@@ -330,8 +330,8 @@ private void ColumnSizerChanged(object sender, EventArgs e)
 
 ## Customize auto width calculation for a column
 
-For cases where a column might require more width than the applied auto width or if you want to use your custom logic to calculate the auto width of a column, return a desired width in the [OnComputeCellWidth()]() override of the custom-written column-sizer class derived from `TreeGridColumnSizer` and assign it to the `SfTreeGrid.ColumnSizer` property.
-In case you want to modify the auto calculations of a column's header cell alone, return the desired width in the [OnComputeHeaderCellWidth()]() override of your custom column-sizer class.
+For cases where a column might require more width than the applied auto width or if you want to use your custom logic to calculate the auto width of a column, return a desired width in the [OnComputeCellWidth()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnSizer.html#Syncfusion_Maui_TreeGrid_TreeGridColumnSizer_OnComputeCellWidth_Syncfusion_Maui_TreeGrid_TreeGridColumn_System_String_) override of the custom-written column-sizer class derived from [TreeGridColumnSizer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnSizer.html) and assign it to the [SfTreeGrid.ColumnSizer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ColumnSizer) property.
+In case you want to modify the auto calculations of a column's header cell alone, return the desired width in the [OnComputeHeaderCellWidth()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnSizer.html#Syncfusion_Maui_TreeGrid_TreeGridColumnSizer_OnComputeHeaderCellWidth_System_String_Syncfusion_Maui_TreeGrid_TreeGridColumn_) override of your custom column-sizer class.
 
 {% tabs %}
 {% highlight xaml %}
