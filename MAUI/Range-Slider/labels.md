@@ -427,6 +427,8 @@ this.Content = stackLayout;
 
 You can customize the appearance of range slider labels using the [`LabelTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_LabelTemplate) property, which lets you define a custom view and display content based on label values.
 
+The binding context for each template instance is a [`SliderLabelInfo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelInfo.html) object, which provides information about the corresponding label.
+
 {% tabs %}
 
 {% highlight xaml hl_lines="7 8 9 10 11 12 13" %}

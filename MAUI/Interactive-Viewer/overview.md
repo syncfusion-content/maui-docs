@@ -12,7 +12,7 @@ keywords: .net maui interactiveviewer, image view maui.
 
 The [`.NET MAUI Interactive Viewer`](https://www.syncfusion.com/maui-controls/maui-interactive-viewer) provides intuitive navigation of visual content through zooming, panning, and rotating. It delivers a smooth viewing experience across desktop and mobile platforms, making it ideal for displaying large images, diagrams, and other graphical content.
 
-![overview-in.net-maui-interactive-viewer](images\overview\overview-in.net-maui-interactive-viewer.webp){:width="313" height="444" .lazy .shadow-effect}
+![overview-in.net-maui-interactive-viewer](images\overview\overview-in.net-maui-interactive-viewer.webp){:width="313" .lazy .shadow-effect}
 
 ## Business use cases
 
@@ -195,7 +195,7 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/InteractiveViewer" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>
