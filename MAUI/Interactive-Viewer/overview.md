@@ -195,7 +195,7 @@ Explore Features
     <h3 class="form-title">Showcase Samples</h3>
 </div>
     <div class="form-description">Explore real-world sample apps to see components in action and learn by example.</div>
-    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI" class="explore-link">
+    <a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/InteractiveViewer" class="explore-link">
     View Samples
   <span class="card-icon card-arrow"></span>
 </a>
