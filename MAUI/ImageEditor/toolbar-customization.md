@@ -732,7 +732,7 @@ The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 " %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 " %}
 
 <imageEditor:SfImageEditor Source="image.png">
   <imageEditor:SfImageEditor.ToolTipTemplate>
