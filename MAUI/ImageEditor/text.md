@@ -356,7 +356,7 @@ N> To edit a text annotation, double-tap inside the text view.
 
 ## Thumb size appearance customization
 
-Use the `AnnotationThumbSize` property to customize the size of the selection handles displayed for text regions, improving visibility and touch interaction.
+Use the [`AnnotationThumbSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationThumbSize) property to customize the size of the selection handles displayed for text regions, improving visibility and touch interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" tabtitle="XAML" %}
@@ -377,3 +377,5 @@ this.Content = imageEditor;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Thumb size appearance customization](images/text/imageeditor-text-thumb-customization.png)
