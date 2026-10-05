@@ -431,7 +431,7 @@ The binding context for each template instance is a [`SliderLabelInfo`](https://
 
 {% tabs %}
 
-{% highlight xaml hl_lines="7 8 9 10 11 12 13" %}
+{% highlight xaml hl_lines="7 8 9 10 11 12 13 14" %}
 
 <sliders:SfRangeSlider Minimum="0"
                        Maximum="100"
@@ -467,4 +467,4 @@ this.Content = rangeSlider;
 
 {% endtabs %}
 
-![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png){:width="570" height="120"}
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png){:width="570"}
