@@ -2,7 +2,7 @@
 layout: post
 title: Ports in MAUI Diagram | Syncfusion®
 description: Learn how to add and customize PointPort connections in the Syncfusion® .NET MAUI Diagram control for precise node connector interactions.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -15,13 +15,13 @@ Ports are commonly used in workflow designers, flowcharts, process diagrams, and
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Port examples assume that the host node has been created in the diagram.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler. Port examples assume that the host node has been created in the diagram.
 
 ---
 
 ## Port creation
 
-A port is created using the `PointPort` class and added to the `Node.Ports` collection.
+A port is created using the [PointPort](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PointPort.html) class and added to the [Node.Ports](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Ports) collection.
 
 ```csharp
 using Syncfusion.Maui.Diagram;
@@ -51,14 +51,15 @@ using Syncfusion.Maui.Diagram;
 
 ```
 ![Port_creation](diagram_images/Port_creation.png)
+
 ## Port properties
 
 | Property | Description |
 | --- | --- |
-| `Id` | Unique identifier for the port within the host node. |
-| `Offset` | Port position. The accepted coordinate type depends on the package version. |
-| `Visibility` | Controls when the port is visible through the `PortVisibility` enumeration. |
-| `Style` | Visual style for the port based on the `ShapeStyle` class. |
+| [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Port.html#Syncfusion_Maui_Diagram_Port_Id) | Unique identifier for the port within the host node. |
+| [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PointPort.html#Syncfusion_Maui_Diagram_PointPort_Offset) | Port position. The accepted coordinate type depends on the package version. |
+| [Visibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Port.html#Syncfusion_Maui_Diagram_Port_Visibility) | Controls when the port is visible through the [PortVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PortVisibility.html) enumeration. |
+| [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Port.html#Syncfusion_Maui_Diagram_Port_Style) | Visual style for the port based on the [ShapeStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html) class. |
 
 
 > **Note:** The `Offset` type is implemented in a different class than `DiagramPoint`. Verify the supported type in the API reference for your package version.
@@ -127,10 +128,10 @@ The `Visibility` property determines when a port is displayed.
 
 | Visibility | Description |
 | --- | --- |
-| `Visible` | The port is always visible. |
-| `Hidden` | The port is never displayed. |
-| `Hover` | The port becomes visible when the pointer hovers over the node. |
-| `Connect` | The port becomes visible during connection operations. |
+| [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PortVisibility.html#Syncfusion_Maui_Diagram_PortVisibility_Visible) | The port is always visible. |
+| [Hidden](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PortVisibility.html#Syncfusion_Maui_Diagram_PortVisibility_Hidden) | The port is never displayed. |
+| [Hover](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PortVisibility.html#Syncfusion_Maui_Diagram_PortVisibility_Hover) | The port becomes visible when the pointer hovers over the node. |
+| [Connect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PortVisibility.html#Syncfusion_Maui_Diagram_PortVisibility_Connect) | The port becomes visible during connection operations. |
 
 ```csharp
 
@@ -166,7 +167,7 @@ node.Ports(port);
 
 ## Appearance
 
-Port appearance is customized using  the `Style` property of the `Port` class.
+Port appearance is customized using  the `Style` property of the [Port](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Port.html) class.
 
 ```csharp
 
@@ -188,18 +189,18 @@ Port appearance is customized using  the `Style` property of the `Port` class.
 
 | Property | Description |
 | --- | --- |
-| `Fill` | Port background color. |
-| `StrokeColor` | Port border color. |
-| `StrokeWidth` | Border thickness. |
-| `Opacity` | Port transparency from `0` to `1`. |
-| `StrokeDashArray` | Dash pattern for the border. The accepted value format depends on the package version. |
+| [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_Fill) | Port background color. |
+| [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeColor) | Port border color. |
+| [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeWidth) | Border thickness. |
+| [Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_Opacity) | Port transparency from `0` to `1`. |
+| [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeDashArray) | Dash pattern for the border. The accepted value format depends on the package version. |
 
 ![Port_Appearance](diagram_images/Port_appearance.png)
 ---
 
 ## Connections with ports
 
-The connection between any specific point of source and target nodes can be achieved with ports. Connectors reference source and target ports through `SourcePortID` and `TargetPortID`.
+The connection between any specific point of source and target nodes can be achieved with ports. Connectors reference source and target ports through [SourcePortID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_SourcePortID) and [TargetPortID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_TargetPortID).
 
 ```csharp
 
@@ -264,7 +265,7 @@ diagram.Connectors.Add(connector);
 
 ## Multiple ports
 
-A node can contain any number of ports, each scoped to the host node by its `Id`.
+A node can contain any number of ports, each scoped to the host node by its [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Port.html#Syncfusion_Maui_Diagram_Port_Id).
 
 ```csharp
  Node node = new Node
@@ -284,7 +285,8 @@ node.Ports.Add(new PointPort { Id = "RightPort",  Offset = new DiagramPoint { X 
 
 > **Note:** `DiagramPoint` is not implemented in the current release. Verify the supported coordinate type for port positioning before using this property.
 
-![Multiple ports](diagram_images/Multiple_ports.png)
+![Multiple ports](diagram_images/multiple_ports_on_node.png)
+
 ---
 
 ## Best practices
@@ -297,5 +299,5 @@ node.Ports.Add(new PointPort { Id = "RightPort",  Offset = new DiagramPoint { X 
 
 ## See also
 
-- [Nodes](nodes.md)
-- [Connectors](connectors.md)
+- [Nodes](https://help.syncfusion.com/maui/diagram/nodes)
+- [Connectors](https://help.syncfusion.com/maui/diagram/connectors)
