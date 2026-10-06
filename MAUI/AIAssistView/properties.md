@@ -506,12 +506,12 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanging" aria-label="View ChatModeChanging event in API reference">ChatModeChanging</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html" aria-label="View ChatModeChangingEventArgs type in API reference">ChatModeChangingEventArgs&gt;</a></a></td>
-<td>Triggered <code>before</code> the chat mode changes, allowing the change to be canceled. *Whether this event can cancel the action requires verification against the user guide.*</td>
+<td>Triggered <code>before</code> the chat mode changes. The change can be canceled by setting <code>Cancel</code> to <code>true</code> in <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ChatModeChangingEventArgs.html" aria-label="View ChatModeChangingEventArgs type in API reference">ChatModeChangingEventArgs</a>.</td>
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ContextMenuOpening" aria-label="View ContextMenuOpening event in API reference">ContextMenuOpening</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html" aria-label="View ContextMenuOpeningEventArgs type in API reference">ContextMenuOpeningEventArgs&gt;</a></a></td>
-<td>Triggered <code>before</code> a context menu opens, allowing customization or cancellation of the menu. *Whether cancellation is supported requires verification.*</td>
+<td>Triggered <code>before</code> a context menu opens, allowing the menu to be canceled by setting <code>Cancel</code> to <code>true</code> in <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ContextMenuOpeningEventArgs.html" aria-label="View ContextMenuOpeningEventArgs type in API reference">ContextMenuOpeningEventArgs</a>.</td>
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationItemTapped" aria-label="View ConversationItemTapped event in API reference">ConversationItemTapped</a></td>
@@ -560,6 +560,6 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening" aria-label="View ToastOpening event in API reference">ToastOpening</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs&gt;</a></a></td>
-<td>Triggered <code>before</code> a toast notification is displayed, allowing the toast content or visibility to be customized. *Whether customization or cancellation is supported requires verification.*</td>
+<td>Triggered <code>before</code> a toast notification is displayed, allowing the toast to be suppressed by setting <code>Cancel</code> to <code>true</code> in <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs</a>.</td>
 </tr>
 </table>
