@@ -84,7 +84,6 @@ The following Xamarin.Forms controls have no direct Syncfusion® .NET MAUI count
 
 * **SfBorder** - Use the [.NET MAUI Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) element.
 * **SfGradientView** - Use [.NET MAUI Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) (**LinearGradientBrush**, **RadialGradientBrush**).
-* **SfDiagram** - Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview) hosted in the .NET MAUI application.
 
 ## Notes on specific migrations
 
