@@ -2,7 +2,7 @@
 layout: post
 title: Nodes in MAUI Diagram | Syncfusion®
 description: Learn how to create and customize nodes in the Syncfusion® .NET MAUI Diagram control with shapes, annotations, ports, position, size, and rotation.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -15,13 +15,13 @@ A node can be customized using built-in properties for position, size, rotation,
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler.
 
 ---
 
 ## Create node
 
-A node can be created and added to the Diagram programmatically. Nodes are stacked on the Diagram area from bottom to top in the order they are added. A node is created using the `Node` class and added to the `SfDiagram.Nodes` collection.
+A node can be created and added to the Diagram programmatically. Nodes are stacked on the Diagram area from bottom to top in the order they are added. A node is created using the [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html) class and added to the [SfDiagram.Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_Nodes) collection.
 
 ```csharp
 
@@ -60,7 +60,7 @@ diagram.Nodes.Add(node);
 
 ## Position
 
-Position of a node is controlled by using its `OffsetX` and `OffsetY` properties. By default, these `Offset` properties represent the distance between origin of the diagram’s page and node’s center point. 
+Position of a node is controlled by using its [OffsetX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_OffsetY) properties. By default, these `Offset` properties represent the distance between origin of the diagram’s page and node’s center point. 
 
 ```csharp
 
@@ -80,7 +80,7 @@ node.OffsetY = 200;
 
 ## Resize
 
-Use the `Width` and `Height` properties to size a node.
+Use the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Height) properties to size a node.
 
 ```csharp
 
@@ -94,7 +94,7 @@ node.Height = 90;
 
 ## Rotate
 
-Use the `RotationAngle` property to rotate a node in degrees. A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction leads to rotate the node.
+Use the [RotationAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_RotationAngle) property to rotate a node in degrees. A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction leads to rotate the node.
 
 ```csharp
 Node node = new Node
@@ -120,17 +120,17 @@ diagram.Nodes.Add(node);
 
 ## Appearance
 
-Use the `Style` property to customize a node's appearance  like fill, border, opacity, and dash pattern. The conceptual styling properties are listed below.
+Use the [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Style) property to customize a node's appearance  like fill, border, opacity, and dash pattern. The conceptual styling properties are listed below.
 
 | Property | Description |
 | --- | --- |
-| `Fill` | Background color. |
-| `StrokeColor` | Border color. |
-| `StrokeWidth` | Border thickness. |
-| `Opacity` | Transparency from `0` (transparent) to `1` (opaque). |
-| `StrokeDashArray` | Dash pattern for the border. The accepted value format depends on the package version. |
+| [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_Fill) | Background color. |
+| [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeColor) | Border color. |
+| [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeWidth) | Border thickness. |
+| [Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_Opacity) | Transparency from `0` (transparent) to `1` (opaque). |
+| [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeStyle.html#Syncfusion_Maui_Diagram_ShapeStyle_StrokeDashArray) | Dash pattern for the border. The accepted value format depends on the package version. |
 
-For connector styling, see the [Connectors](connectors.md) topic.
+For connector styling, see the [Connectors](https://help.syncfusion.com/diagram-sdk/maui/connectors) topic.
 
 ```csharp
  Node node = new Node
@@ -159,11 +159,11 @@ For connector styling, see the [Connectors](connectors.md) topic.
 
 ## Shape
  
-The `Shape` property defines the visual appearance of a node. You can use it to display either geometric shapes through the `BasicShape` type or flowchart symbols through the `FlowShape` type.
+The [Shape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Shape) property defines the visual appearance of a node. You can use it to display either geometric shapes through the `BasicShape` type or flowchart symbols through the `FlowShape` type.
  
 ### Basic shapes
  
-The Diagram control provides built-in geometric shapes through the `BasicShape` type and the `NodeBasicShapes` enumeration.
+The Diagram control provides built-in geometric shapes through the `BasicShape` type and the [NodeBasicShapes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.NodeBasicShapes.html) enumeration.
 
 ```csharp
  Node basicshapesnode = new Node
@@ -207,7 +207,7 @@ Supported basic shapes:
 
 ### Flow shapes
 
-The Diagram control provides built-in flowchart symbols through the `FlowShape` type and the `NodeFlowShapes` enumeration.
+The Diagram control provides built-in flowchart symbols through the `FlowShape` type and the [NodeFlowShapes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.NodeFlowShapes.html) enumeration.
 
 ```csharp
  Node flowshapesnode = new Node
@@ -257,10 +257,11 @@ Supported flow shapes:
 - ManualInput
 - LoopLimit
 - StoredData
+
 ---
 
 ## See also
 
-- [Getting started](getting-started.md)
-- [Add node annotations](annotations.md)
-- [Ports](ports.md)
+- [Getting started](https://help.syncfusion.com/maui/diagram/getting-started)
+- [Add node annotations](https://help.syncfusion.com/maui/diagram/annotations#node-annotations)
+- [Ports](https://help.syncfusion.com/maui/diagram/ports)
