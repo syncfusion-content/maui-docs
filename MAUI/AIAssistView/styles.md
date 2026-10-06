@@ -267,14 +267,6 @@ To apply styles to the elements of a response item, set values to the built-in k
 <td>Background color of the response item.</td>
 </tr>
 <tr>
-<td>SfAIAssistViewResponseItemFontFamily</td>
-<td>Font family of the response item.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewResponseItemFontAttributes</td>
-<td>Font attributes of the response item.</td>
-</tr>
-<tr>
 <td>SfAIAssistViewResponseItemFontSize</td>
 <td>Font size of the response.</td>
 </tr>
@@ -303,8 +295,6 @@ To apply styles to the elements of a response item, set values to the built-in k
                 <Color x:Key="SfAIAssistViewResponseItemTextColor">Gray</Color>
                 <Color x:Key="SfAIAssistViewResponseItemAuthorTextColor">Gray</Color>
                 <Color x:Key="SfAIAssistViewResponseItemBackground">#eee479</Color>
-                <x:String x:Key="SfAIAssistViewResponseItemFontFamily">Roboto-Medium</x:String>
-                <FontAttributes x:Key="SfAIAssistViewResponseItemFontAttributes">Italic</FontAttributes>
                 <x:Double x:Key="SfAIAssistViewResponseItemFontSize">16</x:Double>
                 <x:String x:Key="SfAIAssistViewResponseItemAuthorFontFamily">Roboto-Medium</x:String>
                 <FontAttributes x:Key="SfAIAssistViewResponseItemAuthorFontAttributes">Italic</FontAttributes>
@@ -327,8 +317,6 @@ public partial class MainPage : ContentPage
         dictionary.Add("SfAIAssistViewResponseItemTextColor", Colors.Gray);
         dictionary.Add("SfAIAssistViewResponseItemAuthorTextColor", Colors.Gray);
         dictionary.Add("SfAIAssistViewResponseItemBackground", Color.FromArgb("#eee479"));
-        dictionary.Add("SfAIAssistViewResponseItemFontFamily", "Roboto-Medium");
-        dictionary.Add("SfAIAssistViewResponseItemFontAttributes", FontAttributes.Italic);
         dictionary.Add("SfAIAssistViewResponseItemFontSize", 16);
         dictionary.Add("SfAIAssistViewResponseItemAuthorFontFamily", "Roboto-Medium");
         dictionary.Add("SfAIAssistViewResponseItemAuthorFontAttributes", FontAttributes.Italic);
