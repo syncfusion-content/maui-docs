@@ -22,3 +22,7 @@ The Syncfusion<sup>®</sup> .NET MAUI extensions provide the following add-ins i
 * [Essential UI Kit](Essential-UI-Kit): Provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications.
 
 * [Notifications](Syncfusion-Notifications): Displays notifications about trial applications, newer Syncfusion<sup>®</sup> NuGet package versions, and new Essential Studio<sup>®</sup> releases.
+
+## See Also
+
+- [Download and Setup Guide](download-and-installation) explains the prerequisites, installation, and configuration required to use the Syncfusion® .NET MAUI Extension in Visual Studio.  
