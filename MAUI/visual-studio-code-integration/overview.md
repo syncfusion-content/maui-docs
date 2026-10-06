@@ -17,7 +17,7 @@ The Syncfusion<sup>®</sup> .NET MAUI Extension offers the following support in 
 
 **Code Snippet:** Adds a Syncfusion<sup>®</sup> .NET MAUI component with multiple features into the .NET MAUI Application's XAML code editor.
 
-## See Also
+## Next Step
 
 - [Download and Installation](download-and-installation) explains the prerequisites, installation, and configuration required to use the Syncfusion® .NET MAUI Extension in Visual Studio Code.  
 - [Create Projects](create-project) walks through creating a new Syncfusion® .NET MAUI application from the Extension's project templates.  
