@@ -2,7 +2,7 @@
 layout: post
 title: Symbol Palette in MAUI Diagram | Syncfusion®
 description: Learn how to use the SymbolPalette in the Syncfusion® .NET MAUI Diagram control to display reusable symbols and drag them onto diagrams.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -15,23 +15,23 @@ A symbol palette organizes symbols into one or more palettes. Each palette belon
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Symbol examples assume that an `SfDiagram` instance is available.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler. Symbol examples assume that an [SfDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) instance is available.
 
 ---
 
 ## SymbolPalette control
 
-The `SymbolPalette` control exposes the implemented members listed below.
+The [SymbolPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html) control exposes the implemented members listed below.
 
 | Property | Description | Status |
 | --- | --- | --- |
-| `EnableSearch` | `true` to display a search box above the palettes. | Implemented. |
-| `SymbolHeight` | Height applied to symbols in the palette. | Implemented. |
-| `SymbolWidth` | Width applied to symbols in the palette. | Implemented. |
-| `Palettes` | Collection of `Palette` items. | Implemented. |
+| [EnableSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_EnableSearch) | `true` to display a search box above the palettes. | Implemented. |
+| [SymbolHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_SymbolHeight) | Height applied to symbols in the palette. | Implemented. |
+| [SymbolWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_SymbolWidth) | Width applied to symbols in the palette. | Implemented. |
+| [Palettes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_Palettes) | Collection of [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html) items. | Implemented. |
 | `Width` | Width of the Symbol Palette. | Not implemented in the current release. |
 | `Height` | Height of the Symbol Palette. | Not implemented in the current release. |
-|`ExpandMode`| Specifies whether one or multiple palettes can be expanded at a time. Default is DiagramPaletteExpandMode.Multiple. | Implemented. |
+|[ExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_ExpandMode)| Specifies whether one or multiple palettes can be expanded at a time. Default is DiagramPaletteExpandMode.Multiple. | Implemented. |
 
 > **Note:** `WidthRequest` and `HeightRequest` are still available because they are inherited from the MAUI `View` base class. The `Width` and `Height` properties listed in legacy documents are not implemented on `SymbolPalette` directly. Verify the supported layout properties in the API reference for your package.
 
@@ -40,22 +40,22 @@ The `SymbolPalette` control exposes the implemented members listed below.
 
 ## Palette class
 
-A `Palette` represents a category of symbols within the Symbol Palette.
+A [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html) represents a category of symbols within the Symbol Palette.
 
 | Property | Description | Status |
 | --- | --- | --- |
-| `Id` | Unique identifier for the palette. | Implemented. |
-| `Title` | Header text displayed for the palette. | Implemented. |
-| `Symbols` | Collection of nodes shown as symbols. | Implemented. |
-| `Expanded` | Whether the palette is initially expanded. | Implemented. |
-| `IconCss` | Icon associated with the palette. | Implemented. |
+| [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_Id) | Unique identifier for the palette. | Implemented. |
+| [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_Title) | Header text displayed for the palette. | Implemented. |
+| [Symbols](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_Symbols) | Collection of nodes shown as symbols. | Implemented. |
+| [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_IsExpanded) | Whether the palette is initially expanded. | Implemented. |
+| [IconCss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_IconCss) | Icon associated with the palette. | Implemented. |
 | `Height` | Height of the palette. | Not implemented in the current release. |
 
 ---
 
 ## Add symbols
 
-Symbols are added through the `Palette.Symbols` collection. Each symbol is typically a `Node` configured with the desired shape and size.
+Symbols are added through the [Palette.Symbols](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Palette.html#Syncfusion_Maui_Diagram_Palette_Symbols) collection. Each symbol is typically a [Node](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html) configured with the desired shape and size.
 
 ```csharp
 var basicPalette = new Palette
@@ -105,7 +105,7 @@ basicPalette.Symbols.Add(
 
 ## Multiple palettes
 
-The `Palettes` collection holds the palettes that are exposed by the Symbol Palette.
+The [Palettes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SymbolPalette.html#Syncfusion_Maui_Diagram_SymbolPalette_Palettes) collection holds the palettes that are exposed by the Symbol Palette.
 
 ```csharp
 
