@@ -3557,22 +3557,6 @@ To style the filter button and related views based on their appearance, set valu
 <th>Description</th>
 </tr>
 <tr>
-<td>SfAIAssistViewFilterIconTextColor</td>
-<td>Color of the filter icon.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewFilterButtonStroke</td>
-<td>Stroke color of the filter button.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewFilterButtonSelectedBackground</td>
-<td>Background color of the filter button when it is selected.</td>
-</tr>
-<tr>
-<td>SfAIAssistViewFilterButtonHoverColor</td>
-<td>Background color of the filter button when it is hovered.</td>
-</tr>
-<tr>
 <td>SfAIAssistViewFilterPopupSelectedItemBackground</td>
 <td>Background color of the selected item in the filter popup.</td>
 </tr>
@@ -3589,10 +3573,6 @@ To style the filter button and related views based on their appearance, set valu
         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                <Color x:Key="SfAIAssistViewFilterIconTextColor">Red</Color>
-                <Color x:Key="SfAIAssistViewFilterButtonStroke">Orange</Color>
-                <Color x:Key="SfAIAssistViewFilterButtonSelectedBackground">LightGreen</Color>
-                <Color x:Key="SfAIAssistViewFilterButtonHoverColor">LightPink</Color>
                 <Color x:Key="SfAIAssistViewFilterPopupSelectedItemBackground">Brown</Color>
                 <Color x:Key="SfAIAssistViewFilterPopupSelectedItemTextColor">Lime</Color>
             </ResourceDictionary>
@@ -3610,10 +3590,6 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         ResourceDictionary dictionary = new ResourceDictionary();
         dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
-        dictionary.Add("SfAIAssistViewFilterIconTextColor", Colors.Red);
-        dictionary.Add("SfAIAssistViewFilterButtonStroke", Colors.Orange);
-        dictionary.Add("SfAIAssistViewFilterButtonSelectedBackground", Colors.LightGreen);
-        dictionary.Add("SfAIAssistViewFilterButtonHoverColor", Colors.LightPink);
         dictionary.Add("SfAIAssistViewFilterPopupSelectedItemBackground", Colors.Brown);
         dictionary.Add("SfAIAssistViewFilterPopupSelectedItemTextColor", Colors.Lime);
         this.Resources.Add(dictionary);
