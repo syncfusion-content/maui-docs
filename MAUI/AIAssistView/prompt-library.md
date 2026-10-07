@@ -9,20 +9,20 @@ documentation: ug
 
 # Prompt Library in .NET MAUI AI AssistView
 
-The `SfPromptLibrary` displays a collection of predefined prompts organized by section and topic, allowing users to quickly find and select prompts.
+The [SfPromptLibrary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfPromptLibrary.html) displays a collection of predefined prompts organized by section and topic, allowing users to quickly find and select prompts.
 
 ## Populate prompts in PromptLibrary
 
-Set the `ItemsSource` property of `SfPromptLibrary` to a collection of PromptItem objects to display the available prompts.
+Set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfPromptLibrary.html#Syncfusion_Maui_AIAssistView_SfPromptLibrary_ItemsSource) property of `SfPromptLibrary` to a collection of PromptItem objects to display the available prompts.
 
-Each item in the collection is a `PromptItem`. The prompt library uses the following members to group and display prompts:
+Each item in the collection is a [PromptItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html). The prompt library uses the following members to group and display prompts:
 
-* `Title` - Specifies the title of the prompt.
-* `Topic` - Specifies the topic associated with the prompt.
-* `Description` - Specifies a brief description of the prompt displayed in the library.
-* `Section` - Specifies the section used to group related prompts.
-* `PromptContent` - Specifies the prompt content used when the prompt is selected.
-* `Version` - Specifies the version of the prompt.
+* [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_Title) - Specifies the title of the prompt.
+* [Topic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_Topic) - Specifies the topic associated with the prompt.
+* [Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_Description) - Specifies a brief description of the prompt displayed in the library.
+* [Section](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_Section) - Specifies the section used to group related prompts.
+* [PromptContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_PromptContent) - Specifies the prompt content used when the prompt is selected.
+* [Version](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptItem.html#Syncfusion_Maui_AIAssistView_PromptItem_Version) - Specifies the version of the prompt.
 
 ### Define the prompt collection
 
@@ -173,9 +173,9 @@ N> Configure suggestions in `SfAIAssistView` to display the `PromptLibrary` over
 
 ## Event and Command
 
-When a user selects a prompt, both the `PromptSelected` event and the `PromptSelectedCommand` are triggered. Both provide a `PromptSelectedEventArgs` instance containing information about the selected prompt.
+When a user selects a prompt, both the [PromptSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfPromptLibrary.html#Syncfusion_Maui_AIAssistView_SfPromptLibrary_PromptSelected) event and the [PromptSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfPromptLibrary.html#Syncfusion_Maui_AIAssistView_SfPromptLibrary_PromptSelectedCommand) are triggered. Both provide a [PromptSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptSelectedEventArgs.html) instance containing information about the selected prompt.
 
-* `Prompt` - The prompt item chosen by the user.
+* [Prompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptSelectedEventArgs.html#Syncfusion_Maui_AIAssistView_PromptSelectedEventArgs_Prompt) - The prompt item chosen by the user.
 
 ### Using PromptSelected event
 

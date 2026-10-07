@@ -45,6 +45,10 @@ documentation: ug
 <td>Temporary chat</td>
 </tr>
 <tr>
+<td>TemporaryChatBannerText</td>
+<td>Temporary chat</td>
+</tr>
+<tr>
 <td>RequestCopied</td>
 <td>Request copied!</td>
 </tr>
@@ -138,11 +142,11 @@ documentation: ug
 </tr>
 <tr>
 <td> FilterLast7Days </td>
-<td> Last 7 days </td>
+<td> Last 7 Days </td>
 </tr>
 <tr>
 <td> FilterLast30Days </td>
-<td> Last 30 days </td>
+<td> Last 30 Days </td>
 </tr>
 <tr>
 <td>RenameConversation</td>
