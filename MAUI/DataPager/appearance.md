@@ -100,6 +100,63 @@ To apply custom style, follow the code example:
                                       NavigationButtonIconColor="#0077b6"
                                       NavigationButtonDisableBackgroundColor="#caf0f8"
                                       NavigationButtonDisableIconColor="#9a8c98">
+
+                    <pager:DataPagerStyle.FirstPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="«"
+                                   FontSize="22"
+                                   TranslationY="-1"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="8,0" />
+                        </DataTemplate>
+                    </pager:DataPagerStyle.FirstPageButtonTemplate>
+
+                    <pager:DataPagerStyle.LastPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="»"
+                                   FontSize="22"
+                                   FontAttributes="Bold"
+                                   TranslationY="-1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="8,0" />
+                        </DataTemplate>
+                    </pager:DataPagerStyle.LastPageButtonTemplate>
+
+                    <pager:DataPagerStyle.PreviousPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="‹"
+                                   FontSize="22"
+                                   FontAttributes="Bold"
+                                   TranslationY="-1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="8,0" />
+                        </DataTemplate>
+                    </pager:DataPagerStyle.PreviousPageButtonTemplate>
+
+                    <pager:DataPagerStyle.NextPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="›"
+                                   FontSize="22"
+                                   FontAttributes="Bold"
+                                   TranslationY="-1"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Margin="8,0" />
+                        </DataTemplate>
+                    </pager:DataPagerStyle.NextPageButtonTemplate>
+
                 </pager:DataPagerStyle>
             </pager:SfDataPager.DefaultStyle>
         </pager:SfDataPager>
@@ -120,6 +177,71 @@ dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
 dataPagerStyle.NavigationButtonIconColor = Color.FromArgb("#0077B6");
 dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
 dataPagerStyle.NavigationButtonDisableIconColor = Color.FromArgb("#9A8C98");
+
+dataPagerStyle.FirstPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "«",
+        FontSize = 22,
+        FontAttributes = FontAttributes.Bold,
+        TranslationY = -1,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        Margin = new Thickness(8, 0)
+    };
+});
+
+dataPagerStyle.LastPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "»",
+        FontSize = 22,
+        FontAttributes = FontAttributes.Bold,
+        TranslationY = -1,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        Margin = new Thickness(8, 0)
+    };
+});
+
+dataPagerStyle.PreviousPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "‹",
+        FontSize = 22,
+        FontAttributes = FontAttributes.Bold,
+        TranslationY = -1,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        Margin = new Thickness(8, 0)
+    };
+});
+
+dataPagerStyle.NextPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "›",
+        FontSize = 22,
+        FontAttributes = FontAttributes.Bold,
+        TranslationY = -1,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+        Margin = new Thickness(8, 0)
+    };
+});
+
 dataPager.DefaultStyle = dataPagerStyle;
 
 Border border = new Border();
