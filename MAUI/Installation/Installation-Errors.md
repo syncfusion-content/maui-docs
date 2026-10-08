@@ -30,7 +30,7 @@ This article describes the most common installation errors, their causes, and so
 
 ### Reason
 
-You are attempting to use a trial unlock key to unlock the licensed installer.
+You are attempting to use a trial unlock key to unlock the licensed installer. 
 
 ### Suggested solution
 
