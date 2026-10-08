@@ -5,6 +5,7 @@ description: Types of axis in .NET MAUI Polar Chart support different axis confi
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Types of Axis in .NET MAUI Polar Chart

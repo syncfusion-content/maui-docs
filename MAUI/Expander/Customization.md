@@ -48,7 +48,7 @@ The following examples show how to configure animation easing in XAML and C#. Pl
 {% highlight xaml hl_lines="2" %}
 
 <syncfusion:SfExpander x:Name="expander"
-                        AnimationEasing="SinOut">
+                       AnimationEasing="SinOut">
 </syncfusion:SfExpander>
 
 {% endhighlight %}
@@ -76,7 +76,7 @@ The following examples demonstrate how to set the initial expanded state. Add th
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
 <syncfusion:SfExpander x:Name="expander"
-                        IsExpanded="true">
+                       IsExpanded="true">
 </syncfusion:SfExpander>
 {% endhighlight %}
 {% highlight c# hl_lines="8" %}

@@ -5,6 +5,7 @@ description: This section lists the public API members in the Syncfusion® .NET 
 platform: maui
 control: SfFunnelChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # API API Reference for .NET MAUI Funnel Chart

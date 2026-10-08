@@ -227,7 +227,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Maui Accordion Header icon position] (Images\appearance\maui-accordion-header-position-start.png) 
+![Syncfusion Maui Accordion Header icon position](Images\appearance\maui-accordion-header-position-start.png) 
 
 ## Header background color customization
 
@@ -430,7 +430,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Maui Accordion Header background color customization] (Images\appearance\maui-accordion-header-background-color.png)
+![Syncfusion Maui Accordion Header background color customization](Images\appearance\maui-accordion-header-background-color.png)
 
 ## Icon color customization
 
@@ -652,7 +652,6 @@ The following properties can be set through the `VisualState` setters:
 
 * [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderBackground)
 * [HeaderIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.AccordionItem.html#Syncfusion_Maui_Accordion_AccordionItem_HeaderIconColor)
-
 
 {% tabs %}
 {% highlight xaml %}

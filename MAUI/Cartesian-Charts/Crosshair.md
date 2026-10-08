@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart crosshair, maui chart crosshair, .net maui crosshair customization, syncfusion maui crosshair chart, cartesian crosshair maui, .net maui crosshair visualization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Crosshair in .NET MAUI Cartesian Chart

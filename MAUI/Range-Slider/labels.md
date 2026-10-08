@@ -422,3 +422,49 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![Range Slider label disabled state](images/labels-and-dividers/labels-disabled.png)
+
+## Label appearance customization
+
+You can customize the appearance of range slider labels using the [`LabelTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_LabelTemplate) property, which lets you define a custom view and display content based on label values.
+
+The binding context for each template instance is a [`SliderLabelInfo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelInfo.html) object, which provides information about the corresponding label.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="7 8 9 10 11 12 13 14" %}
+
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="100"
+                       RangeStart="20"
+                       RangeEnd="80"
+                       Interval="20"
+                       ShowLabels="True"
+                       ShowTicks="True">
+    <sliders:SfRangeSlider.LabelTemplate>
+        <DataTemplate>
+            <Label Text="{Binding Text}"
+                   TextColor="Red"
+                   FontAttributes="Bold" />
+        </DataTemplate>
+    </sliders:SfRangeSlider.LabelTemplate>
+</sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 100;
+rangeSlider.RangeStart = 20;
+rangeSlider.RangeEnd = 80;
+rangeSlider.Interval = 20;
+rangeSlider.ShowTicks="True"
+rangeSlider.ShowLabels = true;
+this.Content = rangeSlider;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png){:width="570"}

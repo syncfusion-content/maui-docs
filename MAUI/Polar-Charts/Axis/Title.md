@@ -5,6 +5,7 @@ description: Axis title in .NET MAUI Polar Chart provides descriptive text for c
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Title in .NET MAUI Polar Chart

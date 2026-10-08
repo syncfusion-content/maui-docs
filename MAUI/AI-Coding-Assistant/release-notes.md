@@ -14,6 +14,12 @@ This document provides information about the changes and new features included i
 
 ## MCP Server
 
+**(v2.0.0) - September 7, 2026**
+
+**Breaking Changes**
+
+- Updated the MCP server to support the latest 2026-07-28 Model Context Protocol (MCP) specification, ensuring compatibility with the newest protocol standards and capabilities.
+
 **(v1.0.0) - August 3, 2026**
 
 **Feature**

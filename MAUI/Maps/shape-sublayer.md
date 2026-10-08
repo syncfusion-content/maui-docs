@@ -5,6 +5,7 @@ description: Shape Sublayer in .NET MAUI Maps overlays additional shape data on 
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Shape Sublayer in .NET MAUI Maps

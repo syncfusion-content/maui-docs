@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Navigation Drawer]
 
 To quickly get started with the .NET MAUI Navigation Drawer, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=fhVe129Hc6o" %}
+<style>#MAUINavigationDrawerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUINavigationDrawerVideoTutorial' src='https://www.youtube.com/embed/fhVe129Hc6o'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -263,4 +263,4 @@ Initialize the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusi
 
 ![.NET MAUI Navigation Drawer](Images/getting-started/gettingstarted.png)
 
-You can download the Navigation Drawer Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.
+You can download the Navigation Drawer Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-NavigationDrawer) link.
