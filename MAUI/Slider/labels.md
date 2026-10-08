@@ -432,7 +432,7 @@ The binding context for each template instance is a [`SliderLabelInfo`](https://
 
 {% tabs %}
 
-{% highlight xaml hl_lines="5 6 7 8 9 10 11" %}
+{% highlight xaml hl_lines="5 6 7 8 9 10 11 12" %}
 
 <sliders:SfSlider Minimum="0"
                   Maximum="100"
@@ -464,4 +464,4 @@ this.Content = slider;
 
 {% endtabs %}
 
-![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png)
+![Label template appearance customization](images/labels-and-dividers/label-appearance-customization.png){:width="570"}

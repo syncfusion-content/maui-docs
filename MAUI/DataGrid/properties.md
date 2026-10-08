@@ -1498,4 +1498,239 @@ This event allows you to cancel the selection change or modify the checkbox stat
         <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
         <td>Occurs when the view for a SfDataGrid is created.</td>
     </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ContextMenuItemClicked" aria-label="View ContextMenuItemClicked event in API reference">ContextMenuItemClicked</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ContextMenuItemClickedEventArgs.html" aria-label="View ContextMenuItemClickedEventArgs type in API reference">ContextMenuItemClickedEventArgs</a>&gt;</td>
+        <td>Occurs when a context menu item is clicked.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ContextMenuOpened" aria-label="View ContextMenuOpened event in API reference">ContextMenuOpened</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ContextMenuOpenedEventArgs.html" aria-label="View ContextMenuOpenedEventArgs type in API reference">ContextMenuOpenedEventArgs</a>&gt;</td>
+        <td>Occurs when a context menu has been opened.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ContextMenuOpening" aria-label="View ContextMenuOpening event in API reference">ContextMenuOpening</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ContextMenuOpeningEventArgs.html" aria-label="View ContextMenuOpeningEventArgs type in API reference">ContextMenuOpeningEventArgs</a>&gt;</td>
+        <td>Occurs when a context menu is about to be opened.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CopyCellContent" aria-label="View CopyCellContent event in API reference">CopyCellContent</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteCellEventArgs.html" aria-label="View DataGridCopyPasteCellEventArgs type in API reference">DataGridCopyPasteCellEventArgs</a>&gt;</td>
+        <td>Occurs when each cell in the selected cells or rows being copied from SfDataGrid into clipboard.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CopyContent" aria-label="View CopyContent event in API reference">CopyContent</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteEventArgs.html" aria-label="View DataGridCopyPasteEventArgs type in API reference">DataGridCopyPasteEventArgs</a>&gt;</td>
+        <td>Occurs when the selected cells or rows in SfDataGrid is being copied in to clipboard.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellActivated" aria-label="View CurrentCellActivated event in API reference">CurrentCellActivated</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellActivatedEventArgs.html" aria-label="View DataGridCurrentCellActivatedEventArgs type in API reference">DataGridCurrentCellActivatedEventArgs</a>&gt;</td>
+        <td>Occurs when the cell is activated on tapping or navigation.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellActivating" aria-label="View CurrentCellActivating event in API reference">CurrentCellActivating</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellActivatingEventArgs.html" aria-label="View DataGridCurrentCellActivatingEventArgs type in API reference">DataGridCurrentCellActivatingEventArgs</a>&gt;</td>
+        <td>Occurs when the cell is being activated on tapping or navigation.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellBeginEdit" aria-label="View CurrentCellBeginEdit event in API reference">CurrentCellBeginEdit</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellBeginEditEventArgs.html" aria-label="View DataGridCurrentCellBeginEditEventArgs type in API reference">DataGridCurrentCellBeginEditEventArgs</a>&gt;</td>
+        <td>Occurs when the current cell enters into edit mode in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellDropDownSelectionChanged" aria-label="View CurrentCellDropDownSelectionChanged event in API reference">CurrentCellDropDownSelectionChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CurrentCellDropDownSelectionChangedEventArgs.html" aria-label="View CurrentCellDropDownSelectionChangedEventArgs type in API reference">CurrentCellDropDownSelectionChangedEventArgs</a>&gt;</td>
+        <td>Occurs when the SelectedItem changed in the drop down of GridMultiColumnDropDownList or GridComboBoxColumn.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellEndEdit" aria-label="View CurrentCellEndEdit event in API reference">CurrentCellEndEdit</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellEndEditEventArgs.html" aria-label="View DataGridCurrentCellEndEditEventArgs type in API reference">DataGridCurrentCellEndEditEventArgs</a>&gt;</td>
+        <td>Occurs when the current cell exists the edit mode in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellRequestNavigating" aria-label="View CurrentCellRequestNavigating event in API reference">CurrentCellRequestNavigating</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html" aria-label="View DataGridCurrentCellRequestNavigatingEventArgs type in API reference">DataGridCurrentCellRequestNavigatingEventArgs</a>&gt;</td>
+        <td>Occurs when the GridHyperlinkColumn&#39;s cell is request for navigation.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataGridLoaded" aria-label="View DataGridLoaded event in API reference">DataGridLoaded</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+        <td>Occurs when the SfDataGrid is loaded.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewCollapsed" aria-label="View DetailsViewCollapsed event in API reference">DetailsViewCollapsed</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsedEventArgs.html" aria-label="View DataGridDetailsViewCollapsedEventArgs type in API reference">DataGridDetailsViewCollapsedEventArgs</a>&gt;</td>
+        <td>Occurs after the DetailsViewDataGrid is collapsed.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewCollapsing" aria-label="View DetailsViewCollapsing event in API reference">DetailsViewCollapsing</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsingEventArgs.html" aria-label="View DataGridDetailsViewCollapsingEventArgs type in API reference">DataGridDetailsViewCollapsingEventArgs</a>&gt;</td>
+        <td>Occurs when the DetailsViewDataGrid is being collapsed.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanded" aria-label="View DetailsViewExpanded event in API reference">DetailsViewExpanded</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandedEventArgs.html" aria-label="View DataGridDetailsViewExpandedEventArgs type in API reference">DataGridDetailsViewExpandedEventArgs</a>&gt;</td>
+        <td>Occurs after the DetailsViewDataGrid is expanded.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanding" aria-label="View DetailsViewExpanding event in API reference">DetailsViewExpanding</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html" aria-label="View DataGridDetailsViewExpandingEventArgs type in API reference">DataGridDetailsViewExpandingEventArgs</a>&gt;</td>
+        <td>Occurs when the DetailsViewDataGrid is being expanded.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewLoading" aria-label="View DetailsViewLoading event in API reference">DetailsViewLoading</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewLoadingEventArgs.html" aria-label="View DataGridDetailsViewLoadingEventArgs type in API reference">DataGridDetailsViewLoadingEventArgs</a>&gt;</td>
+        <td>Occurs when the DetailsViewDataGrid is being loaded in to view.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewUnloading" aria-label="View DetailsViewUnloading event in API reference">DetailsViewUnloading</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewUnloadingEventArgs.html" aria-label="View DataGridDetailsViewUnloadingEventArgs type in API reference">DataGridDetailsViewUnloadingEventArgs</a>&gt;</td>
+        <td>Occurs when the DetailsViewDataGrid is being unloaded from the view.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterChanged" aria-label="View FilterChanged event in API reference">FilterChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterChangedEventArgs.html" aria-label="View DataGridFilterChangedEventArgs type in API reference">DataGridFilterChangedEventArgs</a>&gt;</td>
+        <td>Occurs after the column is filtered in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterChanging" aria-label="View FilterChanging event in API reference">FilterChanging</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterChangingEventArgs.html" aria-label="View DataGridFilterChangingEventArgs type in API reference">DataGridFilterChangingEventArgs</a>&gt;</td>
+        <td>Occurs when the column is being filtered in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterItemsPopulated" aria-label="View FilterItemsPopulated event in API reference">FilterItemsPopulated</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatedEventArgs.html" aria-label="View DataGridFilterItemsPopulatedEventArgs type in API reference">DataGridFilterItemsPopulatedEventArgs</a>&gt;</td>
+        <td>Occurs after the items is populated to the FilterControl in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterItemsPopulating" aria-label="View FilterItemsPopulating event in API reference">FilterItemsPopulating</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatingEventArgs.html" aria-label="View DataGridFilterItemsPopulatingEventArgs type in API reference">DataGridFilterItemsPopulatingEventArgs</a>&gt;</td>
+        <td>Occurs when the items is being populated to the FilterControl in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupCollapsed" aria-label="View GroupCollapsed event in API reference">GroupCollapsed</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangedEventArgs.html" aria-label="View DataGridColumnGroupChangedEventArgs type in API reference">DataGridColumnGroupChangedEventArgs</a>&gt;</td>
+        <td>Occurs when a group is collapsed in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupCollapsing" aria-label="View GroupCollapsing event in API reference">GroupCollapsing</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangingEventArgs.html" aria-label="View DataGridColumnGroupChangingEventArgs type in API reference">DataGridColumnGroupChangingEventArgs</a>&gt;</td>
+        <td>Occurs when a group is being collapsed in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpanded" aria-label="View GroupExpanded event in API reference">GroupExpanded</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangedEventArgs.html" aria-label="View DataGridColumnGroupChangedEventArgs type in API reference">DataGridColumnGroupChangedEventArgs</a>&gt;</td>
+        <td>Occurs when a group is expanded in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpanding" aria-label="View GroupExpanding event in API reference">GroupExpanding</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnGroupChangingEventArgs.html" aria-label="View DataGridColumnGroupChangingEventArgs type in API reference">DataGridColumnGroupChangingEventArgs</a>&gt;</td>
+        <td>Occurs when a group is being expanded in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceChanged" aria-label="View ItemsSourceChanged event in API reference">ItemsSourceChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridItemsSourceChangedEventArgs.html" aria-label="View DataGridItemsSourceChangedEventArgs type in API reference">DataGridItemsSourceChangedEventArgs</a>&gt;</td>
+        <td>Occurs when the source is changed in the SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_PasteCellContent" aria-label="View PasteCellContent event in API reference">PasteCellContent</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteCellEventArgs.html" aria-label="View DataGridCopyPasteCellEventArgs type in API reference">DataGridCopyPasteCellEventArgs</a>&gt;</td>
+        <td>Occurs when each cell is being pasted from clipboard to SfDataGrid control.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_PasteContent" aria-label="View PasteContent event in API reference">PasteContent</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCopyPasteEventArgs.html" aria-label="View DataGridCopyPasteEventArgs type in API reference">DataGridCopyPasteEventArgs</a>&gt;</td>
+        <td>Occurs when the clipboard value is being pasted to SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryColumnDragging" aria-label="View QueryColumnDragging event in API reference">QueryColumnDragging</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html" aria-label="View DataGridQueryColumnDraggingEventArgs type in API reference">DataGridQueryColumnDraggingEventArgs</a>&gt;</td>
+        <td>Occurs when query column dragging.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryCoveredRange" aria-label="View QueryCoveredRange event in API reference">QueryCoveredRange</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryCoveredRangeEventArgs.html" aria-label="View DataGridQueryCoveredRangeEventArgs type in API reference">DataGridQueryCoveredRangeEventArgs</a>&gt;</td>
+        <td>Occurs when a query for a covered range within the DataGrid is requested.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging" aria-label="View QueryRowDragging event in API reference">QueryRowDragging</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html" aria-label="View DataGridQueryRowDraggingEventArgs type in API reference">DataGridQueryRowDraggingEventArgs</a>&gt;</td>
+        <td>Occurs when a row is being reordering to the new position in&#226;€&#175;SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight" aria-label="View QueryRowHeight event in API reference">QueryRowHeight</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html" aria-label="View DataGridQueryRowHeightEventArgs type in API reference">DataGridQueryRowHeightEventArgs</a>&gt;</td>
+        <td>Occurs when the height of the rows is queried.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundColumnValue" aria-label="View QueryUnboundColumnValue event in API reference">QueryUnboundColumnValue</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumnEventArgs.html" aria-label="View DataGridUnboundColumnEventArgs type in API reference">DataGridUnboundColumnEventArgs</a>&gt;</td>
+        <td>Occurs to query the values for&#226;€&#175;DataGridUnboundColumn&#226;€&#175;when the cells are initialized.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryUnboundRow" aria-label="View QueryUnboundRow event in API reference">QueryUnboundRow</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowEventArgs.html" aria-label="View DataGridUnboundRowEventArgs type in API reference">DataGridUnboundRowEventArgs</a>&gt;</td>
+        <td>Occurs to query and commit the values to the unbound row.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowResizing" aria-label="View RowResizing event in API reference">RowResizing</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowResizingEventArgs.html" aria-label="View DataGridRowResizingEventArgs type in API reference">DataGridRowResizingEventArgs</a>&gt;</td>
+        <td>Occurs when a row is being resized in the DataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidated" aria-label="View RowValidated event in API reference">RowValidated</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowValidatedEventArgs.html" aria-label="View DataGridRowValidatedEventArgs type in API reference">DataGridRowValidatedEventArgs</a>&gt;</td>
+        <td>Occurs after the row is validated.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating" aria-label="View RowValidating event in API reference">RowValidating</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowValidatingEventArgs.html" aria-label="View DataGridRowValidatingEventArgs type in API reference">DataGridRowValidatingEventArgs</a>&gt;</td>
+        <td>Occurs while the moving from the edited row to validate the user input.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollStateChanged" aria-label="View ScrollStateChanged event in API reference">ScrollStateChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridScrollStateChangedEventArgs.html" aria-label="View DataGridScrollStateChangedEventArgs type in API reference">DataGridScrollStateChangedEventArgs</a>&gt;</td>
+        <td>Occurs when the scroll state of the DataGrid changes.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangedEventArgs.html" aria-label="View DataGridSelectionChangedEventArgs type in API reference">DataGridSelectionChangedEventArgs</a>&gt;</td>
+        <td>Occurs when the selection is applied to rows.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging" aria-label="View SelectionChanging event in API reference">SelectionChanging</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html" aria-label="View DataGridSelectionChangingEventArgs type in API reference">DataGridSelectionChangingEventArgs</a>&gt;</td>
+        <td>Occurs when the selection is being applied to rows.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanged" aria-label="View SortColumnsChanged event in API reference">SortColumnsChanged</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortColumnsChangedEventArgs.html" aria-label="View DataGridSortColumnsChangedEventArgs type in API reference">DataGridSortColumnsChangedEventArgs</a>&gt;</td>
+        <td>Occurs when column is sorted.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanging" aria-label="View SortColumnsChanging event in API reference">SortColumnsChanging</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortColumnsChangingEventArgs.html" aria-label="View DataGridSortColumnsChangingEventArgs type in API reference">DataGridSortColumnsChangingEventArgs</a>&gt;</td>
+        <td>Occurs when column is being sorted.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeEnded" aria-label="View SwipeEnded event in API reference">SwipeEnded</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs.html" aria-label="View DataGridSwipeEndedEventArgs type in API reference">DataGridSwipeEndedEventArgs</a>&gt;</td>
+        <td>Occurs when the swiping is ended in SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeStarting" aria-label="View SwipeStarting event in API reference">SwipeStarting</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeStartingEventArgs.html" aria-label="View DataGridSwipeStartingEventArgs type in API reference">DataGridSwipeStartingEventArgs</a>&gt;</td>
+        <td>Occurs when a swiping action starts in the SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Swiping" aria-label="View Swiping event in API reference">Swiping</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html" aria-label="View DataGridSwipingEventArgs type in API reference">DataGridSwipingEventArgs</a>&gt;</td>
+        <td>Occurs during an ongoing swipe action in the SfDataGrid.</td>
+    </tr>
+<tr valign="top">
+        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ViewCreated" aria-label="View ViewCreated event in API reference">ViewCreated</a></td>
+        <td><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+        <td>Occurs when the view for a SfDataGrid is created.</td>
+    </tr>
 </table>
