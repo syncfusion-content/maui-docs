@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Pyramid Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Pyramid Charts provides inclusive navigation and screen reader announcements support.
 control: SfPyramidChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Pyramid Charts
@@ -38,12 +39,28 @@ Enhance .NET MAUI Pyramid Charts' accessibility with user-friendly design, ensur
 
 ## Enable Accessibility
 To enable accessibility support on your device:
-| Platform | Steps |
-|----------|-------|
-| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
-| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
-| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
-| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
+<table>
+<tr>
+<th>Platform</th>
+<th>Steps</th>
+</tr>
+<tr>
+<td><b>Android</b></td>
+<td>Settings → Accessibility → TalkBack → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>Windows</b></td>
+<td>Settings → Accessibility → Turn on Narrator (or press Windows key + Enter)</td>
+</tr>
+<tr>
+<td><b>iOS</b></td>
+<td>Settings → Accessibility → VoiceOver → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>macOS</b></td>
+<td>System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver"</td>
+</tr>
+</table>
 
 ## Keyboard Navigation
 

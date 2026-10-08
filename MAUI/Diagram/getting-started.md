@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with MAUI Diagram | Syncfusion®
 description: Learn how to create a .NET MAUI project, add the Syncfusion® .NET MAUI Diagram (SfDiagram) control, and build a simple diagram with two connected nodes.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -15,7 +15,7 @@ This guide shows how to add the Syncfusion .NET MAUI Diagram control to an appli
 
 Before you begin, make sure that you have:
 
-- A .NET MAUI development environment. See the [official .NET MAUI installation guide](https://learn.microsoft.com/dotnet/maui/get-started/installation).
+- A .NET MAUI development environment. See the [official .NET MAUI installation guide](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&tabs=visual-studio).
 - A supported version of the .NET SDK and Visual Studio for your Syncfusion release.
 - A Syncfusion license key. See [licensing](https://help.syncfusion.com/maui/licensing/overview).
 
@@ -100,44 +100,111 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        var startNode = new Node
-        {
-            ID = "Start",
-            OffsetX = 150,
-            OffsetY = 150,
-            Width = 120,
-            Height = 60
-        };
+        Node node1 = new Node
+ {
+     Id = "node1",
+     OffsetX = 300,
+     OffsetY = 60,
+     Width = 120,
+     Height = 40,
+     Shape = new BasicShape()
+     {
+         Shape = NodeBasicShapes.Ellipse
+     },
+ };
+ ShapeStyle style = new ShapeStyle();
+ style.Fill = Colors.CornflowerBlue;
+ style.StrokeColor = Colors.Black;
+ style.StrokeWidth = 2;
+ style.StrokeDashArray = "0,0";
 
-        var processNode = new Node
-        {
-            ID = "Process",
-            OffsetX = 400,
-            OffsetY = 150,
-            Width = 120,
-            Height = 60
-        };
+ node1.Style = style;
 
-        var connector = new Connector
-        {
-            ID = "Connector1",
-            SourceID = startNode.ID,
-            TargetID = processNode.ID
-        };
+ node1.Annotations.Add(
+  new ShapeAnnotation
+  {
+      Id = "Begin",
+      Content = "Begin",
+     
+  });
+ diagram.Nodes.Add(node1);
 
-        diagram.Nodes = new ObservableCollection<Node>
-        {
-            startNode,
-            processNode
-        };
 
-        diagram.Connectors = new ObservableCollection<Connector>
-        {
-            connector
-        };
+ Node node2 = new Node
+ {
+     Id = "node2",
+     OffsetX = 300,
+     OffsetY = 160,
+     Width = 120,
+     Height = 60,
+     Shape = new FlowShape()
+     {
+         Shape = NodeFlowShapes.PreDefinedProcess
+     },
+ };
+
+
+ node2.Style = style;
+
+ node2.Annotations.Add(
+  new ShapeAnnotation
+  {
+      Id = "Process",
+      Content = "Process",
+
+  });
+
+ diagram.Nodes.Add(node2);
+
+
+ Node node3 = new Node
+ {
+     Id = "node3",
+     OffsetX = 300,
+     OffsetY = 245,
+     Width = 40,
+     Height = 40,
+     Shape = new BasicShape()
+     {
+         Shape = NodeBasicShapes.Ellipse
+     },
+ };
+
+ node3.Style = style;
+
+ node3.Annotations.Add(
+  new ShapeAnnotation
+  {
+      Id = "End",
+      Content = "End",
+
+  });
+
+ diagram.Nodes.Add(node3);
+
+ Connector connector1 = new Connector
+ {
+     Id = "connector1",
+     SourceID = "node1",
+     TargetID = "node2",
+
+     
+ };
+ diagram.Connectors.Add(connector1);
+
+ Connector connector2 = new Connector
+ {
+     Id = "connector2",
+     SourceID = "node2",
+     TargetID = "node3",
+
+
+ };
+ diagram.Connectors.Add(connector2);
     }
 }
 ```
+![Add nodes and a connector](diagram_images/getting_started_nodes_and_connectors.png)
 
 `OffsetX` and `OffsetY` position the nodes on the diagram surface. `SourceID` and `TargetID` connect the connector to the corresponding node IDs.
 
@@ -162,6 +229,6 @@ When you run the application, the Diagram control displays two nodes positioned 
 
 ## Next steps
 
-- Learn about [nodes](nodes.md) and [connectors](connectors.md).
-- Connect nodes using [ports](ports.md).
-- Save and restore a diagram with [serialization](save-load.md).
+- Learn about [nodes](https://help.syncfusion.com/maui/diagram/nodes) and [connectors](https://help.syncfusion.com/maui/diagram/connectors).
+- Connect nodes using [ports](https://help.syncfusion.com/maui/diagram/ports).
+- Save and restore a diagram with [serialization](https://help.syncfusion.com/maui/diagram/save-load).

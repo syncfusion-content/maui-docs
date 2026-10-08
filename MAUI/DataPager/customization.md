@@ -151,6 +151,51 @@ this.Content = grid;
 
 <img alt="Button size and font size of .NET MAUI DataPager." src="Images\customization\net-maui-datapager-buttonsize-and-fontsize.png" width="404"/>
 
+## Customizing button spacing
+
+The `SfDataPager` buttons are loaded with a default spacing of 8. You can customize the button spacing by setting the desired values for the [SfDataPager.ButtonSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_ButtonSpacing).
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15" 
+                           ButtonSpacing="15"
+                           Source="{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.ButtonSpacing = 15;
+dataPager.Source = viewModel.Orders;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Button size and font size of .NET MAUI DataPager." src="Images\customization\net-maui-datapager-buttonspacing.png" width="404"/>
+
 ## Display mode
 
 The visibility of the numeric and navigation buttons can be personalized by using the [SfDataPager.DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_DisplayMode) property. The default value is `FirstLastPreviousNextNumeric`, which displays all navigation and numeric buttons.

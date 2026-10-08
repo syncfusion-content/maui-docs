@@ -5,6 +5,7 @@ description: Arc Layer in .NET MAUI Maps visualizes connections between geograph
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Arc Layer in .NET MAUI Maps
