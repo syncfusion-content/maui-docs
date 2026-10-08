@@ -473,7 +473,7 @@ public sealed class AzureOpenAIFormattingService : IAIFormattingService
 
 The important part of this service is the strict JSON contract. The AI model is instructed to return a consistent document schema without rewriting the user's original wording, which reduces parsing issues and makes the Rich Text Editor output predictable and faithful to the source text.
 
-N> Never hardcode a real Azure OpenAI API key in source code, as shown here for illustration only. Store the key securely, for example, in a secrets manager, environment variable, or secure configuration provider, and load it at runtime.
+N> Never add a real Azure OpenAI API key in source code, as shown here for illustration only. Store the key securely, for example, in a secrets manager, environment variable, or secure configuration provider, and load it at runtime.
 
 ## Step 6: Register the formatter and page in the app
 
