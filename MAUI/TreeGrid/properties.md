@@ -335,66 +335,66 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoGeneratingColumn" aria-label="View AutoGeneratingColumn event in API reference">AutoGeneratingColumn</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridAutoGeneratingColumnEventArgs.html" aria-label="View TreeGridAutoGeneratingColumnEventArgs type in API reference">TreeGridAutoGeneratingColumnEventArgs</a>&gt;</a></td>
-    <td>Fires while a column is being created automatically from the bound data, and the column can be customized before it appears.</td>
+    <td>Triggered while a column is being created automatically from the bound data, and the column can be customized before it appears.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSourceChanged" aria-label="View ItemsSourceChanged event in API reference">ItemsSourceChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridItemsSourceChangedEventArgs.html" aria-label="View TreeGridItemsSourceChangedEventArgs type in API reference">TreeGridItemsSourceChangedEventArgs</a>&gt;</a></td>
-    <td>Fires after the TreeGrid data source changes.</td>
+    <td>Triggered after the TreeGrid data source changes.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeCollapsed" aria-label="View NodeCollapsed event in API reference">NodeCollapsed</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeCollapsedEventArgs.html" aria-label="View TreeGridNodeCollapsedEventArgs type in API reference">TreeGridNodeCollapsedEventArgs</a>&gt;</a></td>
-    <td>Fires after a node finishes collapsing.</td>
+    <td>Triggered after a node finishes collapsing.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeCollapsing" aria-label="View NodeCollapsing event in API reference">NodeCollapsing</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeCollapsingEventArgs.html" aria-label="View TreeGridNodeCollapsingEventArgs type in API reference">TreeGridNodeCollapsingEventArgs</a>&gt;</a></td>
-    <td>Fires before a node collapses and can cancel the action.</td>
+    <td>Triggered before a node collapses and can cancel the action.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeExpanded" aria-label="View NodeExpanded event in API reference">NodeExpanded</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeExpandedEventArgs.html" aria-label="View TreeGridNodeExpandedEventArgs type in API reference">TreeGridNodeExpandedEventArgs</a>&gt;</a></td>
-    <td>Fires after a node finishes expanding.</td>
+    <td>Triggered after a node finishes expanding.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_NodeExpanding" aria-label="View NodeExpanding event in API reference">NodeExpanding</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNodeExpandingEventArgs.html" aria-label="View TreeGridNodeExpandingEventArgs type in API reference">TreeGridNodeExpandingEventArgs</a>&gt;</a></td>
-    <td>Fires before a node expands and can cancel the action.</td>
+    <td>Triggered before a node expands and can cancel the action.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html" aria-label="View TreeGridSelectionChangedEventArgs type in API reference">TreeGridSelectionChangedEventArgs</a>&gt;</a></td>
-    <td>Fires after the selected rows change.</td>
+    <td>Triggered after the selected rows change.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanging" aria-label="View SelectionChanging event in API reference">SelectionChanging</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangingEventArgs.html" aria-label="View TreeGridSelectionChangingEventArgs type in API reference">TreeGridSelectionChangingEventArgs</a>&gt;</a></td>
-    <td>Fires before the selected rows change and can cancel the action.</td>
+    <td>Triggered before the selected rows change and can cancel the action.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortColumnsChanged" aria-label="View SortColumnsChanged event in API reference">SortColumnsChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortColumnsChangedEventArgs.html" aria-label="View TreeGridSortColumnsChangedEventArgs type in API reference">TreeGridSortColumnsChangedEventArgs</a>&gt;</a></td>
-    <td>Fires after the sorted column collection changes.</td>
+    <td>Triggered after the sorted column collection changes.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortColumnsChanging" aria-label="View SortColumnsChanging event in API reference">SortColumnsChanging</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortColumnsChangingEventArgs.html" aria-label="View TreeGridSortColumnsChangingEventArgs type in API reference">TreeGridSortColumnsChangingEventArgs</a>&gt;</a></td>
-    <td>Fires before the sorted column collection changes and can cancel the action.</td>
+    <td>Triggered before the sorted column collection changes and can cancel the action.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_TreeGridLoaded" aria-label="View TreeGridLoaded event in API reference">TreeGridLoaded</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-    <td>Fires when the TreeGrid is fully loaded and ready for use.</td>
+    <td>Triggered when the TreeGrid is fully loaded and ready for use.</td>
 </tr>
 </table>
