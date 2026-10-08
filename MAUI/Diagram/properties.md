@@ -191,66 +191,67 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_CollectionChanged" aria-label="View CollectionChanged event in API reference">CollectionChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramCollectionChangedEventArgs.html" aria-label="View DiagramCollectionChangedEventArgs type in API reference">DiagramCollectionChangedEventArgs</a>&gt;</td>
-    <td>Reports node or connector additions and removals from the diagram, including changes made through the UI or through code.</td>
+    <td>Triggered when nodes or connectors are added to or removed from the diagram through the UI or code.
+3</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_ConnectionChanged" aria-label="View ConnectionChanged event in API reference">ConnectionChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramConnectorConnectionChangedEventArgs.html" aria-label="View DiagramConnectorConnectionChangedEventArgs type in API reference">DiagramConnectorConnectionChangedEventArgs</a>&gt;</td>
-    <td>Reports connector endpoint attachment, detachment, or rerouting between nodes or ports.</td>
+    <td>Triggered when a connector endpoint is attached, detached, or rerouted between nodes or ports.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_Created" aria-label="View Created event in API reference">Created</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
-    <td>Fires after the JavaScript diagram instance is ready for interaction.</td>
+    <td>Triggered after the JavaScript diagram instance is ready for interaction.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_JavaScriptError" aria-label="View JavaScriptError event in API reference">JavaScriptError</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramJavaScriptErrorEventArgs.html" aria-label="View DiagramJavaScriptErrorEventArgs type in API reference">DiagramJavaScriptErrorEventArgs</a>&gt;</td>
-    <td>Reports JavaScript failures from the hosted diagram page, such as load or payload errors.</td>
+    <td>Triggered when a JavaScript failure occurs in the hosted diagram page, such as a load or payload error.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_PositionChanged" aria-label="View PositionChanged event in API reference">PositionChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramNodePositionChangedEventArgs.html" aria-label="View DiagramNodePositionChangedEventArgs type in API reference">DiagramNodePositionChangedEventArgs</a>&gt;</td>
-    <td>Reports that a node has finished moving to a new position.</td>
+    <td>Triggered when a node has finished moving to a new position.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_RotationChanged" aria-label="View RotationChanged event in API reference">RotationChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramNodeRotationChangedEventArgs.html" aria-label="View DiagramNodeRotationChangedEventArgs type in API reference">DiagramNodeRotationChangedEventArgs</a>&gt;</td>
-    <td>Reports that a node has finished rotating.</td>
+    <td> Triggered when a node has finished rotating.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_SelectionChanged" aria-label="View SelectionChanged event in API reference">SelectionChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramSelectionChangedEventArgs.html" aria-label="View DiagramSelectionChangedEventArgs type in API reference">DiagramSelectionChangedEventArgs</a>&gt;</td>
-    <td>Reports selection changes for nodes or connectors.</td>
+    <td>Triggered when the selection of nodes or connectors changes.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_SizeChanged" aria-label="View SizeChanged event in API reference">SizeChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramNodeSizeChangedEventArgs.html" aria-label="View DiagramNodeSizeChangedEventArgs type in API reference">DiagramNodeSizeChangedEventArgs</a>&gt;</td>
-    <td>Reports selection changes for nodes or connectors.</td>
+    <td>Triggered when a node's size has changed.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_SourcePointChanged" aria-label="View SourcePointChanged event in API reference">SourcePointChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramConnectorSourcePointChangedEventArgs.html" aria-label="View DiagramConnectorSourcePointChangedEventArgs type in API reference">DiagramConnectorSourcePointChangedEventArgs</a>&gt;</td>
-    <td>Reports that a connector’s source endpoint has finished moving.</td>
+    <td>Triggered when a connector's source endpoint finishes moving.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_TargetPointChanged" aria-label="View TargetPointChanged event in API reference">TargetPointChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramConnectorTargetPointChangedEventArgs.html" aria-label="View DiagramConnectorTargetPointChangedEventArgs type in API reference">DiagramConnectorTargetPointChangedEventArgs</a>&gt;</td>
-    <td>Reports that a connector’s target endpoint has finished moving.</td>
+    <td>Triggered when a connector's target endpoint finishes moving.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_TextEdited" aria-label="View TextEdited event in API reference">TextEdited</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler</a>&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DiagramTextEditedEventArgs.html" aria-label="View DiagramTextEditedEventArgs type in API reference">DiagramTextEditedEventArgs</a>&gt;</td>
-    <td>Reports that a node or connector label edit has been committed.</td>
+    <td>Triggered when a node or connector label edit is committed.</td>
 </tr>
 </table>
