@@ -100,63 +100,6 @@ To apply custom style, follow the code example:
                                       NavigationButtonIconColor="#0077b6"
                                       NavigationButtonDisableBackgroundColor="#caf0f8"
                                       NavigationButtonDisableIconColor="#9a8c98">
-
-                    <pager:DataPagerStyle.FirstPageButtonTemplate>
-                        <DataTemplate>
-                            <Label Text="«"
-                                   FontSize="22"
-                                   TranslationY="-1"
-                                   FontAttributes="Bold"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   Margin="8,0" />
-                        </DataTemplate>
-                    </pager:DataPagerStyle.FirstPageButtonTemplate>
-
-                    <pager:DataPagerStyle.LastPageButtonTemplate>
-                        <DataTemplate>
-                            <Label Text="»"
-                                   FontSize="22"
-                                   FontAttributes="Bold"
-                                   TranslationY="-1"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   Margin="8,0" />
-                        </DataTemplate>
-                    </pager:DataPagerStyle.LastPageButtonTemplate>
-
-                    <pager:DataPagerStyle.PreviousPageButtonTemplate>
-                        <DataTemplate>
-                            <Label Text="‹"
-                                   FontSize="22"
-                                   FontAttributes="Bold"
-                                   TranslationY="-1"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   Margin="8,0" />
-                        </DataTemplate>
-                    </pager:DataPagerStyle.PreviousPageButtonTemplate>
-
-                    <pager:DataPagerStyle.NextPageButtonTemplate>
-                        <DataTemplate>
-                            <Label Text="›"
-                                   FontSize="22"
-                                   FontAttributes="Bold"
-                                   TranslationY="-1"
-                                   HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   Margin="8,0" />
-                        </DataTemplate>
-                    </pager:DataPagerStyle.NextPageButtonTemplate>
-
                 </pager:DataPagerStyle>
             </pager:SfDataPager.DefaultStyle>
         </pager:SfDataPager>
@@ -178,70 +121,6 @@ dataPagerStyle.NavigationButtonIconColor = Color.FromArgb("#0077B6");
 dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
 dataPagerStyle.NavigationButtonDisableIconColor = Color.FromArgb("#9A8C98");
 
-dataPagerStyle.FirstPageButtonTemplate = new DataTemplate(() =>
-{
-    return new Label
-    {
-        Text = "«",
-        FontSize = 22,
-        FontAttributes = FontAttributes.Bold,
-        TranslationY = -1,
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center,
-        Margin = new Thickness(8, 0)
-    };
-});
-
-dataPagerStyle.LastPageButtonTemplate = new DataTemplate(() =>
-{
-    return new Label
-    {
-        Text = "»",
-        FontSize = 22,
-        FontAttributes = FontAttributes.Bold,
-        TranslationY = -1,
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center,
-        Margin = new Thickness(8, 0)
-    };
-});
-
-dataPagerStyle.PreviousPageButtonTemplate = new DataTemplate(() =>
-{
-    return new Label
-    {
-        Text = "‹",
-        FontSize = 22,
-        FontAttributes = FontAttributes.Bold,
-        TranslationY = -1,
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center,
-        Margin = new Thickness(8, 0)
-    };
-});
-
-dataPagerStyle.NextPageButtonTemplate = new DataTemplate(() =>
-{
-    return new Label
-    {
-        Text = "›",
-        FontSize = 22,
-        FontAttributes = FontAttributes.Bold,
-        TranslationY = -1,
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        HorizontalOptions = LayoutOptions.Center,
-        VerticalOptions = LayoutOptions.Center,
-        Margin = new Thickness(8, 0)
-    };
-});
-
 dataPager.DefaultStyle = dataPagerStyle;
 
 Border border = new Border();
@@ -260,3 +139,339 @@ this.Content = grid;
 The following picture shows the customize styles of data pager:
 
 <img alt="DataPager style .NET MAUI DataPager." src="Images\appearance\net-maui-datapager-style.png" width="404"/>
+
+
+## Custom Template support for Navigation Buttons
+
+### First Page Button Template
+
+The `SfDataPager` allows you to customize the first page navigation button using the [SfDataPager.DefaultStyle.FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_FirstPageButtonTemplate) property.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" 
+            Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15" 
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.DefaultStyle >
+                <pager:DataPagerStyle NavigationButtonDisableBackgroundColor="#caf0f8"
+                                      NavigationButtonBackgroundColor="#90e0ef">
+                    <pager:DataPagerStyle.FirstPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="❮❮"
+                                   FontSize="20"
+                                   TranslationY="-1"
+                                   TranslationX="-1"
+                                   TextColor="#075985"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </pager:DataPagerStyle.FirstPageButtonTemplate>
+                </pager:DataPagerStyle>
+            </pager:SfDataPager.DefaultStyle>
+        </pager:SfDataPager>
+    </Border>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+DataPagerStyle dataPagerStyle = new DataPagerStyle();
+dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
+dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
+
+dataPagerStyle.FirstPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "❮❮",
+        FontSize = 20,
+        TranslationY = -1,
+        TranslationX = -1,
+        TextColor = Color.FromArgb("#075985"),
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+    };
+});
+
+dataPager.DefaultStyle = dataPagerStyle;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+### Previous Page Button Template
+
+The `SfDataPager` allows you to customize the previous page navigation button using the [SfDataPager.DefaultStyle.PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_PreviousPageButtonTemplate) property.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" 
+            Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15" 
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.DefaultStyle >
+                <pager:DataPagerStyle NavigationButtonDisableBackgroundColor="#caf0f8"
+                                      NavigationButtonBackgroundColor="#90e0ef">
+                    <pager:DataPagerStyle.PreviousPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="❮"
+                                   FontSize="20"
+                                   TranslationY="-1"
+                                   TranslationX="-1"
+                                   TextColor="#075985"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </pager:DataPagerStyle.PreviousPageButtonTemplate>
+                </pager:DataPagerStyle>
+            </pager:SfDataPager.DefaultStyle>
+        </pager:SfDataPager>
+    </Border>
+    
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+DataPagerStyle dataPagerStyle = new DataPagerStyle();
+dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
+dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
+
+dataPagerStyle.PreviousPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "❮",
+        FontSize = 20,
+        TranslationY = -1,
+        TranslationX = -1,
+        TextColor = Color.FromArgb("#075985"),
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+    };
+});
+
+dataPager.DefaultStyle = dataPagerStyle;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+### Next Page Button Template
+
+The `SfDataPager` allows you to customize the next page navigation button using the [SfDataPager.DefaultStyle.NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NextPageButtonTemplate) property.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" 
+            Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15" 
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.DefaultStyle >
+                <pager:DataPagerStyle NavigationButtonDisableBackgroundColor="#caf0f8"
+                                      NavigationButtonBackgroundColor="#90e0ef">
+                    <pager:DataPagerStyle.NextPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="❯"
+                                   FontSize="20"
+                                   TranslationY="-1"
+                                   TextColor="#075985"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </pager:DataPagerStyle.NextPageButtonTemplate>
+                </pager:DataPagerStyle>
+            </pager:SfDataPager.DefaultStyle>
+        </pager:SfDataPager>
+    </Border>
+    
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+DataPagerStyle dataPagerStyle = new DataPagerStyle();
+dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
+dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
+
+dataPagerStyle.NextPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "❯",
+        FontSize = 20,
+        TranslationY = -1,
+        TextColor = Color.FromArgb("#075985"),
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+    };
+});
+
+dataPager.DefaultStyle = dataPagerStyle;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+### Last Page Button Template
+
+The `SfDataPager` allows you to customize the last page navigation button using the [SfDataPager.DefaultStyle.LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_LastPageButtonTemplate) property.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" 
+            Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15" 
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.DefaultStyle >
+                <pager:DataPagerStyle NavigationButtonDisableBackgroundColor="#caf0f8"
+                                      NavigationButtonBackgroundColor="#90e0ef">
+                    <pager:DataPagerStyle.LastPageButtonTemplate>
+                        <DataTemplate>
+                            <Label Text="❯❯"
+                                   FontSize="20"
+                                   TranslationY="-1"
+                                   TextColor="#075985"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </pager:DataPagerStyle.LastPageButtonTemplate>
+                </pager:DataPagerStyle>
+            </pager:SfDataPager.DefaultStyle>
+        </pager:SfDataPager>
+    </Border>
+    
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+DataPagerStyle dataPagerStyle = new DataPagerStyle();
+dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
+dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
+
+dataPagerStyle.LastPageButtonTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "❯❯",
+        FontSize = 20,
+        TranslationY = -1,
+        TextColor = Color.FromArgb("#075985"),
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center,
+    };
+});
+
+dataPager.DefaultStyle = dataPagerStyle;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Customization of Navigation Button in .Net MAUI DataPager" src="Images\appearance\net-maui-datapager-navigation-button-template.png" width="404"/>

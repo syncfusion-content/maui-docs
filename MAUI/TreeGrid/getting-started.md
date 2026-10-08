@@ -332,6 +332,6 @@ The following screenshot shows the TreeGrid populated with sample data:
 
 <img src="Images\getting-started\net-maui-treegrid-getting-started.png" alt="Getting started with .NET MAUI Tree Grid" width="567">
 
-You can download the TreeGrid Getting Started sample from [GitHub]().
+You can download the TreeGrid Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TreeGrid).
 
 > **Note:** You can refer to our [.NET MAUI TreeGrid](https://www.syncfusion.com/maui-controls/maui-treegrid) feature tour page for its groundbreaking feature representations.
