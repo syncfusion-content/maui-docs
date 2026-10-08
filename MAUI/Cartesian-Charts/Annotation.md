@@ -622,7 +622,7 @@ this.Content = chart;
 
 ## Annotation Z-Index
 
-The [ZIndex]() property of [ChartAnnotation]() is used to control the rendering order of annotations. Annotations with a higher [ZIndex]() value are displayed above annotations with lower [ZIndex]() values. Setting [ZIndex]() to `-1` renders the annotation behind the chart series.
+The [ZIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_ZIndex) property of [ChartAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html) is used to control the rendering order of annotations. Annotations with a higher [ZIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_ZIndex) value are displayed above annotations with lower [ZIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_ZIndex) values. Setting [ZIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_ZIndex) to `-1` renders the annotation behind the chart series.
 
 {% tabs %}
 

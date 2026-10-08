@@ -323,7 +323,7 @@ private void OnImageLoaded(object sender, EventArgs e)
 
 ## Thumb size appearance customization
 
-Use the `AnnotationThumbSize` property to customize the size of the selection handles displayed around a selected annotation, improving visibility and touch interaction.
+Use the [`AnnotationThumbSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationThumbSize) property to customize the size of the selection handles displayed around a selected annotation, improving visibility and touch interaction.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" tabtitle="XAML" %}
@@ -345,4 +345,4 @@ this.Content = imageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-![Thumb size appearance customization](images/custom-view/imageeditor-Customview-thumb-customization.png)
+![Thumb size appearance customization](images/custom-view/imageeditor-Customview-thumb-customization.png){:width="320" height="550" .lazy .shadow-effect}

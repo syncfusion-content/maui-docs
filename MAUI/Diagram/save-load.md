@@ -2,31 +2,33 @@
 layout: post
 title: Save and Load in MAUI Diagram | Syncfusion®
 description: Learn how to save and restore diagram state in the Syncfusion® .NET MAUI Diagram control, including nodes, connectors, ports, and annotations.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
 
 # Save and load in .NET MAUI Diagram
 
+JSON serialization is the process of converting the state of an SfDiagram object into JSON format so that it can be stored or transmitted. The serialized JSON can be saved to a file, database, or memory and later used to reconstruct the diagram. The reverse process of recreating the diagram from JSON is called deserialization.
+
 The Diagram control supports saving the current diagram state and restoring it later. Serialization preserves nodes, connectors, ports, annotations, styles, and connector settings so users can resume their work after closing the application.
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Serialization examples assume that an `SfDiagram` instance named `diagram` is available.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler. Serialization examples assume that an [SfDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) instance named `diagram` is available.
 
-> **Note:** Visit the [save-load API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) for the package version you use to verify the exact `SaveDiagram` return type and the parameter accepted by `LoadDiagramAsync`.
+> **Note:** Visit the [save-load API reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) for the package version you use to verify the exact `SaveDiagram` return type and the parameter accepted by `LoadDiagram`.
 
 ---
 
-## Serialization members
+## Serialization methods
 
-The following members control serialization on `SfDiagram`.
+The following methods control serialization on `SfDiagram`.
 
 | Member | Description | Status |
 | --- | --- | --- |
-| `SaveDiagram` | Returns serialized diagram data. | Implemented (sync). |
-| `LoadDiagramAsync` | Restores the diagram from serialized data. | Implemented (async). |
+| [SaveDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_SaveDiagram) | Returns serialized diagram data. | Implemented. |
+| [LoadDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_LoadDiagram_System_String_) | Restores the diagram from serialized data. | Implemented. |
 
 ---
 
@@ -66,10 +68,12 @@ private void SaveButton_Clicked(object sender, EventArgs e)
 
 ## Load a diagram
 
-Use `LoadDiagramAsync` to restore a previously saved diagram.
+Use `LoadDiagram` to restore a previously saved diagram.
 
 ```csharp
-await diagram.LoadDiagramAsync(serializedData);
+
+// serializedData is the saved JSON file
+diagram.LoadDiagram(serializedData);
 ```
 
 ---
@@ -87,7 +91,7 @@ protected override async void OnAppearing()
 
     if (savedData is not null)
     {
-        await diagram.LoadDiagramAsync(savedData);
+        await diagram.LoadDiagram(savedData);
     }
 }
 ```
@@ -104,14 +108,13 @@ protected override async void OnAppearing()
 
 ## Best practices
 
-- Persist `SaveDiagram` data using the storage mechanism that fits your platform and security requirements.
-- Validate serialized data before calling `LoadDiagramAsync` to avoid restoring corrupt or outdated content.
-- Subscribe to `CollectionChanged` to detect modifications when implementing auto-save.
-- Call `FitToPage` after loading a diagram to make sure that all elements are visible.
+- Persist [SaveDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_SaveDiagram) data using the storage mechanism that fits your platform and security requirements.
+- Validate serialized data before calling [LoadDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_LoadDiagram_System_String_) to avoid restoring corrupt or outdated content.
+- Subscribe to [CollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_CollectionChanged) to detect modifications when implementing auto-save.
+- Call [FitToPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_FitToPage) after loading a diagram to make sure that all elements are visible.
 
 ---
 
 ## See also
 
-- [Diagram operations](diagram-operations.md)
-- [Events](events.md)
+- [Diagram operations](https://help.syncfusion.com/maui/diagram/getting-started)
