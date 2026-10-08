@@ -89,6 +89,7 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Describes who is typing and their intent, shaping the tone and relevance of AI-generated suggestions; required for AI-powered completions.</td>
 </tr>
+</table>
 
 ## Events
 
@@ -104,7 +105,4 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.TextChangedEventArgs.html" aria-label="View EventHandler type in API reference">EventHandler&lt;TextChangedEventArgs&gt;</a></td>
     <td>Triggered whenever the editor's text changes, with TextChangedEventArgs exposing the previous and new text values for comparison.</td>
 </tr>
-
-
-
 </table>
