@@ -89,6 +89,7 @@ documentation: ug
     <td><a href="https://learn.microsoft.com/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Describes who is typing and their intent, shaping the tone and relevance of AI-generated suggestions; required for AI-powered completions.</td>
 </tr>
+</table>
 
 ## Events
 
