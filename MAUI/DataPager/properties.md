@@ -210,18 +210,18 @@ keywords: .net maui datapager, .net maui sfdatapager, syncfusion datapager, data
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_OnDemandLoading" aria-label="View OnDemandLoading event in API reference">OnDemandLoading</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.OnDemandLoadingEventArgs.html" aria-label="View OnDemandLoadingEventArgs type in API reference">OnDemandLoadingEventArgs</a>&gt;</a></td>
-    <td>Raised when the pager needs data for the currently requested page in on-demand mode; use it to populate that page dynamically.</td>
+    <td>Triggered when the pager needs data for the currently requested page in on-demand mode; use it to populate that page dynamically.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PageChanged" aria-label="View PageChanged event in API reference">PageChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.PageChangedEventArgs.html" aria-label="View PageChangedEventArgs type in API reference">PageChangedEventArgs</a>&gt;</a></td>
-    <td>Raised after navigation completes and the pager has switched to a new page.</td>
+    <td>Triggered after navigation completes and the pager has switched to a new page.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PageChanging" aria-label="View PageChanging event in API reference">PageChanging</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.PageChangingEventArgs.html" aria-label="View PageChangingEventArgs type in API reference">PageChangingEventArgs</a>&gt;</a></td>
-    <td>Raised before the page switch begins; use it to validate the requested page change or cancel it.</td>
+    <td>Triggered before the page switch begins; use it to validate the requested page change or cancel it.</td>
 </tr>
 </table>
