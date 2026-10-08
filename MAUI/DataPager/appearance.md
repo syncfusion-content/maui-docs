@@ -120,7 +120,6 @@ dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
 dataPagerStyle.NavigationButtonIconColor = Color.FromArgb("#0077B6");
 dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
 dataPagerStyle.NavigationButtonDisableIconColor = Color.FromArgb("#9A8C98");
-
 dataPager.DefaultStyle = dataPagerStyle;
 
 Border border = new Border();
@@ -139,7 +138,6 @@ this.Content = grid;
 The following picture shows the customize styles of data pager:
 
 <img alt="DataPager style .NET MAUI DataPager." src="Images\appearance\net-maui-datapager-style.png" width="404"/>
-
 
 ## Custom Template support for Navigation Buttons
 
@@ -266,7 +264,6 @@ The `SfDataPager` allows you to customize the previous page navigation button us
             </pager:SfDataPager.DefaultStyle>
         </pager:SfDataPager>
     </Border>
-    
 </Grid>
 {% endhighlight %}
 {% highlight c# %}
@@ -349,7 +346,6 @@ The `SfDataPager` allows you to customize the next page navigation button using 
             </pager:SfDataPager.DefaultStyle>
         </pager:SfDataPager>
     </Border>
-    
 </Grid>
 {% endhighlight %}
 {% highlight c# %}
@@ -431,7 +427,6 @@ The `SfDataPager` allows you to customize the last page navigation button using 
             </pager:SfDataPager.DefaultStyle>
         </pager:SfDataPager>
     </Border>
-    
 </Grid>
 {% endhighlight %}
 {% highlight c# %}
