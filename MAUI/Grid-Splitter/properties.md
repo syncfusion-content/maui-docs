@@ -107,42 +107,42 @@ documentation: ug
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsed" aria-label="View Collapsed event in API reference">Collapsed</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneCollapsedEventArgs.html" aria-label="View GridSplitterPaneCollapsedEventArgs type in API reference">GridSplitterPaneCollapsedEventArgs</a>&gt;</a></td>
-    <td>Raised after a pane finishes collapsing.</td>
+    <td>Triggered after a pane finishes collapsing.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsing" aria-label="View Collapsing event in API reference">Collapsing</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneCollapsingEventArgs.html" aria-label="View GridSplitterPaneCollapsingEventArgs type in API reference">GridSplitterPaneCollapsingEventArgs</a>&gt;</a></td>
-    <td>Raised before a pane begins collapsing; use it to stop the collapse if needed.</td>
+    <td>Triggered before a pane begins collapsing; use it to stop the collapse if needed.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanded" aria-label="View Expanded event in API reference">Expanded</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneExpandedEventArgs.html" aria-label="View GridSplitterPaneExpandedEventArgs type in API reference">GridSplitterPaneExpandedEventArgs</a>&gt;</a></td>
-    <td>Raised after a pane finishes expanding.</td>
+    <td>Triggered after a pane finishes expanding.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanding" aria-label="View Expanding event in API reference">Expanding</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneExpandingEventArgs.html" aria-label="View GridSplitterPaneExpandingEventArgs type in API reference">GridSplitterPaneExpandingEventArgs</a>&gt;</a></td>
-    <td>Raised before a pane begins expanding; use it to stop the expansion if needed.</td>
+    <td>Triggered before a pane begins expanding; use it to stop the expansion if needed.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeEnded" aria-label="View ResizeEnded event in API reference">ResizeEnded</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizeEndedEventArgs.html" aria-label="View GridSplitterResizeEndedEventArgs type in API reference">GridSplitterResizeEndedEventArgs</a>&gt;</a></td>
-    <td>Raised when the user releases the separator after resizing.</td>
+    <td>Triggered when the user releases the separator after resizing.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeStarted" aria-label="View ResizeStarted event in API reference">ResizeStarted</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizeStartedEventArgs.html" aria-label="View GridSplitterResizeStartedEventArgs type in API reference">GridSplitterResizeStartedEventArgs</a>&gt;</a></td>
-    <td>Raised when the user presses on a separator to start resizing.</td>
+    <td>Triggered when the user presses on a separator to start resizing.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Resizing" aria-label="View Resizing event in API reference">Resizing</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizingEventArgs.html" aria-label="View GridSplitterResizingEventArgs type in API reference">GridSplitterResizingEventArgs</a>&gt;</a></td>
-    <td>Raised continuously while the separator is being dragged and pane sizes are changing.</td>
+    <td>Triggered continuously while the separator is being dragged and pane sizes are changing.</td>
 </tr>
 </table>
