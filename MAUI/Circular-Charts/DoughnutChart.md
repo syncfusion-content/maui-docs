@@ -181,3 +181,55 @@ this.Content = chart;
 {% endtabs %}
 
 ![Center view in .NET MAUI Circular Chart](Chart-Types_images/maui_center_View.png)
+
+## CapStyle customization
+
+The `CapStyle` property of the doughnut series is used to specify the shape of the start and end points of the circular segment. The default value of this property is `Both.Flat`.
+
+The following types are available for `CapStyle` property.
+
+ * [BothFlat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CapStyle.html#Syncfusion_Maui_Charts_CapStyle_BothFlat) - Start and end positions of the segment should be updated with a flat shape.
+
+ * [BothCurve](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CapStyle.html#Syncfusion_Maui_Charts_CapStyle_BothCurve) - Start and end positions of the segment should be updated with a curve shape.
+
+ * [StartCurve](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CapStyle.html#Syncfusion_Maui_Charts_CapStyle_StartCurve) - Start position of the segment should be updated with a curve shape.
+
+ * [EndCurve](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CapStyle.html#Syncfusion_Maui_Charts_CapStyle_EndCurve) - End position of the segment should be updated with a curve shape.
+
+ To achieve smoother curves when using CapStyle values, consider increasing the [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_InnerRadius) value. A higher InnerRadius reduces the radial thickness of the segment, allowing the Bezier curves to appear more natural and visually appealing.
+
+**BothCurve**
+
+You can customize the CapStyle property of the doughnut series based on its types.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+    <chart:DoughnutSeries ItemsSource="{Binding Data}" 
+                          XBindingPath="Product" 
+                          YBindingPath="SalesRate"
+                          CapStyle="BothCurve"
+                          InnerRadius="0.8"/>
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+DoughnutSeries series = new DoughnutSeries();
+series.ItemsSource = (new SalesViewModel()).Data;
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+series.CapStyle = CapStyle.BothCurve; // Set the cap style for the series
+series.InnerRadius = 0.8;
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
