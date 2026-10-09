@@ -143,7 +143,7 @@ The following picture shows the customize styles of data pager:
 
 ### First Page Button Template
 
-The `SfDataPager` allows you to customize the first page navigation button using the [SfDataPager.DefaultStyle.FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_FirstPageButtonTemplate) property.
+The `SfDataPager` allows you to customize the first page navigation button using the [DataPagerStyle.FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_FirstPageButtonTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -226,7 +226,7 @@ this.Content = grid;
 
 ### Previous Page Button Template
 
-The `SfDataPager` allows you to customize the previous page navigation button using the [SfDataPager.DefaultStyle.PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_PreviousPageButtonTemplate) property.
+The `SfDataPager` allows you to customize the previous page navigation button using the [DataPagerStyle.PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_PreviousPageButtonTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -309,7 +309,7 @@ this.Content = grid;
 
 ### Next Page Button Template
 
-The `SfDataPager` allows you to customize the next page navigation button using the [SfDataPager.DefaultStyle.NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NextPageButtonTemplate) property.
+The `SfDataPager` allows you to customize the next page navigation button using the [DataPagerStyle.NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NextPageButtonTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -390,7 +390,7 @@ this.Content = grid;
 
 ### Last Page Button Template
 
-The `SfDataPager` allows you to customize the last page navigation button using the [SfDataPager.DefaultStyle.LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_LastPageButtonTemplate) property.
+The `SfDataPager` allows you to customize the last page navigation button using the [DataPagerStyle.LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_LastPageButtonTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}
