@@ -64,7 +64,7 @@ The following table illustrates the predefined automation identifier patterns fo
 </tr>
 </table>
 
-### Setting AutomationId on DataGrid
+## Setting AutomationId on DataGrid
 
 The following code snippet demonstrates how to set the `AutomationId` property on the DataGrid control:
 
@@ -117,7 +117,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-### Accessing DataGrid Elements
+## Accessing DataGrid Elements
 
 The following code snippet demonstrates how to access DataGrid elements for UI automation:
 
