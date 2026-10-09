@@ -44,9 +44,9 @@ Example: NumericButton3
 </tr>
 </table>
 
-### Setting AutomationId on DataPager
+### Setting AutomationId on SfDataPager
 
-The following code snippet demonstrates how to set the `AutomationId` property on the DataPager control and bind it with a DataGrid:
+The following code snippet demonstrates how to set the `AutomationId` property on the SfDataPager control and bind it with a DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
