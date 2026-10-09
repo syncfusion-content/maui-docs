@@ -13,6 +13,8 @@ The Syncfusion® [.NET MAUI Grid Splitter](https://www.syncfusion.com/maui-contr
 
 The control supports both horizontal and vertical layouts, allowing developers to build dashboard-style interfaces, workspace layouts, editors, and business applications with adjustable content regions.
 
+![.NET MAUI grid splitter overview ](images/overview/grid-splitter.png)
+
 ## Business use cases
 
 - Dashboard applications that require dynamically resizable panels.

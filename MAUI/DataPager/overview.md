@@ -35,6 +35,59 @@ The Syncfusion® [.NET MAUI DataPager](https://www.syncfusion.com/maui-controls/
 - **Style customization** offers control over colors, templates, and visual appearance.
 - **Page change events** allow handling `PageChanging` and `PageChanged` for custom operations.
 
+## Globalization
+
+The following table summarizes the globalization support available in this control.
+
+<style>
+.img{
+  margin:0 !important;
+}
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
+</style>
+
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
+
+<table>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
+</tr>
+<tr>
+<td><a href="/maui/datapager/overview" aria-label="MAUI DataPager Control overview">DataPager</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+</tr> 
+</table>
+
 ## Related controls
 
 - [Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/overview) for app-wide navigation and quick access to different sections.
