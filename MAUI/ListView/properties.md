@@ -716,4 +716,3 @@ documentation: ug
     <td>Triggered <code>repeatedly</code> while an item is being swiped; marking it <code>handled</code> holds the item at the current offset until <code>SwipeEnded</code>.</td>
 </tr>
 </table>
-
