@@ -1642,6 +1642,7 @@ The `SfChat` allows you to target and fully customize views within the chat cont
 - [ChatImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatImageView.html) - Represents the image view of the Image message.
 - [MessageSuggestionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSuggestionView.html) - Represents a list view for displaying suggestions view specific to a message.
 - [ChatSuggestionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestionView.html) - Represents a list view for displaying chat suggestions.
+- [MessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageInputView.html) - Represents a template view for the footer part containing the editor, attachment button, and send button of the `SfChat`.
 
 {% tabs %}
 {% highlight xaml hl_lines="15 31" %}
@@ -1779,6 +1780,139 @@ namespace MauiChat
 
             Resources.Add(incomingStyle);
             Resources.Add(outgoingStyle);
+
+            Content = sfChat;
+            BindingContext = viewModel;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customizing the Chat Editor
+
+The [MessageInputView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageInputView.html) is the footer area of the `SfChat` control that contains the editor, the attachment button, and the send button. You can fully customize the appearance of the `MessageInputView` by writing a custom `ControlTemplate` and applying it through a style with `TargetType` set to `sfChat:MessageInputView`.
+
+The following example demonstrates how to customize the `MessageInputView`.
+{% tabs %}
+{% highlight xaml hl_lines="15" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:local="clr-namespace:MauiChat"
+             x:Class="MauiChat.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="sfChat:MessageInputView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border x:Name="typingAreaView"
+                                    Grid.Column="1"
+                                    Stroke="#CCCCCC"
+                                    StrokeThickness="1"
+                                    StrokeShape="RoundRectangle 22"
+                                    BackgroundColor="White"
+                                    Padding="14,6">
+                                <Editor x:Name="chatEditorView"
+                                        Placeholder="Type a message..."
+                                        AutoSize="TextChanges"
+                                        MinimumHeightRequest="40"
+                                        MaximumHeightRequest="120"
+                                        BackgroundColor="Transparent"
+                                        TextColor="#333333"
+                                        PlaceholderColor="#999999"
+                                        FontSize="14"
+                                        VerticalOptions="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                        Messages="{Binding Messages}"
+                        CurrentUser="{Binding CurrentUser}" />
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="24" %}
+
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class ContentViews : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public ContentViews()
+        {
+            InitializeComponent();
+
+            viewModel = new ViewModel();
+            sfChat = new SfChat
+            {
+                Messages = viewModel.Messages,
+                CurrentUser = viewModel.CurrentUser
+            };
+
+            Resources = new ResourceDictionary();
+
+            var messageInputViewStyle = new Style(typeof(MessageInputView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = MessageInputView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var border = new Border
+                            {
+                                Stroke = Color.FromArgb("#CCCCCC"),
+                                StrokeThickness = 1,
+                                StrokeShape = new Microsoft.Maui.Controls.Shapes.RoundRectangle { CornerRadius = new CornerRadius(22) },
+                                BackgroundColor = Colors.White,
+                                Padding = new Thickness(14, 6)
+                            };
+                            border.SetValue(Grid.ColumnProperty, 1);
+
+                            var editor = new Editor
+                            {
+                                Placeholder = "Type a message...",
+                                AutoSize = EditorAutoSizeOption.TextChanges,
+                                MinimumHeightRequest = 40,
+                                MaximumHeightRequest = 120,
+                                BackgroundColor = Colors.Transparent,
+                                TextColor = Color.FromArgb("#333333"),
+                                PlaceholderColor = Color.FromArgb("#999999"),
+                                FontSize = 14,
+                                VerticalOptions = LayoutOptions.Center
+                            };
+                            border.Content = editor;
+
+                            return border;
+                        })
+                    }
+                }
+            };
+
+            Resources.Add(messageInputViewStyle);
 
             Content = sfChat;
             BindingContext = viewModel;
