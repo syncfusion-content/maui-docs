@@ -47,6 +47,9 @@ The `DotPlacement` property controls where the dots are rendered for the rotator
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}

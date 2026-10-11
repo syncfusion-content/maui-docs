@@ -57,7 +57,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
     bool? newValue = e.NewValue;
     bool? oldValue = e.OldValue;
 
-    await DisplayAlert("Alert", "Switch State Changed", "Close");
+    await DisplayAlertAsync("Alert", "Switch State Changed", "Close");
 }
 
 {% endhighlight %}

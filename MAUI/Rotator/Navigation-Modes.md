@@ -55,6 +55,9 @@ When the strip mode is `Thumbnail`, each slider item is loaded as a thumbnail pr
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -142,6 +145,9 @@ When the strip mode is `Dots`, each slider item is represented by a small dot. W
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}
@@ -241,6 +247,9 @@ The following example sets the position to `Top`.
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 

@@ -51,6 +51,9 @@ N> By default, the `EnableAutoPlay` value is set to `false`.
             <Image  Source="{Binding Image}"/>
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -141,6 +144,9 @@ N> The property value should be in milliseconds. If `EnableAutoPlay` is `false`,
             <Image  Source="{Binding Image}"/>
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}
@@ -234,6 +240,9 @@ N> By default, the `EnableLooping` is set to `false`.
             <Image  Source="{Binding Image}"/>
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -322,6 +331,9 @@ To restrict the user interaction, the [`EnableSwiping`](https://help.syncfusion.
             <Image  Source="{Binding Image}"/>
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}

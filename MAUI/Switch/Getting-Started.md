@@ -153,7 +153,7 @@ this.Content = sfSwitch;
     
 private void OnSwitchStateChanged(object sender, SwitchStateChangedEventArgs e)
 {
-     DisplayAlert("Message", "SUCCESS", "OK");
+     DisplayAlertAsync("Message", "SUCCESS", "OK");
 }
 
 {% endhighlight %}
