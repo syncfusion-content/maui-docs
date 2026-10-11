@@ -77,49 +77,6 @@ If `IsEditable` is **false**:
 
 ![.NET MAUI NumericEntry without Clear Button](GettingStarted_images/clearbutton_collapsed.png)
 
-## Value changed notification
-
-The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChanged) event is raised when the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Value) property of the `Numeric Entry` control changes. The value is not updated while the user is typing. The value is updated after validation is performed on the Enter keypress or when the control loses focus. The `NumericEntryValueChangedEventArgs` passed to the handler exposes the following members:
-
-| Member | Type | Description |
-| --- | --- | --- |
-| `NewValue` | `double?` | The new value of the control. |
-| `OldValue` | `double?` | The previous value of the control. |
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumericEntry WidthRequest="200"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        ValueChanged="sfNumericEntry_ValueChanged" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
-sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-sfNumericEntry.ValueChanged += sfNumericEntry_ValueChanged;
-
-{% endhighlight %}
-{% endtabs %}
-
-You can handle the event as follows.
-
-{% tabs %}
-{% highlight C# %}
-
-private void sfNumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
-{
-    var oldValue = e.OldValue;
-    var newValue = e.NewValue;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Value Change Mode
 
 The [ValueChangeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ValueChangeMode) property determines when the value is updated. The supported modes are:
@@ -191,92 +148,13 @@ You can handle the event as follows.
 
 private void NumericEntry_ValueChanged(object sender, NumericEntryValueChangedEventArgs e)
 {
-    valueDisplay.Text = "$"+e.NewValue.ToString();;
+    valueDisplay.Text = "$"+e.NewValue.ToString();
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
-
-## Completed Event
-
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Completed) event is raised when the user finalizes the text in the [Numeric Entry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) in editable mode by pressing the Return key on the keyboard. The handler is a generic event handler that takes the `sender` and `EventArgs`.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumericEntry x:Name="numericEntry"
-                        WidthRequest="200"
-                        Value="153"
-                        Completed="numericEntry_Completed" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfNumericEntry numericEntry = new SfNumericEntry()
-{
-    WidthRequest = 200,
-    Value = 153,
-};
-numericEntry.Completed += numericEntry_Completed;
-this.Content = numericEntry;
-
-{% endhighlight %}
-{% endtabs %}
-
-The `Completed` event can be handled in C# as follows:
-
-{% tabs %}
-{% highlight C# %}
-
-private async void numericEntry_Completed(object sender, EventArgs e)
-{
-    await DisplayAlert("Message", "Text entering Completed", "OK");
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-
-## ClearButtonClicked Event
-
-The [ClearButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ClearButtonClicked) event is raised when the user activates the clear button in the `Numeric Entry` by tapping it. The handler is a generic event handler that takes the `sender` and `EventArgs`.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumericEntry x:Name="numericEntry"
-                        WidthRequest="200"
-                        Value="153"
-                        ClearButtonClicked="numericEntry_ClearButtonClicked" />
-
-{% endhighlight %}
-{% highlight C# %}
-
-SfNumericEntry numericEntry = new SfNumericEntry()
-{
-    WidthRequest = 200,
-    Value = 153,
-};
-numericEntry.ClearButtonClicked += numericEntry_ClearButtonClicked;
-this.Content = numericEntry;
-
-{% endhighlight %}
-{% endtabs %}
-
-The `ClearButtonClicked` event can be handled in C# as follows:
-
-{% tabs %}
-{% highlight C# %}
-
-private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
-{
-    await DisplayAlert("Message", "Clear Button Clicked", "OK");
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Stroke
 
@@ -497,7 +375,7 @@ public class CommandDemoViewModel
 
     private async void OnAlertCommandExecuted(string parameter)
     {
-        await Shell.Current.DisplayAlert("Alert", parameter, "OK");
+        await Shell.Current.DisplayAlertAsync("Alert", parameter, "OK");
     }
 }
 

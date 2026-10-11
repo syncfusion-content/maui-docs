@@ -97,7 +97,7 @@ private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEven
     if (sender is SfMaskedEntry entry && entry.HasError)
     {
         var page = Application.Current?.Windows[0]?.Page;
-        page?.DisplayAlert("Alert", "Please enter valid details", "OK");
+        page?.DisplayAlertAsync("Alert", "Please enter valid details", "OK");
     }
 }
 
