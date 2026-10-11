@@ -133,7 +133,8 @@ Assign the `ChipDataTemplateSelector` to the [`ItemTemplate`](https://help.syncf
 <chip:SfChipGroup x:Name="chipGroup"
                   ChipBackground="Transparent"
                   ItemsSource="{Binding Data}"
-                  ItemTemplate="{StaticResource selector}" />
+                  ItemTemplate="{StaticResource selector}">
+</chip:SfChipGroup>
 
 {% endhighlight %}
 {% highlight C# %}
