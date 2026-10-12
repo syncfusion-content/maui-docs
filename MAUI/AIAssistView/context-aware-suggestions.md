@@ -15,19 +15,44 @@ The generated suggestions are dynamically tailored based on the current AI respo
 
 ## Integrating Azure AI for Context-Aware Suggestions
 
-Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Complete the required Azure OpenAI setup and authentication process.
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
 
-The AI service receives the user's prompt and generates both:
+The `GetResultsFromAI` method sends the user's prompt to Azure OpenAI and retrieves an AI-generated response. In addition to the answer, the AI generates context-aware follow-up suggestions that help users continue the conversation naturally.
 
-* An AI response.
-* Context-aware follow-up suggestions related to the response.
-
-The following service model is used to return both the answer and suggested follow-up prompts.
+To ensure predictable and structured output, the AI model is instructed through a system prompt to return a JSON response containing both the generated answer and contextual suggestions.
 
 {% tabs %}
 {% highlight c# %}
 
-public class AIResponse
+public async Task<ContextSuggestionResponse?>GetResultsFromAI(string prompt)
+{
+    var client = CreateClient();
+
+    ChatClient chatClient = client.GetChatClient(DeploymentName);
+
+    var messages =  new List<ChatMessage>()
+                    {
+                        new SystemChatMessage(SystemPrompt),
+
+                        new UserChatMessage(prompt)
+                    };
+
+    ChatCompletion completion = await chatClient.CompleteChatAsync(messages);
+
+    string result = completion.Content[0].Text;
+
+    return JsonSerializer.Deserialize<ContextSuggestionResponse>(result);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following response model is used to deserialize the AI-generated answer and suggestions returned by Azure OpenAI.
+
+{% tabs %}
+{% highlight c# %}
+
+public class ContextSuggestionResponse
 {
     public string Answer { get; set; }
 
@@ -37,21 +62,34 @@ public class AIResponse
 {% endhighlight %}
 {% endtabs %}
 
-The `GetResponseAsync` method sends the user prompt to Azure OpenAI and retrieves the generated answer along with contextual suggestions.
+The AI behavior is controlled through prompt engineering. The following system prompt instructs the model to generate educational responses and return exactly four concise context-aware suggestions related to the current conversation.
 
 {% tabs %}
 {% highlight c# %}
 
-public async Task<AIResponse> GetResponseAsync(string prompt)
-{
-    var completion = await client.CompleteAsync(prompt);
+private const string SystemPrompt =
+"""
+You are an AI learning assistant.
 
-    return new AIResponse
-    {
-        Answer = completion.Answer,
-        Suggestions = completion.Suggestions
-    };
+Return JSON only.
+
+{
+  "answer":"response",
+  "suggestions":[
+     "suggestion1",
+     "suggestion2",
+     "suggestion3",
+     "suggestion4"
+  ]
 }
+Suggestions must:
+
+1. Be related to the response.
+2. Help users continue learning.
+3. Never repeat previous suggestions.
+4. Be less than 4 words each.
+5. Generate exactly 4 suggestions.
+""";
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,7 +282,7 @@ The initial suggestions displayed before the conversation begins can also be cus
 
 The following image demonstrates AI-generated responses with context-aware follow-up suggestions displayed directly beneath each response.
 
-![Demo for .NET MAUI AIAssistView Context Aware Suggestions](Images\maui-aiassistview-context-aware-suggestions.gif)
+![Demo for .NET MAUI AIAssistView Context Aware Suggestions](Images/ai-context-aware-suggestions/maui-aiassistview-context-aware-suggestions.gif)
 
 **Users can**:
 
@@ -254,7 +292,7 @@ The following image demonstrates AI-generated responses with context-aware follo
 * Continue conversations with minimal typing.
 * Provide feedback using built-in like and dislike actions.
 
-You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples).
+You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples/AIAssistView-Context-Aware-Suggestions).
 
 ## See also
 
