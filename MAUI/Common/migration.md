@@ -39,7 +39,7 @@ Syncfusion® Essential Studio® ships a dedicated .NET MAUI suite that replaces 
 | SfDatePicker | Syncfusion.Xamarin.SfPicker | [SfDatePicker](/maui/DatePicker/overview) | [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) |
 | SfDateTimePicker | Syncfusion.Xamarin.SfPicker | [SfDateTimePicker](/maui/DateTimePicker/overview) | [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker) |
 | SfDateTimeRangeNavigator | Syncfusion.Xamarin.SfChart | [SfDateTimeRangeSlider](/maui/DateTime-Range-Slider/overview) | [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) |
-| SfDiagram | Syncfusion.Xamarin.SfDiagram | Obsolete. Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview). | – |
+| SfDiagram | Syncfusion.Xamarin.SfDiagram | [SfDiagram](/maui/diagram/overview) | [Syncfusion.Maui.Diagram](https://www.nuget.org/packages/Syncfusion.Maui.Diagram)
 | SfDigitalGauge | Syncfusion.Xamarin.SfGauge | [SfDigitalGauge](/maui/digitalgauge/overview) | [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges) |
 | SfEffectsView | Syncfusion.Xamarin.Core | [SfEffectsView](/maui/Effects-View/Overview) | [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) |
 | SfExpander | Syncfusion.Xamarin.Expander | [SfExpander](/maui/Expander/overview) | [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) |
@@ -84,7 +84,6 @@ The following Xamarin.Forms controls have no direct Syncfusion® .NET MAUI count
 
 * **SfBorder** - Use the [.NET MAUI Border](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/border?view=net-maui-10.0) element.
 * **SfGradientView** - Use [.NET MAUI Gradients](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient?view=net-maui-10.0) (**LinearGradientBrush**, **RadialGradientBrush**).
-* **SfDiagram** - Use [Syncfusion® Blazor Diagram](https://help.syncfusion.com/diagram-sdk/blazor/overview) hosted in the .NET MAUI application.
 
 ## Notes on specific migrations
 
