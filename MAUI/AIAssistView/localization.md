@@ -89,6 +89,10 @@ documentation: ug
 <td>My Chats</td>
 </tr>
 <tr>
+<td>ConversationHistoryNewChat</td>
+<td>New chat</td>
+</tr>
+<tr>
 <td> AgentsTitle </td>
 <td> Agents </td>
 </tr>
