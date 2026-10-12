@@ -45,6 +45,8 @@ The agent must emit component IDs and properties supported by the catalog regist
 
 The sample implements a prompt-and-render flow:
 
+![A2UI agent integration workflow for .NET MAUI](./images/ai-integration-workflow.png)
+
 1. The user enters a request in the Composer workspace.
 2. The MAUI app sends a JSON-RPC 2.0 `message/send` request to the Composer Agent. The request includes the current conversation history and, for follow-up prompts, the current A2UI surface as context.
 3. The agent returns an A2A response. The app extracts A2UI messages from the response's artifacts, status message, or result message.
