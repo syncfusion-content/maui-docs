@@ -10,7 +10,7 @@ keywords: .net maui interactiveviewer, image view maui.
 
 # Getting Started with .NET MAUI Interactive Viewer
 
-This section provides a quick overview of how to get started with the `.NET MAUI Interactive Viewer (SfInteractiveViewer)` and a walkthrough to configure the control in a real-time scenario. Follow the steps below to add the .NET MAUI Interactive Viewer control to your project.
+This section provides a quick overview of how to get started with the [`.NET MAUI Interactive Viewer (SfInteractiveViewer)`](https://www.syncfusion.com/maui-controls/maui-interactive-viewer) and a walkthrough to configure the control in a real-time scenario. Follow the steps below to add the .NET MAUI Interactive Viewer control to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Interactive Viewer NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for **Syncfusion.Maui.InteractiveViewer** and install the latest version.
+2. Search for [`Syncfusion.Maui.InteractiveViewer`](https://www.nuget.org/packages/Syncfusion.Maui.InteractiveViewer) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -79,7 +79,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Interactive Viewer NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for **Syncfusion.Maui.InteractiveViewer** and install the latest version.
+2. Search for [`Syncfusion.Maui.InteractiveViewer`](https://www.nuget.org/packages/Syncfusion.Maui.InteractiveViewer) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}
@@ -121,7 +121,7 @@ using Syncfusion.Maui.InteractiveViewer;
 
 ## Step 5: Add the Interactive Viewer component
 
-Initialize the SfInteractiveViewer to display and interact with any .NET MAUI view.
+Initialize the [SfInteractiveViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html) to display and interact with any .NET MAUI view.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}

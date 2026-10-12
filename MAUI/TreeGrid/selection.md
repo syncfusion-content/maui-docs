@@ -10,7 +10,7 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Selection in .NET MAUI TreeGrid
 
-The MAUI TreeGrid `SfTreeGrid` allows you to select one or more rows based on the `SelectionMode` property.
+The MAUI TreeGrid [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.html)  allows you to select one or more rows based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionMode) property.
 
 ## Selection Modes
 
@@ -57,7 +57,7 @@ this.Content = treeGrid;
 
 ## Getting selected rows
 
-The `SfTreeGrid` provides `SelectedIndex`, `SelectedRow`, and `SelectedRows` properties to get details of selected rows when the selection mode is Single, Multiple, and SingleDeselect.
+The `SfTreeGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectedIndex), [SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectedRow), and [SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectedRows) properties to get details of selected rows when the selection mode is Single, Multiple, and SingleDeselect.
 
 `SfTreeGrid.SelectedIndex` : Provides the row index of `SfTreeGrid.SelectedRow`. Denotes the index of the first selected row in multiple selections.
 
@@ -115,7 +115,7 @@ public partial class MainPage : ContentPage
 
 ### Select All Rows
 
-Select all rows in the TreeGrid using the `SelectAll()` method.
+Select all rows in the TreeGrid using the [SelectAll()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectAll) method.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -139,7 +139,7 @@ public partial class MainPage : ContentPage
 
 ## Clear Selection
 
-The TreeGrid allows you to clear selection either by setting the `SelectionMode` to None or by calling the `ClearSelection()` method.
+The TreeGrid allows you to clear selection either by setting the `SelectionMode` to None or by calling the [ClearSelection()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ClearSelection) method.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -165,7 +165,7 @@ The TreeGrid provides the following events for selection:
 
 ### SelectionChanging
 
-This event is raised before the selection is changed. It allows you to cancel the selection operation by setting the `Cancel` property of `TreeGridSelectionChangingEventArgs`.
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanging) event is raised before the selection is changed. It allows you to cancel the selection operation by setting the `Cancel` property of [TreeGridSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangingEventArgs.html).
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -189,12 +189,12 @@ public partial class MainPage : ContentPage
 
 This event is raised after a row is selected.
 
-The `TreeGridSelectionChangedEventArgs` contains the following properties:
+The [TreeGridSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html) contains the following properties:
 
-- `AddedRows` : Gets the collection of rows added to the selection.
-- `RemovedRows` : Gets the collection of rows removed from the selection.
+- [AddedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridSelectionChangedEventArgs_AddedRows) : Gets the collection of rows added to the selection.
+- [RemovedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridSelectionChangedEventArgs_RemovedRows) : Gets the collection of rows removed from the selection.
 
-To get the selected item in the `SelectionChanged` event:
+To get the selected item in the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanged) event:
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -221,7 +221,7 @@ public partial class MainPage : ContentPage
 
 ### Selected Row Styling
 
-Change the selection background color and text color of selected rows using the `SelectionBackground` and `SelectedRowTextColor` properties.
+Change the selection background color and text color of selected rows using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_SelectedRowTextColor) properties.
 
 {% tabs %}
 {% highlight xaml %}

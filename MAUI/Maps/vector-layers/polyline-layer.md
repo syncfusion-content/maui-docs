@@ -5,6 +5,7 @@ description: Polylines Layer in .NET MAUI Maps displays connected line paths bet
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polylines Layer in .NET MAUI Maps

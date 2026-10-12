@@ -20,6 +20,18 @@ appliesto: UI Component Suite, Chart SDK
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_ActualMaximum" aria-label="View ActualMaximum property in API reference">ActualMaximum</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Retrieves the <code>maximum value</code> of the DateTimeAxis.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_ActualMinimum" aria-label="View ActualMinimum property in API reference">ActualMinimum</a></td>
+    <td><a href="https://learn.microsoft.com/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
+    <td>Retrieves the <code>minimum value</code> of the DateTimeAxis.</td>
+</tr>
+
+<tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingDelta" aria-label="View AutoScrollingDelta property in API reference">AutoScrollingDelta</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View double type in API reference">double</a></td>
 <td>Maintains a fixed <code>visible range of time</code> on the axis, automatically scrolling the chart as new data is added.</td>

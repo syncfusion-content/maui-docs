@@ -10,7 +10,7 @@ keywords : maui datapager, datapager appearance, datapager style, customize appe
 
 # Appearance in .NET MAUI DataPager
 
-The DataPager allows you to change its appearance by modifying the properties of [DataPagerStyle]() and then assigning it to the `SfDataPager.DefaultStyle` property.
+The DataPager allows you to change its appearance by modifying the properties of [DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html) and then assigning it to the `SfDataPager.DefaultStyle` property.
 
 ## Customizing appearance
 
@@ -22,55 +22,55 @@ The `SfDataPager` enables customization of its appearance using the following pr
 <th> Description </th>
 </tr>
 <tr>
-<td> {{'`DataPagerBackgroundColor`'| markdownify }} </td>
+<td> {{'[DataPagerBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_DataPagerBackgroundColor)'| markdownify }} </td>
 <td> Gets or sets the background color of the SfDataPager.</td>
 </tr>
 <tr>
-<td> {{'`NavigationButtonBackgroundColor`'| markdownify }} </td>
+<td> {{'[NavigationButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NavigationButtonBackgroundColor)'| markdownify }} </td>
 <td> Gets or sets the background color of the navigation buttons.</td>
 </tr>
 <tr>
-<td> {{'`NavigationButtonDisableBackgroundColor`'| markdownify }} </td>
+<td> {{'[NavigationButtonDisableBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NavigationButtonDisableBackgroundColor)'| markdownify }} </td>
 <td> Gets or sets the background color of the navigation buttons when it is disabled.</td>
 </tr>
 <tr>
-<td> {{'`NavigationButtonDisableIconColor`'| markdownify }} </td>
+<td> {{'[NavigationButtonDisableIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NavigationButtonDisableIconColor)'| markdownify }} </td>
 <td> Gets or sets the icon color of the navigation buttons when it is disabled.</td>
 </tr>
 <tr>
-<td> {{'`NavigationButtonIconColor`'| markdownify }} </td>
+<td> {{'[NavigationButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NavigationButtonIconColor)'| markdownify }} </td>
 <td> Gets or sets the icon color of the navigation buttons.</td>
 </tr>
 <tr>
-<td> {{'`NumericButtonBackgroundColor`'| markdownify }} </td>
+<td> {{'[NumericButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NumericButtonBackgroundColor)'| markdownify }} </td>
 <td> Gets or sets the background color for the numeric buttons.</td>
 </tr>
 <tr>
-<td> {{'`NumericButtonSelectionBackgroundColor`'| markdownify }} </td>
+<td> {{'[NumericButtonSelectionBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NumericButtonSelectionBackgroundColor)'| markdownify }} </td>
 <td> Gets or sets the background color of the numeric button that is currently selected.</td>
 </tr>
 <tr>
-<td> {{'`NumericButtonSelectionTextColor`'| markdownify }} </td>
+<td> {{'[NumericButtonSelectionTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NumericButtonSelectionTextColor)'| markdownify }} </td>
 <td> Gets or sets the text color of the numeric button that is currently selected.</td>
 </tr>
 <tr>
-<td> {{'`NumericButtonTextColor`'| markdownify }} </td>
+<td> {{'[NumericButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NumericButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the text color of the numeric buttons.</td>
 </tr>
 <tr>
-<td> {{'`FirstPageButtonTemplate`'| markdownify }} </td>
+<td> {{'[FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_FirstPageButtonTemplate)'| markdownify }} </td>
 <td> Gets or sets the template for the first page navigation button.</td>
 </tr>
 <tr>
-<td> {{'`LastPageButtonTemplate`'| markdownify }} </td>
+<td> {{'[LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_LastPageButtonTemplate)'| markdownify }} </td>
 <td> Gets or sets the template for the last page navigation button.</td>
 </tr>
 <tr>
-<td> {{'`NextPageButtonTemplate`'| markdownify }} </td>
+<td> {{'[NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_NextPageButtonTemplate)'| markdownify }} </td>
 <td> Gets or sets the template for the next page navigation button.</td>
 </tr>
 <tr>
-<td> {{'`PreviousPageButtonTemplate`'| markdownify }} </td>
+<td> {{'[PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html#Syncfusion_Maui_DataPager_DataPagerStyle_PreviousPageButtonTemplate)'| markdownify }} </td>
 <td> Gets or sets the template for the previous page navigation button.</td>
 </tr>
 </table>

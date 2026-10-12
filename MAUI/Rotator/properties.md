@@ -79,15 +79,15 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonBackground" aria-label="View NavigationButtonBackground property in API reference">NavigationButtonBackground</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonBackgroundColor" aria-label="View NavigationButtonBackground property in API reference">NavigationButtonBackground</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
     <td>Customizes the background appearance of the previous and next navigation buttons.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonIcon" aria-label="View NavigationButtonIcon property in API reference">NavigationButtonIcon</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
-    <td>Replaces the default navigation button icon with custom imagery.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationButtonIconColor" aria-label="View NavigationButtonIconColor property in API reference">NavigationButtonIconColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Gets or sets the color of the navigation button icons.</td>
 </tr>
 
 <tr valign="top">

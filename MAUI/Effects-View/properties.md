@@ -161,7 +161,7 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_Microsoft_Maui_Graphics_Point_System_Boolean_" aria-label="View ApplyEffects(SfEffects, RippleStartPosition, Nullable&lt;Point&gt;, Boolean) method in API reference">ApplyEffects(SfEffects, RippleStartPosition, Nullable&lt;Point&gt;, Boolean)</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ApplyEffects_Syncfusion_Maui_Core_SfEffects_Syncfusion_Maui_Core_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_" aria-label="View ApplyEffects(SfEffects, RippleStartPosition, Nullable&lt;Point&gt;, Boolean) method in API reference">ApplyEffects(SfEffects, RippleStartPosition, Nullable&lt;Point&gt;, Boolean)</a></td>
     <td><a href="https://learn.microsoft.com/dotnet/api/system.void" aria-label="View Void type in API reference">void</a></td>
     <td>Applies the specified <code>effect</code>, controls the <code>ripple start position</code> using a supported <code>RippleStartPosition</code> value such as <code>Default</code>, <code>TouchCenter</code>, <code>TopLeft</code>, <code>TopRight</code>, <code>BottomLeft</code>, or <code>BottomRight</code>, optionally overrides the <code>touch origin</code> with a specific <code>point</code>, and configures whether the <code>effect animates</code>.</td>
 </tr>

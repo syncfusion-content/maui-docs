@@ -10,15 +10,15 @@ keywords: .net maui polar chart axis range style, polar chart range styles maui,
 
 # Axis Range Styles in .NET MAUI Polar Chart
 
-The [RangeStyles]() property allows you to customize the appearance of individual axis elements within a specified range.
+The [RangeStyles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_RangeStyles) property allows you to customize the appearance of individual axis elements within a specified range.
 
-The following axis elements can be customized using [ChartAxisRangeStyle]():
+The following axis elements can be customized using [ChartAxisRangeStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html):
 
-- [MajorGridLineStyle]()
-- [MinorGridLineStyle]()
-- [MajorTickStyle]()
-- [MinorTickStyle]()
-- [LabelStyle]()
+- [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html#Syncfusion_Maui_Charts_ChartAxisRangeStyle_MajorGridLineStyle)
+- [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html#Syncfusion_Maui_Charts_ChartAxisRangeStyle_MinorGridLineStyle)
+- [MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html#Syncfusion_Maui_Charts_ChartAxisRangeStyle_MajorTickStyle)
+- [MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html#Syncfusion_Maui_Charts_ChartAxisRangeStyle_MinorTickStyle)
+- [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisRangeStyle.html#Syncfusion_Maui_Charts_ChartAxisRangeStyle_LabelStyle)
 
 The following example demonstrates how to customize major and minor grid lines within specific axis ranges.
 

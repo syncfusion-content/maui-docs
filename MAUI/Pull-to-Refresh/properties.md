@@ -130,3 +130,31 @@ documentation: ug
     <td>Starts the <code>refresh operation</code> <code>programmatically</code>, <code>triggering</code> the <code>refresh sequence</code> without requiring a <code>pull gesture</code>.</td>
 </tr>
 </table>
+
+## Events
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Pulling" aria-label="View Pulling event in API reference">Pulling</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.PullingEventArgs.html" aria-label="View PullingEventArgs type in API reference">PullingEventArgs</a>&gt;</a></td>
+    <td>Triggered while the <code>pulling operation</code> is in progress, providing details about the current <code>pull gesture</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshed" aria-label="View Refreshed event in API reference">Refreshed</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventargs?view=net-10.0" aria-label="View EventArgs type in API reference">EventArgs</a>&gt;</a></td>
+    <td>Triggered after the <code>refreshing operation</code> completes.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html#Syncfusion_Maui_PullToRefresh_SfPullToRefresh_Refreshing" aria-label="View Refreshing event in API reference">Refreshing</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventargs?view=net-10.0" aria-label="View EventArgs type in API reference">EventArgs</a>&gt;</a></td>
+    <td>Triggered when the <code>refreshing operation</code> starts.</td>
+</tr>
+</table>

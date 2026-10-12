@@ -5,6 +5,7 @@ title: Accessibility in .NET MAUI Cartesian Charts | Syncfusion®
 description: Accessibility in Syncfusion® .NET MAUI Cartesian Chart provides inclusive navigation and screen reader announcements support.
 control: SfCartesianChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Accessibility in .NET MAUI Cartesian Charts
@@ -60,12 +61,28 @@ N> Accessibility support for chart segment navigation and screen reader announce
 
 ## Enable Accessibility
 To enable accessibility support on your device:
-| Platform | Steps |
-|----------|-------|
-| **Android** | Settings → Accessibility → TalkBack → Toggle "On" |
-| **Windows** | Settings → Accessibility → Turn on Narrator (or press Windows key + Enter) |
-| **iOS** | Settings → Accessibility → VoiceOver → Toggle "On" |
-| **macOS** | System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver" |
+<table>
+<tr>
+<th>Platform</th>
+<th>Steps</th>
+</tr>
+<tr>
+<td><b>Android</b></td>
+<td>Settings → Accessibility → TalkBack → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>Windows</b></td>
+<td>Settings → Accessibility → Turn on Narrator (or press Windows key + Enter)</td>
+</tr>
+<tr>
+<td><b>iOS</b></td>
+<td>Settings → Accessibility → VoiceOver → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>macOS</b></td>
+<td>System Preferences → Accessibility → VoiceOver → Check "Enable VoiceOver"</td>
+</tr>
+</table>
 
 ## Keyboard Navigation
 

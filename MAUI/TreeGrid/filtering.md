@@ -10,11 +10,11 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Filtering in .NET MAUI Tree Grid
 
-Filtering is the process of retrieving values from a collection that satisfy specified conditions. The [SfTreeGrid]() provides programmatic filtering through predicates.
+Filtering is the process of retrieving values from a collection that satisfy specified conditions. The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides programmatic filtering through predicates.
 
 ## Filter Level
 
-You can filter nodes by level using the [SfTreeGrid.FilterLevel]() property.
+You can filter nodes by level using the [SfTreeGrid.FilterLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_FilterLevel) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -59,7 +59,7 @@ Programmatic filtering allows you to apply custom filter predicates directly in 
 
 ### View Filtering
 
-The `SfTreeGrid` supports filtering records by setting the [SfTreeGrid.View.Filter]() property to a filter predicate.
+The `SfTreeGrid` supports filtering records by setting the [SfTreeGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridView.html#Syncfusion_Maui_TreeGrid_TreeGridView_Filter) property to a filter predicate.
 
 > **Note:** The View property is automatically initialized when ItemsSource is set on the TreeGrid. Ensure that the TreeGrid has loaded and that ItemsSource is assigned before accessing the View.
 

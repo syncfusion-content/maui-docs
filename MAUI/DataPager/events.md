@@ -14,7 +14,7 @@ The DataPager control provides events that allow you to handle page changes and 
 
 ## PageChanging
 
-The [PageChanging]() event is triggered when the user navigation from one page to another page begins. [SfDataPager.PageChangingEventArgs]() contains the following members, which provide information for the `PageChanging` event:
+The [PageChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PageChanging) event is triggered when the user navigation from one page to another page begins. [SfDataPager.PageChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.PageChangingEventArgs.html) contains the following members, which provide information for the `PageChanging` event:
 
 * **OldPageIndex** - Gets the current page index from which the page is navigating.
 * **NewPageIndex** - Gets the new page index to which the page is navigating.
@@ -71,7 +71,7 @@ private void DataPager_PageChanging(object sender, Syncfusion.Maui.DataPager.Pag
 
 ## PageChanged
  
-The [PageChanged]() event is triggered when the user navigates from one page to another page. [SfDataPager.PageChangedEventArgs]() contains the following members, which provide information for the `PageChanged` event:
+The [PageChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PageChanged) event is triggered when the user navigates from one page to another page. [SfDataPager.PageChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.PageChangedEventArgs.html) contains the following members, which provide information for the `PageChanged` event:
 
 * **OldPageIndex** - Gets the current page index from which the page is navigated.
 * **NewPageIndex** - Gets the new page index to which the page is navigated.

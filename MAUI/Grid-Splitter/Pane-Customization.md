@@ -9,13 +9,13 @@ documentation: UG
 
 # Pane Customization in .NET MAUI Grid Splitter
 
-The [SplitterPane]() class represents an individual pane within the [SfGridSplitter]() control. Each pane can host custom content and provides several properties to control its appearance and behavior.
+The [SplitterPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html) class represents an individual pane within the [SfGridSplitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control. Each pane can host custom content and provides several properties to control its appearance and behavior.
 
 The following sections describe the pane customization options available in the Grid Splitter control.
 
 ## Content
 
-The `Content` property allows you to display any .NET MAUI view inside a pane. A pane can host controls such as labels, images, layouts, charts, data grids, editors, or any custom view.
+The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_Content) property allows you to display any .NET MAUI view inside a pane. A pane can host controls such as labels, images, layouts, charts, data grids, editors, or any custom view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -114,7 +114,7 @@ Content = gridSplitter;
 
 ## Background
 
-The `Background` property customizes the pane background using a `Brush`.
+The [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_Background) property customizes the pane background using a `Brush`.
 
 ### Set a solid background color
 
@@ -279,7 +279,7 @@ Content = gridSplitter;
 
 ## IsCollapsible
 
-The `IsCollapsible` property determines whether a pane can be expanded or collapsed by the user.
+The [IsCollapsible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsible) property determines whether a pane can be expanded or collapsed by the user.
 
 The default value is `true`.
 
@@ -421,7 +421,7 @@ Content = gridSplitter;
 
 ## IsResizable
 
-The `IsResizable` property controls whether a pane can participate in drag-based resizing.
+The [IsResizable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsResizable) property controls whether a pane can participate in drag-based resizing.
 
 The default value is `true`.
 
@@ -566,7 +566,7 @@ This is useful when certain regions must maintain a fixed layout while allowing 
 
 ## IsCollapsed
 
-The `IsCollapsed` property specifies whether a pane is currently collapsed.
+The [IsCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsed) property specifies whether a pane is currently collapsed.
 
 The default value is `false`.
 
@@ -680,7 +680,7 @@ private async void ExpandPaneClicked(object sender, EventArgs e)
 
 ### Two-way data binding
 
-The `IsCollapsed` property supports two-way binding, allowing the pane state to be synchronized with a view model.
+The [IsCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsed) property supports two-way binding, allowing the pane state to be synchronized with a view model.
 
 {% tabs %}
 {% highlight xaml %}

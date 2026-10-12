@@ -15,8 +15,8 @@ The Syncfusion® A2UI for .NET MAUI package converts streamed [A2UI v0.9](https:
 
 The runtime is composed of two NuGet packages:
 
-- `Syncfusion.A2UI.Core` - the framework-agnostic A2UI v0.9 engine.
-- `Syncfusion.Maui.A2UI` - the .NET MAUI renderer that adds Syncfusion® .NET MAUI control adapters on top of the engine. When you register the combined catalog via `UseA2UIWithSyncfusionComponents()`, it transitively brings in every Syncfusion® MAUI control package it depends on (`Syncfusion.Maui.DataGrid`, `Syncfusion.Maui.Charts`, `Syncfusion.Maui.Scheduler`, `Syncfusion.Maui.Core`, and more).
+- [Syncfusion.A2UI.Core](https://www.nuget.org/packages/Syncfusion.A2UI.Core) - the framework-agnostic A2UI v0.9 engine.
+- [Syncfusion.Maui.A2UI](https://www.nuget.org/packages/Syncfusion.Maui.A2UI) - the .NET MAUI renderer that adds Syncfusion® .NET MAUI control adapters on top of the engine. When you register the combined catalog via `UseA2UIWithSyncfusionComponents()`, it transitively brings in every Syncfusion® MAUI control package it depends on (`Syncfusion.Maui.DataGrid`, `Syncfusion.Maui.Charts`, `Syncfusion.Maui.Scheduler`, `Syncfusion.Maui.Core`, and more).
 
 > Syncfusion® A2UI for .NET MAUI is currently in **preview (beta)** and will be published on NuGet under the package `Syncfusion.Maui.A2UI` (with `Syncfusion.A2UI.Core` as a transitive dependency).
 
@@ -39,7 +39,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI A2UI NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for `Syncfusion.Maui.A2UI` and install the latest version.
+2. Search for [Syncfusion.Maui.A2UI](https://www.nuget.org/packages/Syncfusion.Maui.A2UI) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -87,7 +87,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI A2UI NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for `Syncfusion.Maui.A2UI` and install the latest version.
+2. Search for [Syncfusion.Maui.A2UI](https://www.nuget.org/packages/Syncfusion.Maui.A2UI) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}

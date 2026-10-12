@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Grid Splitter
 
-This section guides you through setting up and configuring a [Grid Splitter]() in your .NET MAUI application. Follow the steps below to add a basic Grid Splitter and create resizable panes within your application.
+This section guides you through setting up and configuring a [Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) in your .NET MAUI application. Follow the steps below to add a basic Grid Splitter and create resizable panes within your application.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -134,7 +134,7 @@ using Syncfusion.Maui.GridSplitter;
 
 ## Step 5: Add a Grid Splitter with resizable panes
 
-The [SfGridSplitter]() control manages multiple panes through the `SplitterPanes` collection. Each `SplitterPane` can host any .NET MAUI view and users can resize adjacent panes by dragging the separator.
+The [SfGridSplitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control manages multiple panes through the [SplitterPanes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_SplitterPanes) collection. Each [SplitterPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html) can host any .NET MAUI view and users can resize adjacent panes by dragging the separator.
 
 The following example creates a horizontal Grid Splitter with three resizable panes.
 

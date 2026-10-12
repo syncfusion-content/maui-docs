@@ -9,11 +9,11 @@ documentation: ug
 
 # Reset in .NET MAUI Interactive Viewer
 
-The `.NET MAUI Interactive Viewer` provides a built-in reset capability that allows users to quickly restore the content view to its original state after performing zoom and pan operations.
+The [`.NET MAUI Interactive Viewer`](https://www.syncfusion.com/maui-controls/maui-interactive-viewer) provides a built-in reset capability that allows users to quickly restore the content view to its original state after performing zoom and pan operations.
 
 ## Reset method
 
-The `Reset` method restores the content to its initial zoom level and pan position.
+The [`Reset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_Reset) method restores the content to its initial zoom level and pan position.
 
 {% tabs %}
 {% highlight XAML %}

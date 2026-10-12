@@ -726,22 +726,31 @@ if (headerToolbar.ToolbarItems.FirstOrDefault() is ImageEditorToolbarGroupItem b
 
 ### Tooltip appearance customization
 
-You can customize the tooltip appearance by using the `ToolTipTemplate` property in the `Image Editor`.
+You can customize the tooltip appearance by using the [`ToolTipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolTipTemplate) property in the [`Image Editor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
 
 The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 " %}
+{% highlight xaml tabtitle="XAML" hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 " %}
 
 <imageEditor:SfImageEditor Source="image.png">
-    <imageEditor:SfImageEditor.ToolTipTemplate>
-        <DataTemplate>
-            <VerticalStackLayout Spacing="4">
-                <Label Text="{Binding Name}" />
-            </VerticalStackLayout>
-        </DataTemplate>
-    </imageEditor:SfImageEditor.ToolTipTemplate>
+  <imageEditor:SfImageEditor.ToolTipTemplate>
+    <DataTemplate>
+        <Grid RowDefinitions="Auto">
+            <HorizontalStackLayout Spacing="2">
+                <Label Text="Tooltip Name: "
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       TextColor="White" />
+                <Label Text="{Binding Name}"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       TextColor="White" />
+            </HorizontalStackLayout>
+        </Grid>
+    </DataTemplate>
+</imageEditor:SfImageEditor.ToolTipTemplate>
 </imageEditor:SfImageEditor>
 
 {% endhighlight %}
@@ -757,3 +766,5 @@ this.Content = imageEditor;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip customization](images/toolbar/imageeditor-tooltip-customization.png){:width="320" height="550" .lazy .shadow-effect}
