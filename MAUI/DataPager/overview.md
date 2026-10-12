@@ -1,12 +1,11 @@
 ---
 layout: post
-title: About Syncfusion® .NET MAUI DataPager Control | Syncfusion®
-description: Learn about the overview of Syncfusion® .NET MAUI DataPager control, including paging modes, navigation, customization, and interaction features.
+title: About Syncfusion® .NET MAUI DataPager control | Syncfusion®
+description: Learn about the Syncfusion® Essential Studio .NET MAUI DataPager control for efficient data pagination.
 platform: maui
 control: SfDataPager
 documentation: ug
-keywords: .net maui sfDataPager overview, introduction to sfDataPager in .net maui, exploring sfDataPager in .net maui.
-appliesto: UI Component Suite, DataPager SDK
+keywords : maui datapager, datapager maui, maui paging, .net maui datapager, .net maui paging
 ---
 
 # About Syncfusion® .NET MAUI DataPager Control
@@ -25,15 +24,14 @@ The Syncfusion® [.NET MAUI DataPager](https://www.syncfusion.com/maui-controls/
 
 ## Key features
 
-- **Normal and on-demand paging** load entire data collection upfront or dynamically load pages on-demand for better memory efficiency.
-- **Navigation options** First, Last, Previous, Next, and numeric button navigation with programmatic page switching.
-- **Customizable display modes** Choose which navigation buttons to display (numeric only, navigation buttons, or a combination).
-- **Auto-ellipsis support** automatically displays ellipsis buttons for navigating large page ranges.
-- **Customizable display modes** let you choose which navigation buttons are visible.
-- **Button customization** configures button shape, size, font size, and display behavior.
-- **Flexible orientation** display buttons horizontally or vertically based on layout requirements.
-- **Style customization** offers control over colors, templates, and visual appearance.
-- **Page change events** allow handling `PageChanging` and `PageChanged` for custom operations.
+- **Normal and on-demand paging:** Load the entire data collection upfront or load pages dynamically on demand for better memory efficiency.
+- **Navigation options:** Supports First, Last, Previous, Next, and numeric button navigation with programmatic page switching.
+- **Customizable display modes:** Choose which navigation buttons to display (numeric only, navigation buttons, or both).
+- **Auto-ellipsis support:** Automatically displays ellipsis buttons for navigating large page ranges.
+- **Button customization:** Customize button shape, size, font size, and display behavior.
+- **Flexible orientation:** Arrange pager buttons horizontally or vertically.
+- **Style customization:** Customize colors, templates, and overall appearance.
+- **Page change events:** Handle `PageChanging` and `PageChanged` for custom operations.
 
 ## Globalization
 
@@ -275,7 +273,7 @@ Explore Features
     <div class="form-description">
       Discover insights, tutorials, and best practices from our expert bloggers.
     </div>
-    <a href="https://www.syncfusion.com/blogs" class="explore-link">
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
     Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>

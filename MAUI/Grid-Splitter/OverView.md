@@ -2,9 +2,9 @@
 layout: post
 title: About Syncfusion® .NET MAUI Grid Splitter Control | Syncfusion®
 description: Learn all about the Syncfusion® .NET MAUI Grid Splitter control, its features, use cases, and customization options.
-platform: MAUI
+platform: maui
 control: SfGridSplitter
-documentation: UG
+documentation: ug
 ---
 
 # About Syncfusion® .NET MAUI Grid Splitter Control
@@ -309,7 +309,7 @@ The following table summarizes the globalization support available in this contr
     <div class="form-description">
       Read blog posts for tips, updates, and real-world use cases.
     </div>
-    <a href="https://www.syncfusion.com/blogs" class="explore-link">
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
       Read Blogs
       <span class="card-icon card-arrow"></span>
     </a>
