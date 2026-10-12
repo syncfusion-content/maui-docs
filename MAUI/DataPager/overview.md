@@ -24,12 +24,12 @@ The Syncfusion® [.NET MAUI DataPager](https://www.syncfusion.com/maui-controls/
 
 ## Key features
 
-- **Normal and on-demand paging:** Load the entire data collection upfront or load pages dynamically on demand for better memory efficiency.
+- **Normal and On-Demand Paging:** Load the entire data collection upfront or load pages dynamically on demand for better memory efficiency.
 - **Navigation options:** Supports First, Last, Previous, Next, and numeric button navigation with programmatic page switching.
 - **Customizable display modes:** Choose which navigation buttons to display (numeric only, navigation buttons, or both).
-- **Auto-ellipsis support:** Automatically displays ellipsis buttons for navigating large page ranges.
 - **Button customization:** Customize button shape, size, font size, and display behavior.
 - **Flexible orientation:** Arrange pager buttons horizontally or vertically.
+- **Auto-ellipsis support:** Automatically displays ellipsis buttons for navigating large page ranges.
 - **Style customization:** Customize colors, templates, and overall appearance.
 - **Page change events:** Handle `PageChanging` and `PageChanged` for custom operations.
 
