@@ -144,4 +144,4 @@ SfOtpInput otpInput = new SfOtpInput()
 
 ![Value](images/value.png)
 
-You can download the OTP Input getting started sample from [here](https://github.com/SyncfusionExamples/Getting-Started-with-the-MAUI-OTPInput-control).
+You can download the OTP Input getting started sample from [here]().

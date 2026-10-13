@@ -15,7 +15,7 @@ This section explains the various types of the OTP (One-Time Password) Input com
 
 ### Number type
 
-The Type property can be set to Number , prompting the input to handle numeric-only codes. This is ideal for scenarios demanding numeric OTPs. By default, the `Type` property is set to `Number`.
+The Type property can be set to Number , prompting the input to handle numeric-only codes. This is ideal for scenarios demanding numeric OTP's. By default, the `Type` property is set to `Number`.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -38,7 +38,7 @@ SfOtpInput otpInput = new SfOtpInput()
 
 ### Text type
 
-Set the Type property to Text  for inputs that may include both letters and numbers, making it suitable for alphanumeric OTPs.
+Set the Type property to Text  for inputs that may include both letters and numbers, making it suitable for alphanumeric OTP's.
 
 {% tabs %}	
 {% highlight xaml %}

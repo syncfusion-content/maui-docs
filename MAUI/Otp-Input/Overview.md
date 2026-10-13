@@ -66,7 +66,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui-toolkit/otp-inout/overview">OtpInput</a></td>
+<td><a href="/maui/otp-input/overview">OtpInput</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -77,16 +77,16 @@ The following table summarizes the globalization support available in this contr
 
 ## Related controls
 
-- [Text Input Layout](https://help.syncfusion.com/maui-toolkit/textinputlayout/overview) for enhancing text input fields with floating labels, validation UI, and better form clarity.
-- [Numeric Entry](https://help.syncfusion.com/maui-toolkit/numericentry/overview) for precise numeric input and validation scenarios, complementing OTP’s digit‑based entry.
-- [Numeric UpDown](https://help.syncfusion.com/maui-toolkit/numericupdown/overview) for controlled numeric adjustments with increment/decrement buttons, offering another structured input option.
+- [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing text input fields with floating labels, validation UI, and better form clarity.
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric input and validation scenarios, complementing OTP’s digit‑based entry.
+- [Numeric UpDown](https://help.syncfusion.com/maui/numericupdown/overview) for controlled numeric adjustments with increment/decrement buttons, offering another structured input option.
 
 ## See Also
 
-- [Getting Started](https://help.syncfusion.com/maui-toolkit/otp-input/getting-started) shows a step‑by‑step guide to begin using the OTP Input control.  
-- [Input Types](https://help.syncfusion.com/maui-toolkit/otp-input/input-types) explains the different input modes supported.  
-- [Customization](https://help.syncfusion.com/maui-toolkit/otp-input/otpinput-customization) describes how to adjust appearance and layout behavior.
-- [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples. 
+- Getting Started shows a step‑by‑step guide to begin using the OTP Input control.  
+- Input Types explains the different input modes supported.  
+- Customization describes how to adjust appearance and layout behavior.
+- UI Kit provides interactive demos and ready-made UI examples. 
 
 ## Resources
 
