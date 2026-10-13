@@ -123,14 +123,12 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationFilterChangedCommand" aria-label="View ConversationFilterChangedCommand property in API reference">ConversationFilterChangedCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Executes a <code>custom action</code> when the conversation history filters change.</td>
-
+<td>Executes a <code>custom action</code> when the conversation filter changes.</td>
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationFilterText" aria-label="View ConversationFilterText property in API reference">ConversationFilterText</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
-<td>Filters conversations by matching text against conversation <code>titles and descriptions</code>.</td>
-
+<td>Sets the <code>search text</code> used to filter conversations by title or content.</td>
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ConversationHeaderText" aria-label="View ConversationHeaderText property in API reference">ConversationHeaderText</a></td>
@@ -213,6 +211,7 @@ documentation: ug
 <td>Replaces the default <code>header layout</code> with a custom template.</td>
 </tr>
 <tr valign="top">
+
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_HeaderText" aria-label="View HeaderText property in API reference">HeaderText</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View string type in API reference">string</a></td>
 <td>Displays the <code>title text</code> at the top of the control.</td>
@@ -220,7 +219,7 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand" aria-label="View ImageTappedCommand property in API reference">ImageTappedCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Executes a <code>custom action</code> when a user taps an image inside a message.</td>
+<td>Executes a <code>custom action</code> when a user taps an image in a message.</td>
 
 </tr>
 <tr valign="top">
@@ -231,26 +230,22 @@ documentation: ug
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemCopyCommand" aria-label="View ItemCopyCommand property in API reference">ItemCopyCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-<td>Executes a <code>custom action</code> when the copy icon is selected for a response item.</td>
-
+<td>Executes a <code>custom action</code> when the copy control is selected for a response.</td>
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressedCommand" aria-label="View ItemLongPressedCommand property in API reference">ItemLongPressedCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 <td>Executes a <code>custom action</code> when a user presses and holds an assist item.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemRatingChangedCommand" aria-label="View ItemRatingChangedCommand property in API reference">ItemRatingChangedCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 <td>Executes a <code>custom action</code> when the like or dislike rating of a response item changes.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemRetryCommand" aria-label="View ItemRetryCommand property in API reference">ItemRetryCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 <td>Executes a <code>custom action</code> when the retry icon is selected for a response item.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource" aria-label="View ItemsSource property in API reference">ItemsSource</a></td>
@@ -266,7 +261,6 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTappedCommand" aria-label="View ItemTappedCommand property in API reference">ItemTappedCommand</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 <td>Executes a <code>custom action</code> when a user taps an assist item.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount" aria-label="View MaxAttachmentCount property in API reference">MaxAttachmentCount</a></td>
@@ -313,19 +307,16 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuItemTemplate" aria-label="View RequestContextMenuItemTemplate property in API reference">RequestContextMenuItemTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the appearance of each <code>request context menu item</code>.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestContextMenuPanelTemplate" aria-label="View RequestContextMenuPanelTemplate property in API reference">RequestContextMenuPanelTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the layout of the entire <code>request context menu panel</code>.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor" aria-label="View RequestEditor property in API reference">RequestEditor</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor" aria-label="View Editor type in API reference">Editor</a></td>
 <td>Provides access to the underlying <code>editor control</code> used for text input.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestItemTemplate" aria-label="View RequestItemTemplate property in API reference">RequestItemTemplate</a></td>
@@ -341,13 +332,11 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuItemTemplate" aria-label="View ResponseContextMenuItemTemplate property in API reference">ResponseContextMenuItemTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the appearance of each <code>response context menu item</code>.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseContextMenuPanelTemplate" aria-label="View ResponseContextMenuPanelTemplate property in API reference">ResponseContextMenuPanelTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the layout of the entire <code>response context menu panel</code>.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseItemTemplate" aria-label="View ResponseItemTemplate property in API reference">ResponseItemTemplate</a></td>
@@ -363,19 +352,16 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ScrollToBottomButtonTemplate" aria-label="View ScrollToBottomButtonTemplate property in API reference">ScrollToBottomButtonTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the appearance of the <code>scroll-to-bottom button</code>.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgent" aria-label="View SelectedAgent property in API reference">SelectedAgent</a></td>
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAgent.html" aria-label="View AssistAgent type in API reference">AssistAgent</a></td>
 <td>Gets or sets the <code>currently selected AI agent</code> used for generating responses.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SelectedAgentTemplate" aria-label="View SelectedAgentTemplate property in API reference">SelectedAgentTemplate</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
 <td>Customizes the appearance of the <code>selected agent</code> displayed in the input view.</td>
-
 </tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons" aria-label="View ShowActionButtons property in API reference">ShowActionButtons</a></td>
@@ -532,6 +518,7 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemTapped" aria-label="View ItemTapped event in API reference">ItemTapped</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemTappedEventArgs.html" aria-label="View ItemTappedEventArgs type in API reference">ItemTappedEventArgs&gt;</a></a></td>
 <td>Triggered when a user taps an <code>assist item</code>.</td>
+</tr>
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_PromptComposing" aria-label="View PromptComposing event in API reference">PromptComposing</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.PromptComposingEventArgs.html" aria-label="View PromptComposingEventArgs type in API reference">PromptComposingEventArgs&gt;</a></a></td>
@@ -561,5 +548,25 @@ documentation: ug
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ToastOpening" aria-label="View ToastOpening event in API reference">ToastOpening</a></td>
 <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs&gt;</a></a></td>
 <td>Triggered <code>before</code> a toast notification is displayed, allowing the toast to be suppressed by setting <code>Cancel</code> to <code>true</code> in <a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ToastNotificationEventArgs.html" aria-label="View ToastNotificationEventArgs type in API reference">ToastNotificationEventArgs</a>.</td>
+</tr>
+</table>
+
+## Methods
+
+<table>
+<tr>
+<th>Name</th>
+<th>Return Type</th>
+<th>Description</th>
+</tr>
+<tr valign="top">
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateAssistChat" aria-label="View CreateAssistChat method in API reference">CreateAssistChat()</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistViewChat.html" aria-label="View AssistViewChat type in API reference">AssistViewChat</a></td>
+<td>Creates an <code>AssistViewChat</code> instance for customizing chat view functionality.</td>
+</tr>
+<tr valign="top">
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CreateConversationListView" aria-label="View CreateConversationListView method in API reference">CreateConversationListView()</a></td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ConversationListView.html" aria-label="View ConversationListView type in API reference">ConversationListView</a></td>
+<td>Creates a <code>ConversationListView</code> instance for customizing conversation list functionality.</td>
 </tr>
 </table>

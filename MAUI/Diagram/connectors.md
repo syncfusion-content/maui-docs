@@ -2,7 +2,7 @@
 layout: post
 title: Connectors in MAUI Diagram | Syncfusion®
 description: Learn how to create and customize connectors in the Syncfusion® .NET MAUI Diagram control to define relationships and flow between nodes, ports, and points.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -15,13 +15,13 @@ A connector can connect nodes, ports, or specific points within the diagram surf
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Connector examples assume that the `Nodes` and `Connectors` collections have been assigned to an `SfDiagram` instance.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler. Connector examples assume that the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_Nodes) and [Connectors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html#Syncfusion_Maui_Diagram_SfDiagram_Connectors) collections have been assigned to an [SfDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) instance.
 
 ---
 
 ## Create Connector
 
-A connector is created using the `Connector` class and added to the `SfDiagram.Connectors` collection.
+A connector is created using the [Connector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html) class and added to the `SfDiagram.Connectors` collection.
 
 ```csharp
 using Syncfusion.Maui.Diagram;
@@ -41,18 +41,18 @@ diagram.Connectors.Add(connector);
 
 | Property | Description |
 | --- | --- |
-| `Id` | Unique identifier for the connector. |
-| `SourceID` | ID of the source node, source port's parent node, or used together with `SourcePoint`. |
-| `TargetID` | ID of the target node, target port's parent node, or used together with `TargetPoint`. |
-| `SourcePortID` | ID of the source port. Requires the matching port on the source node. |
-| `TargetPortID` | ID of the target port. Requires the matching port on the target node. |
-| `SourcePoint` | Starting point when the connector is not attached to a node. |
-| `TargetPoint` | Ending point when the connector is not attached to a node. |
-| `Type` | Routing algorithm, set through `ConnectorSegmentType`. |
-| `Style` | Visual style for the connector line. |
-| `Annotations` | Collection of `PathAnnotation` labels. |
-| `SourceDecorator` | Decorator shown at the start of the connector. |
-| `TargetDecorator` | Decorator shown at the end of the connector. |
+| [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_Id) | Unique identifier for the connector. |
+| [SourceID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_SourceID) | ID of the source node, source port's parent node, or used together with `SourcePoint`. |
+| [TargetID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_TargetID) | ID of the target node, target port's parent node, or used together with `TargetPoint`. |
+| [SourcePortID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_SourcePortID) | ID of the source port. Requires the matching port on the source node. |
+| [TargetPortID](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_TargetPortID) | ID of the target port. Requires the matching port on the target node. |
+| [SourcePoint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_SourcePoint) | Starting point when the connector is not attached to a node. |
+| [TargetPoint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_TargetPoint) | Ending point when the connector is not attached to a node. |
+| [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_Type) | Routing algorithm, set through `ConnectorSegmentType`. |
+| [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_Style) | Visual style for the connector line. |
+| [Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_Annotations) | Collection of `PathAnnotation` labels. |
+| [SourceDecorator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_SourceDecorator) | Decorator shown at the start of the connector. |
+| [TargetDecorator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_TargetDecorator) | Decorator shown at the end of the connector. |
 
 > **Note:** `DiagramPoint` is not implemented in the current release. Verify the supported point type for connector endpoint coordinates before using `SourcePoint` and `TargetPoint`.
 
@@ -77,7 +77,7 @@ Connector connector = new Connector
 
 ## Connector types
 
-The Diagram control supports two routing styles configured through `ConnectorSegmentType`. The diagram supports two types.
+The Diagram control supports two routing styles configured through [ConnectorSegmentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ConnectorSegmentType.html). The diagram supports two types.
 
  * Straight
  * Orthogonal
@@ -128,7 +128,7 @@ Ports define explicit connection points on a node. Using ports instead of node-t
 ```csharp
 var connector = new Connector
 {
-    ID = "connector1",
+    Id = "connector1",
     SourceID = "node1",
     SourcePortID = "RightPort",
     TargetID = "node2",
@@ -197,7 +197,7 @@ connector.Style = new ShapeStyle
 
 ## Connector decorators
 
-Decorators indicate direction and are commonly displayed at the source or target end of a connector. The source and target points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or any path. You can decorate the connection end points using the `SourceDecorator` and `TargetDecorator` properties of connector. They are configured through `DecoratorSettings`, which supports `Shape`, `Width`, `Height`, and `Style`.
+Decorators indicate direction and are commonly displayed at the source or target end of a connector. The source and target points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or any path. You can decorate the connection end points using the `SourceDecorator` and `TargetDecorator` properties of connector. They are configured through [DecoratorSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorSettings.html), which supports [Shape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorSettings.html#Syncfusion_Maui_Diagram_DecoratorSettings_Shape), [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorSettings.html#Syncfusion_Maui_Diagram_DecoratorSettings_Width), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorSettings.html#Syncfusion_Maui_Diagram_DecoratorSettings_Height), and [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorSettings.html#Syncfusion_Maui_Diagram_DecoratorSettings_Style).
 
 ```csharp
 
@@ -223,7 +223,7 @@ connector.SourceDecorator = new DecoratorSettings
 
 ### Supported decorator shapes
 
-The Diagram control supports the following decorator shapes through the `DecoratorShapes` enumeration.
+The Diagram control supports the following decorator shapes through the [DecoratorShapes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.DecoratorShapeType.html) enumeration.
 
 | Enumerator | Description |
 | --- | --- |
@@ -243,7 +243,7 @@ The Diagram control supports the following decorator shapes through the `Decorat
 
 ## Connector annotations
 
-Annotation is used to textually represent an object with a string that can be edited at run time. Annotations display text along a connector through the `PathAnnotation` class. Connector labels describe the relationship between connected nodes. They help visualize decision branches, transitions, and conditions.
+Annotation is used to textually represent an object with a string that can be edited at run time. Annotations display text along a connector through the [PathAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PathAnnotation.html) class. Connector labels describe the relationship between connected nodes. They help visualize decision branches, transitions, and conditions.
 
 ```csharp
 
@@ -295,6 +295,6 @@ connector.Annotations.Add(
 
 ## See also
 
-- [Nodes](nodes.md)
-- [Ports](ports.md)
-- [Annotations](annotations.md)
+- [Nodes](https://help.syncfusion.com/maui/diagram/nodes)
+- [Ports](https://help.syncfusion.com/maui/diagram/ports)
+- [Annotations](https://help.syncfusion.com/maui/diagram/annotations)
