@@ -66,7 +66,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/otp-input/overview">OtpInput</a></td>
+<td><a> href="/maui/otp-input/overview">OtpInput</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -79,7 +79,7 @@ The following table summarizes the globalization support available in this contr
 
 - [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing text input fields with floating labels, validation UI, and better form clarity.
 - [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for precise numeric input and validation scenarios, complementing OTP’s digit‑based entry.
-- [Numeric UpDown](https://help.syncfusion.com/maui/numericupdown/overview) for controlled numeric adjustments with increment/decrement buttons, offering another structured input option.
+
 
 ## See Also
 
