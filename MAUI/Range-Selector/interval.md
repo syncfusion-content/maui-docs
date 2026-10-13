@@ -62,7 +62,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector numeric interval](images/interval/numeric-interval.png)
+![Range Selector numeric interval](images/interval/numeric-interval.png)
 
 ## Auto interval
 

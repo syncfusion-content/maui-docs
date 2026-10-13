@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [SfRadioButton](htt
 
 To quickly get started with the .NET MAUI Radio Button, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=z5EwGpw0KTI" %}
+<style>#MAUIRadioButtonVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRadioButtonVideoTutorial' src='https://www.youtube.com/embed/z5EwGpw0KTI'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

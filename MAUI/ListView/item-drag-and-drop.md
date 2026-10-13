@@ -281,9 +281,7 @@ private void ListView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> The `MoveTo` extension method requires the underlying `ToDoList` to be an `ObservableCollection<T>` (or a type that supports `Move`). Wire `BindingContext` to the ViewModel so `viewModel.ToDoList` is in scope. The `MoveTo` method is provided by [Syncfusion.Maui.ListView.Helpers.CollectionExtensions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.CollectionExtensions.html) and has the signature `void MoveTo(this ObservableCollection<T> source, int oldIndex, int newIndex)`. It moves the item at `oldIndex` to `newIndex` and raises the appropriate `CollectionChanged` notification.
-
-N> Underlying collection will not be updated when any data operation like sorting or grouping is performed. The order will be maintained only in the `DisplayItems` of the data source. When an item is dragged and dropped between groups, the property used for grouping is updated in the data object.
+N> Underlying collection will not be updated when any data operation like sorting or grouping is performed. The order will be maintained only in the `DisplayItems` of the data source. When drag and drop an item between groups, the value of the property in which grouping is performed is updated in the data object.
 
 ## Delete item when dropping in particular view
 

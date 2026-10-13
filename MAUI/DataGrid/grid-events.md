@@ -6,6 +6,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui grid events, maui grid events
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Grid Events in .NET MAUI Data Grid

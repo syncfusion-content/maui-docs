@@ -5,6 +5,7 @@ description: Events in .NET MAUI TreeMap provide notifications for user interact
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Events in .NET MAUI TreeMap

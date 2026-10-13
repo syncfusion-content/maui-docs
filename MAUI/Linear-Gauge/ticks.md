@@ -5,6 +5,7 @@ description: Ticks in .NET MAUI Linear Gauge indicate scale intervals and measur
 platform: maui
 control: SfLinearGauge
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Ticks in .NET MAUI Linear Gauge
@@ -150,7 +151,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set .NET MAUI Linear Gauge tick position](images/axis-ticks/label-placement.PNG)
+![Set .NET MAUI Linear Gauge tick position](images/axis-labels/label-placement.PNG)
 
 
 ## Customize Tick Offset

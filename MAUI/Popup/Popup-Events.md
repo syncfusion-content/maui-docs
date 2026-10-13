@@ -247,7 +247,7 @@ To bind the Accept button to a custom command,
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -332,7 +332,7 @@ To bind the Decline button to a custom command,
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"

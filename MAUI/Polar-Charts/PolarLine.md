@@ -5,6 +5,7 @@ description: Polar Line Chart in .NET MAUI Polar Chart connects data points usin
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polar Line Chart in .NET MAUI Polar Chart
@@ -65,9 +66,9 @@ this.Content = chart;
 
 You can customize the polar line series appearance using the following properties:
 
-* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Stroke) — Gets or sets the brush for the line color
-* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeWidth) — Gets or sets the thickness of the line
-* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeDashArray) — Gets or sets the pattern for dashed lines
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Stroke) - Gets or sets the brush for the line color
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeWidth) - Gets or sets the thickness of the line
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeDashArray) - Gets or sets the pattern for dashed lines
 
 The following code example demonstrates line customization:
 

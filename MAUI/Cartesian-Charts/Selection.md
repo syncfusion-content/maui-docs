@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui chart selection, maui chart selection, .net maui chart selection customization, syncfusion maui chart selection, .net maui chart highlighting, .net maui chart highlighting visualization.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Selection in .NET MAUI Cartesian Chart

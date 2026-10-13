@@ -5,6 +5,7 @@ description: Data label in .NET MAUI Circular Chart displays data point values d
 platform: maui
 control: SfCircularChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Data Labels in .NET MAUI Circular Chart

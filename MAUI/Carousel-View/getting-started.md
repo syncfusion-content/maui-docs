@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Carousel](https://
 
 To quickly get started with the .NET MAUI Carousel, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=pFEqZKlLsi4" %}
+<style>#MAUICarouselVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICarouselVideoTutorial' src='https://www.youtube.com/embed/pFEqZKlLsi4'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio  %}

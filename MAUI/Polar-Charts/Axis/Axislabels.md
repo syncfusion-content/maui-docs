@@ -5,6 +5,7 @@ description: Axis labels in .NET MAUI Polar Chart display category and value inf
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis Labels in .NET MAUI Polar Chart

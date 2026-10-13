@@ -96,14 +96,14 @@ this.Content = radialMenu;
 <th>Description</th></tr>
 
 <tr>
-<td>{{[CenterButtonBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderColor)}}</td>
-<td>{{[CenterButtonStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke)}}</td>
+<td>{{'[CenterButtonBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderColor)'}}</td>
+<td>{{'[CenterButtonStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke)'}}</td>
 <td>Gets or sets a value of the stroke brush for the center button's stroke in the SfRadialMenu.</td>
 </tr>
 
 <tr>
-<td>{{[CenterButtonBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderThickness)}}</td>
-<td>{{[CenterButtonStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStrokeThickness)}}</td>
+<td>{{'[CenterButtonBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRadialMenu.XForms.SfRadialMenu.html#Syncfusion_SfRadialMenu_XForms_SfRadialMenu_CenterButtonBorderThickness)'}}</td>
+<td>{{'[CenterButtonStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStrokeThickness)'}}</td>
 <td>Gets or sets a value of the the stroke thickness for the center button's stroke thickness in the SfRadialMenu.</td>
 </tr>
 

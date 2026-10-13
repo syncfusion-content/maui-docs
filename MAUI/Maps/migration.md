@@ -5,6 +5,7 @@ description: Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps with updated 
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---  
 
 # Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps

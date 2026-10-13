@@ -3,12 +3,12 @@ layout: post
 title: Customization in .NET MAUI Segmented Control | Syncfusion®
 description: Learn about appearance customization options to style background, text color, selection style, and more in the .NET MAUI Segmented Control.
 platform: maui
-control: Segmented (SfSegmented) control
+control: Segmented (SfSegmented) Control
 documentation: ug
 ---
  
 # Appearance Customization in .NET MAUI Segmented Control
-The .NET MAUI Segmented control allows you to customize the background, text color, selection style, and more.
+The .NET MAUI Segmented Control allows you to customize the background, text color, selection style, and more.
 
 ## Customize the border color
 You can use the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_Stroke) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the border color of the segmented control.
@@ -51,11 +51,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Border color customization in .NET MAUI Segmented control.](images/customization/stroke.png)
+![Border color customization in .NET MAUI Segmented Control.](images/customization/stroke.png)
 
 ## Customize the border thickness
 
-You can use the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_StrokeThickness) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the border thickness of the segmented control.
+You can use the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_StrokeThickness) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the border thickness of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -95,7 +95,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Border thickness customization in .NET MAUI Segmented control.](images/customization/stroke-thickness.png)
+![Border thickness customization in .NET MAUI Segmented Control.](images/customization/stroke-thickness.png)
 
 ## Customize the border corner radius
 
@@ -139,13 +139,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Corner radius customization in .NET MAUI Segmented control.](images/customization/corner-radius.png)
+![Corner radius customization in .NET MAUI Segmented Control.](images/customization/corner-radius.png)
 
 N> The `CornerRadius` property will be applicable only for the first and last segment items. To set corner radius for all segments, use `SegmentCornerRadius`.
 
 ## Customize the segment corner radius
 
-Use the [SegmentCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentCornerRadius) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segment corner radius of the segmented control.
+Use the [SegmentCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentCornerRadius) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segment corner radius of the segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -185,13 +185,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Segment corner radius customization in .NET MAUI Segmented control.](images/customization/segment-corner-radius.png)
+![Segment corner radius customization in .NET MAUI Segmented Control.](images/customization/segment-corner-radius.png)
 
 ## Customize the text style
-You can customize the text style of the segmented control and each segment item.
+You can customize the text style of the Segmented Control and each segment item.
 
-### Customize the text style of segmented Control
-Use the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_TextStyle) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the text style of the segmented control.
+### Customize the text style of Segmented Control
+Use the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_TextStyle) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the text style of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -238,7 +238,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Text style customization in .NET MAUI Segmented control.](images/customization/segment-text-style.png)
+![Text style customization in .NET MAUI Segmented Control.](images/customization/segment-text-style.png)
 
 ### Customize the text style of each segment item
 
@@ -271,13 +271,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Segment item text style customization in .NET MAUI Segmented control.](images/customization/segment-item-text-style.png)
+![Segment item text style customization in .NET MAUI Segmented Control.](images/customization/segment-item-text-style.png)
 
 ## Customize the segment background
-You can customize the segmented background of the segmented control and each segment item.
+You can customize the segmented background of the Segmented Control and each segment item.
 
-### Customize the segment background of segmented control
-Use the [SegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentBackground) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segmented background of the segmented control.
+### Customize the segment background of Segmented Control
+Use the [SegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentBackground) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segmented background of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -317,7 +317,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Background customization in .NET MAUI Segmented control.](images/customization/segment-background.png)
+![Background customization in .NET MAUI Segmented Control.](images/customization/segment-background.png)
 
 ### Customize the segment background of each segment item
 
@@ -350,7 +350,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Segment item background customization in .NET MAUI Segmented control.](images/customization/segment-item-background.png)
+![Segment item background customization in .NET MAUI Segmented Control.](images/customization/segment-item-background.png)
 
 ## Separator Visibility Change to Show or Hide Separator
 
@@ -400,11 +400,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Hide Seperator line in .NET MAUI Segmented control.](images/customization/segmented-control-show-separator.png)
+![Hide Seperator line in .NET MAUI Segmented Control.](images/customization/segmented-control-show-separator.png)
 
 ## Customize segment items appearance using DataTemplate
 
-Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentTemplate) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to create custom segmented control. The following example code shows how to create a custom segmented control using a data template.
+Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentTemplate) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to create custom Segmented Control. The following example code shows how to create a custom Segmented Control using a data template.
 
 {% tabs %}
 {% highlight XAML %}
@@ -435,11 +435,11 @@ Use the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Bu
 {% endhighlight %}
 {% endtabs %}
 
-![Appearance customization using DataTemplate in .NET MAUI Segmented control.](images/customization/segment-template.png)
+![Appearance customization using DataTemplate in .NET MAUI Segmented Control.](images/customization/segment-template.png)
 
 ## Customize selected segment item appearance using DataTemplate
 
-Use the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_IsSelected) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentTappedEventArgs.html#Syncfusion_Maui_Buttons_SegmentTappedEventArgs_SegmentItem) to customize the selected segment item appearance. The following example code shows how to create a custom segmented control using a data template.
+Use the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_IsSelected) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentTappedEventArgs.html#Syncfusion_Maui_Buttons_SegmentTappedEventArgs_SegmentItem) to customize the selected segment item appearance. The following example code shows how to create a custom Segmented Control using a data template.
 
 {% tabs %}
 {% highlight XAML %}
@@ -525,4 +525,4 @@ public class TextColorConverter : IValueConverter
 N>
 * The BindingContext of the [SegmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentTemplate) is the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentTappedEventArgs.html#Syncfusion_Maui_Buttons_SegmentTappedEventArgs_SegmentItem).
 
-![Customization for the selected segment item in .NET MAUI Segmented control.](images/customization/selected-segment.png)
+![Customization for the selected segment item in .NET MAUI Segmented Control.](images/customization/selected-segment.png)

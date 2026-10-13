@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui sfCartesianChart overview,  introduction to sfCartesianChart in .net maui, exploring sfCartesianChart in .net maui.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # About Syncfusion® .NET MAUI Cartesian Chart Control
@@ -77,7 +78,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/cartesian-charts/overview">Cartesian Charts</a></td>
+<td><a href="/maui/cartesian-charts/overview" aria-label="MAUI Cartesian Charts Control overview">Cartesian Charts</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>

@@ -21,7 +21,7 @@ For a step-by-step setup, refer to the [Getting Started](https://help.syncfusion
 
 To get started quickly on customizing the appearance of the .NET MAUI Autocomplete, you can check out this video:
 
-{% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
+<style>#MAUIAutocompleteCustomizationVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAutocompleteCustomizationVideoTutorial' src='https://www.youtube.com/embed/Hh5pfXvax9o'></iframe>
 
 ## Placeholder
 

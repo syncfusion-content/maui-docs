@@ -13,8 +13,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 To get start quickly with our .NET MAUI Toolbar, you can check the below video.
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=U4ZFNr0nsB0"%}
+<style>#MAUIToolbarVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIToolbarVideoTutorial' src='https://www.youtube.com/embed/U4ZFNr0nsB0'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -31,7 +30,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Toolbar NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Toolbar NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) and install the latest version.
@@ -55,7 +54,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Toolbar NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Toolbar NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -79,10 +78,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Toolbar NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Toolbar NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Toolbar]((https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/)) and install the latest version.
+2. Search for [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 {% endtabcontent %}

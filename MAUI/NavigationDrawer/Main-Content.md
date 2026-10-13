@@ -160,7 +160,7 @@ You can find the complete sample on [GitHub](https://github.com/SyncfusionExampl
 
 ## See also
 
-- [How to load content page to .NET MAUI Navigation Drawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)
+- [How to load content page to .NET MAUI Navigation Drawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigation-drawer-contentview)
 - [Setting Toggle Animations in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/toggle-animations)
 - [Set Sliding Panel Content in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-content)
 - [Setting Sliding Panel Size in .NET MAUI Navigation Drawer](https://help.syncfusion.com/maui/navigationdrawer/side-pane-sizing)

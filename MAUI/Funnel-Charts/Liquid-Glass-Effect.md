@@ -6,6 +6,7 @@ platform: maui
 control: SfFunnelChart
 documentation: ug
 keywords: .net maui funnel chart, glass effect, liquid glass effect, funnel chart visualization, .net maui chart styling.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Funnel Chart
@@ -25,7 +26,7 @@ The Liquid Glass Effect enhances MAUI [SfFunnelChart](https://help.syncfusion.co
 - **Tooltip:** Applies a glassy appearance to tooltips for clearer data highlights.
 - **Chart Background:** Wrap the chart in an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a blurred or clear glass background.
 
-## Apply Liquid Glass Effect to SfFunnelChart
+## Apply Liquid Glass Effect to .NET MAUI Funnel Charts
 
 Wrap the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a glass (blurred or clear) appearance. `SfGlassEffectView` is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package.
 

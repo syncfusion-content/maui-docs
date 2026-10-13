@@ -5,6 +5,7 @@ description: Axis in .NET MAUI Polar Chart defines the chart coordinate system a
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Axis in .NET MAUI Polar Chart

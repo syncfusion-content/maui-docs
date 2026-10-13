@@ -6,6 +6,7 @@ platform: maui
 control: DigitalGauge
 documentation: ug
 keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
+appliesto: UI Component Suite, Chart SDK
 ---
 # About Syncfusion® .NET MAUI Digital Gauge Control
 
@@ -68,7 +69,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/digitalgauge/overview">Digital Gauge</a></td>
+<td><a href="/maui/digitalgauge/overview" aria-label="MAUI Digital Gauge Control overview">Digital Gauge</a></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>

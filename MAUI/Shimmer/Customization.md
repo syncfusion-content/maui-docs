@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Shimmer
 
-The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) control provides the following properties to customize the shimmer,
+The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) control provides the following properties to customize the Shimmer,
 
 * `Fill` - To customize the background color of Shimmer view. 
 * `WaveColor` - To customize the Shimmer wave color.
@@ -174,7 +174,7 @@ this.Content = Shimmer;
 
 ## RepeatCount
 
-The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
+The `RepeatCount` of the Shimmer defines the number of the times the Shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

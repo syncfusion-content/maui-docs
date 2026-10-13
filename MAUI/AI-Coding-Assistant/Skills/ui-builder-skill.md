@@ -15,6 +15,10 @@ domainurl: ##DomainURL##
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® MAUI components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, MAUI UI Builder helps you rapidly build scalable mobile and desktop applications for iOS, Android, macOS, and Windows without leaving your development workflow.
 
+To quickly get started with Agentic UI Builder, check out this video:
+
+<style>#MAUIAgenticUIBuilderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAgenticUIBuilderVideoTutorial' src='https://www.youtube.com/embed/R5RmKe09pgc'></iframe>
+
 ## Prerequisites
 
 Before installing MAUI UI Builder, ensure the following:

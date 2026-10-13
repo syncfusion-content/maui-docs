@@ -59,7 +59,7 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates SfDateTimeSlider with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates DateTime Slider with the glass effect visible on the thumb while it is pressed.
 
 ![date time slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
 

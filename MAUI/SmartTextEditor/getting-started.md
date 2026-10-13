@@ -77,7 +77,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI SmartComponents NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI SmartComponents NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.

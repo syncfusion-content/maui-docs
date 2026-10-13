@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Range Selector](ht
 
 To quickly get started with the .NET MAUI Range Selector, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=LrnvOOjQ7jE" %}
+<style>#MAUIRangeSelectorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/LrnvOOjQ7jE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
@@ -54,7 +54,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -78,7 +78,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Sliders NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.

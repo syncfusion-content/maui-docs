@@ -13,8 +13,7 @@ This section guides you through setting up and configuring a [Button](https://he
 
 To quickly get started with the .NET MAUI Button, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=KTGkYShi1YE" %}
-
+<style>#MAUIButtonVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIButtonVideoTutorial' src='https://www.youtube.com/embed/KTGkYShi1YE'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

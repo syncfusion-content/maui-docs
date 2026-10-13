@@ -44,7 +44,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider ticks](images/ticks/show-ticks-without-interval.png)
+![Range Slider ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With interval
 
@@ -76,7 +76,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider ticks](images/ticks/show-ticks.png)
+![Range Slider ticks](images/ticks/show-ticks.png)
 
 ## Show minor ticks
 
@@ -112,7 +112,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider minor ticks](images/ticks/show-minorticks-without-interval.png)
+![Range Slider minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With interval
 {% tabs %}
@@ -145,7 +145,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider minor ticks](images/ticks/show-minor-ticks.png)
+![Range Slider minor ticks](images/ticks/show-minor-ticks.png)
 
 ## Major ticks color
 
@@ -191,7 +191,7 @@ rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 {% endtabs %}
 
-![RangeSlider major ticks color](images/ticks/major-ticks-color.png)
+![Range Slider major ticks color](images/ticks/major-ticks-color.png)
 
 ## Minor ticks color
 
@@ -239,7 +239,7 @@ rangeSlider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 {% endtabs %}
 
-![RangeSlider minor ticks color](images/ticks/minor-ticks-color.png)
+![Range Slider minor ticks color](images/ticks/minor-ticks-color.png)
 
 ## Ticks size
 
@@ -288,11 +288,11 @@ rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 {% endtabs %}
 
-![RangeSlider tick size](images/ticks/tick-size.png)
+![Range Slider tick size](images/ticks/tick-size.png)
 
 ## Ticks offset
 
-Adjust the space between track and ticks of the range slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle). The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
+Adjust the space between track and ticks of the Range Slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle). The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
 
 {% tabs %}
 
@@ -334,7 +334,7 @@ rangeSlider.MajorTickStyle.Offset = 5;
 
 {% endtabs %}
 
-![RangeSlider tick offset](images/ticks/tick-offset.png)
+![Range Slider tick offset](images/ticks/tick-offset.png)
 
 ## Disabled ticks
 
@@ -542,4 +542,4 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider ticks disabled state](images/ticks/ticks-disabled.png)
+![Range Slider ticks disabled state](images/ticks/ticks-disabled.png)

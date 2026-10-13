@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart touch position, maui cartesian chart touch position, .net maui cartesian chart touch event, sfcartesianchart touch interaction in .net maui, .net maui cartesian chart touch gesture, .net maui cartesian chart touch behavior
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Get Touch Position in .NET MAUI Cartesian Chart

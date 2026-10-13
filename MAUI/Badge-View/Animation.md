@@ -11,7 +11,7 @@ documentation: ug
 
 ## Enable Animation
 
-You can enable or disable the animation of the badge text using [Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_Scale) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_None) enum values of the `BadgeAnimation` property. The animation becomes visible when you change the badge text.
+You can enable or disable the animation of the Badge View text using [Scale](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_Scale) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeAnimation.html#Syncfusion_Maui_Core_BadgeAnimation_None) enum values of the `BadgeAnimation` property. The animation becomes visible when you change the Badge View text.
 
 {% tabs %}
 

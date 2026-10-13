@@ -5,6 +5,7 @@ description: Learn about the overview of Syncfusion® .NET MAUI TreeMap control,
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
  
 # About Syncfusion® .NET MAUI TreeMap Control
@@ -72,12 +73,12 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/treemap/overview">TreeMap</a></td>
+<td><a href="/maui/treemap/overview" aria-label="MAUI TreeMap Control overview">TreeMap</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><a href="https://help.syncfusion.com/maui/treemap/right-to-left"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/right-to-left" aria-label="MAUI TreeMap Control right-to-left support"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
-<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility"><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility" aria-label="MAUI TreeMap Control accessibility support "><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
+<td align="center"><a href="https://help.syncfusion.com/maui/treemap/accessibility" aria-label="MAUI TreeMap Control accessibility support "><img src="../Images/full-support.svg" alt="full-support" width="16" /></a></td>
 </tr> 
 </table>
 
@@ -284,7 +285,7 @@ Explore Features
     <div class="form-description">
        Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
-    <a href="https://support.syncfusion.com/kb/maui" class="explore-link">
+    <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
 Search KB's
   <span class="card-icon card-arrow"></span>
 </a>

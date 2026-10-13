@@ -6,6 +6,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui column resizing, maui column resizing
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Columns Resizing in .NET MAUI Data Grid

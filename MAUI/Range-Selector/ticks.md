@@ -50,7 +50,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector ticks](images/ticks/show-ticks-without-interval.png)
+![Range Selector ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With interval
 
@@ -87,7 +87,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector ticks](images/ticks/show-ticks.png)
+![Range Selector ticks](images/ticks/show-ticks.png)
 
 ## Show minor ticks
 
@@ -128,7 +128,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks](images/ticks/show-minorticks-without-interval.png)
+![Range Selector minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With interval
 {% tabs %}
@@ -166,7 +166,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks](images/ticks/show-minor-ticks.png)
+![Range Selector minor ticks](images/ticks/show-minor-ticks.png)
 
 ## Major ticks color
 
@@ -216,7 +216,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector major ticks color](images/ticks/major-ticks-color.png)
+![Range Selector major ticks color](images/ticks/major-ticks-color.png)
 
 ## Minor ticks color
 
@@ -268,7 +268,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector minor ticks color](images/ticks/minor-ticks-color.png)
+![Range Selector minor ticks color](images/ticks/minor-ticks-color.png)
 
 ## Ticks size
 
@@ -372,4 +372,4 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector tick offset](images/ticks/tick-offset.png)
+![Range Selector tick offset](images/ticks/tick-offset.png)

@@ -17,256 +17,166 @@ Each solution is a runnable sample backed by step‑by‑step guidance, so you c
 
 Explore these AI-powered solutions for .NET MAUI and see how they can improve common app workflows.
 
-
 <style>
-.form-card {
-   flex: 0 0 calc(33.33% - 14px);
-   border: 1px solid #ddd;
-   border-radius: 12px;
-   overflow: hidden;
-   background: white;
-   box-sizing: border-box;
-   transition: 0.3s ease;
-   cursor: pointer;
-   text-decoration: none;
-   color: inherit;
-   display: flex;
-   flex-direction: column;
+#table
+{
+border:0 !important;
+line-height: 160% !important;
 }
-.form-card:hover {
-   transform: translateY(-4px);
-   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+#table tr {
+  border:0 !important;
 }
-.form-card .form-image-wrapper {
-   width: 100%;
-   height: 240px;
-   overflow: hidden;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 8px;
-   box-sizing: border-box;
+#table td {
+  border:0 !important;
+  vertical-align: top;
 }
-.form-image {
-   width: 100%;
-   height: 100%;
-   object-fit: contain;
-   display: block;
-   transition: 0.3s ease;
+.controlanchorlink {
+    font-size: 14px !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    padding: 2px 0px;
 }
-.form-card:hover .form-image {
-   transform: scale(1.02);
+.sf-home-icon {
+  display: inline-block;
+  margin-right: 6px;
 }
-.form-content {
-   padding: 0px 12px 20px 16px;
-   flex: 1;
-   display: flex;
-   flex-direction: column;
+.category-topics {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+    line-height: 20px;
+    margin-top:  7px;
+    margin-bottom: 5px;
 }
-.form-title {
-   margin-top: 0px;
-   margin: 0 0 10px;
-   font-size: 20px;
-   font-weight: 600;
-   color: #000000;
+.category {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+    text-align: left !important;
+    line-height: 20px;
+    padding-top: 20px;
 }
-.form-description {
-   margin-top: 14px;
-   font-size: 13px;
-   color: #000000;
-   line-height: 1.6;
+@font-face {
+font-family: 'Smart Solution';
+src:
+url(data:application/x-font-ttf;base64,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BwgICIAICAgHBwcGBgUEBAQCAgICAgIEBAQFBgYHBwcICAgDAwUEAQEEBQMDgAMDBQQBAQQFAwMCEAYGBgUEAgIBAQICBAUGBgb+oAYGBgUEAgIBAQICBAUGBgYB4AYGBgUEAgIBAQICBAUGBgb+IAYGBgUEAgIBAQICBAUGBgawCAgIBwcHBgYFBAQEAgICAgICBAQEBQYGBwcHCAgIgAgICAcHBwYGBQQEBAICAgICAgQEBAUGBgcHBwgICAMDBQQBAQQFAwOAAwMFBAEBBAUDAwIQBgYGBQQCAgEBAgIEBQYGBv6gBgYGBQQCAgEBAgIEBQYGBgHgBgYGBQQCAgEBAgIEBQYGBv4gBgYGBQQCAgEBAgIEBQYGBgHAAgICBAQEBQYGBwcHCAgIoAgICAcHBwYGBQQEBAICAgICAgQEBAUGBgcHBwgICKAICAgHBwcGBgUEBAQCAgJAAQQFAwOgAwMFBAEBBAUDA6ADAwUEAYABAgIEBQYGBgYGBgUEAgIBAQICBAUGBgYGBgYFBAICAYABAgIEBQYGBgYGBgUEAgIBAQICBAUGBgYGBgYFBAICAQIAAgICBAQEBQYGBwcHCAgIoAgICAcHBwYGBQQEBAICAgICAgQEBAUGBgcHBwgICKAICAgHBwcGBgUEBAQCAgJAAQQFAwOgAwMFBAEBBAUDA6ADAwUEAYABAgIEBQYGBgYGBgUEAgIBAQICBAUGBgYGBgYFBAICAYABAgIEBQYGBgYGBgUEAgIBAQICBAUGBgYGBgYFBAICAQAAAAAFAAAAAAPQAzAAfgCZALsBIAExAAABHwcPByEjDwodAh8KMyEzPwo9AT8HHwcVDw8hLw81Pw8XMx8KFSM1PwoFHwcPByEvBz8HATMfFx0BDxcjLxU9AT8XFw8EHwM/Ay8CAjAGBgYFBAICAQECAgQFBgYG/oAHBgYGBgoIBwMCAgEBAgIDBwgKBgYGBgcCgAcGBgYGCggHAwICAQECAgQFBgYGBgYGBQQCAgEBAgMEBQcHCAoJCwsMDA0N/YANDQwMCwsJCggHBwUEAwIBAQIDBAUHBwgKCQsLDAwNDWAHBgYGBgoIBwMCAgGAAQICAwcICgYGBgYBpwYGBgUEAgIBAQICBAUGBgb+4AYGBgUEAgIBAQICBAUGBgYBoAUFBAQEAwMCDwQFBgcHCAkJKAQEAwMDAgEBAgMDAwQEKAkJCAcHBgUEDwIDAwQEBAUFCAgHBQIPBAUGBwcICQkoBAQDAwMCAQECAwMDBAQoCQkIBwcGBQQPAgMDBAQEBQUFBQwMDg4MDAoKDAwODgwMApABAgIEBQYGBgYGBgUEAgIBAQICAwcICgYGBgYHwAcGBgYGCggHAwICAQECAgMHCAoGBgYGB2AGBgYFBAICAQECAgQFBgYGYA0NDAwLCwkKCAcHBQQDAgEBAgMEBQcHCAoJCwsMDA0NwA0NDAwLCwkKCAcHBQQDAgGgAQICAwcICgYGBgZHRwYGBgYKCAcDAgIBIAECAgQFBgYGBgYGBQQCAgEBAgIEBQYGBgYGBgUEAgIBAWABAgMDAwQEKAkJCAcHBgUEDwIDAwQEBAUFBQUEBAQDAwIPBAUGBwcICQkoBAQDAwMCAQEDBQcEKAkJCAcHBgUEDwIDAwQEBAUFBQUEBAQDAwIPBAUGBwcICQkoBAQDAwMCAXAHBwwMCgoMDA4ODAwKCgwMAAAKAAAAAAPAA8AAeACbAJ4AowC3ANcA2wDfAPMBBwAAATMfDR0BPwc7AR8OHQEPBzsBHw0dAg8NIyEvDxE1Pw0zAxUfDTsBPw09ASMTMzU3FTM1IxczPwc1LwcjBR8HDwcvBz8GExE3JwUzNSMlLwIrAQ8DFz8DPQEvAiUPBxUzNS8HASAKCQoICQgHBwYGBAQEAgLIBwgICQgJCQoJCQkJCAgICFoHBQUEAwICAgIDBAUFB8j+CgkKCAkIBwcGBgQEBAICAgIEBAQGBgcHCAkICgkK/YAQEBAODg0NCwoKCAYGAgMCAgIEBAQGBgcHCAkICgkKIAICBAQEBgYHBwgJCAoJCgoJCggJCAcHBgYEBAQCAsDiPkDAfr6ABgYGBQQCAgEBAgIEBQYGBoD+AAYGBgUEAgIBAQICBAUGBgYGBgYFBAICAQECAgQFBgamrYf+2sDAAiIFBQYGBgYGBaKHowQDAgIDBP2jBgYGBQQCAgHAAQICBAUGBgYDwAICBAQEBgYHBwgJCAoJCv7IBwUFBAMCAgICAwQFBQdaCAgICAkJCQkKCQkICQgIB8gCAgQEBAYGBwcICQgKCQqACgkKCAkIBwcGBgQEBAICAQIEBgYICgoLDQ0ODggQEAKICgkKCAkIBwcGBgQEBAIC/SAKCQoICQgHBwYGBAQEAgICAgQEBAYGBwcICQgKCQqg/wA+QH7AwAECAgQFBgYGgAYGBgUEAgIBQAECAgQFBgYGBgYGBQQCAgEBAgIEBQYGBgYGBgUEAgIBCf7wrodt4F0EAwICAwSjh6IFBgYGBgYFBd4BAgIEBQYGBoCABgYGBQQCAgEADAAAAAADwAPMAD8AgwCTAPgBCQErAU0BkQGmAboB1AH2AAABMx8NFQ8PLw41Pw4BHwcRFR8NOwEfBw8HIy8PET8GAQ8DHwM/Ay8CEzMfFx0BDxcjLxU9AT8XFw8EHwM/Ay8CBR8HDwchLwc/CB8HDwcjLwc/BwEfDxUPDyEvDzU/DxUjDwcVHwchNRczPwc1LwcjFzMfBBUPBS8FNT8EBR8HDwcjLwc/BwJABAYGBRAEBAUGBgYoBgQCAgQGKAYGBgUEBAMMAwUHBwYGBQQQBAQFBgYGKAYEAgIEBigGBgYFBAQDDAMFB/4nBgYGBQQCAgECAgQEBAYGBwcICQgKCQqQBgYGBQQCAgEBAgIEBQYGBpAQEBAODg0NCwoKCAYGAgMCAQICBAUGBgHmCAgKCgoKCAgICAoKCgoI2AUFBAQEAwMCDwQFBgcHCAkJKAQEAwMDAgEBAgMDAwQEKAkJCAcHBgUEDwIDAwQEBAUFCAgHBQIPBAUGBwcICQkoBAQDAwMCAQECAwMDBAQoCQkIBwcGBQQPAgMDBAQEBQUFBQwMDg4MDAoKDAwODgwM/tYGBgYFBAICAQECAgQFBgYG/wAGBgYFBAICAQECAgQFBgYGwAYGBgUEAgIBAQICBAUGBgbABgYGBQQCAgEBAgIEBQYGBgJQCwwKCwkKCAgHBwUFBAMBAQEBAwQFBQcHCAgKCQsKDAv9YAsMCgsJCggIBwcFBQQDAQEBAQMEBQUHBwgICgkLCgwLBQUJCAcGAgQCAQMEBgcECQkBdUDwCgkIBwYCBAIBAwQGBwQJCfXJAwIFAwIBAQI7AgMGBgMCOgMBAQIDBQL+7AYGBgUEAgIBAQICBAUGBgaABgYGBQQCAgEBAgIEBQYGBgEkAgQGKAYGBgUEBBAFBgYIBgYFEAQEBQYGBgceBgUDAQECBAUoBgYGBQQEEAUGBggGBgUQBAQFBgYGBx4GBQMBCQECAgQFBgYG/uAKCQoICQgHBwYGBAQEAgIBAgIEBQYGBgYGBgUEAgIBAQIEBgYICgoLDQ0ODggQEAEoBgYGBQQCAv6lCgoICAgICgoKCggICAgKAUYBAgMDAwQEKAkJCAcHBgUEDwIDAwQEBAUFBQUEBAQDAwIPBAUGBwcICQkoBAQDAwMCAQEDBQcEKAkJCAcHBgUEDwIDAwQEBAUFBQUEBAQDAwIPBAUGBwcICQkoBAQDAwMCAXAHBwwMCgoMDA4ODAwKCgwMAgECAgQFBgYGBgYGBQQCAgEBAgIEBQYGBgYGBgUEAgIBgAECAgQFBgYGBgYGBQQCAgEBAgIEBQYGBgYGBgUEAgIBAcABAQMEBQUHBwgICgkLCgwLgAsMCgsJCggIBwcFBQQDAQEBAQMEBQUHBwgICgkLCgwLgAsMCgsJCggIBwcFBQQDAQFAAQMEBgcECQmFCgkIBwYCBALg4AEDBAYHBAkJhQoJCAcGAgQCUAECAwQEBQQCPAIBAQEBAjoEBAUEBAMCARABAgIEBQYGBgYGBgUEAgIBAQICBAUGBgYGBgYFBAICAQAGAAAAAAPWA70AVgCtAMoA5wE+AVsAAAEfEwcVDwQfARUPCSMvAw8DIy8JNT8BLwQ1Jz8PJR8TBxUPBB8BFQ8JIy8DDwMjLwk1PwEvBDUnPw8FDwUfAwc/Ah8CJz8DLwUFDwUfAwc/Ah8CJz8DLwUBHxIdAg8EFx0BDwgrAi8CDwIrAi8IPQE3LwQ9Aj8ODwYfAhUHPwIfAic1PwIvBQEABQQEBAMEAgMxbQUEBAMDAwICAQEBAgICA08SAQECAQMDAwQEBAUEBQQEYmIEBAUEBQQEBAMDAwECAQESTwMCAgIBAQECAgMDAwQEBW0xAwUGBwIIBQQEBAMEAgMxbQUEBAMDAwICAQEBAgICA08SAQECAQMDAwQEBAUEBQQEYmIEBAUEBQQEBAMDAwECAQESTwMCAgIBAQECAgMDAwQEBW0xAwUGB/3sAgIGAwdCMAQCAQs7BgcHBjcLAQIEMD4IBgYCHgHkAgIGAwdCMAQCAQs7BgcHBjcLAQIEMD4IBgYCHv8ABQQEBAMEAgNDmAQFBAMDAwICAQICAgNuGgEBAgIDBAQEBAQFBAQEiIgEBAQFBAQEBAQDAgIBARpuAwICAgECAgMDAwQFBJhDAwUGBycBAwUEB2xOBAMSYQYHBwZdEgMETmgIBwUDMAHeAQEBAgMDAwRjEAECAgMDAwQEBQQEBQQEBANNbQUEBQQEAwQDAgIBAQEBAjQ0AgEBAQECAgMEAwQEBQQFbU0DBAQEBQQEBQQEAwMDAgIBEGMEBgQDAQEBAQIDAwMEYxABAgIDAwMEBAUEBAUEBAQDTW0FBAUEBAMEAwICAQEBAQI0NAIBAQEBAgIDBAMEBAUEBW1NAwQEBAUEBAUEBAMDAwICARBjBAYEA6ADAwYCAwkvBwcIQR8BAQICHUEIBwcvCQIDBgM7OAMDBgIDCS8HBwhBHwEBAgIdQQgHBy8JAgMGAzsCSQEBAQIDAwMEihYBAQIDAwMEBAUEBQQEBAQDa5cFBAQEBAQDAwMCAQECSEgCAQECAwMDBAQEBAQFl2sDBAQEBAUEBQQEAwMDAgEBFooEBgQDxgMDBgIDEEwGCAdsMwEBAgIxbAcIBkwQAgMGA2EABAAAAAADuQPWAGgAnQDQAOkAAAEzHwEHNx8HFQ8OHwMVDw4jLwc1PwQHPwIvAzU/HRUDLwwjDw4VHwMPAT8NNScBMx8GEwcDKwEDFR8CMwcrAQ8LLwY3AT8GAQ8KHwM/CAOIBAQIEBAIBgcGAgICAQEBAQMEBAUHCAgKDBMgMAUEBAICAwQGCAgKCw0NDhAIxQYFBgUFBAQCAgEBAgMEBAEHBQIBAwMCAgMFBgcJCgsMDg4PEA4ODBkYDBcXFhUUExIQDhEPpgMEBQYGCAcJCQkJCgoLCgoKCgkICAYHBQQEAwIBAgMDAQEDfQoKCQgIBwYFBQMDAgEB/q8GCwoKDgcGBYA+hwECjQEDA/w43AUDAwI/BAYHCAgJCgsIBwcFAwMBAQEIBQYHCAoLCwHwBBQTDxETExUVFhcREA8OEiceEg4JBwMBAusBAxwbBQYKDAcICQkKCwwMDQ0PEBERExUVIjJHDQ0RERARDxAPDg4MDAsJCAcDNQEBAgMEBAUGBQYFBQUEBAEPFxUZHxAREBAQDw8ODgwMCgkIBwUDAhwzLRQkHxsWEg8LCQYFAh7+TAoKCQgIBgcFBQMDAgEBAwMEBQYHBwgICQkJCgoLCg4eGxkVIgMEBQYGCAcJCQkJCgoLCgLIAgQFCggJC/6TUgGd/lIDBAEBSgIDBL8KCQgHBQMCAQECBQYDCAgIAu8LCQgHBgQD/s8BDA4OEhYaHyQqLwYICgsaPTQjHxsWEhAAAAAAAAASAN4AAQAAAAAAAAABAAAAAQAAAAAAAQAOAAEAAQAAAAAAAgAHAA8AAQAAAAAAAwAOABYAAQAAAAAABAAOACQAAQAAAAAABQALADIAAQAAAAAABgAOAD0AAQAAAAAACgAsAEsAAQAAAAAACwASAHcAAwABBAkAAAACAIkAAwABBAkAAQAcAIsAAwABBAkAAgAOAKcAAwABBAkAAwAcALUAAwABBAkABAAcANEAAwABBAkABQAWAO0AAwABBAkABgAcAQMAAwABBAkACgBYAR8AAwABBAkACwAkAXcgU21hcnQgU29sdXRpb25SZWd1bGFyU21hcnQgU29sdXRpb25TbWFydCBTb2x1dGlvblZlcnNpb24gMS4wU21hcnQgU29sdXRpb25Gb250IGdlbmVyYXRlZCB1c2luZyBTeW5jZnVzaW9uIE1ldHJvIFN0dWRpb3d3dy5zeW5jZnVzaW9uLmNvbQAgAFMAbQBhAHIAdAAgAFMAbwBsAHUAdABpAG8AbgBSAGUAZwB1AGwAYQByAFMAbQBhAHIAdAAgAFMAbwBsAHUAdABpAG8AbgBTAG0AYQByAHQAIABTAG8AbAB1AHQAaQBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAFMAbQBhAHIAdAAgAFMAbwBsAHUAdABpAG8AbgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIAB1AHMAaQBuAGcAIABTAHkAbgBjAGYAdQBzAGkAbwBuACAATQBlAHQAcgBvACAAUwB0AHUAZABpAG8AdwB3AHcALgBzAHkAbgBjAGYAdQBzAGkAbwBuAC4AYwBvAG0AAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAQIBAwEEAQUBBgEHAQgBCQEKAQsBDAENAQ4BDwEQAREBEgETARQAEWFub21hbHktZGV0ZWN0aW9uD2RhdGEtcHJvY2Vzc2luZxBzbWFydC1kYXRhLWVudHJ5DnNtYXJ0LWxvY2F0aW9uC3NtYXJ0LXBhc3RlDHNtYXJ0LXNlYXJjaBFzdG9jay1mb3JlY2FzdGluZwdhaS1jaGF0CWFpLWthbmJhbg5jaXJjdWxhci1jaGFydBFjb250ZXh0LWZpbHRlcmluZxNkdXBsaWNhdGUtZGV0ZWN0aW9uDmdyb3VwLWxpc3R2aWV3C3NtYXJ0LWNoaXBzEnNtYXJ0LWNvbG9yLXBpY2tlcg5zbWFydC1jb21ib2JveAxzbWFydC1yYXRpbmcPdGV4dC1mb3JtYXR0aW5nAAAAAAA=) format('truetype');
+font-weight: normal;
+font-style: normal;
 }
-@media(max-width:900px) {
-   .form-card {
-       flex: 0 0 calc(50% - 10px);
-   }
+
+[class^="sf-icon-"], [class*=" sf-icon-"] {
+ font-family: 'Smart Solution' !important;
+speak: none;
+font-size: 14px;
+color: #3c78ef;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
 }
-@media(max-width:600px) {
-   .form-card {
-       flex: 0 0 100%;
-   }
-}
+
+.sf-icon-anomaly-detection:before { content: "\e700"; }
+.sf-icon-data-processing:before { content: "\e701"; }
+.sf-icon-smart-data-entry:before { content: "\e702"; }
+.sf-icon-smart-location:before { content: "\e703"; }
+.sf-icon-smart-paste:before { content: "\e704"; }
+.sf-icon-smart-search:before { content: "\e705"; }
+.sf-icon-stock-forecasting:before { content: "\e706"; }
+.sf-icon-ai-chat:before { content: "\e707"; }
+.sf-icon-ai-kanban:before { content: "\e708"; }
+.sf-icon-circular-chart:before { content: "\e709"; }
+.sf-icon-context-filtering:before { content: "\e70a"; }
+.sf-icon-duplicate-detection:before { content: "\e70b"; }
+.sf-icon-group-listview:before { content: "\e70c"; }
+.sf-icon-smart-chips:before { content: "\e70d"; }
+.sf-icon-smart-color-picker:before { content: "\e70e"; }
+.sf-icon-smart-combobox:before { content: "\e70f"; }
+.sf-icon-smart-rating:before { content: "\e710"; }
+.sf-icon-text-formatting:before { content: "\e711"; }
+
 </style>
 
+<table id="table">
+  <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+  </colgroup>
 
-### AutoComplete
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
-<a href="/maui/Autocomplete/AI-Powered-Smart-Searching" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/AIAutoComplete.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Powered Smart Searching</h3>
-<div class="form-description">
-               Deliver faster, more relevant search experiences with AI-assisted suggestions that respond as users type.
-</div>
-</div>
-</a>
+<tr>
+
+<!-- COLUMN 1 -->
+<td>
+
+<div><p class="category-topics">AutoComplete</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching.md" aria-label="AutoComplete Smart Searching">
+<span class="sf-home-icon sf-icon-smart-search"></span>Smart Searching</a>
 </div>
 
-### ComboBox
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 2 -->
-<a href="/maui/ComboBox/AI-Powered-Smart-Searching" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/AICombobox.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Powered Smart Searching</h3>
-<div class="form-description">
-               Help users find the right option faster with contextual, AI-driven recommendations.
-</div>
-</div>
-</a>
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Filtering.md" aria-label="AutoComplete Smart Filtering">
+<span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
 </div>
 
-### Cartesian Charts
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 3 -->
-<a href="/maui/cartesian-charts/AI-Powered-Data-Processing" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/DataCleaningAndPreprocessing.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">Data Cleaning and Preprocessing</h3>
-<div class="form-description">
-               Use AI to clean and prepare visualized data, making it ready for accurate analysis and reporting.
-</div>
-</div>
-</a>
-<!-- Card 4 -->
-<a href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/StockForecasting.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">Stock Forecasting</h3>
-<div class="form-description">
-               Generate AI-driven summaries and forecasts from stock data to support better decision-making.
-</div>
-</div>
-</a>
+<div><p class="category-topics">ComboBox</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Searching" aria-label="ComboBox Smart Searching"><span class="sf-home-icon sf-icon-smart-combobox"></span>Smart Searching</a>
 </div>
 
-### DataForm
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 5 -->
-<a href="/maui/dataform/AI-Powered-Smart-Paste-DataForm" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/DataFormSmartPaste.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Powered Smart Paste</h3>
-<div class="form-description">
-               Speed up data entry by intelligently parsing and mapping pasted content into the correct form fields.
-</div>
-</div>
-</a>
-<!-- Card 6 -->
-<a href="/maui/dataform/AI-Powered-Smart-DataForm" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/DataFormSmartDataEntry.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Powered Smart Data Entry</h3>
-<div class="form-description">
-               Reduce manual entry with AI-assisted form completion and smart field suggestions for improved accuracy.
-</div>
-</div>
-</a>
+<div class="controlanchorlink">
+<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Filtering" aria-label="ComboBox Smart Filtering"><span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
 </div>
 
-### DataGrid
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 7 -->
-<a href="/maui/DataGrid/AI-driven-anomaly-detection" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/AnamolyDetection.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Driven Anomaly Detection</h3>
-<div class="form-description">
-               Automatically detect unusual patterns in tabular data with AI-powered analysis and clear visual cues.
-</div>
-</div>
-</a>
-<!-- Card 8 -->
-<a href="/maui/DataGrid/AI-driven-predictive-data-entry" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/PredictiveDataEntry.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Driven Predictive Data Entry</h3>
-<div class="form-description">
-               Get predictive assistance for tabular input, letting AI suggest the most likely next values as users type.
-</div>
-</div>
-</a>
+<div><p class="category-topics">Cartesian Charts</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Data-Processing" aria-label="Cartesian Charts Data Cleaning and Preprocessing"><span class="sf-home-icon sf-icon-data-processing"></span>Data Cleaning and Preprocessing</a>
 </div>
 
-### Maps
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 9 -->
-<a href="/maui/Maps/AI-driven-smart-location-search" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/Maps.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Driven Smart Location Search</h3>
-<div class="form-description">
-               Add intelligence to map experiences with location-aware search and geographically relevant insights.
-</div>
-</div>
-</a>
+<div class="controlanchorlink">
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" aria-label="Cartesian Charts Stock Forecasting"><span class="sf-home-icon sf-icon-stock-forecasting"></span>Stock Forecasting</a>
 </div>
 
-### Scheduler
-<div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 10 -->
-<a href="/maui/Scheduler/AI-Powered-Smart-Scheduler" class="form-card">
-<div class="form-image-wrapper" style="background:#eef2ec; text-align:center;">
-<img src="../Images/Scheduler.png"
-                loading="lazy"
-                decoding="async"
-                class="form-image">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI-Powered Smart Appointment Booking</h3>
-<div class="form-description">
-               Make scheduling easier with AI-assisted appointment creation, recommendations, and conflict-aware planning.
-</div>
-</div>
-</a>
+</td>
+
+<!-- COLUMN 2 -->
+<td>
+
+<div><p class="category-topics">DataForm</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-Paste-DataForm" aria-label="DataForm Smart Paste"><span class="sf-home-icon sf-icon-smart-paste"></span>Smart Paste</a>
 </div>
 
+<div class="controlanchorlink">
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm" aria-label="DataForm Smart Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Smart Data Entry</a>
+</div>
+
+<div><p class="category-topics">DataGrid</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/DataGrid/AI-driven-anomaly-detection" aria-label="DataGrid Anomaly Detection"><span class="sf-home-icon sf-icon-anomaly-detection"></span>Anomaly Detection</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/DataGrid/AI-driven-predictive-data-entry" aria-label="DataGrid Predictive Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Predictive Data Entry</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/DataGrid/AI-driven-duplicate-detection" aria-label="DataGrid AI-Driven Duplicate Detection"><span class="sf-home-icon sf-icon-duplicate-detection"></span>AI-Driven Duplicate Detection</a>
+</div>
+
+<div><p class="category-topics">Maps</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-smart-location"></span>Smart Location Search</a>
+</div>
+</td>
+</tr>
+</table>
 
 ## See Also
 
@@ -274,6 +184,4 @@ Explore these AI-powered solutions for .NET MAUI and see how they can improve co
 
 - [Syncfusion® Licensing in .NET MAUI](https://help.syncfusion.com/maui/licensing/overview)  
 
-- [Essential Studio UI Kit for .NET MAUI](https://help.syncfusion.com/maui/uikit/overview) 
-
-- [Future Release Plans in .NET MAUI](https://www.syncfusion.com/products/roadmap/maui-controls)
+- [Essential Studio UI Kit for .NET MAUI](https://help.syncfusion.com/maui/uikit/overview)

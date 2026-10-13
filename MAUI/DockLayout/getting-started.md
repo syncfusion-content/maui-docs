@@ -15,7 +15,7 @@ This guide details the initial setup and basic usage of the [SfDockLayout](https
 
 To get start quickly with our [.NET MAUI DockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html), you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=g2NU8b_9aAg" %} 
+<style>#MAUIDockLayoutVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDockLayoutVideoTutorial' src='https://www.youtube.com/embed/g2NU8b_9aAg'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

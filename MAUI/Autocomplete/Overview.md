@@ -67,7 +67,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/autocomplete/overview">Autocomplete</a></td>
+<td><a href="/maui/autocomplete/overview" aria-label="Overview of the Autocomplete">Autocomplete</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -80,7 +80,7 @@ The following table summarizes the globalization support available in this contr
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for flexible selection with optional user input.
 - [ListView](https://help.syncfusion.com/maui/listview/overview) for displaying filtered results in list format.
-- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting. 
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for structured numeric input with validation and formatting. 
 
 ## See Also
 

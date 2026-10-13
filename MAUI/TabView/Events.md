@@ -193,7 +193,7 @@ private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArg
 
 ## See also 
 
-- [How to convert events into commands in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)
+- [How to convert events into commands in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tab-view)
 - [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-- [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+- [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 - [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)

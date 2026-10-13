@@ -42,7 +42,7 @@ The following screenshot illustrates the result of the above code.
 
 ![SizeFactor](Images/Sizing/Sizefactor.png)
 
-### Using a smaller SizeFactor
+**Using a smaller SizeFactor**
 
 The following example sets `SizeFactor` to `0.3` to make the indicator smaller.
 

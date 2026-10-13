@@ -5,6 +5,7 @@ description: Polar Area Chart in .NET MAUI Polar Chart displays data as proporti
 platform: maui
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polar Area Chart in .NET MAUI Polar Chart
@@ -65,8 +66,8 @@ this.Content = chart;
 
 The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property customizes the rendering style of axis grid lines:
 
-* **Circle** (default) — Renders concentric circular grid lines, creating a target-like appearance
-* **Polygon** — Renders polygonal grid lines, creating a web or spider chart appearance
+* **Circle** (default) - Renders concentric circular grid lines, creating a target-like appearance
+* **Polygon** - Renders polygonal grid lines, creating a web or spider chart appearance
 
 {% tabs %}
 

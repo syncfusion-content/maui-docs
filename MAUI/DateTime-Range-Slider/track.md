@@ -49,11 +49,11 @@ rangeSlider.ShowLabels = true;
 
 {% endtabs %}
 
-![RangeSlider date label](images/track/date-labels.png)
+![Range Slider date label](images/track/date-labels.png)
 
 ## Track color
 
-Change the active and inactive track color of the DateTime range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class.
+Change the active and inactive track color of the DateTime Range Slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackStyle) class.
 
 The active side of the DateTime Range Slider is between the start and end thumbs.
 
@@ -90,7 +90,7 @@ rangeSlider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1A
 
 {% endtabs %}
 
-![RangeSlider track color](images/track/track-color.png)
+![Range Slider track color](images/track/track-color.png)
 
 ## Track height
 
@@ -127,7 +127,7 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 {% endtabs %}
 
-![RangeSlider track size](images/track/track-size.png)
+![Range Slider track size](images/track/track-size.png)
 
 ## Track extent
 
@@ -164,11 +164,11 @@ rangeSlider.TrackExtent = 25;
 
 **Without track extent**
 
-![RangeSlider track extent before](images/track/track-extent-before-image.png)
+![Range Slider track extent before](images/track/track-extent-before-image.png)
 
 **With track extent**
 
-![RangeSlider track extent after](images/track/track-extent-after-image.png)
+![Range Slider track extent after](images/track/track-extent-after-image.png)
 
 ## Disabled track
 
@@ -301,7 +301,7 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![RangeSlider track disabled state](images/track/track-disabled.png)
+![Range Slider track disabled state](images/track/track-disabled.png)
 
 ## Orientation
 
@@ -341,7 +341,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 {% endtabs %}
 
-![DateTimeRangeSlider orientation](images/getting-started/orientation.png)
+![DateTime Range Slider orientation](images/getting-started/orientation.png)
 
 ## Inverse the slider
 
@@ -381,4 +381,4 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse range slider](images/getting-started/slider-inverse.png)
+![Inverse Range Slider](images/getting-started/slider-inverse.png)

@@ -5,6 +5,7 @@ description: Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart with up
 platform: MAUI
 control: SfPolarChart
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI Polar Chart
@@ -695,8 +696,8 @@ this.Content = chart;
 
 The following features from Xamarin.Forms are not supported in .NET MAUI:
 
-* Data label creation events — Create a custom data label handler instead by using the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method.
-* ChartDataPoint model class — Use your own custom data model instead.
+* Data label creation events - Create a custom data label handler instead by using the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method.
+* ChartDataPoint model class - Use your own custom data model instead.
 
 ## Limitations
 

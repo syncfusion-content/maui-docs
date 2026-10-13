@@ -21,7 +21,7 @@ Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ### Step 2: Customize the background
 
-To achieve a glass like background in the card view, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass like background in the Card view, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html):
 

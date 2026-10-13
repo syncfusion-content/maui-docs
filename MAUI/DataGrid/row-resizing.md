@@ -6,17 +6,18 @@ platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, row resizing, datagrid row height, maui datagrid row, sfdatagrid row resize
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Row Resizing in .NET MAUI Data Grid
 
 The `SfDataGrid` supports interactive row resizing. When enabled, users can long-press the bottom edge of a row header to change that row's height. Resized heights are cached and preserved during scrolling.
 
-> **Note:** Row resizing requires `ShowRowHeader` to be set to `true`, and defaults to `false`.
+> **Note:** Row resizing requires [SfDataGrid.ShowRowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader) to be set to `true`, and defaults to `false`.
 
 ## Enable Row Resizing
 
-Set the `SfDataGrid.AllowResizingRows` property to `true` to enable interactive resizing.
+Set the [SfDataGrid.AllowResizingRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowResizingRows) property to `true` to enable interactive resizing.
 
 {% tabs %}
 {% highlight xaml %}
@@ -38,10 +39,10 @@ this.Content = dataGrid;
 
 ## Row Resize Mode
 
-The `RowResizeMode` determines when the requested height is applied during an interactive resize:
+The [SfDataGrid.RowResizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowResizeMode) determines when the requested height is applied during an interactive resize:
 
-- `OnTouchUp` - New height is applied when the user releases the pointer (touch-up or mouse-up).
-- `OnMoved` - New height is applied continuously as the resize indicator moves (live update).
+- **OnTouchUp** - New height is applied when the user releases the pointer (touch-up or mouse-up).
+- **OnMoved** - New height is applied continuously as the resize indicator moves (live update).
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,7 +66,7 @@ this.Content = dataGrid;
 
 ## RowResizing Event
 
-Use `SfDataGrid.RowResizing` to validate or cancel resizes. The event provides `DataGridRowResizingEventArgs` with the following properties:
+Use [SfDataGrid.RowResizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowResizing) to validate or cancel resizes. The event provides [DataGridRowResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowResizingEventArgs.html) with the following properties:
 
 - `RowIndex` - Index of the row being resized.
 - `RowData` - The underlying data item for the row.
@@ -110,7 +111,7 @@ private void DataGrid_RowResizing(object? sender, DataGridRowResizingEventArgs e
 
 ## Customize Appearance
 
-Change the indicator color using `DataGridStyle.RowResizingIndicatorColor`.
+Change the indicator color using [SfDataGrid.DefaultStyle.RowResizingIndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowResizingIndicatorColor).
 
 {% tabs %}
 {% highlight xaml %}

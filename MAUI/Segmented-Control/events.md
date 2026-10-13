@@ -23,7 +23,7 @@ Below is a list of the arguments:
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) event is triggered once the segment is selected in the segmented control. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionChangedEventArgs.html) has the following values, which provide information for the `SelectionChanged` event.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) event is triggered once the segment is selected in the Segmented Control. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionChangedEventArgs.html) has the following values, which provide information for the `SelectionChanged` event.
 
 * OldIndex
 * NewIndex

@@ -3,7 +3,7 @@ layout: post
 title: Create Segment Content in .NET MAUI Segmented Control | Syncfusion®
 description: Learn about populating segment items with text, icons, or a combination of both in the .NET MAUI Segmented Control.
 platform: maui
-control: Segmented (SfSegmented) control
+control: Segmented (SfSegmented) Control
 documentation: ug
 ---
  
@@ -12,7 +12,7 @@ documentation: ug
 Depending on the application, different scenarios may require icons, text, or a combination of both for effective communication.
 
 ## Text
-Create segmented control with segments having the given text.
+Create Segmented Control with segments having the given text.
 
 {% tabs %}
 {% highlight XAML %}
@@ -79,7 +79,7 @@ public class ViewModel
 ![Display text in .NET MAUI Segmented control.](images/populating-segment-items/text.png)
 
 ## Image
-Create a segmented control with segments that contain the provided images by using the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html) collection, which is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property.
+Create a Segmented Control with segments that contain the provided images by using the [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html) collection, which is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -276,4 +276,4 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![Display font with text in .NET MAUI Segmented control.](images/populating-segment-items/font-text.png)
+![Display font with text in .NET MAUI Segmented Control.](images/populating-segment-items/font-text.png)

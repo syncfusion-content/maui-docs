@@ -11,7 +11,7 @@ documentation: ug
 
 ## Inverse the slider
 
-Invert the range slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
+Invert the Range Slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the IsInversed property is **False**.
 
 {% tabs %}
 
@@ -46,11 +46,11 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse range slider](images/getting-started/slider-inverse.png)
+![Inverse Range Slider](images/getting-started/slider-inverse.png)
 
 ## Orientation
 
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is **Horizontal**.
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the Range Slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is **Horizontal**.
 
 {% tabs %}
 
@@ -85,4 +85,4 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 {% endtabs %}
 
-![RangeSlider orientation](images/getting-started/orientation.png)
+![Range Slider orientation](images/getting-started/orientation.png)

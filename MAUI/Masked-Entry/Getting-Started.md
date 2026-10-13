@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [Masked Entry](http
 
 To quickly get started with the .NET MAUI Masked Entry, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=yTbh1Jo95Vw" %}
+<style>#MAUIMaskedEntryVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIMaskedEntryVideoTutorial' src='https://www.youtube.com/embed/yTbh1Jo95Vw'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}

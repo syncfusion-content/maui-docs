@@ -68,7 +68,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector date interval](images/interval/date-interval.png)
+![Range Selector date interval](images/interval/date-interval.png)
 
 ## Auto interval
 

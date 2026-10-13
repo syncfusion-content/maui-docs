@@ -5,6 +5,7 @@ description: Learn about Liquid Glass Effect support in the Syncfusion® .NET MA
 platform: MAUI
 control: Kanban (SfKanban)
 documentation: ug
+appliesto: UI Component Suite, Gantt SDK
 ---
 
 # Liquid Glass Effect in .NET MAUI Kanban Board

@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart appearance, .net maui chart appearance customization, syncfusion maui cartesian chart appearance, .net maui chart styling.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Appearance in .NET MAUI Cartesian Chart

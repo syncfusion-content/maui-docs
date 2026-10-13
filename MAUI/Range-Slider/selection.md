@@ -48,7 +48,7 @@ rangeSlider.ShowDividers = true;
 
 {% endtabs %}
 
-![RangeSlider numeric discrete mode](images/selection/step-size.gif)
+![Range Slider numeric discrete mode](images/selection/step-size.gif)
 
 ## Interval Selection
 
@@ -85,7 +85,7 @@ rangeSlider.EnableIntervalSelection = true;
 
 {% endtabs %}
 
-![RangeSlider EnableIntervalSelection](images/selection/enableintervalselection.gif)
+![Range Slider EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
 ## DragBehavior
 
@@ -126,7 +126,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
 
 ### BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the range slider thumb radius. Its not possible to move the individual thumb when setting this behavior.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the Range Slider thumb radius. Its not possible to move the individual thumb when setting this behavior.
 
 {% tabs %}
 

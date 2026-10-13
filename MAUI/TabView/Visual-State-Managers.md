@@ -245,7 +245,7 @@ public class CustomTabItem : SfTabItem
 
 ## See also
 
-* [How to customize the text color of the header in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)
+* [How to customize the text color of the header in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tab-view)
 * [Selection Indicator Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/selection-indicator-customization)
-* [Tab Item Customization in .NET MAUI Tab View](Thttps://help.syncfusion.com/maui/tabview/tab-item-customization)
+* [Tab Item Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-item-customization)
 * [Tab Bar Customization in .NET MAUI Tab View](https://help.syncfusion.com/maui/tabview/tab-bar-customization)

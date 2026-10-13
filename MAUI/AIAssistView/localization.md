@@ -9,9 +9,216 @@ documentation: ug
 
 # Localization in .NET MAUI AI AssistView
 
-`Localization` is the process of translating the application resources into different languages for specific cultures. The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) can be localized by adding a `resource` file.
+`Localization` is the process of translating application resources into different languages for specific cultures. The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) can be localized by adding `resx` resource files. The `SfAIAssistView` allows you to localize the following built-in strings to suit your application’s language and culture:
 
-## Setting the CurrentUICulture in the Application
+<table>
+<tr>
+<th> Name </th>
+<th> Value </th>
+</tr>
+<tr>
+<td> HeaderText </td>
+<td> How can I help you? </td>
+</tr>
+<tr>
+<td> EditorPlaceholder </td>
+<td> Type here... </td>
+</tr>
+<tr>
+<td>Processing</td>
+<td>Processing</td>
+</tr>
+<tr>
+<td>AttachFiles</td>
+<td>Attach Files</td>
+</tr>
+<tr>
+<td>Chat</td>
+<td>Chat</td>
+</tr>
+<tr>
+<td>NewChat</td>
+<td>New chat</td>
+</tr>
+<tr>
+<td>TemporaryChat</td>
+<td>Temporary chat</td>
+</tr>
+<tr>
+<td>RequestCopied</td>
+<td>Request copied!</td>
+</tr>
+<tr>
+<td> ResponseCopied </td>
+<td> Response copied! </td>
+</tr>
+<tr>
+<td> ConversationDeleteSuccess </td>
+<td> Chat deleted successfully </td>
+</tr>
+<tr>
+<td> MaximumUploadItemsExceeded </td>
+<td> Maximum {0} items can be uploaded at a time. </td>
+</tr>
+<tr>
+<td> NetworkError </td>
+<td> Network error. Please check your connection. </td>
+</tr>
+<tr>
+<td> MicrophonePermissionDenied </td>
+<td> Microphone permission denied </td>
+</tr>
+<tr>
+<td> NoSpeechDetected </td>
+<td> No speech detected. Please try again. </td>
+</tr>
+<tr>
+<td> VoiceRecognitionError </td>
+<td> Voice recognition failed </td>
+</tr>
+<tr>
+<td> VoiceRecognitionTimeout </td>
+<td> Recognition timeout. Please try again. </td>
+</tr>
+<tr>
+<td>MyChatsTitle</td>
+<td>My Chats</td>
+</tr>
+<tr>
+<td> AgentsTitle </td>
+<td> Agents </td>
+</tr>
+<tr>
+<td>SearchChat</td>
+<td>Search Chat</td>
+</tr>
+<tr>
+<td>ConversationSearchPlaceholder</td>
+<td>Search conversations</td>
+</tr>
+<tr>
+<td>SearchNoResults</td>
+<td>No results found</td>
+</tr>
+<tr>
+<td>SearchHistoryToday</td>
+<td>Today</td>
+</tr>
+<tr>
+<td>SearchHistoryYesterday</td>
+<td>Yesterday</td>
+</tr>
+<tr>
+<td>SearchHistoryLastWeek</td>
+<td>Last Week</td>
+</tr>
+<tr>
+<td>SearchHistoryLastMonth</td>
+<td>Last Month</td>
+</tr>
+<tr>
+<td>SearchHistoryOlder</td>
+<td>Older</td>
+</tr>
+<tr>
+<td> Filter </td>
+<td> Filter </td>
+</tr>
+<tr>
+<td> FilterAll </td>
+<td> All </td>
+</tr>
+<tr>
+<td> FilterToday </td>
+<td> Today </td>
+</tr>
+<tr>
+<td> FilterYesterday </td>
+<td> Yesterday </td>
+</tr>
+<tr>
+<td> FilterLast7Days </td>
+<td> Last 7 days </td>
+</tr>
+<tr>
+<td> FilterLast30Days </td>
+<td> Last 30 days </td>
+</tr>
+<tr>
+<td>RenameConversation</td>
+<td>Rename</td>
+</tr>
+<tr>
+<td>PinConversation</td>
+<td>Pin</td>
+</tr>
+<tr>
+<td>UnpinConversation</td>
+<td>Unpin</td>
+</tr>
+<tr>
+<td>DeleteConversation</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>RenameChatTitle</td>
+<td>Rename this chat</td>
+</tr>
+<tr>
+<td>RenameChatPlaceholder</td>
+<td>Conversation name</td>
+</tr>
+<tr>
+<td>RenameChatButton</td>
+<td>Rename</td>
+</tr>
+<tr>
+<td>RenameChatCancelButton</td>
+<td>Cancel</td>
+</tr>
+<tr>
+<td>DeleteChatTitle</td>
+<td>Delete chat?</td>
+</tr>
+<tr>
+<td>DeleteChatConfirmation</td>
+<td>Do you want to delete this chat permanently?</td>
+</tr>
+<tr>
+<td>DeleteChatButton</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>DeleteChatCancelButton</td>
+<td>Cancel</td>
+</tr>
+<tr>
+<td>PromptGallery</td>
+<td>Prompt Gallery</td>
+</tr>
+<tr>
+<td>PromptLibrarySearchPlaceholder</td>
+<td>Search prompts</td>
+</tr>
+<tr>
+<td>PromptLibraryEmptyView</td>
+<td>No prompts available</td>
+</tr>
+<tr>
+<td>Sources</td>
+<td>Sources</td>
+</tr>
+<tr>
+<td>SourcesTitle</td>
+<td>Sources</td>
+</tr>
+<tr>
+<td>CitationsTitle</td>
+<td>Citations</td>
+</tr>
+</table>
+
+## Setting the CurrentUICulture in the application
 
 Application culture can be changed by setting the `CurrentUICulture` in the `App.xaml.cs` file.
 
@@ -43,13 +250,17 @@ N> The required `resx` files (a default `SfAIAssistView.resx` and one or more cu
 
 ## Localize application level
 
-To localize the `AI AssistView` based on the `CurrentUICulture` using `resource` files, follow these steps.
+To localize `AI AssistView` based on `CurrentUICulture` using `resource`  files, follow these steps.
+
+### Steps to add resource files
 
    1. Create a new folder named `Resources` in the application.
 
    2. Right-click on the `Resources` folder, select `Add`, then click on `NewItem`.
 
-   3. In the Add New Item wizard, select the Resource File option and name the filename as `SfAIAssistView.<culture code>.resx`. For example, give the name as `SfAIAssistView.es.resx` for Spanish culture.
+   3. In the Add New Item wizard, select the Resource File option and name the file as `SfAIAssistView.<culture code>.resx`.
+
+      For example, use `SfAIAssistView.es.resx` for Spanish culture.
 
    4. The culture code identifies the language (and optionally the country/region).
 
@@ -59,6 +270,12 @@ To localize the `AI AssistView` based on the `CurrentUICulture` using `resource`
 
    ![Syncfusion .NET MAUI AI AssistView Shows the added resource file for Spanish language](images/localization/maui-aiassistview-shows-the-added-resource-file-for-spanish-language.png)
 
-   6. Add the Name/Value pair in the Resource Designer of `SfAIAssistView.es.resx` file and change its corresponding value to the text for the target culture.
+   6. Set Build Action to EmbeddedResource for the culture-specific resx file.
+
+   7. Add the Name/Value pairs in the Resource Designer of `SfAIAssistView.es.resx` and update each value for the target culture.
 
   ![Syncfusion .NET MAUI AI AssistView Shows the added resource file name value pair in the resource designer](images/localization/maui-aiassistview-shows-the-added-resource-file-name-value-pair-in-the-resource-designer.png)
+
+### Activation and behavior
+
+After configuration, the `AIAssistView` uses the localized strings when the application starts. Localization is applied based on the `CurrentUICulture` set in the App constructor. If a translated string is unavailable for a specific culture, `AIAssistView` falls back to the neutral resource file (SfAIAssistView.resx) or uses the hard coded English default. Changing the culture at runtime requires reassigning the ResourceManager and may require an application restart for the changes to take effect in all UI elements.

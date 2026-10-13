@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian charts, .net maui multi-level labels, cartesian chart multi-level labels, syncfusion cartesian charts maui, maui cartesian chart axis labels, .net maui cartesian chart axis, multilevel label customization, .net maui sfCartesianChart axis labels.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Multi-Level Labels in .NET MAUI Cartesian Chart

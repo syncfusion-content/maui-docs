@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Slider
 
-This section helps to learn about how to add tooltip in the slider.
+This section helps to learn about how to add tooltip in the Slider.
 
 ## Enable tooltip
 
@@ -73,6 +73,35 @@ SfSlider slider = new SfSlider()
 ![Slider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/slider/events-and-commands#tooltip-text-format) to customize tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
+
+## Customize tooltip position
+
+You can customize the tooltip position using the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Position) property of [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) in the [`Slider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html). In a horizontal slider, the tooltip can be displayed above or below the track. In a vertical slider, it can be displayed on the left or right side of the track.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="3" %}
+
+<sliders:SfSlider>
+    <sliders:SfSlider.Tooltip>
+        <sliders:SliderTooltip Position="Bottom" />
+    </sliders:SfSlider.Tooltip>
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# hl_lines="3" %}
+
+SfSlider slider = new SfSlider();
+slider.Tooltip = new SliderTooltip();
+slider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = slider;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tooltip position customization](images/tooltip/custom-tooltip-position.png)
 
 ## Tooltip label style
 

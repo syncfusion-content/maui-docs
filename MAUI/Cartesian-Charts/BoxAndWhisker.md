@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui box and whisker chart, maui box and whisker chart, box and whisker chart customization .net maui, syncfusion maui box and whisker chart, .net maui chart box plot visualization, .net maui chart box and whisker , .net maui box plot chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Box and Whisker Chart in .NET MAUI Cartesian Chart

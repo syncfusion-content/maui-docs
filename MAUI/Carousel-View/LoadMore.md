@@ -13,7 +13,7 @@ documentation : ug
 
 Watch this video to get started quickly with the Load More feature in .NET MAUI Carousel:
 
-{% youtube "https://www.youtube.com/watch?v=Q3eNppgpQ2Y" %}
+<style>#MAUICarouselLoadMoreVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUICarouselLoadMoreVideoTutorial' src='https://www.youtube.com/embed/Q3eNppgpQ2Y'></iframe>
 
 Use the Load More feature to load items incrementally as the user requests more data. [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) defines how many items are displayed in the viewport at a time. The LoadMore view is added after the last item in the collection. When the user taps the LoadMore view, the next set of items is added to the carousel.
 

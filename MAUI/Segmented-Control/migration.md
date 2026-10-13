@@ -3,20 +3,20 @@ layout: post
 title: Migration to .NET MAUI Segmented Control | Syncfusion®
 description: Learn about migration from Syncfusion® Xamarin Segmented Control to .NET MAUI Segmented Control with API comparisons.
 platform: maui
-control: Segmented (SfSegmented) control
+control: Segmented (SfSegmented) Control
 documentation: ug
 ---
 
 # Migration to .NET MAUI Segmented Control
 
-To make the migration from the [Xamarin SfSegmented Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the [.NET MAUI SfSegmented Control](https://www.syncfusion.com/maui-controls/maui-segmented-control) easier, most of the APIs from the `Xamarin SfSegmented Control` were kept in the `.NET MAUI SfSegmented Control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented Control`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin Segmented Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) to the [.NET MAUI Segmented Control](https://www.syncfusion.com/maui-controls/maui-segmented-control) easier, most of the APIs from the `Xamarin Segmented Control` were kept in the `.NET MAUI Segmented Control`. However, to maintain the consistency of API naming in the `.NET MAUI SfSegmented Control`, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th></tr>
+<th>Xamarin Segmented control</th>
+<th>.NET MAUI Segmented control</th></tr>
 <tr>
 <td>Syncfusion.Xamarin.Buttons</td>
 <td>Syncfusion.Maui.Buttons</td></tr>
@@ -24,12 +24,12 @@ To make the migration from the [Xamarin SfSegmented Control](https://www.syncfus
 
 ## Initialize Control
 
-To initialize the control, import the segmented control namespace and initialize the [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) as shown in the following code sample.
+To initialize the control, import the segmented Control namespace and initialize the [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) as shown in the following code sample.
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th></tr>
+<th>Xamarin SfSegmented Control</th>
+<th>.NET MAUI SfSegmented Control</th></tr>
 <tr>
 <td>
 
@@ -84,8 +84,8 @@ this.Content = segmentedControl;
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 
@@ -118,12 +118,12 @@ this.Content = segmentedControl;
 
 ## Properties
 
-### SfSegmentedControl
+### Segmented Control
 
 <table> 
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th></tr>
 
 {% tabs %}
@@ -290,8 +290,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 
@@ -417,8 +417,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th></tr>
 
 <tr>
@@ -519,8 +519,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 
@@ -554,8 +554,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 
@@ -571,8 +571,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 
@@ -587,8 +587,8 @@ public class ViewModel
 
 <table>
 <tr>
-<th>Xamarin SfSegmented control</th>
-<th>.NET MAUI SfSegmented control</th>
+<th>Xamarin Segmented Control</th>
+<th>.NET MAUI Segmented Control</th>
 <th>Description</th>
 </tr>
 

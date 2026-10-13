@@ -6,6 +6,7 @@ platform: MAUI
 control: SfDataGrid
 documentation: UG
 keywords : maui data grid, maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui addnewrow, maui add new row
+appliesto: UI Component Suite, Grid SDK
 ---
 
 # Add New Row in .NET MAUI Data Grid

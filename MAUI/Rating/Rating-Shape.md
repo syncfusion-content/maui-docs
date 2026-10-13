@@ -37,7 +37,7 @@ The `Star`, `Heart`, `Diamond`, and `Circle` shapes are built-in and require no 
 
 ## Custom
 
-When [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to `Custom`, provide a custom SVG path to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property. The `Path` value uses standard [SVG path data](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) syntax (move, line, curve commands), and is rendered at the size defined by [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize). The fill color is determined by the `RatedFill` and `UnratedFill` properties.
+When [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to `Custom`, provide a custom SVG path to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property. The `Path` value uses standard [SVG path data](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/d) syntax (move, line, curve commands), and is rendered at the size defined by [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize). The fill color is determined by the `RatedFill` and `UnratedFill` properties.
 
 {% tabs %}
 

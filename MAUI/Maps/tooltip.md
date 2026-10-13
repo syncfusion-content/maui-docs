@@ -5,6 +5,7 @@ description: Tooltip in .NET MAUI Maps displays detailed information for map ele
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Tooltip in .NET MAUI Maps
@@ -681,7 +682,7 @@ N> DataTemplate and DataTemplateSelector are also applicable for bubbles and mar
 
 ## Programmatic tooltip display in .NET MAUI Maps
 
-The .NET MAUI SfMaps allows you to display marker tooltips programmatically using the [`ShowTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowTooltip_Syncfusion_Maui_Maps_MapMarker_) method. The tooltip display duration is controlled using [`MarkerTooltipSettings.Duration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Duration), ensuring consistent behavior across all markers.
+The .NET MAUI Maps allows you to display marker tooltips programmatically using the [`ShowTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowTooltip_Syncfusion_Maui_Maps_MapMarker_) method. The tooltip display duration is controlled using [`MarkerTooltipSettings.Duration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Duration), ensuring consistent behavior across all markers.
 
 You can trigger tooltips either:
 

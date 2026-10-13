@@ -13,7 +13,7 @@ This section guides you through setting up and configuring the [Effects View](ht
 
 To quickly get started with the .NET MAUI Effects View, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=IOieyRMCuAo" %}
+<style>#MAUIEffectsViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIEffectsViewVideoTutorial' src='https://www.youtube.com/embed/IOieyRMCuAo'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -240,6 +240,6 @@ N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui
 
 ## See also 
 
-[How to apply ripple effect on items in .NET MAUI ListView (SfListView)?](https://support.syncfusion.com/kb/article/15802/how-to-apply-ripple-effect-on-items-in-net-maui-listview-sflistview)
+[How to apply ripple effect on items in .NET MAUI ListView (SfListView)?](https://support.syncfusion.com/kb/article/15802/how-to-apply-ripple-effect-on-items-in-net-maui-listview)
 
 [How to get the selected item from .NET MAUI ListView?](https://support.syncfusion.com/kb/article/13469/how-to-get-the-selected-item-from-net-maui-listview)

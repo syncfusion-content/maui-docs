@@ -64,7 +64,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/masked-entry/overview">Masked Entry</a></td>
+<td><a href="/maui/masked-entry/overview" aria-label="MAUI Masked Entry control overview">Masked Entry</a></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -76,7 +76,7 @@ The following table summarizes the globalization support available in this contr
 ## Related controls
 
 - [ComboBox](https://help.syncfusion.com/maui/combobox/overview) for selecting values from predefined lists with optional input.
-- [Numeric Entry](https://help.syncfusion.com/maui/numeric-entry/overview) for structured numeric input with validation and formatting.  
+- [Numeric Entry](https://help.syncfusion.com/maui/numericentry/overview) for structured numeric input with validation and formatting.  
 - [Text Input Layout](https://help.syncfusion.com/maui/textinputlayout/overview) for enhancing input fields with labels and validation UI.
 
 ## See Also

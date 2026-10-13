@@ -14,14 +14,14 @@ To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui
 1. SfDateTimeRangeSlider – For date-time scale.
 2. SfRangeSlider – For numeric scale.
 
-One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfDateTimeRangeSlider and SfRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
+One more thing is, in .NET MAUI Range Slider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfDateTimeRangeSlider and SfRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
 
 ## Namespaces 
 
 <table>
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th></tr>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th></tr>
 <tr>
 <td>Syncfusion.SfRangeSlider.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
@@ -33,8 +33,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackColor)'| markdownify }}</td>
@@ -58,8 +58,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ThumbSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ThumbSize)'| markdownify }}</td>
@@ -83,8 +83,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td rowspan="2" valign="center">
@@ -101,8 +101,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
@@ -154,8 +154,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TooltipBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ToolTipBackgroundColor)'| markdownify }}</td>
@@ -175,8 +175,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
@@ -188,8 +188,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table> 
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
@@ -201,8 +201,8 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 
 <table>
 <tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th>
+<th>Xamarin Range Slider</th>
+<th>.NET MAUI Range Slider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[DragStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragStarted)'| markdownify }}</td>

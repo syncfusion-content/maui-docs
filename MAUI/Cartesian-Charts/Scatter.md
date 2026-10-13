@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui scatter chart, maui scatter chart, scatter chart customization .net maui, syncfusion maui scatter chart, cartesian scatter chart maui, .net maui chart scatter visualization, .net maui point chart.
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Scatter Chart in .NET MAUI Cartesian Chart

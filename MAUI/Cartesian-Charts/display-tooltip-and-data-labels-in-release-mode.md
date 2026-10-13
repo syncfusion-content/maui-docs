@@ -6,6 +6,7 @@ platform: maui
 control: SfCartesianChart
 documentation: ug
 keywords: .net maui cartesian chart tooltip, .net maui cartesian chart data label, tooltipinfo item binding, chartdatalabel item binding, release mode trimming, preserve attribute maui
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # How to Preserve Template Bindings in .NET MAUI Cartesian Chart
@@ -78,4 +79,4 @@ Because Release builds enable trimming, members referenced only from XAML can be
 
 ## See also
 
-* [Why Tooltip and DataLabel Are Missing in Release Mode .NET MAUI Chart?](https://support.syncfusion.com/kb/article/21677/why-tooltip-and-datalabel-are-not-showing-in-release-mode-in-net-maui-sfcartesianchart)
+* [Why Tooltip and DataLabel Are Missing in Release Mode .NET MAUI Chart?](https://support.syncfusion.com/kb/article/21677/why-tooltip-and-datalabel-are-missing-in-release-mode-net-maui-chart)

@@ -11,7 +11,7 @@ documentation: ug
 This section explains how to change the AI-Powered Text Editor’s appearance and suggestion behavior. You can set text styles, placeholder options, and customize how suggestions are shown.
 
 ## Text customization
-Set or bind the smart text editor’s text using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_Text) property. You can use this to preloaded content or bind it to a field in your view model for data binding.
+Set or bind the Smart Text Editor’s text using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_Text) property. You can use this to preloaded content or bind it to a field in your view model for data binding.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -140,7 +140,7 @@ var smarttexteditor = new SfSmartTextEditor
 ![Customization in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-customization.gif)
 
 ## Maximum input length
-Set a limit on the number of characters the user can enter in the smart text editor using the [MaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_MaxLength) property.
+Set a limit on the number of characters the user can enter in the Smart Text Editor using the [MaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html#Syncfusion_Maui_SmartComponents_SfSmartTextEditor_MaxLength) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}

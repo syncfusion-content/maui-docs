@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Range Slider control
 
-This section helps to learn about how to add tooltip in the range slider.
+This section helps to learn about how to add tooltip in the Range Slider.
 
 ## Enable tooltip
 
@@ -38,7 +38,7 @@ rangeSlider.Tooltip = new SliderTooltip();
 
 {% endtabs %}
 
-![RangeSlider tooltip](images/tooltip/tooltip.png)
+![Range Slider tooltip](images/tooltip/tooltip.png)
 
 ## Show always
 
@@ -68,9 +68,38 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 {% endtabs %}
 
-![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
+![Range Slider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
+
+## Customize tooltip position
+
+You can customize the tooltip position using the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Position) property of [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) in the [`Range Slider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html). In a horizontal range slider, the tooltip can be displayed above or below the track. In a vertical range slider, it can be displayed on the left or right side of the track.
+
+{% tabs %}
+
+{% highlight xaml hl_lines="3" %}
+
+<sliders:SfRangeSlider>
+    <sliders:SfRangeSlider.Tooltip>
+        <sliders:SliderTooltip Position="Bottom" />
+    </sliders:SfRangeSlider.Tooltip>
+</sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# hl_lines="3" %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Tooltip = new SliderTooltip();
+rangeSlider.Tooltip.Position = SliderTooltipPosition.Bottom;
+this.Content = rangeSlider;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tooltip position customization](images/tooltip/custom-tooltip-position.png)
 
 ## Tooltip label style
 
@@ -111,5 +140,5 @@ rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endtabs %}
 
-![RangeSlider tooltip style](images/tooltip/tooltip-style.png)
+![Range Slider tooltip style](images/tooltip/tooltip-style.png)
 

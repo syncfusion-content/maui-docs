@@ -13,7 +13,7 @@ documentation: ug
 
 - Instead of manually entering values, users can drag two thumbs across a timeline to define both the start and end points within a minimum and maximum limit.
 
-![.NET MAUI datetime range selector overview ](images/overview/datetime_range_selector.png)
+![.NET MAUI Datetime Range Selector overview ](images/overview/datetime_range_selector.png)
 
 ## Business use cases
 
@@ -71,7 +71,7 @@ The following table summarizes the globalization support available in this contr
 <th align="center">Keyboard navigation</th>
 </tr>
 <tr>
-<td><a href="/maui/datetime-range-selector/overview">DateTimeRangeSelector</a></td>
+<td><a href="/maui/datetime-range-selector/overview" aria-label="MAUI DateTime Range Selector control overview">DateTimeRangeSelector</a></td>
 <td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>

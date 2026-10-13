@@ -13,7 +13,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 
 To get started quickly with suggestions in .NET MAUI AI AssistView, you can check on this video:
 
-{% youtube "https://www.youtube.com/watch?v=dz9EOTvvAOU" %}
+<style>#MAUIAssistViewSuggestionsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAssistViewSuggestionsVideoTutorial' src='https://www.youtube.com/embed/dz9EOTvvAOU'></iframe>
 
 ## Common suggestions
 

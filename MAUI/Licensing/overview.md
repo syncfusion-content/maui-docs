@@ -1,9 +1,9 @@
 ---
 layout: post
 title: About Essential Studio® .NET MAUI Licensing | Syncfusion®
-description: Learn about Syncfusion® Essential Studio® .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
+description: Learn about Syncfusion® Essential Studio® .NET MAUI license keys, including how to generate, register, and manage them for your applications.
 platform: MAUI
-control: Essential Studio<sup>®</sup>
+control: Essential Studio®
 documentation: UG
 ---
 
@@ -29,7 +29,7 @@ Following licensing error will be shown if the license key is not registered in 
 
 <div id="license">
 
-This application was built using a trial version of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/maui/licensing/overview">help topic</a> for more information
+This application was built using a trial version of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/maui/licensing/overview" aria-label="MAUI Licensing Overview">help topic</a> for more information
 
 </div>
 

@@ -72,7 +72,7 @@ this.Content = mainGrid;
 When using [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentType) as initials, set the initial character using the following properties:
 
 * [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) - Defines the type of characters to be displayed.
-* [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName)- Gets or sets the value for the initials type, which displays the text in the avatar view.
+* [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName)- Gets or sets the value for the initials type, which displays the text in the Avatar View.
 * [InitialsColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsColor)- Gets or sets the color of the initials.
 
 ### InitialsType

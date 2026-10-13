@@ -269,7 +269,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of *
                >
 </div>
 <div class="catalog-content">
-<h3 class="catalog-title">Featured Article Tile <a href="(https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleTilePage.xaml"
+<h3 class="catalog-title">Featured Article Tile <a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleTilePage.xaml"
               target="_blank"
               class="source-icon"
               title="View Source">

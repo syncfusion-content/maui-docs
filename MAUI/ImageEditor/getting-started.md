@@ -14,8 +14,7 @@ This section explains the steps to create and load an image in the [.NET MAUI Im
 
 To get started quickly with the .NET MAUI Image Editor, you can check the video below.
 
-{% youtube
-"youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
+<style>#MAUIImageEditorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIImageEditorVideoTutorial' src='https://www.youtube.com/embed/Gkkh52xSehM'></iframe>
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -33,7 +32,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Image Editor NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor/) and install the latest version.
@@ -57,7 +56,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Image Editor NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -81,7 +80,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Image Editor NuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Image Editor NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor/) and install the latest version.

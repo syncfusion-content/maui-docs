@@ -3,7 +3,7 @@ layout: post
 title: Layout in .NET MAUI Segmented Control | Syncfusion®
 description: Learn about layout support to customize width, height, and the number of visible segments in the .NET MAUI Segmented Control.
 platform: maui
-control: Segmented (SfSegmented) control
+control: Segmented (SfSegmented) Control
 documentation: ug
 ---
  
@@ -11,9 +11,9 @@ documentation: ug
 The [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control) supports changing the layout width, height and the number of visible segments displayed.
 
 ## Change the segment width
-Change the width of the segmented control and each segment item.
+Change the width of the Segmented Control and each segment item.
 
-### Change the segment width for segmented control
+### Change the segment width for Segmented Control
 Use the [SegmentWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentWidth) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segment width of the segmented control.
 
 {% tabs %}
@@ -54,7 +54,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Change the segment width in .NET MAUI Segmented control.](images/layout/segment-width.png)
+![Change the segment width in .NET MAUI Segmented Control.](images/layout/segment-width.png)
 
 ### Change the each segment item width
 You can change the width of each segment item using the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_Width) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
@@ -86,10 +86,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Change the segment item width in .NET MAUI Segmented control.](images/layout/segment-item-width.png)
+![Change the segment item width in .NET MAUI Segmented Control.](images/layout/segment-item-width.png)
 
 ## Change the segment height
-You can use the [SegmentHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentHeight) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segment height of the segmented control.
+You can use the [SegmentHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentHeight) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to customize the segment height of the Segmented Control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -129,7 +129,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Change the segment height in .NET MAUI Segmented control.](images/layout/segment-height.png)
+![Change the segment height in .NET MAUI Segmented Control.](images/layout/segment-height.png)
 
 ## Visible segment count
 Set the number of visible segments displayed in the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) using [VisibleSegmentsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_VisibleSegmentsCount) property.
@@ -172,6 +172,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Visible segment count in .NET MAUI Segmented control.](images/layout/visible-segment-count.png)
+![Visible segment count in .NET MAUI Segmented Control.](images/layout/visible-segment-count.png)
 
 N> The layout of segments adjusts automatically once [VisibleSegmentsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_VisibleSegmentsCount) is set. This means that the [SegmentWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SegmentWidth) and [SfSegmentItem.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_Width) properties will not be applied, and the `WidthRequest` value should be divided by the `VisibleSegmentsCount` to determine the width of each segment.

@@ -9,12 +9,13 @@ documentation: ug
 
 # Overview of .NET MAUI Extension for JetBrains Rider
 
-The [Syncfusion® .NET MAUI](https://marketplace.jetbrains.com/) extension for JetBrains Rider simplifies the use of Syncfusion® .NET MAUI components by configuring the required Syncfusion® .NET MAUI NuGet packages. This extension streamlines development by providing developers with easy access to the powerful features and functionalities of Syncfusion® .NET MAUI components, saving time and effort.
+The Syncfusion<sup>®</sup> .NET MAUI integration for JetBrains Rider simplifies the development of cross-platform .NET MAUI applications by providing access to Syncfusion<sup>®</sup> controls, templates, and development resources. It helps developers quickly configure Syncfusion<sup>®</sup> components in their projects and build modern applications using Rider's rich .NET development environment.
 
-The Syncfusion® .NET MAUI extension offers the following support in JetBrains Rider:
+The Syncfusion<sup>®</sup> .NET MAUI integration for JetBrains Rider provides the following feature:
 
-**Project Template:** Creates Syncfusion® .NET MAUI applications with the necessary Syncfusion® components and configurations for development.
+* [Essential UI Kit](Essential-UI-Kit): Provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications.
 
-**Code Snippet:** Adds a Syncfusion® .NET MAUI component with multiple features into the .NET MAUI application's XAML code editor.
+## Next Step
 
-**Essential UI Kit:** Provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications.
+- [Download and Setup Guide](download-and-installation) explains the prerequisites, installation, and configuration required to develop Syncfusion® .NET MAUI applications in JetBrains Rider.  
+- [Essential® UI Kit](Essential-UI-Kit) provides ready-to-use XAML templates to design user interfaces for cross-platform .NET MAUI applications and walks through adding pages from the template to your project.

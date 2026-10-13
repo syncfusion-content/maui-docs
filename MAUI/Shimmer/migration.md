@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xa
 
 ## Initialize control
 
-To initialize the control, import the shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
+To initialize the control, import the Shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
 
 <table>
 <tr>
@@ -102,7 +102,7 @@ this.Content = shimmer;
 
 ## Properties
 
-### SfShimmer
+### Shimmer
 
 The following code example, explains how to initialize the properties of the `Xamarin SfShimmer` and `.NET MAUI SfShimmer` class.
 

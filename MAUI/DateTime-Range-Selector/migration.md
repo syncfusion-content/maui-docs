@@ -18,8 +18,9 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table>
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th></tr>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
+</tr>
 <tr>
 <td>Syncfusion.RangeNavigator.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
@@ -31,8 +32,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table> 
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ViewRangeStart](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_ViewRangeStart)'| markdownify }}</td>
@@ -76,8 +77,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table> 
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ThumbStyle.Width](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.ThumbStyle.html#Syncfusion_RangeNavigator_XForms_ThumbStyle_Width)'| markdownify }}</td>
@@ -107,8 +108,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table> 
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td rowspan="2" valign="center">
@@ -134,8 +135,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table> 
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ScaleStyle.IsVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.ScaleStyle.html#Syncfusion_RangeNavigator_XForms_ScaleStyle_IsVisible)'| markdownify }}</td>
@@ -179,8 +180,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table> 
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TooltipStyle.BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.TooltipStyle.html#Syncfusion_RangeNavigator_XForms_TooltipStyle_BackgroundColor)'| markdownify }}</td>
@@ -216,8 +217,8 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 
 <table>
 <tr>
-<th>Xamarin SfDateTimeRangeNavigator</th>
-<th>.NET MAUI SfDateTimeRangeSelector</th>
+<th>Xamarin DateTime Range Navigator</th>
+<th>.NET MAUI DateTime Range Selector</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[MinorScaleLabelsCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_MinorScaleLabelsCreated)'| markdownify }}</td>
