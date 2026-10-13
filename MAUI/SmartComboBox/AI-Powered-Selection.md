@@ -35,7 +35,7 @@ Before you begin, ensure you have the following:
     dotnet add package Azure.AI.OpenAI --version 2.1.0
     ```
 
-## Integrating Azure OpenAI with your .NET MAUI App
+## Step 1: Create the Azure OpenAI service
 
 First, ensure that you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
 
@@ -50,7 +50,7 @@ In your service class (`ComboBoxAzureAIService`), initialize the `AzureOpenAICli
 In the `GetCompletion` method, we construct the prompt and send it to the Azure OpenAI service. The chat history is reset for each new prompt in this implementation to keep each selection request independent.
 
 {% tabs %}
-{% highlight c# tabtitle="ComboBoxAzureAIService.cs" %}
+{% highlight c# %}
 
 using System.Diagnostics;
 
@@ -178,14 +178,14 @@ namespace SmartAIComboBox.SmartAIComboBox
 {% endhighlight %}
 {% endtabs %}
 
-## Implementing AI-based smart selection in .NET MAUI MultiSelect ComboBox
-
 The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a `Multiple` [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) that lets the user choose more than one item. Combined with a natural-language request entry, AI can read the menu, interpret the user's intent (price range, category, dietary preference, meal type, etc.), and auto-populate the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedItems) collection of the ComboBox.
 
-**Step 1:** Create a business model that represents each food item with its name, price, category, and diet so the AI can reason about the user's request.
+## Step 2: Create the food model
+
+Create a model that represents each food item with its name, price, category, and diet so the AI can interpret the user's request.
 
 {% tabs %}
-{% highlight c# tabtitle="FoodModel.cs" %}
+{% highlight c# %}
 
 namespace SmartAIComboBox.SmartAIComboBox
 {
@@ -219,10 +219,12 @@ namespace SmartAIComboBox.SmartAIComboBox
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Build the ViewModel that owns the menu, exposes a `UserQuery` for the natural-language request, maintains the `SelectedItems` collection, and provides an `AskAICommand` that the page invokes when the user submits the query.
+## Step 3: Create the selection ViewModel
+
+Build the ViewModel to own the menu, expose a `UserQuery` for the natural-language request, maintain the `SelectedItems` collection, and provide an `AskAICommand` that the page invokes when the user submits the query.
 
 {% tabs %}
-{% highlight c# tabtitle="FoodViewModel.cs" %}
+{% highlight c# %}
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -528,10 +530,12 @@ namespace SmartAIComboBox.SmartAIComboBox
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Define a value converter that inverts a bool so the Entry and Button can be disabled while a request is in flight.
+## Step 4: Define the inverse Boolean converter
+
+Define a value converter that inverts a Boolean value so the Entry and Button can be disabled while a request is in progress.
 
 {% tabs %}
-{% highlight c# tabtitle="InverseBoolConverter.cs" %}
+{% highlight c# %}
 
 using System.Globalization;
 
@@ -554,10 +558,12 @@ namespace SmartAIComboBox.SmartAIComboBox
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4:** Build the page that hosts the AI request entry and the MultiSelect ComboBox, and apply the AI's matched names to the ComboBox's [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedItems) collection.
+## Step 5: Build the selection page
+
+Build the page that hosts the AI request entry and the MultiSelect ComboBox, then apply the AI's matched names to the ComboBox's [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedItems) collection.
 
 {% tabs %}
-{% highlight xaml tabtitle="SmartAIComboBoxPage.xaml" %}
+{% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -724,7 +730,7 @@ namespace SmartAIComboBox.SmartAIComboBox
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="SmartAIComboBoxPage.xaml.cs" %}
+{% highlight c# %}
 
 namespace SmartAIComboBox.SmartAIComboBox;
 
@@ -845,7 +851,7 @@ public partial class SmartAIComboBoxPage : ContentPage
 
 The following image demonstrates the AI-driven selection inside the MultiSelect ComboBox.
 
-![.NET MAUI MultiSelect ComboBox With AI Smart Selection.](Images/AISearch/smartcombobox_fruits.gif)
+![.NET MAUI MultiSelect ComboBox With AI Smart Selection.](images/smartcombobox_fruits.gif)
 
 You can find the complete sample from this [link.](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples)
 
