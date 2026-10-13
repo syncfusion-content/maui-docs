@@ -62,47 +62,6 @@ this.Content = chart;
 
 ![Polar area chart type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_area_chart.png)
 
-## Grid line Type
-
-The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property customizes the rendering style of axis grid lines:
-
-* **Circle** (default) - Renders concentric circular grid lines, creating a target-like appearance
-* **Polygon** - Renders polygonal grid lines, creating a web or spider chart appearance
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart GridLineType= "Polygon"> 
-    <!-- code omitted for brevity -->
-    <chart:PolarAreaSeries ItemsSource = "{Binding PlantDetails}" 
-                           XBindingPath = "Direction"
-                           YBindingPath = "Tree"/>  
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-chart.GridLineType = PolarChartGridLineType.Polygon;
-// code omitted for brevity
-PolarAreaSeries series = new PolarAreaSeries()
-{
-    ItemsSource = new PlantViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Tree"
-};
-
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Polar gridline type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_area_gridline.png)
-
 ## Closed Series
 
 The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without a closed path. The default value is `true`, which creates a closed polygon shape. Set to `false` to create an open path that doesn't connect the last point to the first.

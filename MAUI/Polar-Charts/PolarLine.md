@@ -107,44 +107,6 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Grid line Type
-
-The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property used to customize the rendering style of axis grid lines. The default [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) is [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Circle). Switching to the [Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Polygon) grid line type transforms the polar chart appearance, resembling a spider or web chart.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart GridLineType = "Polygon"> 
-    <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
-                           XBindingPath = "Direction" 
-                           YBindingPath = "Tree"/>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-chart.GridLineType = PolarChartGridLineType.Polygon;
-// code omitted for brevity
-PolarLineSeries series = new PolarLineSeries()
-{
-    ItemsSource = new PlantViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Tree"
-};
-
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Polar gridline type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_gridline.png)
-
 ## Closed Series
 
 The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without closed path. The default value of [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) is `true`.
