@@ -268,10 +268,10 @@ The following table summarizes the globalization support available in this contr
       <div class="icon-circle">
         <span class="card-icon card-videos"></span>
       </div>
-      <h3 class="form-title">Videos</h3>
+      <h3 class="form-title">Tutorial Videos</h3>
     </div>
     <div class="form-description">
-      Watch videos to understand Grid Splitter concepts and implementation quickly.
+      Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
     <a href="https://www.syncfusion.com/tutorial-videos" class="explore-link">
       Watch Videos
@@ -289,7 +289,7 @@ The following table summarizes the globalization support available in this contr
       <h3 class="form-title">Knowledge Base</h3>
     </div>
     <div class="form-description">
-      Search for helpful articles, troubleshooting guidance, and implementation tips.
+      Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/category/76" class="explore-link">
       Search KB's
@@ -307,7 +307,7 @@ The following table summarizes the globalization support available in this contr
       <h3 class="form-title">Blogs</h3>
     </div>
     <div class="form-description">
-      Read blog posts for tips, updates, and real-world use cases.
+      Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
     <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
       Read Blogs

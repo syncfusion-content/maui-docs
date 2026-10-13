@@ -266,15 +266,15 @@ Explore Features
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
-    <span class="card-icon card-blogs"></span>
+    <span class="card-icon card-videos"></span>
   </div>
-    <h3 class="form-title">Blogs</h3>
+    <h3 class="form-title">Tutorial Videos</h3>
 </div>
     <div class="form-description">
-      Discover insights, tutorials, and best practices from our expert bloggers.
+      Watch step‑by‑step video guides to quickly understand concepts and implementation.
     </div>
-    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
-    Read Blogs
+    <a href="https://www.syncfusion.com/tutorial-videos" class="explore-link">
+    Watch now
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
@@ -289,7 +289,7 @@ Explore Features
     <h3 class="form-title">Knowledge Base</h3>
 </div>
     <div class="form-description">
-      Get quick solutions to common questions and implementation challenges.
+      Find practical solutions, troubleshooting tips and how‑to guides for common scenarios.
     </div>
     <a href="https://support.syncfusion.com/kb/cross-platforms/category/76">
     Search KB's
@@ -302,15 +302,15 @@ Explore Features
   <div class="form-content">
   <div class="card-header">
     <div class="icon-circle">
-    <span class="card-icon card-videos"></span>
+    <span class="card-icon card-blogs"></span>
   </div>
-    <h3 class="form-title">Videos</h3>
+    <h3 class="form-title">Blogs</h3>
 </div>
     <div class="form-description">
-      Watch demos, tutorials, and feature walkthroughs to get started faster.
+      Discover in‑depth articles, use cases and expert insights from our developers.
     </div>
-    <a href="https://www.syncfusion.com/tutorial-videos" class="explore-link">
-    Watch now
+    <a href="https://www.syncfusion.com/blogs/category/net-maui" class="explore-link">
+    Read Blogs
   <span class="card-icon card-arrow"></span>
 </a>
   </div>
