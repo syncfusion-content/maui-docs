@@ -255,6 +255,6 @@ The grouped results can be presented in two complementary ways:
 
 Because `IsStickyGroupHeader` is enabled, the active group header remains pinned to the top of the view while the user scrolls, so the current intent category is always visible. When the user adds a new entry or edits an existing one, simply call `ClassifyIntentsAsync` again to re-evaluate the affected items and refresh the grouping. The `SfListView` will immediately reflect the new intent labels and re-organize the items into the appropriate group.
 
-![AI driven intent grouping .NET MAUI ListView](Images\smart-ai-solutions\intent-grouping-listview.gif)
+![AI driven intent grouping .NET MAUI ListView](Images\smart-ai-samples\ListView_IntentGrouping.gif)
 
 You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/Grouping-the-items-by-intent-in-SfListView-using-AI).

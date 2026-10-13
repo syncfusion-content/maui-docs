@@ -241,6 +241,6 @@ A typical review interaction looks like this:
 
 This end-to-end workflow — *prompt → AI → JSON → `DataFormItem` → live `SfDataForm`* — lets developers add AI-assisted data entry to any education-related scenario, from student enrollment and course feedback to admissions and scholarship applications, with no manual form layout work.
 
-![AI driven smart form generation .NET MAUI DataForm](Images\smart-ai-solutions\ai-driven-form-generation.gif)
+![AI driven smart form generation .NET MAUI DataForm](images\smart-ai-samples\DataForm_FormGenerator.gif)
 
 You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/MAUI-Data-Form-Form-Generator).
