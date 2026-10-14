@@ -253,7 +253,7 @@ builder.Services.AddSingleton<SmartAIComboBoxPage>();
 
 ## Step 7: Build the selection page
 
-The page places an `Entry` in `SfTextInputLayout`. Its trailing view shows a search affordance before a search, a loading indicator during the request, and a clear affordance after results are available. Pressing Enter or tapping search starts the same ViewModel request. An error banner displays `ErrorMessage` and offers a dismiss command.
+The page places an `Entry` in `SfTextInputLayout`. Its trailing view shows a search icon before a search, a loading indicator during the request, and a clear icon after results are available. Pressing Enter or tapping search starts the same ViewModel request. An error banner displays `ErrorMessage` and offers a dismiss command.
 
 The MultiSelect ComboBox binds its item source and selection to the ViewModel. Its item template displays a checkbox for each fruit, and token mode displays the selected names.
 
@@ -335,7 +335,7 @@ private void OnDropDownItemCheckBoxChanged(
 
 ## How It Works
 
-1. The user describes the fruit they want and submits the query with Enter or the search affordance.
+1. The user describes the fruit they want and submits the query with Enter or the search icon.
 2. The ViewModel sends the query together with the fruit menu and health tags to Azure OpenAI.
 3. The ViewModel parses the returned names, resets the previous choices, and selects matching menu entries.
 4. The page opens the ComboBox dropdown so the selected checkboxes are visible; the selected fruits also appear as tokens.
@@ -355,4 +355,4 @@ You can find the complete sample in the [MAUI AI use-case demos repository](http
 - [Multiple selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
 - [Searching](https://help.syncfusion.com/maui/combobox/searching)
 - [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
-- [Azure OpenAI overview](https://learn.microsoft.com/azure/ai-foundry/openai/overview)
+- [Azure OpenAI overview](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai#ProductOverview)

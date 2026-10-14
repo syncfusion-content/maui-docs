@@ -9,11 +9,11 @@ documentation: ug
 
 # AI-Powered Smart Tag Generation in .NET MAUI ChipGroup
 
-This article demonstrates how to build an AI-powered tag generator with the Syncfusion® [.NET MAUI ChipGroup](https://help.syncfusion.com/maui/chipgroup/overview) control and Azure OpenAI. The user enters a software feature description, Azure OpenAI proposes relevant tags from a curated vocabulary, and the app displays validated results as wrapping chips.
+This article demonstrates how to build an AI-powered tag generator with the Syncfusion® [.NET MAUI ChipGroup](https://help.syncfusion.com/maui/chips/overview) control and Azure OpenAI. The user enters a software feature description, Azure OpenAI proposes relevant tags from a curated vocabulary, and the app displays validated results as wrapping chips.
 
 The sample uses the Azure OpenAI .NET SDK, dependency injection (DI), and a ViewModel that owns the query, results, loading state, and errors. The page appends generated tags one at a time to create a staggered appearance.
 
-N> **Prerequisite:** Before starting, install the required NuGet packages, configure your .NET MAUI application, and complete the [ChipGroup getting started](https://help.syncfusion.com/maui/chipgroup/getting-started) steps.
+N> **Prerequisite:** Before starting, install the required NuGet packages, configure your .NET MAUI application, and complete the [ChipGroup getting started](https://help.syncfusion.com/maui/chips/getting-started) steps.
 
 ## Step 1: Install the required packages
 
@@ -341,6 +341,6 @@ You can find the complete sample in the [MAUI AI use-case demos repository](http
 
 ## See Also
 
-- [ChipGroup getting started](https://help.syncfusion.com/maui/chipgroup/getting-started)
-- [ChipGroup overview](https://help.syncfusion.com/maui/chipgroup/overview)
-- [Azure OpenAI overview](https://learn.microsoft.com/azure/ai-foundry/openai/overview)
+- [ChipGroup getting started](https://help.syncfusion.com/maui/chips/getting-started)
+- [ChipGroup overview](https://help.syncfusion.com/maui/chips/overview)
+- [Azure OpenAI overview](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai#ProductOverview)
