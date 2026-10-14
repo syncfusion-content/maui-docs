@@ -1,434 +1,323 @@
 ---
 layout: post
 title: AI-Powered Smart Tag Generation in .NET MAUI ChipGroup | Syncfusion®
-description: Learn how to implement AI-powered smart tag generation with the Syncfusion® .NET MAUI ChipGroup control and Azure OpenAI.
-platform: maui
+description: Learn how to generate relevant tags from a text description with Azure OpenAI and the Syncfusion® .NET MAUI ChipGroup control.
+platform: MAUI
 control: SfChipGroup
 documentation: ug
 ---
 
 # AI-Powered Smart Tag Generation in .NET MAUI ChipGroup
 
-This article walks you through the implementation of an intelligent, AI-driven tag generation experience using the Syncfusion® .NET MAUI ChipGroup control. The user describes a feature, product requirement, or business scenario in natural language, and Azure OpenAI automatically analyzes the content and generates the most relevant tags.
+This article demonstrates how to build an AI-powered tag generator with the Syncfusion® [.NET MAUI ChipGroup](https://help.syncfusion.com/maui/chipgroup/overview) control and Azure OpenAI. The user enters a software feature description, Azure OpenAI proposes relevant tags from a curated vocabulary, and the app displays validated results as wrapping chips.
 
-For example:
+The sample uses the Azure OpenAI .NET SDK, dependency injection (DI), and a ViewModel that owns the query, results, loading state, and errors. The page appends generated tags one at a time to create a staggered appearance.
 
-* **Build a secure login system with biometric authentication and OTP verification**
+N> **Prerequisite:** Before starting, install the required NuGet packages, configure your .NET MAUI application, and complete the [ChipGroup getting started](https://help.syncfusion.com/maui/chipgroup/getting-started) steps.
 
-Automatically generates:
+## Step 1: Install the required packages
 
-* Login
-* Authentication
-* Security
-* Biometric
-* OTP
-* MFA
+The sample uses `Syncfusion.Maui.Core` for `SfChipGroup` and `Azure.AI.OpenAI` to connect to Azure OpenAI. Install the Azure OpenAI SDK version used by the sample:
 
-**Expected Outcome:** Users simply describe their requirements in natural language, and AI automatically generates meaningful tags without requiring manual entry.
-
-**One-line Value:** AI understands the intent, and the ChipGroup instantly displays relevant tags.
-
-## Prerequisites
-
-Before you begin, ensure you have the following:
-
-* A working .NET MAUI application with the Syncfusion.Maui.Core package installed.
-* An active Azure subscription with access to Azure OpenAI and a deployed model.
-* Deployment name, endpoint URL, and API key from your Azure OpenAI resource.
-* Azure.AI.OpenAI NuGet package or a REST-based Azure OpenAI integration.
-
-Install the package:
-
-```powershell
+{% tabs %}
+{% highlight powershell %}
 Install-Package Azure.AI.OpenAI -Version 2.1.0
-```
-
-Or using .NET CLI:
-
-```bash
+{% endhighlight %}
+{% highlight bash %}
 dotnet add package Azure.AI.OpenAI --version 2.1.0
-```
+{% endhighlight %}
+{% endtabs %}
 
----
+## Step 2: Define the tag service contract
 
-## Step 1: Create the Azure OpenAI service
-
-First, ensure that you have access to Azure OpenAI and have created a deployment in the Azure portal.
-
-The application uses Azure OpenAI to analyze a natural language description and determine which tags best represent the requested feature or functionality.
-
-Create a service named `AzureOpenAITagService`.
-
-The service:
-
-* Sends the user description to Azure OpenAI.
-* Restricts output to a predefined tag vocabulary.
-* Returns only valid tags.
-* Handles API errors and response validation.
+Keep the Azure OpenAI call behind an interface so the ViewModel can be tested with a substitute service.
 
 {% tabs %}
 {% highlight c# %}
+namespace SmartAITags;
 
-using System.Diagnostics;
-using System.Text;
-using System.Text.Json;
-
-namespace SmartAITags.Services
+public interface IAzureTagService
 {
-    public sealed class AzureOpenAITagService
+    Task<string> GetCompletionAsync(
+        string prompt,
+        CancellationToken cancellationToken = default);
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Step 3: Create the Azure OpenAI service
+
+The service uses `AzureOpenAIClient` and `ChatClient` from `Azure.AI.OpenAI`. Configure the endpoint, deployment name, and API key for your Azure OpenAI resource. The system prompt includes the curated tag vocabulary and requests one applicable tag per line. The ViewModel validates the response against that vocabulary before displaying results.
+
+{% tabs %}
+{% highlight c# %}
+using System.ClientModel;
+using Azure;
+using Azure.AI.OpenAI;
+using OpenAI.Chat;
+
+namespace SmartAITags;
+
+public sealed class AzureOpenAITagService : IAzureTagService
+{
+    private const string Endpoint = "YOUR_ENDPOINT";
+    private const string DeploymentName = "YOUR_DEPLOYMENT_NAME";
+    private const string ApiKey = "YOUR_API_KEY";
+
+    public static readonly string[] TagVocabulary =
     {
-        private const string BaseEndpoint =
-            "YOUR_END_POINT";
+        "Login", "Logout", "Authentication", "Authorization", "Biometric",
+        "Fingerprint", "FaceID", "TouchID", "Security", "Encryption",
+        "Password", "OTP", "MFA", "TwoFactor", "Session", "Token",
+        "OAuth", "SSO", "Captcha", "PIN", "Roles", "Permissions", "Access",
+        "Audit", "Compliance", "GDPR", "Privacy", "RBAC", "UI", "UX",
+        "Dashboard", "Profile", "Settings", "Search", "Filter", "Sorting",
+        "Navigation", "Sidebar", "Drawer", "Tabs", "Modal", "Carousel",
+        "Grid", "List", "Cards", "Accordion", "Stepper", "Wizard", "Onboarding",
+        "Splash", "Theme", "DarkMode", "Localization", "Accessibility", "Responsive",
+        "Animation", "Transitions", "Gestures", "Swipe", "Tooltips", "ContextMenu",
+        "Breadcrumbs", "Pagination", "Snackbar", "Badges", "Forms", "Database",
+        "SQLite", "Storage", "Cache", "CRUD", "Migration", "Backup", "Sync",
+        "Offline", "OfflineFirst", "Export", "Import", "Repository", "Validation",
+        "Entities", "Chat", "Messaging", "Email", "Notifications", "Push", "SMS",
+        "Comments", "Feedback", "Contacts", "Upload", "Download", "Gallery", "Camera",
+        "Video", "Audio", "Image", "Player", "Streaming", "Recorder", "Files",
+        "Documents", "Scanner", "QRCode", "Payment", "Cart", "Checkout", "Subscription",
+        "Invoices", "Wallet", "Refund", "Pricing", "Billing", "Taxes", "Maps",
+        "Geolocation", "Location", "Tracking", "Routing", "Geofencing", "Sharing",
+        "Likes", "Follow", "Reviews", "Ratings", "Posts", "Feed", "Analytics",
+        "Reports", "Charts", "Metrics", "Insights", "Telemetry", "Realtime", "WebSocket",
+        "Live", "API", "REST", "GraphQL", "Webhook", "Integration", "ThirdParty", "SDK",
+        "CI", "CD", "Wishlist", "Bookings", "Calendar", "Scheduler", "Tasks", "Todos",
+        "Reminder", "Survey", "Quiz", "FAQ", "Help", "Support", "Tickets", "Loyalty",
+        "Rewards", "Coupons", "Bluetooth", "NFC", "Sensors", "VoIP", "Calls", "Favorites",
+        "History", "Bookmarks"
+    };
 
-        private const string DeploymentName =
-            "YOUR_DEPLOYMENT_NAME";
+    private static readonly string SystemPrompt =
+        "Analyze the meaning and intent of the software feature description. " +
+        "Return only relevant tags from the provided vocabulary, one per line, in its exact casing. " +
+        "Return all applicable tags without bullets or explanations. " +
+        "If no vocabulary tag applies, return Empty.\nVocabulary: " +
+        string.Join(", ", TagVocabulary);
 
-        private const string ApiKey =
-            "YOUR_API_KEY";
-
-        public static readonly string[] TagVocabulary =
+    public async Task<string> GetCompletionAsync(
+        string prompt,
+        CancellationToken cancellationToken = default)
+    {
+        var client = new AzureOpenAIClient(
+            new Uri(Endpoint),
+            new AzureKeyCredential(ApiKey));
+        var chatClient = client.GetChatClient(DeploymentName);
+        var messages = new List<ChatMessage>
         {
-            "Login","Logout","Authentication","Authorization","Biometric",
-            "Fingerprint","FaceID","TouchID","Security","Encryption",
-            "Password","OTP","MFA","TwoFactor","Session","Token",
-            "OAuth","SSO","Captcha","PIN","Roles","Permissions",
-            "Access","Audit","Compliance","GDPR","Privacy","RBAC",
-
-            "UI","UX","Dashboard","Profile","Settings","Search",
-            "Filter","Sorting","Navigation","Sidebar","Drawer",
-            "Tabs","Modal","Carousel","Grid","List","Cards",
-            "Accordion","Stepper","Wizard","Onboarding","Splash",
-            "Theme","DarkMode","Localization","Accessibility",
-            "Responsive","Animation","Transitions","Gestures",
-            "Swipe","Tooltips","ContextMenu","Breadcrumbs",
-            "Pagination","Snackbar","Badges","Forms",
-
-            "Database","SQLite","Storage","Cache","CRUD",
-            "Migration","Backup","Sync","Offline",
-            "OfflineFirst","Export","Import",
-            "Repository","Validation","Entities",
-
-            "Chat","Messaging","Email","Notifications",
-            "Push","SMS","Comments","Feedback","Contacts",
-
-            "Upload","Download","Gallery","Camera",
-            "Video","Audio","Image","Player",
-            "Streaming","Recorder","Files",
-            "Documents","Scanner","QRCode",
-
-            "Payment","Cart","Checkout",
-            "Subscription","Invoices",
-            "Wallet","Refund","Pricing",
-            "Billing","Taxes",
-
-            "Maps","Geolocation","Location",
-            "Tracking","Routing","Geofencing",
-
-            "Sharing","Likes","Follow",
-            "Reviews","Ratings","Posts","Feed",
-
-            "Analytics","Reports","Charts",
-            "Metrics","Insights","Telemetry",
-
-            "Realtime","WebSocket","Live",
-
-            "API","REST","GraphQL","Webhook",
-            "Integration","ThirdParty","SDK",
-            "CI","CD",
-
-            "Wishlist","Bookings","Calendar",
-            "Scheduler","Tasks","Todos",
-            "Reminder","Survey","Quiz","FAQ",
-            "Help","Support","Tickets",
-            "Loyalty","Rewards","Coupons",
-            "Bluetooth","NFC","Sensors",
-            "VoIP","Calls","Favorites",
-            "History","Bookmarks"
+            new SystemChatMessage(SystemPrompt),
+            new UserChatMessage(prompt)
         };
 
-        private static readonly string SystemPrompt =
-            "You are an AI tag-classification assistant. " +
-            "Return ONLY tags from the provided vocabulary. " +
-            "Return one tag per line. " +
-            "No explanations. " +
-            "If no tag applies return Empty.";
-
-        private static readonly HttpClient Http = new()
+        ChatCompletion completion;
+        try
         {
-            Timeout = TimeSpan.FromSeconds(60)
-        };
-
-        public string? LastError { get; private set; }
-
-        public string LastRawResponse { get; private set; } = string.Empty;
-
-        public async Task<string> GetCompletion(
-            string prompt,
-            CancellationToken cancellationToken = default)
-        {
-            LastError = null;
-
-            try
-            {
-                var requestBody = new
-                {
-                    model = DeploymentName,
-                    messages = new object[]
-                    {
-                        new
-                        {
-                            role = "system",
-                            content = SystemPrompt
-                        },
-                        new
-                        {
-                            role = "user",
-                            content = prompt
-                        }
-                    },
-                    max_completion_tokens = 1024,
-                    reasoning_effort = "minimal"
-                };
-
-                var url = $"{BaseEndpoint}/chat/completions";
-
-                using var request =
-                    new HttpRequestMessage(HttpMethod.Post, url);
-
-                request.Headers.Add("api-key", ApiKey);
-
-                request.Content = new StringContent(
-                    JsonSerializer.Serialize(requestBody),
-                    Encoding.UTF8,
-                    "application/json");
-
-                var response =
-                    await Http.SendAsync(request, cancellationToken);
-
-                var raw =
-                    await response.Content.ReadAsStringAsync(cancellationToken);
-
-                LastRawResponse = raw;
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    LastError =
-                        $"HTTP {(int)response.StatusCode}\n\n{raw}";
-                    return LastError;
-                }
-
-                using var document = JsonDocument.Parse(raw);
-
-                return document.RootElement
-                    .GetProperty("choices")[0]
-                    .GetProperty("message")
-                    .GetProperty("content")
-                    .GetString()?
-                    .Trim() ?? string.Empty;
-            }
-            catch (Exception ex)
-            {
-                LastError = ex.ToString();
-                return LastError;
-            }
+            completion = await chatClient.CompleteChatAsync(
+                messages,
+                cancellationToken: cancellationToken);
         }
+        catch (ClientResultException ex) when (ex.Status == 401)
+        {
+            throw new InvalidOperationException(
+                "Azure OpenAI returned 401. Verify the API key for the configured endpoint.", ex);
+        }
+        catch (ClientResultException ex) when (ex.Status == 404)
+        {
+            throw new InvalidOperationException(
+                $"Azure OpenAI returned 404. Verify that deployment '{DeploymentName}' exists.", ex);
+        }
+
+        var content = string.Concat(completion.Content.Select(part => part.Text));
+        if (string.IsNullOrWhiteSpace(content))
+            throw new InvalidOperationException("Azure OpenAI returned empty content.");
+
+        return content.Trim();
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-The Syncfusion® .NET MAUI ChipGroup control can display tags generated dynamically by AI. The user enters a natural language description, Azure OpenAI analyzes the request, and the generated tags appear automatically as chips.
+The service throws request failures instead of returning error text as a tag. The ViewModel catches these exceptions and exposes a user-facing message through `ErrorMessage`.
 
-## Step 2: Create the tag model
+N> Never store a production API key in source code. The placeholders above are for illustration; load credentials from a secure configuration provider or secret store at runtime.
 
-Create a business model that represents each generated tag.
+## Step 4: Create the tag model
+
+The `TagModel` exposes a `Name` property that the ChipGroup uses to display each generated tag.
 
 {% tabs %}
 {% highlight c# %}
-
 using System.ComponentModel;
 
-namespace SmartAITags.Model
+namespace SmartAITags;
+
+public class TagModel : INotifyPropertyChanged
 {
-    public class TagModel : INotifyPropertyChanged
+    private string? _name;
+
+    public string? Name
     {
-        private string? _name;
-
-        public string? Name
+        get => _name;
+        set
         {
-            get => _name;
-            set
-            {
-                if (_name == value)
-                    return;
-
-                _name = value;
-
-                PropertyChanged?.Invoke(
-                    this,
-                    new PropertyChangedEventArgs(nameof(Name)));
-            }
+            if (_name == value) return;
+            _name = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
         }
-
-        public override string ToString()
-            => Name ?? string.Empty;
-
-        public event PropertyChangedEventHandler?
-            PropertyChanged;
     }
+
+    public override string ToString() => Name ?? string.Empty;
+
+    public event PropertyChangedEventHandler? PropertyChanged;
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Step 3: Create the tag-generation ViewModel
+## Step 5: Create the tag-generation ViewModel
 
-Build the ViewModel to own the generated tags, store the user's description, call Azure OpenAI, parse the response, and raise an event when tags are generated.
+The ViewModel receives `IAzureTagService` through its constructor. It clears old chips before a new request, supports cancellation, validates returned values against `AzureOpenAITagService.TagVocabulary`, removes duplicates, and limits the results to 12 tags. It raises `TagsReady` with canonical tag names; the page appends those names to the observable collection for the staggered display.
+
+The ViewModel exposes `UserQuery`, `IsBusy`, `IsLoading`, `HasTags`, `ShowEmptyState`, `CanGenerate`, and `HasError`. The page binds the query, loading, empty, and error states to its controls. Its generation flow is:
 
 {% tabs %}
 {% highlight c# %}
+public event EventHandler<IReadOnlyList<string>>? TagsReady;
 
-public class TagViewModel : INotifyPropertyChanged
+public async Task GenerateTagsAsync(string? query)
 {
-    private readonly AzureOpenAITagService _aiService = new();
+    if (string.IsNullOrWhiteSpace(query) || IsBusy) return;
 
-    public ObservableCollection<TagModel> Tags { get; }
+    UserQuery = query;
+    Tags.Clear();
+    ErrorMessage = null;
+    IsBusy = true;
 
-    public ICommand GenerateTagsCommand { get; }
+    _cts?.Cancel();
+    _cts = new CancellationTokenSource();
+    var token = _cts.Token;
 
-    public event EventHandler<IEnumerable<string>>? TagsReceived;
-
-    public TagViewModel()
+    try
     {
-        Tags = new ObservableCollection<TagModel>();
+        var completion = await _aiService.GetCompletionAsync(query, token);
+        token.ThrowIfCancellationRequested();
+        TagsReady?.Invoke(this, ParseAndFilterTags(completion));
+    }
+    catch (OperationCanceledException)
+    {
+        // A newer request superseded this one.
+    }
+    catch (Exception ex)
+    {
+        ErrorMessage = $"AI request failed: {ex.Message}";
+    }
+    finally
+    {
+        IsBusy = false;
+        HasSearched = true;
+    }
+}
 
-        GenerateTagsCommand =
-            new Command(async () =>
-                await GenerateTagsAsync());
+private static List<string> ParseAndFilterTags(string completion)
+{
+    var results = new List<string>();
+    var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+    foreach (var raw in completion.Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries))
+    {
+        var value = raw.Trim().Trim('•', '-', '*', '.', ')', '[', ']', ',', ';', ':');
+        var canonical = AzureOpenAITagService.TagVocabulary.FirstOrDefault(
+            tag => string.Equals(tag, value, StringComparison.OrdinalIgnoreCase));
+
+        if (canonical is not null && seen.Add(canonical))
+            results.Add(canonical);
+        if (results.Count >= 12) break;
     }
 
-    public async Task GenerateTagsAsync(string? query)
-    {
-        if (string.IsNullOrWhiteSpace(query))
-            return;
-
-        string completion =
-            await _aiService.GetCompletion(query);
-
-        var tags = ParseAndFilterTags(completion);
-
-        TagsReceived?.Invoke(this, tags);
-    }
-
-    private static List<string> ParseAndFilterTags(
-        string completion)
-    {
-        return completion
-            .Split('\n', '\r',
-                StringSplitOptions.RemoveEmptyEntries)
-            .Select(x => x.Trim())
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .ToList();
-    }
-
-    public event PropertyChangedEventHandler?
-        PropertyChanged;
+    return results;
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Build the tag-generation page
+## Step 6: Register the dependencies and build the page
 
-Build a page that hosts the natural-language input, Generate Tags button, and Syncfusion ChipGroup. Include a loading indicator to show when a request is in progress.
+Register the service, ViewModel, and page in `MauiProgram.cs`. The app resolves the page from DI, and the page constructor sets the injected ViewModel as the `BindingContext`.
 
-* A natural language input editor.
-* A Generate Tags button.
-* A Syncfusion ChipGroup for displaying generated tags.
-* A loading indicator.
+{% tabs %}
+{% highlight c# %}
+builder.Services.AddSingleton<IAzureTagService, AzureOpenAITagService>();
+builder.Services.AddSingleton<TagViewModel>();
+builder.Services.AddSingleton<TagGeneratorPage>();
+{% endhighlight %}
+{% endtabs %}
+
+The page uses a multiline `Editor` inside `SfTextInputLayout`, a labeled **Generate tags** button, and a result panel. The panel shows an initial empty state, a loading indicator, generated chips, or an error banner with a dismiss command. A clear icon in the input's trailing view resets the query and results.
 
 {% tabs %}
 {% highlight xaml %}
+<Editor x:Name="queryEditor"
+        Text="{Binding UserQuery, Mode=TwoWay}"
+        AutoSize="TextChanges"
+        TextChanged="OnQueryTextChanged"
+        Completed="OnQueryCompleted" />
 
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:viewModel="clr-namespace:SmartAITags.ViewModel">
+<Button Text="Generate tags"
+        Command="{Binding GenerateTagsCommand}" />
 
-    <ContentPage.BindingContext>
-        <viewModel:TagViewModel />
-    </ContentPage.BindingContext>
+<Border IsVisible="{Binding HasError}">
+    <Grid ColumnDefinitions="*,Auto">
+        <Label Text="{Binding ErrorMessage}" />
+        <Button Grid.Column="1"
+                Text="Dismiss"
+                Command="{Binding DismissErrorCommand}" />
+    </Grid>
+</Border>
 
-    <VerticalStackLayout Padding="20">
+<Label Text="Add a content description, then select Generate tags."
+       IsVisible="{Binding ShowEmptyState}" />
 
-        <Label Text="AI-Powered Auto Tag Generator"
-               FontAttributes="Bold"
-               FontSize="22"
-               HorizontalTextAlignment="Center"/>
+<ActivityIndicator IsVisible="{Binding IsLoading}"
+                   IsRunning="True" />
 
-        <Editor
-            x:Name="queryEditor"
-            Placeholder="Describe your requirements..." />
-
-        <Button
-            Text="Generate Tags"
-            Command="{Binding GenerateTagsCommand}" />
-
-        <syncfusion:SfChipGroup
-            x:Name="chipsControl"
-            ChipType="Action"
-            DisplayMemberPath="Name"
-            ItemsSource="{Binding Tags}" />
-
-    </VerticalStackLayout>
-
-</ContentPage>
+<syncfusion:SfChipGroup ItemsSource="{Binding Tags}"
+                        DisplayMemberPath="Name"
+                        ChipType="Action">
+    <syncfusion:SfChipGroup.ChipLayout>
+        <FlexLayout Direction="Row" Wrap="Wrap" />
+    </syncfusion:SfChipGroup.ChipLayout>
+</syncfusion:SfChipGroup>
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Display the generated tags
+## Step 7: Display the generated tags
 
-Handle the ViewModel event and update the ChipGroup collection with the generated tags.
+The page subscribes to `TagsReady` and appends each item through `TagViewModel.AppendTag`. A short delay between items gives the chips their staggered appearance. The page does not directly clear or mutate the `Tags` collection.
 
 {% tabs %}
 {% highlight c# %}
-
-public partial class TagGeneratorPage : ContentPage
+private async void OnTagsReady(object? sender, IReadOnlyList<string> tags)
 {
-    public TagGeneratorPage()
-    {
-        InitializeComponent();
-    }
+    _staggerCts?.Cancel();
+    _staggerCts = new CancellationTokenSource();
+    var token = _staggerCts.Token;
 
-    protected override void OnBindingContextChanged()
+    try
     {
-        base.OnBindingContextChanged();
-
-        if (BindingContext is TagViewModel vm)
+        foreach (var tag in tags)
         {
-            vm.TagsReceived -= OnTagsReceived;
-            vm.TagsReceived += OnTagsReceived;
+            token.ThrowIfCancellationRequested();
+            _viewModel.AppendTag(tag);
+            await Task.Delay(120, token);
         }
     }
-
-    private void OnTagsReceived(
-        object? sender,
-        IEnumerable<string> tags)
+    catch (OperationCanceledException)
     {
-        if (BindingContext is not TagViewModel vm)
-            return;
-
-        MainThread.BeginInvokeOnMainThread(() =>
-        {
-            vm.Tags.Clear();
-
-            foreach (var tag in tags)
-            {
-                vm.Tags.Add(new TagModel
-                {
-                    Name = tag
-                });
-            }
-        });
+        // A newer result or clear action stopped this animation.
     }
 }
 {% endhighlight %}
@@ -436,51 +325,22 @@ public partial class TagGeneratorPage : ContentPage
 
 ## How It Works
 
-1. The user enters a feature or project description.
-2. The application sends the description to Azure OpenAI.
-3. Azure OpenAI analyzes the intent.
-4. Relevant tags are selected from the predefined vocabulary.
-5. The tags are returned to the application.
-6. Syncfusion ChipGroup automatically displays the generated tags.
-
-### Example
-
-User request:
-
-```text
-Build a secure login system with biometric authentication and OTP verification.
-```
-
-AI-generated tags:
-
-```text
-Login
-Authentication
-Security
-Biometric
-OTP
-MFA
-Password
-```
-
----
+1. The user enters a software feature description and selects **Generate tags**.
+2. The ViewModel sends the description to the injected Azure OpenAI service.
+3. Azure OpenAI returns tag names; the ViewModel keeps only vocabulary matches, removes duplicates, and applies the 12-tag limit.
+4. The page appends the validated tags to `SfChipGroup` with a short staggered delay.
+5. The user can clear the input and results or dismiss a request error.
 
 ## Output
 
-The following image demonstrates AI-powered tag generation inside the Syncfusion .NET MAUI ChipGroup control.
+The generated tags appear as wrapping chips in the Syncfusion® .NET MAUI ChipGroup control.
 
-![.NET MAUI Tags generation With AI.](Images/SmartAITag.gif)
+![.NET MAUI Smart Tag generation with AI](Images/SmartAITag.gif)
 
----
-
-## GitHub Sample
-
-You can find the complete sample from this [link.](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples)
-
----
+You can find the complete sample in the [MAUI AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/Chips/SmartTags/SmartAITags).
 
 ## See Also
 
-* https://help.syncfusion.com/maui/chip/getting-started
-* https://help.syncfusion.com/maui/chipgroup/overview
-* https://learn.microsoft.com/azure/ai-foundry/openai/overview
+- [ChipGroup getting started](https://help.syncfusion.com/maui/chipgroup/getting-started)
+- [ChipGroup overview](https://help.syncfusion.com/maui/chipgroup/overview)
+- [Azure OpenAI overview](https://learn.microsoft.com/azure/ai-foundry/openai/overview)

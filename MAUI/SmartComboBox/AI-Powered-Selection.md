@@ -1,863 +1,358 @@
 ---
 layout: post
 title: AI-Powered Selection in .NET MAUI MultiSelect ComboBox | Syncfusion®
-description: Learn how to implement AI-powered smart selection with the Syncfusion® .NET MAUI ComboBox control and Azure OpenAI.
-platform: maui
-control: SfCombobox
+description: Learn how to select matching items in the Syncfusion® .NET MAUI MultiSelect ComboBox from a natural-language request with Azure OpenAI.
+platform: MAUI
+control: SfComboBox
 documentation: ug
 ---
 
 # AI-Powered Smart Selection in .NET MAUI MultiSelect ComboBox
 
-This article walks you through the implementation of an intelligent, AI-driven selection experience in the Syncfusion [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control. The user describes what they need in natural language, the AI interprets the intent, and the [MultiSelect ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) automatically selects the most relevant items. The example uses Azure OpenAI.
+This article demonstrates how to combine Azure OpenAI with the Syncfusion® [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) to select fruits from a natural-language request. For example, a user can ask for "low-sugar fruits that are good for immunity," and the app selects matching entries from its fruit menu.
 
-For example:
+The sample uses the Azure OpenAI .NET SDK, dependency injection (DI), and a ViewModel that owns the request, selection, loading state, and errors. The page hosts the query field and MultiSelect ComboBox, and delegates selection changes to the ViewModel.
 
-* **Choose healthy low-sugar fruits** selects fruits that match the healthy and low-sugar criteria.
+N> **Prerequisite:** Before starting, install the required Syncfusion NuGet packages, configure a .NET MAUI application, and complete the [ComboBox getting started](https://help.syncfusion.com/maui/combobox/getting-started) steps.
 
-**Expected Outcome:** Users describe what they need in natural language, and the MultiSelect ComboBox intelligently selects the most relevant items without manual searching.
+## Step 1: Install the required packages
 
-**One-line Value:** AI understands the intent, and the MultiSelect ComboBox performs the selection.
+The sample uses `Syncfusion.Maui.Inputs` for `SfComboBox`, `Syncfusion.Maui.Core` for `SfTextInputLayout`, and `Azure.AI.OpenAI` for Azure OpenAI integration. Install the Azure OpenAI SDK version used by the sample:
 
-## Prerequisites
+{% tabs %}
+{% highlight powershell %}
+Install-Package Azure.AI.OpenAI -Version 2.1.0
+{% endhighlight %}
+{% highlight bash %}
+dotnet add package Azure.AI.OpenAI --version 2.1.0
+{% endhighlight %}
+{% endtabs %}
 
-Before you begin, ensure you have the following:
+## Step 2: Define the AI service contract
 
-* A working .NET MAUI application with the `Syncfusion.Maui.Inputs` package installed.
-* An active Azure subscription with access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and a deployed model. If you don't have access, refer to the [create and deploy Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account. Note down the deployment name, endpoint URL, and API key.
-* The [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package (version 2.x recommended for the `IChatClient` API used in this sample). Install it by running the following command in the Visual Studio Package Manager Console:
-
-    ```powershell
-    Install-Package Azure.AI.OpenAI -Version 2.1.0
-    ```
-    Or using the .NET CLI:
-    ```bash
-    dotnet add package Azure.AI.OpenAI --version 2.1.0
-    ```
-
-## Step 1: Create the Azure OpenAI service
-
-First, ensure that you have access to [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/overview) and have created a deployment in the Azure portal.
-
-If you do not have access, refer to the [Create and deploy an Azure OpenAI service](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) guide to set up a new account.
-
-Note down the deployment name, endpoint URL, and API key.
-
-We will use the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package from the [NuGet Gallery](https://www.nuget.org/). Before getting started, install the `Azure.AI.OpenAI` NuGet package in your .NET MAUI app.
-
-In your service class (`ComboBoxAzureAIService`), initialize the `AzureOpenAIClient`. Replace the `Endpoint`, `DeploymentName`, and `Key` with actual values from your Azure OpenAI resource. This creates a chat client using your endpoint, API key, and deployment name. It is stored in the `Client` property for use in other methods.
- 
-In the `GetCompletion` method, we construct the prompt and send it to the Azure OpenAI service. The chat history is reset for each new prompt in this implementation to keep each selection request independent.
+The ViewModel depends on an interface so that the AI service can be replaced with a test implementation.
 
 {% tabs %}
 {% highlight c# %}
+namespace SmartAIComboBox;
 
-using System.Diagnostics;
-
-namespace SmartAIComboBox.SmartAIComboBox
+public interface IFruitSelectionAIService
 {
-    public sealed class ComboBoxAzureAIService
+    Task<string> GetCompletionAsync(
+        string prompt,
+        CancellationToken cancellationToken = default);
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Step 3: Create the Azure OpenAI service
+
+The service uses `AzureOpenAIClient` and `ChatClient` from `Azure.AI.OpenAI`. Replace the endpoint, deployment name, and API key with the values for your Azure OpenAI resource. The system message instructs the model to return only exact fruit names from the menu supplied by the ViewModel.
+
+{% tabs %}
+{% highlight c# %}
+using System.ClientModel;
+using Azure;
+using Azure.AI.OpenAI;
+using OpenAI.Chat;
+
+namespace SmartAIComboBox;
+
+public sealed class FruitSelectionAzureAIService : IFruitSelectionAIService
+{
+    private const string Endpoint = "YOUR_ENDPOINT";
+    private const string DeploymentName = "YOUR_DEPLOYMENT_NAME";
+    private const string ApiKey = "YOUR_API_KEY";
+
+    public async Task<string> GetCompletionAsync(
+        string prompt,
+        CancellationToken cancellationToken = default)
     {
-        private const string BaseEndpoint =
-            "YOUR_END_POINT_NAME";
-
-        private const string DeploymentName = "DEPLOYMENT_NAMEi";
-
-        private const string ApiKey =
-            "API_KEY";
-
-        private static readonly HttpClient Http = new()
+        var client = new AzureOpenAIClient(
+            new Uri(Endpoint),
+            new AzureKeyCredential(ApiKey));
+        var chatClient = client.GetChatClient(DeploymentName);
+        var messages = new List<ChatMessage>
         {
-            Timeout = TimeSpan.FromSeconds(30)
+            new SystemChatMessage(
+                "You are an AI fruit-selection assistant for a MultiSelect fruit menu. " +
+                "Choose matching fruits from the provided menu. Return only exact fruit names, " +
+                "one per line, without bullets or explanations. If none match, return Empty."),
+            new UserChatMessage(prompt)
         };
 
-        public string? LastError { get; private set; }
-
-        public string LastRawResponse { get; private set; } = string.Empty;
-
-        /// <summary>
-        /// Single entry point — sends the AI the prompt the ViewModel built
-        /// (menu + intent rules + user query) and returns the raw fruit list text.
-        /// </summary>
-        public async Task<string> GetCompletion(
-            string prompt,
-            CancellationToken cancellationToken = default)
+        ChatCompletion completion;
+        try
         {
-            LastError = null;
-            LastRawResponse = string.Empty;
-
-            try
-            {
-                var requestBody = new
-                {
-                    model = DeploymentName,
-                    messages = new object[]
-                    {
-                        new
-                        {
-                            role = "system",
-                            content =
-                                "You are an AI fruit-selection assistant for a MultiSelect fruit menu. " +
-                                "Choose fruits from the provided menu that match the user's natural-language request. " +
-                                "Return ONLY the exact fruit Names from the menu, one per line. " +
-                                "Do NOT include tags, numbers, dashes, bullets, explanations, or any preamble. " +
-                                "If no fruit matches, return exactly the word: Empty"
-                        },
-                        new
-                        {
-                            role = "user",
-                            content = prompt
-                        }
-                    },
-                    max_completion_tokens = 800,
-                    reasoning_effort = "minimal"
-                };
-
-                var url = $"{BaseEndpoint}/chat/completions";
-
-                using var request = new HttpRequestMessage(
-                    HttpMethod.Post,
-                    url);
-
-                request.Headers.Add("api-key", ApiKey);
-
-                request.Content = new StringContent(
-                    JsonSerializer.Serialize(requestBody),
-                    Encoding.UTF8,
-                    "application/json");
-
-                var response = await Http.SendAsync(
-                    request,
-                    cancellationToken);
-
-                var raw = await response.Content.ReadAsStringAsync(
-                    cancellationToken);
-
-                LastRawResponse = raw;
-
-                Debug.WriteLine($"[AzureAI] Status: {(int)response.StatusCode}");
-                Debug.WriteLine($"[AzureAI] Raw Response: {raw}");
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    LastError = $"HTTP {(int)response.StatusCode}\n\n{raw}";
-                    return LastError;
-                }
-
-                using var document = JsonDocument.Parse(raw);
-
-                if (!document.RootElement.TryGetProperty("choices", out var choices))
-                {
-                    LastError = $"No 'choices' property found.\n\nRaw Response:\n{raw}";
-                    return LastError;
-                }
-
-                var content = choices[0]
-                    .GetProperty("message")
-                    .GetProperty("content")
-                    .GetString();
-
-                if (string.IsNullOrWhiteSpace(content))
-                {
-                    LastError = $"Azure returned empty content.\n\nRaw Response:\n{raw}";
-                    return LastError;
-                }
-
-                return content.Trim();
-            }
-            catch (Exception ex)
-            {
-                LastError = $"Exception:\n{ex}";
-                Debug.WriteLine($"[AzureAI] Exception: {ex}");
-                return LastError;
-            }
+            completion = await chatClient.CompleteChatAsync(
+                messages,
+                cancellationToken: cancellationToken);
         }
+        catch (ClientResultException ex) when (ex.Status == 401)
+        {
+            throw new InvalidOperationException(
+                "Azure OpenAI returned 401. Verify the API key for the configured endpoint.", ex);
+        }
+        catch (ClientResultException ex) when (ex.Status == 404)
+        {
+            throw new InvalidOperationException(
+                $"Azure OpenAI returned 404. Verify that deployment '{DeploymentName}' exists.", ex);
+        }
+
+        var content = string.Concat(completion.Content.Select(part => part.Text));
+        if (string.IsNullOrWhiteSpace(content))
+            throw new InvalidOperationException("Azure OpenAI returned empty content.");
+
+        return content.Trim();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a `Multiple` [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) that lets the user choose more than one item. Combined with a natural-language request entry, AI can read the menu, interpret the user's intent (price range, category, dietary preference, meal type, etc.), and auto-populate the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedItems) collection of the ComboBox.
+The service throws on request failures. The ViewModel catches exceptions and publishes an error message for the page; it does not interpret error text as a list of fruit names.
 
-## Step 2: Create the food model
+N> Do not store a production API key in source code. The placeholders above are for illustration; load credentials from a secure configuration provider or secret store at runtime.
 
-Create a model that represents each food item with its name, price, category, and diet so the AI can interpret the user's request.
+## Step 4: Create the fruit model
 
-{% tabs %}
-{% highlight c# %}
-
-namespace SmartAIComboBox.SmartAIComboBox
-{
-    /// <summary>
-    /// Represents a single food item in the menu.
-    /// </summary>
-    public class FoodModel : INotifyPropertyChanged
-    {
-        public string? Name { get; set; }
-        public double Price { get; set; }
-        public string? Category { get; set; }
-        public string? Diet { get; set; }
-
-        private bool _isSelected;
-        public bool IsSelected
-        {
-            get => _isSelected;
-            set
-            {
-                if (_isSelected == value) return;
-                _isSelected = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected)));
-            }
-        }
-
-        public override string ToString() => Name ?? string.Empty;
-        public event PropertyChangedEventHandler? PropertyChanged;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 3: Create the selection ViewModel
-
-Build the ViewModel to own the menu, expose a `UserQuery` for the natural-language request, maintain the `SelectedItems` collection, and provide an `AskAICommand` that the page invokes when the user submits the query.
+Each item in the menu is represented by `FruitModel`. The `Diet` property contains the nutrition and health tags sent to Azure OpenAI with each fruit name. `IsSelected` keeps the checkbox and selected-item tokens in sync.
 
 {% tabs %}
 {% highlight c# %}
-
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Windows.Input;
 
-namespace SmartAIComboBox.SmartAIComboBox
+namespace SmartAIComboBox;
+
+public class FruitModel : INotifyPropertyChanged
 {
-    public class FoodViewModel : INotifyPropertyChanged
+    public string? Name { get; set; }
+    public double Price { get; set; }
+    public string? Category { get; set; }
+    public string? Diet { get; set; }
+
+    private bool _isSelected;
+    public bool IsSelected
     {
-        private readonly ComboBoxAzureAIService _aiService;
-
-        private ObservableCollection<FoodModel> _foods;
-        private ObservableCollection<FoodModel> _selectedItems;
-        private string? _userQuery;
-        private bool _isBusy;
-        private bool _hasSearched;
-
-        public ObservableCollection<FoodModel> Foods
+        get => _isSelected;
+        set
         {
-            get => _foods;
-            set { _foods = value; OnPropertyChanged(nameof(Foods)); }
+            if (_isSelected == value) return;
+            _isSelected = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected)));
         }
-
-        public ObservableCollection<FoodModel> SelectedItems
-        {
-            get => _selectedItems;
-            set { _selectedItems = value; OnPropertyChanged(nameof(SelectedItems)); }
-        }
-
-        public string? UserQuery
-        {
-            get => _userQuery;
-            set { _userQuery = value; OnPropertyChanged(nameof(UserQuery)); }
-        }
-
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set
-            {
-                if (_isBusy == value) return;
-                _isBusy = value;
-                OnPropertyChanged(nameof(IsBusy));
-                UpdateState();
-            }
-        }
-
-        public bool HasSearched
-        {
-            get => _hasSearched;
-            set
-            {
-                if (_hasSearched == value) return;
-                _hasSearched = value;
-                OnPropertyChanged(nameof(HasSearched));
-                UpdateState();
-            }
-        }
-
-        public bool IsIdle { get; private set; } = true;
-        public bool CanClear { get; private set; }
-        public string ComboHint { get; private set; } = "Select fruits";
-
-        public ICommand AskAICommand { get; }
-        public ICommand ClearCommand { get; }
-
-        public event EventHandler<IEnumerable<string>>? AISelectionReceived;
-
-        public FoodViewModel()
-        {
-            _aiService = new ComboBoxAzureAIService();
-            _foods = new ObservableCollection<FoodModel>(BuildFoodList());
-            _selectedItems = new ObservableCollection<FoodModel>();
-            AskAICommand = new Command(async () => await AskAIAsync());
-            ClearCommand = new Command(Clear);
-            UpdateState();
-        }
-
-        private void UpdateState()
-        {
-            IsIdle = !IsBusy && !HasSearched;
-            CanClear = HasSearched && !IsBusy;
-            ComboHint = IsBusy ? "Loading..." : "Select fruits";
-
-            OnPropertyChanged(nameof(IsIdle));
-            OnPropertyChanged(nameof(CanClear));
-            OnPropertyChanged(nameof(ComboHint));
-        }
-
-        public void Clear()
-        {
-            UserQuery = null;
-            foreach (var f in Foods) f.IsSelected = false;
-            SelectedItems.Clear();
-            HasSearched = false;
-        }
-
-        /// <summary>
-        /// 50 fruits. Each carries a rich nutrition/health tag string so the AI
-        /// can map ANY natural-language request (including "healthy fruit",
-        /// "fruits for immunity", "fruits for glowing skin", etc.) to real fruits.
-        /// </summary>
-        private static List<FoodModel> BuildFoodList()
-        {
-            var fruits = new[]
-            {
-                ("Apple",                120, "Fiber Kids Sweet Healthy Heart Immunity Digestive Skin"),
-                ("Banana",                60, "Smoothie Kids Sweet Energy Fiber Healthy Heart Potassium Bone Digestive"),
-                ("Mango",                150, "Smoothie Kids Sweet Tropical Healthy Immunity Skin Eye"),
-                ("Orange",                80, "VitaminC Water Citrus Kids Healthy Immunity Heart Skin"),
-                ("Pomegranate",          200, "Fiber Antioxidant VitaminC Healthy Heart Immunity Skin Iron"),
-                ("Papaya",               100, "Water Digestive Tropical Smoothie Healthy Immunity Skin Eye Heart"),
-                ("Pineapple",            120, "VitaminC Water Tropical Smoothie Healthy Immunity Digestive"),
-                ("Watermelon",            60, "Water Kids Sweet Tropical Healthy Hydrating LowCalorie Heart"),
-                ("Muskmelon",             80, "Water Sweet Kids Healthy Hydrating Immunity VitaminC"),
-                ("Strawberry",           250, "VitaminC Berry Smoothie Antioxidant Healthy Skin Immunity Heart"),
-                ("Blueberry",            400, "Berry Antioxidant Fiber VitaminC Healthy Brain Skin Heart Immunity"),
-                ("Raspberry",            350, "Berry Antioxidant Fiber VitaminC Healthy Skin Heart WeightLoss"),
-                ("Blackberry",           300, "Berry Antioxidant Fiber Healthy Skin Immunity Brain"),
-                ("Grapes",               120, "Kids Sweet Water Healthy Heart Immunity Antioxidant"),
-                ("Guava",                 80, "VitaminC Fiber Kids Sweet Healthy Immunity WeightLoss Eye Skin"),
-                ("Kiwi",                 250, "VitaminC Fiber Citrus Antioxidant Healthy Immunity Skin Heart Digestive"),
-                ("Pear",                 150, "Fiber Sweet Kids Healthy Digestive Heart WeightLoss"),
-                ("Peach",                200, "Sweet Fiber Kids Healthy Skin Immunity LowCalorie"),
-                ("Plum",                 180, "Sweet Fiber Kids Antioxidant Healthy Digestive Immunity"),
-                ("Cherry",               300, "Antioxidant Sweet Kids Healthy Heart Immunity Sleep Brain"),
-                ("Lemon",                100, "VitaminC Citrus LowSugar Healthy Immunity Detox Digestive"),
-                ("Lime",                 100, "VitaminC Citrus LowSugar Healthy Immunity Detox Digestive"),
-                ("Cranberry",            350, "Antioxidant Berry VitaminC Healthy Immunity Digestive Heart"),
-                ("Apricot",              250, "Fiber Sweet Antioxidant Healthy Eye Skin Heart Iron"),
-                ("Fig",                  300, "Fiber Sweet Antioxidant Digestive Healthy Bone Iron"),
-                ("Dates",                200, "Energy Fiber Sweet Kids Healthy Iron Bone Heart"),
-                ("Dragon Fruit",         250, "Fiber Antioxidant Water Tropical Healthy Immunity Heart Digestive Skin"),
-                ("Passion Fruit",        300, "VitaminC Fiber Citrus Tropical Healthy Immunity Heart Sleep"),
-                ("Avocado",              200, "Fiber HealthyFat LowSugar Healthy Heart Brain Skin Eye Potassium"),
-                ("Coconut",              100, "Energy Water Tropical Healthy Heart Immunity Skin Hydrating"),
-                ("Sweet Lime (Mosambi)",  120, "VitaminC Water Citrus Healthy Immunity Detox Digestive"),
-                ("Lychee",               200, "VitaminC Sweet Tropical Kids Healthy Immunity Heart Antioxidant"),
-                ("Jamun (Black Plum)",   150, "Antioxidant LowSugar Fiber Healthy Diabetic WeightLoss Immunity"),
-                ("Custard Apple (Sitaphal)", 200, "Sweet Kids Energy Fiber Healthy Bone Eye Immunity Heart"),
-                ("Jackfruit",            150, "Energy Fiber Tropical Sweet Healthy Immunity Heart Iron"),
-                ("Sapodilla (Chikoo)",    120, "Energy Sweet Kids Fiber Healthy Bone Eye Immunity"),
-                ("Star Fruit",           200, "VitaminC Water LowSugar Tropical Healthy WeightLoss Heart Immunity"),
-                ("Mulberry",             250, "Antioxidant Berry Fiber Healthy Iron Immunity Heart Skin"),
-                ("Amla (Indian Gooseberry)", 80, "VitaminC Antioxidant LowSugar Fiber Healthy Immunity Skin Hair Detox Diabetic"),
-                ("Banana (Ripe) (Smoothie)", 60, "Smoothie Kids Energy Sweet Healthy Heart Potassium Bone"),
-                ("Mango (Ripe) (Smoothie)", 150, "Smoothie Sweet Tropical Kids Healthy Immunity Skin Eye"),
-                ("Papaya (Smoothie)",    100, "Smoothie Water Digestive Tropical Healthy Skin Eye Immunity"),
-                ("Pineapple (Smoothie)", 120, "Smoothie VitaminC Water Tropical Healthy Immunity Digestive"),
-                ("Strawberry (Smoothie)", 250, "Smoothie VitaminC Berry Antioxidant Healthy Skin Heart Immunity"),
-                ("Orange (Smoothie)",     80, "Smoothie VitaminC Water Citrus Healthy Immunity Heart Skin"),
-                ("Pear (Ripe)",          150, "Fiber Sweet Kids Healthy Digestive Heart WeightLoss"),
-                ("Cantaloupe",           100, "Water Sweet Kids VitaminC Healthy Hydrating Immunity Eye Skin"),
-                ("Honeydew Melon",       120, "Water Sweet Kids Healthy Hydrating Immunity LowCalorie"),
-                ("Tangerine",            150, "VitaminC Citrus Water Sweet Healthy Immunity Skin Heart"),
-                ("Nectarine",            200, "Fiber Sweet Kids Antioxidant Healthy Skin Heart Immunity"),
-            };
-
-            var list = new List<FoodModel>();
-            foreach (var (name, price, tags) in fruits)
-            {
-                list.Add(new FoodModel
-                {
-                    Name = name.Trim(),
-                    Price = price,
-                    Category = "Fruit",
-                    Diet = tags,
-                    IsSelected = false
-                });
-            }
-            return list;
-        }
-
-        private CancellationTokenSource? _cts;
-
-        private async Task AskAIAsync() => await AskAIAsync(UserQuery);
-
-        /// <summary>
-        /// Mirrors SmartAIDatePicker.MainPage.ResolveDateRequestAsync.
-        /// Sets IsBusy (toggles loading indicator), calls AI, parses, raises event.
-        /// </summary>
-        public async Task AskAIAsync(string? query)
-        {
-            if (string.IsNullOrWhiteSpace(query) || IsBusy) return;
-
-            if (!string.Equals(UserQuery, query, StringComparison.Ordinal))
-                UserQuery = query;
-
-            // Equivalent to: SearchButton.IsVisible = false; LoadingIndicator.IsVisible = true;
-            IsBusy = true;
-            _cts?.Cancel();
-            _cts = new CancellationTokenSource();
-            var token = _cts.Token;
-
-            try
-            {
-                string menu = string.Join("\n",
-                    Foods.Select(f => $"{f.Name} | {f.Diet}"));
-
-                string prompt =
-                    "From the menu below, choose the fruits that best match the user's natural-language request.\n\n" +
-                    "Rules:\n" +
-                    "- Return ONLY the exact fruit Names from the menu, one per line.\n" +
-                    "- Do NOT include tags, numbers, dashes, bullets, explanations, or any other text.\n" +
-                    "- Do NOT include headings like 'Here are the items'.\n" +
-                    "- The tags after each fruit describe its nutrition/health profile. Use BOTH the tags AND your general knowledge of fruits to interpret ANY natural-language request — including vague ones like 'healthy fruit', 'fruits good for health', 'nutritious fruits', 'fruits for weight loss', 'fruits for glowing skin', 'fruits for immunity', 'fruits for energy', 'fruits to eat during fever', etc.\n" +
-                    "- Tag meanings:\n" +
-                    "    Healthy, Immunity, Heart, Skin, Eye, Brain, Bone, Hair, Sleep, Detox, Digestive, Diabetic, WeightLoss, LowCalorie, Hydrating, Iron, Potassium, Energy, Fiber, VitaminC, Antioxidant, Water, Smoothie, Kids, Sweet, Citrus, Tropical, Berry, LowSugar, HealthyFat\n" +
-                    "- Intent examples (NOT exhaustive — generalize to similar requests):\n" +
-                    "    'healthy fruits' / 'fruits good for health' → fruits tagged Healthy\n" +
-                    "    'water-rich fruits' / 'hydrating fruits'   → fruits tagged Water or Hydrating\n" +
-                    "    'vitamin c rich fruits'                     → fruits tagged VitaminC\n" +
-                    "    'high-fiber fruits'                         → fruits tagged Fiber\n" +
-                    "    'fruits for smoothies'                       → fruits tagged Smoothie\n" +
-                    "    'kid-friendly fruits'                        → fruits tagged Kids\n" +
-                    "    'citrus fruits'                              → fruits tagged Citrus\n" +
-                    "    'tropical fruits'                            → fruits tagged Tropical\n" +
-                    "    'berry fruits'                               → fruits tagged Berry\n" +
-                    "    'low sugar fruits' / 'diabetic fruits'       → fruits tagged LowSugar or Diabetic\n" +
-                    "    'sweet fruits'                               → fruits tagged Sweet\n" +
-                    "    'antioxidant rich fruits'                    → fruits tagged Antioxidant\n" +
-                    "    'energy giving fruits'                       → fruits tagged Energy\n" +
-                    "    'fruits for digestion'                       → fruits tagged Digestive\n" +
-                    "    'fruits for immunity'                       → fruits tagged Immunity or VitaminC\n" +
-                    "    'fruits for glowing skin'                   → fruits tagged Skin or VitaminC\n" +
-                    "    'fruits for heart health'                  → fruits tagged Heart\n" +
-                    "    'fruits for eyes / vision'                  → fruits tagged Eye\n" +
-                    "    'fruits for weight loss'                    → fruits tagged WeightLoss or LowCalorie or Fiber\n" +
-                    "    'fruits rich in iron'                       → fruits tagged Iron\n" +
-                    "    'fruits rich in potassium'                  → fruits tagged Potassium\n" +
-                    "    'fruits for brain / memory'                → fruits tagged Brain\n" +
-                    "    'fruits for bones'                          → fruits tagged Bone\n" +
-                    "    'fruits to eat at night' / 'fruits for sleep' → fruits tagged Sleep\n" +
-                    "- NEVER return 'Empty' for a reasonable natural-language request about fruits. Always pick the closest matching fruits from the menu.\n" +
-                    "- If multiple constraints are given, return fruits satisfying ALL of them.\n" +
-                    "- Return at most 10 fruits.\n" +
-                    "- If ABSOLUTELY no fruit matches (e.g. user asks for a non-fruit), return exactly: Empty\n\n" +
-                    "Menu (Name | Tags):\n" + menu + "\n\n" +
-                    "User request: " + UserQuery + "\n\n" +
-                    "Matching fruits (one per line, exact names from the menu):";
-
-                // Direct AI call — NO WaitForValidationAsync here (matches DatePicker pattern).
-                string completion = await _aiService.GetCompletion(prompt, token);
-                token.ThrowIfCancellationRequested();
-
-                // The service returns an error string on failure (never throws).
-                // Detect it the way the DatePicker's GetDateFromAIAsync does.
-                if (string.IsNullOrWhiteSpace(completion) ||
-                    completion.StartsWith("HTTP ", StringComparison.OrdinalIgnoreCase) ||
-                    completion.StartsWith("Exception:", StringComparison.OrdinalIgnoreCase) ||
-                    completion.StartsWith("No 'choices'", StringComparison.OrdinalIgnoreCase) ||
-                    completion.StartsWith("Azure returned empty", StringComparison.OrdinalIgnoreCase))
-                {
-                    string err = !string.IsNullOrWhiteSpace(completion)
-                        ? completion
-                        : (_aiService.LastError ?? "AI returned an empty response.");
-                    Debug.WriteLine($"AI selection failed: {err}");
-                    MainThread.BeginInvokeOnMainThread(() =>
-                        Application.Current?.Windows?[0]?.Page?.DisplayAlert(
-                            "Error", $"AI request failed:\n{err}", "OK"));
-                    return;
-                }
-
-                // Parse — tolerant to bullets/dashes/headers. NO Take(3).
-                var matches = completion
-                    .Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries)
-                    .Select(s => s.Trim())
-                    .Where(s => !string.IsNullOrWhiteSpace(s) &&
-                                !s.Equals("Empty", StringComparison.OrdinalIgnoreCase) &&
-                                !s.StartsWith("Here are", StringComparison.OrdinalIgnoreCase))
-                    .Select(s => s.Trim('•', '-', '*', '.', ')'))
-                    .Select(s => s.Trim())
-                    .Where(s => !string.IsNullOrWhiteSpace(s))
-                    .Distinct(StringComparer.OrdinalIgnoreCase)
-                    .Take(10)
-                    .ToList();
-
-                AISelectionReceived?.Invoke(this, matches);
-            }
-            catch (OperationCanceledException) { /* ignored */ }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"AI selection failed: {ex.Message}");
-                MainThread.BeginInvokeOnMainThread(() =>
-                    Application.Current?.Windows?[0]?.Page?.DisplayAlert(
-                        "Error", $"AI request failed: {ex.Message}", "OK")); 
-            }
-            finally
-            {
-                // Equivalent to: LoadingIndicator.IsVisible = false; SearchButton.IsVisible = true;
-                IsBusy = false;
-                HasSearched = true;
-            }
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-}
 
+    public override string ToString() => Name ?? string.Empty;
+    public event PropertyChangedEventHandler? PropertyChanged;
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Define the inverse Boolean converter
+The sample ViewModel builds a menu of 50 fruit entries. Each entry includes a name, price, category, and tag string such as `VitaminC`, `LowSugar`, `Fiber`, or `Immunity`.
 
-Define a value converter that inverts a Boolean value so the Entry and Button can be disabled while a request is in progress.
+## Step 5: Implement the selection ViewModel
+
+The ViewModel receives `IFruitSelectionAIService` through DI and exposes the fruit list, `SelectedItems`, query, busy and error states, and commands for searching and clearing. It builds a prompt from the current fruit names and their health tags. The prompt asks Azure OpenAI to interpret the user's request, return exact menu names one per line, and return no more than 10 matches.
+
+After the response returns, the ViewModel removes formatting and duplicates, ignores `Empty` and non-result headings, and applies the matching names to the fruit models. The following excerpts show the selection ownership and request flow:
 
 {% tabs %}
 {% highlight c# %}
-
-using System.Globalization;
-
-namespace SmartAIComboBox.SmartAIComboBox
+public void ApplyAISelection(IEnumerable<string> matchedNames)
 {
-    /// <summary>
-    /// Inverts a bool value. Used to disable the Entry and Button
-    /// while an AI request is in flight (IsBusy == true).
-    /// </summary>
-    public class InverseBoolConverter : IValueConverter
+    var nameSet = (matchedNames ?? Enumerable.Empty<string>())
+        .Select(name => name.Trim())
+        .Where(name => !string.IsNullOrWhiteSpace(name))
+        .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+    foreach (var fruit in Fruits)
+        fruit.IsSelected = false;
+    SelectedItems.Clear();
+
+    foreach (var fruit in Fruits)
+    {
+        if (fruit.Name is not null && nameSet.Contains(fruit.Name))
+        {
+            fruit.IsSelected = true;
+            SelectedItems.Add(fruit);
+        }
+    }
+
+    AISelectionApplied?.Invoke(this, EventArgs.Empty);
+}
+
+public async Task AskAIAsync(string? query)
 {
-    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
-        => value is bool b ? !b : false;
+    if (string.IsNullOrWhiteSpace(query) || IsBusy) return;
 
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
-        => value is bool b ? !b : false;
-}
-}
+    UserQuery = query;
+    ErrorMessage = null;
+    IsBusy = true;
 
+    _cts?.Cancel();
+    _cts = new CancellationTokenSource();
+    var token = _cts.Token;
+
+    try
+    {
+        var menu = string.Join("\n", Fruits.Select(fruit => $"{fruit.Name} | {fruit.Diet}"));
+        var prompt =
+            "From the menu below, choose fruits that match the user's natural-language request.\n\n" +
+            "Return only exact fruit names from the menu, one per line. Use the fruit tags and " +
+            "your knowledge to interpret the request. If multiple constraints are given, match all " +
+            "of them. Return at most 10 fruits; return Empty only if no fruit matches.\n\n" +
+            "Menu (Name | Tags):\n" + menu + "\n\n" +
+            "User request: " + query + "\n\n" +
+            "Matching fruits (one per line, exact names from the menu):";
+        var completion = await _aiService.GetCompletionAsync(prompt, token);
+        token.ThrowIfCancellationRequested();
+
+        var matches = completion
+            .Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries)
+            .Select(value => value.Trim())
+            .Where(value => !string.IsNullOrWhiteSpace(value) &&
+                            !value.Equals("Empty", StringComparison.OrdinalIgnoreCase) &&
+                            !value.StartsWith("Here are", StringComparison.OrdinalIgnoreCase))
+            .Select(value => value.Trim('•', '-', '*', '.', ')').Trim())
+            .Where(value => !string.IsNullOrWhiteSpace(value))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Take(10)
+            .ToList();
+        ApplyAISelection(matches);
+    }
+    catch (OperationCanceledException)
+    {
+        // A newer search superseded this one.
+    }
+    catch (Exception ex)
+    {
+        ErrorMessage = $"AI request failed: {ex.Message}";
+    }
+    finally
+    {
+        IsBusy = false;
+        HasSearched = true;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Build the selection page
+The response parsing splits the text into lines, trims list markers, removes duplicates, ignores `Empty` and introductory text, and limits the result to 10 names. `ApplyAISelection` resets the prior selection before selecting the new matches. Manual checkbox changes use `ToggleSelection` so the same ViewModel state drives both checkboxes and ComboBox tokens.
 
-Build the page that hosts the AI request entry and the MultiSelect ComboBox, then apply the AI's matched names to the ComboBox's [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedItems) collection.
+## Step 6: Register the service, ViewModel, and page
+
+Register the service, ViewModel, and page in `MauiProgram.cs`. The app resolves the page through DI, and the page constructor assigns the injected ViewModel as its `BindingContext`.
+
+{% tabs %}
+{% highlight c# %}
+builder.Services.AddSingleton<IFruitSelectionAIService, FruitSelectionAzureAIService>();
+builder.Services.AddSingleton<FruitSelectionViewModel>();
+builder.Services.AddSingleton<SmartAIComboBoxPage>();
+{% endhighlight %}
+{% endtabs %}
+
+## Step 7: Build the selection page
+
+The page places an `Entry` in `SfTextInputLayout`. Its trailing view shows a search affordance before a search, a loading indicator during the request, and a clear affordance after results are available. Pressing Enter or tapping search starts the same ViewModel request. An error banner displays `ErrorMessage` and offers a dismiss command.
+
+The MultiSelect ComboBox binds its item source and selection to the ViewModel. Its item template displays a checkbox for each fruit, and token mode displays the selected names.
 
 {% tabs %}
 {% highlight xaml %}
+<syncfusion:SfTextInputLayout x:Name="queryInputLayout"
+                              Hint="Describe your needs..."
+                              ContainerType="Outlined">
+    <Entry x:Name="queryEntry"
+           Text="{Binding UserQuery, Mode=TwoWay}"
+           ReturnType="Search"
+           Completed="OnQueryCompleted"
+           TextChanged="OnQueryTextChanged" />
+</syncfusion:SfTextInputLayout>
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartAIComboBox.SmartAIComboBox.SmartAIComboBoxPage"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-             xmlns:local="clr-namespace:SmartAIComboBox.SmartAIComboBox"
-             Title="AI MultiSelect ComboBox">
+<Border IsVisible="{Binding HasError}">
+    <Grid ColumnDefinitions="*,Auto">
+        <Label Text="{Binding ErrorMessage}" />
+        <Button Grid.Column="1"
+                Text="Dismiss"
+                Command="{Binding DismissErrorCommand}" />
+    </Grid>
+</Border>
 
-    <ContentPage.BindingContext>
-        <local:FoodViewModel/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <local:InverseBoolConverter x:Key="InverseBoolConverter"/> 
-    </ContentPage.Resources>
-
-    <ScrollView>
-        <VerticalStackLayout  
-                             Margin="20"
-                             WidthRequest="560"
-                             HorizontalOptions="Center"
-                             VerticalOptions="Center">
-
-            <!-- ===== Element 1: Title ===== -->
-            <Label Text="AI-Powered Intent-Based Fruit Selection"
-                   FontSize="20" Margin="0,0,0,12"
-                   FontAttributes="Bold"
-                   TextColor="{AppThemeBinding Light='#1C1B1F', Dark='#E6E1E5'}"
-                   HorizontalOptions="Center"/>
-
-            <!-- ===== Element 2: Query input with trailing search/loading/clear slot ===== -->
-            <syncfusion:SfTextInputLayout x:Name="queryInputLayout"
-                                          WidthRequest="500" HeightRequest="90"
-                                          HorizontalOptions="Center"
-                                          Hint="Describe your needs..."
-                                          ContainerType="Outlined"
-                                          ContainerBackground="Transparent"
-                                          
-                                          ShowHint="True">
-                <syncfusion:SfTextInputLayout.HintLabelStyle>
-                    <syncfusion:LabelStyle TextColor="#808080" FontSize="14"/>
-                </syncfusion:SfTextInputLayout.HintLabelStyle>
-                <syncfusion:SfTextInputLayout.TrailingView>
-                    <!-- Three overlapping children; only one is visible at a time (bound to VM state) -->
-                    <Grid WidthRequest="36" HeightRequest="36"
-                          VerticalOptions="Center" HorizontalOptions="Center">
-
-                        <!-- Search magnifier icon (vector Path, no emoji) -->
-                        <Grid WidthRequest="24" HeightRequest="26"
-                              IsVisible="{Binding IsIdle}"
-                              VerticalOptions="Center" HorizontalOptions="Center"
-                              Margin="0,10,4,0"
-                              InputTransparent="False">
-                            <Path Data="M11.170988,2.0000026C6.1139962,2.0000026 1.9999944,6.1120075 1.9999944,11.16603 1.9999944,16.219991 6.1139962,20.331996 11.170988,20.331996 16.227981,20.331996 20.341006,16.219991 20.341006,11.16603 20.341006,6.1120075 16.227981,2.0000026 11.170988,2.0000026z M11.170988,0C17.33003,0 22.341001,5.0089787 22.341001,11.16603 22.341001,13.76351 21.449155,16.156669 19.95551,18.055608L19.942527,18.071714 31.999898,30.615001 30.5589,32.001003 18.567029,19.525854 18.476871,19.605846C16.516895,21.303544 13.961804,22.332 11.170988,22.332 5.0119487,22.332 1.6168633E-07,17.32302 0,11.16603 1.6168633E-07,5.0089787 5.0119487,0 11.170988,0z" Background="Transparent"    Fill="Black"   Margin="0,0,0,0" >
-                                <Path.RenderTransform>
-                                    <TransformGroup>
-                                        <TransformGroup.Children>
-                                            <RotateTransform Angle="0" />
-                                            <ScaleTransform ScaleX="0.6" ScaleY="0.6" />
-                                        </TransformGroup.Children>
-                                    </TransformGroup>
-                                </Path.RenderTransform>
-                            </Path>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnSearchClicked"/>
-                            </Grid.GestureRecognizers>
-                        </Grid>
-
-                        <!-- Loading indicator while the AI request is in flight -->
-                        <ActivityIndicator WidthRequest="24"
-                                          HeightRequest="24"
-                                          VerticalOptions="Center"
-                                          HorizontalOptions="Center"
-                                          Color="#6750A4"
-                                          IsRunning="{Binding IsBusy}"
-                                          IsVisible="{Binding IsBusy}"/>
-
-                        <!-- Clear (X) icon (vector Path, no emoji) -->
-                        <Grid WidthRequest="26" HeightRequest="26"
-                              IsVisible="{Binding CanClear}"
-                              VerticalOptions="Center" HorizontalOptions="Center"
-                              Margin="0,10,0,0"
-                              InputTransparent="False">
-
-                            <Path Data="M29.916016,0L31.999023,2.0700073 17.988037,16 32,29.930054 29.91803,32 15.905029,18.070007 2.0820313,31.812012 0,29.742004 13.822998,16 0.0010375977,2.2590332 2.0840454,0.18902588 15.905029,13.929016z" Background="Transparent"    Fill="Black"     Margin="0,0,0,0"  >
-                                <Path.RenderTransform>
-                                    <TransformGroup>
-                                        <TransformGroup.Children>
-                                            <RotateTransform Angle="0" />
-                                            <ScaleTransform ScaleX="0.4" ScaleY="0.4" />
-                                        </TransformGroup.Children>
-                                    </TransformGroup>
-                                </Path.RenderTransform>
-                            </Path>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnClearClicked"/>
-                            </Grid.GestureRecognizers>
-                        </Grid>
-                    </Grid>
-                </syncfusion:SfTextInputLayout.TrailingView>
-
-                <Entry x:Name="queryEntry"
-                       Text="{Binding UserQuery, Mode=TwoWay}"
-                       ReturnType="Search" 
-                       PlaceholderColor="#AAAAAA"
-                       Completed="OnQueryCompleted"
-                       TextChanged="OnQueryTextChanged"/>
-            </syncfusion:SfTextInputLayout>
-
-            <!-- ===== Element 3: Combo box (with checkbox ItemTemplate) ===== -->
-            <!--<syncfusion:SfTextInputLayout Hint="{Binding ComboHint}"
-                                          WidthRequest="500" HeightRequest="90"
-                                          HorizontalOptions="Center"  
-                                          ContainerType="Outlined"  
-                                          ContainerBackground="Transparent" 
-                                          ShowHint="True">
-                <syncfusion:SfTextInputLayout.HintLabelStyle>
-                    <syncfusion:LabelStyle TextColor="#808080" FontSize="14"/>
-                </syncfusion:SfTextInputLayout.HintLabelStyle>-->
-
-            <editors:SfComboBox x:Name="comboBox" WidthRequest="500"
-                                    SelectionMode="Multiple"
-                                    IsEditable="False" 
-                                    IsFilteringEnabled="False"
-                                    MaxDropDownHeight="250"
-                                    DropDownPlacement="Bottom"  
-                                    DisplayMemberPath="Name" Placeholder="{Binding ComboHint}"
-                                    TextMemberPath="Name"
-                                    MultiSelectionDisplayMode="Token"
-                                    TokensWrapMode="Wrap" DropDownBackground="White" 
-                                    ItemsSource="{Binding Foods}" EnableAutoSize="True"
-                                    SelectedItems="{Binding SelectedItems, Mode=TwoWay}">
-
-                    <!-- Each dropdown row = name + price + CheckBox. Unchanged. -->
-                    <editors:SfComboBox.ItemTemplate>
-                        <DataTemplate x:DataType="local:FoodModel">
-                            <Grid ColumnDefinitions="0.9*,0.1*"
-                                  ColumnSpacing="8"  
-                                  HeightRequest="48"
-                                  Padding="10,0">
-                                <HorizontalStackLayout Grid.Column="0"
-                                                       VerticalOptions="Center"
-                                                       Spacing="6">
-                                    <Label Text="{Binding Name}"
-                                           FontSize="14"
-                                           VerticalOptions="Center"/> 
-                                </HorizontalStackLayout>
-                                <CheckBox Grid.Column="1"
-                                          IsChecked="{Binding IsSelected, Mode=TwoWay}"
-                                          CheckedChanged="OnDropDownItemCheckBoxChanged"
-                                          VerticalOptions="Center"/>
-                            </Grid>
-                        </DataTemplate>
-                    </editors:SfComboBox.ItemTemplate>
-                </editors:SfComboBox>
-            <!--</syncfusion:SfTextInputLayout>-->
-        </VerticalStackLayout>
-    </ScrollView>
-</ContentPage>
-
+<editors:SfComboBox ItemsSource="{Binding Fruits}"
+                    SelectedItems="{Binding SelectedItems, Mode=TwoWay}"
+                    SelectionMode="Multiple"
+                    IsEditable="False"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    MultiSelectionDisplayMode="Token"
+                    TokensWrapMode="Wrap">
+    <editors:SfComboBox.ItemTemplate>
+        <DataTemplate x:DataType="local:FruitModel">
+            <Grid ColumnDefinitions="0.9*,0.1*" HeightRequest="48">
+                <Label Text="{Binding Name}" />
+                <CheckBox Grid.Column="1"
+                          IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                          CheckedChanged="OnDropDownItemCheckBoxChanged" />
+            </Grid>
+        </DataTemplate>
+    </editors:SfComboBox.ItemTemplate>
+</editors:SfComboBox>
 {% endhighlight %}
 {% endtabs %}
+
+## Step 8: Connect page interactions to the ViewModel
+
+The code-behind handles UI-only actions: it invokes a search from the keyboard or search icon, closes the dropdown on clear, and opens it after the ViewModel applies AI results. Checkbox changes are delegated to `ToggleSelection` rather than mutating `SelectedItems` in the page.
 
 {% tabs %}
 {% highlight c# %}
-
-namespace SmartAIComboBox.SmartAIComboBox;
-
-public partial class SmartAIComboBoxPage : ContentPage
+private void RunAISearch()
 {
-    public SmartAIComboBoxPage()
-    {
-        InitializeComponent();
-    }
-
-    protected override void OnBindingContextChanged()
-    {
-        base.OnBindingContextChanged();
-        if (BindingContext is FoodViewModel vm)
-        {
-            vm.AISelectionReceived -= OnAISelectionReceived;
-            vm.AISelectionReceived += OnAISelectionReceived;
-        }
-    }
-
-    /// <summary>Hides the query-hint once the user starts typing (Entry has TextChanged).</summary>
-    private void OnQueryTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        var text = e.NewTextValue ?? string.Empty;
-        queryInputLayout.ShowHint = string.IsNullOrEmpty(text);
-    }
-
-    /// <summary>Enter key while editing the query Entry → fire search.</summary>
-    private void OnQueryCompleted(object? sender, EventArgs e) => RunAISearch();
-
-    /// <summary>Search 🔍 button tapped → fire search.</summary>
-    private void OnSearchClicked(object? sender, EventArgs e) => RunAISearch();
-
-    /// <summary>Clear ✕ button tapped → reset input + combo selections.</summary>
-    private void OnClearClicked(object? sender, EventArgs e)
-    {
-        if (BindingContext is not FoodViewModel vm)
-            return;
-
-        vm.Clear(); // clears UserQuery, unchecks all, empties SelectedItems, HasSearched=false
-
-        queryInputLayout.ShowHint = true;
-        queryEntry.Text = string.Empty;
-        comboBox.IsDropDownOpen = false;
-    }
-
-    private void RunAISearch()
-    {
-        if (BindingContext is not FoodViewModel vm || vm.IsBusy)
-            return;
-
-        string query = queryEntry.Text ?? string.Empty;
-        if (string.IsNullOrWhiteSpace(query)) return;
-
-        _ = vm.AskAIAsync(query);
-    }
-
-    private void OnAISelectionReceived(object? sender, IEnumerable<string> matchedNames)
-    {
-        if (BindingContext is not FoodViewModel vm)
-            return;
-
-        var nameSet = matchedNames
-            .Select(n => n.Trim())
-            .Where(n => !string.IsNullOrWhiteSpace(n))
-            .ToHashSet(StringComparer.OrdinalIgnoreCase);
-
-        var toSelect = vm.Foods
-            .Where(f => f.Name != null && nameSet.Contains(f.Name))
-            .ToList();
-
-        MainThread.BeginInvokeOnMainThread(() =>
-        {
-            // Reset every checkbox first so a previous run doesn't carry over.
-            foreach (var f in vm.Foods) f.IsSelected = false;
-            vm.SelectedItems.Clear();
-
-            // Check + add only the AI matches.
-            foreach (var item in toSelect)
-            {
-                item.IsSelected = true;
-                vm.SelectedItems.Add(item);
-            }
-
-            // Open the dropdown so the (checkbox) ItemTemplate is visible.
-            comboBox.IsDropDownOpen = true;
-        });
-    }
-
-    /// <summary>
-    /// Fires when the user manually toggles a CheckBox rendered inside a dropdown row.
-    /// Keeps <see cref="SfComboBox.SelectedItems"/> in sync with the checkbox state so
-    /// the token display updates in real time.
-    /// </summary>
-    private void OnDropDownItemCheckBoxChanged(object? sender, CheckedChangedEventArgs e)
-    {
-        if (BindingContext is not FoodViewModel vm)
-            return;
-
-        if (sender is CheckBox cb && cb.BindingContext is FoodModel item)
-        {
-            if (e.Value)
-            {
-                if (!vm.SelectedItems.Contains(item))
-                    vm.SelectedItems.Add(item);
-            }
-            else
-            {
-                if (vm.SelectedItems.Contains(item))
-                    vm.SelectedItems.Remove(item);
-            }
-        }
-    }
+    if (_viewModel.IsBusy) return;
+    var query = queryEntry.Text ?? string.Empty;
+    if (string.IsNullOrWhiteSpace(query)) return;
+    _ = _viewModel.AskAIAsync(query);
 }
 
+private void OnAISelectionApplied(object? sender, EventArgs e)
+    => comboBox.IsDropDownOpen = true;
+
+private void OnClearClicked(object? sender, EventArgs e)
+{
+    _viewModel.Clear();
+    comboBox.IsDropDownOpen = false;
+}
+
+private void OnDropDownItemCheckBoxChanged(
+    object? sender,
+    CheckedChangedEventArgs e)
+{
+    if (sender is CheckBox checkBox && checkBox.BindingContext is FruitModel fruit)
+        _viewModel.ToggleSelection(fruit);
+}
 {% endhighlight %}
 {% endtabs %}
 
-The following image demonstrates the AI-driven selection inside the MultiSelect ComboBox.
+## How It Works
 
-![.NET MAUI MultiSelect ComboBox With AI Smart Selection.](images/smartcombobox_fruits.gif)
+1. The user describes the fruit they want and submits the query with Enter or the search affordance.
+2. The ViewModel sends the query together with the fruit menu and health tags to Azure OpenAI.
+3. The ViewModel parses the returned names, resets the previous choices, and selects matching menu entries.
+4. The page opens the ComboBox dropdown so the selected checkboxes are visible; the selected fruits also appear as tokens.
+5. The user can change selections manually, clear the results, or dismiss an error.
 
-You can find the complete sample from this [link.](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples)
+## Output
 
-## See also
+The selected fruits are displayed in the Syncfusion® .NET MAUI MultiSelect ComboBox.
 
-* [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
-* [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
-* [Searching](https://help.syncfusion.com/maui/combobox/searching)
-* [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+![.NET MAUI MultiSelect ComboBox with AI smart selection](images/smartcombobox_fruits.gif)
+
+You can find the complete sample in the [MAUI AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/ComboBox/Multi%20Select%20ComboBox/SmartAIComboBox).
+
+## See Also
+
+- [ComboBox getting started](https://help.syncfusion.com/maui/combobox/getting-started)
+- [Multiple selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
+- [Searching](https://help.syncfusion.com/maui/combobox/searching)
+- [Filtering](https://help.syncfusion.com/maui/combobox/filtering)
+- [Azure OpenAI overview](https://learn.microsoft.com/azure/ai-foundry/openai/overview)
