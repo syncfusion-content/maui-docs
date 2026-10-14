@@ -5,6 +5,7 @@ description: Learn how to export the Syncfusion® .NET MAUI Diagram control to a
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Export and print in .NET MAUI Diagram
