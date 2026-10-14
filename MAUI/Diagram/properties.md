@@ -5,6 +5,7 @@ description: This section explains the properties, events, and methods with Sync
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # API Reference for .NET MAUI Diagram
