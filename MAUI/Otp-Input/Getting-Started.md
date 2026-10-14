@@ -97,7 +97,7 @@ using Syncfusion.Maui.Core.Hosting;
 {% endhighlight %}
 {% endtabs %}
  
-Register the Syncfusion toolkit handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
+Register the Syncfusion core handler in your `CreateMauiApp` method of `MauiProgram.cs` file to use Syncfusion controls.
  
 {% tabs %}
 {% highlight c# %}

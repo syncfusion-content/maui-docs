@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI OTP Input | Syncfusion®
-description: Learn about event support in the Syncfusion® Toolkit .NET MAUI OTP Input (SfOtpInput) control and more.
+description: Learn about event support in the Syncfusion® Essential Studio .NET MAUI OTP Input (SfOtpInput) control and more.
 platform: MAUI
 control: SfOtpInput
 documentation: UG
