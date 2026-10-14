@@ -95,13 +95,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ScrollChanged" aria-label="View ScrollChanged event in API reference">ScrollChanged</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.InteractiveScrollChangedEventArgs.html" aria-label="View InteractiveScrollChangedEventArgs type in API reference">InteractiveScrollChangedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.InteractiveScrollChangedEventArgs.html" aria-label="View InteractiveScrollChangedEventArgs type in API reference">InteractiveScrollChangedEventArgs&gt;</a></a></td>
     <td>Triggered after the pan position or zoom level changes.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ZoomFactorChanged" aria-label="View ZoomFactorChanged event in API reference">ZoomFactorChanged</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.ZoomFactorChangedEventArgs.html" aria-label="View ZoomFactorChangedEventArgs type in API reference">ZoomFactorChangedEventArgs</a>&gt;</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1?view=net-10.0" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.ZoomFactorChangedEventArgs.html" aria-label="View ZoomFactorChangedEventArgs type in API reference">ZoomFactorChangedEventArgs&gt;</a></a></td>
     <td>Triggered after the zoom level changes.</td>
 </tr>
 </table>
