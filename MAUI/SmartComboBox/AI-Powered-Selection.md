@@ -2,7 +2,7 @@
 layout: post
 title: AI-Powered Selection in .NET MAUI MultiSelect ComboBox | Syncfusion®
 description: Learn how to select matching items in the Syncfusion® .NET MAUI MultiSelect ComboBox from a natural-language request with Azure OpenAI.
-platform: MAUI
+platform: maui
 control: SfComboBox
 documentation: ug
 ---

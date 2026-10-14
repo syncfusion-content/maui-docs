@@ -2,7 +2,7 @@
 layout: post
 title: AI-Powered Smart Tag Generation in .NET MAUI ChipGroup | Syncfusion®
 description: Learn how to generate relevant tags from a text description with Azure OpenAI and the Syncfusion® .NET MAUI ChipGroup control.
-platform: MAUI
+platform: maui
 control: SfChipGroup
 documentation: ug
 ---
