@@ -609,7 +609,7 @@ This provides an intelligent task management experience that helps users focus o
 
 ![.NET MAUI Kanban Board.](Images/smart-ai-solution/kanbanboard.gif)
 
-You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/AI-Task-Prioritization-Engine-with-MAUI-Kanban-Board)
+You can find the complete sample from this [link.](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/KanbanBoard/AITaskPrioritization)
 
 ## See also
 
