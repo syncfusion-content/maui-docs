@@ -47,53 +47,6 @@ public async Task<ContextSuggestionResponse?>GetResultsFromAI(string prompt)
 {% endhighlight %}
 {% endtabs %}
 
-The following response model is used to deserialize the AI-generated answer and suggestions returned by Azure OpenAI.
-
-{% tabs %}
-{% highlight c# %}
-
-public class ContextSuggestionResponse
-{
-    public string Answer { get; set; }
-
-    public List<string> Suggestions { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-The AI behavior is controlled through prompt engineering. The following system prompt instructs the model to generate educational responses and return exactly four concise context-aware suggestions related to the current conversation.
-
-{% tabs %}
-{% highlight c# %}
-
-private const string SystemPrompt =
-"""
-You are an AI learning assistant.
-
-Return JSON only.
-
-{
-  "answer":"response",
-  "suggestions":[
-     "suggestion1",
-     "suggestion2",
-     "suggestion3",
-     "suggestion4"
-  ]
-}
-Suggestions must:
-
-1. Be related to the response.
-2. Help users continue learning.
-3. Never repeat previous suggestions.
-4. Be less than 4 words each.
-5. Generate exactly 4 suggestions.
-""";
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Creating the ViewModel
 
 Create a ViewModel to manage the AI conversation, suggestions, and user interactions.
@@ -117,28 +70,6 @@ public ICommand RequestCommand { get; }
 {% endhighlight %}
 {% endtabs %}
 
-## Loading Initial Suggestions
-
-Initial suggestions help users start a conversation quickly by providing commonly used prompts.
-
-{% tabs %}
-{% highlight c# %}
-
-private void LoadInitialSuggestions()
-{
-    Suggestions = new ObservableCollection<ISuggestion>
-    {
-        new AssistSuggestion { Text = "Python Basics" },
-        new AssistSuggestion { Text = "Python Roadmap" },
-        new AssistSuggestion { Text = "Python Practice Projects" },
-        new AssistSuggestion { Text = "Best Resources for Python" }
-    };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-The suggestions are displayed when the chat session starts and can be selected directly by the user.
 
 ## Generating Context-Aware Suggestions
 
@@ -247,37 +178,6 @@ Customize the appearance of response suggestions using the `ResponseSuggestionTe
 
 These suggestions are generated dynamically based on the AI response and provide users with a seamless conversational flow.
 
-## Customizing Initial Suggestions
-
-The initial suggestions displayed before the conversation begins can also be customized using the `SuggestionTemplate`.
-
-{% tabs %}
-{% highlight xaml %}
-
-<assistview:SfAIAssistView.SuggestionTemplate>
-
-    <DataTemplate>
-
-        <Border
-            Padding="14,8"
-            Background="White"
-            Stroke="#E5EAF3"
-            StrokeThickness="1.5"
-            StrokeShape="RoundRectangle 6">
-
-            <Label
-                Text="{Binding Text}"
-                FontSize="14"/>
-
-        </Border>
-
-    </DataTemplate>
-
-</assistview:SfAIAssistView.SuggestionTemplate>
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Output
 
 The following image demonstrates AI-generated responses with context-aware follow-up suggestions displayed directly beneath each response.
@@ -292,7 +192,7 @@ The following image demonstrates AI-generated responses with context-aware follo
 * Continue conversations with minimal typing.
 * Provide feedback using built-in like and dislike actions.
 
-You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples/AIAssistView-Context-Aware-Suggestions).
+You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/AIAssistView/Context%20Aware%20Suggestions).
 
 ## See also
 
