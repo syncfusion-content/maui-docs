@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Driven Form Generation in .NET MAUI DataForm | Syncfusion
-description: Learn how to integrate AI-driven form generation with the Syncfusion® .NET MAUI DataForm using Azure OpenAI to dynamically create education-related forms from natural language prompts.
+description: Learn how to use Azure OpenAI with Syncfusion® .NET MAUI DataForm to generate education forms from natural language prompts.
 platform: MAUI
 control: SfDataForm
 documentation: ug
@@ -61,7 +61,7 @@ public async Task<string?> GetResultsFromAI(string prompt)
 {% endhighlight %}
 {% endtabs %}
 
-After completing the Azure OpenAI setup, use the `.NET MAUI DataForm` control to display the AI-generated education form. The AI service interprets the user's description, decides on the most appropriate field types (such as text, numeric, date, picker, or checkbox), and produces a JSON payload that the application deserializes and maps to `SfDataForm` items. The generated form is then rendered live inside `SfDataForm`, where the user can enter values, apply validation, and submit the data.
+After completing the Azure OpenAI setup, use the `.NET MAUI DataForm` control to display the AI-generated education form. The AI service interprets the user's description, decides on the most appropriate field types (such as text, numeric, date, picker, or checkbox), and produces a JSON payload that the application deserialize and maps to `SfDataForm` items. The generated form is then rendered live inside `SfDataForm`, where the user can enter values, apply validation, and submit the data.
 
 Before proceeding, review the [.NET MAUI DataForm overview](https://www.syncfusion.com/maui-controls/maui-dataform).
 
@@ -237,7 +237,7 @@ A typical review interaction looks like this:
 
 1. The user reads the AI-generated form, verifies the fields, and fills in the values. Required fields enforce validation through the `PropertyChanged` mode, so missing or invalid values are highlighted immediately.
 2. If a field type is not appropriate, the user simply edits the prompt and taps **Generate Form** again. The new JSON from the AI replaces the previous `SfDataForm.Items` collection, and `SfDataForm` re-renders the new fields without restarting the page.
-3. When the user is satisfied with the data, the underlying `EducationForm.DataObject` can be read from code-behind for further processing, persistence, or submission to a backend service.
+3. When the user is satisfied with the data, the underlying `EducationForm.DataObject` can be read from code-behind for further processing, persistence, or submission to a back-end service.
 
 This end-to-end workflow — *prompt → AI → JSON → `DataFormItem` → live `SfDataForm`* — lets developers add AI-assisted data entry to any education-related scenario, from student enrollment and course feedback to admissions and scholarship applications, with no manual form layout work.
 

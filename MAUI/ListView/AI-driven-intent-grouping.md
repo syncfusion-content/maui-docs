@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Driven Intent Grouping in .NET MAUI ListView | Syncfusion
-description: Learn how to integrate AI-driven intent grouping with the Syncfusion® .NET MAUI ListView using Azure OpenAI to classify user input into intent categories and visually group items in SfListView.
+description: Learn how to use Azure OpenAI with Syncfusion® .NET MAUI ListView to group user input by intent and display categorized items.
 platform: MAUI
 control: SfListView
 documentation: ug
