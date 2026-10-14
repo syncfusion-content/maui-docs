@@ -18,9 +18,24 @@ documentation: ug
 		<th>Description</th>
 	</tr>
 	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Background" aria-label="View Background property in API reference">Background</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
+		<td>Sets the background color used to display the button background.</td>
+	</tr>
+	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_BackgroundImageSource" aria-label="View BackgroundImageSource property in API reference">BackgroundImageSource</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource" aria-label="View ImageSource type in API reference">ImageSource</a></td>
 		<td>Displays an image behind the button content as the button background.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Command" aria-label="View Command property in API reference">Command</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+		<td>Executes the command when the button is activated.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_CommandParameter" aria-label="View CommandParameter property in API reference">CommandParameter</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
+		<td>Provides the parameter passed to the command when the button is activated.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_Content" aria-label="View Content property in API reference">Content</a></td>
@@ -43,29 +58,9 @@ documentation: ug
 		<td>Applies the Liquid Glass visual effect to the button when used in an environment that supports glass-effect rendering.</td>
 	</tr>
 	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable" aria-label="View IsCheckable property in API reference">IsCheckable</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Allows the button to behave like a toggle button that can switch between checked and unchecked states when interacted with.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
-		<td>Controls whether the button appears in its checked state when <code >IsCheckable</code> is enabled.</td>
-	</tr>
-	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect" aria-label="View EnableRippleEffect property in API reference">EnableRippleEffect</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Enables the ripple effect for the button.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_Command" aria-label="View Command property in API reference">Command</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
-		<td>Executes the command when the button is activated.</td>
-	</tr>
-	<tr valign="top">
-		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_CommandParameter" aria-label="View CommandParameter property in API reference">CommandParameter</a></td>
-		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View object type in API reference">object</a></td>
-		<td>Provides the parameter passed to the command when the button is activated.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
@@ -108,6 +103,16 @@ documentation: ug
 		<td>Displays an image with the button.</td>
 	</tr>
 	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable" aria-label="View IsCheckable property in API reference">IsCheckable</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+		<td>Allows the button to behave like a toggle button that can switch between checked and unchecked states when interacted with.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
+		<td>Controls whether the button appears in its checked state when <code >IsCheckable</code> is enabled.</td>
+	</tr>
+	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.linebreakmode?view=net-maui-10.0" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
 		<td>Controls how the button text wraps or truncates when it is too long.</td>
@@ -141,6 +146,11 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextColor" aria-label="View TextColor property in API reference">TextColor</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
 		<td>Specifies the color of the button text.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_TextTransform" aria-label="View TextColor property in API reference">TextTransform</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.texttransform?view=net-maui-10.0" aria-label="View Color type in API reference">TextTransform</a></td>
+		<td>Specifies the text transform of the button text.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_VerticalTextAlignment" aria-label="View VerticalTextAlignment property in API reference">VerticalTextAlignment</a></td>

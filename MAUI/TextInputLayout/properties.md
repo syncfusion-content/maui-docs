@@ -200,8 +200,8 @@ documentation: ug
 
 <tr valign="top">
 <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingViewPosition" aria-label="View TrailingViewPosition property in API reference">TrailingViewPosition</a></td>
-<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html" aria-label="View AdornmentViewPosition enum in API reference">AdornmentViewPosition</a></td>
-<td>Controls where the trailing view appears relative to the input area using the supported <code> AdornmentViewPosition </code> values. Document the behavior of each enum value separately if needed.</td>
+<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html" aria-label="View ViewPosition enum in API reference">ViewPosition</a></td>
+<td>Controls where the trailing view appears relative to the input area using the supported <code> ViewPosition </code> values. Document the behavior of each enum value separately if needed.</td>
 </tr>
 
 <tr valign="top">

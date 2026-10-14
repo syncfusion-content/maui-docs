@@ -24,8 +24,12 @@ This page lists the public properties, methods, and events of tooltip, trackball
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html" aria-label="View ChartSelectionBehavior class in API reference">ChartSelectionBehavior</a></td>
-    <td>Members declared by <code>ChartSelectionBehavior</code>, the <code>abstract base class</code> for series and data point selection, including <code>selection type</code> (single, multiple, deselect on tap), <code>selection customization</code> via <code>SelectionChanging</code> and <code>SelectionChanged</code> events, and the <code>path</code> or <code>value mapping</code> used to identify selected items. Derived by <code>DataPointSelectionBehavior</code> and <code>SeriesSelectionBehavior</code>.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SeriesSelectionBehavior.html" aria-label="View SeriesSelectionBehavior class in API reference">SeriesSelectionBehavior</a></td>
+    <td>Members declared by <code>SeriesSelectionBehavior</code>, a <code>derived class</code> of <code>ChartSelectionBehavior</code> used to select entire series in the chart. Provides <code>series-level selection customization</code> via the <code>SelectionChanging</code> and <code>SelectionChanged</code> events, lets users pick a single series or multiple series, and supports <code>deselection on tap</code>.</td>
+</tr>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataPointSelectionBehavior.html" aria-label="View DataPointSelectionBehavior class in API reference">DataPointSelectionBehavior</a></td>
+    <td>Members declared by <code>DataPointSelectionBehavior</code>, a <code>derived class</code> of <code>ChartSelectionBehavior</code> used to select individual data points in the chart. Provides <code>data-point selection customization</code> via the <code>SelectionChanging</code> and <code>SelectionChanged</code> events, supports <code>single</code> or <code>multiple</code> selection, and uses the series <code>path</code> or <code>value mapping</code> to identify the selected data points.</td>
 </tr>
 
 <tr valign="top">

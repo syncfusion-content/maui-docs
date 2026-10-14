@@ -109,12 +109,6 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedItem" aria-label="View SelectedItem property in API reference">SelectedItem</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
-    <td><code>Active item</code> in the <code>carousel</code>. Reading or setting this updates the <code>SelectedIndex</code> in sync.</td>
-</tr>
-
-<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedItemOffset" aria-label="View SelectedItemOffset property in API reference">SelectedItemOffset</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
     <td><code>Position offset</code> applied to the <code>selected item</code> along the <code>layout axis</code>. Use this to <code>fine-tune</code> the placement of the <code>active item</code> within the carousel.</td>
@@ -184,7 +178,7 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SwipeEnded" aria-label="View SwipeEnded event in API reference">SwipeEnded</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventargs?view=net-10.0" aria-label="View EventArgs type in API reference">EventArgs</a>&gt;</a></td>
     <td>Triggered when the <code>swipe gesture</code> completes. Use this to <code>finalize</code> interaction state or <code>refresh</code> visible content after the swipe.</td>
 </tr>
 </table>

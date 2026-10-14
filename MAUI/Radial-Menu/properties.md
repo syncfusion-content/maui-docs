@@ -20,20 +20,32 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_AnimationDuration" aria-label="View AnimationDuration property in API reference">AnimationDuration</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32" aria-label="View Int32 type in API reference">int</a></td>
     <td><code>Duration</code> of the radial menu's <code>expand</code>, <code>collapse</code>, and <code>state-change animations</code>, in <code>milliseconds</code>. Larger values produce <code>slower transitions</code>.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontAutoScalingEnabled" aria-label="View CenterButtonBackFontAutoScalingEnabled property in API reference">CenterButtonBackFontAutoScalingEnabled</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
-    <td>Controls whether the <code>center button back text</code> <code>scales automatically</code> with <code>system font size settings</code> for improved <code>readability</code> and <code>accessibility</code>.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontAttributes" aria-label="View CenterButtonBackFontAttributes property in API reference">CenterButtonBackFontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td>Font attributes applied to the <code>center button text</code> in the <code>back-navigation state</code>.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackground" aria-label="View CenterButtonBackground property in API reference">CenterButtonBackground</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.brush" aria-label="View Brush type in API reference">Brush</a></td>
-    <td><code>Brush</code> applied <code>behind</code> the <code>center button</code>. Use it to set the <code>color</code> or <code>gradient</code> of the <code>central action area</code>.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontFamily" aria-label="View CenterButtonBackFontFamily property in API reference">CenterButtonBackFontFamily</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Font family used for the <code>center button text</code> in the <code>back-navigation state</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontSize" aria-label="View CenterButtonBackFontSize property in API reference">CenterButtonBackFontSize</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Font size of the <code>center button text</code> in the <code>back-navigation state</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackgroundColor" aria-label="View CenterButtonBackgroundColor property in API reference">CenterButtonBackgroundColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Background <code>color</code> of the <code>center button</code> in its <code>primary state</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -43,15 +55,33 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTextColor" aria-label="View CenterButtonBackTextColor property in API reference">CenterButtonBackTextColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Text <code>color</code> of the <code>center button</code> in the <code>back-navigation state</code>.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackView" aria-label="View CenterButtonBackView property in API reference">CenterButtonBackView</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view" aria-label="View View type in API reference">View</a></td>
     <td>Custom <code>view</code> displayed on the <code>center button</code> when it is in the <code>back-navigation state</code>. Use it to fully customize the <code>reverse navigation presentation</code>.</td>
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAttributes" aria-label="View CenterButtonFontAttributes property in API reference">CenterButtonFontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td>Font attributes applied to the <code>center button text</code> in its <code>primary state</code>.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAutoScalingEnabled" aria-label="View CenterButtonFontAutoScalingEnabled property in API reference">CenterButtonFontAutoScalingEnabled</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether the <code>center button text</code> <code>scales automatically</code> with <code>system font size settings</code> for improved <code>readability</code> and <code>accessibility</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontFamily" aria-label="View CenterButtonFontFamily property in API reference">CenterButtonFontFamily</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Font family used for the <code>center button text</code> in its <code>primary state</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -88,6 +118,12 @@ documentation: ug
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText" aria-label="View CenterButtonText property in API reference">CenterButtonText</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td><code>Text</code> displayed on the <code>center button</code> in its <code>primary state</code>. Acts as the <code>main label</code> for the <code>central action</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonTextColor" aria-label="View CenterButtonTextColor property in API reference">CenterButtonTextColor</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.graphics.color" aria-label="View Color type in API reference">Color</a></td>
+    <td>Text <code>color</code> of the <code>center button</code> in its <code>primary state</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -146,13 +182,13 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Items" aria-label="View Items property in API reference">Items</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html" aria-label="View RadialMenuItemCollection type in API reference">RadialMenuItemCollection</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html" aria-label="View RadialMenuItemsCollection type in API reference">RadialMenuItemsCollection</a></td>
     <td><code>Collection</code> of <code>RadialMenuItem</code> entries that compose the menu's <code>built-in item hierarchy</code>. Use this <code>collection</code> when not binding to a <code>data source</code>.</td>
 </tr>
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_ItemsSource" aria-label="View ItemsSource property in API reference">ItemsSource</a></td>
-    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable" aria-label="View IEnumerable type in API reference">IEnumerable</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1" aria-label="View IEnumerable type in API reference">IEnumerable&lt;object&gt;</a></td>
     <td><code>Data source</code> <code>bound</code> to the <code>menu</code> to generate <code>radial items</code> <code>dynamically</code>. Use <code>DisplayMemberPath</code> and <code>ItemTemplate</code> to shape how each <code>bound item</code> is <code>rendered</code>.</td>
 </tr>
 
@@ -170,8 +206,8 @@ documentation: ug
 
 <tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_LayoutType" aria-label="View LayoutType property in API reference">LayoutType</a></td>
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html" aria-label="View RadialMenuLayoutType enum in API reference">RadialMenuLayoutType</a></td>
-    <td><code>Arrangement style</code> used to distribute <code>items</code> around the <code>center</code>. Choose a supported <code>RadialMenuLayoutType</code> value such as <code>Default</code>, <code>Custom</code>, or similar <code>options</code> to control <code>item placement</code>.</td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html" aria-label="View LayoutType enum in API reference">LayoutType</a></td>
+    <td><code>Arrangement style</code> used to distribute <code>items</code> around the <code>center</code>. Choose a supported <code>LayoutType</code> value such as <code>Default</code> or <code>Custom</code> to control <code>item placement</code>.</td>
 </tr>
 
 <tr valign="top">

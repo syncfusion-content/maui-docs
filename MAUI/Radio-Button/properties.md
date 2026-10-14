@@ -43,9 +43,33 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FlowDirection" aria-label="View FlowDirection property in API reference">FlowDirection</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.flowdirection" aria-label="View FlowDirection type in API reference">FlowDirection</a></td>
+    <td>Gets or sets the <code>direction</code> in which the <code>control content</code> is laid out.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAttributes" aria-label="View FontAttributes property in API reference">FontAttributes</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.fontattributes" aria-label="View FontAttributes type in API reference">FontAttributes</a></td>
+    <td>Gets or sets whether the <code>text font</code> is <code>bold</code>, <code>italic</code>, or neither.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled" aria-label="View FontAutoScalingEnabled property in API reference">FontAutoScalingEnabled</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Controls whether the <code>text label</code> <code>scales automatically</code> with <code>system font size settings</code> for improved <code>readability</code> and <code>accessibility</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontFamily" aria-label="View FontFamily property in API reference">FontFamily</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
+    <td>Gets or sets the <code>font family</code> used to display the <code>text label</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontSize" aria-label="View FontSize property in API reference">FontSize</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Gets or sets the <code>font size</code> of the <code>text label</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -55,9 +79,39 @@ documentation: ug
 </tr>
 
 <tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment" aria-label="View HorizontalTextAlignment property in API reference">HorizontalTextAlignment</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.textalignment" aria-label="View TextAlignment type in API reference">TextAlignment</a></td>
+    <td>Gets or sets the <code>horizontal alignment</code> of the <code>text label</code>.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked" aria-label="View IsChecked property in API reference">IsChecked</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Reflects whether the <code>radio button</code> is currently <code>selected</code>. Setting this to <code>true</code> selects the <code>button</code> and <code>clears</code> any other <code>selected button</code> in the same <code>GroupKey</code> if at least one <code>button</code> in the <code>group</code> must <code>remain selected</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_IsEnabled" aria-label="View IsEnabled property in API reference">IsEnabled</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View Boolean type in API reference">bool</a></td>
+    <td>Gets or sets whether the <code>control</code> is <code>enabled</code> and can respond to <code>user interaction</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode" aria-label="View LineBreakMode property in API reference">LineBreakMode</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.linebreakmode" aria-label="View LineBreakMode type in API reference">LineBreakMode</a></td>
+    <td>Gets or sets how the <code>text label</code> handles <code>line breaks</code>. The default is <code>NoWrap</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Padding" aria-label="View Padding property in API reference">Padding</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness" aria-label="View Thickness type in API reference">Thickness</a></td>
+    <td>Gets or sets the <code>padding</code> around the <code>control content</code>. The default is <code>13,0,0,0</code>.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness" aria-label="View StrokeThickness property in API reference">StrokeThickness</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.double" aria-label="View Double type in API reference">double</a></td>
+    <td>Gets or sets the <code>stroke thickness</code> of the <code>control</code>. It is visible only when the <code>stroke</code> is not <code>transparent</code>.</td>
 </tr>
 
 <tr valign="top">
@@ -95,13 +149,13 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_StateChanged" aria-label="View StateChanged event in API reference">StateChanged</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanged" aria-label="View StateChanged event in API reference">StateChanged</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangedEventArgs.html" aria-label="View StateChangedEventArgs type in API reference">StateChangedEventArgs&gt;</a></a></td>
     <td>Triggered <code>after</code> the <code>checked state</code> <code>changes</code>, providing the <code>new checked state</code> for <code>post-selection handling</code>.</td>
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_StateChanging" aria-label="View StateChanging event in API reference">StateChanging</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StateChanging" aria-label="View StateChanging event in API reference">StateChanging</a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.eventhandler-1" aria-label="View EventHandler type in API reference">EventHandler&lt;<a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html" aria-label="View StateChangingEventArgs type in API reference">StateChangingEventArgs&gt;</a></a></td>
     <td>Triggered <code>before</code> the <code>checked state</code> <code>changes</code>. Set the <code>Cancel</code> property in the <code>event args</code> to <code>prevent</code> the <code>selection</code> from being <code>applied</code>.</td>
 </tr>

@@ -2,7 +2,7 @@
 layout: post
 title: Annotations in MAUI Diagram | Syncfusion®
 description: Learn how to add and customize node and connector annotations in the Syncfusion® .NET MAUI Diagram control using ShapeAnnotation, PathAnnotation, and TextStyle.
-platform: diagram-sdk
+platform: maui
 control: SfDiagram
 documentation: ug
 ---
@@ -14,22 +14,22 @@ Annotation is used to textually represent an object with a string that can be ed
 
 The Diagram control supports two annotation types:
 
-- **Node annotations** – Use `ShapeAnnotation` for nodes.
-- **Connector annotations** – Use `PathAnnotation` for connectors.
+- **Node annotations** – Use [ShapeAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html) for nodes.
+- **Connector annotations** – Use [PathAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PathAnnotation.html) for connectors.
 
-Annotations can be customized using the `TextStyle` class and alignment options.
+Annotations can be customized using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html) class and alignment options.
 
 > **Note:** The `TextAlign` property on `TextStyle` and the `TextDecoration` property on `TextStyle` are scheduled for a future release. They are not available in the current package version.
 
 ## Prerequisites
 
-Refer to the [Getting started](getting-started.md) page to create a project, install the package, and register the handler. Annotation examples assume that the host node or connector has been assigned to an `SfDiagram` instance.
+Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-started) page to create a project, install the package, and register the handler. Annotation examples assume that the host node or connector has been assigned to an [SfDiagram](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.SfDiagram.html) instance.
 
 ---
 
 ## Node annotations
 
-Node annotations display text within or around a node. They are added through the `Node.Annotations` collection.
+Node annotations display text within or around a node. They are added through the [Node.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Node.html#Syncfusion_Maui_Diagram_Node_Annotations) collection.
 
 ```csharp
 using Syncfusion.Maui.Diagram;
@@ -78,7 +78,7 @@ node.Annotations.Add(
 
 ## Connector annotations
 
-Connector annotations display text along a connector path. They are added through the `Connector.Annotations` collection.
+Connector annotations display text along a connector path. They are added through the [Connector.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.Connector.html#Syncfusion_Maui_Diagram_Connector_Annotations) collection.
 
 ```csharp
 var connector = new Connector
@@ -103,12 +103,12 @@ The following properties apply to both `ShapeAnnotation` and `PathAnnotation`.
 
 | Property | Description |
 | --- | --- |
-| `Id` | Unique identifier for the annotation. |
-| `Content` | Display text for the annotation. |
-| `Style` | Text style based on the `TextStyle` class. |
-| `Offset` | Position of the annotation. Node annotations use node-relative coordinates; connector annotations use path-relative coordinates. |
-| `HorizontalAlignment` | Horizontal alignment through the `HorizontalAlignment` enumeration. |
-| `VerticalAlignment` | Vertical alignment through the `VerticalAlignment` enumeration. |
+| [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Id) | Unique identifier for the annotation. |
+| [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Content) | Display text for the annotation. |
+| [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Style) | Text style based on the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html) class. |
+| [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Offset) | Position of the annotation. Node annotations use node-relative coordinates; connector annotations use path-relative coordinates. |
+| [HorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_HorizontalAlignment) | Horizontal alignment through the [AnnotationHorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.AnnotationHorizontalAlignment.html) enumeration. |
+| [VerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_VerticalAlignment) | Vertical alignment through the [AnnotationVerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.AnnotationVerticalAlignment.html) enumeration. |
 
 > **Note:** The `Offset` property on `ShapeAnnotation` exposes `OffsetX` and `OffsetY` values. The point type used by `PathAnnotation.Offset` should be verified against the package version you use.
 
@@ -126,17 +126,17 @@ The following properties apply to both `ShapeAnnotation` and `PathAnnotation`.
 
 ## Style annotations
 
-Use the `Style` property to customize a node's appearance  like FontFamily, FontSize, Color, and Bold. The conceptual styling properties are listed below.
+Use the [Style](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Style) property to customize a node's appearance  like FontFamily, FontSize, Color, and Bold. The conceptual styling properties are listed below.
 
 
 | Property | Description |
 | --- | --- |
-| `FontFamily` | Font family for the annotation text. |
-| `FontSize` | Text size in device-independent units. |
-| `Color` | Text color. |
-| `Fill` | Background color behind the text. |
-| `Bold` | `true` for bold text. `false` otherwise. |
-| `Italic` | `true` for italic text. `false` otherwise. |
+| [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_FontFamily) | Font family for the annotation text. |
+| [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_FontSize) | Text size in device-independent units. |
+| [Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_Color) | Text color. |
+| [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_Fill) | Background color behind the text. |
+| [Bold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_Bold) | `true` for bold text. `false` otherwise. |
+| [Italic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.TextStyle.html#Syncfusion_Maui_Diagram_TextStyle_Italic) | `true` for italic text. `false` otherwise. |
 
 ### Example
 
@@ -163,7 +163,7 @@ node.Annotations.Add(
 
 ### Node annotation 
 
-For `ShapeAnnotation`, the `Offset` value uses node-relative coordinates.
+For [ShapeAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html), the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.ShapeAnnotation.html#Syncfusion_Maui_Diagram_ShapeAnnotation_Offset) value uses node-relative coordinates.
 
 | Position | Offset values |
 | --- | --- |
@@ -189,7 +189,7 @@ node.Annotations.Add(
 
 ### Connector annotation 
 
-For `PathAnnotation`, the `Offset` value specifies the relative position of the annotation along the connector path. The value is normalized from `0` to `1`, where:
+For [PathAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PathAnnotation.html), the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Diagram.PathAnnotation.html#Syncfusion_Maui_Diagram_PathAnnotation_Offset) value specifies the relative position of the annotation along the connector path. The value is normalized from `0` to `1`, where:
 
 - `0` places the annotation at the source end of the connector.
 - `0.5` places the annotation at the midpoint of the connector.
@@ -203,5 +203,5 @@ For `PathAnnotation`, the `Offset` value specifies the relative position of the 
 
 ## See also
 
-- [Nodes](nodes.md)
-- [Connectors](connectors.md)
+- [Nodes](https://help.syncfusion.com/maui/diagram/nodes)
+- [Connectors](https://help.syncfusion.com/maui/diagram/connectors)
