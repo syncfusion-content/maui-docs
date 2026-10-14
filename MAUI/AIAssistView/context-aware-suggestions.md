@@ -15,42 +15,33 @@ The generated suggestions are dynamically tailored based on the current AI respo
 
 ## Integrating Azure AI for Context-Aware Suggestions
 
-Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Complete the required Azure OpenAI setup and authentication process.
+Before proceeding, ensure that Azure OpenAI is configured and integrated with your .NET MAUI application. Refer to the [Azure OpenAI integration prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) and complete the required setup steps.
 
-The AI service receives the user's prompt and generates both:
+The `GetResultsFromAI` method sends the user's prompt to Azure OpenAI and retrieves an AI-generated response. In addition to the answer, the AI generates context-aware follow-up suggestions that help users continue the conversation naturally.
 
-* An AI response.
-* Context-aware follow-up suggestions related to the response.
-
-The following service model is used to return both the answer and suggested follow-up prompts.
+To ensure predictable and structured output, the AI model is instructed through a system prompt to return a JSON response containing both the generated answer and contextual suggestions.
 
 {% tabs %}
 {% highlight c# %}
 
-public class AIResponse
+public async Task<ContextSuggestionResponse?>GetResultsFromAI(string prompt)
 {
-    public string Answer { get; set; }
+    var client = CreateClient();
 
-    public List<string> Suggestions { get; set; }
-}
+    ChatClient chatClient = client.GetChatClient(DeploymentName);
 
-{% endhighlight %}
-{% endtabs %}
+    var messages =  new List<ChatMessage>()
+                    {
+                        new SystemChatMessage(SystemPrompt),
 
-The `GetResponseAsync` method sends the user prompt to Azure OpenAI and retrieves the generated answer along with contextual suggestions.
+                        new UserChatMessage(prompt)
+                    };
 
-{% tabs %}
-{% highlight c# %}
+    ChatCompletion completion = await chatClient.CompleteChatAsync(messages);
 
-public async Task<AIResponse> GetResponseAsync(string prompt)
-{
-    var completion = await client.CompleteAsync(prompt);
+    string result = completion.Content[0].Text;
 
-    return new AIResponse
-    {
-        Answer = completion.Answer,
-        Suggestions = completion.Suggestions
-    };
+    return JsonSerializer.Deserialize<ContextSuggestionResponse>(result);
 }
 
 {% endhighlight %}
@@ -79,28 +70,6 @@ public ICommand RequestCommand { get; }
 {% endhighlight %}
 {% endtabs %}
 
-## Loading Initial Suggestions
-
-Initial suggestions help users start a conversation quickly by providing commonly used prompts.
-
-{% tabs %}
-{% highlight c# %}
-
-private void LoadInitialSuggestions()
-{
-    Suggestions = new ObservableCollection<ISuggestion>
-    {
-        new AssistSuggestion { Text = "Python Basics" },
-        new AssistSuggestion { Text = "Python Roadmap" },
-        new AssistSuggestion { Text = "Python Practice Projects" },
-        new AssistSuggestion { Text = "Best Resources for Python" }
-    };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-The suggestions are displayed when the chat session starts and can be selected directly by the user.
 
 ## Generating Context-Aware Suggestions
 
@@ -209,42 +178,11 @@ Customize the appearance of response suggestions using the `ResponseSuggestionTe
 
 These suggestions are generated dynamically based on the AI response and provide users with a seamless conversational flow.
 
-## Customizing Initial Suggestions
-
-The initial suggestions displayed before the conversation begins can also be customized using the `SuggestionTemplate`.
-
-{% tabs %}
-{% highlight xaml %}
-
-<assistview:SfAIAssistView.SuggestionTemplate>
-
-    <DataTemplate>
-
-        <Border
-            Padding="14,8"
-            Background="White"
-            Stroke="#E5EAF3"
-            StrokeThickness="1.5"
-            StrokeShape="RoundRectangle 6">
-
-            <Label
-                Text="{Binding Text}"
-                FontSize="14"/>
-
-        </Border>
-
-    </DataTemplate>
-
-</assistview:SfAIAssistView.SuggestionTemplate>
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Output
 
 The following image demonstrates AI-generated responses with context-aware follow-up suggestions displayed directly beneath each response.
 
-![Demo for .NET MAUI AIAssistView Context Aware Suggestions](Images\maui-aiassistview-context-aware-suggestions.gif)
+![Demo for .NET MAUI AIAssistView Context Aware Suggestions](Images/ai-context-aware-suggestions/maui-aiassistview-context-aware-suggestions.gif)
 
 **Users can**:
 
@@ -254,7 +192,7 @@ The following image demonstrates AI-generated responses with context-aware follo
 * Continue conversations with minimal typing.
 * Provide feedback using built-in like and dislike actions.
 
-You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples).
+You can find the complete sample from this repository [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/AIAssistView/Context%20Aware%20Suggestions).
 
 ## See also
 
