@@ -174,6 +174,19 @@ line-height: 1;
 <div class="controlanchorlink">
 <a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-smart-location"></span>Smart Location Search</a>
 </div>
+
+<div><p class="category-topics">Rating</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Rating/AI-Powered-Rating-Feedback" aria-label="AI-Powered-Rating-Feedback"><span class="sf-home-icon sf-icon-smart-rating"></span>AI-Powered-Rating-Feedback</a>
+</div>
+
+<div><p class="category-topics">Treeview</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Treeview/AI-powered-natural-language-file-search" aria-label="AI-Powered Natural Language File Search in .NET MAUI TreeView"><span class="sf-icon-smart-rating"></span>AI-Powered Natural Language File Search</a>
+</div>
+
 </td>
 </tr>
 </table>
