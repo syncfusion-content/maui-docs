@@ -37,6 +37,8 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 
 N> If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
 
+N> When `ActiveStepIndex` is set to 0, the first step is always displayed as completed. In this case, the value of `ActiveStepProgressValue` does not affect the visual state of the first step.
+
 ## Customize step shape
 
 Customize the shape of the step by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType) property from `StepSettings`. By default, the value of `ShapeType` is `Circle`.

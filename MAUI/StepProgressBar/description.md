@@ -38,6 +38,8 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 
 N> If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
 
+N> When `ActiveStepIndex` is set to 0, the first step is always displayed as completed. In this case, the value of `ActiveStepProgressValue` does not affect the visual state of the first step.
+
 ## Text
 
 The primary and secondary descriptions for a step view can be set using the [PrimaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_PrimaryText) and [SecondaryText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_SecondaryText) properties, as demonstrated in the following code example.
