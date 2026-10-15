@@ -13,9 +13,13 @@ This article demonstrates how to combine Azure OpenAI with the Syncfusion® [.NE
 
 The sample uses the Azure OpenAI .NET SDK, dependency injection (DI), and a ViewModel that owns the request, selection, loading state, and errors. The page hosts the query field and MultiSelect ComboBox, and delegates selection changes to the ViewModel.
 
-N> **Prerequisite:** Before starting, install the required Syncfusion NuGet packages, configure a .NET MAUI application, and complete the [ComboBox getting started](https://help.syncfusion.com/maui/combobox/getting-started) steps.
+## Integrating Azure OpenAI with the .NET MAUI App
 
-## Step 1: Install the required packages
+Before implementing the selection flow, complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [ComboBox getting started](https://help.syncfusion.com/maui/combobox/getting-started) steps.
+
+## Implementing AI-Powered Multi-Selection
+
+**Step 1: Install the required packages**
 
 The sample uses `Syncfusion.Maui.Inputs` for `SfComboBox`, `Syncfusion.Maui.Core` for `SfTextInputLayout`, and `Azure.AI.OpenAI` for Azure OpenAI integration. Install the Azure OpenAI SDK version used by the sample:
 
@@ -28,7 +32,7 @@ dotnet add package Azure.AI.OpenAI --version 2.1.0
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Define the AI service contract
+**Step 2: Define the AI service contract**
 
 The ViewModel depends on an interface so that the AI service can be replaced with a test implementation.
 
@@ -45,7 +49,7 @@ public interface IFruitSelectionAIService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 3: Create the Azure OpenAI service
+**Step 3: Create the Azure OpenAI service**
 
 The service uses `AzureOpenAIClient` and `ChatClient` from `Azure.AI.OpenAI`. Replace the endpoint, deployment name, and API key with the values for your Azure OpenAI resource. The system message instructs the model to return only exact fruit names from the menu supplied by the ViewModel.
 
@@ -113,7 +117,7 @@ The service throws on request failures. The ViewModel catches exceptions and pub
 
 N> Do not store a production API key in source code. The placeholders above are for illustration; load credentials from a secure configuration provider or secret store at runtime.
 
-## Step 4: Create the fruit model
+**Step 4: Create the fruit model**
 
 Each item in the menu is represented by `FruitModel`. The `Diet` property contains the nutrition and health tags sent to Azure OpenAI with each fruit name. `IsSelected` keeps the checkbox and selected-item tokens in sync.
 
@@ -150,7 +154,7 @@ public class FruitModel : INotifyPropertyChanged
 
 The sample ViewModel builds a menu of 50 fruit entries. Each entry includes a name, price, category, and tag string such as `VitaminC`, `LowSugar`, `Fiber`, or `Immunity`.
 
-## Step 5: Implement the selection ViewModel
+**Step 5: Implement the selection ViewModel**
 
 The ViewModel receives `IFruitSelectionAIService` through DI and exposes the fruit list, `SelectedItems`, query, busy and error states, and commands for searching and clearing. It builds a prompt from the current fruit names and their health tags. The prompt asks Azure OpenAI to interpret the user's request, return exact menu names one per line, and return no more than 10 matches.
 
@@ -239,9 +243,9 @@ public async Task AskAIAsync(string? query)
 {% endhighlight %}
 {% endtabs %}
 
-The response parsing splits the text into lines, trims list markers, removes duplicates, ignores `Empty` and introductory text, and limits the result to 10 names. `ApplyAISelection` resets the prior selection before selecting the new matches. Manual checkbox changes use `ToggleSelection` so the same ViewModel state drives both checkboxes and ComboBox tokens.
+The response parsing splits the text into lines, trims list markers, removes duplicates, ignores `Empty` and introductory text, and limits the result to 10 names. `ApplyAISelection` resets the prior selection before selecting the new matches. Manual checkbox changes use `SetSelection` so the same ViewModel state drives both checkboxes and ComboBox tokens.
 
-## Step 6: Register the service, ViewModel, and page
+**Step 6: Register the service, ViewModel, and page**
 
 Register the service, ViewModel, and page in `MauiProgram.cs`. The app resolves the page through DI, and the page constructor assigns the injected ViewModel as its `BindingContext`.
 
@@ -253,7 +257,7 @@ builder.Services.AddSingleton<SmartAIComboBoxPage>();
 {% endhighlight %}
 {% endtabs %}
 
-## Step 7: Build the selection page
+**Step 7: Build the selection page**
 
 The page places an `Entry` in `SfTextInputLayout`. Its trailing view shows a search icon before a search, a loading indicator during the request, and a clear icon after results are available. Pressing Enter or tapping search starts the same ViewModel request. An error banner displays `ErrorMessage` and offers a dismiss command.
 
@@ -302,9 +306,9 @@ The MultiSelect ComboBox binds its item source and selection to the ViewModel. I
 {% endhighlight %}
 {% endtabs %}
 
-## Step 8: Connect page interactions to the ViewModel
+**Step 8: Connect page interactions to the ViewModel**
 
-The code-behind handles UI-only actions: it invokes a search from the keyboard or search icon, closes the dropdown on clear, and opens it after the ViewModel applies AI results. Checkbox changes are delegated to `ToggleSelection` rather than mutating `SelectedItems` in the page.
+The code-behind handles UI-only actions: it invokes a search from the keyboard or search icon, closes the dropdown on clear, and opens it after the ViewModel applies AI results. Checkbox changes are delegated to `SetSelection` rather than mutating `SelectedItems` in the page.
 
 {% tabs %}
 {% highlight c# %}
@@ -329,7 +333,7 @@ private void OnDropDownItemCheckBoxChanged(
     object? sender,
     CheckedChangedEventArgs e)
 {
-    if (sender is CheckBox checkBox && checkBox.BindingContext is FruitModel fruit)
+    if (sender is CheckBox checkBox && checkBox.BindingContext is FruitModel item)
         _viewModel.SetSelection(item, e.Value);
 }
 {% endhighlight %}
@@ -347,12 +351,13 @@ private void OnDropDownItemCheckBoxChanged(
 
 The selected fruits are displayed in the Syncfusion® .NET MAUI MultiSelect ComboBox.
 
-![.NET MAUI MultiSelect ComboBox with AI smart selection](images/smartcombobox_fruits.gif)
+![.NET MAUI MultiSelect ComboBox with AI smart selection](Images/smartcombobox_fruits.gif)
 
 You can find the complete sample in the [MAUI AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/ComboBox/Multi%20Select%20ComboBox/SmartAIComboBox).
 
 ## See Also
 
+- [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites)
 - [ComboBox getting started](https://help.syncfusion.com/maui/combobox/getting-started)
 - [Multiple selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection)
 - [Searching](https://help.syncfusion.com/maui/combobox/searching)

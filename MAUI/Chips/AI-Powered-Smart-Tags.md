@@ -3,7 +3,7 @@ layout: post
 title: AI-Powered Smart Tag Generation in .NET MAUI ChipGroup | Syncfusion®
 description: Learn how to generate relevant tags from a text description with Azure OpenAI and the Syncfusion® .NET MAUI ChipGroup control.
 platform: maui
-control: SfChipGroup
+control: SfChip
 documentation: ug
 ---
 
@@ -13,9 +13,13 @@ This article demonstrates how to build an AI-powered tag generator with the Sync
 
 The sample uses the Azure OpenAI .NET SDK, dependency injection (DI), and a ViewModel that owns the query, results, loading state, and errors. The page appends generated tags one at a time to create a staggered appearance.
 
-N> **Prerequisite:** Before starting, install the required NuGet packages, configure your .NET MAUI application, and complete the [ChipGroup getting started](https://help.syncfusion.com/maui/chips/getting-started) steps.
+## Integrating Azure OpenAI with the .NET MAUI App
 
-## Step 1: Install the required packages
+Before implementing tag generation, complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [ChipGroup getting started](https://help.syncfusion.com/maui/chips/getting-started) steps.
+
+## Implementing AI-Powered Smart Tag Generation
+
+**Step 1: Install the required packages**
 
 The sample uses `Syncfusion.Maui.Core` for `SfChipGroup` and `Azure.AI.OpenAI` to connect to Azure OpenAI. Install the Azure OpenAI SDK version used by the sample:
 
@@ -28,7 +32,7 @@ dotnet add package Azure.AI.OpenAI --version 2.1.0
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Define the tag service contract
+**Step 2: Define the tag service contract**
 
 Keep the Azure OpenAI call behind an interface so the ViewModel can be tested with a substitute service.
 
@@ -45,7 +49,7 @@ public interface IAzureTagService
 {% endhighlight %}
 {% endtabs %}
 
-## Step 3: Create the Azure OpenAI service
+**Step 3: Create the Azure OpenAI service**
 
 The service uses `AzureOpenAIClient` and `ChatClient` from `Azure.AI.OpenAI`. Configure the endpoint, deployment name, and API key for your Azure OpenAI resource. The system prompt includes the curated tag vocabulary and requests one applicable tag per line. The ViewModel validates the response against that vocabulary before displaying results.
 
@@ -147,7 +151,7 @@ The service throws request failures instead of returning error text as a tag. Th
 
 N> Never store a production API key in source code. The placeholders above are for illustration; load credentials from a secure configuration provider or secret store at runtime.
 
-## Step 4: Create the tag model
+**Step 4: Create the tag model**
 
 The `TagModel` exposes a `Name` property that the ChipGroup uses to display each generated tag.
 
@@ -179,7 +183,7 @@ public class TagModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Create the tag-generation ViewModel
+**Step 5: Create the tag-generation ViewModel**
 
 The ViewModel receives `IAzureTagService` through its constructor. It clears old chips before a new request, supports cancellation, validates returned values against `AzureOpenAITagService.TagVocabulary`, removes duplicates, and limits the results to 12 tags. It raises `TagsReady` with canonical tag names; the page appends those names to the observable collection for the staggered display.
 
@@ -225,12 +229,23 @@ public async Task GenerateTagsAsync(string? query)
 
 private static List<string> ParseAndFilterTags(string completion)
 {
+    if (string.IsNullOrWhiteSpace(completion))
+        return new List<string>();
+
     var results = new List<string>();
     var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-    foreach (var raw in completion.Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries))
+    foreach (var raw in completion
+        .Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries)
+        .Select(value => value.Trim())
+        .Where(value => !string.IsNullOrWhiteSpace(value) &&
+                        !value.Equals("Empty", StringComparison.OrdinalIgnoreCase) &&
+                        !value.StartsWith("Here are", StringComparison.OrdinalIgnoreCase)))
     {
-        var value = raw.Trim().Trim('•', '-', '*', '.', ')', '[', ']', ',', ';', ':');
+        var value = raw.Trim('•', '-', '*', '.', ')', '[', ']', ',', ';', ':', '\t').Trim();
+        if (string.IsNullOrWhiteSpace(value) || value.Length > 40)
+            continue;
+
         var canonical = AzureOpenAITagService.TagVocabulary.FirstOrDefault(
             tag => string.Equals(tag, value, StringComparison.OrdinalIgnoreCase));
 
@@ -244,7 +259,7 @@ private static List<string> ParseAndFilterTags(string completion)
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Register the dependencies and build the page
+**Step 6: Register the dependencies and build the page**
 
 Register the service, ViewModel, and page in `MauiProgram.cs`. The app resolves the page from DI, and the page constructor sets the injected ViewModel as the `BindingContext`.
 
@@ -294,7 +309,7 @@ The page uses a multiline `Editor` inside `SfTextInputLayout`, a labeled **Gener
 {% endhighlight %}
 {% endtabs %}
 
-## Step 7: Display the generated tags
+**Step 7: Display the generated tags**
 
 The page subscribes to `TagsReady` and appends each item through `TagViewModel.AppendTag`. A short delay between items gives the chips their staggered appearance. The page does not directly clear or mutate the `Tags` collection.
 
@@ -335,12 +350,13 @@ private async void OnTagsReady(object? sender, IReadOnlyList<string> tags)
 
 The generated tags appear as wrapping chips in the Syncfusion® .NET MAUI ChipGroup control.
 
-![.NET MAUI Smart Tag generation with AI](Images/SmartAITag.gif)
+![.NET MAUI Smart Tag generation with AI](images/SmartAITag.gif)
 
 You can find the complete sample in the [MAUI AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/Chips/SmartTags/SmartAITags).
 
 ## See Also
 
+- [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites)
 - [ChipGroup getting started](https://help.syncfusion.com/maui/chips/getting-started)
 - [ChipGroup overview](https://help.syncfusion.com/maui/chips/overview)
 - [Azure OpenAI overview](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai#ProductOverview)
