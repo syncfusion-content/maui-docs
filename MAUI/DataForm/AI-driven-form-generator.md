@@ -243,4 +243,4 @@ This end-to-end workflow — *prompt → AI → JSON → `DataFormItem` → live
 
 ![AI driven smart form generation .NET MAUI DataForm](images\smart-ai-samples\DataForm_FormGenerator.gif)
 
-You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/DataForm/DataForm_FormGenerator).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/MAUI-Data-Form-Form-Generator).
