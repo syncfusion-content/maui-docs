@@ -32,7 +32,6 @@ Use an `Editor` control to collect free-form user content and an `SfButton` to t
             HeightRequest="160"
             Placeholder="Paste or type your content here..."
             FontSize="13" />
-
 </core:SfTextInputLayout>
 
 <buttons:SfButton Text="Generate Form"
@@ -76,7 +75,6 @@ The generated form fields are displayed using `SfDataForm`.
         <dataForm:DataFormDefaultLayoutSettings
             LabelPosition="{OnIdiom Default='Left', Phone='Top'}" />
     </dataForm:SfDataForm.DefaultLayoutSettings>
-
 </dataForm:SfDataForm>
 
 {% endhighlight %}
@@ -89,13 +87,9 @@ When the user clicks the Generate Form button, the entered content is sent to Az
 {% tabs %}
 {% highlight c# %}
 
-AIFormResponse? response =
-    await aiFormService.GenerateFormAsync(
-        UserInput,
-        cancellationTokenSource.Token);
+AIFormResponse? response = await aiFormService.GenerateFormAsync(UserInput,cancellationTokenSource.Token);
 
-if (response == null ||
-    response.Fields.Count == 0)
+if (response == null || response.Fields.Count == 0)
 {
     return;
 }
@@ -121,15 +115,11 @@ The page listens for changes to `FormGenerationVersion` and rebuilds the DataFor
 {% tabs %}
 {% highlight c# %}
 
-private void ViewModel_PropertyChanged(
-    object? sender,
-    PropertyChangedEventArgs e)
+private void ViewModel_PropertyChanged(object? sender, PropertyChangedEventArgs e)
 {
-    if (e.PropertyName ==
-        nameof(FormViewModel.FormGenerationVersion))
+    if (e.PropertyName == nameof(FormViewModel.FormGenerationVersion))
     {
-        MainThread.BeginInvokeOnMainThread(
-            GenerateDataForm);
+        MainThread.BeginInvokeOnMainThread(GenerateDataForm);
     }
 }
 
@@ -145,37 +135,27 @@ Since the form structure is generated dynamically, a fixed model class cannot be
 {% tabs %}
 {% highlight c# %}
 
-public class DynamicDataFormItemManager :
-    DataFormItemManager
+public class DynamicDataFormItemManager : DataFormItemManager
 {
-    private readonly Dictionary<string, object>
-        _formData;
+    private readonly Dictionary<string, object> _formData;
 
-    public DynamicDataFormItemManager(
-        Dictionary<string, object> formData)
+    public DynamicDataFormItemManager(Dictionary<string, object> formData)
     {
         _formData = formData;
     }
 
-    public override object GetValue(
-        DataFormItem dataFormItem)
+    public override object GetValue(DataFormItem dataFormItem)
     {
-        if (_formData.TryGetValue(
-            dataFormItem.FieldName,
-            out var value))
+        if (_formData.TryGetValue(dataFormItem.FieldName, out var value))
         {
             return value;
         }
-
         return string.Empty;
     }
 
-    public override void SetValue(
-        DataFormItem dataFormItem,
-        object value)
+    public override void SetValue(DataFormItem dataFormItem, object value)
     {
-        _formData[dataFormItem.FieldName] =
-            value;
+        _formData[dataFormItem.FieldName] = value;
     }
 }
 
@@ -191,9 +171,7 @@ The AI-generated field type determines which DataForm editor should be created.
 {% tabs %}
 {% highlight c# %}
 
-private static DataFormItem CreateDataFormItem(
-    AIField field,
-    string fieldName)
+private static DataFormItem CreateDataFormItem(AIField field, string fieldName)
 {
     switch (field.FieldType?.ToLowerInvariant())
     {
@@ -203,8 +181,7 @@ private static DataFormItem CreateDataFormItem(
             {
                 FieldName = fieldName,
                 LabelText = field.FieldName,
-                PlaceholderText =
-                    $"Enter {field.FieldName}"
+                PlaceholderText = $"Enter {field.FieldName}"
             };
 
         case "phone":
@@ -213,8 +190,7 @@ private static DataFormItem CreateDataFormItem(
             {
                 FieldName = fieldName,
                 LabelText = field.FieldName,
-                PlaceholderText =
-                    $"Enter {field.FieldName}"
+                PlaceholderText = $"Enter {field.FieldName}"
             };
 
         case "email":
@@ -223,8 +199,7 @@ private static DataFormItem CreateDataFormItem(
             {
                 FieldName = fieldName,
                 LabelText = field.FieldName,
-                PlaceholderText =
-                    $"Enter {field.FieldName}"
+                PlaceholderText = $"Enter {field.FieldName}"
             };
 
         case "text":
@@ -235,8 +210,7 @@ private static DataFormItem CreateDataFormItem(
             {
                 FieldName = fieldName,
                 LabelText = field.FieldName,
-                PlaceholderText =
-                    $"Enter {field.FieldName}"
+                PlaceholderText = $"Enter {field.FieldName}"
             };
     }
 }
@@ -254,39 +228,21 @@ The `GenerateDataForm` method rebuilds the DataForm using the field definitions 
 private void GenerateDataForm()
 {
     GeneratedDataForm.Items.Clear();
-
     _formData.Clear();
 
-    foreach (var field in
-        _viewModel.GeneratedFields)
+    foreach (var field in _viewModel.GeneratedFields)
     {
-        string fieldName =
-            GetValidPropertyName(
-                field.FieldName);
-
-        object value =
-            ConvertFieldValue(field);
-
-        _formData[fieldName] =
-            value;
+        string fieldName = GetValidPropertyName(field.FieldName);
+        object value =  ConvertFieldValue(field);
+        _formData[fieldName] = value;
     }
 
-    GeneratedDataForm.ItemManager =
-        new DynamicDataFormItemManager(
-            _formData);
+    GeneratedDataForm.ItemManager = new DynamicDataFormItemManager(_formData);
 
-    foreach (var field in
-        _viewModel.GeneratedFields)
+    foreach (var field in  _viewModel.GeneratedFields)
     {
-        string fieldName =
-            GetValidPropertyName(
-                field.FieldName);
-
-        DataFormItem item =
-            CreateDataFormItem(
-                field,
-                fieldName);
-
+        string fieldName = GetValidPropertyName(field.FieldName);
+        DataFormItem item = CreateDataFormItem(field, fieldName);
         GeneratedDataForm.Items.Add(item);
     }
 }
@@ -303,23 +259,18 @@ The generated field values are converted into the appropriate data types before 
 {% tabs %}
 {% highlight c# %}
 
-private static object? ConvertFieldValue(
-    AIField field)
+private static object? ConvertFieldValue(AIField field)
 {
-    string value =
-        field.Value ?? string.Empty;
+    string value = field.Value ?? string.Empty;
 
     switch (field.FieldType?.ToLowerInvariant())
     {
         case "number":
 
-            if (double.TryParse(
-                value,
-                out double number))
+            if (double.TryParse(value, out double number))
             {
                 return number;
             }
-
             return 0d;
 
         default:
