@@ -10,16 +10,16 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 # Styling in .NET MAUI TreeGrid
 
-The [SfTreeGrid]() provides comprehensive styling support to customize the appearance of grid elements through multiple approaches. You can apply styles at the column level, row level, or using DefaultStyle and implicit styling. The [SfTreeGrid.DefaultStyle]() property contains all the required styling properties for each element in the TreeGrid, while implicit styling allows you to customize the appearance of specific control types using TargetType styles.
+The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides comprehensive styling support to customize the appearance of grid elements through multiple approaches. You can apply styles at the column level, row level, or using DefaultStyle and implicit styling. The [SfTreeGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_DefaultStyle) property contains all the required styling properties for each element in the TreeGrid, while implicit styling allows you to customize the appearance of specific control types using TargetType styles.
 
 > **Note:** **Styling Priority Order:** Column-level styles (explicit) take precedence over implicit TargetType styles, which take precedence over the default TreeGridStyle.
 
 ## Column Styling
 
-You can apply the style for a particular column by using [TreeGridColumn.CellStyle]() and [TreeGridColumn.HeaderStyle]() property. Column-level styling allows you to customize the appearance of cells and headers for a specific column in TreeGrid.
+You can apply the style for a particular column by using [TreeGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_CellStyle) and [TreeGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderStyle) property. Column-level styling allows you to customize the appearance of cells and headers for a specific column in TreeGrid.
 
 ### Cell Styling
-You can apply styling for cells of a particular column in TreeGrid using [TreeGridColumn.CellStyle]() property.
+You can apply styling for cells of a particular column in TreeGrid using [TreeGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_CellStyle) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -55,7 +55,7 @@ You can apply styling for cells of a particular column in TreeGrid using [TreeGr
 <img alt="Column cell style" src="Images\styling\maui-treegrid-column-cell-styling.png" width="404"/>
 
 ### Header Styling
-You can apply styling for header cell of a particular column in TreeGrid using [TreeGridColumn.HeaderStyle]() property.
+You can apply styling for header cell of a particular column in TreeGrid using [TreeGridColumn.HeaderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_HeaderStyle) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -94,7 +94,7 @@ The appearance of `TreeGrid` and its inner elements can be customized by writing
 
 ### Styling Record Cell
 
-The record cells can be customized by writing a style for [TreeGridCell]() TargetType. The underlying record serves as the DataContext for `TreeGridCell`.
+The record cells can be customized by writing a style for [TreeGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCell.html) TargetType. The underlying record serves as the DataContext for `TreeGridCell`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -136,7 +136,7 @@ The record cells can be customized by writing a style for [TreeGridCell]() Targe
 
 ### Styling Header Cell
 
-The header cells can be customized by writing a style for [TreeGridHeaderCell]() TargetType.
+The header cells can be customized by writing a style for [TreeGridHeaderCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHeaderCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -161,7 +161,7 @@ The header cells can be customized by writing a style for [TreeGridHeaderCell]()
 
 ### Styling Record Row
 
-The record row can be customized by writing a style for [TreeGridRow]() TargetType.
+The record row can be customized by writing a style for [TreeGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -182,7 +182,7 @@ The record row can be customized by writing a style for [TreeGridRow]() TargetTy
 
 ### Styling Header Row
 
-The header row can be customized by writing a style for [TreeGridHeaderRow]() TargetType.
+The header row can be customized by writing a style for [TreeGridHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHeaderRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -288,7 +288,7 @@ You can write custom style for the properties in the `SfTreeGrid.DefaultStyle` c
 
 ### Visibility
 
-The TreeGrid provides support to change the visibility of the vertical and horizontal borders. Set desired value to [SfTreeGrid.GridLinesVisibility]() for data rows or [SfTreeGrid.HeaderGridLinesVisibility]() for header row.
+The TreeGrid provides support to change the visibility of the vertical and horizontal borders. Set desired value to [SfTreeGrid.GridLinesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_GridLinesVisibility) for data rows or [SfTreeGrid.HeaderGridLinesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_HeaderGridLinesVisibility) for header row.
 
 Following are the options available to customize the grid borders:
 - Both
@@ -323,7 +323,7 @@ this.Content = treeGrid;
 
 ### Stroke
 
-The grid line color of column header and data row cells can be customized by setting [TreeGridStyle.GridLineColor]() and [TreeGridStyle.HeaderGridLineColor]() properties.
+The grid line color of column header and data row cells can be customized by setting [TreeGridStyle.GridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_GridLineColor) and [TreeGridStyle.HeaderGridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_HeaderGridLineColor) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -356,7 +356,7 @@ this.Content = treeGrid;
 
 ### Stroke Thickness
 
-The grid line stroke thickness of column header and data row cells can be customized by setting [TreeGridStyle.GridLineStrokeThickness]() and [TreeGridStyle.HeaderGridLineStrokeThickness]() properties.
+The grid line stroke thickness of column header and data row cells can be customized by setting [TreeGridStyle.GridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_GridLineStrokeThickness) and [TreeGridStyle.HeaderGridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_HeaderGridLineStrokeThickness) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

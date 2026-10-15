@@ -9,7 +9,7 @@ documentation: UG
 
 # Splitter Panes in .NET MAUI Grid Splitter
 
-The [.NET MAUI Grid Splitter]() control organizes content into multiple resizable regions known as panes. These panes are represented by the `SplitterPane` class and are maintained through the `SplitterPanes` collection.
+The [.NET MAUI Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control organizes content into multiple resizable regions known as panes. These panes are represented by the [SplitterPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html) class and are maintained through the [SplitterPanes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_SplitterPanes) collection.
 
 Each pane can host any .NET MAUI view such as layouts, text controls, images, charts, data grids, or custom controls. Users can resize adjacent panes at runtime by dragging the separator displayed between them.
 
@@ -91,7 +91,7 @@ Content = gridSplitter;
 
 ## Add panes dynamically
 
-You can add panes at runtime using the `AddPane` method. The pane is inserted at the specified index.
+You can add panes at runtime using the [AddPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_AddPane_Syncfusion_Maui_GridSplitter_SplitterPane_) method. The pane is inserted at the specified index.
 
 {% tabs %}
 {% highlight c# %}
@@ -128,7 +128,7 @@ In this example, the pane is inserted at index `1`, and the Grid Splitter automa
 
 ## Remove panes dynamically
 
-You can remove an existing pane using the `RemovePane` method.
+You can remove an existing pane using the [RemovePane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_RemovePane_System_Int32_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -178,7 +178,7 @@ After the pane is removed, the control automatically updates its layout and sepa
 
 ## Nested panes
 
-A `Grid Splitter` can be placed inside another `SplitterPane` to create advanced, multi-level layouts. This approach is useful for building IDE-style interfaces, dashboards, reporting applications, and workspace layouts where different sections need independent resizing behavior.
+A [Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) can be placed inside another [SplitterPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html) to create advanced, multi-level layouts. This approach is useful for building IDE-style interfaces, dashboards, reporting applications, and workspace layouts where different sections need independent resizing behavior.
 
 The following example creates a nested Grid Splitter inside the second pane.
 
@@ -302,7 +302,7 @@ The following illustration shows a typical nested layout:
 
 ## Content property support
 
-The `SfGridSplitter` and `SplitterPane` classes support content properties, allowing panes to be declared directly without explicitly specifying the collection elements.
+The [SfGridSplitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) and [SplitterPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html) classes support content properties, allowing panes to be declared directly without explicitly specifying the collection elements.
 
 The following simplified syntax produces the same result as the previous examples.
 

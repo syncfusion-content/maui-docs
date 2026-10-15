@@ -36,18 +36,10 @@ The following sections show how to validate the Syncfusion<sup>®</sup> license 
 * Open the `LicenseKeyValidation.ps1` script in a text or code editor. The default contents are shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="v34.1.29 and later" %}
+{% highlight c# tabtitle="PowerShell" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
-$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"UIComponent" /version:"34.1.29" /licensekey:"Your License Key"
-
-Write-Host $result
-{% endhighlight %}
-
-{% highlight c# tabtitle="Before v34.1.29" %}
-# Replace the parameters with the desired platform, version, and actual license key.
-
-$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"MAUI" /version:"26.2.4" /licensekey:"Your License Key"
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"MAUI" /version:"34.1.29" /licensekey:"Your License Key"
 
 Write-Host $result
 {% endhighlight %}
@@ -55,11 +47,11 @@ Write-Host $result
 
 * Update the parameters in the script:
   
-  **Platform:** Set /platform:"**UIComponent**" for v34.1.29 and later, or /platform:"**MAUI**" for earlier versions (use the relevant Syncfusion platform as needed).
+  **Platform:** Modify the value for `/platform:` to the actual platform `"MAUI"`.
   
-  **Version:**  Change the value for /version: to the required version (e.g., "26.2.4").
+  **Version:**  Change the value for `/version:` to the required version (e.g., `"34.1.29"`).
   
-  **License Key:** Replace the value for /licensekey: with your actual license key (e.g., "Your License Key").
+  **License Key:** Replace the value for `/licensekey:` with your actual license key (e.g., `"Your License Key"`).
 
 ## Azure Pipelines (YAML)
 
@@ -139,7 +131,7 @@ pipeline {
 
 * Register the license key properly by calling RegisterLicense("License Key") method with the license key. 
 
-* Once the license key is registered, it can be validated by using the ValidateLicense("Platform.MAUI") method. This ensures that the license key is valid for the platform and version you are using. For reference, please check the following example.
+* Once the license key is registered, it can be validated by using the `ValidateLicense(Platform.MAUI)` method for version prior to v34.1.29, or the `ValidateLicense(new[] { Platform.MAUI })` method for v34.1.29 and later. This ensures that the license key is valid for the platform and version you are using. Refer to the following example.
 
 {% tabs %}
 {% highlight c# tabtitle="v34.1.29 and later" %}
@@ -150,7 +142,7 @@ SyncfusionLicenseProvider.RegisterLicense("Your License Key");
 
 // Validate the registered license key.
 // The array overload allows validating against multiple platforms in a single call.
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.UIComponent });
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.MAUI });
 {% endhighlight %}
 
 {% highlight c# tabtitle="Before v34.1.29" %}
@@ -163,8 +155,6 @@ SyncfusionLicenseProvider.RegisterLicense("Your License Key");
 bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.MAUI);
 {% endhighlight %}
 {% endtabs %}
-
-N> Use `Platform.UIComponent` for UI component license validation in v34.1.29 and later. `Platform.MAUI` is not supported from v34.1.29 onwards.
 
 * If the `ValidateLicense()` method returns `true`, the registered license key is valid and you can proceed with deployment.
 

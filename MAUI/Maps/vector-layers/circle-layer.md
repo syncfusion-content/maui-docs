@@ -5,6 +5,7 @@ description: Circle Layer in .NET MAUI Maps displays data using scalable circles
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Circle Layer in .NET MAUI Maps

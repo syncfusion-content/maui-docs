@@ -9,14 +9,14 @@ documentation: ug
 
 # Events in .NET MAUI Interactive Viewer
 
-The `SfInteractiveViewer` supports the `ZoomFactorChanged` and `ScrollChanged` events to interact with the .NET MAUI Interactive Viewer.
+The [`SfInteractiveViewer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html) supports the [`ZoomFactorChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ZoomFactorChanged) and [`ScrollChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ScrollChanged) events to interact with the .NET MAUI Interactive Viewer.
 
 ## Zoom factor changed event
 
-The `ZoomFactorChanged` event is triggered after a zoom operation is completed in the interactive viewer. The event arguments provide the following information.
+The [`ZoomFactorChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ZoomFactorChanged) event is triggered after a zoom operation is completed in the interactive viewer. The event arguments provide the following information.
 
-* `OldZoomFactor` - Gets the zoom factor before the zoom operation.
-* `NewZoomFactor` - Gets the zoom factor after the zoom operation.
+* [`OldZoomFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.ZoomFactorChangedEventArgs.html#Syncfusion_Maui_InteractiveViewer_ZoomFactorChangedEventArgs_OldZoomFactor) - Gets the zoom factor before the zoom operation.
+* [`NewZoomFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.ZoomFactorChangedEventArgs.html#Syncfusion_Maui_InteractiveViewer_ZoomFactorChangedEventArgs_NewZoomFactor) - Gets the zoom factor after the zoom operation.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
@@ -42,10 +42,10 @@ private void OnZoomFactorChanged(object sender, ZoomFactorChangedEventArgs e)
 
 ## Scroll changed event
 
-The `ScrollChanged` event is triggered when the pan position changes in the interactive viewer. The event arguments contain the following information.
+The [`ScrollChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_ScrollChanged) event is triggered when the pan position changes in the interactive viewer. The event arguments contain the following information.
 
-* `PanAxis` - Gets the directions in which panning is currently allowed.
-* `ZoomFactor` - Gets the current zoom factor applied to the content.
+* [`PanAxis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.InteractiveScrollChangedEventArgs.html#Syncfusion_Maui_InteractiveViewer_InteractiveScrollChangedEventArgs_PanAxis) - Gets the directions in which panning is currently allowed.
+* [`ZoomFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.InteractiveScrollChangedEventArgs.html#Syncfusion_Maui_InteractiveViewer_InteractiveScrollChangedEventArgs_ZoomFactor) - Gets the current zoom factor applied to the content.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}

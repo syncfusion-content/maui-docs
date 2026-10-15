@@ -68,6 +68,11 @@ documentation: ug
 		<td>Defines the icon shown for messages that have reached the delivered state.</td>
 	</tr>
 	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Editor" aria-label="View Editor property in API reference">Editor</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor" aria-label="View Editor type in API reference">Editor</a></td>
+		<td>Provides access to the message editor so you can monitor focus and text changes while users compose messages.</td>
+	</tr>
+	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_EnableLiquidGlassEffect" aria-label="View EnableLiquidGlassEffect property in API reference">EnableLiquidGlassEffect</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean" aria-label="View bool type in API reference">bool</a></td>
 		<td>Applies the Liquid Glass visual effect to the chat surface when supported by the platform and hosting environment.</td>
@@ -141,6 +146,11 @@ documentation: ug
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand" aria-label="View MessageLongPressedCommand property in API reference">MessageLongPressedCommand</a></td>
 		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
 		<td>Executes an action when a message bubble is pressed and held. Verification of the exact API name and availability is recommended from the API reference.</td>
+	</tr>
+	<tr valign="top">
+		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages" aria-label="View Messages property in API reference">Messages</a></td>
+		<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" aria-label="View IList type in API reference">IList&lt;object&gt;</a></td>
+		<td>Gets or sets the collection of messages displayed in the chat.</td>
 	</tr>
 	<tr valign="top">
 		<td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageShape" aria-label="View MessageShape property in API reference">MessageShape</a></td>

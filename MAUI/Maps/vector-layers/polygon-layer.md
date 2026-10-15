@@ -5,6 +5,7 @@ description: Polygons Layer in .NET MAUI Maps displays geographic regions using 
 platform: MAUI
 control: SfMaps
 documentation: ug
+appliesto: UI Component Suite, Chart SDK
 ---
 
 # Polygons Layer in .NET MAUI Maps

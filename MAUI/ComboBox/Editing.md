@@ -237,7 +237,7 @@ The following image illustrates the result of the above code:
 
 ## Keyboard
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides support for customizing the keyboard type through the `Keyboard` property. By default, the `Keyboard` property is set to `Keyboard.Default`.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides support for customizing the keyboard type through the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Keyboard) property. By default, the `Keyboard` property is set to `Keyboard.Default`.
 
 {% tabs %}
 {% highlight xaml %}

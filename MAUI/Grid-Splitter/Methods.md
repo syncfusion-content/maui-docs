@@ -9,11 +9,11 @@ documentation: UG
 
 # Methods in .NET MAUI Grid Splitter
 
-The [.NET MAUI Grid Splitter]() control provides methods to add, remove, collapse, and expand panes programmatically. These methods enable you to dynamically modify the splitter layout at runtime based on user actions or application requirements.
+The [.NET MAUI Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control provides methods to add, remove, collapse, and expand panes programmatically. These methods enable you to dynamically modify the splitter layout at runtime based on user actions or application requirements.
 
 ## AddPane
 
-The `AddPane` method adds a new pane to the `SplitterPanes` collection after the last existing pane.
+The [AddPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_AddPane_Syncfusion_Maui_GridSplitter_SplitterPane_) method adds a new pane to the [SplitterPanes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_SplitterPanes) collection after the last existing pane.
 
 The following example adds a new pane after the last existing pane.
 
@@ -60,7 +60,7 @@ N>
 
 ## RemovePane
 
-The `RemovePane` method removes the pane at the specified index.
+The [RemovePane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_RemovePane_System_Int32_) method removes the pane at the specified index.
 
 {% tabs %}
 {% highlight c# %}
@@ -121,7 +121,7 @@ gridSplitter.RemovePane(1);
 
 ## CollapsePane
 
-The `CollapsePane` method collapses the pane at the specified index.
+The [CollapsePane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_CollapsePane_System_Int32_) method collapses the pane at the specified index.
 
 {% tabs %}
 {% highlight c# %}
@@ -160,8 +160,8 @@ gridSplitter.CollapsePane(0);
 {% endtabs %}
 
 * The pane size is reduced to zero.
-* The pane's `IsCollapsed` property becomes `true`.
-* The `Collapsing` and `Collapsed` events are raised.
+* The pane's [IsCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsed) property becomes `true`.
+* The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsing) and [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsed) events are raised.
 * If the pane is already collapsed, the method has no effect.
 * If the pane is not collapsible, the method is ignored.
 
@@ -169,7 +169,7 @@ gridSplitter.CollapsePane(0);
 
 ## ExpandPane
 
-The `ExpandPane` method restores a previously collapsed pane.
+The [ExpandPane](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ExpandPane_System_Int32_) method restores a previously collapsed pane.
 
 {% tabs %}
 {% highlight c# %}
@@ -211,8 +211,8 @@ gridSplitter.ExpandPane(0);
 {% endtabs %}
 
 * The pane is restored to its previous size.
-* The pane's `IsCollapsed` property becomes `false`.
-* The `Expanding` and `Expanded` events are raised.
+* The pane's [IsCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SplitterPane.html#Syncfusion_Maui_GridSplitter_SplitterPane_IsCollapsed) property becomes `false`.
+* The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanding) and [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanded) events are raised.
 * If the pane is already expanded, the method has no effect.
 * If the pane is not collapsible, the method is ignored.
 

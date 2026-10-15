@@ -29,7 +29,7 @@ documentation: ug
     </tr>
     <tr valign="top">
         <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonVisibility" aria-label="View ClearButtonVisibility property in API reference">ClearButtonVisibility</a></td>
-        <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ClearButtonVisibility" aria-label="View ClearButtonVisibility enum in API reference">ClearButtonVisibility</a></td>
+        <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.clearbuttonvisibility?view=net-maui-10.0" aria-label="View ClearButtonVisibility enum in API reference">ClearButtonVisibility</a></td>
         <td>Shows the clear button with <code>WhileEditing</code> or keeps it hidden with <code>Never</code>. Activating the button clears the current input.</td>
     </tr>
     <tr valign="top">

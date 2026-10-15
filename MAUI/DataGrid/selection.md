@@ -224,10 +224,10 @@ public partial class MainPage : ContentPage
 ## Programmatic Navigation
 The `SfDataGrid` supports navigation programmatically without using keys. Using the below methods, users can navigate to the adjacent cells of the current cell in the DataGrid.
 
-- [MoveToNextCell]() - The current cell is navigated to the next cell when `NavigationMode` is `Cell`.
-- [MoveToPreviousCell]() - The current cell is navigated to the previous cell when `NavigationMode` is `Cell`.
-- [MoveToNextRow]() - The current cell is navigated to the next row when `NavigationMode` is `Cell` and the current row is navigated to the next row when `NavigationMode` is `Row`.
-- [MoveToPreviousRow]() - The current cell is navigated to the previous row when `NavigationMode` is `Cell` and the current row is navigated to the previous row when `NavigationMode` is `Row`.
+- [MoveToNextCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveToNextCell) - The current cell is navigated to the next cell when `NavigationMode` is `Cell`.
+- [MoveToPreviousCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveToPreviousCell) - The current cell is navigated to the previous cell when `NavigationMode` is `Cell`.
+- [MoveToNextRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveToNextRow) - The current cell is navigated to the next row when `NavigationMode` is `Cell` and the current row is navigated to the next row when `NavigationMode` is `Row`.
+- [MoveToPreviousRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveToPreviousRow) - The current cell is navigated to the previous row when `NavigationMode` is `Cell` and the current row is navigated to the previous row when `NavigationMode` is `Row`.
 
 {% tabs %}
 {% highlight XAML tabtitle="MainPage.xaml" %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # About Syncfusion® A2UI Overview
 
-The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent-to-UI protocol to .NET MAUI applications, enabling AI agents to dynamically generate rich, interactive user interfaces using Syncfusion® .NET MAUI controls. Instead of returning plain text or HTML, applications can display fully functional controls such as **DataGrid**, **Charts**, **Scheduler**, **Rich Text Editor**, **Image Editor**, and more through structured UI messages - significantly reducing manual UI development effort.
+The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent-to-UI protocol to .NET MAUI applications, enabling AI agents to dynamically generate rich, interactive user interfaces using Syncfusion® .NET MAUI controls. Instead of returning plain text or HTML, applications can display fully functional controls such as [DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid), [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts), [Scheduler](https://www.syncfusion.com/scheduler-sdk/maui-scheduler), [Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/maui-rich-text-editor), [Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor), and more through structured UI messages - significantly reducing manual UI development effort.
 
 > The package is currently in preview (beta) and may undergo API enhancements before its first stable release. The underlying **A2UI v0.9 wire format** remains stable, with future updates expected to be additive and backward compatible.
 
@@ -18,7 +18,7 @@ The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2u
 Before installing Syncfusion® A2UI for .NET MAUI, ensure you have:
 
 - An existing **.NET MAUI application** targeting **.NET 9** or **.NET 10** on Android, iOS, Mac Catalyst, or Windows.
-- The companion `Syncfusion.A2UI.Core` runtime - a framework-agnostic protocol engine that ships as a transitive dependency of the MAUI package. The Core engine also supports Blazor, WPF, WinForms, and ASP.NET Core hosts.
+- The companion [Syncfusion.A2UI.Core](https://www.nuget.org/packages/Syncfusion.A2UI.Core) runtime - a framework-agnostic protocol engine that ships as a transitive dependency of the MAUI package. The Core engine also supports Blazor, WPF, WinForms, and ASP.NET Core hosts.
 - The Syncfusion® .NET MAUI packages that back the controls the agent is expected to render - for example, DataGrid, Charts, Scheduler, PDF Viewer, DataForm, Rich Text Editor, Image Editor, Maps, TreeMap, and Gauges. Install only the packages for the controls you intend to use.
 - An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/) that emits messages conforming to the four-message lifecycle - `createSurface`, `updateComponents`, `updateDataModel`, and `deleteSurface`.
 - A registered Syncfusion® license key if your application also uses other Syncfusion® controls outside the A2UI surface.
@@ -76,14 +76,14 @@ Because each adapter renders a Syncfusion® .NET MAUI control, generated surface
 
 ## What you get in the package
 
-- **A2UI primitives** — `Column`, `Row`, `Text`, `Image`, `Icon`, `Divider`, `Card`, `Modal`, `Tabs`, `List`, `Button`, `TextField`, `CheckBox`, `Slider`, `ChoicePicker`, `DateTimeInput`, `AudioPlayer`, `Video` (18 basic catalog renderers).
+- **A2UI primitives** - `Column`, `Row`, `Text`, `Image`, `Icon`, `Divider`, `Card`, `Modal`, `Tabs`, `List`, `Button`, `TextField`, `CheckBox`, `Slider`, `ChoicePicker`, `DateTimeInput`, `AudioPlayer`, `Video` (18 basic catalog renderers).
 - **Syncfusion® .NET MAUI control adapters** - 56 components covering the Syncfusion® MAUI suite, including:
   - **Data Grid** and **DataForm** for tabular data and data entry.
   - **Charts** (Cartesian, Pie) and **Gauges** (Linear, Radial, Digital) for visualizations.
   - **Scheduler** and **Calendar** for scheduling and date selection.
   - **Rich Text Editor** and **Image Editor** for document and image workflows.
   - **Maps**, **TreeMap**, and **PDF Viewer** for geospatial, hierarchical, and document surfaces.
-  - **Inputs** — Button, CheckBox, RadioButton, Switch, Segmented, ChipGroup, Sliders, Range Sliders, Range Selector, Date/Time Pickers, ColorPicker, ComboBox, Rating, Autocomplete, MaskedEntry, NumericEntry.
+  - **Inputs** - Button, CheckBox, RadioButton, Switch, Segmented, ChipGroup, Sliders, Range Sliders, Range Selector, Date/Time Pickers, ColorPicker, ComboBox, Rating, Autocomplete, MaskedEntry, NumericEntry.
   - **Layout & Navigation** - Card, CardLayout, TabView, Toolbar, ListView, Popup, NavigationDrawer, Rotator, Carousel.
   - **Display & Feedback** - BadgeView, AvatarView, BusyIndicator, Shimmer, ProgressBar variants, EffectsView, TextInputLayout.
 - **MAUI app-builder extensions** - `UseA2UIWithSyncfusionComponents()` and `AddSyncfusionComponents()` register the `SurfaceHost`, the combined catalog, and the markdown renderer.

@@ -14,22 +14,22 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, maui gridview, g
 
 Freezing panes allows you to keep specific columns visible while scrolling horizontally through large datasets, similar to Excel. This is useful when you have identifier columns that should remain visible during navigation.
 
-The .NET MAUI TreeGrid (`SfTreeGrid`) control supports freezing columns independently at the left and right edges of the grid.
+The .NET MAUI [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) control supports freezing columns independently at the left and right edges of the grid.
 
 ---
 
 ## Freeze Panes Properties
 
-You can freeze columns by setting the following properties on the [SfTreeGrid]():
+You can freeze columns by setting the following properties on the [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html):
 
 | Property Name | Type | Default | Description |
 |--------------|------|---------|-------------|
-| `FrozenColumnCount` | `int` | `0` | Sets the number of columns to freeze at the left side of the TreeGrid. |
-| `FooterFrozenColumnCount` | `int` | `0` | Sets the number of columns to freeze at the right side of the TreeGrid. |
+| [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_FrozenColumnCount) | `int` | `0` | Sets the number of columns to freeze at the left side of the TreeGrid. |
+| [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_FooterFrozenColumnCount) | `int` | `0` | Sets the number of columns to freeze at the right side of the TreeGrid. |
 
 ## Freeze Columns
 
-You can freeze columns by setting the [FrozenColumnCount]() property to a non-negative value. Frozen columns remain visible when scrolling horizontally and are useful for identifier columns that should always be visible.
+You can freeze columns by setting the [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_FrozenColumnCount) property to a non-negative value. Frozen columns remain visible when scrolling horizontally and are useful for identifier columns that should always be visible.
 
 {% tabs %}
 {% highlight xaml %}
@@ -61,7 +61,7 @@ The frozen column remains visible at the left edge while scrolling horizontally 
 
 ## Freeze Footer Columns
 
-You can freeze footer (rightmost) columns by setting the [FooterFrozenColumnCount]() property to a non-negative value. Footer frozen columns remain visible when scrolling horizontally and are useful for summary or action columns.
+You can freeze footer (rightmost) columns by setting the [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_FooterFrozenColumnCount) property to a non-negative value. Footer frozen columns remain visible when scrolling horizontally and are useful for summary or action columns.
 
 {% tabs %}
 {% highlight xaml %}
@@ -93,11 +93,11 @@ The frozen footer column remains visible at the right edge while scrolling horiz
 
 ## Appearance
 
-You can customize the visual appearance of freeze panes using [TreeGridStyle](). Apply this style through the `SfTreeGrid.DefaultStyle` property.
+You can customize the visual appearance of freeze panes using [TreeGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html). Apply this style through the `SfTreeGrid.DefaultStyle` property.
 
 ### Freeze Pane Line Color
 
-Customize the color of the line that divides frozen and non-frozen regions using the [TreeGridStyle.FreezePaneLineColor]() property.
+Customize the color of the line that divides frozen and non-frozen regions using the [TreeGridStyle.FreezePaneLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_FreezePaneLineColor) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -126,7 +126,7 @@ Customize the color of the line that divides frozen and non-frozen regions using
 
 ### Freeze Pane Line Thickness
 
-Customize the thickness of the freeze pane line using the [TreeGridStyle.FreezePaneLineStrokeThickness]() property. This affects all frozen columns in both left and right regions.
+Customize the thickness of the freeze pane line using the [TreeGridStyle.FreezePaneLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_FreezePaneLineStrokeThickness) property. This affects all frozen columns in both left and right regions.
 
 **Default Value:** `1.0`
 

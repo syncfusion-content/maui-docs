@@ -10,11 +10,11 @@ keywords : maui treegrid expander column, maui tree grid expander, .net maui tre
 
 # Expander Column Customization in .NET MAUI Tree Grid
 
-The [.NET MAUI Tree Grid]() displays hierarchical data using an expander column that allows users to expand and collapse parent nodes. The `SfTreeGrid` provides various customization options for the expander column, including customizing the expander icon, changing the expander column, modifying the expander column width, and controlling the initial expansion state through a data source property.
+The [.NET MAUI Tree Grid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) displays hierarchical data using an expander column that allows users to expand and collapse parent nodes. The `SfTreeGrid` provides various customization options for the expander column, including customizing the expander icon, changing the expander column, modifying the expander column width, and controlling the initial expansion state through a data source property.
 
 ## Load expander icon through template
 
-The `SfTreeGrid` allows you to customize the expand and collapse indicator by using the [SfTreeGrid.ExpanderIcon]() property. This property accepts a DataTemplate that enables you to replace the default expander icon with custom content.
+The `SfTreeGrid` allows you to customize the expand and collapse indicator by using the [SfTreeGrid.ExpanderIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpanderIcon) property. This property accepts a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate?view=net-maui-10.0) that enables you to replace the default expander icon with custom content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -52,7 +52,7 @@ this.Content = treeGrid;
 
 ## Load expander icon through template selector
 
-The `SfTreeGrid` allows you to use a [DataTemplateSelector]() with the `ExpanderIcon` property to display different icons for expanded and collapsed nodes.
+The `SfTreeGrid` allows you to use a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-10.0) with the `ExpanderIcon` property to display different icons for expanded and collapsed nodes.
 
 The following example shows how to load separate templates for expanded and collapsed states using a custom DataTemplateSelector.
 
@@ -128,7 +128,7 @@ public class ExpanderIconTemplateSelector : DataTemplateSelector
 
 ## Change the expander column
 
-By default, the expander icon is displayed in the first column. You can display the expander icon in another column by specifying the corresponding column mapping name using the [SfTreeGrid.ExpanderColumn]() property.
+By default, the expander icon is displayed in the first column. You can display the expander icon in another column by specifying the corresponding column mapping name using the [SfTreeGrid.ExpanderColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpanderColumn) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -152,7 +152,7 @@ this.Content = treeGrid;
 
 ## Customize the width of the expander column
 
-The `SfTreeGrid` provides support to customize the width of the expander column by using the [SfTreeGrid.ExpanderWidth]() property.
+The `SfTreeGrid` provides support to customize the width of the expander column by using the [SfTreeGrid.ExpanderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpanderWidth) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -176,7 +176,7 @@ this.Content = treeGrid;
 
 ## Expand nodes using a model property
 
-The `SfTreeGrid` provides support to control the initial expansion state of nodes through a property in the underlying data object by using the [SfTreeGrid.ExpandStateMappingName]() property.
+The `SfTreeGrid` provides support to control the initial expansion state of nodes through a property in the underlying data object by using the [SfTreeGrid.ExpandStateMappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpandStateMappingName) property.
 
 {% tabs %}
 {% highlight xaml %}   

@@ -2,9 +2,11 @@
 layout: post
 title: Overview about .NET MAUI Diagram | Syncfusion®
 description: Overview of the Syncfusion® .NET MAUI Diagram control for creating, visualizing, and interacting with flowcharts and diagramming applications.
-platform: MAUI
+platform: maui
 control: SfDiagram
 documentation: ug
+keywords : maui diagram, maui diagram control, diagram in maui, .net maui diagram, .net maui flowchart, maui flowchart, flowchart in maui, workflow diagram in maui, maui org chart, organizational chart in maui, maui graph editor
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Overview of .NET MAUI Diagram
@@ -87,8 +89,8 @@ The following table summarizes the globalization support available in this contr
 ## See Also
 
 - [Getting Started](https://help.syncfusion.com/maui) shows how to begin using the Diagram step by step.
-- [Nodes](https://help.syncfusion.com/maui) explains how to create and customize the nodes in Diagram.
-- [Connectors](https://help.syncfusion.com/maui) show how creace, connect and customize connector and represent relationship between nodes.
+- [Nodes](https://help.syncfusion.com/maui/diagram/nodes) explains how to create and customize the nodes in Diagram.
+- [Connectors](https://help.syncfusion.com/maui/diagram/connectors) show how creace, connect and customize connector and represent relationship between nodes.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
@@ -229,10 +231,10 @@ The following table summarizes the globalization support available in this contr
     <h3 class="form-title">Feature Tour</h3>
 </div>
 <div class="form-description">Get a quick overview of key features and capabilities to kick start your journey.</div>
-<!--<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">-->
+<!--<a href="https://www.syncfusion.com/maui-controls/maui-diagram" class="explore-link">
 Explore Features
   <span class="card-icon card-arrow"></span>
-</a>
+</a>-->
   </div>
 </div>
 <!-- Card 2 -->
@@ -245,10 +247,10 @@ Explore Features
     <h3 class="form-title">Demos</h3>
 </div>
     <div class="form-description">Explore interactive demos that showcase key features and component capabilities.</div>
-    <!--<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">-->
+    <!--<a href="https://github.com/syncfusion/maui-demos/tree/master/MAUI/Diagram" class="explore-link">
     View Demos
   <span class="card-icon card-arrow"></span>
-</a>
+</a>-->
   </div>
 </div>
 <!-- Card 3 -->

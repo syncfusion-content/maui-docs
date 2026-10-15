@@ -85,7 +85,7 @@ Content = inputLayout;
 
 ## Customize the Hint Line Break Mode
 
-The floating hint label behavior is customized using the `HintLineBreakMode` property. This property controls how long hint text is displayed when the available space is limited by applying .NET MAUI `LineBreakMode` values such as wrapping and truncation.
+The floating hint label behavior is customized using the [HintLineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HintLineBreakMode) property. This property controls how long hint text is displayed when the available space is limited by applying .NET MAUI `LineBreakMode` values such as wrapping and truncation.
 
 The following example wraps a long hint across multiple lines.
 
@@ -122,7 +122,7 @@ Content = inputLayout;
 
 ## Customize the Hint View 
 
-The floating hint label is customized using the `HintView` property. This property allows any .NET MAUI `View` to be displayed as the floating hint label, enabling richer content such as styled text, icons, and other visual elements beyond a text-only hint.
+The floating hint label is customized using the [HintView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HintView) property. This property allows any .NET MAUI `View` to be displayed as the floating hint label, enabling richer content such as styled text, icons, and other visual elements beyond a text-only hint.
 
 N> When `HintView` is assigned, it takes precedence over `Hint`. The custom view participates in the same floating behavior as the standard hint: it moves to the floating position when the input view receives focus or contains text, and returns to its resting position when appropriate.
 

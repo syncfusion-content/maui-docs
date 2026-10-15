@@ -9,19 +9,19 @@ documentation: UG
 
 # Events in .NET MAUI Grid Splitter
 
-The [.NET MAUI Grid Splitter]() control provides several events that allow you to monitor and respond to pane resizing, collapsing, and expanding operations.
+The [.NET MAUI Grid Splitter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html) control provides several events that allow you to monitor and respond to pane resizing, collapsing, and expanding operations.
 
 These events can be used to validate user actions, synchronize UI state, update business logic, and customize user interactions.
 
 ## ResizeStarted
 
-The `ResizeStarted` event occurs when a user begins dragging a separator to resize adjacent panes.
+The [ResizeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeStarted) event occurs when a user begins dragging a separator to resize adjacent panes.
 
 This event is cancelable and allows you to prevent the resize operation before it starts.
 
 ### Event arguments
 
-The `GridSplitterResizeStartedEventArgs` class contains the following members:
+The [GridSplitterResizeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizeStartedEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -104,13 +104,13 @@ private void OnResizeStarted(object sender, GridSplitterResizeStartedEventArgs e
 
 ## Resizing
 
-The `Resizing` event occurs continuously while a separator is being dragged.
+The [Resizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Resizing) event occurs continuously while a separator is being dragged.
 
 This event can be used to display live resize information or update related UI elements.
 
 ### Event arguments
 
-The `GridSplitterResizingEventArgs` class contains the following members:
+The [GridSplitterResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizingEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -191,13 +191,13 @@ private void OnResizing(object sender, GridSplitterResizingEventArgs e)
 
 ## ResizeEnded
 
-The `ResizeEnded` event occurs when a user finishes a resize operation and releases the separator.
+The [ResizeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_ResizeEnded) event occurs when a user finishes a resize operation and releases the separator.
 
 This event provides the indexes and references of the affected panes after the resize operation completes. It is useful for saving layout changes or persisting pane sizes.
 
 ### Event arguments
 
-The `GridSplitterResizeEndedEventArgs` class contains the following members:
+The [GridSplitterResizeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterResizeEndedEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -277,13 +277,13 @@ private void OnResizeEnded(object sender, GridSplitterResizeEndedEventArgs e)
 
 ## Collapsing
 
-The `Collapsing` event occurs before a pane is collapsed.
+The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsing) event occurs before a pane is collapsed.
 
 This event is cancelable and allows you to prevent the collapse operation when required.
 
 ### Event arguments
 
-The `GridSplitterPaneCollapsingEventArgs` class contains the following members:
+The [GridSplitterPaneCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneCollapsingEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -365,13 +365,13 @@ private void OnCollapsing(object sender, GridSplitterPaneCollapsingEventArgs e)
 
 ## Collapsed
 
-The `Collapsed` event occurs after a pane has been collapsed.
+The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Collapsed) event occurs after a pane has been collapsed.
 
 This event can be used to update the application state or user interface.
 
 ### Event arguments
 
-The `GridSplitterPaneCollapsedEventArgs` class contains the following members:
+The [GridSplitterPaneCollapsedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneCollapsedEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -451,13 +451,13 @@ private void OnCollapsed(object sender, GridSplitterPaneCollapsedEventArgs e)
 
 ## Expanding
 
-The `Expanding` event occurs before a collapsed pane is expanded.
+The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanding) event occurs before a collapsed pane is expanded.
 
 This event is cancelable and allows you to control whether the expand operation should proceed.
 
 ### Event arguments
 
-The `GridSplitterPaneExpandingEventArgs` class contains the following members:
+The [GridSplitterPaneExpandingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneExpandingEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|
@@ -538,13 +538,13 @@ private void OnExpanding(object sender, GridSplitterPaneExpandingEventArgs e)
 
 ## Expanded
 
-The `Expanded` event occurs after a pane has been expanded.
+The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.SfGridSplitter.html#Syncfusion_Maui_GridSplitter_SfGridSplitter_Expanded) event occurs after a pane has been expanded.
 
 This event can be used to refresh layouts or update application state after expansion.
 
 ### Event arguments
 
-The `GridSplitterPaneExpandedEventArgs` class contains the following members:
+The [GridSplitterPaneExpandedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridSplitter.GridSplitterPaneExpandedEventArgs.html) class contains the following members:
 
 | Property | Description |
 |-----------|-------------|

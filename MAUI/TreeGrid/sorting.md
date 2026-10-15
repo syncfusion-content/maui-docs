@@ -10,12 +10,12 @@ keywords : maui treegrid, maui tree grid, .net maui treegrid, .net maui tree gri
 
 # Sorting in .NET MAUI Tree Grid
 
-The `SfTreeGrid` provides built-in support for sorting one or more columns using the `SfTreeGrid.SortingMode` property. When sorting is applied to a column, the parent records and their child nodes are automatically sorted according to the specified sort criteria while preserving the hierarchical structure of the Tree Grid. You can sort data by tapping the column header. Once sorting is applied, the Tree Grid displays a sort icon in the corresponding column header to indicate the sort direction.
+The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides built-in support for sorting one or more columns using the [SfTreeGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortingMode) property. When sorting is applied to a column, the parent records and their child nodes are automatically sorted according to the specified sort criteria while preserving the hierarchical structure of the Tree Grid. You can sort data by tapping the column header. Once sorting is applied, the Tree Grid displays a sort icon in the corresponding column header to indicate the sort direction.
 
 
 ## Programmatic sorting
 
-Sort the data programmatically by adding or removing the `SortColumnDescription` in `SfTreeGrid.SortColumnDescriptions` property.
+Sort the data programmatically by adding or removing the [SortColumnDescription](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SortColumnDescription.html) in [SfTreeGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortColumnDescriptions) property.
 
 The `SortColumnDescription` object holds the following two properties:
 
@@ -55,7 +55,7 @@ The `SfTreeGrid` sorts the data against one or more columns based on the `SfTree
 * **Multiple** - It allows to sort more than one column at a time.
 * **None** - Does not allow any column to be sorted.
 
-To apply sorting to multiple columns, tap the desired column headers after setting the `SfTreeGrid.SortingMode` property to `Multiple`.
+To apply sorting to multiple columns, tap the desired column headers after setting the `SfTreeGrid.SortingMode` property to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortingMode.html#Syncfusion_Maui_TreeGrid_TreeGridSortingMode_Multiple).
 
 {% tabs %}
 {% highlight xaml %}
@@ -79,7 +79,7 @@ this.Content = treeGrid;
 
 ## Tri-state sorting
 
-In addition, to sort the data in ascending or descending order, the SfTreeGrid allows you to unsort the data to its original order by clicking the header again after sorting in descending order by setting the `SfTreeGrid.AllowTriStateSorting` property to `true`. When this property is set, sorting in each column iterates through three sort states: `ascending`, `descending`, and `unsorted`.
+In addition, to sort the data in ascending or descending order, the SfTreeGrid allows you to unsort the data to its original order by clicking the header again after sorting in descending order by setting the [SfTreeGrid.AllowTriStateSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowTriStateSorting) property to `true`. When this property is set, sorting in each column iterates through three sort states: `ascending`, `descending`, and `unsorted`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -103,7 +103,7 @@ this.Content = treeGrid;
 
 ## Show sort number
 
-The `SfTreeGrid` provides support to display the sequence numbers to denote the order of the column in which they are sorted during multiple columns sorting by setting the `SfTreeGrid.ShowSortNumbers` is set to `true`. This is applicable when the `SfTreeGrid.SortingMode` property is `Multiple`.
+The `SfTreeGrid` provides support to display the sequence numbers to denote the order of the column in which they are sorted during multiple columns sorting by setting the [SfTreeGrid.ShowSortNumbers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ShowSortNumbers) is set to `true`. This is applicable when the `SfTreeGrid.SortingMode` property is `Multiple`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -129,7 +129,7 @@ this.Content = treeGrid;
 
 ## Sort column in double tap
 
-By default, the column gets sorted when the column header is clicked. This behavior can be changed to sort the column in a double-click action by setting the `SfTreeGrid.SortingGestureType` property to `DoubleTap`.
+By default, the column gets sorted when the column header is clicked. This behavior can be changed to sort the column in a double-click action by setting the [SfTreeGrid.SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortingGestureType) property to [DoubleTap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortingGestureType.html#Syncfusion_Maui_TreeGrid_TreeGridSortingGestureType_DoubleTap).
 
 {% tabs %}
 {% highlight xaml %}
@@ -155,9 +155,9 @@ this.Content = treeGrid;
 
 The tree grid provides the following events for the sorting functionality:
 
-* `SortColumnsChanging`: This event is invoked while sorting the column at execution time before the column gets sorted. It helps to cancel the sorting action by setting the `Cancel` property of the `TreeGridSortColumnsChangingEventArgs`.
-* `SortColumnsChanged`: This event is invoked after the column is sorted.
-These two events are triggered with the `TreeGridSortColumnsChangingEventArgs` and `TreeGridSortColumnsChangedEventArgs` that contains the following properties:
+* [SortColumnsChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortColumnsChanging): This event is invoked while sorting the column at execution time before the column gets sorted. It helps to cancel the sorting action by setting the `Cancel` property of the [TreeGridSortColumnsChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortColumnsChangingEventArgs.html).
+* [SortColumnsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortColumnsChanged): This event is invoked after the column is sorted.
+These two events are triggered with the `TreeGridSortColumnsChangingEventArgs` and [TreeGridSortColumnsChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortColumnsChangedEventArgs.html) that contains the following properties:
 
 **AddedItems**: Gets the collection of the `SortColumnDescription` objects that are added to the `SortColumnDescriptions` collection for sorting.
 
@@ -189,7 +189,7 @@ private void treeGrid_SortColumnsChanging(object sender, TreeGridSortColumnsChan
 
 ## Disable sorting for auto generated columns
 
-During auto-generating columns, disable sorting for an individual column by customizing the `e.Column.AllowSorting` property to false that comes from the `SfTreeGrid.AutoGeneratingColumn` event. The event will be invoked when the column is auto-generated.
+During auto-generating columns, disable sorting for an individual column by customizing the `e.Column.AllowSorting` property to `false` that comes from the [SfTreeGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AutoGeneratingColumn) event. The event will be invoked when the column is auto-generated.
 
 {% tabs %}
 {% highlight xaml %}
@@ -213,7 +213,7 @@ private void treeGrid_AutoGeneratingColumn(object sender, TreeGridAutoGenerating
 
 ## Disable sorting for manually defined columns
 
-To disable sorting for an individual column, set the `TreeGridColumn.AllowSorting` property to false. The default value of this property is `true`.
+To disable sorting for an individual column, set the `TreeGridColumn.AllowSorting` property to `false`. The default value of this property is `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -252,7 +252,7 @@ this.Content = treeGrid;
 
 ## Custom sorting
 
-The `SfTreeGrid` provides support to sort columns based on custom logic when the standard sorting techniques do not meet the requirements. Custom sorting can be achieved by adding `SortComparer` objects to the `SfTreeGrid.SortComparers` collection.
+The `SfTreeGrid` provides support to sort columns based on custom logic when the standard sorting techniques do not meet the requirements. Custom sorting can be achieved by adding [SortComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.SortComparer.html) objects to the [SfTreeGrid.SortComparers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortComparers) collection.
 
 The `SortComparer` object contains the following properties:
 
@@ -351,7 +351,7 @@ public class CustomSortComparer : IComparer<object>, ISortDirection
 
 ## Change sort icon color
 
-The default sort icon color can be customized by setting the `TreeGridStyle.SortIconColor` property.
+The default sort icon color can be customized by setting the [TreeGridStyle.SortIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_SortIconColor) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -397,7 +397,7 @@ this.Content = treeGrid;
 
 ## Load sort icon through template
 
-The SfTreeGrid uses an icon to indicate the ascending and descending states of sorting. You can personalize the sorting icon by using the `SfTreeGrid.SortIconTemplate` property. This property allows you to define a custom template that appears in its regular form when the sort is in ascending order. It will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:
+The `SfTreeGrid` uses an icon to indicate the ascending and descending states of sorting. You can personalize the sorting icon by using the [SfTreeGrid.SortIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortIconTemplate) property. This property allows you to define a custom template that appears in its regular form when the sort is in ascending order. It will rotate downward when the sort is in descending order. To implement this, refer to the following code snippet:
 
 {% tabs %}
 {% highlight xaml %}
@@ -437,7 +437,7 @@ this.Content = treeGrid;
 
 ## Load sort icon through template selector
 
-When choosing a `SortIconTemplate` as a DataTemplateSelector, you have the option to supply distinct templates for both the ascending and descending states of the sorting.
+When choosing a `SortIconTemplate` as a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-10.0), you have the option to supply distinct templates for both the ascending and descending states of the sorting.
 
 {% tabs %}
 {% highlight xaml %}

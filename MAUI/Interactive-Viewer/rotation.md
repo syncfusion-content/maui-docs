@@ -9,7 +9,7 @@ documentation: ug
 
 # Rotation in .NET MAUI Interactive Viewer
 
-The `Rotate` method enables rotating the content hosted in the Interactive Viewer control. Each invocation rotates the content by 90 degrees clockwise and cycles through the available orientations.
+The [`Rotate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_Rotate) method enables rotating the content hosted in the Interactive Viewer control. Each invocation rotates the content by 90 degrees clockwise and cycles through the available orientations.
 
 {% tabs %}
 {% highlight XAML %}
@@ -36,6 +36,6 @@ private void OnRotateImageClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Rotate` method supports only 90-degree clockwise rotations. Custom rotation angles are not supported.
+N> The [`Rotate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.InteractiveViewer.SfInteractiveViewer.html#Syncfusion_Maui_InteractiveViewer_SfInteractiveViewer_Rotate) method supports only 90-degree clockwise rotations. Custom rotation angles are not supported.
 
 ![Rotate-in.net-maui-interactive-viewer](images\Rotate\Rotate-in.net-maui-interactive-viewer.gif){:width="313" height="444" .lazy .shadow-effect}
