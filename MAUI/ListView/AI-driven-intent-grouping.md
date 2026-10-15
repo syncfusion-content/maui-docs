@@ -257,4 +257,4 @@ Because `IsStickyGroupHeader` is enabled, the active group header remains pinned
 
 ![AI driven intent grouping .NET MAUI ListView](Images\smart-ai-samples\ListView_IntentGrouping.gif)
 
-You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/Grouping-the-items-by-intent-in-SfListView-using-AI).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/ListView/ListView_IntentGrouping).
