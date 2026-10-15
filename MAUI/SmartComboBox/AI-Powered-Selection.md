@@ -188,10 +188,7 @@ public async Task AskAIAsync(string? query)
     UserQuery = query;
     ErrorMessage = null;
     IsBusy = true;
-
-    _cts?.Cancel();
-    _cts = new CancellationTokenSource();
-    var token = _cts.Token;
+    using var requestCts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
 
     try
     {
@@ -204,8 +201,9 @@ public async Task AskAIAsync(string? query)
             "Menu (Name | Tags):\n" + menu + "\n\n" +
             "User request: " + query + "\n\n" +
             "Matching fruits (one per line, exact names from the menu):";
-        var completion = await _aiService.GetCompletionAsync(prompt, token);
-        token.ThrowIfCancellationRequested();
+        var completion = await _aiService.GetCompletionAsync(prompt, requestCts.Token)
+                .WaitAsync(requestCts.Token);
+        requestCts.Token.ThrowIfCancellationRequested();
 
         var matches = completion
             .Split('\n', '\r', StringSplitOptions.RemoveEmptyEntries)
@@ -220,9 +218,13 @@ public async Task AskAIAsync(string? query)
             .ToList();
         ApplyAISelection(matches);
     }
+    catch (OperationCanceledException) when (requestCts.IsCancellationRequested)
+    {
+        ErrorMessage = "AI request timed out after 30 seconds. Please try again.";
+    }
     catch (OperationCanceledException)
     {
-        // A newer search superseded this one.
+        ErrorMessage = "AI request was canceled. Please try again.";
     }
     catch (Exception ex)
     {
@@ -328,7 +330,7 @@ private void OnDropDownItemCheckBoxChanged(
     CheckedChangedEventArgs e)
 {
     if (sender is CheckBox checkBox && checkBox.BindingContext is FruitModel fruit)
-        _viewModel.ToggleSelection(fruit);
+        _viewModel.SetSelection(item, e.Value);
 }
 {% endhighlight %}
 {% endtabs %}
