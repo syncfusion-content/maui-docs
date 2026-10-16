@@ -1,0 +1,156 @@
+---
+layout: post
+title: Radar Line Chart in .NET MAUI Polar Chart | Syncfusion®
+description: Radar Line Chart in .NET MAUI Polar Chart displays data as a filled polygon in a radar coordinate system, enabling comparison across multiple categories.
+platform: maui
+control: SfPolarChart
+documentation: ug
+appliesto: UI Component Suite, Chart SDK
+---
+
+# Radar Line Chart in .NET MAUI Polar Chart
+
+## Radar Line Chart
+
+To display an line series in a radar chart, instantiate the [PolarLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarLineSeries.html), set the [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property of `SfPolarChart` to `Polygon`, and add the series to the `Series` collection. The polygon grid lines create the radar chart appearance.
+
+N> **Prerequisite:** Ensure that the required NuGet package is installed, the necessary namespaces are imported, and the **SfPolarChart** control is properly configured in your application. For detailed setup and configuration instructions, refer to the **[Getting Started](https://help.syncfusion.com/maui/polar-charts/getting-started)** guide.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart GridLineType="Polygon">
+
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:CategoryAxis/>
+    </chart:SfPolarChart.PrimaryAxis>
+
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfPolarChart.SecondaryAxis>
+
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"
+                           XBindingPath="Direction"
+                           YBindingPath="Tree"/>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.GridLineType = PolarChartGridLineType.Polygon;
+
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
+
+PolarLineSeries series = new PolarLineSeries()
+{
+    ItemsSource = new PlantViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree"
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radar line chart type in .NET MAUI Radar Chart](Chart-types_images/MAUI_radar_line_chart.png)
+
+## Customizing Line Appearance
+
+You can customize the radar line series appearance using the following properties:
+
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Stroke) - Gets or sets the brush for the line color
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeWidth) - Gets or sets the thickness of the line
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeDashArray) - Gets or sets the pattern for dashed lines
+
+The following code example demonstrates line customization:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart GridLineType="Polygon">
+    <!-- code omitted for brevity -->
+    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
+                           XBindingPath = "Direction" 
+                           YBindingPath = "Tree"
+                           Stroke = "Blue" 
+                           StrokeWidth = "2"/>
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.GridLineType = PolarChartGridLineType.Polygon;
+// code omitted for brevity
+PolarLineSeries series = new PolarLineSeries()
+{
+    ItemsSource = new PlantViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    Stroke = Colors.Blue,
+    StrokeWidth = 2
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Closed Series
+
+The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without a closed path. The default value is `true`, which creates a closed polygon shape. Set it to `false` to create an open path that does not connect the last point to the first.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart GridLineType="Polygon">
+    <!-- code omitted for brevity -->
+
+    <chart:PolarLineSeries ItemsSource="{Binding PlantDetails}"
+                           XBindingPath="Direction"
+                           YBindingPath="Tree"
+                           IsClosed="False"/>
+
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart();
+chart.GridLineType = PolarChartGridLineType.Polygon;
+
+// code omitted for brevity
+
+PolarLineSeries series = new PolarLineSeries()
+{
+    ItemsSource = new PlantViewModel().PlantDetails,
+    XBindingPath = "Direction",
+    YBindingPath = "Tree",
+    IsClosed = false
+};
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radar open line series in .NET MAUI Radar Chart](Chart-types_images/MAUI_radar_line_isclosed.png)
