@@ -69,9 +69,9 @@ this.Content = chart;
 
 You can customize the radar line series appearance using the following properties:
 
-* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Stroke) - Gets or sets the brush for the line color
-* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeWidth) - Gets or sets the thickness of the line
-* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeDashArray) - Gets or sets the pattern for dashed lines
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Stroke) - Gets or sets the brush for the line color
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeWidth) - Gets or sets the thickness of the line
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeDashArray) - Gets or sets the pattern for dashed lines
 
 The following code example demonstrates line customization:
 
@@ -114,8 +114,6 @@ this.Content = chart;
 ## Closed Series
 
 The [IsClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_IsClosed) property is used to render the series with or without a closed path. The default value is `true`, which creates a closed polygon shape. Set it to `false` to create an open path that does not connect the last point to the first.
-
-> **Note:** Negative Y values are not recommended for radar area charts as they may produce unexpected visualizations. Ensure all Y values are non-negative for optimal results.
 
 {% tabs %}
 

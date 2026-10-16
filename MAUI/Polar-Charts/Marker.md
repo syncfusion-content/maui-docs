@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in .NET MAUI Polar Charts | Syncfusion®
-description: Learn how to display and customize markers in .NET MAUI Polar Charts to highlight individual data points.
+description: Markers in .NET MAUI Polar Chart highlight individual data points, making it easier to identify and customize specific values.
 platform: maui
 control: SfPolarChart
 documentation: ug
@@ -12,7 +12,7 @@ appliesto: UI Component Suite, Chart SDK
 
 ## Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_ShowMarkers) property to true.
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_ShowMarkers) property to `true`.
 
 {% tabs %}
 
