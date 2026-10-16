@@ -106,7 +106,7 @@ Each record should provide the exact file path, file name, folder context, keywo
 
 The prompt should define a strict output contract: return only exact leaf-file paths that appear in the supplied records, one per line. The model must not return explanations, folder paths, markdown, or invented paths. This keeps semantic interpretation in the AI prompt while keeping the application responsible for data integrity.
 
-The prompt should remain generic. It should describe how to evaluate natural-language intent rather than hardcoding one topic, one folder, or one example query. This allows the same flow to handle searches for connectivity, reports, invoices, designs, policies, project material, or other concepts represented in the current metadata.
+The prompt should remain generic. It should describe how to evaluate natural-language intent rather than hard-coding one topic, one folder, or one example query. This allows the same flow to handle searches for connectivity, reports, invoices, designs, policies, project material, or other concepts represented in the current metadata.
 
 The user prompt is built from the live query and the current metadata snapshot:
 
@@ -124,7 +124,7 @@ var prompt = $"""
 
 ### Step 3: Process and Validate the AI Result
 
-When the user enters text, the page debounces rapid changes and passes the latest query to the view model. The view model creates a fresh metadata snapshot and sends it to the search service with the cancellation token for that request. If a newer query arrives, the previous request is cancelled so an older response cannot replace the latest result.
+When the user enters text, the page waits briefly after rapid changes before passing the latest query to the view model. The view model creates a fresh metadata snapshot and sends it to the search service with the cancellation token for that request. If a newer query arrives, the previous request is cancelled so an older response cannot replace the latest result.
 
 After Azure OpenAI responds, the service parses the response as candidate paths and validates every candidate against the current metadata snapshot. Invalid paths, hallucinated paths, folder paths, explanations, and duplicates are discarded. The service returns canonical paths from the TreeView data rather than trusting arbitrary text or casing returned by the model.
 
@@ -194,4 +194,4 @@ The following image illustrates the AI-powered natural language file search in t
 
 ![AI-Powered Natural Language File Search in .NET MAUI TreeView](Images/ai-search-treeview.gif)
 
-You can find the complete sample from this [GitHub link](https://github.com/SyncfusionExamples/ai-powered-natural-language-file-search-net-maui-treeview).
+You can find the complete sample from this [GitHub link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI-Solution-Samples).

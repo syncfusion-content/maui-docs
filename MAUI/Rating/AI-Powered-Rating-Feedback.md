@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Powered Rating Feedback in .NET MAUI Rating | Syncfusion®
-description: Learn how to implement AI-powered rating feedback in the .NET MAUI Rating control that reads user feedback and updates the rating based on the content using Azure OpenAI.
+description: Learn how to build AI-powered feedback for the .NET MAUI Rating control using Azure OpenAI to analyze user comments and set a sentiment-based rating.
 platform: maui
 control: SfRating
 documentation: ug
