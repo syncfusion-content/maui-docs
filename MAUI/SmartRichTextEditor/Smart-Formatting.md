@@ -766,7 +766,7 @@ The generated HTML is then bound to the `SfRichTextEditor`, enabling the user to
 
 ![AI powered Smart .NET MAUI RTE](images/AI-Powered-RTE-formatter.gif)
 
-You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master).
+You can find the complete sample from this [link](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/RichTextEditor/AI%20powered%20RTE%20formatter).
 
 ## See also
 
