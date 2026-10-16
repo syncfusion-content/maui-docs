@@ -38,5 +38,5 @@ The [.NET MAUI Tree Grid](https://www.syncfusion.com/maui-controls/maui-treegrid
 
 ## See Also
 
-- [Getting Started]() shows a step-by-step guide to begin using the TreeGrid.
+- [Getting Started](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TreeGrid) shows a step-by-step guide to begin using the TreeGrid.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.

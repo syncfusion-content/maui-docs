@@ -4436,7 +4436,7 @@ This page lists the keys associated with each control and the respective UI elem
         <th>Description<br/><br/></th>
     </tr>
     <tr>
-        <td rowspan="33">SfDataGridStyles<br/><br/></td>
+        <td rowspan="36">SfDataGridStyles<br/><br/></td>
 		<td>SfDataGridTheme<br/><br/></td>
         <td>By merging this key in application resources, it is possible to customize the appearance of the SfDataGrid without merging common theme resource and control style resource dictionaries.	
 {% highlight xaml %}
@@ -18886,6 +18886,248 @@ This page lists the keys associated with each control and the respective UI elem
         </td>
         <td>
             Color of tooltip text in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+</table>
+
+## SfTreeGrid
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="15">
+            SfTreeGridStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfTreeGridTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, it is possible to customize the appearance of the SfTreeGrid without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfTreeGridTheme">CommonTheme</x:String> 
+                <Color x:Key="SfTreeGridHeaderRowBackground">Blue</Color> 
+                <Color x:Key="SfTreeGridRowBackground">Green</Color> 
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+	</tr>
+    
+    <tr>
+    <td>
+            SfTreeGridHeaderRowBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of header row.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfTreeGridHeaderRowTextColor     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of header row.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridRowBackground      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of default row. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridRowTextColor       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of default row.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridGridLineColor        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the grid lines in deafult row. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridHeaderGridLineColor         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for the grid lines in header row.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridExpanderIconColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for expander icon.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridSortIconColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color for sort icon. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridSortNumberTextColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color for sort numbers.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridSortNumberBackground             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of sort numbers.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfTreeGridFreezePaneLineColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of the line which indicates the frozen pane.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridSelectionBackground           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of the selected rows. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridCurrentCellStrokeColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Stroke color of the current cell.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfTreeGridSelectedRowTextColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Text color of the selected rows.  
             <br/>
             <br/>
         </td>
