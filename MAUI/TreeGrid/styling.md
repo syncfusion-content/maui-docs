@@ -24,7 +24,7 @@ You can apply styling for cells of a particular column in TreeGrid using [TreeGr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridCell"
+        <Style TargetType="syncfusion:TreeGridCell"
                x:Key="customCellStyle">
             <Setter Property="Background" 
                     Value="#5BC0EB"/>
@@ -60,7 +60,7 @@ You can apply styling for header cell of a particular column in TreeGrid using [
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridHeaderCell"
+        <Style TargetType="syncfusion:TreeGridHeaderCell"
                x:Key="customHeaderStyle">
             <Setter Property="Background" 
                     Value="#4750DD"/>
