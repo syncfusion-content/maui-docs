@@ -120,6 +120,12 @@ line-height: 1;
 <span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
 </div>
 
+<div><p class="category-topics">Chips</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Chips/AI-Powered-Smart-Tags" aria-label="Chips AI-Powered Smart Tag Generation"><span class="sf-home-icon sf-icon-smart-chips"></span>AI-Powered Smart Tag Generation</a>
+</div>
+
 <div><p class="category-topics">ComboBox</p></div>
 
 <div class="controlanchorlink">
@@ -128,6 +134,10 @@ line-height: 1;
 
 <div class="controlanchorlink">
 <a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Filtering" aria-label="ComboBox Smart Filtering"><span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/ComboBox/AI-Powered-Selection" aria-label="ComboBox AI-Powered Smart Selection"><span class="sf-home-icon sf-icon-smart-combobox"></span>AI-Powered Smart Selection</a>
 </div>
 
 <div><p class="category-topics">Cartesian Charts</p></div>

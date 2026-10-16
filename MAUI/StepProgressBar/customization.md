@@ -35,7 +35,9 @@ SfStepProgressBar stepProgressBar = new SfStepProgressBar()
 {% endhighlight %}
 {% endtabs %}
 
-N> If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
+N> 
+* If the `ActiveStepIndex` value is less than 0, the first step will be marked with the `NotStarted` status. If the `ActiveStepIndex` value is greater than the step count, all the steps will be marked with the `Completed` status.
+* When `ActiveStepIndex` is set to 0, the first step is always displayed as completed. In this case, the value of `ActiveStepProgressValue` does not affect the visual state of the first step.
 
 ## Customize step shape
 
