@@ -155,8 +155,8 @@ this.Content = chart;
 The appearance of multi-level labels can be customized using the [MultiLevelLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MultiLevelLabelStyle) property. The [MultiLevelLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html) provides the following customization properties:
 
 * [BorderType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderType), of type `ChartMultiLevelBorderType`, sets the border type for multi-level labels.
-* [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderColor), of type `Color`, sets the border color.
-* [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_BorderWidth), of type `double`, sets the border width.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_Stroke), of type `Color`, sets the border color.
+* [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_StrokeThickness), of type `double`, sets the border width.
 * [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MultiLevelLabelStyle.html#Syncfusion_Maui_Charts_MultiLevelLabelStyle_LabelStyle), of type `ChartAxisLabelStyle`, sets the text styling for the multi-level label.
 
 ### Label Style
@@ -203,7 +203,7 @@ The following example demonstrates how to apply a square brace border style and 
                 <chart:ChartMultiLevelLabel Start="185" End="220" Text="185-220" Level="2"/>
             </chart:NumericalAxis.MultiLevelLabels>
             <chart:NumericalAxis.MultiLevelLabelStyle>
-                <chart:MultiLevelLabelStyle BorderColor="DarkBlue" BorderType="SquareBrace" BorderWidth="2">
+                <chart:MultiLevelLabelStyle Stroke="DarkBlue" BorderType="SquareBrace" StrokeThickness="2">
                     <chart:MultiLevelLabelStyle.LabelStyle>
                         <chart:ChartAxisLabelStyle TextColor="Green" FontAttributes="Bold" FontSize="13" Stroke="DarkGreen" StrokeWidth="2"/>
                     </chart:MultiLevelLabelStyle.LabelStyle>
@@ -317,9 +317,9 @@ ChartAxisLabelStyle labelStyle = new ChartAxisLabelStyle()
 
 MultiLevelLabelStyle multiLevelLabelStyle = new MultiLevelLabelStyle()
 {
-    BorderColor = Colors.DarkBlue,
+    Stroke = Colors.DarkBlue,
     BorderType = ChartMultiLevelBorderType.SquareBrace,
-    BorderWidth = 2,
+    StrokeThickness = 2,
     LabelStyle = labelStyle
 };
 
