@@ -72,6 +72,8 @@ For MacCatalyst devices, include the following permission in the `Entitlements.p
 
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
+<key>com.apple.security.files.downloads.read-write</key>
+<true/>
 
 {% endhighlight %}
 {% endtabs %}
