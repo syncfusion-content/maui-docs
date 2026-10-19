@@ -66,9 +66,9 @@ this.Content = chart;
 
 You can customize the polar line series appearance using the following properties:
 
-* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_Stroke) - Gets or sets the brush for the line color
-* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeWidth) - Gets or sets the thickness of the line
-* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_StrokeDashArray) - Gets or sets the pattern for dashed lines
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_Stroke) - Gets or sets the brush for the line color
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeWidth) - Gets or sets the thickness of the line
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSegment.html#Syncfusion_Maui_Charts_ChartSegment_StrokeDashArray) - Gets or sets the pattern for dashed lines
 
 The following code example demonstrates line customization:
 
@@ -106,44 +106,6 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
-## Grid line Type
-
-The [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) property used to customize the rendering style of axis grid lines. The default [GridLineType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html#Syncfusion_Maui_Charts_SfPolarChart_GridLineType) is [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Circle). Switching to the [Polygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarChartGridLineType.html#Syncfusion_Maui_Charts_PolarChartGridLineType_Polygon) grid line type transforms the polar chart appearance, resembling a spider or web chart.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart GridLineType = "Polygon"> 
-    <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
-                           XBindingPath = "Direction" 
-                           YBindingPath = "Tree"/>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-chart.GridLineType = PolarChartGridLineType.Polygon;
-// code omitted for brevity
-PolarLineSeries series = new PolarLineSeries()
-{
-    ItemsSource = new PlantViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Tree"
-};
-
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Polar gridline type in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_gridline.png)
 
 ## Closed Series
 
@@ -183,103 +145,3 @@ this.Content = chart;
 {% endtabs %}
 
 ![Polar open series in .NET MAUI Polar Chart](Chart-types_images/MAUI_polar_line_IsClosed.png)
-
-## Enable Marker
-
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_ShowMarkers) property to true.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-    <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
-                           XBindingPath = "Direction" 
-                           YBindingPath = "Tree" 
-                           ShowMarkers = "True"/>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-// code omitted for brevity
-PolarLineSeries series = new PolarLineSeries()
-{
-    ItemsSource = new PlantViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Tree",
-    ShowMarkers= true
-};
-
-chart.Series.Add(series);
-this.Content= chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Marker customization
-
-In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSeries.html#Syncfusion_Maui_Charts_PolarSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
-
-* [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is `ShapeType.Circle`.
-* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.
-* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_StrokeWidth), of type `double`, indicates the width of the marker border.
-* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Fill), of type `Brush`, indicates the color of the marker.
-* [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Width), of type `double`, indicates the width of the marker.
-* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Height), of type `double`, indicates the height of the marker.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfPolarChart>
-    <!-- code omitted for brevity -->
-    <chart:PolarLineSeries ItemsSource = "{Binding PlantDetails}" 
-                           XBindingPath = "Direction" 
-                           YBindingPath = "Tree"
-                           ShowMarkers = "True">
-        <chart:PolarLineSeries.MarkerSettings>
-            <chart:ChartMarkerSettings Type = "Diamond" 
-                                       Fill = "Brown" 
-                                       Stroke = "Black"
-                                       StrokeWidth = "1" 
-                                       Height = "8" 
-                                       Width = "8"/>
-        </chart:PolarLineSeries.MarkerSettings>
-    </chart:PolarLineSeries>
-</chart:SfPolarChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfPolarChart chart = new SfPolarChart();
-// code omitted for brevity
-ChartMarkerSettings chartMarker = new ChartMarkerSettings()
-{
-    Type = ShapeType.Diamond,
-    Fill = Colors.Brown,
-    Stroke = Colors.Black,
-    StrokeWidth = 1,
-    Height = 8,
-    Width = 8
-};
-PolarLineSeries series = new PolarLineSeries()
-{
-    ItemsSource = new PlantViewModel().PlantDetails,
-    XBindingPath = "Direction",
-    YBindingPath = "Tree",
-    ShowMarkers = true,
-    MarkerSettings = chartMarker
- };
-
-chart.Series.Add(series);
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
