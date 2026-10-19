@@ -109,4 +109,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Radar open series in .NET MAUI Radar Chart](Chart-types_images/MAUI_radar_area_isclosed.png)
+![Radar open series in .NET MAUI Radar Chart](Chart-types_images/MAUI_radar_area_IsClosed.png)
