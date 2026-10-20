@@ -65,12 +65,14 @@ On an iOS device, the image will be saved to:
 
 ### Enable file access permission
 
-For MacCatalyst devices, include the following permission in the `Entitlements.plist` file.
+For MacCatalyst devices, include the following permission in the Entitlements.plist file to enable access to user-selected files and the Downloads folder.
 
 {% tabs %}
 {% highlight xml tabtitle="Entitlements.plist" %}
 
 <key>com.apple.security.files.user-selected.read-write</key>
+<true/>
+<key>com.apple.security.files.downloads.read-write</key>
 <true/>
 
 {% endhighlight %}
