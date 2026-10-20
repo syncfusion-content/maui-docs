@@ -338,7 +338,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/datetime-range-slider/overview" aria-label="Date Time Range Slider">Date Time Range Slider</a></td>
+<td><a href="/maui/datetime-range-slider/overview" aria-label="Learn about Date Time Range Slider control">Date Time Range Slider</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
