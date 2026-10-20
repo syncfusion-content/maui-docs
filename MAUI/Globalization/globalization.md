@@ -104,7 +104,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-  <td><a href="/maui/aiassistview/overview">AI AssistView</a></td>
+  <td><a href="/maui/aiassistview/overview" aria-label="AI AssistView">AI AssistView</a></td>
   <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
   <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -113,7 +113,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-  <td><a href="/maui/accordion/overview">Accordion</a></td>
+  <td><a href="/maui/accordion/overview" aria-label="Accordion">Accordion</a></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
   <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -122,7 +122,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-  <td><a href="/maui/autocomplete/overview">AutoComplete</a></td>
+  <td><a href="/maui/autocomplete/overview" aria-label="AutoComplete">AutoComplete</a></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
   <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -131,7 +131,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-  <td><a href="/maui/avatar-view/overview">Avatar View</a></td>
+  <td><a href="/maui/avatar-view/overview" aria-label="Avatar View">Avatar View</a></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -140,7 +140,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/backdrop/overview">Backdrop</a></td>
+<td><a href="/maui/backdrop/overview" aria-label="Backdrop">Backdrop</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -149,7 +149,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/badge-view/overview">Badge View</a></td>
+<td><a href="/maui/badge-view/overview" aria-label="Badge View">Badge View</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -158,16 +158,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-  <td><a href="/maui/barcode-generator/overview">Barcode Generator</a></td>
+  <td><a href="/maui/barcode-generator/overview" aria-label="Barcode Generator">Barcode Generator</a></td>
   <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-  <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+  <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+  <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+  <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr>
 
 <tr>
-<td><a href="/maui/busy-indicator/overview">Busy Indicator</a></td>
+<td><a href="/maui/busy-indicator/overview" aria-label="Busy Indicator">Busy Indicator</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -176,7 +176,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/button/overview">Button</a></td>
+<td><a href="/maui/button/overview" aria-label="Button">Button</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -185,7 +185,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/calendar/overview">Calendar</a></td>
+<td><a href="/maui/calendar/overview" aria-label="Calendar">Calendar</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -194,7 +194,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/cards/overview">Cards</a></td>
+<td><a href="/maui/cards/overview" aria-label="Cards">Cards</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -203,7 +203,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/carousel-view/overview">Carousel</a></td>
+<td><a href="/maui/carousel-view/overview" aria-label="Carousel">Carousel</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -212,16 +212,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/cartesian-charts/overview">Cartesian Charts</a></td>
+<td><a href="/maui/cartesian-charts/overview" aria-label="Cartesian Charts">Cartesian Charts</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr> 
 
 <tr>
-<td><a href="/maui/chat/overview">Chat</a></td>
+<td><a href="/maui/chat/overview" aria-label="Chat">Chat</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -230,7 +230,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/checkbox/overview">CheckBox</a></td>
+<td><a href="/maui/checkbox/overview" aria-label="CheckBox">CheckBox</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -239,7 +239,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/chips/overview">Chips</a></td>
+<td><a href="/maui/chips/overview" aria-label="Chips">Chips</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -248,16 +248,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/circular-charts/overview">Circular Charts</a></td>
+<td><a href="/maui/circular-charts/overview" aria-label="Circular Charts">Circular Charts</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr>
 
 <tr>
-<td><a href="/maui/circularprogressbar/overview">Circular Progress Bar</a></td>
+<td><a href="/maui/circularprogressbar/overview" aria-label="Circular Progress Bar">Circular Progress Bar</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -266,7 +266,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/colorpicker/overview">Color Picker</a></td>
+<td><a href="/maui/colorpicker/overview" aria-label="Color Picker">Color Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -275,7 +275,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/combobox/overview">ComboBox</a></td>
+<td><a href="/maui/combobox/overview" aria-label="ComboBox">ComboBox</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -284,7 +284,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/dataform/overview">DataForm</a></td>
+<td><a href="/maui/dataform/overview" aria-label="DataForm">DataForm</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -293,7 +293,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/datagrid/overview">DataGrid</a></td>
+<td><a href="/maui/datagrid/overview" aria-label="DataGrid">DataGrid</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -312,6 +312,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/datepicker/overview">Date Picker</a></td>
+<td><a href="/maui/datepicker/overview" aria-label="Date Picker">Date Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -320,7 +321,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/datetimepicker/overview">Date Time Picker</a></td>
+<td><a href="/maui/datetimepicker/overview" aria-label="Date Time Picker">Date Time Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -329,7 +330,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/datetime-range-selector/overview">Date Time Range Selector</a></td>
+<td><a href="/maui/datetime-range-selector/overview" aria-label="Date Time Range Selector">Date Time Range Selector</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -338,7 +339,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/datetime-range-slider/overview">Date Time Range Slider</a></td>
+<td><a href="/maui/datetime-range-slider/overview" aria-label="Date Time Range Slider">Date Time Range Slider</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -348,7 +349,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 
 <tr>
-<td><a href="/maui/datetime-slider/overview">Date Time Slider</a></td>
+<td><a href="/maui/datetime-slider/overview" aria-label="Date Time Slider">Date Time Slider</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -367,6 +368,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/digitalgauge/overview">Digital Gauge</a></td>
+<td><a href="/maui/digitalgauge/overview" aria-label="Digital Gauge">Digital Gauge</a></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -375,7 +377,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/docklayout/overview">DockLayout</a></td>
+<td><a href="/maui/docklayout/overview" aria-label="DockLayout">DockLayout</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -384,7 +386,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/effects-view/overview">Effects View</a></td>
+<td><a href="/maui/effects-view/overview" aria-label="Effects View">Effects View</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -393,7 +395,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/expander/overview">Expander</a></td>
+<td><a href="/maui/expander/overview" aria-label="Expander">Expander</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -402,11 +404,11 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/funnel-charts/overview">Funnel Charts</a></td>
+<td><a href="/maui/funnel-charts/overview" aria-label="Funnel Charts">Funnel Charts</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr> 
 
@@ -421,6 +423,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/imageeditor/overview">Image Editor</a></td>
+<td><a href="/maui/imageeditor/overview" aria-label="Image Editor">Image Editor</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -438,7 +441,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/kanban-board/overview">Kanban Board</a></td>
+<td><a href="/maui/kanban-board/overview" aria-label="Kanban Board">Kanban Board</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -447,7 +450,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/linear-gauge/overview">Linear Gauge</a></td>
+<td><a href="/maui/linear-gauge/overview" aria-label="Linear Gauge">Linear Gauge</a></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -456,7 +459,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/linearprogressbar/overview">Linear Progress Bar</a></td>
+<td><a href="/maui/linearprogressbar/overview" aria-label="Linear Progress Bar">Linear Progress Bar</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -465,7 +468,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/listview/overview">ListView</a></td>
+<td><a href="/maui/listview/overview" aria-label="ListView">ListView</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -474,16 +477,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/maps/overview">Maps</a></td>
+<td><a href="/maui/maps/overview" aria-label="Maps">Maps</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr> 
 
 <tr>
-<td><a href="/maui/markdownviewer/overview">Markdown Viewer</a></td>
+<td><a href="/maui/markdownviewer/overview" aria-label="Markdown Viewer">Markdown Viewer</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -492,7 +495,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/masked-entry/overview">Masked Entry</a></td>
+<td><a href="/maui/masked-entry/overview" aria-label="Masked Entry">Masked Entry</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -501,7 +504,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/navigationdrawer/overview">Navigation Drawer</a></td>
+<td><a href="/maui/navigationdrawer/overview" aria-label="Navigation Drawer">Navigation Drawer</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -510,7 +513,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/numericentry/overview">Numeric Entry</a></td>
+<td><a href="/maui/numericentry/overview" aria-label="Numeric Entry">Numeric Entry</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -519,7 +522,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/parallax-view/overview">Parallax View</a></td>
+<td><a href="/maui/parallax-view/overview" aria-label="Parallax View">Parallax View</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -528,7 +531,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/picker/overview">Picker</a></td>
+<td><a href="/maui/picker/overview" aria-label="Picker">Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -537,16 +540,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/polar-charts/overview">Polar Charts</a></td>
+<td><a href="/maui/polar-charts/overview" aria-label="Polar Charts">Polar Charts</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 </tr>
 
 <tr>
-<td><a href="/maui/popup/overview">Popup</a></td>
+<td><a href="/maui/popup/overview" aria-label="Popup">Popup</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -555,7 +558,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/pull-to-refresh/overview">Pull To Refresh</a></td>
+<td><a href="/maui/pull-to-refresh/overview" aria-label="Pull To Refresh">Pull To Refresh</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -564,7 +567,169 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/pyramid-charts/overview">Pyramid Charts</a></td>
+<td><a href="/maui/pyramid-charts/overview" aria-label="Pyramid Charts">Pyramid Charts</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/radial-gauge/overview" aria-label="Radial Gauge">Radial Gauge</a></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/radial-menu/overview" aria-label="Radial Menu">Radial Menu</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/radio-button/overview" aria-label="Radio Button">Radio Button</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/range-selector/overview" aria-label="Range Selector">Range Selector</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/range-slider/overview" aria-label="Range Slider">Range Slider</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/rating/overview" aria-label="Rating">Rating</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/rich-text-editor/overview" aria-label="Rich Text Editor">Rich Text Editor</a></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/rotator/overview" aria-label="Rotator">Rotator</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/scheduler/overview" aria-label="Scheduler">Scheduler</a></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/segmented-control/overview" aria-label="Segmented Control">Segmented Control</a></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/shimmer/overview" aria-label="Shimmer">Shimmer</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/signaturepad/overview" aria-label="Signature Pad">Signature Pad</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/slider/overview" aria-label="Slider">Slider</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/smartdatagrid/overview" aria-label="Smart DataGrid">Smart DataGrid</a></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/smartscheduler/overview" aria-label="Smart Scheduler">Smart Scheduler</a></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/smarttexteditor/overview" aria-label="Smart Text Editor">Smart Text Editor</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/stepprogressbar/overview" aria-label="Step Progress Bar">Step Progress Bar</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+</tr> 
+
+<tr>
+<td><a href="/maui/sunburstchart/overview" aria-label="Sunburst Chart">Sunburst Chart</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -573,25 +738,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/radial-gauge/overview">Radial Gauge</a></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/radial-menu/overview">Radial Menu</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/radio-button/overview">Radio Button</a></td>
+<td><a href="/maui/switch/overview" aria-label="Switch">Switch</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -600,142 +747,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/range-selector/overview">Range Selector</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/range-slider/overview">Range Slider</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/rating/overview">Rating</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/rich-text-editor/overview">Rich Text Editor</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/rotator/overview">Rotator</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/scheduler/overview">Scheduler</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/segmented-control/overview">Segmented Control</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/shimmer/overview">Shimmer</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/signaturepad/overview">Signature Pad</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/slider/overview">Slider</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/smartdatagrid/overview">Smart DataGrid</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/smartscheduler/overview">Smart Scheduler</a></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/smarttexteditor/overview">Smart Text Editor</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/stepprogressbar/overview">Step Progress Bar</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/sunburstchart/overview">Sunburst Chart</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
-<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/switch/overview">Switch</a></td>
+<td><a href="/maui/tabview/overview" aria-label="Tab View">Tab View</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -744,7 +756,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/tabview/overview">Tab View</a></td>
+<td><a href="/maui/textinputlayout/overview" aria-label="Text Input Layout">Text Input Layout</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -753,16 +765,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/textinputlayout/overview">Text Input Layout</a></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td><a href="/maui/timepicker/overview">Time Picker</a></td>
+<td><a href="/maui/timepicker/overview" aria-label="Time Picker">Time Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -771,7 +774,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/toolbar/overview">Toolbar</a></td>
+<td><a href="/maui/toolbar/overview" aria-label="Toolbar">Toolbar</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -789,7 +792,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
-<td><a href="/maui/treemap/overview">TreeMap</a></td>
+<td><a href="/maui/treemap/overview" aria-label="TreeMap">TreeMap</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
@@ -798,7 +801,7 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/treeview/overview">TreeView</a></td>
+<td><a href="/maui/treeview/overview" aria-label="TreeView">TreeView</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
