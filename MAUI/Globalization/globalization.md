@@ -303,11 +303,11 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/datapager/overview">DataPager</a></td>
-<td><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="partial-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr> 
 
 <tr>
@@ -358,8 +358,8 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/diagram/overview">Diagram</a></td>
-<td><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
-<td><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -412,10 +412,10 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/grid-splitter/overview">Grid Splitter</a></td>
-<td><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/full-support.svg" alt="partial-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 </tr> 
 
@@ -426,7 +426,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
-</tr> 
+</tr>
+
+<tr>
+<td><a href="/maui/interactive-viewer/overview">Interactive Viewer</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+</tr>
 
 <tr>
 <td><a href="/maui/kanban-board/overview">Kanban Board</a></td>
@@ -772,11 +781,11 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 
 <tr>
 <td><a href="/maui/treegrid/overview">TreeGrid</a></td>
-<td><img src="../Images/not-applicable.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="partial-support" width="16" /></td>
-<td><img src="../Images/no-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 </tr>
 
 <tr>
