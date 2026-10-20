@@ -311,7 +311,6 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/datepicker/overview">Date Picker</a></td>
 <td><a href="/maui/datepicker/overview" aria-label="Date Picker">Date Picker</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
@@ -367,7 +366,6 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/digitalgauge/overview">Digital Gauge</a></td>
 <td><a href="/maui/digitalgauge/overview" aria-label="Digital Gauge">Digital Gauge</a></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
 <td><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
@@ -422,7 +420,6 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr> 
 
 <tr>
-<td><a href="/maui/imageeditor/overview">Image Editor</a></td>
 <td><a href="/maui/imageeditor/overview" aria-label="Image Editor">Image Editor</a></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
 <td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
