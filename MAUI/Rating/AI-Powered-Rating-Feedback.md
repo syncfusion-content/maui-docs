@@ -11,31 +11,28 @@ documentation: ug
 
 This sample uses Azure OpenAI to analyze customer support feedback and display a suggested satisfaction rating with the Syncfusion [.NET MAUI Rating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. As the user enters feedback, the app waits briefly before sending it for analysis and updates the read-only rating with the result.
 
-## Prerequisites
-
-- A .NET MAUI app with the Syncfusion [.NET MAUI Rating](https://help.syncfusion.com/maui/rating/overview) and TextInputLayout controls.
-- An Azure OpenAI resource with a deployed chat model.
-- The [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI) NuGet package.
-
-Configure your Azure OpenAI endpoint, deployment name, and API key as environment variables for the app.
-
 ## Integrating Azure OpenAI with the .NET MAUI App
 
-The sample's `OpenAIService` creates an `AzureOpenAIClient` and uses the configured deployment to submit the feedback. Add the NuGet package to an app that does not already include it:
-
-{% tabs %}
-{% highlight bash %}
-
-dotnet add package Azure.AI.OpenAI
-
-{% endhighlight %}
-{% endtabs %}
-
-The service sends a system instruction describing the rating scale and the feedback text as the user message.
+Before implementing the rating flow, complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [Rating getting started](https://help.syncfusion.com/maui/rating/getting-started) steps.
 
 ## Implementing AI-Powered Rating Feedback
 
-### Step 1: Create the Feedback and Rating UI
+**Step 1: Install the required packages**
+
+The sample uses `Syncfusion.Maui.Inputs` for `SfRating`, `Syncfusion.Maui.Core` for `SfTextInputLayout`, and `Azure.AI.OpenAI` for Azure OpenAI integration. Install the Azure OpenAI SDK version used by the sample:
+
+{% tabs %}
+{% highlight powershell %}
+Install-Package Azure.AI.OpenAI -Version 2.1.0
+{% endhighlight %}
+{% highlight bash %}
+dotnet add package Azure.AI.OpenAI --version 2.1.0
+{% endhighlight %}
+{% endtabs %}
+
+The sample's `OpenAIService` creates an `AzureOpenAIClient` and uses the configured deployment to submit the feedback. The service sends a system instruction describing the rating scale and the feedback text as the user message.
+
+**Step 2: Create the Feedback and Rating UI**
 
 Use an `Editor` inside `SfTextInputLayout` to collect feedback. The `CharMaxLength` property limits the input to 300 characters, and the `TextChanged` event passes changes to the view model.
 
@@ -66,7 +63,7 @@ Bind `SfRating` to the view model's `Rating` property and set `IsReadOnly` to `T
 
 The sample also binds an `ActivityIndicator` to `IsAnalyzing` and displays `ErrorMessage` when a request fails.
 
-### Step 2: Analyze Feedback and Update the Rating
+**Step 3: Analyze Feedback and Update the Rating**
 
 The page forwards editor changes to `MainViewModel.OnFeedbackChanged`. The view model cancels the previous request, resets the displayed rating, and waits 500 milliseconds before requesting a new rating. It uses cancellation and a request-version check to prevent an older response from replacing the result for newer text.
 
@@ -99,7 +96,7 @@ throw new InvalidOperationException(
 
 The system instruction asks the model to return a rating from `0.0` to `5.0`.
 
-### Step 3: Register the Services
+**Step 4: Register the Services**
 
 Register `OpenAIService`, `MainViewModel`, and `MainPage` with the .NET MAUI dependency injection container in `MauiProgram`.
 
