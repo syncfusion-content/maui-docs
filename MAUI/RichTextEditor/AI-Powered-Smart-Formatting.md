@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI-Powered Formatting in .NET MAUI Rich Text Editor | Syncfusion
+title: AI-Powered Formatting in .NET MAUI Rich Text Editor | Syncfusion®
 description: Learn how to use Azure OpenAI to format unstructured content into structured business documents in Syncfusion® .NET MAUI Rich Text Editor applications.
 platform: MAUI
 control: SfRichTextEditor
@@ -13,9 +13,13 @@ This document demonstrates how to integrate Azure OpenAI with the Syncfusion [.N
 
 The implementation is designed for practical business scenarios such as meeting notes, support tickets, project updates, and interview transcripts. It automatically creates polished headings, paragraphs, bullet points, numbered steps, and action items while preserving the source information.
 
-N> **Prerequisite:** Before starting, ensure that the required Syncfusion NuGet packages are installed, the .NET MAUI project is configured correctly, and the [Rich Text Editor getting started](https://help.syncfusion.com/maui/rich-text-editor/getting-started) steps are completed.
+## Integrating Azure OpenAI with the .NET MAUI app
 
-## Step 1: Create a .NET MAUI app
+Before implementing smart formatting, complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [Rich Text Editor getting started](https://help.syncfusion.com/maui/rich-text-editor/getting-started) steps.
+
+## Implementing AI-Powered Smart Formatting
+
+**Step 1: Create a .NET MAUI app**
 
 Open Visual Studio and create a new .NET MAUI app. Choose a blank or basic project template and then add the Syncfusion .NET MAUI Rich Text Editor control to the project.
 
@@ -28,7 +32,7 @@ For this sample, the app can be structured in a simple way:
 
 This keeps the sample easy to follow and makes it easier for beginners to understand the responsibilities of each file. The sample follows the MVVM (Model-View-ViewModel) pattern, which is the recommended approach for building maintainable .NET MAUI applications.
 
-## Step 2: Install the required packages
+**Step 2:** Install the required packages
 
 This sample uses the Syncfusion Rich Text Editor control and the built-in .NET HTTP stack to call the Azure OpenAI REST endpoint.
 
@@ -38,9 +42,7 @@ Install the following package if it is not already available in the project:
 
 You do not need a large AI SDK for this example because the code calls the Azure OpenAI chat completions API directly using `HttpClient`.
 
-N> If you are using this sample in a real environment, replace the placeholder values with your Azure OpenAI endpoint, deployment name, and API key.
-
-## Step 3: Create the model for the AI response
+**Step 3:** Create the model for the AI response
 
 The AI service returns JSON data in a strict format. To make that response easy to handle, create a model that matches the JSON structure expected by the app.
 
@@ -123,7 +125,7 @@ public sealed class FormattingResult
 
 This model is simple and clear. It keeps the application logic readable and helps avoid errors when parsing the response returned by Azure OpenAI. The `Keywords`, `Notes`, `Quotes`, `CodeSnippets`, and `Tables` collections are available for future extensions. The current prompt and HTML conversion use the title, section headings, paragraphs, bullet items, numbered items, and action items defined in the JSON contract.
 
-## Step 4: Define the formatter contract
+**Step 4:** Define the formatter contract
 
 The UI should not directly depend on Azure OpenAI logic. To keep the application clean, create an interface that defines the method used to format text.
 
@@ -148,7 +150,7 @@ This gives you a clear separation between:
 
 That separation makes the sample easier to maintain and easier to extend later.
 
-## Step 5: Add the Azure OpenAI formatter service
+**Step 5:** Add the Azure OpenAI formatter service
 
 Create a service class that accepts user content, sends it to Azure OpenAI, and then converts the model response into the document model. The service is responsible for the actual communication with the AI.
 
@@ -190,14 +192,14 @@ public sealed class AzureOpenAIFormattingService : IAIFormattingService
     9. Do not rewrite, paraphrase, summarize, correct grammar, fix spelling, change tense, substitute words, or improve the user's text in any way.
     10. Do not merge two source sentences into one, and do not split one source sentence into two in a way that changes its wording.
     11. Only reorganize the source content into the JSON categories below; the reorganization itself is the only allowed change.
-    11. Use paragraphs for prose, explanations, descriptions, standalone statements, commands, code, configuration, quoted text, and table data when no dedicated field exists.
-    12. Use bulletItems for unordered facts, features, requirements, highlights, metrics, keywords, and items.
-    13. Use numberedItems only when the source expresses an ordered procedure, sequence, or steps.
-    14. Use actionItems only for explicit tasks, responsibilities, follow-ups, or work to be completed.
-    15. Preserve code, commands, configuration, SQL, JSON, XML, markup, paths, identifiers, and code-like text character-for-character inside paragraphs or list items.
-    16. Preserve quoted text verbatim inside paragraphs or bulletItems.
-    17. Keep related content together in one section per logical topic.
-    18. Never place the same source sentence or item in more than one output array.
+    12. Use paragraphs for prose, explanations, descriptions, standalone statements, commands, code, configuration, quoted text, and table data when no dedicated field exists.
+    13. Use bulletItems for unordered facts, features, requirements, highlights, metrics, keywords, and items.
+    14. Use numberedItems only when the source expresses an ordered procedure, sequence, or steps.
+    15. Use actionItems only for explicit tasks, responsibilities, follow-ups, or work to be completed.
+    16. Preserve code, commands, configuration, SQL, JSON, XML, markup, paths, identifiers, and code-like text character-for-character inside paragraphs or list items.
+    17. Preserve quoted text verbatim inside paragraphs or bulletItems.
+    18. Keep related content together in one section per logical topic.
+    19. Never place the same source sentence or item in more than one output array.
     20. Use empty arrays when a category does not apply.
 
     Return exactly this JSON structure:
@@ -471,18 +473,19 @@ public sealed class AzureOpenAIFormattingService : IAIFormattingService
 {% endhighlight %}
 {% endtabs %}
 
+N> If you are using this sample in a real environment, replace the placeholder values with your Azure OpenAI endpoint, deployment name, and API key. The sample uses the `gpt-4o-mini` deployment for illustration; use the deployment name configured in your own Azure OpenAI resource.
+
 The important part of this service is the strict JSON contract. The AI model is instructed to return a consistent document schema without rewriting the user's original wording, which reduces parsing issues and makes the Rich Text Editor output predictable and faithful to the source text.
 
 N> Never add a real Azure OpenAI API key in source code, as shown here for illustration only. Store the key securely, for example, in a secrets manager, environment variable, or secure configuration provider, and load it at runtime.
 
-## Step 6: Register the formatter and page in the app
+**Step 6:** Register the formatter and page in the app
 
 In a .NET MAUI app, the simplest and most maintainable pattern is dependency injection. Register the formatter service, the `MainPageViewModel`, and the `MainPage` in `MauiProgram.cs` so that they can be resolved and injected automatically.
 
 {% tabs %}
 {% highlight c# %}
 using SmartRTEFormatter.Services;
-using SmartRTEFormatter.ViewModels;
 
 namespace SmartRTEFormatter;
 
@@ -506,7 +509,7 @@ public static class MauiProgram
 
 This step is important because the `MainPage` constructor expects an instance of `MainPageViewModel`, which in turn expects an instance of `IAIFormattingService`.
 
-## Step 7: Create the page ViewModel
+**Step 7:** Create the page ViewModel
 
 With MVVM, the page logic lives in a ViewModel instead of the code-behind file. Create a `MainPageViewModel` class that holds the input text, the formatted HTML, a busy flag, and an error message, and exposes a `FormatCommand` that the button binds to.
 
@@ -517,7 +520,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using SmartRTEFormatter.Services;
 
-namespace SmartRTEFormatter.ViewModels;
+namespace SmartRTEFormatter;
 
 public sealed class MainPageViewModel : INotifyPropertyChanged
 {
@@ -636,7 +639,7 @@ public sealed class MainPageViewModel : INotifyPropertyChanged
 
 The `FormatCommand` is disabled automatically while a request is in progress or when the input is empty, so the button cannot be tapped twice or with no content. The `IsFormatButtonVisible` property hides the button and reveals the busy indicator while the AI call is running. `RawOutput` retains the formatted document JSON returned by the service; the current page does not bind it to a visual element, but it is available for diagnostics, storage, or a future JSON preview.
 
-## Step 8: Add the Rich Text Editor input page
+**Step 8:** Add the Rich Text Editor input page
 
 Create the page layout with the `SfRichTextEditor` control bound directly to the ViewModel. The editor's `Text` property is bound two-way to `InputText` so the raw content the user types is captured, and its `HtmlText` property is bound to `FormattedHtml` so the AI-generated document replaces the content once formatting completes.
 
@@ -646,7 +649,7 @@ Create the page layout with the `SfRichTextEditor` control bound directly to the
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:rte="clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor"
-             xmlns:viewModels="clr-namespace:SmartRTEFormatter.ViewModels"
+             xmlns:viewModels="clr-namespace:SmartRTEFormatter"
              x:DataType="viewModels:MainPageViewModel"
              x:Class="SmartRTEFormatter.MainPage">
     <ScrollView Orientation="Vertical">
@@ -688,14 +691,12 @@ Create the page layout with the `SfRichTextEditor` control bound directly to the
 
 This layout is intentionally simple so that beginners can focus on the AI data flow instead of being distracted by complex UI logic. Notice that the `Format text` button and busy indicator toggle visibility purely through data binding, without any code-behind event handlers.
 
-## Step 9: Connect the page to the ViewModel
+**Step 9:** Connect the page to the ViewModel
 
 With the `MainPageViewModel` registered in dependency injection, the code-behind file only needs to set the `BindingContext`. All the formatting logic already lives in the ViewModel from the previous step.
 
 {% tabs %}
 {% highlight c# %}
-using SmartRTEFormatter.ViewModels;
-
 namespace SmartRTEFormatter
 {
     public partial class MainPage : ContentPage
@@ -718,7 +719,7 @@ This is the core interaction of the sample. The flow is simple:
 4. Azure OpenAI returns a well-structured JSON document, which the service converts to HTML.
 5. The ViewModel updates `FormattedHtml`, and the `SfRichTextEditor` displays the formatted result through its `HtmlText` binding.
 
-## Step 10: Understand what the sample produces
+**Step 10:** Understand what the sample produces
 
 When the user enters unstructured notes, the AI service organizes the content into a clean document structure.
 
@@ -739,7 +740,7 @@ This is useful for workflows such as:
 - technical documentation drafting
 - internal knowledge base articles
 
-## Step 11: Run the sample
+**Step 11:** Run the sample
 
 After assembling the files and configuring the Azure OpenAI credentials, run the application on an emulator, simulator, or device.
 

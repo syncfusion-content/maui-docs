@@ -5,6 +5,7 @@ description: Learn how to create and customize nodes in the Syncfusion® .NET MA
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Nodes in .NET MAUI Diagram
