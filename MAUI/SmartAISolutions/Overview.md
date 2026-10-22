@@ -197,6 +197,12 @@ line-height: 1;
 <a target="_self" href="/maui/TreeView/AI-powered-natural-language-file-search" aria-label="AI-Powered Natural Language File Search in .NET MAUI TreeView"><span class="sf-home-icon sf-icon-smart-search"></span>AI-Powered Natural Language File Search</a>
 </div>
 
+<div><p class="category-topics">Rich Text Editor</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/RichTextEditor/AI-Powered-Smart-Formatting" aria-label="Rich Text Editor Smart Formatting"><span class="sf-home-icon sf-icon-text-formatting"></span>Smart Formatting</a>
+</div>
+
 </td>
 </tr>
 </table>
