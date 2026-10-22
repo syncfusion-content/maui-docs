@@ -188,7 +188,7 @@ line-height: 1;
 <div><p class="category-topics">Rich Text Editor</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/SmartRichTextEditor/Smart-Formatting" aria-label="Rich Text Editor Smart Formatting"><span class="sf-home-icon sf-icon-rich-text-editor"></span>Smart Formatting</a>
+<a target="_self" href="/maui/RichTextEditor/AI-Powered-Smart-Formatting" aria-label="Rich Text Editor Smart Formatting"><span class="sf-home-icon sf-icon-text-formatting"></span>Smart Formatting</a>
 </div>
 </td>
 </tr>
