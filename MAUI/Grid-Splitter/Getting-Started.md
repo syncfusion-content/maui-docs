@@ -250,3 +250,5 @@ Content = gridSplitter;
 {% endtabs %}
 
 ![.NET MAUI Grid Splitter](Images/getting-started.png)
+
+You can download the Grid Splitter Getting Started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-the-.NET-MAUI-GridSplitter) link.

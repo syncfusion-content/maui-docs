@@ -5,6 +5,7 @@ description: Learn how to add and customize node and connector annotations in th
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 

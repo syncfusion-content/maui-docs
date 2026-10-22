@@ -5,6 +5,7 @@ description: Learn how to save and restore diagram state in the Syncfusion® .NE
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Save and load in .NET MAUI Diagram
