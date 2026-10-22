@@ -5,6 +5,7 @@ description: Learn how to add and customize PointPort connections in the Syncfus
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Ports in .NET MAUI Diagram
