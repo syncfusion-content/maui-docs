@@ -5,6 +5,7 @@ description: Learn how to create and customize connectors in the Syncfusion® .N
 platform: maui
 control: SfDiagram
 documentation: ug
+appliesto: UI Component Suite, Diagram SDK
 ---
 
 # Connectors in .NET MAUI Diagram
