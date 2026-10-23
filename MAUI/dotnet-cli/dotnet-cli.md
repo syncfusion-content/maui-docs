@@ -119,7 +119,7 @@ Run `sf new`, or select **Create a new project** from the main menu. The .NET MA
 
 1. **Platform:** Select **.NET MAUI**.
 
-    ![Framework selection in the Syncfusion .NET CLI](images/framework-selection-option.png)
+    ![Framework selection in the Syncfusion .NET CLI](images/cli-framework-selection.png)
 
 2. **Project template:** The **.NET MAUI App** template is the only enabled project type and is recorded automatically. Blazor Hybrid creation is temporarily disabled.
 3. **Framework:** Select the .NET version.
@@ -129,11 +129,11 @@ Run `sf new`, or select **Create a new project** from the main menu. The .NET MA
 
 4. **Location and name:** Enter the parent directory and the project name. The default locations are `%USERPROFILE%\source\repos` on Windows and `~/Projects` on Linux and macOS. The suggested name is `SyncfusionMauiApp`, and the first available numeric suffix is used when the destination name collides.
 
-    ![Project location and name in the Syncfusion .NET CLI](images/sample-locaiton-sample-name.png)
+    ![Project location and name in the Syncfusion .NET CLI](images/cli-project-location-and-name.png)
 
 5. **Setup:** Select **Blank app** or **Include Syncfusion controls**. Blank app is the first option.
 
-    ![Select a blank app or a Syncfusion controls project in the Syncfusion .NET CLI](images/select-black-or-include-syncfusion-sample.png)
+    ![Select a blank app or a Syncfusion controls project in the Syncfusion .NET CLI](images/cli-setup-selection.png)
 
 6. **Controls:** When you include controls, choose one or more controls from the list. Controls start unchecked, and at least one selection is required.
 
@@ -305,9 +305,9 @@ dotnet build "<generated-project.csproj>"
 
 To skip the build and generate the files only, use `--post-action generate` or `--no-build`.
 
-![Blank .NET MAUI project generated without build files in the Syncfusion .NET CLI](images/Black-sample-with-or-without-build-files.png)
+![Blank .NET MAUI project generated without build files in the Syncfusion .NET CLI](images/cli-blank-app-with-or-without-build-files.png)
 
-![Generated .NET MAUI project folder without build files in the Syncfusion .NET CLI](images/black-sample-without-build-files-created.png)
+![Generated .NET MAUI project folder without build files in the Syncfusion .NET CLI](images/cli-blank-project-created.png)
 
 ### Existing project is not found
 
