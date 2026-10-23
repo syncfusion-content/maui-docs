@@ -26,7 +26,7 @@ This documentation covers the .NET MAUI platform.
 
 The following software is required before you install and use the CLI:
 
-* [.NET SDK](https://dotnet.microsoft.com/download). The SDK selected through `PATH` takes precedence, with the running .NET installation as a fallback.
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). The SDK selected through `PATH` takes precedence, with the running .NET installation as a fallback.
 * The **.NET Multi-platform App UI development** workload.
 * The .NET MAUI project templates, which are installed with the MAUI workload. The CLI creates .NET MAUI projects through the installed `maui` template.
 * An internet connection so package operations can reach [nuget.org](https://www.nuget.org).
@@ -143,6 +143,8 @@ N> A complete direct command does not open the wizard. When a name is missing in
 
 ### Available controls
 
+N> Control IDs are literal values you pass to `--control`. Spell them exactly as shown, in lowercase, such as `assistview` for AI AssistView and `cartesian-chart` for Cartesian Chart.
+
 The following controls are available in a new .NET MAUI project:
 
 | Control | Control ID |
@@ -176,7 +178,7 @@ sf new maui -n MyApp --control cartesian-chart circular-chart
 
 ## Platform and .NET version selection
 
-The CLI supports the `maui`, `blazor`, `wpf`, `winforms`, and `winui` platforms. In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sf info`) and general help (`sf help`) do not ask for a platform.
+The CLI supports the following platforms: `maui` (.NET MAUI), `blazor` (Blazor), `wpf` (WPF), `winforms` (Windows Forms), and `winui` (WinUI 3). In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sf info`) and general help (`sf help`) do not ask for a platform.
 
 The framework step selects the base .NET version. It does not select Android, iOS, Windows, or Mac Catalyst individually.
 
