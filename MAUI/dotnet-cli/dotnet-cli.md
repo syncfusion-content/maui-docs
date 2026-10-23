@@ -11,7 +11,7 @@ documentation: UG
 
 The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line tool that creates .NET MAUI projects and manages Syncfusion<sup>®</sup> .NET MAUI NuGet packages from a terminal. After you install the CLI, you can run `sf` with no arguments to open an interactive menu, or run a direct command such as `sf new maui` for scripted, prompt-free creation.
 
-N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
+N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` (pre-release) flag.
 
 You can use the CLI to perform the following actions:
 
@@ -37,7 +37,7 @@ N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `h
 
 The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNet.CLI`.
 
-1. Open a terminal and run the following command. Add `--prerelease` while only preview versions are available.
+1. Open a terminal and run the following command. Add the `--prerelease` (pre-release) option while only preview versions are available.
 
     ```bash
     dotnet tool install -g Syncfusion.DotNet.CLI --prerelease
@@ -143,7 +143,7 @@ N> A complete direct command does not open the wizard. When a name is missing in
 
 ### Available controls
 
-N> Control IDs are literal values you pass to `--control`. Spell them exactly as shown, in lowercase, such as `assistview` for AI AssistView and `cartesian-chart` for Cartesian Chart.
+N> Control IDs are literal values you pass to `--control`. Each ID is the lowercase, joined form of the control name (AI AssistView is the assist view ID, Cartesian Chart is the cartesian chart ID, and so on). Spell them exactly as shown, in lowercase.
 
 The following controls are available in a new .NET MAUI project:
 
@@ -178,7 +178,9 @@ sf new maui -n MyApp --control cartesian-chart circular-chart
 
 ## Platform and .NET version selection
 
-The CLI supports the following platforms: `maui` (.NET MAUI), `blazor` (Blazor), `wpf` (WPF), `winforms` (Windows Forms), and `winui` (WinUI 3). In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sf info`) and general help (`sf help`) do not ask for a platform.
+The CLI supports the platforms listed in the following note.
+
+N> Platform values are literal, lowercase IDs: `maui` (.NET MAUI), `blazor` (Blazor), `wpf` (WPF), `winforms` (Windows Forms), and `winui` (WinUI 3). In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sf info`) and general help (`sf help`) do not ask for a platform.
 
 The framework step selects the base .NET version. It does not select Android, iOS, Windows, or Mac Catalyst individually.
 
@@ -269,7 +271,7 @@ N> `--post-action build` conflicts with `--no-build`. Neither `--force` nor conf
 | `-p`, `--path` | The project directory, `.csproj` file, or a supported subdirectory |
 | `-v`, `--version` | The Syncfusion<sup>®</sup> NuGet package version |
 | `--source` | Package source; Syncfusion<sup>®</sup> packages require `https://api.nuget.org/v3/index.json` |
-| `--configfile` | The NuGet configuration file to use |
+| `--configfile` | The NuGet config file to use |
 | `--dry-run` | Preview the action without making changes |
 | `--force` | Allow supported overwrites |
 | `--no-restore` | Skip `dotnet restore` after the action |
