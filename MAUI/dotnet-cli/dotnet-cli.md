@@ -13,8 +13,6 @@ The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line too
 
 N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
 
-N> Package removal (`sf remove`) is temporarily disabled across all platforms while improvements are in progress.
-
 You can use the CLI to perform the following actions:
 
 * Create a blank .NET MAUI app, or an app containing generated Syncfusion<sup>®</sup> control samples.
@@ -221,6 +219,21 @@ To add generated samples directly, use `--control`:
 
 ```bash
 sf add maui --control datagrid listview --path ./MyApp
+```
+
+To list the available and installed packages:
+
+```bash
+sf list maui packages
+sf list maui installed --path ./MyApp
+```
+
+![List of available packages in the Syncfusion .NET CLI](images/cli-list-of-available-packages.png)
+
+To search the package catalog:
+
+```bash
+sf search maui grid
 ```
 
 Existing-project commands accept `-p/--path` with a project file, a project directory, or a supported subdirectory. Discovery stops at the nearest project or repository boundary. `--json` emits one JSON document for script use.
