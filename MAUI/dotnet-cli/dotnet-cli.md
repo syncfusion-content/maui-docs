@@ -20,7 +20,7 @@ You can use the CLI to perform the following actions:
 * Create a blank .NET MAUI app, or an app containing generated Syncfusion<sup>®</sup> control samples.
 * Add or update Syncfusion<sup>®</sup> .NET MAUI NuGet package references in an existing project.
 * List available and installed packages, and search the package catalog.
-* Generate projects for .NET MAUI, Blazor, WPF, WinForms, and WinUI 3..
+* Generate projects for .NET MAUI, Blazor, WPF, WinForms, and WinUI 3.
 
 This documentation covers the .NET MAUI platform.
 
@@ -172,7 +172,7 @@ To create a project containing Syncfusion<sup>®</sup> control samples:
 
 ```bash
 sf new maui -n MyApp --control datagrid
-sf new maui -n MyApp --control datagrid combobox
+sf new maui -n MyApp --control datagrid listview
 sf new maui -n MyApp --control cartesian-chart circular-chart
 ```
 
@@ -193,6 +193,16 @@ sf new maui -n MyApp --build-framework net10.0-android --post-action build
 ```
 
 `--build-framework` is validated against MSBuild's evaluated targets, and an unknown target is rejected.
+
+## Run the created project
+
+A generated .NET MAUI project declares multiple platform targets, such as `net10.0-android` and `net10.0-windows`. Run the project with the target framework for your platform:
+
+```bash
+dotnet run --project ./MyApp/MyApp.csproj -f net10.0-windows
+```
+
+Native platform requirements still apply. Windows apps run on Windows, Mac Catalyst apps on macOS, and Android and iOS apps on an emulator or a connected device.
 
 ## Manage packages in an existing project
 
