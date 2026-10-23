@@ -32,6 +32,59 @@ The Syncfusion® [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-
 - **[Colors](https://help.syncfusion.com/maui/maps/shape#shape-color)** allows categorizing and styling regions based on underlying data values or ranges.
 - **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** allows displaying additional information for shapes, markers, and bubbles interactively.
 
+## Globalization
+
+The following table summarizes the globalization support available in this control.
+
+<style>
+.img{
+  margin:0 !important;
+}
+
+.legend{
+  display: inline-flex !important;
+  flex-direction: row !important; 
+  gap: 16px !important;
+}
+</style>
+
+<div class="legend">
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/full-support.svg" width="16"> Full Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/partial-support.svg" width="16"> Partial Support
+</span>
+ 
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/no-support.svg" width="16"> No Support
+</span>
+
+<span style="display: inline-flex; align-items: center; gap: 6px;">
+<img src="../Images/not-applicable.svg" width="16"> Not Applicable
+</span>
+</div>
+
+<table>
+<tr>
+<th align="center">Control</th>
+<th align="center">Localization</th>
+<th align="center">RTL</th>
+<th align="center">Time zone</th>
+<th align="center">Screen reader</th>
+<th align="center">Keyboard navigation</th>
+</tr>
+<tr>
+<td><a href="/maui/maps/overview" aria-label="MAUI Maps Control overview">Maps</a></td>
+<td align="center"><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td align="center"><img src="../Images/no-support.svg" alt="no-support" width="16" /></td>
+<td align="center"><img src="../Images/partial-support.svg" alt="partial-support" width="16" /></td>
+</tr> 
+</table>
+
 ## Related controls
 
 - [TreeMap](https://help.syncfusion.com/maui/treemap/overview) for displaying hierarchical and comparative data visualization.
