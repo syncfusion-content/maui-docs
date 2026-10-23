@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for .NET MAUI | Syncfusion®
-description: The Syncfusion .NET CLI (sf) creates .NET MAUI projects and manages Syncfusion® MAUI NuGet packages from the command line. Learn its installation, commands, project creation workflow, and troubleshooting.
+description: Learn to install and use the Syncfusion® .NET CLI (sf) to create .NET MAUI apps and manage Syncfusion MAUI NuGet packages.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -249,73 +249,6 @@ N> `--post-action build` conflicts with `--no-build`. Neither `--force` nor conf
 | `--force` | Allow supported overwrites |
 | `--no-restore` | Skip `dotnet restore` after the action |
 | `--json` | Emit one JSON document |
-
-### Exit codes
-
-| Exit code | Meaning |
-| --- | --- |
-| `0` | Success |
-| `1` | Command or validation failure |
-| `70` | Internal CLI error |
-| `130` | `Ctrl+C` interruption |
-
-## Examples
-
-Create a blank project without restore, build, or prompts:
-
-```bash
-sf new maui --name MyApp --path ./apps --project-type app --target-framework net10.0 --control empty --post-action generate --no-interactive
-```
-
-Create a project containing DataGrid and Charts samples and build for Android only:
-
-```bash
-sf new maui --name MyApp --control datagrid cartesian-chart --post-action build --build-framework net10.0-android
-```
-
-Add a package to an existing project:
-
-```bash
-sf add maui datagrid -p ./MyApp
-```
-
-Search the package catalog:
-
-```bash
-sf search maui grid
-```
-
-## Troubleshooting
-
-### `sf` command is not found
-
-Confirm that the tool is installed and the .NET global tools directory is on your `PATH`. The .NET SDK prints the tool location at the end of a successful installation.
-
-```bash
-dotnet tool list -g
-```
-
-### Build failure after creation
-
-The default post-create build includes restore. Missing workloads or platform tools appear as build errors after the project files are generated. The generated project is retained, and the CLI prints the quoted build command so you can retry it from any directory:
-
-```bash
-dotnet build "<generated-project.csproj>"
-```
-
-To skip the build and generate the files only, use `--post-action generate` or `--no-build`.
-
-![Blank .NET MAUI project generated without build files in the Syncfusion .NET CLI](images/cli-blank-app-with-or-without-build-files.png)
-
-![Generated .NET MAUI project folder without build files in the Syncfusion .NET CLI](images/cli-blank-project-created.png)
-
-### Existing project is not found
-
-Run the command from the project directory, or pass the project file or directory explicitly with `-p/--path`. Discovery stops at the nearest project or repository boundary. When a directory contains multiple .NET MAUI projects, an interactive terminal offers selection; scripts require a specific `.csproj`.
-
-### Package source errors
-
-Confirm that the network can reach nuget.org. The CLI resolves Syncfusion<sup>®</sup> packages only from the official nuget.org feed.
 
 ## FAQs
 
