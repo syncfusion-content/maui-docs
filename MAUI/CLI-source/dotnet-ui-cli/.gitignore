@@ -1,0 +1,16 @@
+# Build output
+bin/
+obj/
+artifacts/
+
+# Local tooling
+.nuget/
+.vs/
+*.user
+*.suo
+TestResults/
+
+# Agent harness evidence
+.agent/evidence/
+__pycache__/
+*.pyc

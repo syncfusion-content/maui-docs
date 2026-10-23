@@ -1,0 +1,18 @@
+Action:            Create a new project
+Platform:          Blazor
+Application type:  Blazor WebAssembly Standalone
+Target framework:  .NET 10 (net10.0)
+Authentication:    None
+HTTPS:             Yes
+Project location:  /workspace/work/blazor-option-evidence-extra/projects
+Project name:      WizardEvidence2
+Setup:             Include Syncfusion controls
+Controls:          AI AssistView, Block Editor, Charts, Diagram, Document Editor, File Manager, Gantt, Grid, Kanban, PDF Viewer, Pivot Table, Query Builder,
+                   Rich Text Editor, Scheduler, Spreadsheet
+Theme:             Fluent 2
+Post-create:       Build project
+Components:        AI AssistView, Block Editor, Charts, Diagram, Document Editor, File Manager, Gantt, Grid, Kanban, PDF Viewer, Pivot Table, Query Builder,
+                   Rich Text Editor, Scheduler, Spreadsheet
+Proceed with project creation? [Y/n]:
+
+Enter: continue | Esc: cancel | Ctrl+C: exit

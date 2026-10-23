@@ -1,0 +1,49 @@
+{
+  "schema": 2,
+  "nextId": 7,
+  "doneLedger": [],
+  "tasks": [
+    {
+      "id": "T-001",
+      "title": "Fix TemplateResourceEmbeddingTests path resolution: ProjectSourcePath goes one level too far up from tests/ (2 tests), then remove their exclusion from the tests gate",
+      "status": "todo",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    },
+    {
+      "id": "T-002",
+      "title": "Diagnose and fix 3 failing tests: InvalidExplicitTargetFramework_FailsBeforeProjectNameQuestion (message when MAUI template absent) and NameConflictAllowsReentryWithoutChangingExistingDestination (file and directory); then delete the known-failing gate",
+      "status": "todo",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    },
+    {
+      "id": "T-003",
+      "title": "Add .editorconfig matching current formatting so a dotnet format gate can pass on untouched code",
+      "status": "backlog",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    },
+    {
+      "id": "T-004",
+      "title": "Decide CI host and add PR-lane and Windows/macOS/Linux matrix jobs (see DECISIONS-REQUIRED #1)",
+      "status": "backlog",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    },
+    {
+      "id": "T-005",
+      "title": "Add E2E scenarios on a Windows host: restore and build generated WPF/WinForms/WinUI, and run scripts/validate-desktop.ps1",
+      "status": "backlog",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    },
+    {
+      "id": "T-006",
+      "title": "Add E2E for MAUI generation on a host with workloads (macOS with Xcode for Apple targets)",
+      "status": "backlog",
+      "needs": [],
+      "createdAt": "2026-10-14T11:34:07+00:00"
+    }
+  ]
+}

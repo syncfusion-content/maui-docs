@@ -1,0 +1,41 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Kanban;assembly=Syncfusion.SfKanban.WPF"
+      xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+      x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__">
+    <Grid>
+        <Grid.DataContext>
+            <local:__VIEW_MODEL_NAME__ />
+        </Grid.DataContext>
+        <syncfusion:SfKanban MinColumnWidth="150" 
+                       ColumnMappingPath="Category"  
+                       ItemsSource="{Binding Tasks}"
+                       AutoGenerateColumns="False">
+			<syncfusion:SfKanban.IndicatorColorPalette>
+                <syncfusion:ColorMapping Key="Low" Color="Blue"/>
+                <syncfusion:ColorMapping Key="Normal" Color="Green" />
+                <syncfusion:ColorMapping Key="High" Color="Red" />
+            </syncfusion:SfKanban.IndicatorColorPalette>
+            <syncfusion:KanbanColumn Categories="Open" AllowDrop="True" IsExpanded="True" Title="To Do"></syncfusion:KanbanColumn>
+            <syncfusion:KanbanColumn Categories="In Progress" MinimumLimit="1" MaximumLimit="2" Title="Progress">
+                <syncfusion:KanbanColumn.ErrorBarSettings>
+                    <syncfusion:ErrorBarSettings MaxValidationColor="Red" MinValidationColor="Yellow" />
+                </syncfusion:KanbanColumn.ErrorBarSettings>
+            </syncfusion:KanbanColumn>
+            <syncfusion:KanbanColumn Categories="Review,Done" AllowDrag="True" Title="Done"></syncfusion:KanbanColumn>
+			<syncfusion:SfKanban.PlaceholderStyle>
+                <syncfusion:PlaceholderStyle FontSize="20"
+                         Foreground="DarkGreen"
+                         Fill="Fuchsia"
+                         Stroke="Blue"
+                         StrokeThickness="2"
+                         SelectedFontSize="20"
+                         SelectedForeground="Maroon"
+                         SelectedStroke="Yellow"
+                         SelectedStrokeThickness="2"
+                         SelectedBackground="LawnGreen">
+                </syncfusion:PlaceholderStyle>
+            </syncfusion:SfKanban.PlaceholderStyle>
+        </syncfusion:SfKanban>
+    </Grid>
+</Page>

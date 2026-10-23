@@ -1,0 +1,194 @@
+@page "/rich-text-editor"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+
+<PageTitle>Rich Text Editor</PageTitle>
+<h2>Rich Text Editor</h2>
+
+<div class="control-section">
+    <div class="control-wrapper">
+        <div class="">
+            <SfMention TItem="PersonData" ID="RT_Editor_mention" Target="#RT_Editor .e-rte-content .e-content" DataSource="@EmailData" SortOrder="SortOrder.Ascending" AllowSpaces="true" PopupHeight="200px" PopupWidth="250px" SuffixText=" ">
+                <ItemTemplate>
+                    <div class="editor-mention-item-template">
+                        <div class="em-header">
+                            <div class="em-avatar" style="background-color: @((context as PersonData).BgColor); color: @((context as PersonData).Color);">
+                                <div class="em-initial">@((context as PersonData).Initial)</div>
+                            </div>
+                        </div>
+                        <div class="em-content">
+                            <div class="em-name">@((context as PersonData).Name)</div>
+                            <div class="em-email">@((context as PersonData).Email)</div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+                <DisplayTemplate>
+                    <a href=mailto:@((context as PersonData).Email) title=@((context as PersonData).Email)> @@@((context as PersonData).Name)</a>
+                </DisplayTemplate>
+                <ChildContent>
+                    <MentionFieldSettings Text="Name"></MentionFieldSettings>
+                </ChildContent>
+            </SfMention>
+            <SfRichTextEditor @ref="EditorRef" ID="RT_Editor" ShowCharCount="true" AutoSaveOnIdle="true" EnableTabKey="true" EnableXhtml="true" Placeholder="@PlaceHolderText" EnableResize="true">
+                <h2>Welcome to the Syncfusion Rich Text Editor</h2><p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><h3>Do you know the key features of the editor?</h3>
+                <ul><li>Basic features include headings, block quotes, numbered lists, bullet lists, and support to insert images, tables, audio, and video.</li> <li>Inline styles include <b>bold</b>, <em>italic</em>, <span style="text-decoration: underline">underline</span>, <span style="text-decoration: line-through">strikethrough</span>, <a class="e-rte-anchor" href="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" title="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" aria-label="Open in new window">hyperlinks</a>,<code>InlineCode</code> and more.</li> <li>The toolbar has multi-row, expandable, and scrollable modes. The Editor supports an inline toolbar, a floating toolbar, and custom toolbar items.</li> <li>Integration with Syncfusion Mention control lets users tag other users. To learn more, check out the <a class="e-rte-anchor" href="https://blazor.syncfusion.com/documentation/mention/getting-started-webapp" title="Mention Documentation" aria-label="Open in new window">documentation</a> and <a class="e-rte-anchor" href="https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=material3" title="Mention Demos" aria-label="Open in new window">demos</a>.</li> <li><b>Paste from MS Word</b> - helps to reduce the effort while converting the Microsoft Word content to HTML format with format and styles. To learn more, check out the documentation <a class="e-rte-anchor" href="https://blazor.syncfusion.com/documentation/rich-text-editor/paste-cleanup" title="Paste from MS Word Documentation" aria-label="Open in new window">here</a>.</li> <li>Other features: placeholder text, character count, form validation, enter key configuration, resizable editor, IFrame rendering, tooltip, source code view, RTL mode, persistence, HTML Sanitizer, autosave, and <a class="e-rte-anchor" href="https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html" title="Rich Text Editor API" aria-label="Open in new window">more</a>.</li></ul><h3>Auto Formatting - Write Faster, Format Smarter</h3><p>Boost your productivity with Auto Formatting, a powerful feature that lets you style content instantly using simple, familiar Markdown-style shortcuts. No need to reach for the toolbar - just type and watch your content transform in real time.</p><h4>Effortless Formatting Shortcuts</h4>
+                <table><thead><tr><th>Action</th><th>Shortcut</th></tr></thead><tbody><tr><td>Bulleted List</td><td>Start a line with <code>*</code> or <code>-</code> followed by a space</td></tr><tr><td>Numbered List</td><td>Start a line with <code>1.</code> or <code>i.</code> followed by a space</td></tr><tr><td>Checklist / To-do</td><td>Start a line with <code>[ ]</code> or <code>[x]</code> followed by a space </td></tr><tr><td>Headings (H1 to H6)</td><td>Use <code>#</code>, <code>##</code>, <code>###</code>, <code>####</code>, <code>#####</code>, or <code>######</code> followed by a space</td></tr><tr><td>Block Quote</td><td>Start a line with <code>></code> followed by a space</td></tr><tr><td>Code Block</td><td>Start a line with <code>```</code> followed by a space</td></tr><tr><td>Horizontal Line</td><td>Start a line with <code>---</code> followed by a space</td></tr><tr><td>Bold Text</td><td>Type <code>**text**</code> or <code>sample text</code></td></tr><tr><td>Italic Text</td><td>Type <code>*text*</code> or <code>_text_</code></td></tr><tr><td>Inline Code</td><td>Type <code>`text`</code></td></tr><tr><td>Strikethrough</td><td>Type <code>~~text~~</code></td></tr></tbody></table><h3>Elevating Your Content with Images</h3><p>Images can be added to the editor by pasting or dragging into the editing area, using the toolbar to insert one as a URL, or uploading directly from the File Browser. Easily manage your images on the server by configuring the <a class="e-rte-anchor" href="https://blazor.syncfusion.com/documentation/rich-text-editor/tools/insert-image" title="Insert Image Settings API" aria-label="Open in new window">insertImageSettings</a> to upload, save, or remove them. </p><p><img alt="Sky with sun" src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png" style="width: 440px" class="e-rte-image e-imginline" /></p><p><em>Easily access Audio, Image, Link, Video, and Table operations through the quick toolbar by right-clicking on the corresponding element with your mouse.</em></p>
+                <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+                <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ImportFromWord"></RichTextEditorImportWord>
+                <RichTextEditorExportPdf ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToPdf" FileName="RichTextEditor.pdf"></RichTextEditorExportPdf>
+                <RichTextEditorExportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToDocx" FileName="RichTextEditor.docx"></RichTextEditorExportWord>
+                <RichTextEditorQuickToolbarSettings Text="@TextQuickToolbarItems" ShowOnRightClick="true" Table="@TableQuickToolbarItems" />
+                <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path"></RichTextEditorImageSettings>
+                <RichTextEditorSlashMenuSettings Enable="true" Items="@slashmenuItems" />
+                <RichTextEditorVideoSettings SaveUrl="@SaveURL" Path="@Path"></RichTextEditorVideoSettings>
+                <RichTextEditorAudioSettings SaveUrl="@SaveURL" Path="@Path"></RichTextEditorAudioSettings>
+                <RichTextEditorPasteCleanupSettings Prompt="@Prompt" PlainText="@Plaintext" KeepFormat="@Keepformat" DeniedAttributes="@Deniedattr"
+                                                    AllowedStyleProperties="@Allowedstyle" DeniedTags="@Deniedtags" />
+            </SfRichTextEditor>
+
+        </div>
+    </div>
+</div>
+<style>
+    .editor-mention-item-template {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .em-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .em-avatar {
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 500;
+        text-indent: 0px;
+        line-height: 13px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .em-name {
+        color: rgb(16, 24, 40);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        margin-bottom: 5px;
+    }
+
+    .em-email {
+        color: gray;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+
+    #RT_Editor_mention_options li {
+        padding: 10px;
+        height: 60px;
+    }
+
+    body[class*="-dark"] .em-name {
+        color: #fff !important;
+    }
+
+    .e-code-mirror::before {
+        content: '\e345';
+    }
+
+    .e-html-preview::before {
+        content: '\e350';
+    }
+
+    .e-richtexteditor.e-rte-full-screen {
+        top: 48px;
+    }
+
+    .sb-header {
+        z-index: 100;
+    }
+
+    .fabric-dark .cm-s-default .cm-tag,
+    .bootstrap5-dark .cm-s-default .cm-tag,
+    .bootstrap5\.3-dark .cm-s-default .cm-tag,
+    .material-dark .cm-s-default .cm-tag,
+    .tailwind-dark .cm-s-default .cm-tag,
+    .tailwind3-dark .cm-s-default .cm-tag,
+    .highcontrast .cm-s-default .cm-tag {
+        color: #00ff00;
+    }
+
+    .fabric-dark .cm-s-default .cm-string,
+    .bootstrap5-dark .cm-s-default .cm-string,
+    .bootstrap5\.3-dark .cm-s-default .cm-string,
+    .material-dark .cm-s-default .cm-string,
+    .tailwind-dark .cm-s-default .cm-string,
+    .tailwind3-dark .cm-s-default .cm-string {
+        color: blue;
+    }
+
+    .highcontrast .cm-s-default .cm-string {
+        color: #ffd939;
+    }
+
+    .fabric-dark .cm-s-default .cm-attribute,
+    .bootstrap5-dark .cm-s-default .cm-attribute,
+    .bootstrap5\.3-dark .cm-s-default .cm-attribute,
+    .material-dark .cm-s-default .cm-attribute,
+    .tailwind-dark .cm-s-default .cm-attribute,
+    .tailwind3-dark .cm-s-default .cm-attribute,
+    .highcontrast .cm-s-default .cm-attribute {
+        color: #f00;
+    }
+
+    .e-richtexteditor .e-rte-content .e-content pre {
+        padding: 10px;
+        background: inherit;
+    }
+
+    .fabric-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .bootstrap5-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .bootstrap5\.3-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .material-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .tailwind-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .tailwind3-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .highcontrast .e-richtexteditor .e-rte-content .e-content pre,
+    .fluent-dark .e-richtexteditor .e-rte-content .e-content pre,
+    .material3-dark .e-richtexteditor .e-rte-content .e-content pre {
+        padding: 10px;
+        background: #303030;
+    }
+
+    @@media print {
+        a, a:visited {
+            color: blue !important;
+            text-decoration: underline;
+        }
+
+            a[href^="javascript:"]:after, a[href^="#"]:after {
+                content: "";
+            }
+
+            a[href]:after {
+                content: "";
+            }
+    }
+
+    .content.px-4 {
+		width: calc(100% - 100px) !important;
+	}
+</style>

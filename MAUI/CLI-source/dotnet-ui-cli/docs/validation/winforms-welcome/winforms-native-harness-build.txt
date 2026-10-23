@@ -1,0 +1,9 @@
+  Determining projects to restore...
+  Restored /workspace/dotnet-cli/scripts/WinFormsWelcomeValidation/WinFormsWelcomeValidation.csproj (in 102 ms).
+  WinFormsWelcomeValidation -> /workspace/dotnet-cli/work/artifacts/bin/WinFormsWelcomeValidation/debug/WinFormsWelcomeValidation.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.92
