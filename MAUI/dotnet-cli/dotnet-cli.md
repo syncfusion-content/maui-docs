@@ -26,7 +26,7 @@ This documentation covers the .NET MAUI platform.
 
 The following software is required before you install and use the CLI:
 
-* [.NET SDK](https://dotnet.microsoft.com/download). The SDK selected through `PATH` takes precedence, with the running .NET installation as a fallback.
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). The SDK selected through `PATH` takes precedence, with the running .NET installation as a fallback.
 * The **.NET Multi-platform App UI development** workload.
 * The .NET MAUI project templates, which are installed with the MAUI workload. The CLI creates .NET MAUI projects through the installed `maui` template.
 * An internet connection so package operations can reach [nuget.org](https://www.nuget.org).
