@@ -1,0 +1,15 @@
+Warning: Building and running WinForms applications requires a supported Windows environment. File generation is available on this host.
+  … Creating project
+  ✓ Creating project
+  … Setting up project files
+  ✓ Setting up project files
+Project created at /workspace/work/winforms-welcome-layout-reviewed/WelcomeVBnet100
+  Determining projects to restore...
+  Restored /workspace/work/winforms-welcome-layout-reviewed/WelcomeVBnet100/WelcomeVBnet100.vbproj (in 163 ms).
+  WelcomeVBnet100 -> /workspace/work/winforms-welcome-layout-reviewed/WelcomeVBnet100/bin/Debug/net10.0-windows/WelcomeVBnet100.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.71

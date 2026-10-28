@@ -1,0 +1,20 @@
+Action:            Create a new project
+Platform:          Blazor
+Application type:  Blazor Web App
+Target framework:  .NET 10 (net10.0)
+Render mode:       Server
+Interactivity:     Per page/component
+Authentication:    None
+HTTPS:             No
+Project location:  /workspace/work/blazor-option-evidence-final/projects
+Project name:      WizardEvidence11
+Setup:             Include Syncfusion controls
+Controls:          AI AssistView, Block Editor, Charts, Diagram, Document Editor, File Manager, Gantt, Grid, Kanban, PDF Viewer, Pivot Table, Query Builder,
+                   Rich Text Editor, Scheduler, Spreadsheet
+Theme:             Fluent 2
+Post-create:       Generate only
+Components:        AI AssistView, Block Editor, Charts, Diagram, Document Editor, File Manager, Gantt, Grid, Kanban, PDF Viewer, Pivot Table, Query Builder,
+                   Rich Text Editor, Scheduler, Spreadsheet
+Proceed with project creation? [Y/n]:
+
+Enter: continue | Esc: cancel | Ctrl+C: exit

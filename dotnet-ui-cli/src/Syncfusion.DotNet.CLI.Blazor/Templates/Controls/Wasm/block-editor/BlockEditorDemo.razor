@@ -1,0 +1,27 @@
+@page "/block-editor"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor.BlockEditor
+
+<PageTitle>Block Editor</PageTitle>
+<h2>Block Editor</h2>
+
+<div class="control-section">
+    <div class="overview-blockeditor">
+        <SfBlockEditor ID="block-editor" Blocks="@blockDataOverview" Users="MentionUsers">
+             <BlockEditorInlineToolbar Items="@ToolbarItems" />
+        </SfBlockEditor>
+    </div>
+</div>
+
+<style>
+
+    .overview-blockeditor {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        .overview-blockeditor .e-mention.e-editable-element {
+            border: unset;
+        }
+</style>

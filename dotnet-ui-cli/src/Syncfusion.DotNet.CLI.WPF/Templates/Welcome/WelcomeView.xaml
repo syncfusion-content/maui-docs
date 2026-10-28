@@ -1,0 +1,29 @@
+<UserControl x:Class="__ROOT_NAMESPACE__.Welcome.WelcomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer x:Name="WelcomeScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid MinHeight="{Binding ViewportHeight, ElementName=WelcomeScroll}" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" TextElement.Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}">
+            __PALETTE__
+            <Grid.RowDefinitions><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+            <StackPanel Margin="24,40,24,24">
+                <TextBlock Text="Welcome to Your New WPF App" FontSize="36" FontWeight="Bold" TextWrapping="Wrap" />
+                <TextBlock Text="Your application is running successfully." Margin="0,12,0,32" />
+                <Border Padding="24" BorderThickness="1" CornerRadius="16" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+                    <StackPanel>
+                        <TextBlock Text="Your control samples" FontSize="22" FontWeight="Bold" Margin="0,0,0,16" />
+                        __SAMPLES__
+                    </StackPanel>
+                </Border>
+                <TextBlock Text="Build something great" FontSize="22" FontWeight="Bold" Margin="0,32,0,16" />
+                <WrapPanel x:Name="WelcomeResources">__RESOURCES__</WrapPanel>
+                <TextBlock x:Name="WelcomeStatus" TextWrapping="Wrap" />
+            </StackPanel>
+            <Grid x:Name="WelcomeFooter" Grid.Row="1" Margin="24" SizeChanged="ReflowFooter">
+                <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                <TextBlock Text="__COPYRIGHT__" FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,24,0" />
+                <WrapPanel x:Name="WelcomeFooterLinks" Grid.Column="1" HorizontalAlignment="Right">__FOOTER_LINKS__</WrapPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

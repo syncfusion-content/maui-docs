@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Diagram;assembly=Syncfusion.Maui.Diagram"
+             Title="Diagram"
+             x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__">
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+        <syncfusion:SfDiagram HorizontalOptions="Fill" VerticalOptions="Fill" x:Name="diagram"/>
+    </Grid>
+</ContentPage>
