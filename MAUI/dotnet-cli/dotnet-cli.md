@@ -256,9 +256,9 @@ N> Open the Command Prompt or Terminal in the target sample's project directory 
 
 ### How license activation works
 
-1. The CLI scans the project at the current directory or at the path you pass through `--path`. It identifies the platform from the project file (`.csproj`/`.vbproj`) and detects all Syncfusion<sup>®</sup> `PackageReference` entries whose IDs start with `Syncfusion.`.
+1. The CLI scans the project at the current directory or at the path you pass through `--path`. It identifies the platform from the project file (`.csproj`) and detects all Syncfusion<sup>®</sup> `PackageReference` entries whose IDs start with `Syncfusion.`.
 2. It checks your Syncfusion<sup>®</sup> account for entitlements that cover each detected package. When a paid or trial entitlement is available, the matching license keys are downloaded.
-3. The keys are cached in `syncfusion-license.txt` and metadata in `.syncfusion/license-meta.json` inside the project directory. Both files are added to `.gitignore` automatically.
+3. The keys are cached in `syncfusion-license.txt` and metadata in `.syncfusion/license-meta.json` inside the project directory.
 4. The CLI inserts `SyncfusionLicenseProvider.RegisterLicense(...)` into the platform-specific startup file. For .NET MAUI, the block is added to `MauiProgram.cs` before `MauiApp.CreateBuilder()`. The block is idempotent, so re-running the command refreshes the keys without duplicating the call.
 5. If a control in the project is not covered by a paid entitlement, the CLI prompts you to accept the Syncfusion<sup>®</sup> trial EULA and download a trial key for the missing packages. Pass `--yes` to accept the prompt automatically.
 
@@ -340,8 +340,8 @@ The cached output reports the registered email, platform, major version, and one
 
 ### License operation notes
 
-* License activation is project-specific. The command path must point to the intended sample, because each project is detected through its `.csproj`/`.vbproj` and scanned independently.
-* The CLI writes `syncfusion-license.txt` and `.syncfusion/license-meta.json` to the project directory and appends both entries to `.gitignore` on first activation.
+* License activation is project-specific. The command path must point to the intended sample, because each project is detected through its `.csproj` and scanned independently.
+* The CLI writes `syncfusion-license.txt` and `.syncfusion/license-meta.json` to the project directory.
 * The startup file the CLI modifies by platform is `MauiProgram.cs` for .NET MAUI, `Program.cs` for Blazor, `App.xaml.cs` for WPF, `App.xaml.cs` for WinUI, and `Program.cs` (or `Application.xaml.vb` for VB) for WinForms.
 * Use `sf logout` to clear the local sign-in session. Use `sf login` to sign in again without running activation.
 
