@@ -467,7 +467,7 @@ No Syncfusion<sup>®</sup> account, API key, or license is required to install o
 
 ### Prerequisites
 
-* [Node.js](https://nodejs.org) 22.20 or later, installed with npm and Git, available on `PATH`.
+* [Node.js](https://nodejs.org/en) 22.20 or later, installed with npm and Git, available on `PATH`.
 * The setup uses the official Skills CLI (`skills@1.7.4`) through npx, which may download the CLI package and the official skills repository on first use.
 
 ### Install skills through the interactive menu
