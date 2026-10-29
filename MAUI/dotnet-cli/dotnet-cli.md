@@ -498,7 +498,7 @@ sf skills install maui --agent cursor claude-code --all --yes
 ```
 
 * Use `--list` to list the exact skill names available in the repository without installing anything.
-* Use `--agent` with one or more agent IDs: `github-copilot`, `cursor`, `codestudio`, or `claude-code`.
+* Use `--agent` with one or more agent IDs: `Github Copilot`, `Cursor`, `Syncfusion Code Studio`, or `Claude Code`.
 * Use `--skill` with one or more exact skill names, or `--all` to install all skills for the selected agents. `--all` does not mean all agents.
 * Noninteractive installation requires `--agent`, `--skill` (or `--all`), and `--yes`. The scope defaults to project-local; add `--global` explicitly to install skills in the user's global agent directories.
 * Skills are copied into the agent's skills location, so no symlink privileges are required.
