@@ -11,14 +11,25 @@ documentation: UG
 
 Package operations change NuGet references only. They do not generate control files.
 
-`<package>` accepts a canonical package alias, a canonical package ID, or an exact unambiguous package display name:
+In a CLI-generated project, supported package aliases also integrate their samples. For example, `sf add maui datagrid` adds the DataGrid package and integrates the DataGrid sample. In an ordinary project, the same command adds the package reference only, and the CLI reports that no sample was generated.
+
+## Add a package by alias
+
+To add a package using its short package alias:
 
 ```bash
 sf add maui datagrid
+```
+
+## Add a package by package ID
+
+To add a package using the exact NuGet package identifier:
+
+```bash
 sf add maui Syncfusion.Maui.DataGrid
 ```
 
-In a CLI-generated project, supported package aliases also integrate their samples. For example, `sf add maui datagrid` adds the DataGrid package and integrates the DataGrid sample. In an ordinary project, the same command adds the package reference only, and the CLI reports that no sample was generated.
+## Add generated samples
 
 To add generated samples directly, use `--control`:
 
@@ -26,16 +37,31 @@ To add generated samples directly, use `--control`:
 sf add maui --control datagrid listview --path ./MyApp
 ```
 
-## List packages
+## Update a package
 
-To list the available and installed packages:
+To update a package in an existing project:
+
+```bash
+sf update maui datagrid
+```
+
+## List available packages
+
+To list all Syncfusion<sup>®</sup> packages available for .NET MAUI:
 
 ```bash
 sf list maui packages
-sf list maui installed --path ./MyApp
 ```
 
 ![List of available packages in the Syncfusion .NET CLI](images/cli-list-of-available-packages.png)
+
+## List installed packages
+
+To list the Syncfusion<sup>®</sup> packages installed in an existing project:
+
+```bash
+sf list maui installed --path ./MyApp
+```
 
 ## Search packages
 

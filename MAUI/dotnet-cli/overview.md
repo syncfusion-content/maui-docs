@@ -27,9 +27,7 @@ This documentation covers the .NET MAUI platform.
 
 The following software is required before you install and use the CLI:
 
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). The SDK selected through `PATH` takes precedence, with the running .NET installation as a fallback.
-* The **.NET Multi-platform App UI development** workload.
-* The .NET MAUI project templates, which are installed with the MAUI workload. The CLI creates .NET MAUI projects through the installed `maui` template.
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) with the **.NET Multi-platform App UI development** workload. The workload also installs the .NET MAUI project templates, which the CLI uses to create projects.
 * An internet connection so package operations can reach [nuget.org](https://www.nuget.org).
 * A Syncfusion<sup>®</sup> account to activate licenses. Sign in is performed through the browser during license activation.
 
@@ -51,6 +49,8 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
     sf --version
     ```
 
+3. If `sf` is not found, add the .NET global tool directory to the `PATH` environment variable: `%USERPROFILE%\.dotnet\tools` on Windows or `$HOME/.dotnet/tools` on macOS and Linux. Then, restart the terminal.
+
 To update the tool to the latest release, run:
 
 ```bash
@@ -68,24 +68,6 @@ dotnet tool uninstall -g Syncfusion.DotNet.CLI
 Run `sf` in an interactive terminal to open the main menu. The menu shows the current CLI version and groups the available operations.
 
 ![Syncfusion .NET CLI main menu](images/cli-main-menu.png)
-
-| Group | Operation | Command reference |
-| --- | --- | --- |
-| Project creation | Create a new project | `sf new` |
-| Package management | Add a package to an existing project | `sf add` |
-| Package management | Update a package in an existing project | `sf update` |
-| Discovery | List available packages | `sf list <platform> packages` |
-| Discovery | List installed packages in an existing project | `sf list <platform> installed` |
-| Discovery | Search for packages | `sf search` |
-| AI & Skills | Setup Model Context Protocol (MCP) | `sf mcp init` |
-| AI & Skills | Add component skills to AI Agent | `sf skills install` |
-| License management | Activate license | `sf license activate` |
-| License management | View installed licenses | `sf license view` |
-| License management | Sign in to Syncfusion | `sf login` |
-| License management | Sign out | `sf logout` |
-| Help and information | View CLI information | `sf info` |
-| Help and information | Show help | `sf help` |
-| Exit | Exit | `Ctrl+C` |
 
 N> The `<platform>` text is a usage placeholder. Use `maui` for .NET MAUI.
 
@@ -120,6 +102,12 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 | `sf info` | Show CLI information | |
 | `sf help maui` | Show the .NET MAUI command map | |
 | `sf --version` | Show the CLI version | |
+
+## FAQs
+
+**How do I use the interactive menu?**
+
+Run `sf` without arguments and use the arrow keys and Enter to navigate. Direct commands remain usable without opening the menu.
 
 ## See also
 

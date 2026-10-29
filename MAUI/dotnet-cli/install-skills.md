@@ -46,10 +46,10 @@ sf skills install maui --agent cursor claude-code --all --yes
 ```
 
 * Use `--list` to list the exact skill names available in the repository without installing anything.
-* Use `--agent` with one or more agent IDs: `Github Copilot`, `Cursor`, `Syncfusion Code Studio`, or `Claude Code`.
+* Use `--agent` with one or more agent IDs: `github-copilot`, `cursor`, `codestudio`, or `claude-code`.
 * Use `--skill` with one or more exact skill names, or `--all` to install all skills for the selected agents. `--all` does not mean all agents.
-* Noninteractive installation requires `--agent`, `--skill` (or `--all`), and `--yes`. The scope defaults to project-local; add `--global` explicitly to install skills in the user's global agent directories.
-* Skills are copied into the agent's skills location, so no symlink privileges are required.
+* Installation with `--no-interactive` requires `--agent`, `--skill` (or `--all`), and `--yes`. The scope defaults to project-local; add `--global` explicitly to install skills in the user's global agent directories.
+* Skills are copied into the agent's skills location, so no elevated file-system permissions are required.
 
 N> `completed` means the Skills CLI exited successfully, not that an AI agent has loaded or executed the skills. Reload the workspace in your AI agent so the newly installed skills are picked up.
 
@@ -62,7 +62,7 @@ N> `completed` means the Skills CLI exited successfully, not that an AI agent ha
 | `--skill` | One or more exact skill names. Discover names with `--list` |
 | `--all` | Install all skills for the selected agents, not all agents |
 | `--global` | Install skills in the user's global agent directories |
-| `--yes` | Confirm noninteractive installation |
+| `--yes` | Confirm the no-interactive installation |
 | `--list` | List repository skill names without installing |
 | `-p`, `--path` | The workspace directory. Defaults to the current directory |
 | `--dry-run` | Show the planned Skills CLI command without executing it |
@@ -70,7 +70,9 @@ N> `completed` means the Skills CLI exited successfully, not that an AI agent ha
 
 ## FAQs
 
-**Do I need a license to install AI component skills?** No. Skills installation requires no Syncfusion<sup>®</sup> account, API key, or license. It requires Node.js 22.20 or later with npm and Git.
+**Do I need a license to install AI component skills?**
+
+No. Skills installation requires no Syncfusion<sup>®</sup> account, API key, or license. It requires Node.js 22.20 or later with npm and Git.
 
 ## See also
 
