@@ -1,0 +1,13 @@
+@page "/spreadsheet"
+__RENDER_DIRECTIVE__
+@namespace __PAGE_NAMESPACE__
+@using Syncfusion.Blazor.Spreadsheet
+
+<PageTitle>__DISPLAY_NAME__</PageTitle>
+
+<h1>__DISPLAY_NAME__</h1>
+<p class="lead">Edit the sales report, calculate totals, or open your own workbook.</p>
+
+<SfSpreadsheet DataSource="DataSourceBytes" Height="650px">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
