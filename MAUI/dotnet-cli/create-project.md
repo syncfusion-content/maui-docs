@@ -33,30 +33,26 @@ Run `sf new`, or select **Create a new project** from the main menu. The .NET MA
 
     ![Select a blank app or a Syncfusion controls project in the Syncfusion .NET CLI](images/cli-setup-selection.png)
 
-6. **Controls:** When you include controls, choose one or more controls from the list. Controls start unchecked, and at least one selection is required.
+6. **Controls:** When you include controls, choose one or more controls from the list. Controls start unchecked, and at least one selection is required. The following controls are available:
+
+    | Control | Control ID |
+    | --- | --- |
+    | AI AssistView | `assistview` |
+    | Cartesian Chart | `cartesian-chart` |
+    | Circular Chart | `circular-chart` |
+    | DataGrid | `datagrid` |
+    | Diagram | `diagram` |
+    | Kanban | `kanban` |
+    | ListView | `listview` |
+    | PDF Viewer | `pdf-viewer` |
+    | Rich Text Editor | `rich-text-editor` |
+    | Scheduler | `scheduler` |
 
 7. **Post-create:** Select **Generate only** or **Build project**.
 
 8. **Confirmation:** Review the selected values and confirm to create the project.
 
 N> A complete direct command does not open the wizard. When a name is missing in an interactive terminal, the wizard supplies a default and collects the remaining unspecified inputs. Missing required values in scripts produce an error.
-
-## Available controls
-
-The following controls are available in a new .NET MAUI project:
-
-| Control | Control ID |
-| --- | --- |
-| AI AssistView | `assistview` |
-| Cartesian Chart | `cartesian-chart` |
-| Circular Chart | `circular-chart` |
-| DataGrid | `datagrid` |
-| Diagram | `diagram` |
-| Kanban | `kanban` |
-| ListView | `listview` |
-| PDF Viewer | `pdf-viewer` |
-| Rich Text Editor | `rich-text-editor` |
-| Scheduler | `scheduler` |
 
 ## Create a project using direct commands
 
@@ -124,9 +120,13 @@ N> `--post-action build` conflicts with `--no-build`. Neither `--force` nor conf
 
 ## FAQs
 
-**Does `sf add maui datagrid` generate the DataGrid sample?** In a CLI-generated project, yes. In an ordinary project, the command adds the NuGet package reference only and reports that no sample was generated. For details, refer to [Manage packages](/maui/dotnet-cli/manage-packages).
+**Does `sf add maui datagrid` generate the DataGrid sample?**
 
-**Which .NET versions are supported?** .NET 10 (`net10.0`) and .NET 9 (`net9.0`). Installed template and workload compatibility is checked separately during creation.
+In a CLI-generated project, yes. In an ordinary project, the command adds the NuGet package reference only and reports that no sample was generated. For details, refer to [Manage packages](/maui/dotnet-cli/manage-packages).
+
+**Which .NET versions are supported?**
+
+.NET 10 (`net10.0`) and .NET 9 (`net9.0`). Installed template and workload compatibility is checked separately during creation.
 
 ## See also
 

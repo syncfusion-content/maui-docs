@@ -70,7 +70,9 @@ N> `completed` means the Skills CLI exited successfully, not that an AI agent ha
 
 ## FAQs
 
-**Do I need a license to install AI component skills?** No. Skills installation requires no Syncfusion<sup>®</sup> account, API key, or license. It requires Node.js 22.20 or later with npm and Git.
+**Do I need a license to install AI component skills?**
+
+No. Skills installation requires no Syncfusion<sup>®</sup> account, API key, or license. It requires Node.js 22.20 or later with npm and Git.
 
 ## See also
 
