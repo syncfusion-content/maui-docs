@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for .NET MAUI | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sf) to create .NET MAUI apps, manage Syncfusion MAUI NuGet packages, register licenses, and configure MCP servers and AI skills.
+description: Learn to install and use the Syncfusion® .NET CLI (sf) to create .NET MAUI apps, manage Syncfusion MAUI packages, and register licenses.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -604,4 +604,4 @@ N> `--post-action build` conflicts with `--no-build`. Neither `--force` nor conf
 * [System requirements for .NET MAUI](https://help.syncfusion.com/maui/system-requirements)
 * [Installing .NET MAUI NuGet packages](https://help.syncfusion.com/maui/installation/install-nuget-packages)
 * [Syncfusion<sup>®</sup> licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
-* [Syncfusion<sup>®</sup> .NET MAUI AI coding assistant skills](https://help.syncfusion.com/maui/ai-coding-assistant/skills/controls-user-skills)
+* [Syncfusion<sup>®</sup> .NET MAUI AI coding assistant skills](https://help.syncfusion.com/maui/ai-coding-assistant/skills/controls-user-skills)i-coding-assistant/skills/controls-user-skills)
