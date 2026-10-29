@@ -19,7 +19,7 @@ Run `sf new`, or select **Create a new project** from the main menu. The .NET MA
 
     ![Framework selection in the Syncfusion .NET CLI](images/cli-framework-selection.png)
 
-2. **Project template:** The **.NET MAUI App** template is the only enabled project type and is recorded automatically. Blazor Hybrid creation is temporarily disabled.
+2. **Project template:** The **.NET MAUI App** template is the only enabled project type and is recorded automatically.
 3. **Framework:** Select the .NET version.
 
     * .NET 10 (`net10.0`), the default
