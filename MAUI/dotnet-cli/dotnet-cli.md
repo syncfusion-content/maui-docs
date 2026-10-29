@@ -482,7 +482,7 @@ No Syncfusion<sup>®</sup> account, API key, or license is required to install o
 
 3. Enter the workspace directory. The Skills CLI then presents its own interactive flow, in which you choose the component skills, the agents, and the project or global scope. No API key is required.
 
-    ![Component skills, agents, and scope selection in the Skills CLI](images/skills-installation.png)
+    ![Component skills, agents, and scope selection in the Skills CLI](images/cli-skills-installation.png)
 
 4. After the Skills CLI completes, the CLI reports the completed status for the skills repository.
 
