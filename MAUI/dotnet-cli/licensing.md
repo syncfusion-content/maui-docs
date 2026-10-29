@@ -21,17 +21,21 @@ License activation requires a Syncfusion<sup>®</sup> account. The CLI uses the 
 
 To sign in to your Syncfusion<sup>®</sup> account, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf login
-```
+{% endhighlight %}
+{% endtabs %}
 
 The CLI opens your default browser on the Syncfusion<sup>®</sup> sign-in page. Complete sign in, and the CLI stores a local session for future license operations. The session is reused by `sf license activate`, so you sign in only once per machine until you sign out.
 
 To sign out and clear the local sign-in session, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf logout
-```
+{% endhighlight %}
+{% endtabs %}
 
 After signing out, the next license operation prompts you to sign in again. Signing out does not affect the license keys already registered in your projects.
 
@@ -59,29 +63,37 @@ After signing out, the next license operation prompts you to sign in again. Sign
 
 Run the activation command from the sample's project directory:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf license activate
-```
+{% endhighlight %}
+{% endtabs %}
 
 Pass `--path` to point the CLI at a specific project directory or `.csproj` file:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf license activate --path ./MyApp
 sf license activate --path ./MyApp/MyApp.csproj
-```
+{% endhighlight %}
+{% endtabs %}
 
 Use `--yes` to accept the trial EULA prompt without asking:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf license activate --yes
-```
+{% endhighlight %}
+{% endtabs %}
 
 Use `--file` to activate from an existing key file. With no value, the CLI reads `./syncfusion-license.txt` from the project directory. With an absolute path, the CLI uses the specified file instead:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf license activate --file
 sf license activate --file C:\Users\<username>\keys\syncfusion-license.txt
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> When a license key is supplied through `--file`, the CLI skips sign in and download and registers the keys already in the file. The file path must be absolute.
 
@@ -89,9 +101,11 @@ N> When a license key is supplied through `--file`, the CLI skips sign in and do
 
 To see the licenses cached for the current project, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf license view
-```
+{% endhighlight %}
+{% endtabs %}
 
 The command reads the cached metadata, lists each product, the license type, the status, and the expiry date, and warns when a Syncfusion<sup>®</sup> package in the project is not covered.
 

@@ -38,12 +38,14 @@ No Syncfusion<sup>®</sup> account, API key, or license is required to install o
 
 ## Install skills using direct commands
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf skills install maui
 sf skills install maui --list
 sf skills install maui --agent github-copilot --skill <exact-skill-name> --yes
 sf skills install maui --agent cursor claude-code --all --yes
-```
+{% endhighlight %}
+{% endtabs %}
 
 * Use `--list` to list the exact skill names available in the repository without installing anything.
 * Use `--agent` with one or more agent IDs: `github-copilot`, `cursor`, `codestudio`, or `claude-code`.

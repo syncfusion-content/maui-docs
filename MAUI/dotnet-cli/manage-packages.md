@@ -17,41 +17,51 @@ In a CLI-generated project, supported package aliases also integrate their sampl
 
 To add a package using its short package alias:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf add maui datagrid
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add a package by package ID
 
 To add a package using the exact NuGet package identifier:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf add maui Syncfusion.Maui.DataGrid
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add generated samples
 
 To add generated samples directly, use `--control`:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf add maui --control datagrid listview --path ./MyApp
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Update a package
 
 To update a package in an existing project:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf update maui datagrid
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## List available packages
 
 To list all Syncfusion<sup>®</sup> packages available for .NET MAUI:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf list maui packages
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![List of available packages in the Syncfusion .NET CLI](images/cli-list-of-available-packages.png)
 
@@ -59,17 +69,21 @@ sf list maui packages
 
 To list the Syncfusion<sup>®</sup> packages installed in an existing project:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf list maui installed --path ./MyApp
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Search packages
 
 To search the package catalog:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf search maui grid
-```
+{% endhighlight %}
+{% endtabs %}
 
 Existing-project commands accept `-p/--path` with a project file, a project directory, or a supported subdirectory. Discovery stops at the nearest project or repository boundary. `--json` emits one JSON document for script use.
 
