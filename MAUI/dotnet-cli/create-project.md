@@ -58,17 +58,21 @@ N> A complete direct command does not open the wizard. When a name is missing in
 
 To create a blank project without the wizard:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf new maui -n MyApp
-```
+{% endhighlight %}
+{% endtabs %}
 
 To create a project containing Syncfusion<sup>®</sup> control samples:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf new maui -n MyApp --control datagrid
 sf new maui -n MyApp --control datagrid listview
 sf new maui -n MyApp --control cartesian-chart circular-chart
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Platform and .NET version selection
 
@@ -76,15 +80,19 @@ The CLI supports the `maui`, `blazor`, `wpf`, `winforms`, and `winui` platforms.
 
 The framework step selects the base .NET version. It does not select Android, iOS, Windows, or Mac Catalyst individually.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf new maui -n MyApp --target-framework net9.0
-```
+{% endhighlight %}
+{% endtabs %}
 
 A .NET MAUI project declares multiple platform targets, such as `net10.0-android` and `net10.0-windows`. By default, builds run `dotnet build` for all configured targets. Use `--build-framework` to build one enabled target:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf new maui -n MyApp --build-framework net10.0-android --post-action build
-```
+{% endhighlight %}
+{% endtabs %}
 
 `--build-framework` is validated against MSBuild's evaluated targets, and an unknown target is rejected.
 
@@ -92,9 +100,11 @@ sf new maui -n MyApp --build-framework net10.0-android --post-action build
 
 A generated .NET MAUI project declares multiple platform targets, such as `net10.0-android` and `net10.0-windows`. Run the project with the target framework for your platform:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 dotnet run --project ./MyApp/MyApp.csproj -f net10.0-windows
-```
+{% endhighlight %}
+{% endtabs %}
 
 Native platform requirements still apply. Windows apps run on Windows, Mac Catalyst apps on macOS, and Android and iOS apps on an emulator or a connected device.
 
