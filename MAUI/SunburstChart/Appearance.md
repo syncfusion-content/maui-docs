@@ -173,3 +173,60 @@ this.Content = sunburst;
 {% endtabs %}
 
 ![Stroke and stroke width in MAUI Sunburst Chart.](Appearance_images/maui_stroke_output.png)
+
+## Level Based Segment Coloring
+
+The appearance of segments at each hierarchy level can be customized by using the [Fill]() property of the [SunburstHierarchicalLevel](). This property applies the specified brush to all segments generated from the corresponding hierarchy level, allowing each level to have a distinct visual appearance and making it easier to identify the hierarchy depth.
+
+When the [Fill]() property is set to `null`, the Sunburst Chart uses the existing palette based color assignment behavior.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sunburst:SfSunburstChart>
+    <!-- code omitted for brevity -->
+    <sunburst:SfSunburstChart.Levels>
+        <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country" Fill="#8E0F97"/>
+        <sunburst:SunburstHierarchicalLevel GroupMemberPath="Department" Fill="#008F00"/>
+        <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup" Fill="#1313FF"/>
+        <sunburst:SunburstHierarchicalLevel GroupMemberPath="Designation" Fill="#F9A602" />
+    </sunburst:SfSunburstChart.Levels>
+</sunburst:SfSunburstChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfSunburstChart sunburst = new SfSunburstChart();
+
+sunburst.Levels.Add(new SunburstHierarchicalLevel()
+{
+    GroupMemberPath = "Country",
+    Fill = Color.FromArgb("#8E0F97")
+});
+sunburst.Levels.Add(new SunburstHierarchicalLevel()
+{
+    GroupMemberPath = "Department",
+    Fill = Color.FromArgb("#008F00")
+});
+sunburst.Levels.Add(new SunburstHierarchicalLevel()
+{
+    GroupMemberPath = "JobGroup",
+    Fill = Color.FromArgb("#1313FF")
+});
+sunburst.Levels.Add(new SunburstHierarchicalLevel()
+{
+    GroupMemberPath = "Designation",
+    Fill = Color.FromArgb("#F9A602")
+});
+
+// code omitted for brevity
+
+this.Content = sunburst;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Level based segment coloring in .NET MAUI Sunburst Chart](Appearance_images/maui_level_based_segment_coloring.png)
