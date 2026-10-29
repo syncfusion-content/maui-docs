@@ -80,7 +80,7 @@ Use `--file` to activate from an existing key file. With no value, the CLI reads
 
 ```bash
 sf license activate --file
-sf license activate --file C:\keys\syncfusion-license.txt
+sf license activate --file C:\Users\<username>\keys\syncfusion-license.txt
 ```
 
 N> When a license key is supplied through `--file`, the CLI skips sign in and download and registers the keys already in the file. The file path must be absolute.
@@ -118,7 +118,7 @@ In `MauiProgram.cs`, immediately before `MauiApp.CreateBuilder()`.
 
 **Can I use my own key file?**
 
-Yes. Run `sf license activate --file C:\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
+Yes. Run `sf license activate --file C:\Users\<username>\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
 
 **What happens if I am not signed in during activation?**
 
