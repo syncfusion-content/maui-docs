@@ -44,12 +44,14 @@ N> Saving the configuration does not verify the connection to the MCP server. Th
 
 ## Configure MCP using direct commands
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 sf mcp init maui --client vscode --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
 sf mcp init maui --client cursor --path ./MyApp --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
 sf mcp init maui --client codestudio --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --dry-run
 sf mcp init maui --client claude-code --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --no-interactive --json
-```
+{% endhighlight %}
+{% endtabs %}
 
 In a direct command, the platform is the positional argument. `--path` defaults to the current directory. With `--no-interactive` or `--json`, the platform, client, and key file must be provided explicitly.
 

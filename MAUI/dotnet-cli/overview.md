@@ -39,29 +39,39 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
 
 1. Open a terminal and run the following command. Add `--prerelease` while only preview versions are available.
 
-    ```bash
+    {% tabs %}
+{% highlight bash tabtitle="Bash" %}
     dotnet tool install -g Syncfusion.DotNet.CLI --prerelease
-    ```
+    
+{% endhighlight %}
+{% endtabs %}
 
 2. Verify the installation and print the CLI version.
 
-    ```bash
+    {% tabs %}
+{% highlight bash tabtitle="Bash" %}
     sf --version
-    ```
+    
+{% endhighlight %}
+{% endtabs %}
 
 3. If `sf` is not found, add the .NET global tool directory to the `PATH` environment variable: `%USERPROFILE%\.dotnet\tools` on Windows or `$HOME/.dotnet/tools` on macOS and Linux. Then, restart the terminal.
 
 To update the tool to the latest release, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 dotnet tool update -g Syncfusion.DotNet.CLI --prerelease
-```
+{% endhighlight %}
+{% endtabs %}
 
 To remove the tool, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 dotnet tool uninstall -g Syncfusion.DotNet.CLI
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the CLI
 
