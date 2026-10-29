@@ -46,12 +46,12 @@ N> Saving the configuration does not verify the connection to the MCP server. Th
 
 ```bash
 sf mcp init maui --client vscode --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
-sf mcp init maui --client cursor --path "C:\Projects\MyApp" --key-file "C:\Keys\syncfusion.key"
-sf mcp init maui --client codestudio --key-file "C:\Keys\syncfusion.key" --dry-run
-sf mcp init maui --client claude-code --key-file "C:\Keys\syncfusion.key" --no-interactive --json
+sf mcp init maui --client cursor --path ./MyApp --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
+sf mcp init maui --client codestudio --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --dry-run
+sf mcp init maui --client claude-code --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --no-interactive --json
 ```
 
-In a direct command, the platform is the positional argument. `--path` defaults to the current directory. In noninteractive or `--json` usage, the platform, client, and key file must be provided explicitly.
+In a direct command, the platform is the positional argument. `--path` defaults to the current directory. With `--no-interactive` or `--json`, the platform, client, and key file must be provided explicitly.
 
 ## MCP configuration file location
 
@@ -74,7 +74,7 @@ The generated entry registers a server named `sf-maui-mcp`. For example, for VS 
       "command": "dotnet",
       "args": ["tool", "run", "syncfusion-maui-mcp"],
       "env": {
-        "Syncfusion_API_Key_Path": "C:\\Keys\\syncfusion.key"
+        "Syncfusion_API_Key_Path": "%USERPROFILE%\\.syncfusion\\api-key.txt"
       }
     }
   }
