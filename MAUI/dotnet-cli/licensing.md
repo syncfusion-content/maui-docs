@@ -1,7 +1,7 @@
 ---
 layout: post
 title: License Activation using Syncfusion .NET CLI | Syncfusion®
-description: Learn here about how to activate and view Syncfusion® licenses for .NET MAUI projects using the Syncfusion® .NET CLI (sf) license commands.
+description: Learn here about how to activate and view Syncfusion® licenses for .NET MAUI projects using the Syncfusion® .NET CLI (sfdotnet) license commands.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -15,7 +15,7 @@ N> Open the Command Prompt or Terminal in the target sample's project directory 
 
 ## Sign in requirements
 
-License activation requires a Syncfusion<sup>®</sup> account. The CLI uses the account to check your entitlements and download the license keys for the Syncfusion<sup>®</sup> packages detected in the project. You can sign in during activation, or ahead of time with `sf login`.
+License activation requires a Syncfusion<sup>®</sup> account. The CLI uses the account to check your entitlements and download the license keys for the Syncfusion<sup>®</sup> packages detected in the project. You can sign in during activation, or ahead of time with `sfdotnet login`.
 
 ## Sign in and sign out
 
@@ -23,17 +23,17 @@ To sign in to your Syncfusion<sup>®</sup> account, run:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf login
+sfdotnet login
 {% endhighlight %}
 {% endtabs %}
 
-The CLI opens your default browser on the Syncfusion<sup>®</sup> sign-in page. Complete sign in, and the CLI stores a local session for future license operations. The session is reused by `sf license activate`, so you sign in only once per machine until you sign out.
+The CLI opens your default browser on the Syncfusion<sup>®</sup> sign-in page. Complete sign in, and the CLI stores a local session for future license operations. The session is reused by `sfdotnet license activate`, so you sign in only once per machine until you sign out.
 
 To sign out and clear the local sign-in session, run:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf logout
+sfdotnet logout
 {% endhighlight %}
 {% endtabs %}
 
@@ -43,7 +43,7 @@ After signing out, the next license operation prompts you to sign in again. Sign
 
 1. Open the Command Prompt or Terminal in the target sample's project directory.
 
-2. Run `sf` to open the main menu.
+2. Run `sfdotnet` to open the main menu.
 
 3. Under **License management**, select **Activate license**.
 
@@ -65,7 +65,7 @@ Run the activation command from the sample's project directory:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf license activate
+sfdotnet license activate
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,8 +73,8 @@ Pass `--path` to point the CLI at a specific project directory or `.csproj` file
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf license activate --path ./MyApp
-sf license activate --path ./MyApp/MyApp.csproj
+sfdotnet license activate --path ./MyApp
+sfdotnet license activate --path ./MyApp/MyApp.csproj
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,7 +82,7 @@ Use `--yes` to accept the trial EULA prompt without asking:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf license activate --yes
+sfdotnet license activate --yes
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,8 +90,8 @@ Use `--file` to activate from an existing key file. With no value, the CLI reads
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf license activate --file
-sf license activate --file C:\Users\<username>\keys\syncfusion-license.txt
+sfdotnet license activate --file
+sfdotnet license activate --file C:\Users\<username>\keys\syncfusion-license.txt
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,7 +103,7 @@ To see the licenses cached for the current project, run:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf license view
+sfdotnet license view
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,11 +132,11 @@ In `MauiProgram.cs`, immediately before `MauiApp.CreateBuilder()`.
 
 **Can I use my own key file?**
 
-Yes. Run `sf license activate --file C:\Users\<username>\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
+Yes. Run `sfdotnet license activate --file C:\Users\<username>\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
 
 **What happens if I am not signed in during activation?**
 
-The CLI opens your default browser on the Syncfusion<sup>®</sup> sign-in page. After you complete sign in, activation continues. To sign in ahead of time, run `sf login`.
+The CLI opens your default browser on the Syncfusion<sup>®</sup> sign-in page. After you complete sign in, activation continues. To sign in ahead of time, run `sfdotnet login`.
 
 ## See also
 
