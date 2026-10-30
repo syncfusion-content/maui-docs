@@ -1,0 +1,133 @@
+@page "/grid"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>DataGrid</PageTitle>
+<h2>DataGrid</h2>
+
+<SfGrid DataSource="@Employees"
+        @ref="Grid"
+        ID="Grid"
+        AllowPaging="true"
+        AllowSorting="true"
+        AllowFiltering="true"
+        AllowGrouping="true"
+        AllowResizing="true"
+        AllowReordering="true"
+        AllowRowDragAndDrop="true"
+        ShowColumnChooser="true"
+        ShowColumnMenu="true"
+        AllowExcelExport="true"
+        AllowPdfExport="true"
+        ContextMenuItems="@ContextMenuItems"
+        Toolbar="@ToolbarItems">
+
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Employee"></GridEvents>
+
+    <!-- Paging -->
+    <GridPageSettings PageSize="10" />
+
+    <!-- Global filter mode (individual columns override this) -->
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu" />
+
+    <!-- Grouping -->
+    <GridGroupSettings ShowDropArea="true" />
+
+    <!-- Selection -->
+    <GridSelectionSettings Type="SelectionType.Multiple" />
+
+    <!-- Editing + Validation -->
+    <GridEditSettings AllowAdding="true"
+                      AllowEditing="true"
+                      AllowDeleting="true"
+                      Mode="EditMode.Dialog"
+                      ShowDeleteConfirmDialog="true">
+    </GridEditSettings>
+
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Employee.Salary) Type="AggregateType.Sum">
+                     <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate?.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                    <GroupFooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate?.Sum</p>
+                            </div>
+                        }
+                    </GroupFooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+
+    <!-- Columns -->
+    <GridColumns>
+
+        <GridColumn Field="Id"
+                    HeaderText="ID"
+                    IsPrimaryKey="true"
+                    TextAlign="TextAlign.Right"
+                    Width="80"
+                    FilterSettings="@MenuFilter" />
+
+        <GridColumn Field="Name"
+                    HeaderText="Name"
+                    Width="150"
+                    FilterSettings="@ExcelFilter">
+                    <Template>
+                        @{
+                            var Data = (context as Employee);
+                            <div>
+                                <a href="https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app" target="_blank">@Data?.Name</a>
+                            </div>
+                        }
+                    </Template>
+        </GridColumn>
+
+        <GridColumn Field="Department"
+                    HeaderText="Department"
+                    Width="150"
+                    FilterSettings="@CheckBoxFilter">
+        </GridColumn>
+
+        <GridColumn Field="Designation"
+                    HeaderText="Designation"
+                    Width="150"
+                    FilterSettings="@MenuFilter" />
+
+        <GridColumn Field="Salary"
+                    HeaderText="Salary"
+                    Width="120"
+                    TextAlign="TextAlign.Right"
+                    Format="C2"
+                    FilterSettings="@ExcelFilter">
+        </GridColumn>
+
+        <GridColumn Field="Email"
+                    HeaderText="Email"
+                    Width="180"
+                    FilterSettings="@MenuFilter" />
+
+        <GridColumn Field="IsActive"
+                    HeaderText="Active"
+                    DisplayAsCheckBox="true"
+                    Type="ColumnType.Boolean"
+                    Width="100"
+                    FilterSettings="@CheckBoxFilter" />
+
+    </GridColumns>
+</SfGrid>

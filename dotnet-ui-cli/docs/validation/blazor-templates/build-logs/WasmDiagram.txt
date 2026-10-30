@@ -1,0 +1,15 @@
+  … Creating project
+  ✓ Creating project
+  … Adding Syncfusion components
+  ✓ Adding Syncfusion components
+Project created at /workspace/work/blazor-isolated-controls/WasmDiagram
+  Determining projects to restore...
+  Restored /workspace/work/blazor-isolated-controls/WasmDiagram/WasmDiagram.csproj (in 222 ms).
+  WasmDiagram -> /workspace/work/blazor-isolated-controls/WasmDiagram/bin/Debug/net10.0/WasmDiagram.dll
+  WasmDiagram (Blazor output) -> /workspace/work/blazor-isolated-controls/WasmDiagram/bin/Debug/net10.0/wwwroot
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.04

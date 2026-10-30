@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Syncfusion.DotNet.Cli.Core/Syncfusion.DotNet.Cli.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Templates/**" />
+    <EmbeddedResource Include="Templates/Welcome/**/*.*">
+      <LogicalName>$(AssemblyName).Templates.Welcome.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates/**/*.*" Exclude="Templates/Welcome/**;Templates/**/.DS_Store;Templates/**/._*;Templates/**/__MACOSX/**">
+      <LogicalName>$(AssemblyName).Templates.$([System.String]::Copy('%(RecursiveDir)').Replace('/', '.').Replace('\', '.'))%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Catalog/available-packages.json" />
+  </ItemGroup>
+</Project>

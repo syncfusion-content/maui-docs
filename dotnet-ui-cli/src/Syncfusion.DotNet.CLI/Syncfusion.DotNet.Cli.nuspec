@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Syncfusion.DotNet.Cli</id>
+    <version>0.1.0-preview.1</version>
+    <title>Syncfusion .NET CLI</title>
+    <authors>Syncfusion Inc.</authors>
+    <owners>Syncfusion Inc.</owners>
+    <license type="file">LICENSE.txt</license>
+    <icon>syncfusion_logo.png</icon>
+    <projectUrl>https://www.syncfusion.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Syncfusion .NET CLI provides commands to scaffold, configure, and manage Syncfusion applications across .NET platforms including MAUI, Blazor, WPF, WinForms, and WinUI.</description>
+    <readme>README.md</readme>
+    <copyright>Copyright 2001 - 2026 Syncfusion Inc.</copyright>
+    <tags>syncfusion cli dotnet tool maui blazor wpf winforms winui</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+  </metadata>
+</package>

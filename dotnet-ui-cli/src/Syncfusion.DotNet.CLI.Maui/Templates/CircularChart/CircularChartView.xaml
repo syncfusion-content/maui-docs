@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+             x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__"
+             x:DataType="local:__VIEW_MODEL_NAME__"
+             Title="Circular Chart">
+    <ContentPage.BindingContext>
+        <local:__VIEW_MODEL_NAME__ />
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+        <Label Text="Sales by product"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,12"
+               SemanticProperties.HeadingLevel="Level1" />
+        <chart:SfCircularChart Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <chart:SfCircularChart.Legend>
+                <chart:ChartLegend ToggleSeriesVisibility="True" />
+            </chart:SfCircularChart.Legend>
+            <chart:PieSeries ItemsSource="{Binding Data}"
+                             XBindingPath="Category"
+                             YBindingPath="Value"
+                             ShowDataLabels="True"
+                             EnableTooltip="False">
+                <chart:PieSeries.SelectionBehavior>
+                    <chart:DataPointSelectionBehavior SelectionBrush="#0087BE" />
+                </chart:PieSeries.SelectionBehavior>
+            </chart:PieSeries>
+        </chart:SfCircularChart>
+    </Grid>
+</ContentPage>

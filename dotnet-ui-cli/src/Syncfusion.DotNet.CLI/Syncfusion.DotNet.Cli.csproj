@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+  <TargetFramework>net10.0</TargetFramework>
+  <OutputType>Exe</OutputType>
+  <AssemblyName>Syncfusion.DotNet.Cli</AssemblyName>
+  <RootNamespace>Syncfusion.DotNet.Cli</RootNamespace>
+
+  <!-- .NET Tool -->
+  <PackAsTool>true</PackAsTool>
+  <PackageId>Syncfusion.DotNet.Cli</PackageId>
+  <ToolCommandName>sfdotnet</ToolCommandName>
+
+  <!-- NuGet Metadata -->
+  <Title>Syncfusion .NET CLI</Title>
+  <Company>Syncfusion® Inc.</Company>
+  <Authors>Syncfusion® Inc.</Authors>
+  <Copyright>Copyright 2001 - 2026 Syncfusion® Inc.</Copyright>
+
+  <Description>
+    Syncfusion .NET CLI provides commands to scaffold, configure, and manage Syncfusion applications across .NET platforms including MAUI, Blazor, WPF, WinForms, and WinUI.
+  </Description>
+
+  <PackageProjectUrl>
+    https://www.syncfusion.com
+  </PackageProjectUrl>
+
+  <PackageReadmeFile>
+    README.md
+  </PackageReadmeFile>
+
+  <PackageIcon>
+    syncfusion_logo.png
+  </PackageIcon>
+
+  <PackageLicenseFile>
+    LICENSE.txt
+  </PackageLicenseFile>
+
+  <PackageTags>
+    syncfusion;cli;dotnet;tool;maui;blazor;wpf;winforms;winui
+  </PackageTags>
+
+  <!-- Existing properties -->
+  <PackageOutputPath>
+    $(MSBuildThisFileDirectory)..\..\artifacts\packages
+  </PackageOutputPath>
+
+  <IsPackable>true</IsPackable>
+  <IsTool>true</IsTool>
+
+  <TieredPGO>false</TieredPGO>
+  <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  <PublishReadyToRun>true</PublishReadyToRun>
+  <TieredCompilation>true</TieredCompilation>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" />
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.Core\Syncfusion.DotNet.Cli.Core.csproj" />
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.Maui\Syncfusion.DotNet.Cli.Maui.csproj" />
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.Blazor\Syncfusion.DotNet.Cli.Blazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.WPF\Syncfusion.DotNet.Cli.WPF.csproj" />
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.WinForms\Syncfusion.DotNet.Cli.WinForms.csproj" />
+    <ProjectReference Include="..\Syncfusion.DotNet.Cli.WinUI\Syncfusion.DotNet.Cli.WinUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Syncfusion.DotNet.Cli.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Syncfusion.DotNet.Cli.nuspec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md" Pack="true" PackagePath="\" />
+    <None Update="LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Update="syncfusion_logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
