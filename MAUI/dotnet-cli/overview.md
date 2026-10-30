@@ -35,7 +35,7 @@ N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `h
 
 ## Installation
 
-The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNet.Cli`.
+Install the tool globally using the .NET CLI.
 
 1. Open a terminal and run the following command:
 
