@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create .NET MAUI Projects using Syncfusion .NET CLI | Syncfusion®
-description: Learn here about how to create a Syncfusion® .NET MAUI project using the Syncfusion® .NET CLI (sf) through the interactive wizard or direct commands.
+description: Learn here about how to create a Syncfusion® .NET MAUI project using the Syncfusion® .NET CLI (sfdotnet) through the interactive wizard or direct commands.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -13,7 +13,7 @@ You can create a .NET MAUI project through the interactive wizard or a direct co
 
 ## Create a project using the interactive wizard
 
-Run `sf new`, or select **Create a new project** from the main menu. The .NET MAUI creation flow is:
+Run `sfdotnet new`, or select **Create a new project** from the main menu. The .NET MAUI creation flow is:
 
 1. **Platform:** Select **.NET MAUI**.
 
@@ -60,7 +60,7 @@ To create a blank project without the wizard:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf new maui -n MyApp
+sfdotnet new maui -n MyApp
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,21 +68,21 @@ To create a project containing Syncfusion<sup>®</sup> control samples:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf new maui -n MyApp --control datagrid
-sf new maui -n MyApp --control datagrid listview
-sf new maui -n MyApp --control cartesian-chart circular-chart
+sfdotnet new maui -n MyApp --control datagrid
+sfdotnet new maui -n MyApp --control datagrid listview
+sfdotnet new maui -n MyApp --control cartesian-chart circular-chart
 {% endhighlight %}
 {% endtabs %}
 
 ## Platform and .NET version selection
 
-The CLI supports the `maui`, `blazor`, `wpf`, `winforms`, and `winui` platforms. In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sf info`) and general help (`sf help`) do not ask for a platform.
+The CLI supports the `maui`, `blazor`, `wpf`, `winforms`, and `winui` platforms. In a direct command, the platform is the positional argument or the `--framework/-f` option. Actions that need a platform ask for the platform first. Information (`sfdotnet info`) and general help (`sfdotnet help`) do not ask for a platform.
 
 The framework step selects the base .NET version. It does not select Android, iOS, Windows, or Mac Catalyst individually.
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf new maui -n MyApp --target-framework net9.0
+sfdotnet new maui -n MyApp --target-framework net9.0
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,7 +90,7 @@ A .NET MAUI project declares multiple platform targets, such as `net10.0-android
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf new maui -n MyApp --build-framework net10.0-android --post-action build
+sfdotnet new maui -n MyApp --build-framework net10.0-android --post-action build
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,7 +130,7 @@ N> `--post-action build` conflicts with `--no-build`. Neither `--force` nor conf
 
 ## FAQs
 
-**Does `sf add maui datagrid` generate the DataGrid sample?**
+**Does `sfdotnet add maui datagrid` generate the DataGrid sample?**
 
 In a CLI-generated project, yes. In an ordinary project, the command adds the NuGet package reference only and reports that no sample was generated. For details, refer to [Manage packages](/maui/dotnet-cli/manage-packages).
 

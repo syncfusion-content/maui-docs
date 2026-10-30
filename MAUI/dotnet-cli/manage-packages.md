@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manage Syncfusion MAUI NuGet Packages using .NET CLI | Syncfusion®
-description: Learn here about how to add, update, list, and search Syncfusion® .NET MAUI NuGet packages in an existing project using the Syncfusion® .NET CLI (sf).
+description: Learn here about how to add, update, list, and search Syncfusion® .NET MAUI NuGet packages in an existing project using the Syncfusion® .NET CLI (sfdotnet).
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -11,7 +11,7 @@ documentation: UG
 
 Package operations change NuGet references only. They do not generate control files.
 
-In a CLI-generated project, supported package aliases also integrate their samples. For example, `sf add maui datagrid` adds the DataGrid package and integrates the DataGrid sample. In an ordinary project, the same command adds the package reference only, and the CLI reports that no sample was generated.
+In a CLI-generated project, supported package aliases also integrate their samples. For example, `sfdotnet add maui datagrid` adds the DataGrid package and integrates the DataGrid sample. In an ordinary project, the same command adds the package reference only, and the CLI reports that no sample was generated.
 
 ## Add a package by alias
 
@@ -19,7 +19,7 @@ To add a package using its short package alias:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf add maui datagrid
+sfdotnet add maui datagrid
 {% endhighlight %}
 {% endtabs %}
 
@@ -29,7 +29,7 @@ To add a package using the exact NuGet package identifier:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf add maui Syncfusion.Maui.DataGrid
+sfdotnet add maui Syncfusion.Maui.DataGrid
 {% endhighlight %}
 {% endtabs %}
 
@@ -39,7 +39,7 @@ To add generated samples directly, use `--control`:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf add maui --control datagrid listview --path ./MyApp
+sfdotnet add maui --control datagrid listview --path ./MyApp
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,7 +49,7 @@ To update a package in an existing project:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf update maui datagrid
+sfdotnet update maui datagrid
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,7 +59,7 @@ To list all Syncfusion<sup>®</sup> packages available for .NET MAUI:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf list maui packages
+sfdotnet list maui packages
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,7 +71,7 @@ To list the Syncfusion<sup>®</sup> packages installed in an existing project:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf list maui installed --path ./MyApp
+sfdotnet list maui installed --path ./MyApp
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,7 +81,7 @@ To search the package catalog:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf search maui grid
+sfdotnet search maui grid
 {% endhighlight %}
 {% endtabs %}
 

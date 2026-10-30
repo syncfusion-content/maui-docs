@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure MCP Server using Syncfusion .NET CLI | Syncfusion®
-description: Learn here about how to configure the Syncfusion® .NET MAUI MCP server for AI coding clients using the Syncfusion® .NET CLI (sf).
+description: Learn here about how to configure the Syncfusion® .NET MAUI MCP server for AI coding clients using the Syncfusion® .NET CLI (sfdotnet).
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Configure an MCP server
 
-The `sf mcp init` command configures the official Syncfusion<sup>®</sup> .NET MAUI MCP server (`Syncfusion.Maui.MCP`) for an AI coding client in a project-local workspace. The MCP server exposes Syncfusion<sup>®</sup> documentation and product knowledge to AI agents, such as GitHub Copilot, Cursor, and Claude Code.
+The `sfdotnet mcp init` command configures the official Syncfusion<sup>®</sup> .NET MAUI MCP server (`Syncfusion.Maui.MCP`) for an AI coding client in a project-local workspace. The MCP server exposes Syncfusion<sup>®</sup> documentation and product knowledge to AI agents, such as GitHub Copilot, Cursor, and Claude Code.
 
 The MCP setup workflow does not install component libraries and does not modify application code. It only writes the client's project-local MCP configuration file and, when needed, installs the official MCP NuGet tool.
 
@@ -18,11 +18,11 @@ The MCP setup workflow does not install component libraries and does not modify 
 * A Syncfusion<sup>®</sup> MCP API key, generated at [https://www.syncfusion.com/account/api-key](https://www.syncfusion.com/account/api-key).
 * An active Syncfusion<sup>®</sup> license for MCP usage.
 
-N> The MCP API key is separate from your product license key and from the `sf login` session. It is used only by the MCP server.
+N> The MCP API key is separate from your product license key and from the `sfdotnet login` session. It is used only by the MCP server.
 
 ## Configure MCP through the interactive menu
 
-1. Run `sf` to open the main menu, and under **AI & Skills**, select **Setup Model Context Protocol (MCP)**.
+1. Run `sfdotnet` to open the main menu, and under **AI & Skills**, select **Setup Model Context Protocol (MCP)**.
 
     ![AI and Skills section in the Syncfusion .NET CLI main menu](images/cli-setup-mcp-command-menu.png)
 
@@ -46,10 +46,10 @@ N> Saving the configuration does not verify the connection to the MCP server. Th
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sf mcp init maui --client vscode --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
-sf mcp init maui --client cursor --path ./MyApp --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
-sf mcp init maui --client codestudio --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --dry-run
-sf mcp init maui --client claude-code --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --no-interactive --json
+sfdotnet mcp init maui --client vscode --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
+sfdotnet mcp init maui --client cursor --path ./MyApp --key-file "%USERPROFILE%\.syncfusion\api-key.txt"
+sfdotnet mcp init maui --client codestudio --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --dry-run
+sfdotnet mcp init maui --client claude-code --key-file "%USERPROFILE%\.syncfusion\api-key.txt" --no-interactive --json
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,7 +111,7 @@ The MCP server authenticates with a Syncfusion<sup>®</sup> API key that is diff
 **Update or manage the key:**
 
 * To use a new key value, edit the existing file in place. The configuration stores the file path, not the key content, so no configuration change is needed.
-* To use a different file, re-run `sf mcp init` with the new `--key-file` path.
+* To use a different file, re-run `sfdotnet mcp init` with the new `--key-file` path.
 * Symbolic links are rejected; pass the real file path.
 
 W> Never commit the API-key file to source control, and never paste the key value directly into the terminal. Store the file in a location excluded from repositories, such as the user profile directory.

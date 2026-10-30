@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for .NET MAUI | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sf) to create .NET MAUI apps, manage Syncfusion MAUI packages, and register licenses.
+description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create .NET MAUI apps, manage Syncfusion MAUI packages, and register licenses.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,9 +9,9 @@ documentation: UG
 
 # Overview of the Syncfusion<sup>®</sup> .NET CLI
 
-The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line tool that creates .NET MAUI projects, manages Syncfusion<sup>®</sup> .NET MAUI NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sf` with no arguments to open an interactive menu, or run a direct command such as `sf new maui` for scripted, prompt-free creation.
+The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates .NET MAUI projects, manages Syncfusion<sup>®</sup> .NET MAUI NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new maui` for scripted, prompt-free creation.
 
-N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
+N> The Syncfusion<sup>®</sup> .NET CLI installs the `sfdotnet` command.
 
 You can use the CLI to perform the following actions:
 
@@ -37,12 +37,11 @@ N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `h
 
 The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNet.Cli`.
 
-1. Open a terminal and run the following command. Add `--prerelease` while only preview versions are available.
+1. Open a terminal and run the following command:
 
     {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-    dotnet tool install -g Syncfusion.DotNet.Cli --prerelease
-    
+    dotnet tool install -g Syncfusion.DotNet.Cli
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,18 +49,25 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
 
     {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-    sf --version
-    
+    sfdotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-3. If `sf` is not found, add the .NET global tool directory to the `PATH` environment variable: `%USERPROFILE%\.dotnet\tools` on Windows or `$HOME/.dotnet/tools` on macOS and Linux. Then, restart the terminal.
+3. If `sfdotnet` is not found, add the .NET global tool directory to the `PATH` environment variable: `%USERPROFILE%\.dotnet\tools` on Windows or `$HOME/.dotnet/tools` on macOS and Linux. Then, restart the terminal.
+
+    | Environment variable | Value |
+    | --- | --- |
+    | `PATH` | `%USERPROFILE%\.dotnet\tools` |
+
+4. Run `sfdotnet help` for a short command map, or `sfdotnet help maui` for the .NET MAUI command map and package aliases.
+
+![Help output in the Syncfusion .NET CLI](images/cli-show-help.png)
 
 To update the tool to the latest release, run:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-dotnet tool update -g Syncfusion.DotNet.Cli --prerelease
+dotnet tool update -g Syncfusion.DotNet.Cli
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,7 +81,7 @@ dotnet tool uninstall -g Syncfusion.DotNet.Cli
 
 ## Initialize the CLI
 
-Run `sf` in an interactive terminal to open the main menu. The menu shows the current CLI version and groups the available operations.
+Run `sfdotnet` in an interactive terminal to open the main menu. The menu shows the current CLI version and groups the available operations.
 
 ![Syncfusion .NET CLI main menu](images/cli-main-menu.png)
 
@@ -97,27 +103,27 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 
 | Command | Purpose | For details, refer to |
 | --- | --- | --- |
-| `sf new maui` | Create a new .NET MAUI project | [Create a .NET MAUI project](/maui/dotnet-cli/create-project) |
-| `sf add maui <package>` | Add a Syncfusion<sup>®</sup> package to an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
-| `sf update maui <package>` | Update a package in an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
-| `sf list maui packages` | List available packages | [Manage packages](/maui/dotnet-cli/manage-packages) |
-| `sf list maui installed` | List installed packages in an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
-| `sf search maui <text>` | Search packages | [Manage packages](/maui/dotnet-cli/manage-packages) |
-| `sf mcp init maui` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/maui/dotnet-cli/configure-mcp) |
-| `sf skills install maui` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/maui/dotnet-cli/install-skills) |
-| `sf login` | Sign in to Syncfusion through the browser | [License activation](/maui/dotnet-cli/licensing) |
-| `sf logout` | Sign out and clear the local session | [License activation](/maui/dotnet-cli/licensing) |
-| `sf license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/maui/dotnet-cli/licensing) |
-| `sf license view` | Show the licenses cached for the project (no network call) | [License activation](/maui/dotnet-cli/licensing) |
-| `sf info` | Show CLI information | |
-| `sf help maui` | Show the .NET MAUI command map | |
-| `sf --version` | Show the CLI version | |
+| `sfdotnet new maui` | Create a new .NET MAUI project | [Create a .NET MAUI project](/maui/dotnet-cli/create-project) |
+| `sfdotnet add maui <package>` | Add a Syncfusion<sup>®</sup> package to an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
+| `sfdotnet update maui <package>` | Update a package in an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
+| `sfdotnet list maui packages` | List available packages | [Manage packages](/maui/dotnet-cli/manage-packages) |
+| `sfdotnet list maui installed` | List installed packages in an existing project | [Manage packages](/maui/dotnet-cli/manage-packages) |
+| `sfdotnet search maui <text>` | Search packages | [Manage packages](/maui/dotnet-cli/manage-packages) |
+| `sfdotnet mcp init maui` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/maui/dotnet-cli/configure-mcp) |
+| `sfdotnet skills install maui` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/maui/dotnet-cli/install-skills) |
+| `sfdotnet login` | Sign in to Syncfusion through the browser | [License activation](/maui/dotnet-cli/licensing) |
+| `sfdotnet logout` | Sign out and clear the local session | [License activation](/maui/dotnet-cli/licensing) |
+| `sfdotnet license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/maui/dotnet-cli/licensing) |
+| `sfdotnet license view` | Show the licenses cached for the project (no network call) | [License activation](/maui/dotnet-cli/licensing) |
+| `sfdotnet info` | Show CLI information | |
+| `sfdotnet help maui` | Show the .NET MAUI command map | |
+| `sfdotnet --version` | Show the CLI version | |
 
 ## FAQs
 
 **How do I use the interactive menu?**
 
-Run `sf` without arguments and use the arrow keys and Enter to navigate. Direct commands remain usable without opening the menu.
+Run `sfdotnet` without arguments and use the arrow keys and Enter to navigate. Direct commands remain usable without opening the menu.
 
 ## See also
 
