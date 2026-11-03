@@ -141,5 +141,4 @@ In a CLI-generated project, yes. In an ordinary project, the command adds the Nu
 ## See also
 
 * [Manage packages in an existing project](/maui/dotnet-cli/manage-packages)
-* [License activation](/maui/dotnet-cli/licensing)
 * [Installing .NET MAUI NuGet packages](https://help.syncfusion.com/maui/installation/install-nuget-packages)

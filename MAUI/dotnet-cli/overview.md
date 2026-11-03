@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for .NET MAUI | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create .NET MAUI apps, manage Syncfusion MAUI packages, and register licenses.
+description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create .NET MAUI apps, manage Syncfusion MAUI packages, and configure AI integrations.
 platform: MAUI
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Overview of the Syncfusion<sup>®</sup> .NET CLI
 
-The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates .NET MAUI projects, manages Syncfusion<sup>®</sup> .NET MAUI NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new maui` for scripted, prompt-free creation.
+The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates .NET MAUI projects, manages Syncfusion<sup>®</sup> .NET MAUI NuGet packages, and configures AI integrations from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new maui` for scripted, prompt-free creation.
 
 N> The Syncfusion<sup>®</sup> .NET CLI installs the `sfdotnet` command.
 
@@ -17,7 +17,6 @@ You can use the CLI to perform the following actions:
 
 * Create a blank .NET MAUI app, or an app containing generated Syncfusion<sup>®</sup> control samples. For details, refer to [Create a .NET MAUI project](/maui/dotnet-cli/create-project).
 * Add or update Syncfusion<sup>®</sup> .NET MAUI NuGet package references in an existing project. For details, refer to [Manage packages](/maui/dotnet-cli/manage-packages).
-* Activate Syncfusion<sup>®</sup> licenses for the controls used in a sample, and view installed licenses. For details, refer to [License activation](/maui/dotnet-cli/licensing).
 * Configure an official Syncfusion<sup>®</sup> Model Context Protocol (MCP) server for AI coding clients. For details, refer to [MCP configuration](/maui/dotnet-cli/configure-mcp).
 * Install official Syncfusion<sup>®</sup> component skills for AI agents. For details, refer to [AI skills installation](/maui/dotnet-cli/install-skills).
 
@@ -29,7 +28,6 @@ The following software is required before you install and use the CLI:
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) with the **.NET Multi-platform App UI development** workload. The workload also installs the .NET MAUI project templates, which the CLI uses to create projects.
 * An internet connection so package operations can reach [nuget.org](https://www.nuget.org).
-* A Syncfusion<sup>®</sup> account to activate licenses. Sign in is performed through the browser during license activation.
 
 N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `https://api.nuget.org/v3/index.json`. The CLI accepts only this source through `--source`.
 
@@ -111,10 +109,6 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 | `sfdotnet search maui <text>` | Search packages | [Manage packages](/maui/dotnet-cli/manage-packages) |
 | `sfdotnet mcp init maui` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/maui/dotnet-cli/configure-mcp) |
 | `sfdotnet skills install maui` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/maui/dotnet-cli/install-skills) |
-| `sfdotnet login` | Sign in to Syncfusion through the browser | [License activation](/maui/dotnet-cli/licensing) |
-| `sfdotnet logout` | Sign out and clear the local session | [License activation](/maui/dotnet-cli/licensing) |
-| `sfdotnet license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/maui/dotnet-cli/licensing) |
-| `sfdotnet license view` | Show the licenses cached for the project (no network call) | [License activation](/maui/dotnet-cli/licensing) |
 | `sfdotnet info` | Show CLI information | |
 | `sfdotnet help maui` | Show the .NET MAUI command map | |
 | `sfdotnet --version` | Show the CLI version | |
