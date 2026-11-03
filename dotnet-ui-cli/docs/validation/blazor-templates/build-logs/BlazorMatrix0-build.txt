@@ -1,9 +1,0 @@
-  Determining projects to restore...
-  Restored /workspace/work/blazor-final-matrix/BlazorMatrix0/BlazorMatrix0.csproj (in 1.01 sec).
-  BlazorMatrix0 -> /workspace/work/blazor-final-matrix/BlazorMatrix0/bin/Debug/net10.0/BlazorMatrix0.dll
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:40.21
