@@ -103,5 +103,4 @@ Existing-project commands accept `-p/--path` with a project file, a project dire
 ## See also
 
 * [Create a .NET MAUI project](/maui/dotnet-cli/create-project)
-* [License activation](/maui/dotnet-cli/licensing)
 * [Installing .NET MAUI NuGet packages](https://help.syncfusion.com/maui/installation/install-nuget-packages)
