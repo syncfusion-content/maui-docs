@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+             Title="ListView"
+             x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__"
+             x:DataType="local:__VIEW_MODEL_NAME__">
+    <ContentPage.BindingContext>
+        <local:__VIEW_MODEL_NAME__ />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+        <syncfusion:SfListView ItemsSource="{Binding Books}" AutoFitMode="DynamicHeight"
+                               HorizontalOptions="Fill"
+                               VerticalOptions="Fill">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate x:DataType="local:ListViewModel">
+                    <Grid RowDefinitions="Auto,Auto" Padding="12,8" RowSpacing="4">
+                        <Label Grid.Row="0"
+                               Text="{Binding BookName}"
+                               FontAttributes="Bold"
+                               LineBreakMode="WordWrap" />
+                        <Label Grid.Row="1"
+                               Text="{Binding BookDescription}"
+                               LineBreakMode="WordWrap" />
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </Grid>
+</ContentPage>

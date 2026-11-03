@@ -1,0 +1,77 @@
+@page "/charts"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor.Charts
+
+<PageTitle>Chart</PageTitle>
+<h2>Chart</h2>
+
+
+<div class="row mb-4">
+    @KpiCard("Total Revenue", "$1.2M", "💰")
+    @KpiCard("Orders", "8,420", "📦")
+    @KpiCard("Customers", "3,120", "👤")
+    @KpiCard("Growth", "18%", "📈")
+</div>
+
+
+<!-- CHART ROW 1 -->
+<div class="row">
+    <div class="col-md-6">
+        <SfChart Title="Monthly Revenue">
+            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+            <ChartSeriesCollection>
+                <ChartSeries DataSource="@RevenueData"
+                             XName="Month"
+                             YName="Amount"
+                             Type="ChartSeriesType.Column">
+                </ChartSeries>
+            </ChartSeriesCollection>
+            <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+        </SfChart>
+    </div>
+
+    <div class="col-md-6">
+        <SfChart Title="Orders Trend">
+            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+            <ChartSeriesCollection>
+                <ChartSeries DataSource="@OrdersData"
+                             XName="Month"
+                             YName="Count"
+                             Type="ChartSeriesType.Line">
+                    <ChartMarker Visible="true" Height="10" Width="10">
+                    </ChartMarker>
+                </ChartSeries>
+            </ChartSeriesCollection>
+            <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+        </SfChart>
+    </div>
+</div>
+
+<!-- CHART ROW 2 -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <SfAccumulationChart Title="Market Share">
+            <AccumulationChartSeriesCollection>
+                <AccumulationChartSeries DataSource="@MarketShareData" XName="Company" YName="Share">
+                </AccumulationChartSeries>
+            </AccumulationChartSeriesCollection>
+        </SfAccumulationChart>
+    </div>
+
+    <div class="col-md-6">
+        <SfChart Title="Customer Growth">
+            <ChartSeriesCollection>
+                <ChartSeries DataSource="@CustomerGrowthData"
+                             XName="Year"
+                             YName="Customers"
+                             Type="ChartSeriesType.Area">
+                    <ChartMarker Visible="true" Height="10" Width="10">
+                        <ChartDataLabel Visible="true" />
+                    </ChartMarker>
+                </ChartSeries>
+            </ChartSeriesCollection>
+            <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+        </SfChart>
+    </div>
+</div>

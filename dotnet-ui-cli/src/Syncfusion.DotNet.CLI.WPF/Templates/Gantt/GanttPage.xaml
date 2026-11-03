@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+      xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+      x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__">
+    <Grid>
+        <Grid.DataContext>
+            <local:__VIEW_MODEL_NAME__ />
+        </Grid.DataContext>
+        <syncfusion:GanttControl x:Name="Gantt"
+                                 ItemsSource="{Binding TaskCollection}"
+                                 AllowFiltering="True"
+                                 AllowSorting="True">
+            <syncfusion:GanttControl.TaskAttributeMapping>
+                <syncfusion:TaskAttributeMapping
+                    ChildMapping="Child"
+                    DurationMapping="Duration"
+                    FinishDateMapping="FinishDate"
+                    MileStoneMapping="IsMileStone"
+                    ProgressMapping="Progress"
+                    StartDateMapping="StartDate"
+                    TaskIdMapping="TaskId"
+                    TaskNameMapping="TaskName" />
+            </syncfusion:GanttControl.TaskAttributeMapping>
+        </syncfusion:GanttControl>
+    </Grid>
+</Page>

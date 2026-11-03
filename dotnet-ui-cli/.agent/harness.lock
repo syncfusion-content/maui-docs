@@ -1,0 +1,170 @@
+{
+  "lockVersion": 1,
+  "harnessVersion": "1.0",
+  "contractVersion": "1.0",
+  "generatedAt": "2026-10-30T04:27:56+00:00",
+  "profile": "dotnet-common",
+  "overlays": [
+    "syncfusion"
+  ],
+  "tier": "L1",
+  "fingerprint": "f217f8fe36395deb4e4df1d3e664c781",
+  "manifests": [
+    "Directory.Packages.props",
+    "scripts/WinFormsWelcomeValidation/WinFormsWelcomeValidation.csproj",
+    "src/Syncfusion.DotNet.Cli.Blazor/Syncfusion.DotNet.Cli.Blazor.csproj",
+    "src/Syncfusion.DotNet.Cli.Core/Syncfusion.DotNet.Cli.Core.csproj",
+    "src/Syncfusion.DotNet.Cli.Maui/Syncfusion.DotNet.Cli.Maui.csproj",
+    "src/Syncfusion.DotNet.Cli.WPF/Syncfusion.DotNet.Cli.WPF.csproj",
+    "src/Syncfusion.DotNet.Cli.WinForms/Syncfusion.DotNet.Cli.WinForms.csproj",
+    "src/Syncfusion.DotNet.Cli.WinUI/Syncfusion.DotNet.Cli.WinUI.csproj",
+    "src/Syncfusion.DotNet.Cli/Syncfusion.DotNet.Cli.csproj",
+    "tests/Syncfusion.DotNet.Cli.Tests.csproj"
+  ],
+  "configSha256": "b40c769fd6cafac0d490ee55d9f79d2ec44dbebfe82fb424953efe0a4430bf9b",
+  "gateIds": [
+    "build",
+    "harness-verify",
+    "harness-tools-tests",
+    "tests",
+    "known-failing",
+    "area-command-parsing",
+    "area-wizard-flow",
+    "area-project-creation-flow",
+    "area-terminal-rendering",
+    "area-ai-integration",
+    "area-home-menu",
+    "area-project-generation",
+    "area-package-operations",
+    "regression-ledger",
+    "coverage-diff",
+    "catalog-audit-tests",
+    "e2e-workflows",
+    "e2e-interactive-wizard",
+    "vulnerable-packages"
+  ],
+  "tools": {
+    "dotnet": {
+      "status": "ok",
+      "version": "10.0.403"
+    },
+    "python3": {
+      "status": "ok",
+      "version": "Python 3.9.6"
+    },
+    "pytest": {
+      "status": "error",
+      "detail": "/Library/Developer/CommandLineTools/usr/bin/python3: No module named pytest"
+    }
+  },
+  "ratchetFloors": {
+    "tests": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 1000.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "area-command-parsing": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 90.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "area-wizard-flow": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 140.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "area-project-creation-flow": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 87.0,
+      "since": "2026-10-28T05:08:23+00:00"
+    },
+    "area-terminal-rendering": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 200.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "area-ai-integration": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 135.0,
+      "since": "2026-10-28T06:05:19+00:00"
+    },
+    "area-home-menu": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 16.0,
+      "since": "2026-10-28T05:13:54+00:00"
+    },
+    "area-project-generation": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 420.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "area-package-operations": {
+      "metric": "tests",
+      "op": ">=",
+      "value": 115.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "regression-ledger": {
+      "metric": "entries",
+      "op": ">=",
+      "value": 20.0,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "coverage-diff": {
+      "metric": "diffLineRate",
+      "op": ">=",
+      "value": 0.8,
+      "since": "2026-10-14T11:34:09+00:00"
+    },
+    "e2e-workflows": {
+      "metric": "passed",
+      "op": ">=",
+      "value": 90.0,
+      "since": "2026-10-14T11:34:10+00:00"
+    },
+    "e2e-interactive-wizard": {
+      "metric": "passed",
+      "op": ">=",
+      "value": 25.0,
+      "since": "2026-10-28T05:08:24+00:00"
+    }
+  },
+  "knowledge": {
+    "knowledge/cli-architecture.md": {
+      "sha256": "85f6e0c23c5b919887a18cd47dea44062080e258c01ce966b8bffdf7f9f32776",
+      "sources": [
+        {
+          "url": "docs/architecture.md",
+          "retrieved": "2026-10-14"
+        },
+        {
+          "url": "docs/desktop-platforms.md",
+          "retrieved": "2026-10-14"
+        }
+      ]
+    },
+    "knowledge/cli-command-surface.md": {
+      "sha256": "e1eba84b2373b8f16bde45a26973fe6a391e3ca22de95eee578ec78902c0669a",
+      "sources": [
+        {
+          "url": "docs/command-reference.md",
+          "retrieved": "2026-10-14"
+        }
+      ]
+    },
+    "knowledge/external-docs-NOT-RETRIEVED.md": {
+      "sha256": "98abdd4d7d299c5c060126a50fb37af6fa39f1668969061d5911be1cb00dee26",
+      "sources": []
+    }
+  },
+  "python": "3.9.6",
+  "git": "25f99ebf593c27a81a7d22672a3d9c8b7020f89d"
+}

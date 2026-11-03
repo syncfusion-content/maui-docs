@@ -1,0 +1,48 @@
+<Page
+    x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.TreeViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+    xmlns:treeView="using:Syncfusion.UI.Xaml.TreeView">
+
+    <Grid Padding="16">
+        <treeView:SfTreeView
+            x:Name="treeView"
+            AutoExpandMode="AllNodes"
+            BorderBrush="LightGray"
+            BorderThickness="1"
+            CheckBoxMode="Recursive"
+            CheckedItems="{Binding CheckedItems}"
+            ChildPropertyName="SubItems"
+            ExpandActionTrigger="Expander"
+            IsAnimationEnabled="True"
+            ItemTemplateDataContextType="Node"
+            ItemsSource="{Binding Items}"
+            SelectionMode="Multiple"
+            SelectedItems="{Binding SelectedItems}"
+            Indentation="40"
+            ShowLines="True"
+            ShowRootLines="True"
+            NodePopulationMode="Instant"
+            AllowEditing="True">
+            <treeView:SfTreeView.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox
+                        x:Name="checkBox"
+                        Content="{Binding Content.State}"
+                        local:NullableTreeCheckbox.IsEnabled="true"
+                        local:NullableTreeCheckbox.IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                </DataTemplate>
+            </treeView:SfTreeView.ItemTemplate>
+            <treeView:SfTreeView.EditTemplate>
+                <DataTemplate>
+                    <TextBox
+                        x:Name="editTextBox"
+                        Text="{Binding Content.State, Mode=TwoWay}"
+                        MinWidth="100"
+                        Padding="5" />
+                </DataTemplate>
+            </treeView:SfTreeView.EditTemplate>
+        </treeView:SfTreeView>
+    </Grid>
+</Page>

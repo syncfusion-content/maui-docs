@@ -1,0 +1,776 @@
+{
+  "reviewedAt": "2026-10-08",
+  "documentationRepository": "https://github.com/syncfusion-content/maui-docs",
+  "documentationCommit": "9bbaa28f4055c30bbb52546594db7f3bfef72b61",
+  "toolkitDocumentationCommit": "f497265a437e5f20481d766838de70e767d6b3f3",
+  "categoryBasis": "Official Introduction/Overview.md category groups, control overview descriptions, and per-package NuGet descriptions. Existing category vocabulary normalized across related products. NuGet stable status describes published releases, not whether every contained control is preview.",
+  "packages": [
+    {
+      "alias": "a2-ui",
+      "packageId": "Syncfusion.Maui.A2UI",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.a2ui/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion A2UI for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Conversational UI and AI",
+      "documentationFiles": [
+        "MAUI/Syncfusion-A2UI/getting-started.md",
+        "MAUI/Syncfusion-A2UI/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "assistview",
+      "packageId": "Syncfusion.Maui.AIAssistView",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.aiassistview/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion AIAssistView for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Conversational UI and AI",
+      "documentationFiles": [
+        "MAUI/AIAssistView/getting-started.md",
+        "MAUI/AIAssistView/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "backdrop",
+      "packageId": "Syncfusion.Maui.Backdrop",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.backdrop/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Backdrop for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Backdrop/getting-started.md",
+        "MAUI/Backdrop/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "barcode",
+      "packageId": "Syncfusion.Maui.Barcode",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.barcode/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Barcode Generator for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/Barcode-Generator/getting-started.md",
+        "MAUI/Barcode-Generator/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "buttons",
+      "packageId": "Syncfusion.Maui.Buttons",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.buttons/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Buttons for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Buttons",
+      "documentationFiles": [
+        "MAUI/Switch/Getting-Started.md",
+        "MAUI/Switch/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "calendar",
+      "packageId": "Syncfusion.Maui.Calendar",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.calendar/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Calendar for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Calendars and Scheduling",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "cards",
+      "packageId": "Syncfusion.Maui.Cards",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.cards/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Cards for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Cards/getting-started.md",
+        "MAUI/Cards/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "carousel",
+      "packageId": "Syncfusion.Maui.Carousel",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.carousel/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Carousel for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Carousel-View/getting-started.md",
+        "MAUI/Carousel-View/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "charts",
+      "packageId": "Syncfusion.Maui.Charts",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.charts/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Charts for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/Cartesian-Charts/Getting-Started.md",
+        "MAUI/Cartesian-Charts/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "chat",
+      "packageId": "Syncfusion.Maui.Chat",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.chat/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Chat for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Conversational UI and AI",
+      "documentationFiles": [
+        "MAUI/Chat/getting-started.md",
+        "MAUI/Chat/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "core",
+      "packageId": "Syncfusion.Maui.Core",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.core/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Core for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Infrastructure",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "data-form",
+      "packageId": "Syncfusion.Maui.DataForm",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.dataform/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion DataForm for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Editors and Inputs",
+      "documentationFiles": [
+        "MAUI/DataForm/getting-started.md",
+        "MAUI/DataForm/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "data-grid-export",
+      "packageId": "Syncfusion.Maui.DataGridExport",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.datagridexport/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion DataGridExport for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Grids",
+      "documentationFiles": [
+        "MAUI/DataGrid/export-to-excel.md",
+        "MAUI/DataGrid/export-to-pdf.md"
+      ],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "data-pager",
+      "packageId": "Syncfusion.Maui.DataPager",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.datapager/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion DataPager for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Grids",
+      "documentationFiles": [
+        "MAUI/DataPager/getting-started.md",
+        "MAUI/DataPager/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "datagrid",
+      "packageId": "Syncfusion.Maui.DataGrid",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.datagrid/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion DataGrid for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Grids",
+      "documentationFiles": [
+        "MAUI/DataGrid/Getting-started.md",
+        "MAUI/DataGrid/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "diagram",
+      "packageId": "Syncfusion.Maui.Diagram",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.diagram/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Diagram for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/Diagram/getting-started.md",
+        "MAUI/Diagram/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "expander",
+      "packageId": "Syncfusion.Maui.Expander",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.expander/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Accordion for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Expander/getting-started.md",
+        "MAUI/Expander/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "gauges",
+      "packageId": "Syncfusion.Maui.Gauges",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.gauges/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Gauges for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/Radial-Gauge/getting-started.md",
+        "MAUI/Radial-Gauge/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "grid-splitter",
+      "packageId": "Syncfusion.Maui.GridSplitter",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.gridsplitter/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion GridSplitter for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Grid-Splitter/OverView.md",
+        "MAUI/Grid-Splitter/Getting-Started.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "image-editor",
+      "packageId": "Syncfusion.Maui.ImageEditor",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.imageeditor/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion ImageEditor for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [
+        "MAUI/ImageEditor/getting-started.md",
+        "MAUI/ImageEditor/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "inputs",
+      "packageId": "Syncfusion.Maui.Inputs",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.inputs/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Inputs for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Editors and Inputs",
+      "documentationFiles": [
+        "MAUI/ComboBox/Getting-Started.md",
+        "MAUI/ComboBox/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "interactive-viewer",
+      "packageId": "Syncfusion.Maui.InteractiveViewer",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.interactiveviewer/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion InteractiveViewer for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [
+        "MAUI/Interactive-Viewer/getting-started.md",
+        "MAUI/Interactive-Viewer/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "kanban",
+      "packageId": "Syncfusion.Maui.Kanban",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.kanban/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Kanban for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Lists",
+      "documentationFiles": [
+        "MAUI/Kanban-Board/Getting-Started.md",
+        "MAUI/Kanban-Board/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "listview",
+      "packageId": "Syncfusion.Maui.ListView",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.listview/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion ListView for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Lists",
+      "documentationFiles": [
+        "MAUI/ListView/getting-started.md",
+        "MAUI/ListView/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "maps",
+      "packageId": "Syncfusion.Maui.Maps",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.maps/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Maps for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Maps",
+      "documentationFiles": [
+        "MAUI/Maps/getting-started.md",
+        "MAUI/Maps/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "markdown-viewer",
+      "packageId": "Syncfusion.Maui.MarkdownViewer",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.markdownviewer/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion MarkdownViewer for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [
+        "MAUI/MarkdownViewer/GettingStarted.md",
+        "MAUI/MarkdownViewer/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "mcp",
+      "packageId": "Syncfusion.Maui.MCP",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.mcp/index.json",
+      "version": "2.0.0",
+      "title": "Syncfusion Maui MCP Server",
+      "listed": true,
+      "deprecation": null,
+      "category": "Development tools",
+      "documentationFiles": [
+        "MAUI/AI-Coding-Assistant/mcp.md"
+      ],
+      "registrationRequirement": "package-specific"
+    },
+    {
+      "alias": "navigation-drawer",
+      "packageId": "Syncfusion.Maui.NavigationDrawer",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.navigationdrawer/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion NavigationDrawer for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/NavigationDrawer/Getting-Started.md",
+        "MAUI/NavigationDrawer/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "parallax-view",
+      "packageId": "Syncfusion.Maui.ParallaxView",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.parallaxview/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion ParallaxView for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Parallax-View/Getting-started.md",
+        "MAUI/Parallax-View/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "pdf-to-image-converter",
+      "packageId": "Syncfusion.Maui.PdfToImageConverter",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.pdftoimageconverter/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion PDF to Image Converter for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "pdf-viewer",
+      "packageId": "Syncfusion.Maui.PdfViewer",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.pdfviewer/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion PDF Viewer for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "picker",
+      "packageId": "Syncfusion.Maui.Picker",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.picker/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Picker for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Editors and Inputs",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "popup",
+      "packageId": "Syncfusion.Maui.Popup",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.popup/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Popup for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Layout",
+      "documentationFiles": [
+        "MAUI/Popup/getting-started.md",
+        "MAUI/Popup/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "progress-bar",
+      "packageId": "Syncfusion.Maui.ProgressBar",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.progressbar/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion ProgressBar for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Notifications",
+      "documentationFiles": [
+        "MAUI/LinearProgressBar/getting-started.md",
+        "MAUI/LinearProgressBar/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "pull-to-refresh",
+      "packageId": "Syncfusion.Maui.PullToRefresh",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.pulltorefresh/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion PullToRefresh for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Notifications",
+      "documentationFiles": [
+        "MAUI/Pull-to-Refresh/getting-started.md",
+        "MAUI/Pull-to-Refresh/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "radial-menu",
+      "packageId": "Syncfusion.Maui.RadialMenu",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.radialmenu/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion RadialMenu for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/Radial-Menu/Getting-Started.md",
+        "MAUI/Radial-Menu/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "rich-text-editor",
+      "packageId": "Syncfusion.Maui.RichTextEditor",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.richtexteditor/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion RichTextEditor for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "rotator",
+      "packageId": "Syncfusion.Maui.Rotator",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.rotator/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Rotator for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/Rotator/Getting-started.md",
+        "MAUI/Rotator/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "scheduler",
+      "packageId": "Syncfusion.Maui.Scheduler",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.scheduler/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Scheduler for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Calendars and Scheduling",
+      "documentationFiles": [],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "signature-pad",
+      "packageId": "Syncfusion.Maui.SignaturePad",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.signaturepad/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion SignaturePad for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Editors and Inputs",
+      "documentationFiles": [
+        "MAUI/SignaturePad/getting-started.md",
+        "MAUI/SignaturePad/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "sliders",
+      "packageId": "Syncfusion.Maui.Sliders",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.sliders/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Slider for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Sliders",
+      "documentationFiles": [
+        "MAUI/Slider/getting-started.md",
+        "MAUI/Slider/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "smart-components",
+      "packageId": "Syncfusion.Maui.SmartComponents",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.smartcomponents/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion SmartComponents for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Infrastructure",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "smart-data-grid",
+      "packageId": "Syncfusion.Maui.SmartDataGrid",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.smartdatagrid/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion SmartDataGrid for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Grids",
+      "documentationFiles": [
+        "MAUI/SmartDataGrid/getting-started.md",
+        "MAUI/SmartDataGrid/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "smart-pdf-viewer",
+      "packageId": "Syncfusion.Maui.SmartPdfViewer",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.smartpdfviewer/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Smart PDF Viewer for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Viewers and Editors",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "smart-scheduler",
+      "packageId": "Syncfusion.Maui.SmartScheduler",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.smartscheduler/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion SmartScheduler for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Calendars and Scheduling",
+      "documentationFiles": [],
+      "registrationRequirement": "unresolved"
+    },
+    {
+      "alias": "sunburst-chart",
+      "packageId": "Syncfusion.Maui.SunburstChart",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.sunburstchart/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion SunburstChart for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/SunburstChart/Getting-Started.md",
+        "MAUI/SunburstChart/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "tabview",
+      "packageId": "Syncfusion.Maui.TabView",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.tabview/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion TabView for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/TabView/Getting-Started.md",
+        "MAUI/TabView/Overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "toolbar",
+      "packageId": "Syncfusion.Maui.Toolbar",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.toolbar/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion Toolbar for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/Toolbar/getting-started.md",
+        "MAUI/Toolbar/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "toolkit",
+      "packageId": "Syncfusion.Maui.Toolkit",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.toolkit/index.json",
+      "version": "1.0.11",
+      "title": "Syncfusion Toolkit for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Toolkit",
+      "documentationFiles": [],
+      "registrationRequirement": "syncfusion-toolkit"
+    },
+    {
+      "alias": "tree-grid",
+      "packageId": "Syncfusion.Maui.TreeGrid",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.treegrid/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion TreeGrid for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Grids",
+      "documentationFiles": [
+        "MAUI/TreeGrid/getting-started.md",
+        "MAUI/TreeGrid/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "tree-map",
+      "packageId": "Syncfusion.Maui.TreeMap",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.treemap/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion TreeMap for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Data Visualization",
+      "documentationFiles": [
+        "MAUI/TreeMap/getting-started.md",
+        "MAUI/TreeMap/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    },
+    {
+      "alias": "treeview",
+      "packageId": "Syncfusion.Maui.TreeView",
+      "nugetRegistration": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.maui.treeview/index.json",
+      "version": "35.1.39",
+      "title": "Syncfusion TreeView for .NET MAUI",
+      "listed": true,
+      "deprecation": null,
+      "category": "Navigation",
+      "documentationFiles": [
+        "MAUI/TreeView/getting-started.md",
+        "MAUI/TreeView/overview.md"
+      ],
+      "registrationRequirement": "syncfusion-core"
+    }
+  ],
+  "registrationStillUnverified": [
+    "calendar",
+    "core",
+    "data-grid-export",
+    "pdf-to-image-converter",
+    "pdf-viewer",
+    "picker",
+    "smart-components",
+    "smart-pdf-viewer",
+    "smart-scheduler"
+  ],
+  "documentationLinkStillUnverified": [
+    "calendar",
+    "pdf-to-image-converter",
+    "pdf-viewer",
+    "picker",
+    "smart-components",
+    "smart-pdf-viewer",
+    "smart-scheduler"
+  ],
+  "nugetNotes": "NuGet SearchQueryService reports exactly 52 official listed Syncfusion.Maui.* IDs; none missing or uncataloged. Registration records confirm listed stable releases. Audit evidence is not a CLI setup recommendation."
+}

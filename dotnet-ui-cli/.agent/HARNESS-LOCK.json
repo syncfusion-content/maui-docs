@@ -1,0 +1,465 @@
+{
+  "lockVersion": 1,
+  "generatedAt": "2026-10-30T04:27:56+00:00",
+  "contractVersion": "1.0",
+  "counts": {
+    "workflows": 17,
+    "agents": 15,
+    "policies": 25,
+    "checklists": 6,
+    "templates": 12,
+    "skills": 0
+  },
+  "files": {
+    "workflows/api-change.md": {
+      "sha256": "4ad1299a53f3af427ea62b0dc4317d2c967bfd80340d0466aeccb36400bb5329",
+      "kind": "workflow",
+      "id": "api-change",
+      "version": 1
+    },
+    "workflows/bugfix.md": {
+      "sha256": "14f4c4f09281199a86f9403496cf495ba015a72ae5f1b1d8a441d263100038e7",
+      "kind": "workflow",
+      "id": "bugfix",
+      "version": 1
+    },
+    "workflows/cli-change-verification.md": {
+      "sha256": "559e65ea532f0f8bd39355932267686b18c6328e72ac746df3fcfc907f6328b9",
+      "kind": "workflow",
+      "id": "cli-change-verification",
+      "version": 1
+    },
+    "workflows/dependency-upgrade.md": {
+      "sha256": "b4cb39b4f6c8ae15cc5da478c39f75b81e6bcd82901f4f0bc1349950913636fe",
+      "kind": "workflow",
+      "id": "dependency-upgrade",
+      "version": 1
+    },
+    "workflows/escalation.md": {
+      "sha256": "3b2d2518d26fce6659d8e3c57d04d86afec5dc7fe8000df05bc4c354a4207b17",
+      "kind": "workflow",
+      "id": "escalation",
+      "version": 1
+    },
+    "workflows/feature.md": {
+      "sha256": "a23fcbd3e2896e83e18da82fdb3215c39ea1f810a5b8cf75abb74aa36fad710d",
+      "kind": "workflow",
+      "id": "feature",
+      "version": 1
+    },
+    "workflows/incident.md": {
+      "sha256": "e6a218967eecbc08d306f2536b8b6cb900feabf3168ecde6278b774ba5f5d533",
+      "kind": "workflow",
+      "id": "incident",
+      "version": 1
+    },
+    "workflows/milestone.md": {
+      "sha256": "9666f9672d929bfe8cf92411bcf02d5f2619c315943d39850059185b65e46919",
+      "kind": "workflow",
+      "id": "milestone",
+      "version": 1
+    },
+    "workflows/performance.md": {
+      "sha256": "18bffee6c3cdac48de84bf069e29b287d1d8a6bf879af5f026c1e6b299e9cb00",
+      "kind": "workflow",
+      "id": "performance",
+      "version": 1
+    },
+    "workflows/project-bootstrap.md": {
+      "sha256": "646322b781e05752b2f17e53e56c453215f5472d4a724591845d56cbec846dcb",
+      "kind": "workflow",
+      "id": "project-bootstrap",
+      "version": 1
+    },
+    "workflows/refactor.md": {
+      "sha256": "0e7a87cec8b3d0c76e874372c6c1e2f88a89f6ce863ae108026a4dece5540a05",
+      "kind": "workflow",
+      "id": "refactor",
+      "version": 1
+    },
+    "workflows/release.md": {
+      "sha256": "c5e3dea4acbd6a69e52dc5ee0d1cac65cb344b6dba5737122726618d5a7aff03",
+      "kind": "workflow",
+      "id": "release",
+      "version": 1
+    },
+    "workflows/security.md": {
+      "sha256": "0ba0202c22e58a18c0882cbf84c8dc73e0e7d32629fa63c1f9b7b556a5f2de85",
+      "kind": "workflow",
+      "id": "security",
+      "version": 1
+    },
+    "workflows/session-handoff.md": {
+      "sha256": "2da85919555b73ea4b144a68e67fe1e0ee2ccda69e37d38f473d03b01350ec87",
+      "kind": "workflow",
+      "id": "session-handoff",
+      "version": 1
+    },
+    "workflows/task-loop.md": {
+      "sha256": "e0c028df5cf6a71b20580d8ea501235e7a5982abf197c122adbb8672c64ead26",
+      "kind": "workflow",
+      "id": "task-loop",
+      "version": 1
+    },
+    "workflows/test-backfill.md": {
+      "sha256": "19f9e69d4e1bec94b71def22aa5ed516a34a462db6f0d4b1e489c40d197a524c",
+      "kind": "workflow",
+      "id": "test-backfill",
+      "version": 1
+    },
+    "workflows/wizard-change.md": {
+      "sha256": "0e606fcfe0c4e399b13d7ee8e2c2dec420e3128a50a3820537f63dac0460b725",
+      "kind": "workflow",
+      "id": "wizard-change",
+      "version": 1
+    },
+    "agents/api-steward.md": {
+      "sha256": "a9b9dd829747e0f73aeae4dd2dc1fa95ae32e4e18cca1f32a6c0f4c2479d10ff",
+      "kind": "agent",
+      "id": "api-steward",
+      "version": 1
+    },
+    "agents/code-reviewer.md": {
+      "sha256": "7fdf79c649e036dc48735a7599863f1a31110fa4e9ed1fa10b0b0e5885e31594",
+      "kind": "agent",
+      "id": "code-reviewer",
+      "version": 1
+    },
+    "agents/docs-writer.md": {
+      "sha256": "9fce2d65a62128b22972898b54b12f4db372320c2a72b8b1effa78b89756fbfc",
+      "kind": "agent",
+      "id": "docs-writer",
+      "version": 1
+    },
+    "agents/escalation-analyst.md": {
+      "sha256": "813fb88c9a8b5131962ae6bc855244c71abeafd3b76c0b1fcd75c807fc8b9018",
+      "kind": "agent",
+      "id": "escalation-analyst",
+      "version": 1
+    },
+    "agents/generated-project-validator.md": {
+      "sha256": "e736785b87a1009c2fa2e49ebd7897089183990d35e2550265ad2258cfcad132",
+      "kind": "agent",
+      "id": "generated-project-validator",
+      "version": 1
+    },
+    "agents/implementer.md": {
+      "sha256": "ed9a5c69a6cdebc0ef13d471b8b33ca0d4e3d98db30f0232046f5490cb396401",
+      "kind": "agent",
+      "id": "implementer",
+      "version": 1
+    },
+    "agents/package-integrity-auditor.md": {
+      "sha256": "783b22b6633956558067fdc9eebec5cc75c894f7d9ed149f1b57b2c515723385",
+      "kind": "agent",
+      "id": "package-integrity-auditor",
+      "version": 1
+    },
+    "agents/performance-analyst.md": {
+      "sha256": "a5d5a9110a023c32f58473ac82e8d39482804ca13cb378d7dc736bc737689367",
+      "kind": "agent",
+      "id": "performance-analyst",
+      "version": 1
+    },
+    "agents/release-manager.md": {
+      "sha256": "385857df0a5458000f965e4a132dcf7df57ec9666da617572dcb357c671bb77b",
+      "kind": "agent",
+      "id": "release-manager",
+      "version": 1
+    },
+    "agents/requirements-analyst.md": {
+      "sha256": "b2900c2ca8c1f6dcaf312ae9e601eb0c52e6ebf90a76475bb17590bf643c10f8",
+      "kind": "agent",
+      "id": "requirements-analyst",
+      "version": 1
+    },
+    "agents/security-auditor.md": {
+      "sha256": "4ce617cd9b39a508e5322b53df10308d18a4e9f8fc6273233990f3eeb1385be5",
+      "kind": "agent",
+      "id": "security-auditor",
+      "version": 1
+    },
+    "agents/spec-writer.md": {
+      "sha256": "fcecd9f2396aeecf785723f2f7b9f304133d013068c12be773d322322de3dfba",
+      "kind": "agent",
+      "id": "spec-writer",
+      "version": 1
+    },
+    "agents/task-planner.md": {
+      "sha256": "6f65a7a484c7ffd584900d3f1274f4aeb1df9c11d40caf2403b2528ce1baf7f6",
+      "kind": "agent",
+      "id": "task-planner",
+      "version": 1
+    },
+    "agents/test-engineer.md": {
+      "sha256": "7c2efefd03a89154348e474879b38e5672f15b39596db44b6ca9227cf42b49c3",
+      "kind": "agent",
+      "id": "test-engineer",
+      "version": 1
+    },
+    "agents/wizard-consistency-reviewer.md": {
+      "sha256": "62e206aad1ccf68e51adf101fed02e898fe7a16b80a118d9e258dabb990398f3",
+      "kind": "agent",
+      "id": "wizard-consistency-reviewer",
+      "version": 1
+    },
+    "policies/autonomy-boundary.md": {
+      "sha256": "11941d6af0744a3c4afef5cf4698dff839b2f96bb00677cd11ddbcd067deadb6",
+      "kind": "policy",
+      "id": "autonomy-boundary",
+      "version": 1
+    },
+    "policies/bounded-retry.md": {
+      "sha256": "e539675702f24592f53abaad66e7da505d896f634d989d867bfa89a118ec3273",
+      "kind": "policy",
+      "id": "bounded-retry",
+      "version": 1
+    },
+    "policies/characterize-do-not-correct.md": {
+      "sha256": "44132cf927e6742dda57d54b1ff6f70ce9bc59d0f8b0e9304f3b6f64f40a5d73",
+      "kind": "policy",
+      "id": "characterize-do-not-correct",
+      "version": 1
+    },
+    "policies/cite-the-source.md": {
+      "sha256": "2d1e73e448eeee2ceb60e0ae70dd0d1bbcb8e86e608ada550219416aebbabf2f",
+      "kind": "policy",
+      "id": "cite-the-source",
+      "version": 1
+    },
+    "policies/containment-first.md": {
+      "sha256": "5190cca631836b866f1b25e3b5e3ef1c11e28794f63173d93b8daa19cd9c1549",
+      "kind": "policy",
+      "id": "containment-first",
+      "version": 1
+    },
+    "policies/design-system.md": {
+      "sha256": "e4f37347416121ee2039d49ccbc83b9e0e90af944adef1a4055124fe73fb48c3",
+      "kind": "policy",
+      "id": "design-system",
+      "version": 1
+    },
+    "policies/emit-do-not-creep.md": {
+      "sha256": "7baa3c81db936a63091ca367a09fcde2ef7c5330b41bea3b3a9a582190a76777",
+      "kind": "policy",
+      "id": "emit-do-not-creep",
+      "version": 1
+    },
+    "policies/evidence-before-done.md": {
+      "sha256": "cd3c203a20e0877a13d9e5268b7207fa8f5e9fe12afbb2a387c40d665b3091c8",
+      "kind": "policy",
+      "id": "evidence-before-done",
+      "version": 1
+    },
+    "policies/least-privilege.md": {
+      "sha256": "f5e5fa25a576044f4d45f48b96b1fb5caaf3c69e0ee22acee6f518e2b34db77c",
+      "kind": "policy",
+      "id": "least-privilege",
+      "version": 1
+    },
+    "policies/matched-versions.md": {
+      "sha256": "1b2387262dde72f74aef0b5881c9ed6c5d51c834d71b666ea710af506774d266",
+      "kind": "policy",
+      "id": "matched-versions",
+      "version": 1
+    },
+    "policies/measure-before-optimising.md": {
+      "sha256": "245c1e3331f3d16dc76e7699e776e1db45b3d61fd0d353c7562370a485545664",
+      "kind": "policy",
+      "id": "measure-before-optimising",
+      "version": 1
+    },
+    "policies/never-weaken.md": {
+      "sha256": "0dca9fbd0b5cbceef55fe3a1ef4b9c0db21ea796ac2b32debb081a00f7f9409d",
+      "kind": "policy",
+      "id": "never-weaken",
+      "version": 1
+    },
+    "policies/no-behaviour-change.md": {
+      "sha256": "f56b64241f4bddf2508d2210d1faf7694a2894ec798f6b919498f9676917123b",
+      "kind": "policy",
+      "id": "no-behaviour-change",
+      "version": 1
+    },
+    "policies/no-secrets-in-source.md": {
+      "sha256": "9146a5170f0db3ba0f930a6f3aab6253cd2f9979b3ade565935fecc3bac0aaf8",
+      "kind": "policy",
+      "id": "no-secrets-in-source",
+      "version": 1
+    },
+    "policies/no-unrelated-change.md": {
+      "sha256": "7dd5b4bef9f9264897ef137fd30710abf21bbb5711d8ba33ded9ca1ed0b17c11",
+      "kind": "policy",
+      "id": "no-unrelated-change",
+      "version": 1
+    },
+    "policies/not-run-is-not-pass.md": {
+      "sha256": "51ec2429d20228ba1ee1893ec9d33f6362afc13930085ba791bfaa1c35d188b6",
+      "kind": "policy",
+      "id": "not-run-is-not-pass",
+      "version": 1
+    },
+    "policies/one-task-in-flight.md": {
+      "sha256": "fd4ee5d2267a0ee1873655648f01ce0b41273da65fa5f209e85e5c1c06370356",
+      "kind": "policy",
+      "id": "one-task-in-flight",
+      "version": 1
+    },
+    "policies/preserve-user-files.md": {
+      "sha256": "ab4bfec87639fb62924791703418581b4e304ada74a358a23213c0c0a9c1f90d",
+      "kind": "policy",
+      "id": "preserve-user-files",
+      "version": 1
+    },
+    "policies/public-api-is-a-contract.md": {
+      "sha256": "597e6008c3250f38f2db17af70e70a5f7851e43e483dc11330a6376b8181dbd8",
+      "kind": "policy",
+      "id": "public-api-is-a-contract",
+      "version": 1
+    },
+    "policies/reproduce-before-fix.md": {
+      "sha256": "9a203b68b8d424d7191cdbb9e2bed07fde5401d0e97aa4cafe7b5ecb9fb92a88",
+      "kind": "policy",
+      "id": "reproduce-before-fix",
+      "version": 1
+    },
+    "policies/root-cause-not-symptom.md": {
+      "sha256": "5028a015d56a5a40223e70cf1123c325197654a5325133bf87bcf15ebceafecc",
+      "kind": "policy",
+      "id": "root-cause-not-symptom",
+      "version": 1
+    },
+    "policies/spec-before-code.md": {
+      "sha256": "f4a2761a801bdbb5a23741fe1fa9824f33aee798ee4d9ddb147dab4e596be955",
+      "kind": "policy",
+      "id": "spec-before-code",
+      "version": 1
+    },
+    "policies/state-is-durable.md": {
+      "sha256": "a883d7f01264a2015269b2ae523f19acbcfc143c27b4cddf15f7e41b12fe5494",
+      "kind": "policy",
+      "id": "state-is-durable",
+      "version": 1
+    },
+    "policies/tests-from-spec.md": {
+      "sha256": "84d2d56033da0f5a03484dcb13fd909d9133cb6954fed0673f2cd6a12267c1c5",
+      "kind": "policy",
+      "id": "tests-from-spec",
+      "version": 1
+    },
+    "policies/verify-generated-output.md": {
+      "sha256": "4dc0351727e1ff356aa1bbd8f264b92742d969e4344df74f70f40beec99320b4",
+      "kind": "policy",
+      "id": "verify-generated-output",
+      "version": 1
+    },
+    "checklists/api-review.md": {
+      "sha256": "6b20022147f66df6004f2eb4a686df7dcd39979c0986949cb9e14a16f6017ebe",
+      "kind": "checklist",
+      "id": "api-review",
+      "version": 1
+    },
+    "checklists/definition-of-done.md": {
+      "sha256": "156a02db961365a2087699ce2d295951eeb8f875ef14211e015d4e934078cdea",
+      "kind": "checklist",
+      "id": "definition-of-done",
+      "version": 1
+    },
+    "checklists/performance-review.md": {
+      "sha256": "10d281f5432251200db1e54a7f91ebbda1cd5971785c92a5c21828ae18840cd0",
+      "kind": "checklist",
+      "id": "performance-review",
+      "version": 1
+    },
+    "checklists/pr-review.md": {
+      "sha256": "b33fda5633f13a8f0ead475430d6c6d8e611c2f80fc2a484e767139258ab7fd7",
+      "kind": "checklist",
+      "id": "pr-review",
+      "version": 1
+    },
+    "checklists/release-readiness.md": {
+      "sha256": "09dd1df5082ab0d719b6bca61681b9cff0e954170473a4e37062ce11d48818c9",
+      "kind": "checklist",
+      "id": "release-readiness",
+      "version": 1
+    },
+    "checklists/security-review.md": {
+      "sha256": "6686df0442126b033a6b63a5e6c9a213a4d4ca038bcef1939fc3092fe3700da5",
+      "kind": "checklist",
+      "id": "security-review",
+      "version": 1
+    },
+    "templates/adr.md": {
+      "sha256": "a6512865719220047aa26829c3b1ce525dc202acd14725302721f9f6a163f529",
+      "kind": "template",
+      "id": "adr",
+      "version": 1
+    },
+    "templates/blocked-task.md": {
+      "sha256": "d52f347a93a0841940aaf1cff0ff1c6e3269e46f8c22f3fb3bf8381e46af303d",
+      "kind": "template",
+      "id": "blocked-task",
+      "version": 1
+    },
+    "templates/decision-required.md": {
+      "sha256": "8327976d321d2693316a178ed9afd6e3cadfc86e822b03e6e6c1eee83d009d66",
+      "kind": "template",
+      "id": "decision-required",
+      "version": 1
+    },
+    "templates/design.md": {
+      "sha256": "f61ac048623612d6deeb0d048350ae0c1507d3294567693197d6611c7df901cd",
+      "kind": "template",
+      "id": "design",
+      "version": 1
+    },
+    "templates/incident.md": {
+      "sha256": "2ed18cd7286bf0e7831c4c4bba0be39b32074c0c98f22c035236a713a569d1cb",
+      "kind": "template",
+      "id": "incident",
+      "version": 1
+    },
+    "templates/milestone-report.md": {
+      "sha256": "ff4d6df6438f85ca55256db54e75379c4b720c145af4830553977870bb1f8971",
+      "kind": "template",
+      "id": "milestone-report",
+      "version": 1
+    },
+    "templates/requirement.md": {
+      "sha256": "f148318c488cc93b7a40d8bde9aa3c2bcd2aeb8b603004315934eea8564eb3eb",
+      "kind": "template",
+      "id": "requirement",
+      "version": 1
+    },
+    "templates/review-findings.md": {
+      "sha256": "fdaac864772fd56fe60841d4f9bdafb1616ef46af7ad98dd79518d4b997e83e8",
+      "kind": "template",
+      "id": "review-findings",
+      "version": 1
+    },
+    "templates/session-handoff.md": {
+      "sha256": "6cc642a5527e0941c324e5de7432d4ddca2923c08dcf76f92ec8b69bd13ade1b",
+      "kind": "template",
+      "id": "session-handoff",
+      "version": 1
+    },
+    "templates/spec.md": {
+      "sha256": "ab9f098ba5a02dbc62c3670725abb6a0d21c15e301d02861d80e0fcb3c1f9cb1",
+      "kind": "template",
+      "id": "spec",
+      "version": 1
+    },
+    "templates/task.md": {
+      "sha256": "286b4a04b586d0a59686eb578ada8eb2db5c16fc3f16c44ec78549297fb4f12a",
+      "kind": "template",
+      "id": "task",
+      "version": 1
+    },
+    "templates/test-plan.md": {
+      "sha256": "e6f827a9ddb45d5120efc1e0410511d89e5e055d967b8ca5fd720f21452be104",
+      "kind": "template",
+      "id": "test-plan",
+      "version": 1
+    }
+  }
+}

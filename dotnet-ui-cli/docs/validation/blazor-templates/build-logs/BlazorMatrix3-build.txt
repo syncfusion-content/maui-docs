@@ -1,0 +1,12 @@
+  Determining projects to restore...
+  Restored /workspace/work/blazor-final-matrix/BlazorMatrix3/BlazorMatrix3/BlazorMatrix3.csproj (in 366 ms).
+  Restored /workspace/work/blazor-final-matrix/BlazorMatrix3/BlazorMatrix3.Client/BlazorMatrix3.Client.csproj (in 462 ms).
+  BlazorMatrix3.Client -> /workspace/work/blazor-final-matrix/BlazorMatrix3/BlazorMatrix3.Client/bin/Debug/net10.0/BlazorMatrix3.Client.dll
+  BlazorMatrix3.Client (Blazor output) -> /workspace/work/blazor-final-matrix/BlazorMatrix3/BlazorMatrix3.Client/bin/Debug/net10.0/wwwroot
+  BlazorMatrix3 -> /workspace/work/blazor-final-matrix/BlazorMatrix3/BlazorMatrix3/bin/Debug/net10.0/BlazorMatrix3.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:25.38

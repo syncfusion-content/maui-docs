@@ -1,0 +1,52 @@
+@page "/ai-assistview"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor.InteractiveChat;
+@using Syncfusion.Blazor.Navigations;
+
+<PageTitle>AI Assist View</PageTitle>
+<h2>AI Assist View</h2>
+
+<div class="control-section">
+    <div class="default-aiassistview">
+        <SfAIAssistView ID="aiAssistView" PromptSuggestions="@suggestions" PromptRequested="@PromptRequest" AttachmentSettings="@attachmentSettings">
+            <AssistViews>
+                <AssistView>
+                    <BannerTemplate>
+                        <div class="banner-content">
+                            <div class="e-icons e-assistview-icon"></div>
+                            <h3>AI Assistance</h3>
+                            <i>To get started, provide input or choose a suggestion.</i>
+                        </div>
+                    </BannerTemplate>
+                </AssistView>
+            </AssistViews>
+            <AssistViewToolbar ItemClicked="ToolbarItemClicked">
+                <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
+                <AssistViewToolbarItem IconCss="e-icons e-refresh"></AssistViewToolbarItem>
+            </AssistViewToolbar>
+        </SfAIAssistView>
+    </div>
+</div>
+
+
+
+<style>
+    .default-aiassistview {
+        height: 600px;
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .default-aiassistview .banner-content .e-assistview-icon:before {
+        font-size: 35px;
+    }
+
+    .default-aiassistview .banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 330px;
+        text-align: center;
+    }
+</style>

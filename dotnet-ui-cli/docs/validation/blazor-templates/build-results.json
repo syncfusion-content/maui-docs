@@ -1,0 +1,65 @@
+[
+  {
+    "name": "BlazorMatrix0",
+    "app": "web-app",
+    "render": "server",
+    "interactivity": "per-page",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix1",
+    "app": "web-app",
+    "render": "server",
+    "interactivity": "global",
+    "auth": "individual",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix2",
+    "app": "web-app",
+    "render": "webassembly",
+    "interactivity": "per-page",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix3",
+    "app": "web-app",
+    "render": "webassembly",
+    "interactivity": "global",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix4",
+    "app": "web-app",
+    "render": "auto",
+    "interactivity": "per-page",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix5",
+    "app": "web-app",
+    "render": "auto",
+    "interactivity": "global",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  },
+  {
+    "name": "BlazorMatrix6",
+    "app": "webassembly-standalone",
+    "render": "webassembly",
+    "interactivity": "per-page",
+    "auth": "none",
+    "generate": 0,
+    "build": 0
+  }
+]

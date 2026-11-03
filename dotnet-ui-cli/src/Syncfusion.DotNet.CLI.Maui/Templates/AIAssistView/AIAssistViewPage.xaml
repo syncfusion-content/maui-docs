@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+             xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+             Title="AI AssistView"
+             x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__"
+             x:DataType="local:__VIEW_MODEL_NAME__">
+    <ContentPage.BindingContext>
+        <local:__VIEW_MODEL_NAME__ />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*" ColumnDefinitions="*">
+        <syncfusion:SfAIAssistView HorizontalOptions="Fill" VerticalOptions="Fill" EnableVoiceInput="False" AssistItems="{Binding AssistItems}" RequestCommand="{Binding RequestCommand}"/>
+    </Grid>
+</ContentPage>

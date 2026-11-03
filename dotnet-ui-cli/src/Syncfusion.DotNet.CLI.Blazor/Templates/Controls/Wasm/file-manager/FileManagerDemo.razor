@@ -1,0 +1,32 @@
+@page "/file-manager"
+@namespace __PAGE_NAMESPACE__
+__RENDER_DIRECTIVE__
+@using Syncfusion.Blazor.FileManager
+<PageTitle>File Manager</PageTitle>
+<h2>File Manager</h2>
+<br/>
+@inject IJSRuntime JsRuntime;
+<div id = "ControlRegion">
+<SfFileManager TValue="FileManagerDirectoryContent" ShowThumbnail="true" AllowDragAndDrop="true" AllowMultiSelection="true" >
+    <FileManagerAjaxSettings Url="https://azure-service.syncfusion.com/api/AzureFileManager/AzureFileoperations"
+                                 UploadUrl="https://azure-service.syncfusion.com/api/AzureFileManager/AzureUpload"
+                                 DownloadUrl="https://azure-service.syncfusion.com/api/AzureFileManager/AzureDownload"
+                                 GetImageUrl="https://azure-service.syncfusion.com/api/AzureFileManager/AzureGetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+</div>
+<br/>
+
+<style>
+    .ulstyle {
+        margin: 0px;
+        padding-left: 20px;
+        display: inline-block;
+    }
+    .list {
+    float: left;
+    line-height: 20px;
+    margin: 10px;
+    min-width: 200px;
+    }
+</style>

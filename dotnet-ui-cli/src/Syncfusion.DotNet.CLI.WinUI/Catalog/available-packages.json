@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-16",
+  "source": "https://api.nuget.org/v3/index.json",
+  "owner": "SyncfusionInc",
+  "scope": "Platform-specific listed stable PackageReference libraries; legacy replacements, Xamarin, tools and project templates excluded. Existing aliases and generated-control selections are preserved separately.",
+  "excluded": [],
+  "packages": [
+    {
+      "alias": "barcode",
+      "displayName": "Barcode",
+      "id": "Syncfusion.Barcode.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Barcode control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "calendar",
+      "displayName": "Calendar",
+      "id": "Syncfusion.Calendar.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Calendar, Calendar Date Picker, and Calendar DateRange Picker.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "chart",
+      "displayName": "Chart",
+      "id": "Syncfusion.Chart.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Charts control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "chat",
+      "displayName": "Chat",
+      "id": "Syncfusion.Chat.WinUI",
+      "description": "The Syncfusion® .NET WinUI Chat, often known as conversational UI, provides a modern conversational chatbot experience. It is a versatile control that displays a conversation between two or more users in a fully customizable layout. Depending on the business needs, you can display messages in various formats such as text, calendar, date picker, and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "core",
+      "displayName": "Core",
+      "id": "Syncfusion.Core.WinUI",
+      "description": "This package contains common classes and interfaces that are used by Syncfusion® WinUI controls and WinUI Shadow component for WinUI application. Learn more: https://www.syncfusion.com/winui-controls?utm_source=nuget&utm_medium=listing",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "docking-manager",
+      "displayName": "Docking Manager",
+      "id": "Syncfusion.DockingManager.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI DockingManager control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "editors",
+      "displayName": "Editors",
+      "id": "Syncfusion.Editors.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Color Picker, Color Palette, DropDown Color Picker, Dropdown Color Palette, Date Picker, Time Picker, NumberBox, ComboBox, Autocomplete, Rating, and Segmented Control.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "gauge",
+      "displayName": "Gauge",
+      "id": "Syncfusion.Gauge.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Radial Gauge, and Linear Gauage.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "grid",
+      "displayName": "Grid",
+      "id": "Syncfusion.Grid.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI DataGrid, and TreeGrid.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "grid-common",
+      "displayName": "Grid Common",
+      "id": "Syncfusion.GridCommon.WinUI",
+      "description": "This package provides classes and interfaces for performing scrolling operations in Syncfusion® datagrid and treeview winui project reunion controls.",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "grid-export",
+      "displayName": "Grid Export",
+      "id": "Syncfusion.GridExport.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI GridExport control and more.",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "kanban",
+      "displayName": "Kanban",
+      "id": "Syncfusion.Kanban.WinUI",
+      "description": "The Syncfusion® WinUI Kanban Board is a task management control that visually organizes work across multiple stages, commonly used in project management, software or product development, personal task management, and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "markdown-viewer",
+      "displayName": "Markdown Viewer",
+      "id": "Syncfusion.MarkdownViewer.WinUI",
+      "description": "The Syncfusion® WinUI MarkdownViewer is a powerful, lightweight control that renders Markdown content with rich formatting and interactive features. It provides a seamless way to display Markdown documents in your .NET applications with customizable styling options, syntax highlighting for an enhanced reading experience.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "notifications",
+      "displayName": "Notifications",
+      "id": "Syncfusion.Notifications.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Badge and Busy Indicator control.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "ribbon",
+      "displayName": "Ribbon",
+      "id": "Syncfusion.Ribbon.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Ribbon control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "scheduler",
+      "displayName": "Scheduler",
+      "id": "Syncfusion.Scheduler.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Scheduler control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "sliders",
+      "displayName": "Sliders",
+      "id": "Syncfusion.Sliders.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI Slider, and Range Slider.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "tree-view",
+      "displayName": "Tree View",
+      "id": "Syncfusion.TreeView.WinUI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® WinUI TreeView control and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    }
+  ]
+}

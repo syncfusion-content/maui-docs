@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "templates": [
+    {
+      "id": "datagrid",
+      "displayName": "DataGrid",
+      "description": "Display and manipulate tabular data with sorting, grouping, and editing.",
+      "packageId": "Syncfusion.Maui.DataGrid",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/datagrid/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid",
+      "xamlPrefix": "syncfusion",
+      "controlType": "SfDataGrid",
+      "controlName": "DataGrid",
+      "csharpNamespace": "Syncfusion.Maui.DataGrid",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/DataGrid",
+      "generatedFiles": [
+        {
+          "destination": "DataGrid/DataGridModel.cs",
+          "templateResource": "DataGridModel.cs"
+        },
+        {
+          "destination": "DataGrid/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "DataGrid/DataGridViewModel.cs",
+          "templateResource": "DataGridViewModel.cs"
+        },
+        {
+          "destination": "DataGrid/DataGridView.xaml",
+          "templateResource": "DataGridView.xaml"
+        },
+        {
+          "destination": "DataGrid/DataGridView.xaml.cs",
+          "templateResource": "DataGridView.xaml.cs"
+        }
+      ],
+      "family": "datagrid",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.DataGrid.SfDataGrid",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "DataGridModel.cs",
+        "README.md",
+        "DataGridViewModel.cs",
+        "DataGridView.xaml",
+        "DataGridView.xaml.cs"
+      ],
+      "legacyAliases": [
+        "datagrid",
+        "sfdatagrid",
+        "data-grid"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "listview",
+      "displayName": "ListView",
+      "description": "Display a scrollable list of items with item templates and grouping.",
+      "packageId": "Syncfusion.Maui.ListView",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/listview/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView",
+      "xamlPrefix": "syncfusion",
+      "controlType": "SfListView",
+      "controlName": "ListView",
+      "csharpNamespace": "Syncfusion.Maui.ListView",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/ListView",
+      "generatedFiles": [
+        {
+          "destination": "ListView/ListViewModel.cs",
+          "templateResource": "ListViewModel.cs"
+        },
+        {
+          "destination": "ListView/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "ListView/ListViewViewModel.cs",
+          "templateResource": "ListViewViewModel.cs"
+        },
+        {
+          "destination": "ListView/ListViewPage.xaml",
+          "templateResource": "ListViewPage.xaml"
+        },
+        {
+          "destination": "ListView/ListViewPage.xaml.cs",
+          "templateResource": "ListViewPage.xaml.cs"
+        }
+      ],
+      "family": "listview",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.ListView.SfListView",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "ListViewModel.cs",
+        "README.md",
+        "ListViewViewModel.cs",
+        "ListViewPage.xaml",
+        "ListViewPage.xaml.cs"
+      ],
+      "legacyAliases": [
+        "listview",
+        "sflistview",
+        "list-view"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "scheduler",
+      "displayName": "Scheduler",
+      "description": "Display appointments across day, week, and month views.",
+      "packageId": "Syncfusion.Maui.Scheduler",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/scheduler/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler",
+      "xamlPrefix": "scheduler",
+      "controlType": "SfScheduler",
+      "controlName": "Scheduler",
+      "csharpNamespace": "Syncfusion.Maui.Scheduler",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/Scheduler",
+      "generatedFiles": [
+        {
+          "destination": "Scheduler/SchedulerModel.cs",
+          "templateResource": "SchedulerModel.cs"
+        },
+        {
+          "destination": "Scheduler/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "Scheduler/SchedulerViewModel.cs",
+          "templateResource": "SchedulerViewModel.cs"
+        },
+        {
+          "destination": "Scheduler/SchedulerView.xaml",
+          "templateResource": "SchedulerView.xaml"
+        },
+        {
+          "destination": "Scheduler/SchedulerView.xaml.cs",
+          "templateResource": "SchedulerView.xaml.cs"
+        }
+      ],
+      "family": "scheduler",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.Scheduler.SfScheduler",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "SchedulerModel.cs",
+        "README.md",
+        "SchedulerViewModel.cs",
+        "SchedulerView.xaml",
+        "SchedulerView.xaml.cs"
+      ],
+      "legacyAliases": [
+        "scheduler",
+        "sfscheduler"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "cartesian-chart",
+      "displayName": "Cartesian Chart",
+      "description": "Project template for a Cartesian chart control.",
+      "packageId": "Syncfusion.Maui.Charts",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/cartesian-charts/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts",
+      "xamlPrefix": "chart",
+      "controlType": "SfCartesianChart",
+      "controlName": "CartesianChart",
+      "csharpNamespace": "Syncfusion.Maui.Charts",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/CartesianChart",
+      "generatedFiles": [
+        {
+          "destination": "CartesianChart/CartesianChartModel.cs",
+          "templateResource": "CartesianChartModel.cs"
+        },
+        {
+          "destination": "CartesianChart/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "CartesianChart/CartesianChartViewModel.cs",
+          "templateResource": "CartesianChartViewModel.cs"
+        },
+        {
+          "destination": "CartesianChart/CartesianChartView.xaml",
+          "templateResource": "CartesianChartView.xaml"
+        },
+        {
+          "destination": "CartesianChart/CartesianChartView.xaml.cs",
+          "templateResource": "CartesianChartView.xaml.cs"
+        }
+      ],
+      "family": "charts",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.Charts.SfCartesianChart",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "CartesianChartModel.cs",
+        "README.md",
+        "CartesianChartViewModel.cs",
+        "CartesianChartView.xaml",
+        "CartesianChartView.xaml.cs"
+      ],
+      "legacyAliases": [
+        "charts",
+        "sfcharts",
+        "cartesian-charts",
+        "cartesiancharts"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "circular-chart",
+      "displayName": "Circular Chart",
+      "description": "Compare category values with a circular chart.",
+      "packageId": "Syncfusion.Maui.Charts",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/circular-charts/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts",
+      "xamlPrefix": "chart",
+      "controlType": "SfCircularChart",
+      "controlName": "CircularChart",
+      "csharpNamespace": "Syncfusion.Maui.Charts",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/CircularChart",
+      "generatedFiles": [
+        {
+          "destination": "CircularChart/CircularChartModel.cs",
+          "templateResource": "CircularChartModel.cs"
+        },
+        {
+          "destination": "CircularChart/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "CircularChart/CircularChartViewModel.cs",
+          "templateResource": "CircularChartViewModel.cs"
+        },
+        {
+          "destination": "CircularChart/CircularChartView.xaml",
+          "templateResource": "CircularChartView.xaml"
+        },
+        {
+          "destination": "CircularChart/CircularChartView.xaml.cs",
+          "templateResource": "CircularChartView.xaml.cs"
+        }
+      ],
+      "family": "charts",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.Charts.SfCircularChart",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "CircularChartModel.cs",
+        "README.md",
+        "CircularChartViewModel.cs",
+        "CircularChartView.xaml",
+        "CircularChartView.xaml.cs"
+      ],
+      "legacyAliases": [],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "The official Circular Chart getting-started guide declares ConfigureSyncfusionCore registration."
+    },
+    {
+      "id": "assistview",
+      "displayName": "AI AssistView",
+      "description": "Display a conversational AI assistant interface with message items.",
+      "packageId": "Syncfusion.Maui.AIAssistView",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://www.syncfusion.com/maui-controls/maui-ai-assistview",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView",
+      "xamlPrefix": "syncfusion",
+      "controlType": "SfAIAssistView",
+      "controlName": "AIAssistView",
+      "csharpNamespace": "Syncfusion.Maui.AIAssistView",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/AIAssistView",
+      "generatedFiles": [
+        {
+          "destination": "AIAssistView/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "AIAssistView/AIAssistViewViewModel.cs",
+          "templateResource": "AIAssistViewViewModel.cs"
+        },
+        {
+          "destination": "AIAssistView/AIAssistViewPage.xaml",
+          "templateResource": "AIAssistViewPage.xaml"
+        },
+        {
+          "destination": "AIAssistView/AIAssistViewPage.xaml.cs",
+          "templateResource": "AIAssistViewPage.xaml.cs"
+        }
+      ],
+      "family": "assistview",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.AIAssistView.SfAIAssistView",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "README.md",
+        "AIAssistViewViewModel.cs",
+        "AIAssistViewPage.xaml",
+        "AIAssistViewPage.xaml.cs"
+      ],
+      "legacyAliases": [
+        "assistview",
+        "sfaiassistview",
+        "ai-assistview",
+        "aiassistview"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "rich-text-editor",
+      "displayName": "Rich Text Editor",
+      "description": "Edit rich text with a built-in toolbar for formatting.",
+      "packageId": "Syncfusion.Maui.RichTextEditor",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/rich-text-editor/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.RichTextEditor;assembly=Syncfusion.Maui.RichTextEditor",
+      "xamlPrefix": "richTextEditor",
+      "controlType": "SfRichTextEditor",
+      "controlName": "RichTextEditor",
+      "csharpNamespace": "Syncfusion.Maui.RichTextEditor",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/RichTextEditor",
+      "generatedFiles": [
+        {
+          "destination": "RichTextEditor/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "RichTextEditor/RichTextEditorViewModel.cs",
+          "templateResource": "RichTextEditorViewModel.cs"
+        },
+        {
+          "destination": "RichTextEditor/RichTextEditorView.xaml",
+          "templateResource": "RichTextEditorView.xaml"
+        },
+        {
+          "destination": "RichTextEditor/RichTextEditorView.xaml.cs",
+          "templateResource": "RichTextEditorView.xaml.cs"
+        }
+      ],
+      "family": "rich-text-editor",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.RichTextEditor.SfRichTextEditor",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "README.md",
+        "RichTextEditorViewModel.cs",
+        "RichTextEditorView.xaml",
+        "RichTextEditorView.xaml.cs"
+      ],
+      "legacyAliases": [
+        "rich-text-editor",
+        "sfrichtexteditor",
+        "richtexteditor"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "This verified template explicitly declares ConfigureSyncfusionCore registration; MauiProgramPatcher implements the declared using/call."
+    },
+    {
+      "id": "diagram",
+      "displayName": "Diagram",
+      "description": "A getting-started Diagram sample.",
+      "packageId": "Syncfusion.Maui.Diagram",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/diagram/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.Diagram;assembly=Syncfusion.Maui.Diagram",
+      "xamlPrefix": "syncfusion",
+      "controlType": "SfDiagram",
+      "controlName": "Diagram",
+      "csharpNamespace": "Syncfusion.Maui.Diagram",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/Diagram",
+      "generatedFiles": [
+        {
+          "destination": "Diagram/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "Diagram/DiagramView.xaml.cs",
+          "templateResource": "DiagramView.xaml.cs"
+        },
+        {
+          "destination": "Diagram/DiagramView.xaml",
+          "templateResource": "DiagramView.xaml"
+        },
+        {
+          "destination": "Diagram/DiagramViewModel.cs",
+          "templateResource": "DiagramViewModel.cs"
+        }
+      ],
+      "family": "diagram",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.Diagram.SfDiagram",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "README.md",
+        "DiagramView.xaml.cs",
+        "DiagramView.xaml",
+        "DiagramViewModel.cs"
+      ],
+      "legacyAliases": [
+        "diagram"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "Existing MAUI package-catalog documentation evidence declares ConfigureSyncfusionCore for Syncfusion.Maui.Diagram; the provider uses the established core registration pipeline."
+    },
+    {
+      "id": "kanban",
+      "displayName": "Kanban",
+      "description": "A getting-started Kanban sample.",
+      "packageId": "Syncfusion.Maui.Kanban",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/kanban/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban",
+      "xamlPrefix": "syncfusion",
+      "controlType": "SfKanban",
+      "controlName": "Kanban",
+      "csharpNamespace": "Syncfusion.Maui.Kanban",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/Kanban",
+      "generatedFiles": [
+        {
+          "destination": "Kanban/README.md",
+          "templateResource": "README.md"
+        },
+        {
+          "destination": "Kanban/KanbanViewModel.cs",
+          "templateResource": "KanbanViewModel.cs"
+        },
+        {
+          "destination": "Kanban/KanbanView.xaml",
+          "templateResource": "KanbanView.xaml"
+        },
+        {
+          "destination": "Kanban/KanbanView.xaml.cs",
+          "templateResource": "KanbanView.xaml.cs"
+        }
+      ],
+      "family": "kanban",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.Kanban.SfKanban",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "README.md",
+        "KanbanViewModel.cs",
+        "KanbanView.xaml",
+        "KanbanView.xaml.cs"
+      ],
+      "legacyAliases": [
+        "kanban"
+      ],
+      "registrationRequirement": "syncfusion-core",
+      "registrationVerified": true,
+      "registrationEvidence": "Existing MAUI package-catalog documentation evidence declares ConfigureSyncfusionCore for Syncfusion.Maui.Kanban; the provider uses the established core registration pipeline."
+    },
+    {
+      "id": "pdf-viewer",
+      "displayName": "PDF Viewer",
+      "description": "A getting-started PDF Viewer sample.",
+      "packageId": "Syncfusion.Maui.PdfViewer",
+      "dependentPackageIds": [],
+      "documentationUrl": "https://help.syncfusion.com/maui/pdfviewer/getting-started",
+      "xamlNamespace": "clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer",
+      "xamlPrefix": "sfpdfviewer",
+      "controlType": "SfPdfViewer",
+      "controlName": "PdfViewer",
+      "csharpNamespace": "Syncfusion.Maui.PdfViewer",
+      "registrationUsing": "Syncfusion.Maui.Core.Hosting",
+      "registrationCall": "builder.ConfigureSyncfusionCore();",
+      "registrationRequirement": "syncfusion-core",
+      "supportedProjectTypes": [
+        "app",
+        "blazor-hybrid"
+      ],
+      "templatePath": "Templates/Controls/PdfViewer",
+      "generatedFiles": [
+        {
+          "destination": "PdfViewer/PdfViewerPage.xaml",
+          "templateResource": "PdfViewerPage.xaml"
+        },
+        {
+          "destination": "PdfViewer/PdfViewerPage.xaml.cs",
+          "templateResource": "PdfViewerPage.xaml.cs"
+        },
+        {
+          "destination": "PdfViewer/PdfViewerViewModel.cs",
+          "templateResource": "PdfViewerViewModel.cs"
+        },
+        {
+          "destination": "PdfViewer/Pdf/PDF_Succinctly.pdf",
+          "templateResource": "Pdf/PDF_Succinctly.pdf"
+        },
+        {
+          "destination": "PdfViewer/README.md",
+          "templateResource": "README.md"
+        }
+      ],
+      "family": "pdf-viewer",
+      "compatibility": {
+        "validationStrategy": "restore-and-build-before-commit",
+        "targetFrameworkSource": "project-target-frameworks",
+        "packageVersionPolicy": "explicit-or-latest-stable"
+      },
+      "controlIdentity": "Syncfusion.Maui.PdfViewer.SfPdfViewer",
+      "verified": true,
+      "available": true,
+      "operable": true,
+      "embeddedResources": [
+        "PdfViewerPage.xaml",
+        "PdfViewerPage.xaml.cs",
+        "PdfViewerViewModel.cs",
+        "Pdf/PDF_Succinctly.pdf",
+        "README.md"
+      ],
+      "legacyAliases": [
+        "pdf-viewer"
+      ],
+      "registrationVerified": true,
+      "registrationEvidence": "The PDF Viewer template requires ConfigureSyncfusionCore registration. MauiProgramPatcher injects the required using directive and registration call when the template is installed."
+    }
+  ]
+}

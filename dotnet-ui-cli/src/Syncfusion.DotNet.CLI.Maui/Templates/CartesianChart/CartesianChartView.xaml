@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:__ROOT_NAMESPACE__.__CONTROL_NAME__"
+             Title="Cartesian Chart"
+             x:Class="__ROOT_NAMESPACE__.__CONTROL_NAME__.__VIEW_NAME__"
+             x:DataType="local:__VIEW_MODEL_NAME__">
+    <ContentPage.BindingContext>
+        <local:__VIEW_MODEL_NAME__ />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+        <Label Text="Monthly revenue"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,12"
+               SemanticProperties.HeadingLevel="Level1" />
+        <chart:SfCartesianChart Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis>
+                    <chart:CategoryAxis.Title>
+                        <chart:ChartAxisTitle Text="Month" />
+                    </chart:CategoryAxis.Title>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis>
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Revenue (USD)" />
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Month" YBindingPath="Revenue" EnableTooltip="True" />
+        </chart:SfCartesianChart>
+    </Grid>
+</ContentPage>

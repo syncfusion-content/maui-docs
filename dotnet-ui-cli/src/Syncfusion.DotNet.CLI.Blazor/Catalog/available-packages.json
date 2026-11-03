@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-16",
+  "source": "https://api.nuget.org/v3/index.json",
+  "owner": "SyncfusionInc",
+  "scope": "Platform-specific listed stable PackageReference libraries; legacy replacements, Xamarin, tools and project templates excluded. Existing aliases and generated-control selections are preserved separately.",
+  "excluded": [
+    {
+      "id": "Syncfusion.Blazor.PdfViewer",
+      "reason": "NuGet deprecated legacy package",
+      "registrationSource": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.blazor.pdfviewer/index.json",
+      "replacement": "Syncfusion.Blazor.SfPdfViewer"
+    },
+    {
+      "id": "Syncfusion.Blazor.PdfViewerServer.Windows",
+      "reason": "NuGet deprecated legacy package",
+      "registrationSource": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.blazor.pdfviewerserver.windows/index.json",
+      "replacement": "Syncfusion.Blazor.SfPdfViewer"
+    },
+    {
+      "id": "Syncfusion.Blazor.Diagrams",
+      "reason": "NuGet deprecated legacy package",
+      "registrationSource": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.blazor.diagrams/index.json",
+      "replacement": "Syncfusion.Blazor.Diagram"
+    },
+    {
+      "id": "Syncfusion.Blazor.PdfViewerServer.Linux",
+      "reason": "NuGet deprecated legacy package",
+      "registrationSource": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.blazor.pdfviewerserver.linux/index.json",
+      "replacement": "Syncfusion.Blazor.SfPdfViewer"
+    },
+    {
+      "id": "Syncfusion.Blazor.PdfViewerServer.OSX",
+      "reason": "NuGet deprecated legacy package",
+      "registrationSource": "https://api.nuget.org/v3/registration5-gz-semver2/syncfusion.blazor.pdfviewerserver.osx/index.json",
+      "replacement": "Syncfusion.Blazor.SfPdfViewer"
+    },
+    {
+      "id": "Syncfusion.Blazor.Toolkit.Templates",
+      "reason": "tool or project template, not a PackageReference library"
+    },
+    {
+      "id": "Syncfusion.Blazor.WebApp.Templates",
+      "reason": "tool or project template, not a PackageReference library"
+    },
+    {
+      "id": "Syncfusion.Blazor.MCP",
+      "reason": "tool or project template, not a PackageReference library"
+    },
+    {
+      "id": "Syncfusion.Blazor.WebAssemblyApp.Templates",
+      "reason": "tool or project template, not a PackageReference library"
+    }
+  ],
+  "packages": [
+    {
+      "alias": "a2-ui",
+      "displayName": "A2 UI",
+      "id": "Syncfusion.Blazor.A2UI",
+      "description": "Syncfusion® Blazor A2UI Library is a thin Blazor renderer for the A2UI v0.9 protocol (originally @a2ui/web_core by Google LLC). Built on top of Syncfusion.A2UI.Core, it provides Blazor nodes, a node-surface, binder adapters and an optional rich set of Syncfusion Syncfusion.Blazor.*-backed component implementations for DataGrid, Chart, Scheduler,...",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "ai",
+      "displayName": "AI",
+      "id": "Syncfusion.Blazor.AI",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor AI features and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "barcode-generator",
+      "displayName": "Barcode Generator",
+      "id": "Syncfusion.Blazor.BarcodeGenerator",
+      "description": "Syncfusion® Blazor components to render industry‑standard 1D and 2D barcodes (QR, Code128, EAN, DataMatrix). Optimized for printing and on‑screen scanning in Blazor Server and Blazor WebAssembly apps.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "block-editor",
+      "displayName": "Block Editor",
+      "id": "Syncfusion.Blazor.BlockEditor",
+      "description": "Provides the Syncfusion® Blazor BlockEditor component to create, edit, and manage rich block-based content with extensible tools, flexible layouts, seamless integration, and high-performance rendering for modern Blazor web applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "bullet-chart",
+      "displayName": "Bullet Chart",
+      "id": "Syncfusion.Blazor.BulletChart",
+      "description": "Syncfusion® Blazor Bullet Chart component for displaying key performance metrics and comparative measurements. Provides multiple ranges, comparative bars, and customizable scales for clear performance visualization in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "buttons",
+      "displayName": "Buttons",
+      "id": "Syncfusion.Blazor.Buttons",
+      "description": "Provides Syncfusion® Blazor UI components including Button, Checkbox, RadioButton, Chips, Switch, Floating Action Button, SpeedDial, and Icons. Designed for building interactive user interfaces with support for Blazor Server and Blazor WebAssembly.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "calendars",
+      "displayName": "Calendars",
+      "id": "Syncfusion.Blazor.Calendars",
+      "description": "Provides Syncfusion® Blazor calendar and date/time picker components for building date selection interfaces. Includes Calendar, DatePicker, DateRangePicker, DateTimePicker, and TimePicker with support for localization, custom formatting, and date range validation.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "cards",
+      "displayName": "Cards",
+      "id": "Syncfusion.Blazor.Cards",
+      "description": "Provides the Syncfusion® Blazor Card component for creating container-based UI cards in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "chart-3d",
+      "displayName": "Chart 3D",
+      "id": "Syncfusion.Blazor.Chart3D",
+      "description": "Syncfusion® Blazor Chart3D component library provides interactive 3D chart visualizations for Blazor applications. Includes support for various chart types (accumulation, bullet, range navigator, sparkline, smith chart, stock chart) with data binding, export capabilities (PDF, Excel), and responsive design across Blazor Server and WebAssembly platforms...",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "charts",
+      "displayName": "Charts",
+      "id": "Syncfusion.Blazor.Charts",
+      "description": "This package contains the Syncfusion® Blazor Charts components.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "chart-wizard",
+      "displayName": "Chart Wizard",
+      "id": "Syncfusion.Blazor.ChartWizard",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor Chart Wizard component - an interactive chart creation and customization tool with real-time preview, multiple chart types, RTL support, and comprehensive formatting options.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "circular-gauge",
+      "displayName": "Circular Gauge",
+      "id": "Syncfusion.Blazor.CircularGauge",
+      "description": "Provides the Syncfusion® Blazor Circular Gauge component for creating radial gauges in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "core",
+      "displayName": "Core",
+      "id": "Syncfusion.Blazor.Core",
+      "description": "Syncfusion® Blazor Core Library provides base components, utilities, and interfaces used across Syncfusion Blazor UI components. Compatible with Blazor Server and Blazor WebAssembly.",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "data",
+      "displayName": "Data",
+      "id": "Syncfusion.Blazor.Data",
+      "description": "Syncfusion® Blazor DataManager component for managing data operations in Blazor applications. Provides features for data binding, CRUD operations, sorting, filtering, grouping, and paging with support for local and remote data sources.",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "data-form",
+      "displayName": "Data Form",
+      "id": "Syncfusion.Blazor.DataForm",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor Form component.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "data-viz-common",
+      "displayName": "Data Viz Common",
+      "id": "Syncfusion.Blazor.DataVizCommon",
+      "description": "The Blazor DataVizCommon is the base package for the svg elements, common classes and interfaces that are used in Syncfusion® Charts Blazor UI components like charts and range selector. Support: Incident: https://www.syncfusion.com/support/directtrac/incidents/newincident/?utm_source=nuget&utm_medium=listing Forum:...",
+      "category": "Infrastructure",
+      "classification": "dependency-only",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "diagram",
+      "displayName": "Diagram",
+      "id": "Syncfusion.Blazor.Diagram",
+      "description": "Syncfusion® Blazor Diagram component for building interactive diagrams and flowcharts in .NET Blazor applications. Supports nodes, connectors, symbol palette, drag-and-drop, layout algorithms, serialization, and export.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "drop-downs",
+      "displayName": "Drop Downs",
+      "id": "Syncfusion.Blazor.DropDowns",
+      "description": "Provides Syncfusion® Blazor dropdown and selection components including AutoComplete, ComboBox, DropDownList, ListBox, and MultiSelect controls. Supports data binding, filtering, grouping, cascading, templates, and accessibility features for building robust selection interfaces.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "file-manager",
+      "displayName": "File Manager",
+      "id": "Syncfusion.Blazor.FileManager",
+      "description": "This package contains the Syncfusion® Blazor FileManager component.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "file-manager-physical-file-provider",
+      "displayName": "File Manager Physical File Provider",
+      "id": "Syncfusion.Blazor.FileManager.PhysicalFileProvider",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor FileManager component in Physical file system and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "gantt",
+      "displayName": "Gantt",
+      "id": "Syncfusion.Blazor.Gantt",
+      "description": "This package contains the Syncfusion® Blazor Gantt component.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "grid",
+      "displayName": "Grid",
+      "id": "Syncfusion.Blazor.Grid",
+      "description": "Syncfusion® Blazor DataGrid component for rendering high-performance, feature-rich tabular UI in .NET Blazor applications. Includes virtualization, paging, sorting, filtering, grouping, editing, templates, and export (Excel/PDF).",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "heat-map",
+      "displayName": "Heat Map",
+      "id": "Syncfusion.Blazor.HeatMap",
+      "description": "Syncfusion® Blazor HeatMap component for creating interactive, data-driven heatmap visualizations. Provides comprehensive features for displaying matrix-based data, cell interaction, legends, tooltips, and color mapping in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "image-editor",
+      "displayName": "Image Editor",
+      "id": "Syncfusion.Blazor.ImageEditor",
+      "description": "This package contains the Syncfusion® Blazor ImageEditor component.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "in-place-editor",
+      "displayName": "In Place Editor",
+      "id": "Syncfusion.Blazor.InPlaceEditor",
+      "description": "Provides a Syncfusion® Blazor In-Place Editor component for inline and popup editing scenarios. Supports multiple input types including TextBox, Dropdown, DatePicker, and Rich Text Editor. Optimized for seamless integration in both Blazor Server and Blazor WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "inputs",
+      "displayName": "Inputs",
+      "id": "Syncfusion.Blazor.Inputs",
+      "description": "Comprehensive Blazor Syncfusion® input components including TextBox, MaskedTextBox, NumericTextBox, Color Picker, File Upload, Slider, Rating, Signature, OTP Input, and Speech To Text. Features data validation, formatting, keyboard navigation, and accessibility support for .NET 8+.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "interactive-chat",
+      "displayName": "Interactive Chat",
+      "id": "Syncfusion.Blazor.InteractiveChat",
+      "description": "Syncfusion® Blazor Interactive Chat component for building conversational AI interfaces. Supports real-time messaging, user interactions, and integration with AI services. Designed for Blazor Server and Blazor WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "kanban",
+      "displayName": "Kanban",
+      "id": "Syncfusion.Blazor.Kanban",
+      "description": "Syncfusion® Blazor Kanban component for building workflow boards in .NET Blazor apps. Supports drag-and-drop cards, swimlanes, filtering, card templates, and dialog editing.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "layouts",
+      "displayName": "Layouts",
+      "id": "Syncfusion.Blazor.Layouts",
+      "description": "Syncfusion® Provides Blazor layout components for building responsive page structures. Includes Dashboard Layout for grid-based arrangements and Splitter for resizable, collapsible pane management with drag-and-drop support and keyboard accessibility.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "linear-gauge",
+      "displayName": "Linear Gauge",
+      "id": "Syncfusion.Blazor.LinearGauge",
+      "description": "Syncfusion® Blazor Linear Gauge component for visualizing measurements and metrics on a linear scale. Supports customizable ranges, pointers, labels, and annotations. Designed for Blazor Server and Blazor WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "lists",
+      "displayName": "Lists",
+      "id": "Syncfusion.Blazor.Lists",
+      "description": "Syncfusion® Blazor ListView component for displaying data in list format with advanced features including sorting, filtering, grouping, and custom templates. Part of Syncfusion® UI component library for .NET 8+.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "maps",
+      "displayName": "Maps",
+      "id": "Syncfusion.Blazor.Maps",
+      "description": "Syncfusion® Blazor Maps component for rendering interactive maps and spatial visualizations in .NET Blazor apps. Supports markers, bubbles, multi-layer maps, tooltips, zooming/panning, and export.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "multi-column-combo-box",
+      "displayName": "Multi Column Combo Box",
+      "id": "Syncfusion.Blazor.MultiColumnComboBox",
+      "description": "Syncfusion® Blazor MultiColumnComboBox component enables users to select values from a dropdown list that displays multiple columns of related data. Supports data binding, filtering, virtualization, and customizable column templates for enhanced data presentation in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "navigations",
+      "displayName": "Navigations",
+      "id": "Syncfusion.Blazor.Navigations",
+      "description": "Syncfusion® Provides Blazor navigation and menu components for building interactive navigation structures. Includes Accordion, Sidebar, Tabs, Menu Bar, Context Menu, Toolbar, and Tree View with support for keyboard navigation, accessibility features, and customizable templates.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "notifications",
+      "displayName": "Notifications",
+      "id": "Syncfusion.Blazor.Notifications",
+      "description": "Syncfusion® Provides Blazor notification components for displaying user alerts and feedback. Includes Toast for temporary notifications, Message for persistent alerts, and Skeleton loader for content placeholders during async operations with animations and accessibility support.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "pivot-table",
+      "displayName": "Pivot Table",
+      "id": "Syncfusion.Blazor.PivotTable",
+      "description": "Syncfusion® Blazor Pivot Table (PivotView) component for data summarization and analytics in .NET Blazor apps. Supports pivoting, aggregation, drill-down, field lists, calculated fields, and export.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "popups",
+      "displayName": "Popups",
+      "id": "Syncfusion.Blazor.Popups",
+      "description": "Syncfusion® Provides Blazor popup and overlay components for building interactive dialogs and tooltips. Includes Dialog for modal and modeless windows with drag support, and Tooltip for contextual help with positioning and animations.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "progress-bar",
+      "displayName": "Progress Bar",
+      "id": "Syncfusion.Blazor.ProgressBar",
+      "description": "Syncfusion® Blazor ProgressBar component displays the progress of a task with visual indication and supports linear and circular progress modes. Features include customizable track colors, segments, labels, and animation effects for enhanced user experience in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "query-builder",
+      "displayName": "Query Builder",
+      "id": "Syncfusion.Blazor.QueryBuilder",
+      "description": "Syncfusion® Blazor Query Builder component enables users to build, validate, and execute complex database queries with a visual interface. Features include customizable columns, operators, filtering rules, and SQL/LINQ query generation for intuitive data filtering and query construction in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "range-navigator",
+      "displayName": "Range Navigator",
+      "id": "Syncfusion.Blazor.RangeNavigator",
+      "description": "Syncfusion® Blazor Range Navigator component provides an interactive range selection control for navigating and visualizing data over a range. Enables zooming, panning, and selection across large datasets with support for date-time and numeric axes, built for Blazor Server and WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "ribbon",
+      "displayName": "Ribbon",
+      "id": "Syncfusion.Blazor.Ribbon",
+      "description": "Syncfusion® Blazor Ribbon component provides a Microsoft Office-style ribbon interface for organizing complex commands and tools. Features include customizable tabs, groups, items with icons and labels, dropdown menus, split buttons, and quick access toolbar for professional application interfaces in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "rich-text-editor",
+      "displayName": "Rich Text Editor",
+      "id": "Syncfusion.Blazor.RichTextEditor",
+      "description": "Syncfusion® Blazor Rich Text Editor component for composing and formatting HTML content in .NET Blazor apps. Supports toolbar, markdown, paste cleanup, formats, and extensible plugins.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "sankey",
+      "displayName": "Sankey",
+      "id": "Syncfusion.Blazor.Sankey",
+      "description": "Syncfusion® Blazor Sankey component renders Sankey diagrams to visualize flow between nodes. Supports data binding, custom node/link templates, tooltips, animations, and styling options for nodes and links in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "schedule",
+      "displayName": "Schedule",
+      "id": "Syncfusion.Blazor.Schedule",
+      "description": "Syncfusion® Blazor Scheduler component for managing appointments and calendars in .NET Blazor apps. Supports multiple views, recurrence, time zones, resource grouping, drag-and-drop, and export.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "pdf-viewer",
+      "displayName": "Pdf Viewer",
+      "id": "Syncfusion.Blazor.SfPdfViewer",
+      "description": "Provides support in the Syncfusion® Blazor PDF Viewer component to load PDF documents, add and edit annotations, and add and edit form fields within the PDF.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "smart-pdf-viewer",
+      "displayName": "Smart Pdf Viewer",
+      "id": "Syncfusion.Blazor.SfSmartPdfViewer",
+      "description": "Syncfusion® delivers AI‑powered Blazor Smart PDF Viewer components that automate PDF workflows such as data redaction, form filling, and AI‑driven summarization and Q&A.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "smart-components",
+      "displayName": "Smart Components",
+      "id": "Syncfusion.Blazor.SmartComponents",
+      "description": "Syncfusion® Provides AI-powered Blazor components that use intelligent APIs to automate common UI tasks. Enables smart data handling, predictive input, and context-aware features for building more efficient user interfaces with minimal configuration.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "smart-rich-text-editor",
+      "displayName": "Smart Rich Text Editor",
+      "id": "Syncfusion.Blazor.SmartRichTextEditor",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor SmartRichTextEditor component, an enhanced Rich Text Editor with integrated AI assistance for content generation, editing, and analysis using Syncfusion AI AssistView.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "smith-chart",
+      "displayName": "Smith Chart",
+      "id": "Syncfusion.Blazor.SmithChart",
+      "description": "Syncfusion® Blazor Smith Chart component enables visualization of complex impedance, admittance, and reflection coefficient parameters in transmission line analysis. Designed for RF engineers and electrical professionals, it provides interactive charts with markers, series customization, and export capabilities for Blazor Server and WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "sparkline",
+      "displayName": "Sparkline",
+      "id": "Syncfusion.Blazor.Sparkline",
+      "description": "Syncfusion® Blazor Sparkline component displays lightweight, single-series data visualization charts in a compact cell or inline format. Ideal for dashboards and data summaries, it supports multiple chart types (line, column, area, bar) with interactive tooltips and responsive design for Blazor Server and WebAssembly applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "spinner",
+      "displayName": "Spinner",
+      "id": "Syncfusion.Blazor.Spinner",
+      "description": "Syncfusion® Blazor Spinner component for displaying loading states and progress indicators. Provides lightweight, accessible, and customizable spinners with multiple animation styles, themes, and sizes for modern Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "split-buttons",
+      "displayName": "Split Buttons",
+      "id": "Syncfusion.Blazor.SplitButtons",
+      "description": "Syncfusion® Provides Blazor button components for building advanced button interfaces. Includes Button Group for grouped controls, Dropdown Menu with nested options, Split Button for dual-action triggers, and Progress Button with loading states and animations.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "spreadsheet",
+      "displayName": "Spreadsheet",
+      "id": "Syncfusion.Blazor.Spreadsheet",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor SpreadSheet component and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "stock-chart",
+      "displayName": "Stock Chart",
+      "id": "Syncfusion.Blazor.StockChart",
+      "description": "Syncfusion® Provides a Blazor Stock Chart component for building interactive financial and time-series data visualizations. Supports multiple chart types, real-time data binding, technical indicators, and responsive design for web applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "themes",
+      "displayName": "Themes",
+      "id": "Syncfusion.Blazor.Themes",
+      "description": "This package contains the Syncfusion® Blazor component themes as static web assets for Blazor applications.",
+      "category": "Themes",
+      "classification": "theme",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "toolkit",
+      "displayName": "Toolkit",
+      "id": "Syncfusion.Blazor.Toolkit",
+      "description": "The Syncfusion® Toolkit for Blazor is a high-performance, open-source collection of lightweight UI components designed to accelerate Blazor application development (Server and WebAssembly). These controls help developers build modern, responsive, and feature-rich web applications faster, with clean code and excellent performance.",
+      "category": "Toolkit",
+      "classification": "toolkit",
+      "status": "stable",
+      "verifiedVersion": "2.0.0"
+    },
+    {
+      "alias": "tree-grid",
+      "displayName": "Tree Grid",
+      "id": "Syncfusion.Blazor.TreeGrid",
+      "description": "Syncfusion® Blazor TreeGrid component for displaying hierarchical tabular data in .NET Blazor apps. Supports row hierarchy, sorting, filtering, paging, editing, virtualization, and export.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "tree-map",
+      "displayName": "Tree Map",
+      "id": "Syncfusion.Blazor.TreeMap",
+      "description": "Syncfusion® Blazor TreeMap component for visualizing hierarchical data using nested rectangles. Provides customizable colors, labels, drill-down navigation, and interactive features for displaying structured data in Blazor applications.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    },
+    {
+      "alias": "word-processor",
+      "displayName": "Word Processor",
+      "id": "Syncfusion.Blazor.WordProcessor",
+      "description": "This package provides the functionality to utilize the features of Syncfusion® Blazor Word Processor (Document Editor) component and more.",
+      "category": "Controls",
+      "classification": "control",
+      "status": "stable",
+      "verifiedVersion": "35.1.40"
+    }
+  ]
+}
