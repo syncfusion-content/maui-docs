@@ -10,7 +10,7 @@ appliesto: UI Component Suite, Diagram SDK
 
 # Organizational Chart in .NET MAUI Diagram
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`type`](../../api/diagram/layoutModel#type) of layout should be set as an `OrganizationalChart`.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`type`]() of layout should be set as an `OrganizationalChart`.
 
 ## Prerequisites
 
@@ -23,15 +23,94 @@ Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-
 The following code example illustrates how to create an organizational chart with DataSource.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/AutomaticLayout-cs3/index.ts %}
+{% highlight xaml %}
+    <diagram:SfDiagram x:Name="Diagram">
+        <diagram:SfDiagram.Layout>
+            <diagram:DiagramLayout Type="OrganizationalChart"
+                                   VerticalSpacing="50" />
+        </diagram:SfDiagram.Layout>
+    </diagram:SfDiagram>
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs3/index.html %}
+{% highlight c# tabtitle="C#" %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Diagram;
+
+namespace Diagram;
+
+public partial class MainPage : ContentPage
+{
+	private sealed record Employee(string Id, string? Team, string Role);
+	public MainPage()
+	{
+		InitializeComponent();
+		Diagram.DataSourceSettings = new DataSourceSettings
+        {
+            DataSource = new[]
+            {
+                new Employee("parent", null, "Project Management"),
+                new Employee("1", "parent", "R&D Team"),
+                new Employee("3", "1", "Philosophy"),
+                new Employee("4", "1", "Organization"),
+                new Employee("5", "1", "Technology"),
+                new Employee("6", "1", "Funding"),
+                new Employee("7", "1", "Resource Allocation"),
+                new Employee("8", "1", "Targeting"),
+                new Employee("9", "1", "Evaluation"),
+                new Employee("156", "parent", "HR Team"),
+                new Employee("13", "156", "Recruitment"),
+                new Employee("112", "156", "Employee Relation"),
+                new Employee("17", "parent", "Production & Sales Team"),
+                new Employee("18", "17", "Design"),
+                new Employee("19", "17", "Operation"),
+                new Employee("20", "17", "Support"),
+                new Employee("21", "17", "Quality Assurance"),
+                new Employee("22", "17", "Customer Interaction"),
+                new Employee("23", "17", "Support and Maintenance"),
+                new Employee("24", "17", "Task Coordination"),
+            },
+            Id = "Id",
+            ParentId = "Team",
+        };
+
+        Diagram.NodeDefaults = new NodeDefaults
+        {
+            Width = 100,
+            Height = 40,
+            Shape = NodeBasicShapes.Rectangle,
+            Stroke = Colors.Black,
+            StrokeThickness = 2,
+            Fill = Colors.DarkCyan,
+            ExpandIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            CollapseIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+             
+            Annotations = new ObservableCollection<AnnotationMapping>
+            {
+                new()
+                {
+                    TextPath = nameof(Employee.Role),
+                    TextColor = Colors.White,
+                    FontAttributes = FontAttributes.Bold
+                },
+            },
+        };
+
+        Diagram.ConnectorDefaults = new ConnectorDefaults
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Stroke = Colors.SkyBlue,
+            StrokeThickness = 2,
+            ShowTargetArrow = true,
+        };
+	}
+}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs3" %}
 
 N> If you want to use Organizational chart layout in diagram, you need to inject HierarchicalTree module along with DataBinding module in the diagram.
 
@@ -40,21 +119,82 @@ N> If you want to use Organizational chart layout in diagram, you need to inject
 You can render an org-chart layout without using DataSource. The following code demonstrates how to render an org-chart layout without using data source.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/AutomaticLayout-orgChart/index.ts %}
+{% highlight xaml %}
+    <diagram:SfDiagram x:Name="Diagram">
+        <diagram:SfDiagram.Layout>
+            <diagram:DiagramLayout Type="OrganizationalChart"
+                                   VerticalSpacing="50" />
+        </diagram:SfDiagram.Layout>
+    </diagram:SfDiagram>
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-orgChart/index.html %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Maui.Diagram;
+namespace Diagram;
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+		InitializeComponent();
+
+        var labels = new[] { "Project Management", "R&D Team", "Philosophy", "Organization", "Technology", "Funding", "Resource Allocation", "Targeting", "Evaluation", "HR Team", "Recruitment", "Employee Relation", "Production & Sales Team", "Design", "Operation", "Support", "Quality Assurance", "Customer Interaction", "Support and Maintenance", "Task Coordination" };
+        foreach (var label in labels)
+            Diagram.Nodes.Add(CreateAnnotatedNode(label));
+
+        AddConnection("Project Management", "R&D Team");
+        AddConnection("Project Management", "HR Team");
+        AddConnection("Project Management", "Production & Sales Team");
+        AddConnection("R&D Team", "Philosophy");
+        AddConnection("R&D Team", "Organization");
+        AddConnection("R&D Team", "Technology");
+        AddConnection("R&D Team", "Funding");
+        AddConnection("R&D Team", "Resource Allocation");
+        AddConnection("R&D Team", "Targeting");
+        AddConnection("R&D Team", "Evaluation");
+        AddConnection("HR Team", "Recruitment");
+        AddConnection("HR Team", "Employee Relation");
+        AddConnection("Production & Sales Team", "Design");
+        AddConnection("Production & Sales Team", "Operation");
+        AddConnection("Production & Sales Team", "Support");
+        AddConnection("Production & Sales Team", "Quality Assurance");
+        AddConnection("Production & Sales Team", "Customer Interaction");
+        AddConnection("Production & Sales Team", "Support and Maintenance");
+        AddConnection("Production & Sales Team", "Task Coordination");
+	}
+
+    private Node CreateNode(string id) => new()
+    {
+        Id = id,
+        Width = 100,
+        Height = 50,
+        Shape = new BasicShape { Shape = NodeBasicShapes.Rectangle },
+        Style = new ShapeStyle { Fill = Colors.DarkCyan, StrokeColor = Colors.Black }
+    };
+
+    private Node CreateAnnotatedNode(string id)
+    {
+        var node = CreateNode(id);
+        node.Annotations.Add(new ShapeAnnotation { Content = id, Style = new TextStyle { Color = Colors.White, Bold = true } });
+        return node;
+    }
+
+    private void AddConnection(string source, string target) => Diagram.Connectors.Add(new Connector
+    {
+        Id = $"{source}-{target}", 
+        SourceID = source, 
+        TargetID = target, 
+        Style = new ShapeStyle { StrokeColor = Colors.SkyBlue, StrokeWidth = 2 }, 
+        TargetDecorator = new DecoratorSettings { Shape = DecoratorShape.Arrow, Style = new ShapeStyle { Fill = Colors.SkyBlue, StrokeColor = Colors.SkyBlue } }
+    });
+}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-orgChart" %}
 
 ![Organizational chart](../images//org-chart.png)
 
 ## GetLayout info
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [`getLayoutInfo`](../../api/diagram/layoutModel#getlayoutinfo) method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.) them. The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterate through all its child elements. The [`getLayoutInfo`]() method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.) them. The arrangements can be customized by overriding this function as explained.
 
 Set chart orientations, chart types, and offset to be left between parent and child nodes by overriding the `getLayoutInfo` method. The `getLayoutInfo` method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
@@ -92,30 +232,166 @@ The following table illustrates the different chart orientations and chart types
 The following example shows how to utilize the `getLayoutInfo` function to customize the sub tree alignment in horizontal orientation.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/AutomaticLayout-cs4/index.ts %}
+{% highlight xaml %}
+    <diagram:SfDiagram x:Name="Diagram">
+        <diagram:SfDiagram.Layout>
+            <diagram:DiagramLayout Type="OrganizationalChart"
+                                   VerticalSpacing="50" />
+        </diagram:SfDiagram.Layout>
+    </diagram:SfDiagram>
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs4/index.html %}
+{% highlight c# tabtitle="C#" %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Diagram;
+namespace Diagram;
+
+public partial class MainPage : ContentPage
+{
+	private sealed record Employee(int Id, int? Team, string Role);
+	public MainPage()
+	{
+		InitializeComponent();
+
+        Diagram.Layout.GetLayoutInfo = (node, info) => new TreeInfo
+        {
+            Orientation = SubTreeOrientation.Horizontal,
+            Type = SubTreeAlignments.Center
+        };
+
+        Diagram.DataSourceSettings = new DataSourceSettings
+        {
+            DataSource = new[]
+            {
+                new Employee(1, null, "General Manager"),
+                new Employee(2, 1, "Assistant Manager"),
+                new Employee(3, 1, "Human Resource Manager"),
+                new Employee(4, 1, "Design Manager"),
+                new Employee(5, 1, "Operation Manager"),
+                new Employee(6, 1, "Marketing Manager")
+            },
+            Id = "Id", ParentId = "Team",
+        };
+
+		Diagram.NodeDefaults = new NodeDefaults
+        {
+            Width = 120,
+            Height = 40,
+            Shape = NodeBasicShapes.Rectangle,
+            Stroke = Colors.Black,
+            StrokeThickness = 2,
+            Fill = Colors.DarkCyan,
+			ExpandIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            CollapseIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            Annotations = new ObservableCollection<AnnotationMapping>
+            {
+                new()
+                {
+                    TextPath = nameof(Employee.Role),
+                    TextColor = Colors.White,
+                    FontAttributes = FontAttributes.Bold
+                },
+            },
+        };
+
+        Diagram.ConnectorDefaults = new ConnectorDefaults
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Stroke = Colors.SkyBlue,
+            StrokeThickness = 2,
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs4" %}
 
 ### SubTree vertical orientation 
 
 The following code example illustrates how to set the vertical arrangement to the leaf level trees.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/AutomaticLayout-cs5/index.ts %}
+{% highlight xaml %}
+    <diagram:SfDiagram x:Name="Diagram">
+        <diagram:SfDiagram.Layout>
+            <diagram:DiagramLayout Type="OrganizationalChart"
+                                   VerticalSpacing="50" />
+        </diagram:SfDiagram.Layout>
+    </diagram:SfDiagram>
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs5/index.html %}
+{% highlight c# tabtitle="C#" %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Diagram;
+namespace Diagram;
+
+public partial class MainPage : ContentPage
+{
+	private sealed record Employee(int Id, int? Team, string Role);
+	public MainPage()
+	{
+		InitializeComponent();
+
+        Diagram.Layout.GetLayoutInfo = (node, info) => new TreeInfo
+        {
+            Orientation = SubTreeOrientation.Vertical,
+            Type = SubTreeAlignments.Left
+        };
+
+        Diagram.DataSourceSettings = new DataSourceSettings
+        {
+            DataSource = new[]
+            {
+                new Employee(1, null, "General Manager"),
+                new Employee(2, 1, "Assistant Manager"),
+                new Employee(3, 1, "Human Resource Manager"),
+                new Employee(4, 1, "Design Manager"),
+                new Employee(5, 1, "Operation Manager"),
+                new Employee(6, 1, "Marketing Manager")
+            },
+            Id = "Id", ParentId = "Team",
+        };
+
+		Diagram.NodeDefaults = new NodeDefaults
+        {
+            Width = 120,
+            Height = 40,
+            Shape = NodeBasicShapes.Rectangle,
+            Stroke = Colors.Black,
+            StrokeThickness = 2,
+            Fill = Colors.DarkCyan,
+			ExpandIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            CollapseIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            Annotations = new ObservableCollection<AnnotationMapping>
+            {
+                new()
+                {
+                    TextPath = nameof(Employee.Role),
+                    TextColor = Colors.White,
+                    FontAttributes = FontAttributes.Bold
+                },
+            },
+        };
+
+        Diagram.ConnectorDefaults = new ConnectorDefaults
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Stroke = Colors.SkyBlue,
+            StrokeThickness = 2,
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs5" %}
 
 
 ### Assistant
@@ -125,15 +401,85 @@ Assistants are child item that have a different relationship with the parent nod
 The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/AutomaticLayout-cs6/index.ts %}
+{% highlight xaml %}
+    <diagram:SfDiagram x:Name="Diagram">
+        <diagram:SfDiagram.Layout>
+            <diagram:DiagramLayout Type="OrganizationalChart"
+                                   VerticalSpacing="50" />
+        </diagram:SfDiagram.Layout>
+    </diagram:SfDiagram>
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs6/index.html %}
+{% highlight c# tabtitle="C#" %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Diagram;
+namespace Diagram;
+
+public partial class MainPage : ContentPage
+{
+	private sealed record Employee(int Id, int? Team, string Role, OrganizationalRole RoleInChart = OrganizationalRole.Normal);
+	public MainPage()
+	{
+		InitializeComponent();
+
+		var employees = new[]
+        {
+            new Employee(1, null, "General Manager"),
+            new Employee(2, 1, "Assistant Manager", OrganizationalRole.Assistant),
+            new Employee(3, 1, "Human Resource Manager"),
+            new Employee(4, 1, "Design Manager"),
+            new Employee(5, 1, "Operation Manager"),
+            new Employee(6, 1, "Marketing Manager")
+        };
+
+        Diagram.DataSourceSettings = new DataSourceSettings
+        {
+            DataSource = employees,
+            Id = "Id", ParentId = "Team",
+        };
+
+		Diagram.Layout.GetLayoutInfo = (node, info) => new TreeInfo
+        {
+            Orientation = SubTreeOrientation.Horizontal,
+            Type = SubTreeAlignments.Center,
+			Role = node.Data is Employee employee ? employee.RoleInChart : OrganizationalRole.Normal
+        };
+
+		Diagram.NodeDefaults = new NodeDefaults
+        {
+            Width = 120,
+            Height = 40,
+            Shape = NodeBasicShapes.Rectangle,
+            Stroke = Colors.Black,
+            StrokeThickness = 2,
+            Fill = Colors.CornflowerBlue,
+			ExpandIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            CollapseIcon = new ExpandIcon()
+            {
+                Shape = IconShapeModel.None
+            },
+            Annotations = new ObservableCollection<AnnotationMapping>
+            {
+                new()
+                {
+                    TextPath = nameof(Employee.Role),
+                    TextColor = Colors.White,
+                },
+            },
+        };
+
+        Diagram.ConnectorDefaults = new ConnectorDefaults
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Stroke = Colors.CornflowerBlue,
+            StrokeThickness = 2,
+        };
+    }
+}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs6" %}
 
 ![Assistant](../images//assistant.png)
 
