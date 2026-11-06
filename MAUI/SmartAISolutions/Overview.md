@@ -108,15 +108,22 @@ line-height: 1;
 <!-- COLUMN 1 -->
 <td>
 
+<div><p class="category-topics">AIAssistView</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/AIAssistView/Context-Aware-Suggestions" aria-label="AIAssAIAssistView Context Aware Suggestions">
+<span ></span>Context Aware Suggestions</a>
+</div>
+
 <div><p class="category-topics">AutoComplete</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching.md" aria-label="AutoComplete Smart Searching">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching" aria-label="AutoComplete Smart Searching">
 <span class="sf-home-icon sf-icon-smart-search"></span>Smart Searching</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Filtering.md" aria-label="AutoComplete Smart Filtering">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Filtering" aria-label="AutoComplete Smart Filtering">
 <span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
 </div>
 
@@ -150,11 +157,6 @@ line-height: 1;
 <a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" aria-label="Cartesian Charts Stock Forecasting"><span class="sf-home-icon sf-icon-stock-forecasting"></span>Stock Forecasting</a>
 </div>
 
-</td>
-
-<!-- COLUMN 2 -->
-<td>
-
 <div><p class="category-topics">DataForm</p></div>
 
 <div class="controlanchorlink">
@@ -164,6 +166,15 @@ line-height: 1;
 <div class="controlanchorlink">
 <a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm" aria-label="DataForm Smart Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Smart Data Entry</a>
 </div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/dataform/AI-Form-Generator" aria-label="DataForm AI Form Generator"><span ></span>AI Form Generator</a>
+</div>
+
+</td>
+
+<!-- COLUMN 2 -->
+<td>
 
 <div><p class="category-topics">DataGrid</p></div>
 
@@ -177,6 +188,18 @@ line-height: 1;
 
 <div class="controlanchorlink">
 <a target="_self" href="/maui/DataGrid/AI-driven-duplicate-detection" aria-label="DataGrid AI-Driven Duplicate Detection"><span class="sf-home-icon sf-icon-duplicate-detection"></span>AI-Driven Duplicate Detection</a>
+</div>
+
+<div><p class="category-topics">Kanban</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Kanban-Board/AI-Driven-Task-Prioritization-Engine" aria-label="Kanban Task Prioritization Engine"><span></span>Task Prioritization Engine</a>
+</div>
+
+<div><p class="category-topics">ListView</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/ListView/AI-Driven-Intent-Grouping" aria-label="ListView Smart Intent Grouping"><span ></span>Smart Intent Grouping</a>
 </div>
 
 <div><p class="category-topics">Maps</p></div>
