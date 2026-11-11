@@ -178,7 +178,7 @@ this.Content = sunburst;
 
 The appearance of segments at each hierarchy level can be customized by using the [Fill]() property of the [SunburstHierarchicalLevel](). This property applies the specified brush to all segments generated from the corresponding hierarchy level, allowing each level to have a distinct visual appearance and making it easier to identify the hierarchy depth.
 
-When the [Fill]() property is set to `null`, the Sunburst Chart uses the existing palette based color assignment behavior.
+N> When the [Fill]() property is set to `null`, the Sunburst Chart uses the existing palette based color assignment behavior.
 
 {% tabs %}
 
