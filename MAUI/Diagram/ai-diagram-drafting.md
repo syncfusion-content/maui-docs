@@ -369,13 +369,9 @@ The code-behind listens for `CurrentDiagram` changes, clears the old surface, ad
 
 The generated workflow appears in the Syncfusion® .NET MAUI Diagram control.
 
-![AI-powered process diagram drafting](Images/ai-process-diagram-drafting.gif)
-
-You can find the complete sample in the [MAUI AI use-case demos repository]().
+![AI-powered process diagram drafting](Images/diagram-drafting.gif).
 
 ## See Also
 
 - [AI solution prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites)
 - [.NET MAUI Diagram getting started](https://help.syncfusion.com/maui/diagram/getting-started)
-- [Azure OpenAI overview](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai#ProductOverview)
-- [Dependency injection in .NET MAUI](https://learn.microsoft.com/dotnet/maui/fundamentals/dependency-injection)
