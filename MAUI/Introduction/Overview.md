@@ -44,8 +44,8 @@ Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI is a compreh
 
 ## Supported .NET versions
 
-* .NET 9.0
 * .NET 10.0
+* .NET 11.0
 
 ## Controls List
 
