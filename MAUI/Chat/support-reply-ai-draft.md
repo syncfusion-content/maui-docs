@@ -533,12 +533,6 @@ Test different prompts to match your team's voice. Each prompt produces differen
 
 Test your prompts with real customer messages. Once you find what works best, update the `systemPrompt` variable in `GetDraftReplyAsync`.
 
-## See the Complete Workflow
-
-The following animation shows the complete workflow—from selecting a customer message to reviewing and sending the AI-drafted reply:
-
-![AI-powered support reply drafting in .NET MAUI Chat](images/support-reply-ai-draft.gif)
-
 ## Next Steps
 
 Find the complete, working sample in the [AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos).
