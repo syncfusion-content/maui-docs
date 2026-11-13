@@ -10,7 +10,7 @@ appliesto: UI Component Suite, Diagram SDK
 
 # Organizational Chart in .NET MAUI Diagram
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`type`]() of layout should be set as an `OrganizationalChart`.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`Type`]() of layout should be set as an `OrganizationalChart`.
 
 ## Prerequisites
 
@@ -112,8 +112,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want to use Organizational chart layout in diagram, you need to inject HierarchicalTree module along with DataBinding module in the diagram.
-
 ## Organizational chart with nodes and connectors
 
 You can render an org-chart layout without using DataSource. The following code demonstrates how to render an org-chart layout without using data source.
@@ -194,9 +192,9 @@ public partial class MainPage : ContentPage
 
 ## GetLayout info
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [`getLayoutInfo`]() method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.) them. The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterate through all its child elements. The [`GetLayoutInfo`]() method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.) them. The arrangements can be customized by overriding this function as explained.
 
-Set chart orientations, chart types, and offset to be left between parent and child nodes by overriding the `getLayoutInfo` method. The `getLayoutInfo` method is called to configure every subtree of the organizational chart. It takes the following arguments.
+Set chart orientations, chart types, and offset to be left between parent and child nodes by overriding the `GetLayoutInfo` method. The `GetLayoutInfo` method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
     * node: Parent node to that options are to be customized.
     * options: Object to set the customizable properties.
@@ -229,7 +227,7 @@ The following table illustrates the different chart orientations and chart types
 
 ### SubTree horizontal orientation
 
-The following example shows how to utilize the `getLayoutInfo` function to customize the sub tree alignment in horizontal orientation.
+The following example shows how to utilize the `GetLayoutInfo` function to customize the sub tree alignment in horizontal orientation.
 
 {% tabs %}
 {% highlight xaml %}
