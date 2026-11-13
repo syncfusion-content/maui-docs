@@ -67,7 +67,7 @@ MainPage = new LoginWithSocialIcon();
 {% tabs %}
 {% highlight C# %}
 
-// For .NET 9 or later, use the below code snippet.
+// For .NET 10 or later, use the below code snippet.
 
 protected override Window CreateWindow(IActivationState? activationState)
 {
