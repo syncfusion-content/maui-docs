@@ -20,7 +20,7 @@ Refer to the [Getting started](https://help.syncfusion.com/maui/diagram/getting-
 
 ## Hierarchical tree layout with nodes and connectors
 
-To arrange the nodes in a hierarchical structure, specify the layout [`type`]() as **HierarchicalTree**. The following example shows how to arrange the nodes in a hierarchical structure.
+To arrange the nodes in a hierarchical structure, specify the layout [`Type`]() as **HierarchicalTree**. The following example shows how to arrange the nodes in a hierarchical structure.
 
 {% tabs %}
 {% highlight xaml %}
@@ -98,8 +98,6 @@ public partial class Controlpage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
-
-N> If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
 
 ## Hierarchical layout with DataSource
 
@@ -181,7 +179,5 @@ public partial class Controlpage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
-
-N> If you want to convert the data source into layout, you need to inject DataBinding along with HierarchicalTree module in the diagram.
 
 ![Hierarchical tree](../images//hierarchicalTree.png)
