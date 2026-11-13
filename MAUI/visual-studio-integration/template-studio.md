@@ -55,7 +55,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
     By unchecking the features checkboxes, you can unselect the features from the selected controls.
 
-6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 9.0 or .NET 10.0)
+6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 10.0 or .NET 11.0)
 
      ![Choose required Project Configuration](images/ConfigurationsTab.png)
 

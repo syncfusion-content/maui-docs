@@ -154,7 +154,7 @@ In a MAUI demo application, to set the added page as the startup page, you need 
 
 MainPage = new LoginWithSocialIcon();
 
-// For NET 9 Use this Below Code Snippet
+// For NET 10 Use this Below Code Snippet
 
 protected override Window CreateWindow(IActivationState? activationState)
 {
