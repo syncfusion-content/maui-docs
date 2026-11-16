@@ -133,6 +133,12 @@ line-height: 1;
 <a target="_self" href="/maui/Chips/AI-Powered-Smart-Tags" aria-label="Chips AI-Powered Smart Tag Generation"><span class="sf-home-icon sf-icon-smart-chips"></span>AI-Powered Smart Tag Generation</a>
 </div>
 
+<div><p class="category-topics">Chat</p></div>
+
+<div class="controlanchorlink">
+<a target="_self" href="/maui/Chat/Support-Reply-AI-Drafting" aria-label="Chat Support Reply AI Drafting"><span class="sf-home-icon sf-icon-ai-chat"></span>Support Reply AI Drafting</a>
+</div>
+
 <div><p class="category-topics">ComboBox</p></div>
 
 <div class="controlanchorlink">
