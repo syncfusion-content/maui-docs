@@ -29,10 +29,13 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 </th>
 <th>.NET 10.0
 </th>
+<th>.NET 11.0
+</th>
 </tr>
 <tr>
 <td>>= v19.3.0</td>
 <td>Yes</td>
+<td>No</td>
 <td>No</td>
 <td>No</td>
 <td>No</td>
@@ -45,6 +48,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>Yes</td>
 <td>No</td>
 <td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>>= v27.2.2</td>
@@ -53,9 +57,20 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>Yes</td>
 <td>Yes</td>
 <td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>>= v31.2.10</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>>= v35.1.46</td>
+<td>No</td>
 <td>No</td>
 <td>No</td>
 <td>No</td>
