@@ -17,7 +17,7 @@ The `Syncfusion® A2UI for .NET MAUI package` brings the [A2UI v0.9](https://a2u
 
 Before installing Syncfusion® A2UI for .NET MAUI, ensure you have:
 
-- An existing **.NET MAUI application** targeting **.NET 9** or **.NET 10** on Android, iOS, Mac Catalyst, or Windows.
+- An existing **.NET MAUI application** targeting **.NET 10** or **.NET 11** on Android, iOS, Mac Catalyst, or Windows.
 - The companion [Syncfusion.A2UI.Core](https://www.nuget.org/packages/Syncfusion.A2UI.Core) runtime - a framework-agnostic protocol engine that ships as a transitive dependency of the MAUI package. The Core engine also supports Blazor, WPF, WinForms, and ASP.NET Core hosts.
 - The Syncfusion® .NET MAUI packages that back the controls the agent is expected to render - for example, DataGrid, Charts, Scheduler, PDF Viewer, DataForm, Rich Text Editor, Image Editor, Maps, TreeMap, and Gauges. Install only the packages for the controls you intend to use.
 - An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/) that emits messages conforming to the four-message lifecycle - `createSurface`, `updateComponents`, `updateDataModel`, and `deleteSurface`.

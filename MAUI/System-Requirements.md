@@ -392,7 +392,7 @@ The following .NET versions are supported.
   </div>
   <div class="net-version-tile net-version-9">
     <p class="net-version-label">Standard Term Support</p>
-    <p class="net-version-number">.NET 9.0</p>
+    <p class="net-version-number">.NET 11.0</p>
     <span class="net-version-status"><span class="dot"></span>Supported</span>
   </div>
 </div>

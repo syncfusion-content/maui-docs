@@ -23,7 +23,7 @@ Run `sfdotnet new`, or select **Create a new project** from the main menu. The .
 3. **Framework:** Select the .NET version.
 
     * .NET 10 (`net10.0`), the default
-    * .NET 9 (`net9.0`)
+    * .NET 11 (`net11.0`)
 
 4. **Location and name:** Enter the parent directory and the project name. The default locations are `%USERPROFILE%\source\repos` on Windows and `~/Projects` on Linux and macOS. The suggested name is `SyncfusionMauiApp`, and the first available numeric suffix is used when the destination name collides.
 
@@ -136,7 +136,7 @@ In a CLI-generated project, yes. In an ordinary project, the command adds the Nu
 
 **Which .NET versions are supported?**
 
-.NET 10 (`net10.0`) and .NET 9 (`net9.0`). Installed template and workload compatibility is checked separately during creation.
+.NET 10 (`net10.0`) and .NET 11 (`net11.0`). Installed template and workload compatibility is checked separately during creation.
 
 ## See also
 
