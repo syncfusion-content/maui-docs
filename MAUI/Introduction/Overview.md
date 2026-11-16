@@ -331,34 +331,34 @@ line-height: 1;
 <td>
 <div><p class="category-topics">BUTTONS</p></div>
 
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/button/overview"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/checkbox/overview"><span class="sf-home-icon sf-icon-checkbox"></span>CheckBox</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/chips/overview"><span class="sf-home-icon sf-icon-chips"></span>Chips</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radio-button/overview"><span class="sf-home-icon sf-icon-radio-button"></span>Radio Button</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/segmented-control/overview"><span class="sf-home-icon sf-icon-segmented-button"></span>Segmented Control</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/switch/overview"><span class="sf-home-icon sf-icon-switch"></span>Switch</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/button/overview" aria-label="Overview of Syncfusion Button"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/checkbox/overview" aria-label="Overview of CheckBox control"><span class="sf-home-icon sf-icon-checkbox"></span>CheckBox</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/chips/overview" aria-label="Overview of Chips control"><span class="sf-home-icon sf-icon-chips"></span>Chips</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radio-button/overview" aria-label="Overview of Radio Button control"><span class="sf-home-icon sf-icon-radio-button"></span>Radio Button</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/segmented-control/overview" aria-label="Overview of Segmented Control"><span class="sf-home-icon sf-icon-segmented-button"></span>Segmented Control</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/switch/overview" aria-label="Overview of Switch control"><span class="sf-home-icon sf-icon-switch"></span>Switch</a></div>
 
 <div><p class="category-topics">NAVIGATION</p></div>
 
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/navigationdrawer/overview"><span class="sf-home-icon sf-icon-navigation-drawer"></span>Navigation Drawer</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radial-menu/overview"><span class="sf-home-icon sf-icon-radial-menu"></span>Radial Menu</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/rotator/overview"><span class="sf-home-icon sf-icon-rotator"></span>Rotator</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/tabview/overview"><span class="sf-home-icon sf-icon-tabs"></span>Tab View</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/treeview/overview"><span class="sf-home-icon sf-icon-tree-view"></span>TreeView</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/navigationdrawer/overview" aria-label="Overview of Navigation Drawer"><span class="sf-home-icon sf-icon-navigation-drawer"></span>Navigation Drawer</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/radial-menu/overview" aria-label="Overview of Radial Menu"><span class="sf-home-icon sf-icon-radial-menu"></span>Radial Menu</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/rotator/overview" aria-label="Overview of Rotator"><span class="sf-home-icon sf-icon-rotator"></span>Rotator</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/tabview/overview" aria-label="Overview of Tab View"><span class="sf-home-icon sf-icon-tabs"></span>Tab View</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/treeview/overview" aria-label="Overview of TreeView"><span class="sf-home-icon sf-icon-tree-view"></span>TreeView</a></div>
 
 <div><p class="category-topics">LAYOUT</p></div>
 
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/backdrop/overview"><span class="sf-home-icon sf-icon-backdrop"></span>Backdrop</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/listview/overview"><span class="sf-home-icon sf-icon-list-view"></span>ListView</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/popup/overview"><span class="sf-home-icon sf-icon-popup"></span>Popup</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/textinputlayout/overview"><span class="sf-home-icon sf-icon-text-input"></span>Text Input Layout</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/expander/overview"><span class="sf-home-icon sf-icon-expander"></span>Expander</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/backdrop/overview" aria-label="Learn about the Backdrop control"><span class="sf-home-icon sf-icon-backdrop"></span>Backdrop</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/listview/overview" aria-label="Learn about the ListView control"><span class="sf-home-icon sf-icon-list-view"></span>ListView</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/popup/overview" aria-label="Learn about the Popup control"><span class="sf-home-icon sf-icon-popup"></span>Popup</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/textinputlayout/overview" aria-label="Learn about the TextInputLayout control"><span class="sf-home-icon sf-icon-text-input"></span>Text Input Layout</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/expander/overview" aria-label="Learn about the Expander control"><span class="sf-home-icon sf-icon-expander"></span>Expander</a></div>
 
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/accordion/overview"><span class="sf-home-icon sf-icon-accordion"></span>Accordion</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/carousel-view/overview"><span class="sf-home-icon sf-icon-carousel"></span>Carousel</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/cards/overview"><span class="sf-home-icon sf-icon-cards"></span>Cards</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/parallax-view/overview"><span class="sf-home-icon sf-icon-parallax-view"></span>Parallax View</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/docklayout/overview"><span class="sf-home-icon sf-icon-doc-layout"></span>DockLayout</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/accordion/overview" aria-label="Learn about the Accordion control"><span class="sf-home-icon sf-icon-accordion"></span>Accordion</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/carousel-view/overview" aria-label="Learn about the Carousel View control"><span class="sf-home-icon sf-icon-carousel"></span>Carousel</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/cards/overview" aria-label="Learn about the Cards control"><span class="sf-home-icon sf-icon-cards"></span>Cards</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/parallax-view/overview" aria-label="Learn about the Parallax View control"><span class="sf-home-icon sf-icon-parallax-view"></span>Parallax View</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/docklayout/overview" aria-label="Learn about the Dock Layout control"><span class="sf-home-icon sf-icon-doc-layout"></span>DockLayout</a></div>
 </td>
 
 
@@ -467,9 +467,9 @@ line-height: 1;
 
 <div><p class="category-topics">SLIDERS</p></div>
 
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/slider/overview"><span class="sf-home-icon sf-icon-slider"></span>Slider</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-slider/overview"><span class="sf-home-icon sf-icon-range-slider"></span>Range Slider</a></div>
-<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-selector/overview"><span class="sf-home-icon sf-icon-range-selector"></span>Range Selector</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/slider/overview" aria-label="Overview of the Slider control"><span class="sf-home-icon sf-icon-slider"></span>Slider</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-slider/overview" aria-label="Overview of the Range Slider control"><span class="sf-home-icon sf-icon-range-slider"></span>Range Slider</a></div>
+<div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/maui/range-selector/overview" aria-label="Overview of the Range Selector control"><span class="sf-home-icon sf-icon-range-selector"></span>Range Selector</a></div>
 </td>
 
 <!-- COLUMN 4 -->

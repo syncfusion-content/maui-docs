@@ -110,7 +110,7 @@ Consider the base A2UI Core package when:
 Two support channels are available while you integrate Syncfusion® A2UI for .NET MAUI:
 
 - [Syncfusion® Direct-Trac support](https://www.syncfusion.com/support/directtrac/incidents)
-- [Syncfusion® community forum](https://www.syncfusion.com/forums/)
+- [Syncfusion® community forum](https://www.syncfusion.com/forums)
 
 ## See also
 
