@@ -139,7 +139,7 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**For .NET 8 / .NET 9 (using a local tool):**
+**For .NET 10  (using a local tool):**
 
 You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 

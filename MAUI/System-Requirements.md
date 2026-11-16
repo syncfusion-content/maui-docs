@@ -207,8 +207,8 @@ The following are the system requirements for using the .NET MAUI controls.
     overflow: hidden;
     border: 1px solid transparent;
   }
-  .net-version-tile.net-version-10 { background: linear-gradient(135deg, #512BD4 0%, #2B0A8C 100%); }
-  .net-version-tile.net-version-9  { background: linear-gradient(135deg, #0078D4 0%, #00509E 100%); }
+  .net-version-tile.net-version-11 { background: linear-gradient(135deg, #512BD4 0%, #2B0A8C 100%); }
+  .net-version-tile.net-version-10  { background: linear-gradient(135deg, #0078D4 0%, #00509E 100%); }
   .net-version-tile::before {
     content: "";
     position: absolute;
@@ -385,14 +385,14 @@ Our .NET MAUI components are compatible with the following development environme
 The following .NET versions are supported.
 
 <div class="net-version-grid">
-  <div class="net-version-tile net-version-10">
+  <div class="net-version-tile net-version-11">
     <p class="net-version-label">Long Term Support</p>
-    <p class="net-version-number">.NET 10.0</p>
+    <p class="net-version-number">.NET 11.0</p>
     <span class="net-version-status"><span class="dot"></span>Supported</span>
   </div>
-  <div class="net-version-tile net-version-9">
+  <div class="net-version-tile net-version-10">
     <p class="net-version-label">Standard Term Support</p>
-    <p class="net-version-number">.NET 9.0</p>
+    <p class="net-version-number">.NET 10.0</p>
     <span class="net-version-status"><span class="dot"></span>Supported</span>
   </div>
 </div>
