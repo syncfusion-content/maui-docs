@@ -19,7 +19,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the AI Ass
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10`
+* This feature is available only in `.NET 10 or later`
 
 ### Step 1: Wrap the control inside glass effect view
 

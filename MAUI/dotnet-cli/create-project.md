@@ -136,7 +136,7 @@ In a CLI-generated project, yes. In an ordinary project, the command adds the Nu
 
 **Which .NET versions are supported?**
 
-.NET 10 (`net10.0`) and .NET 9 (`net9.0`). Installed template and workload compatibility is checked separately during creation.
+.NET 10 (`net10.0`) and .NET 11 (`net11.0`). Installed template and workload compatibility is checked separately during creation.
 
 ## See also
 
