@@ -50,6 +50,11 @@ public partial class MainPage : ContentPage
 		};
 		diagram.NodeDefaults = CreateNodeDefaults();
 		diagram.ConnectorDefaults = CreateConnectorDefaults();
+		diagram.GetConnectorDefaults = (connector, source, target) =>
+		{
+			connector.TargetDecorator.Style = new ShapeStyle { Fill = Color.FromArgb("#6BA5D7"), StrokeColor = Color.FromArgb("#6BA5D7") };
+		};
+		
 		diagram.DataSourceSettings = CreateDataSourceSettings(CreateItems());
 		diagram.Created += diagram_Created;
 	}
@@ -126,8 +131,6 @@ The following table outlines the various orientation types available:
 |Horizontal|Aligns the tree layout from left to right|
 |Vertical|Aligns the tree layout from top to bottom|
 
-N> If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
-
 ## Mind Map branch
 
 You can also decide the branch for mind map using [`GetBranch`]() method. The following code demonstrates how to set all branches on the right side for mind map layout using `GetBranch` method.
@@ -167,6 +170,11 @@ public partial class MainPage : ContentPage
 		diagram.Layout = layout;
 		diagram.NodeDefaults = CreateNodeDefaults();
 		diagram.ConnectorDefaults = CreateConnectorDefaults();
+		diagram.GetConnectorDefaults = (connector, source, target) =>
+		{
+			connector.TargetDecorator.Style = new ShapeStyle { Fill = Color.FromArgb("#6BA5D7"), StrokeColor = Color.FromArgb("#6BA5D7") };
+		};
+
 		diagram.DataSourceSettings = CreateDataSourceSettings(CreateItems());
 		diagram.Created += diagram_Created;
 	}
