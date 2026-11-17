@@ -55,7 +55,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
     By unchecking the features checkboxes, you can unselect the features from the selected controls.
 
-6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 9.0 or .NET 10.0)
+6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 10.0 or .NET 11.0)
 
      ![Choose required Project Configuration](images/ConfigurationsTab.png)
 
@@ -71,4 +71,4 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
 8. The Syncfusion<sup>®</sup> .NET MAUI application is configured with the latest Syncfusion<sup>®</sup> .NET MAUI NuGet package versions, namespaces, and component rendering code.
 
-9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup>®</sup> license key to your application since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion<sup>®</sup> license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.
+9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup>®</sup> license key to your application since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion<sup>®</sup> license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.
