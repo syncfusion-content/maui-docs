@@ -189,6 +189,77 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 {% endtabs %}
 
+### ExportStrokeData
+
+The `ExportStrokeData()` method exports the current signature as a JSON string containing all signature stroke information. The exported data can later be restored using the LoadFromStrokeData(string) method, enabling a complete save-and-load workflow.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout>
+    <signaturePad:SfSignaturePad x:Name="signaturePad" />
+    <Button Text="Save"
+            Clicked="OnSaveClicked" />
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSignaturePad signaturePad = new SfSignaturePad();
+Button saveButton = new Button { Text = "Save" };
+saveButton.Clicked += OnSaveClicked;
+private string? savedStrokeData;
+this.Content = new VerticalStackLayout { signaturePad, saveButton };
+
+private void OnSaveClicked(object? sender, EventArgs e)
+{
+    savedStrokeData = signaturePad.ExportStrokeData();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### LoadFromStrokeData
+
+The `LoadFromStrokeData()` method restores a signature from previously exported stroke data. It supports loading from either a JSON string or a stream and preserves the original stroke appearance and structure, allowing the signature to remain editable.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout>
+    <signaturePad:SfSignaturePad x:Name="signaturePad" />
+    <Button Text="Load"
+            Clicked="OnLoadStrokeData" />
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSignaturePad signaturePad = new SfSignaturePad();
+Button loadButton = new Button { Text = "Load" };
+loadButton.Clicked += OnLoadStrokeData;
+private string? savedStrokeData;
+this.Content = new VerticalStackLayout { signaturePad, saveButton };
+
+private void OnLoadStrokeData(object? sender, EventArgs e)
+{
+    // string
+    signaturePad.LoadFromStrokeData(savedStrokeData);
+
+    // stream
+    using var stream = new MemoryStream(Encoding.UTF8.GetBytes(savedStrokeData));
+    signaturePad.LoadFromStrokeData(stream);
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## See Also
 
 * [Getting Started](https://help.syncfusion.com/maui/signaturepad/getting-started)
