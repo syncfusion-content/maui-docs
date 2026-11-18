@@ -32,7 +32,7 @@ The content of a node comes from your `ItemTemplate` (bound mode) or from the `C
 </tr>
 </table>
 
-N> Hierarchy (level, parent, and sibling position) is shown by indentation only. To announce it, add it to the description in your `ItemTemplate`. See [Semantic Properties in ItemTemplate](#semantic-properties-in-itemtemplate).
+N> Hierarchy (level, parent, and sibling position) is shown by indentation only. To announce it, add it to the description in your `ItemTemplate`.
 
 ## Expander
 
