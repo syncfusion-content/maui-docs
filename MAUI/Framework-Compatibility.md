@@ -66,7 +66,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>No</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
 <td>>= v35.1.46</td>
