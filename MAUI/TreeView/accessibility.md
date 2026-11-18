@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI TreeView control | Syncfusion®
-description: Learn here all about Accessibility support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements, screen reader announcements, keyboard navigation, and AutomationId patterns.
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI TreeView control, its elements and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug

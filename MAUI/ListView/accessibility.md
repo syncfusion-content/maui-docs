@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI ListView control | Syncfusion®
-description: Learn here all about Accessibility support in Syncfusion® .NET MAUI ListView (SfListView) control, its elements, screen reader announcements, keyboard navigation, and AutomationId usage.
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI ListView control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
