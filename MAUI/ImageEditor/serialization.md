@@ -86,4 +86,6 @@ private async void OnDeserializeClicked(object sender, EventArgs e)
 
 N> Serialization and deserialization are not applicable for custom annotation views.
 
+N> The Deserialize method provides an optional boolean parameter that determines whether the deserialization operation is added to the undo/redo history. By default, the value is true. When set to false, the deserialized annotations are loaded into the Image Editor but are excluded from the undo/redo history. As a result, Undo, Redo, and Reset operations affect only the changes performed after deserialization, while the deserialized annotations remain unchanged.
+
 N> Due to limitations in Ahead-of-Time (AOT) compilation, reflection-based operations like serialization and deserialization are not supported in AOT-compiled environments.
