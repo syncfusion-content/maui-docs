@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in .NET MAUI ListView
 
-[.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) (SfListView) provides built-in accessibility support, exposing its visual elements and item containers to assistive technologies such as screen readers (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). It also provides comprehensive keyboard navigation and visual focus indication for desktop and tablet platforms.
+The .NET MAUI ListView (SfListView) provides built-in accessibility support, exposing its visual elements and item containers to assistive technologies such as screen readers (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). It also provides comprehensive keyboard navigation and visual focus indication for desktop and tablet platforms.
 
 The following tables list each element along with the value announced by screen readers and its interactive accessibility behavior.
 
@@ -277,9 +277,7 @@ To enable accessibility and screen reader support on your device:
 ## Semantic Properties in ItemTemplate
 
 When creating custom item templates, you can leverage .NET MAUI `SemanticProperties` on template elements to customize the announcement for assistive technologies:
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 13 14" %}
+```
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactList}">
     <syncfusion:SfListView.ItemTemplate>
@@ -299,9 +297,7 @@ When creating custom item templates, you can leverage .NET MAUI `SemanticPropert
     </syncfusion:SfListView.ItemTemplate>
   </syncfusion:SfListView>
 </ContentPage>
-{% endhighlight %}
-{% endtabs %}
-
+```
 ## Right-to-Left (RTL) Support
 
 The `SfListView` automatically mirrors its layout and inverts directional keyboard navigation (e.g., Left and Right arrow keys) when placed in a Right-to-Left context (`FlowDirection="RightToLeft"`), ensuring consistent spatial navigation for users who utilize screen readers in RTL locales.

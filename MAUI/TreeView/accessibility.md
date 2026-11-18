@@ -7,11 +7,9 @@ control: SfTreeView
 documentation: ug
 ---
 
-# TreeView Accessibility
+# Accessibility in .NET MAUI TreeView 
 
-## Overview
-
-The [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/maui-treeview) (SfTreeView) exposes its expanders and checkboxes to platform assistive technologies (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). On desktop and tablet it also supports keyboard navigation with a visible focus indicator.
+The .NET MAUI TreeView (SfTreeView) exposes its expanders and checkboxes to platform assistive technologies (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). On desktop and tablet it also supports keyboard navigation with a visible focus indicator.
 
 A tree is more than a list: each node has a **level**, a **parent/child relationship**, and an **expanded or collapsed state**. This guide explains what SfTreeView announces and which keys it supports. It also describes what you should add in your own `ItemTemplate` so every node is understandable without sight.
 
@@ -27,7 +25,7 @@ N> The tables below describe the semantics SfTreeView provides itself. Text insi
 | Keyboard navigation (arrows, Home, End, Page Up/Down, Space) | Windows, macOS, and hardware keyboards on Android/iPadOS |
 | Expand/collapse with Left/Right arrow | Built in |
 | Multi-selection keyboard shortcuts (Ctrl+A, Shift+arrows, Ctrl+arrows) | Built in (`Extended` mode) |
-| Visible keyboard focus border | Built in, themed |
+| Visible keyboard focus border | Built in |
 | Right-to-left layout | Supported |
 | Custom semantics through `SemanticProperties` in templates | Supported |
 
@@ -41,7 +39,7 @@ N> The tables below describe the semantics SfTreeView provides itself. Text insi
 | **Child node** | Node inside a parent | Visible only when all ancestors are expanded; indentation shows depth visually. |
 | **Leaf node** | Node without children | No expander is exposed. |
 | **Checkbox node** | Node with a checkbox (`CheckBoxMode` not `None`) | Checkbox is exposed with its own description. |
-| **Lazy-loaded node** | Children supplied on demand (`LoadOnDemand`) | Children appear after the first expansion; see [Limitations](#limitations-and-known-considerations). |
+| **Lazy-loaded node** | Children supplied on demand (`LoadOnDemand`) | Children appear after the first expansion; |
 
 Only nodes currently visible in the flattened tree are navigable. Collapsing a parent removes its descendants from keyboard and screen reader navigation.
 
@@ -66,14 +64,6 @@ Windows Narrator navigates with Caps Lock/Insert + arrow keys in scan mode, or w
 - Move to an expander to hear its description and the "Double tap to expand/Collapse" hint.
 - Activate it with Enter or Space in Narrator to toggle the node, or use Left/Right arrow while a node has keyboard focus.
 - Node text is read from your template content.
-
-### NVDA
-
-NVDA is not a supported target for .NET MAUI Windows apps in the same way Narrator is, because the MAUI Windows UIA tree is the integration point. NVDA reads UIA properties, so results are similar to Narrator, but verify in your own app before claiming support.
-
-### JAWS
-
-The same applies to JAWS: it consumes the UIA tree exposed by the MAUI Windows handler. Validate the behavior with your templates, especially for the node level and position, which are not announced automatically (see [Limitations](#limitations-and-known-considerations)).
 
 ### Mobile screen readers
 
@@ -136,14 +126,6 @@ For checkbox nodes, the checkbox is a separate accessible element with tri-state
 - **Cancelable:** the `NodeExpanding` and `NodeCollapsing` events can cancel the operation. If you cancel, the state and hint remain unchanged; consider informing the user why.
 - **Visible set changes:** expanding adds the children to the navigable set, and collapsing removes them. Focus stays on the parent node.
 
-## Focus and Navigation Behavior
-
-- Keyboard focus is drawn as a border around the focused node. It is themed through the `SfTreeViewFocusedTreeViewItemStroke` and `SfTreeViewFocusedTreeViewItemStrokeThickness` theme resources.
-- Navigating with the keyboard brings the focused node into view automatically.
-- In `Multiple` and `Extended` modes, focus can move independently of selection, so the focus border and the selected state are shown separately.
-- Focus is kept on the same node when its ancestors expand or collapse.
-- Interactive controls inside templates (buttons, entries) participate in the normal Tab order.
-
 ## Automation Properties
 
 SfTreeView uses the .NET MAUI semantic APIs. `SemanticProperties` is the recommended API and maps to the same platform properties as the older `AutomationProperties`.
@@ -157,6 +139,7 @@ SfTreeView uses the .NET MAUI semantic APIs. `SemanticProperties` is the recomme
 | `AutomationProperties.IsInAccessibleTree` | Set to `false` on purely decorative template elements, such as divider lines or ornamental icons, to hide them. |
 | `AutomationProperties.Name` / `HelpText` | Legacy equivalents of `Description` and `Hint`; prefer `SemanticProperties`. |
 
+When creating custom item templates, you can leverage .NET MAUI `SemanticProperties` on template elements to customize the announcement for assistive technologies:
 ```xaml
 <syncfusion:SfTreeView x:Name="treeView"
                        AutomationId="FileTree"
@@ -174,7 +157,6 @@ SfTreeView uses the .NET MAUI semantic APIs. `SemanticProperties` is the recomme
     </syncfusion:SfTreeView.ItemTemplate>
 </syncfusion:SfTreeView>
 ```
-
 ## Accessibility States and Announcements
 
 | State | What the user hears / sees | Source |
@@ -185,92 +167,3 @@ SfTreeView uses the .NET MAUI semantic APIs. `SemanticProperties` is the recomme
 | Selected / unselected | Visual selected style; spoken state depends on the platform | Platform, plus your template |
 | Level in hierarchy | Not announced automatically | Add to your template |
 | Position in set | Not announced automatically | Add to your template |
-
-To announce level and position, bind them in your template. For example, with a data model that exposes `Level`:
-
-```xaml
-<Label Text="{Binding Name}"
-       SemanticProperties.Description="{Binding Name, StringFormat='{0}, level {1}'}" />
-```
-
-Example sequence for a file tree, with the screen reader on the "Documents" expander:
-
-1. "File explorer Item2 Expander, Double tap to expand."
-2. The user activates it. The node expands and the hint changes.
-3. The next focus on the expander reads: "File explorer Item2 Expander, Double tap to Collapse."
-
-## High Contrast and Visual Accessibility
-
-- Selection, focus, and expander colors come from the theme resource dictionaries (`maui/src/treeview/Themes`). Override the resources for a high-contrast palette.
-- Do not convey selection or state with color alone; the focus border and expander glyph direction provide non-color cues.
-- Keep a contrast ratio of at least 4.5:1 for node text and 3:1 for the focus border and expander icons against their background.
-- The focus border can be made thicker for low-vision users through `SfTreeViewFocusedTreeViewItemStrokeThickness`.
-- Support platform text scaling by enabling dynamic item height (auto-fit) so enlarged text is not clipped.
-- Touch targets for expanders and checkboxes should be at least 44 x 44 units where possible.
-
-## Localization Considerations
-
-- Built-in hints ("Double tap to expand", "Double tap to Collapse") are currently English strings and are not localized through resources. Set your own descriptions in your template and avoid depending on them when shipping in other languages.
-- Localize `SemanticProperties.Description` and `Hint` values in your templates through resource files.
-- With `FlowDirection="RightToLeft"` the layout is mirrored, including indentation and the expander position. Left/Right arrow semantics follow the layout, so verify expand/collapse behavior in RTL.
-- Use localized, concise node text because screen readers read it in full.
-
-## Accessibility Best Practices
-
-1. Set `SemanticProperties.Description` on `SfTreeView` to name the tree.
-2. Provide text alternatives for every icon or image in a template.
-3. Hide decorative elements with `AutomationProperties.IsInAccessibleTree="False"`.
-4. Include level, child count, or position in the node description when it matters to the task.
-5. Keep templates simple. Fewer focusable child elements per node means faster keyboard navigation.
-6. Offer a keyboard path for every action available by gesture, such as context menus and drag-and-drop reordering.
-7. Do not remove or hide the focus border.
-8. Explain canceled expand/collapse or drops through visible and spoken feedback.
-9. Assign a unique `AutomationId` to each tree.
-
-## Accessibility Testing Guidelines
-
-| Area | Check |
-|---|---|
-| Screen reader | With Narrator, TalkBack, and VoiceOver, move through nodes and verify names, expander hints, and checkbox states. |
-| Keyboard only | Complete expand, collapse, select, and multi-select without a mouse. Confirm focus is always visible. |
-| Expand/collapse | Verify the hint changes and the focus stays on the parent. |
-| Lazy loading | Expand a load-on-demand node and confirm the new children can be reached. |
-| High contrast | Enable Windows contrast themes and check that all states remain distinguishable. |
-| Text scaling | Set the largest system font and check for clipping. |
-| RTL | Test with `FlowDirection="RightToLeft"`. |
-| Tools | Accessibility Insights for Windows, Inspect.exe, Android Accessibility Scanner, and Xcode Accessibility Inspector. |
-| Automation | Use the generated `AutomationId` values in UI tests. |
-
-## WCAG Compliance Considerations
-
-| Criterion | Level | Considerations |
-|---|---|---|
-| 1.1.1 Non-text Content | A | Provide `SemanticProperties.Description` for icons and images in templates. |
-| 1.3.1 Info and Relationships | A | Hierarchy is visual; add level or parent context to node descriptions. |
-| 1.4.1 Use of Color | A | Do not rely on color alone for selection or state. |
-| 1.4.3 Contrast (Minimum) | AA | Check node text and theme colors. |
-| 1.4.11 Non-text Contrast | AA | Check the focus border, expander, and checkbox colors. |
-| 2.1.1 Keyboard | A | Navigation, expand/collapse, and selection are available by keyboard. |
-| 2.4.3 Focus Order | A | Focus follows the visible node order. |
-| 2.4.7 Focus Visible | AA | Themed focus border. |
-| 3.1.2 Language of Parts | AA | Localize descriptions in templates. |
-| 4.1.2 Name, Role, Value | A | Expander and checkbox expose a name and state; verify node name, level, and role for your template. |
-
-Final conformance depends on your templates, data, and theme, so test your complete app.
-
-## Limitations and Known Considerations
-
-- The tree does not expose a native tree-item role with level, position-in-set, or expanded state to the platform accessibility tree. The expand state is conveyed through the expander hint, and the level and position are not announced unless you add them in the template.
-- Built-in expander and checkbox descriptions use the form "Item[Index]", based on the visible index, so the number changes when nodes are expanded or collapsed.
-- Built-in hints are not localized.
-- <kbd>Enter</kbd> does not toggle expansion or selection.
-- <kbd>Tab</kbd> does not move between nodes; use the arrow keys.
-- A custom `ExpanderTemplate` replaces the built-in expander semantics.
-- Nodes added by `LoadOnDemand` are not announced when they appear; the user must move to them.
-- Drag-and-drop reordering is pointer and touch based and has no keyboard alternative.
-- Behavior of NVDA and JAWS with MAUI Windows apps depends on the UIA data exposed by the platform handlers; test it in your app.
-- Keyboard shortcuts are not available on mobile without a hardware keyboard.
-
-## Summary
-
-SfTreeView provides screen reader descriptions for expanders and checkboxes, expand/collapse hints that follow node state, full arrow-key navigation with expand/collapse, multi-selection shortcuts, and a themed focus border. Use `SemanticProperties` in your templates to name content, include level and position where they matter, hide decorative elements, and localize all text. Test with real assistive technologies on each target platform.
