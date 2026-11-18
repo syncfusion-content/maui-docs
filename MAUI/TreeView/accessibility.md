@@ -1,169 +1,411 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI TreeView control | Syncfusion®
-description: Learn about accessibility support in the Syncfusion® .NET MAUI TreeView (SfTreeView) control, including screen reader announcements, keyboard navigation, focus indication, and testing guidance.
+description: Learn here all about Accessibility support in Syncfusion® .NET MAUI TreeView (SfTreeView) control, its elements, screen reader announcements, keyboard navigation, and AutomationId patterns.
 platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI TreeView 
+# Accessibility in .NET MAUI TreeView
 
-The .NET MAUI TreeView (SfTreeView) exposes its expanders and checkboxes to platform assistive technologies (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). On desktop and tablet it also supports keyboard navigation with a visible focus indicator.
+The .NET MAUI TreeView (SfTreeView) provides built-in accessibility support, exposing its expanders and checkboxes to assistive technologies such as screen readers (TalkBack on Android, VoiceOver on iOS/macOS, and Narrator on Windows). It also provides keyboard navigation, expand/collapse by keyboard, and visual focus indication for desktop and tablet platforms, and `AutomationId` values for UI test automation.
 
-A tree is more than a list: each node has a **level**, a **parent/child relationship**, and an **expanded or collapsed state**. This guide explains what SfTreeView announces and which keys it supports. It also describes what you should add in your own `ItemTemplate` so every node is understandable without sight.
+The following tables list each element along with the value announced by screen readers and its interactive accessibility behavior.
 
-N> The tables below describe the semantics SfTreeView provides itself. Text inside a node comes from your `ItemTemplate`, so it is announced as the platform reads that template's content.
+## TreeView Nodes
 
-## Accessibility Features
+The content of a node comes from your `ItemTemplate` (bound mode) or from the `Content` of the `TreeViewNode` (unbound mode). Screen readers read that content using the platform's default behavior. SfTreeView does not add an item index, level, or selected-state prefix to the node itself.
 
-| Feature | Support |
-|---|---|
-| Screen reader descriptions for expander buttons | Built in |
-| Expand/collapse hint that follows node state | Built in |
-| Screen reader descriptions for node checkboxes | Built in |
-| Keyboard navigation (arrows, Home, End, Page Up/Down, Space) | Windows, macOS, and hardware keyboards on Android/iPadOS |
-| Expand/collapse with Left/Right arrow | Built in |
-| Multi-selection keyboard shortcuts (Ctrl+A, Shift+arrows, Ctrl+arrows) | Built in (`Extended` mode) |
-| Visible keyboard focus border | Built in |
-| Right-to-left layout | Supported |
-| Custom semantics through `SemanticProperties` in templates | Supported |
+<table>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Node (root, parent, child, or leaf)</td>
+<td>[Node Content from ItemTemplate]</td>
+</tr>
+<tr>
+<td>Node (Selected)</td>
+<td>[Node Content from ItemTemplate]. The selected state is shown visually; the spoken selected state depends on the platform.</td>
+</tr>
+</table>
 
-## TreeView Structure and Accessibility
+N> Hierarchy (level, parent, and sibling position) is shown by indentation only. To announce it, add it to the description in your `ItemTemplate`. See [Semantic Properties in ItemTemplate](#semantic-properties-in-itemtemplate).
 
-| Part | Role for the user | Accessibility behavior |
-|---|---|---|
-| **TreeView** | Container of the hierarchy | Honors `SemanticProperties.Description` set on `SfTreeView`; this text is used as a prefix for expander and checkbox descriptions. |
-| **Root node** | Top-level item | Navigated like any other visible node. |
-| **Parent node** | Node with children | Exposes an expander button announced with its expand/collapse hint. |
-| **Child node** | Node inside a parent | Visible only when all ancestors are expanded; indentation shows depth visually. |
-| **Leaf node** | Node without children | No expander is exposed. |
-| **Checkbox node** | Node with a checkbox (`CheckBoxMode` not `None`) | Checkbox is exposed with its own description. |
-| **Lazy-loaded node** | Children supplied on demand (`LoadOnDemand`) | Children appear after the first expansion; |
+## Expander
 
-Only nodes currently visible in the flattened tree are navigable. Collapsing a parent removes its descendants from keyboard and screen reader navigation.
+<table>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Expander (Collapsed node)</td>
+<td>[TreeView Description] Item[Index] Expander, Double tap to expand</td>
+</tr>
+<tr>
+<td>Expander (Expanded node)</td>
+<td>[TreeView Description] Item[Index] Expander, Double tap to Collapse</td>
+</tr>
+</table>
 
-## Screen Reader Support
+N> `[TreeView Description]` is the `SemanticProperties.Description` set on `SfTreeView`, and `[Index]` is the position of the node in the currently visible (flattened) tree. Leaf nodes do not expose an expander. The hint is updated each time a node is expanded or collapsed. These values apply only to the default expander; when `ExpanderTemplate` is set, define the semantics in your template.
 
-### Built-in announcements
+## CheckBox
 
-| Element | Announced description | Hint |
-|---|---|---|
-| Expander (collapsed node) | `[TreeView description] Item[Index] Expander` | Double tap to expand |
-| Expander (expanded node) | `[TreeView description] Item[Index] Expander` | Double tap to Collapse |
-| Node checkbox | `[TreeView description] Item[Index] Checkbox` | Platform checkbox state (checked / unchecked / indeterminate) |
+<table>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>CheckBox (when <code>CheckBoxMode</code> is not <code>None</code>)</td>
+<td>[TreeView Description] Item[Index] Checkbox, [Checked / Unchecked / Indeterminate]</td>
+</tr>
+</table>
 
-`[TreeView description]` is the value of `SemanticProperties.Description` on the `SfTreeView`, and `Item[Index]` is the node's index in the visible list.
+N> The checked, unchecked, or indeterminate state is reported by the platform checkbox. In `Recursive` mode, a parent whose children are only partly checked is indeterminate.
 
-N> The built-in expander description is applied only when the default expander is used. If you set a custom `ExpanderTemplate`, you are responsible for its semantics.
+## Empty View
 
-### Narrator
+<table>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>EmptyView</td>
+<td>[Empty View Content]</td>
+</tr>
+</table>
 
-Windows Narrator navigates with Caps Lock/Insert + arrow keys in scan mode, or with the keyboard when focus is inside the tree.
+N> Set `SemanticProperties.Description` inside `EmptyView` or `EmptyViewTemplate`, for example "No items available", so that screen reader users know the tree is empty.
 
-- Move to an expander to hear its description and the "Double tap to expand/Collapse" hint.
-- Activate it with Enter or Space in Narrator to toggle the node, or use Left/Right arrow while a node has keyboard focus.
-- Node text is read from your template content.
+## Focus Border and Visual States
 
-### Mobile screen readers
+The keyboard focus border is drawn around the currently focused node. It is styled through theme resources, so it can be changed without code.
 
-| Gesture (TalkBack / VoiceOver) | Action |
-|---|---|
-| Swipe right | Move focus to the next element |
-| Swipe left | Move focus to the previous element |
-| Single tap | Focus and announce the element |
-| Double tap | Activate: toggles the expander, toggles the checkbox, or selects the node |
+<table>
+<tr>
+<th>Theme Resource</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>SfTreeViewFocusedTreeViewItemStroke</td>
+<td>Specifies the stroke color of the focus border drawn around the currently focused node.</td>
+</tr>
+<tr>
+<td>SfTreeViewFocusedTreeViewItemStrokeThickness</td>
+<td>Specifies the thickness of the focus border drawn around the currently focused node.</td>
+</tr>
+</table>
 
-### Enable a screen reader
+In `Multiple` and `Extended` selection modes, focus moves independently of selection, so the focus border and the selected background are drawn separately.
 
-| Platform | Steps |
-|---|---|
-| Android | Settings → Accessibility → TalkBack → On |
-| Windows | Settings → Accessibility → Narrator → On (or <kbd>Windows</kbd> + <kbd>Ctrl</kbd> + <kbd>Enter</kbd>) |
-| iOS | Settings → Accessibility → VoiceOver → On |
-| macOS | System Settings → Accessibility → VoiceOver (or <kbd>Command</kbd> + <kbd>F5</kbd>) |
+## Enable Accessibility
+
+To enable accessibility and screen reader support on your device:
+
+<table>
+<tr>
+<th>Platform</th>
+<th>Steps</th>
+</tr>
+<tr>
+<td><b>Android</b></td>
+<td>Settings → Accessibility → TalkBack → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>Windows</b></td>
+<td>Settings → Accessibility → Narrator → Toggle "On" (or press <kbd>Windows</kbd> + <kbd>Ctrl</kbd> + <kbd>Enter</kbd>)</td>
+</tr>
+<tr>
+<td><b>iOS</b></td>
+<td>Settings → Accessibility → VoiceOver → Toggle "On"</td>
+</tr>
+<tr>
+<td><b>macOS</b></td>
+<td>System Settings → Accessibility → VoiceOver → Enable VoiceOver (or press <kbd>Command</kbd> + <kbd>F5</kbd>)</td>
+</tr>
+</table>
 
 ## Keyboard Navigation
 
-Keyboard support applies on Windows, macOS, and hardware keyboards attached to Android or iPadOS. Focus moves between visible nodes.
+`SfTreeView` implements keyboard interaction support on desktop and tablet environments (Windows, macOS, and physical keyboards connected to Android or iPadOS). Only visible nodes take part in navigation; the children of a collapsed node are skipped.
 
-| Key | Behavior |
-|---|---|
-| <kbd>Down Arrow</kbd> | Moves focus to the next visible node. In `Single` and `SingleDeselect` modes the node is also selected. |
-| <kbd>Up Arrow</kbd> | Moves focus to the previous visible node. Same selection behavior as Down Arrow. |
-| <kbd>Right Arrow</kbd> | On a collapsed parent, expands it. Otherwise selects/focuses the current node. |
-| <kbd>Left Arrow</kbd> | On an expanded parent, collapses it. Otherwise selects/focuses the current node. |
-| <kbd>Home</kbd> | Moves focus to the first visible node. |
-| <kbd>End</kbd> | Moves focus to the last visible node. |
-| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | Moves focus one page up or down. |
-| <kbd>Space</kbd> | Selects the focused node. Toggles selection in `SingleDeselect` and `Multiple` modes. In `Extended` mode with Ctrl, toggles the node without clearing others. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all visible nodes in `Extended` mode. |
-| <kbd>Shift</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd> | Extends the selection range in `Extended` mode. |
-| <kbd>Shift</kbd> + <kbd>Home</kbd> / <kbd>End</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | Extends the range to that node in `Extended` mode. |
-| <kbd>Ctrl</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd> | In `Extended` mode, moves focus without changing selection. |
-| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | Handled by the platform focus system to move focus into and out of the control and between interactive elements in templates. The tree itself is a single tab stop; use arrow keys inside it. |
+### Navigation, Expand/Collapse and Selection Keys
 
-N> <kbd>Enter</kbd> is not handled by SfTreeView. Use <kbd>Right Arrow</kbd> / <kbd>Left Arrow</kbd> to expand and collapse, and <kbd>Space</kbd> to select.
+<table>
+<tr>
+<th>Key / Key Combination</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><kbd>Down Arrow</kbd></td>
+<td>Moves focus to the next visible node. In Single and SingleDeselect selection modes, selects the next node.</td>
+</tr>
+<tr>
+<td><kbd>Up Arrow</kbd></td>
+<td>Moves focus to the previous visible node. In Single and SingleDeselect selection modes, selects the previous node.</td>
+</tr>
+<tr>
+<td><kbd>Right Arrow</kbd></td>
+<td>Expands the focused node if it is a collapsed parent. Otherwise, selects the focused node.</td>
+</tr>
+<tr>
+<td><kbd>Left Arrow</kbd></td>
+<td>Collapses the focused node if it is an expanded parent. Otherwise, selects the focused node.</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td>Moves focus and scroll position to the first visible node.</td>
+</tr>
+<tr>
+<td><kbd>End</kbd></td>
+<td>Moves focus and scroll position to the last visible node.</td>
+</tr>
+<tr>
+<td><kbd>Page Down</kbd></td>
+<td>Scrolls down by one page and focuses the corresponding node.</td>
+</tr>
+<tr>
+<td><kbd>Page Up</kbd></td>
+<td>Scrolls up by one page and focuses the corresponding node.</td>
+</tr>
+<tr>
+<td><kbd>Space</kbd></td>
+<td>Selects the focused node. In SingleDeselect and Multiple modes, toggles the selection of the focused node.</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + <kbd>A</kbd> / <kbd>Cmd</kbd> + <kbd>A</kbd></td>
+<td>Selects all visible nodes when `SelectionMode` is `Extended`.</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + <kbd>Space</kbd> / <kbd>Cmd</kbd> + <kbd>Space</kbd></td>
+<td>In `Extended` selection mode, toggles selection of the focused node without deselecting other nodes.</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd> + <kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td>
+<td>In `Extended` selection mode, moves focus without changing the selection.</td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Down Arrow</kbd> / <kbd>Up Arrow</kbd></td>
+<td>In `Extended` selection mode, extends the range selection from the anchor node to the newly focused node.</td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Home</kbd> / <kbd>End</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd></td>
+<td>In `Extended` selection mode, extends the range selection to the first node, last node, or one page away.</td>
+</tr>
+<tr>
+<td><kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+<td>Moves focus into and out of the `SfTreeView` control and between interactive elements inside templates, according to the platform focus order. Use the arrow keys to move between nodes.</td>
+</tr>
+</table>
 
-## Selection Accessibility
+N> <kbd>Enter</kbd> is not handled by `SfTreeView`. Use <kbd>Right Arrow</kbd> and <kbd>Left Arrow</kbd> to expand and collapse nodes, and <kbd>Space</kbd> to select them. To handle other keys, use the `KeyDown` event.
 
-| Mode | Keyboard behavior | Notes |
-|---|---|---|
-| `None` | Focus moves; nothing is selected. | |
-| `Single` | Arrow keys move focus and select. | Space does not deselect. |
-| `SingleDeselect` | Arrows select; Space toggles. | |
-| `Multiple` | Arrows move focus without selecting; Space toggles the focused node. | |
-| `Extended` | Shift for ranges, Ctrl for non-contiguous, Ctrl+A for all. | Matches desktop list conventions. |
+### Selection Modes and Keyboard Behavior
 
-Selection is also shown visually through the node's selected background and text color. Ensure your template does not rely on color alone; see [High Contrast and Visual Accessibility](#high-contrast-and-visual-accessibility).
+<table>
+<tr>
+<th>SelectionMode</th>
+<th>Keyboard behavior</th>
+</tr>
+<tr>
+<td>None</td>
+<td>Focus moves between nodes; nothing is selected.</td>
+</tr>
+<tr>
+<td>Single</td>
+<td>Arrow keys move focus and select the node.</td>
+</tr>
+<tr>
+<td>SingleDeselect</td>
+<td>Arrow keys move focus and select the node. Space toggles the selection of the focused node.</td>
+</tr>
+<tr>
+<td>Multiple</td>
+<td>Arrow keys move focus only. Space toggles the selection of the focused node.</td>
+</tr>
+<tr>
+<td>Extended</td>
+<td>Shift for ranges, Ctrl for non-contiguous selection, Ctrl + A to select all.</td>
+</tr>
+</table>
 
-For checkbox nodes, the checkbox is a separate accessible element with tri-state values (checked, unchecked, indeterminate). A parent whose children are partially checked reports the indeterminate state.
+## Screen Reader Gesture Navigation
 
-## Expand and Collapse Accessibility
+### Android (TalkBack)
 
-- **Gesture/touch:** the expander is an accessible element. Screen readers announce the hint *Double tap to expand* or *Double tap to Collapse* according to the current state, and the hint updates after each toggle.
-- **Keyboard:** <kbd>Right Arrow</kbd> expands and <kbd>Left Arrow</kbd> collapses the focused parent node.
-- **Cancelable:** the `NodeExpanding` and `NodeCollapsing` events can cancel the operation. If you cancel, the state and hint remain unchanged; consider informing the user why.
-- **Visible set changes:** expanding adds the children to the navigable set, and collapsing removes them. Focus stays on the parent node.
+<table>
+<tr>
+<th>Gesture</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Swipe Right</td>
+<td>Moves accessibility focus to the next node or element, such as an expander or checkbox.</td>
+</tr>
+<tr>
+<td>Swipe Left</td>
+<td>Moves accessibility focus to the previous node or element.</td>
+</tr>
+<tr>
+<td>Single Tap</td>
+<td>Focuses and announces the tapped element.</td>
+</tr>
+<tr>
+<td>Double Tap</td>
+<td>Activates the focused element (expands or collapses a node from its expander, toggles a checkbox, or selects a node).</td>
+</tr>
+</table>
 
-## Automation Properties
+### iOS / macOS (VoiceOver)
 
-SfTreeView uses the .NET MAUI semantic APIs. `SemanticProperties` is the recommended API and maps to the same platform properties as the older `AutomationProperties`.
+<table>
+<tr>
+<th>Gesture</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Swipe Right (One finger)</td>
+<td>Moves accessibility focus to the next node or element, such as an expander or checkbox.</td>
+</tr>
+<tr>
+<td>Swipe Left (One finger)</td>
+<td>Moves accessibility focus to the previous node or element.</td>
+</tr>
+<tr>
+<td>Single Tap</td>
+<td>Focuses and announces the tapped element.</td>
+</tr>
+<tr>
+<td>Double Tap</td>
+<td>Activates the focused element (expands or collapses a node from its expander, toggles a checkbox, or selects a node).</td>
+</tr>
+</table>
 
-| Property | Use in TreeView |
-|---|---|
-| `SemanticProperties.Description` | On `SfTreeView`: a prefix for expander and checkbox descriptions (for example, "File explorer"). On template elements: the spoken text for icons and images. |
-| `SemanticProperties.Hint` | On template elements: extra guidance (for example, "Opens the folder"). The built-in expander hint is managed by the control. |
-| `SemanticProperties.HeadingLevel` | On template labels that act as headings. |
-| `AutomationId` | The control assigns IDs of the form `[TreeView AutomationId] Item[Index] Expander` and `... Checkbox` for UI tests, if not already set. Set `AutomationId` on `SfTreeView` to make them unique. |
-| `AutomationProperties.IsInAccessibleTree` | Set to `false` on purely decorative template elements, such as divider lines or ornamental icons, to hide them. |
-| `AutomationProperties.Name` / `HelpText` | Legacy equivalents of `Description` and `Hint`; prefer `SemanticProperties`. |
+### Windows (Narrator)
 
-When creating custom item templates, you can leverage .NET MAUI `SemanticProperties` on template elements to customize the announcement for assistive technologies:
-```xaml
-<syncfusion:SfTreeView x:Name="treeView"
-                       AutomationId="FileTree"
-                       SemanticProperties.Description="File explorer"
-                       ItemsSource="{Binding Folders}"
-                       ChildPropertyName="SubFolders">
-    <syncfusion:SfTreeView.ItemTemplate>
-        <DataTemplate>
-            <Grid ColumnDefinitions="Auto,*" Padding="4">
-                <Image Source="{Binding Icon}"
-                       SemanticProperties.Description="{Binding Kind}" />
-                <Label Grid.Column="1" Text="{Binding Name}" />
-            </Grid>
-        </DataTemplate>
-    </syncfusion:SfTreeView.ItemTemplate>
-</syncfusion:SfTreeView>
+<table>
+<tr>
+<th>Action</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Move to the expander</td>
+<td>Narrator reads the expander description and the "Double tap to expand" or "Double tap to Collapse" hint.</td>
+</tr>
+<tr>
+<td>Arrow keys with focus in the tree</td>
+<td>Moves between visible nodes. Narrator reads the node content from the template.</td>
+</tr>
+<tr>
+<td><kbd>Right Arrow</kbd> / <kbd>Left Arrow</kbd></td>
+<td>Expands or collapses the focused parent node.</td>
+</tr>
+</table>
+
+N> NVDA and JAWS read the UI Automation tree that .NET MAUI exposes on Windows, so announcements can differ from Narrator. Verify the behavior with your templates.
+
+## Semantic Properties in ItemTemplate
+
+When creating custom item templates, you can use .NET MAUI `SemanticProperties` on the tree and on template elements to customize the announcement for assistive technologies:
+
 ```
-## Accessibility States and Announcements
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.TreeView;assembly=Syncfusion.Maui.TreeView">
+  <syncfusion:SfTreeView x:Name="treeView"
+                         AutomationId="FileTree"
+                         SemanticProperties.Description="File explorer"
+                         ItemsSource="{Binding Folders}"
+                         ChildPropertyName="SubFolders">
+    <syncfusion:SfTreeView.ItemTemplate>
+      <DataTemplate>
+        <Grid Padding="12" ColumnDefinitions="Auto,*">
+          <Image Source="{Binding Icon}"
+                 SemanticProperties.Description="{Binding Kind}" />
+          <Label Grid.Column="1"
+                 Text="{Binding Name}"
+                 SemanticProperties.Description="{Binding Name, StringFormat='{0}, {1} items'}" />
+        </Grid>
+      </DataTemplate>
+    </syncfusion:SfTreeView.ItemTemplate>
+  </syncfusion:SfTreeView>
+</ContentPage>
+{% endhighlight %}
+```
+The following properties are supported:
 
-| State | What the user hears / sees | Source |
-|---|---|---|
-| Collapsed parent | Expander: "Double tap to expand" | Built in |
-| Expanded parent | Expander: "Double tap to Collapse" | Built in |
-| Checkbox checked / unchecked / indeterminate | Platform checkbox state with the checkbox description | Built in |
-| Selected / unselected | Visual selected style; spoken state depends on the platform | Platform, plus your template |
-| Level in hierarchy | Not announced automatically | Add to your template |
-| Position in set | Not announced automatically | Add to your template |
+<table>
+<tr>
+<th>Property</th>
+<th>Usage in TreeView</th>
+</tr>
+<tr>
+<td>SemanticProperties.Description</td>
+<td>On <code>SfTreeView</code>: the name of the tree, used as the prefix of expander and checkbox descriptions. On template elements: the spoken text for icons, images, and labels.</td>
+</tr>
+<tr>
+<td>SemanticProperties.Hint</td>
+<td>On template elements: extra guidance, such as "Opens the folder". The hint of the default expander is managed by the control.</td>
+</tr>
+<tr>
+<td>SemanticProperties.HeadingLevel</td>
+<td>On template labels that act as headings.</td>
+</tr>
+<tr>
+<td>AutomationProperties.IsInAccessibleTree</td>
+<td>Set to <code>false</code> on decorative template elements, such as divider lines, so screen readers skip them.</td>
+</tr>
+<tr>
+<td>AutomationProperties.Name / HelpText</td>
+<td>Older equivalents of <code>Description</code> and <code>Hint</code>. Prefer <code>SemanticProperties</code>.</td>
+</tr>
+</table>
+
+N> To announce the level of a node, expose it from your data model and include it in the description, for example `SemanticProperties.Description="{Binding Name, StringFormat='{0}, level 2'}"`. Expanded or collapsed state and the position among siblings are not announced for the node itself.
+
+## AutomationId
+
+`SfTreeView` assigns an `AutomationId` to its expander and checkbox elements so UI automation frameworks and test scripts can find them. The ID is built by combining the `AutomationId` of the TreeView with the pattern below. An ID that you have already set on an element is not overwritten.
+
+<table>
+<tr>
+<th>Element</th>
+<th>AutomationId Pattern</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>Expander</td>
+<td>[TreeView AutomationId] + " Item" + ItemIndex + " Expander"</td>
+<td>FileTree Item2 Expander</td>
+</tr>
+<tr>
+<td>CheckBox</td>
+<td>[TreeView AutomationId] + " Item" + ItemIndex + " Checkbox"</td>
+<td>FileTree Item2 Checkbox</td>
+</tr>
+</table>
+
+N> `ItemIndex` is the index in the visible tree, so it changes when other nodes are expanded or collapsed. Set a unique `AutomationId` on each `SfTreeView`.
+
+### Accessing TreeView Elements
+
+```
+public void SfTreeView_ExpandAndCheck()
+{
+    // Expand or collapse the node at visible index 2
+    driver.FindElement(MobileBy.AccessibilityId("FileTree Item2 Expander")).Click();
+
+    // Toggle the checkbox of the node at visible index 3
+    driver.FindElement(MobileBy.AccessibilityId("FileTree Item3 Checkbox")).Click();
+}
+```
+
+## Right-to-Left (RTL) Support
+
+The `SfTreeView` mirrors its layout, including indentation and expander position, when placed in a Right-to-Left context (`FlowDirection="RightToLeft"`). Verify that the expand and collapse keys behave as expected for your users in RTL locales.
+
