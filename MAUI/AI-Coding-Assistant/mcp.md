@@ -50,7 +50,7 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
 
-**For .NET 8 / .NET 9 (using a local tool):**
+**For .NET 10:**
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -139,7 +139,7 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**For .NET 10 (using a local tool):**
+**For .NET 8 / .NET 9 (using a local tool):**
 
 You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
