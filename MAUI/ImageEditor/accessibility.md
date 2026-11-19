@@ -37,17 +37,17 @@ The following tables list the toolbar items and the text a screen reader announc
 
 | Toolbar item | Screen reader announcement |
 |---|---|
-| Custom Crop | Custom Crop Button* |
-| Original Crop | Original Crop Button* |
-| Square Crop | Square Crop Button* |
-| Circle Crop | Circle Crop Button* |
-| Ellipse Crop | Ellipse Crop Button* |
-| 3:1 Crop | 3:1 Crop Button* |
-| 3:2 Crop | 3:2 Crop Button* |
-| 4:3 Crop | 4:3 Crop Button* |
-| 5:4 Crop | 5:4 Crop Button* |
-| 7:5 Crop | 7:5 Crop Button* |
-| 16:9 Crop | 16:9 Crop Button* |
+| Custom Crop | Custom Crop Button |
+| Original Crop | Original Crop Button |
+| Square Crop | Square Crop Button |
+| Circle Crop | Circle Crop Button |
+| Ellipse Crop | Ellipse Crop Button |
+| 3:1 Crop | 3:1 Crop Button |
+| 3:2 Crop | 3:2 Crop Button |
+| 4:3 Crop | 4:3 Crop Button |
+| 5:4 Crop | 5:4 Crop Button |
+| 7:5 Crop | 7:5 Crop Button |
+| 16:9 Crop | 16:9 Crop Button |
 | Rotate | Rotate Button |
 | Flip Horizontal | Flip Horizontal Button |
 | Flip Vertical | Flip Vertical Button |
@@ -56,16 +56,16 @@ The following tables list the toolbar items and the text a screen reader announc
 
 | Toolbar item | Screen reader announcement |
 |---|---|
-| Rectangle | Rectangle Shape Button* |
-| Circle | Circle Shape Button* |
+| Rectangle | Rectangle Shape Button |
+| Circle | Circle Shape Button |
 | Line | Line Shape Button* |
 | Arrow | Arrow Shape Button* |
-| Double Arrow | Double Arrow Shape Button* |
-| Dotted Line | Dotted Line Shape Button* |
-| Dotted Arrow | Dotted Arrow Shape Button* |
-| Dotted Double Arrow | Dotted Double Arrow Shape Button* |
-| Polygon | Polygon Shape Button* |
-| Polyline | Polyline Shape Button* |
+| Double Arrow | Double Arrow Shape Button |
+| Dotted Line | Dotted Line Shape Button |
+| Dotted Arrow | Dotted Arrow Shape Button |
+| Dotted Double Arrow | Dotted Double Arrow Shape Button |
+| Polygon | Polygon Shape Button |
+| Polyline | Polyline Shape Button |
 
 ### Text
 
