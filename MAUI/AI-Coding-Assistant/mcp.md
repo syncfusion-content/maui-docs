@@ -50,7 +50,7 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
 
-**For .NET 10** :
+**For .NET 10:**
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
