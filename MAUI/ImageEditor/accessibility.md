@@ -58,8 +58,8 @@ The following tables list the toolbar items and the text a screen reader announc
 |---|---|
 | Rectangle | Rectangle Shape Button |
 | Circle | Circle Shape Button |
-| Line | Line Shape Button* |
-| Arrow | Arrow Shape Button* |
+| Line | Line Shape Button |
+| Arrow | Arrow Shape Button |
 | Double Arrow | Double Arrow Shape Button |
 | Dotted Line | Dotted Line Shape Button |
 | Dotted Arrow | Dotted Arrow Shape Button |
@@ -74,7 +74,7 @@ The following tables list the toolbar items and the text a screen reader announc
 | Add Text | Add Text Button |
 | Font Family | Font Family Button |
 | Text Color | Text Color Button |
-| Text Background | Text Background Button* |
+| Text Background | Text Background Button |
 | Font Attributes | Font Attributes Button |
 | Text Alignment | Text Alignment Button |
 | Delete | Delete Button |
@@ -83,8 +83,8 @@ The following tables list the toolbar items and the text a screen reader announc
 
 | Toolbar item | Screen reader announcement |
 |---|---|
-| Stroke Thickness | Pen Stroke Thickness Button* |
-| Pen Color | Pen Color Button* |
+| Stroke Thickness | Pen Stroke Thickness Button |
+| Pen Color | Pen Color Button |
 
 ### Effects
 
