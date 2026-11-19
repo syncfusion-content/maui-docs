@@ -13,7 +13,9 @@ documentation: ug
 
 | Element | Scenario | Announced Text |
 | --- | --- | --- |
-| InputView | Placeholder: Select a country | Select a country, ComboBox |
-| InputView | Selected item: India | Select a country India  |
+| InputView | Placeholder and selected item: Select a country and India | Select a country, Edit read-only India |
+| InputView | Selected item only: India | Edit read-only India |
+| InputView | Placeholder only: Select a country | Select a country, Edit read-only |
+| InputView | No placeholder and selected item | Edit read-only |
 | ClearButton | Focused | Clear Button, Double Tap to Activate |
 | DownButton | Focused | Down Button, Double Tap to Activate |
