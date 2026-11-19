@@ -98,9 +98,6 @@ AI AssistView assigns fixed or content-derived identifiers to the following buil
 <tr><td>Banner/default input editor</td><td>Yes — BannerRequestEditor</td><td>Locate input in the banner/default-input path.</td></tr>
 <tr><td>Banner/default input send view</td><td>Yes — BannerSendRequest</td><td>Locate that input's send action.</td></tr>
 <tr><td>Scroll-to-bottom view</td><td>Yes — ScrollToBottomButton</td><td>Locate the conversation scroll action; its semantic description is also ScrollToBottomButton.</td></tr>
-<tr><td>Internal model-picker view</td><td>Yes — ModelSelector</td><td>Locate the model selector.</td></tr>
-<tr><td>Selected-model host</td><td>Yes — SelectedModel</td><td>Locate the selected-model presentation host.</td></tr>
-<tr><td>Internal thinking-mode presenter</td><td>Yes — ThinkingModePicker</td><td>Locate the presenter; its hint is assigned to the child picker button.</td></tr>
 </table>
 
 ### Request and Response Actions
