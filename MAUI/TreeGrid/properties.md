@@ -223,7 +223,13 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortingGestureType" aria-label="View SortingGestureType property in API reference">SortingGestureType</a></td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_StackedHeaderRows" aria-label="View StackedHeaderRows property in API reference">StackedHeaderRows</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedHeaderRowCollection.html" aria-label="View TreeGridStackedHeaderRowCollection type in API reference">TreeGridStackedHeaderRowCollection</a></td>
+    <td>Holds the collection of stacked header rows that span across multiple columns.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortingGestureType.html" aria-label="View TreeGridSortingGestureType type in API reference">TreeGridSortingGestureType</a></td>
     <td>Controls the gesture used to trigger sorting.</td>
 </tr>
