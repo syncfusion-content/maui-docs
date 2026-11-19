@@ -33,9 +33,9 @@ AI AssistView implements the following editor and autocomplete interactions. The
 
 <table>
 <tr><th>Platform / Context</th><th>Key / Action</th><th>Description</th></tr>
-<tr><td>Windows default editor</td><td><kbd>Enter</kbd> without Shift</td><td>Requests submission. The input path submits nonblank text and refocuses the editor.</td></tr>
+<tr><td>Windows default editor</td><td><kbd>Enter</kbd> without Shift</td><td>Requests submission. The input path submits non blank text and refocuses the editor.</td></tr>
 <tr><td>Windows default editor</td><td><kbd>Shift</kbd> + <kbd>Enter</kbd></td><td>Leaves the key unhandled for native multiline processing when multiline input is enabled.</td></tr>
-<tr><td>Mac Catalyst default editor</td><td><kbd>Return</kbd></td><td>Native newline handling marks the input for submission and unfocuses the editor.</td></tr>
+<tr><td>Mac Catalyst default editor</td><td><kbd>Return</kbd></td><td>Native newline handling marks the input for submission and unfocus the editor.</td></tr>
 <tr><td>Android/iOS editor with multiline input disabled</td><td>Soft-keyboard Send</td><td>Configures the native Send action to initiate submission.</td></tr>
 <tr><td>Autocomplete</td><td><kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td><td>Registers navigation between the editor and suggestion list. Movement depends on the underlying list control.</td></tr>
 <tr><td>Autocomplete</td><td><kbd>Escape</kbd></td><td>Dismisses the autocomplete overlay.</td></tr>
