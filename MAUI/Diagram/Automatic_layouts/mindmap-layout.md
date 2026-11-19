@@ -16,7 +16,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 
 An [`Orientation`]() of a `MindMapTreeLayout` is used to arrange the tree layout according to a specific direction. By default, the orientation is set to Horizontal. 
 
-The following code example illustrates how to create an mindmap layout.
+The following code example illustrates how to create an mind map layout.
 
 {% tabs %}
 {% highlight xaml %}
