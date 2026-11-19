@@ -5,6 +5,7 @@ description: Learn how to create and customize stacked headers in Syncfusion® .
 platform: MAUI
 control: SfTreeGrid
 documentation: ug
+appliesto: UI Component Suite
 keywords : maui tree grid, maui treegrid, maui grid, grid maui, .net maui treegrid, .net maui tree grid, stacked header, maui treegrid stacked header, stacked column, multilevel header
 ---
 
@@ -189,8 +190,8 @@ treeGrid.QueryRowHeight += TreeGrid_QueryRowHeight;
 
 private void TreeGrid_QueryRowHeight(object? sender, TreeGridQueryRowHeightEventArgs e)
 {
-    // Check if the row index corresponds to a stacked header row
-    if (treeGrid.IsStackedHeaderRow(e.RowIndex))
+    // Stacked header rows occupy the top row indexes, above the column header row.
+    if (e.RowIndex < treeGrid.StackedHeaderRows.Count)
     {
         e.Height = 55;
         e.Handled = true;
@@ -226,6 +227,31 @@ treeGrid.DefaultStyle.StackedHeaderRowTextColor = Colors.White;
 {% endhighlight %}
 {% endtabs %}
 
+### Font customization
+
+Customize the font size, family and attributes of the stacked header text using the [TreeGridStyle.StackedHeaderRowFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_StackedHeaderRowFontSize), [TreeGridStyle.StackedHeaderRowFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_StackedHeaderRowFontFamily) and [TreeGridStyle.StackedHeaderRowFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_StackedHeaderRowFontAttributes) properties, respectively.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding Employees}"
+                       ChildPropertyName="ReportsTo"
+                       ParentPropertyName="ID"
+                       SelfRelationRootValue="-1">
+    <syncfusion:SfTreeGrid.DefaultStyle>
+        <syncfusion:TreeGridStyle StackedHeaderRowFontSize="20"
+                                  StackedHeaderRowFontFamily="Helvetica Neue"
+                                  StackedHeaderRowFontAttributes="Bold" />
+    </syncfusion:SfTreeGrid.DefaultStyle>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.DefaultStyle.StackedHeaderRowFontSize = 20;
+treeGrid.DefaultStyle.StackedHeaderRowFontFamily = "Helvetica Neue";
+treeGrid.DefaultStyle.StackedHeaderRowFontAttributes = FontAttributes.Bold;
+{% endhighlight %}
+{% endtabs %}
+
 ### Customizing appearance using implicit styles
 
 You can customize the appearance of stacked header cells by defining an implicit [Style](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.style) targeting [TreeGridStackedHeaderCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedHeaderCell.html).
@@ -246,7 +272,7 @@ You can customize the appearance of stacked header cells by defining an implicit
 
 ## Customizing stacked header with templates
 
-You can customize the content and layout of stacked header cells by using the [TreeGridStackedColumn.HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedColumn.html#Syncfusion_Maui_TreeGrid_TreeGridStackedColumn_HeaderTemplate) property.
+You can customize the content and layout of stacked header cells by using the [TreeGridStackedColumn.Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedColumn.html#Syncfusion_Maui_TreeGrid_TreeGridStackedColumn_Template) property. A `DataTemplateSelector` can also be assigned to this property. When `Template` is set, the `Text` value and the `DefaultStyle` stacked header font and text color settings are not applied to the cell content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -260,7 +286,7 @@ You can customize the content and layout of stacked header cells by using the [T
             <syncfusion:TreeGridStackedHeaderRow.Columns>
                 <syncfusion:TreeGridStackedColumn ColumnMappingNames="FirstName,LastName"
                                                   MappingName="PersonalDetails">
-                    <syncfusion:TreeGridStackedColumn.HeaderTemplate>
+                    <syncfusion:TreeGridStackedColumn.Template>
                         <DataTemplate>
                             <StackLayout Orientation="Horizontal"
                                          HorizontalOptions="Center"
@@ -278,7 +304,7 @@ You can customize the content and layout of stacked header cells by using the [T
                                        VerticalOptions="Center" />
                             </StackLayout>
                         </DataTemplate>
-                    </syncfusion:TreeGridStackedColumn.HeaderTemplate>
+                    </syncfusion:TreeGridStackedColumn.Template>
                 </syncfusion:TreeGridStackedColumn>
             </syncfusion:TreeGridStackedHeaderRow.Columns>
         </syncfusion:TreeGridStackedHeaderRow>

@@ -51,6 +51,18 @@ The table below outlines the available column types with their respective render
 <td>DateTime</td>
 <td>Display temporal data including dates, times, and datetime values with format customization.</td>
 </tr>
+<tr>
+<td>{{'[TreeGridHyperlinkColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHyperlinkColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridHyperlinkCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHyperlinkCellRenderer.html)'| markdownify }}</td>
+<td>Hyperlink</td>
+<td>Display cell values as clickable links and handle or cancel navigation when a link is tapped.</td>
+</tr>
+<tr>
+<td>{{'[TreeGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridImageCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageCellRenderer.html)'| markdownify }}</td>
+<td>Image</td>
+<td>Display images from an <code>ImageSource</code> property in each node.</td>
+</tr>
 </table>
 
 ## TreeGridColumn
@@ -601,3 +613,189 @@ public class SalaryTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 <img alt="Cell template selector" src="Images\column-types\maui-treegrid-template-column-template-selector.png" width="404"/>
+
+## TreeGridHyperlinkColumn
+
+The [TreeGridHyperlinkColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHyperlinkColumn.html) derives from `TreeGridTextColumn`, so it inherits all of its properties. It displays the column value as a clickable link and lets end users trigger navigation by tapping it. Cell and header text are aligned to the start by default.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding EmployeeCollection}"
+                       ChildPropertyName="Children"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfTreeGrid.Columns>
+        <syncfusion:TreeGridHyperlinkColumn HeaderText="Website"
+                                            MappingName="Website" />
+    </syncfusion:SfTreeGrid.Columns>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfTreeGrid treeGrid = new SfTreeGrid();
+treeGrid.ItemsSource = viewModel.EmployeeCollection;
+treeGrid.ChildPropertyName = "Children";
+treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+treeGrid.Columns.Add(new TreeGridHyperlinkColumn()
+{
+    MappingName = "Website",
+    HeaderText = "Website"
+});
+{% endhighlight %}
+{% endtabs %}
+
+### Handling navigation
+
+When a hyperlink cell is tapped, the [CurrentCellRequestNavigating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CurrentCellRequestNavigating) event is raised with [TreeGridCurrentCellRequestNavigatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCurrentCellRequestNavigatingEventArgs.html). If the event is not canceled and the text is a well-formed absolute URI, the TreeGrid opens it with the default launcher. For any other text, nothing is opened unless you handle the event.
+
+The event arguments expose the following read-only properties, and `Cancel` (inherited from `CancelEventArgs`):
+
+| Property | Type | Description |
+|---|---|---|
+| `NavigateText` | `string` | The text of the tapped cell, which is the value from the column's `DisplayBinding` if defined, otherwise the value bound to `MappingName`. |
+| `Record` | `object?` | The data object of the row that contains the tapped hyperlink. |
+| `RowIndex` | `int` | The row index of the tapped cell. |
+| `ColumnIndex` | `int` | The column index of the tapped cell. |
+| `Cancel` | `bool` | Set to `true` to cancel the default navigation. |
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.CurrentCellRequestNavigating += OnCurrentCellRequestNavigating;
+
+private async void OnCurrentCellRequestNavigating(object? sender, TreeGridCurrentCellRequestNavigatingEventArgs e)
+{
+    // Handle the navigation in the application and skip the default behavior.
+    e.Cancel = true;
+    await Launcher.OpenAsync(new Uri("https://en.wikipedia.org/wiki/" + e.NavigateText));
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Cancel the navigation
+
+Set `TreeGridCurrentCellRequestNavigatingEventArgs.Cancel` to `true` to prevent the default navigation.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.CurrentCellRequestNavigating += (sender, e) =>
+{
+    e.Cancel = true;
+};
+{% endhighlight %}
+{% endtabs %}
+
+### Appearance
+
+Set [TreeGridStyle.HyperlinkTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_HyperlinkTextColor) through `DefaultStyle` to change the hyperlink color. The default value is `#6750A4`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding EmployeeCollection}"
+                       ChildPropertyName="Children">
+    <syncfusion:SfTreeGrid.DefaultStyle>
+        <syncfusion:TreeGridStyle HyperlinkTextColor="Orange" />
+    </syncfusion:SfTreeGrid.DefaultStyle>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.DefaultStyle = new TreeGridStyle
+{
+    HyperlinkTextColor = Colors.Orange
+};
+{% endhighlight %}
+{% endtabs %}
+
+N> The link text is underlined and recolored while the pointer is over it or the cell is pressed. This hover color is not configurable through a public API.
+
+### Public API summary
+
+| API | Description |
+|---|---|
+| `TreeGridHyperlinkColumn` | Column that renders cell values as hyperlinks. It has no members of its own and inherits from `TreeGridTextColumn`. |
+| `TreeGridHyperlinkCellRenderer` | Renderer registered for the `Hyperlink` cell type. |
+| `SfTreeGrid.CurrentCellRequestNavigating` | Event raised when a hyperlink is tapped. |
+| `SfTreeGrid.HandleHyperlinkNavigation(string text, RowColumnIndex rowColumnIndex, object rowData)` | Raises `CurrentCellRequestNavigating` for the given text, and opens the text when it is a well-formed absolute URI and the event is not canceled. Does nothing for empty text. |
+| `TreeGridCurrentCellRequestNavigatingEventArgs` | Event data with `NavigateText`, `Record`, `RowIndex`, `ColumnIndex` and `Cancel`. |
+| `TreeGridStyle.HyperlinkTextColor` | Hyperlink text color. |
+
+## TreeGridImageColumn
+
+The [TreeGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageColumn.html) derives from `TreeGridColumn`, so it inherits all of its properties. It displays an image as the cell content. The property bound through `MappingName` must be of type `ImageSource`. The default `CellPadding` of this column is `5`.
+
+Images can be loaded from a file, an embedded resource, a stream or a URI, by supplying the corresponding `ImageSource` in the data model.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding EmployeeCollection}"
+                       ChildPropertyName="Children"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfTreeGrid.Columns>
+        <syncfusion:TreeGridImageColumn HeaderText="Photo"
+                                        MappingName="Photo" />
+    </syncfusion:SfTreeGrid.Columns>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfTreeGrid treeGrid = new SfTreeGrid();
+treeGrid.ItemsSource = viewModel.EmployeeCollection;
+treeGrid.ChildPropertyName = "Children";
+treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+treeGrid.Columns.Add(new TreeGridImageColumn()
+{
+    MappingName = "Photo",
+    HeaderText = "Photo"
+});
+{% endhighlight %}
+
+{% highlight c# tabtitle="EmployeeModel.cs" %}
+public class EmployeeModel
+{
+    public ImageSource Photo { get; set; } = ImageSource.FromFile("employee.png");
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Aspect
+
+Use [TreeGridImageColumn.Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageColumn.html#Syncfusion_Maui_TreeGrid_TreeGridImageColumn_Aspect) to control how the image is sized within the cell. It accepts the MAUI `Aspect` values, and the default is `AspectFit`.
+
+* **AspectFit** (default): Scales the image to fit the cell while maintaining the aspect ratio.
+* **AspectFill**: Scales the image to fill the cell while maintaining the aspect ratio; content may be clipped.
+* **Fill**: Stretches the image to fill the cell, ignoring the aspect ratio.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:TreeGridImageColumn MappingName="Photo"
+                                HeaderText="Photo"
+                                Aspect="AspectFill" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.Columns.Add(new TreeGridImageColumn()
+{
+    MappingName = "Photo",
+    HeaderText = "Photo",
+    Aspect = Aspect.AspectFill
+});
+{% endhighlight %}
+{% endtabs %}
+
+N> The image margin is taken from the column's `CellPadding`. Change `CellPadding` to adjust the space around the image.
+
+### Public API summary
+
+| API | Description |
+|---|---|
+| `TreeGridImageColumn` | Column that displays `ImageSource` values. |
+| `TreeGridImageColumn.Aspect` / `AspectProperty` | How the image is sized in the cell. Default `Aspect.AspectFit`. |
+| `TreeGridImageCellRenderer` | Renderer registered for the `Image` cell type. |
+| `SfTreeGridImage` | The `Image` control used to display the image in each cell. |
+
+### Limitations
+
+* The image cell is display-only. Editing is not supported.
+* The column does not load images from plain strings. Provide an `ImageSource` value, or use a converter or `DisplayBinding` that returns one.

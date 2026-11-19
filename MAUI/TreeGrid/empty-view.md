@@ -10,10 +10,19 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, .net maui treegr
 
 # Empty View in .NET MAUI Tree Grid
 
-The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties. The EmptyView is displayed only when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) is null or contains no items; it is hidden when data is present.
+The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties. The empty view is displayed below the header row when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) is null or no rows are available to display, such as an empty collection or a filter that excludes every record. It is hidden as soon as at least one row is available.
 
-* [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyView): An object that can be set to a string or view when `SfTreeGrid` has no items. The default value is null.
-* [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyViewTemplate): A [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) used to customize the appearance and layout of the `EmptyView`. The default value is null.
+* [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyView): An object that can be set to a string or view when `SfTreeGrid` has no items. The default value is null. The empty view is displayed only when this property is not null.
+* [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyViewTemplate): A [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) used to customize the appearance and layout of the `EmptyView`. The default value is null. A [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) can also be assigned.
+
+| Member | Type | Default | Description |
+|---|---|---|---|
+| `EmptyView` | `object` | `null` | Content displayed when the TreeGrid has no rows. Accepts a `string` or a `View`. Ignored when `EmptyViewTemplate` is set. |
+| `EmptyViewTemplate` | `DataTemplate` | `null` | Template used to create the empty view content. Takes precedence over `EmptyView`. |
+| `EmptyViewProperty` | `BindableProperty` | - | Identifies the `EmptyView` bindable property. |
+| `EmptyViewTemplateProperty` | `BindableProperty` | - | Identifies the `EmptyViewTemplate` bindable property. |
+
+N> The TreeGrid does not expose any events or methods for the empty view.
 
 ## Display a string when TreeGrid has no items
 
@@ -109,9 +118,88 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The `EmptyView` can be a single view (such as an `Image` or `Label`) or a layout container with multiple child controls.
+> **Note:** The `EmptyView` can be a single view (such as an `Image` or `Label`) or a layout container with multiple child controls. When a string is assigned, the TreeGrid displays it in a `Label` centered in the available area.
 
 ## Display a DataTemplate when TreeGrid has no items
+
+### Using EmptyViewTemplate
+
+Set the `EmptyViewTemplate` property to a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) to define the layout of the empty view. The template content is displayed instead of the `EmptyView` value.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding Employees}"
+                       ChildPropertyName="ReportsTo"
+                       ParentPropertyName="ID"
+                       SelfRelationRootValue="-1"
+                       EmptyView="No records found">
+    <syncfusion:SfTreeGrid.EmptyViewTemplate>
+        <DataTemplate>
+            <Label Text="Records not found"
+                   TextColor="Gray"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </DataTemplate>
+    </syncfusion:SfTreeGrid.EmptyViewTemplate>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfTreeGrid treeGrid = new SfTreeGrid();
+EmployeeViewModel viewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = viewModel.Employees;
+treeGrid.ChildPropertyName = "ReportsTo";
+treeGrid.ParentPropertyName = "ID";
+treeGrid.SelfRelationRootValue = -1;
+treeGrid.EmptyView = "No records found";
+treeGrid.EmptyViewTemplate = new DataTemplate(() =>
+{
+    return new Label
+    {
+        Text = "Records not found",
+        TextColor = Colors.Gray,
+        FontSize = 18,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+});
+this.Content = treeGrid;
+{% endhighlight %}
+{% endtabs %}
+
+N> Set `EmptyView` to a non-null value along with `EmptyViewTemplate`. The TreeGrid displays the empty view only when `EmptyView` is not null, even if `EmptyViewTemplate` is set.
+
+### Using DataTemplateSelector
+
+`EmptyViewTemplate` also accepts a `DataTemplateSelector`, so the template can be chosen at runtime. The TreeGrid passes its `ItemsSource` as the item and itself as the container to `OnSelectTemplate`.
+
+{% tabs %}
+{% highlight c# tabtitle="EmptyViewTemplateSelector.cs" %}
+public class EmptyViewTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate? BasicTemplate { get; set; }
+
+    public DataTemplate? AdvancedTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        // item is the ItemsSource of the TreeGrid.
+        return item == null ? AdvancedTemplate! : BasicTemplate!;
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.EmptyView = "No records found";
+treeGrid.EmptyViewTemplate = new EmptyViewTemplateSelector
+{
+    BasicTemplate = new DataTemplate(() => new Label { Text = "Records not found", HorizontalTextAlignment = TextAlignment.Center }),
+    AdvancedTemplate = new DataTemplate(() => new Label { Text = "No data source is assigned", HorizontalTextAlignment = TextAlignment.Center })
+};
+{% endhighlight %}
+{% endtabs %}
+
+N> The selector runs when `EmptyViewTemplate` is assigned, not each time the empty view appears.
 
 ### Using EmptyViewTemplate with Custom Binding
 
@@ -239,14 +327,31 @@ public class FilterItem : BindableObject
 
 In this scenario, a `FilterItem` object is assigned to the `EmptyView` property, and its `Filter` property is bound to the `SearchBar.Text` property. When filtering results in no visible tree nodes, the `EmptyViewTemplate` is rendered with the dynamic search term.
 
+## Behavior
+
+* **When the empty view appears:** It is shown when `ItemsSource` is null, when the bound collection has no items, or when filtering leaves no rows to display. Removing every root node at runtime also shows it.
+* **When the empty view disappears:** Adding a record to the collection, or clearing the filter so that rows are available, removes the empty view and the rows are displayed again.
+* **Header row:** The column header row and any stacked header rows stay visible. The empty view fills the area below them.
+* **Expand and collapse:** Collapsing or expanding nodes does not display the empty view while root nodes exist.
+* **Child nodes:** A node without children does not display the empty view. The state is based on the rows of the TreeGrid, not on the child collection of a single node.
+* **Precedence:** When both `EmptyView` and `EmptyViewTemplate` are set, the content created from `EmptyViewTemplate` is displayed.
+
 ## Supported Combinations
 
 ### Works With:
-* **Self-Relational Data Binding**: Works seamlessly when the root node collection is empty or null.
-* **Nested Hierarchy Data Binding**: Displays empty view when the parent collection contains no child records.
-* **Filtering**: Automatically displays the empty view when filter predicates filter out all records in the view.
-* **Styling**: Operates independently of column or cell style configurations.
+* **Self-Relational Data Binding**: Displays the empty view when the data collection is null or empty.
+* **Nested Hierarchy Data Binding**: Displays the empty view when the root collection is null or empty. Empty child collections of individual nodes do not display it.
+* **Filtering**: Displays the empty view when the filter excludes every record.
+* **Stacked Headers**: The empty view is laid out below the column header and stacked header rows.
+* **Expand and Collapse**: Expanding or collapsing nodes does not change the empty view state while root nodes exist.
 
 ### Known Limitations:
-* `EmptyView` and `EmptyViewTemplate` are only rendered when `ItemsSource` is `null` or contains zero items.
-* If both `EmptyView` and `EmptyViewTemplate` are configured, `EmptyViewTemplate` takes precedence in determining the visual presentation of the data passed via `EmptyView`.
+* `EmptyView` must be non-null for the empty view to be displayed. Setting only `EmptyViewTemplate` does not display it.
+* If both `EmptyView` and `EmptyViewTemplate` are configured, `EmptyViewTemplate` takes precedence over `EmptyView`.
+* Setting `EmptyViewTemplate` to null does not refresh the displayed content. Assign `EmptyView` again to switch back to it.
+
+## See Also
+
+* [Data Binding in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/data-binding)
+* [Filtering in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/filtering)
+* [Stacked Headers in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/stacked-headers)
