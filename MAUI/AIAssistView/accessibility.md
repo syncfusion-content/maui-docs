@@ -95,8 +95,6 @@ AI AssistView assigns fixed or content-derived identifiers to the following buil
 <tr><td>Send view</td><td>Yes — SendRequest</td><td>Locate the send action.</td></tr>
 <tr><td>Attachment action view</td><td>Yes — ActionButton</td><td>Locate the attachment/action chooser.</td></tr>
 <tr><td>Stop-responding view</td><td>Yes — Stop responding</td><td>Locate the stop action; preserve the embedded space.</td></tr>
-<tr><td>Banner/default input editor</td><td>Yes — BannerRequestEditor</td><td>Locate input in the banner/default-input path.</td></tr>
-<tr><td>Banner/default input send view</td><td>Yes — BannerSendRequest</td><td>Locate that input's send action.</td></tr>
 <tr><td>Scroll-to-bottom view</td><td>Yes — ScrollToBottomButton</td><td>Locate the conversation scroll action; its semantic description is also ScrollToBottomButton.</td></tr>
 </table>
 
