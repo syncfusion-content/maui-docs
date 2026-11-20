@@ -9,54 +9,108 @@ documentation: ug
 
 # Accessibility in .NET MAUI Image Editor
 
-The Image Editor works effectively with the icons and sliders on its toolbar, providing voice descriptions of their names and functions.
+The Image Editor supports screen readers. Each toolbar item has a description that the screen reader announces when the item receives focus.
+
+## Screen reader announcements
+
+The following tables list the toolbar items and the text a screen reader announces for each.
+
+### Main toolbar
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Browse | Browse Button |
+| Undo | Undo Button |
+| Redo | Redo Button |
+| Zoom Out | Zoom Out Button |
+| Zoom In | Zoom In Button |
+| Reset | Reset Button |
+| Save | Save Button |
+| Crop | Crop Button |
+| Shape | Shape Button |
+| Text | Text Button |
+| Pen | Pen Button |
+| Effects | Effects Button |
+| Back | Back Button |
+
+### Crop and transform
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Custom Crop | Custom Crop Button |
+| Original Crop | Original Crop Button |
+| Square Crop | Square Crop Button |
+| Circle Crop | Circle Crop Button |
+| Ellipse Crop | Ellipse Crop Button |
+| 3:1 Crop | 3:1 Crop Button |
+| 3:2 Crop | 3:2 Crop Button |
+| 4:3 Crop | 4:3 Crop Button |
+| 5:4 Crop | 5:4 Crop Button |
+| 7:5 Crop | 7:5 Crop Button |
+| 16:9 Crop | 16:9 Crop Button |
+| Rotate | Rotate Button |
+| Flip Horizontal | Flip Horizontal Button |
+| Flip Vertical | Flip Vertical Button |
+
+### Shapes
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Rectangle | Rectangle Shape Button |
+| Circle | Circle Shape Button |
+| Line | Line Shape Button |
+| Arrow | Arrow Shape Button |
+| Double Arrow | Double Arrow Shape Button |
+| Dotted Line | Dotted Line Shape Button |
+| Dotted Arrow | Dotted Arrow Shape Button |
+| Dotted Double Arrow | Dotted Double Arrow Shape Button |
+| Polygon | Polygon Shape Button |
+| Polyline | Polyline Shape Button |
+
+### Text
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Add Text | Add Text Button |
+| Font Family | Font Family Button |
+| Text Color | Text Color Button |
+| Text Background | Text Background Button |
+| Font Attributes | Font Attributes Button |
+| Text Alignment | Text Alignment Button |
+| Delete | Delete Button |
+
+### Pen
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Stroke Thickness | Pen Stroke Thickness Button |
+| Pen Color | Pen Color Button |
+
+### Effects
+
+| Toolbar item | Screen reader announcement |
+|---|---|
+| Brightness | Brightness Button |
+| Contrast | Contrast Button |
+| Hue | Hue Button |
+| Saturation | Saturation Button |
+| Exposure | Exposure Button |
+| Opacity | Opacity Button |
+| Blur | Blur Button |
+| Sharpen | Sharpen Button |
 
 ## Keyboard shortcuts
 
-The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The following table outlines the available shortcuts and their associated functions.
+The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports the following keyboard shortcuts.
 
-N> The [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event is triggered when a toolbar item is tapped.
+| Shortcut | Description |
+|---|---|
+| Tab | Moves focus to the next toolbar item. |
+| Shift + Tab | Moves focus to the previous toolbar item. |
+| Enter | Activates the focused toolbar item and raises the [`ToolbarItemSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event. |
+| Ctrl + Z | Undoes the most recent action. |
+| Ctrl + Y | Redoes the last undone action. |
+| Ctrl + S | Saves the current image. |
+| Ctrl + O | Opens the file browser to load a new image. |
 
-### Toolbar
-
-<table>
-<tr>
-<td>
-<b> Shortcut Keys </b> <br/><br/></td><td>
-<b> Descriptions </b> <br/><br/></td></tr>
-<tr>
-<td>
-Tab<br/><br/></td><td>Moves selection to the next focusable toolbar item. 
-<br/><br/></td></tr>
-<tr>
-<td>
-Shift + Tab<br/><br/></td><td>
-Moves selection to the previous focusable toolbar item. 
-<br/><br/></td></tr>
-<tr>
-<td>
-Enter<br/><br/></td><td>
-It triggers {{'[ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected)'| markdownify}} event<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + Z<br/><br/></td><td>
-Reverse the most recent action performed on the image editor. 
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + Y<br/><br/></td><td>
-Restores the last undone action.
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + S<br/><br/></td><td>
-Save the current image. 
-<br/><br/></td></tr>
-<tr>
-<td>
-Ctrl + O<br/><br/></td><td>
-Opens the image browser to import the new image inside Image Editor. 
-<br/><br/></td></tr>
-</table>
-
-N> Use the `Command` key instead of the `Ctrl` key on macOS.
+N> On macOS, use the `Command` key instead of `Ctrl`.
