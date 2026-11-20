@@ -108,6 +108,7 @@ line-height: 1;
 }
 
 .sf-icon-tree-map:before { content: "\e700"; }
+.sf-icon-diagram:before { content: "\e72b"; }
 .sf-icon-chat:before { content: "\e701"; }
 .sf-icon-ai-assistance:before { content: "\e702"; }
 .sf-icon-markdown-viewer:before { content: "\e703"; }
@@ -412,6 +413,11 @@ line-height: 1;
 <div class="controlanchorlink">
     <a href="https://help.syncfusion.com/maui/circular-charts/overview">
         <span class="sf-home-icon sf-icon-circular-chart"></span>Circular Charts
+    </a>
+</div>
+<div class="controlanchorlink">
+    <a href="https://help.syncfusion.com/maui/diagram/overview">
+        <span class="sf-home-icon sf-icon-diagram"></span>Diagram
     </a>
 </div>
 <div class="controlanchorlink">
