@@ -91,7 +91,7 @@ The [TreeGridSelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 </tr>
 <tr>
 <td>Extended</td>
-<td>Allows selection of multiple rows or cells using the <kbd>Ctrl</kbd> and <kbd>Shift</kbd> key modifiers, or by dragging the mouse. See <a href="#extended-selection" aria-label="Extended selection">Extended selection</a>.</td>
+<td>Allows selection of multiple rows or cells using the <kbd>Ctrl</kbd> and <kbd>Shift</kbd> key modifiers, or by dragging the mouse. See See <a href="#extended-selection" aria-label="Jump to details about extended row and cell selection">Extended selection</a>.</td>
 </tr>
 </table>
 
