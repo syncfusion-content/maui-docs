@@ -130,4 +130,4 @@ AI AssistView assigns fixed or content-derived identifiers to the following buil
 
 ### Right-to-Left (RTL) Content
 
-The `SfAIAssistView` respects Right-to-Left (RTL) layouts when `FlowDirection="RightToLeft"` is enabled, mirroring supported UI elements and content alignment to provide a natural experience for RTL users. Verify that keyboard navigation and interaction behaviors continue to meet the expectations of users in RTL locales.
+The `SfAIAssistView` supports Right-to-Left (RTL) layouts when `FlowDirection="RightToLeft"` is enabled. Keyboard navigation behavior is automatically adapted for RTL environments, ensuring navigation keys operate according to RTL user expectations.
