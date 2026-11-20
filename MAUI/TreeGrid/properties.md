@@ -79,7 +79,19 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ExpanderColumn" aria-label="View ExpanderColumn property in API reference">ExpanderColumn</a></td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyView" aria-label="View EmptyView property in API reference">EmptyView</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Displays a view or string message when the TreeGrid has no items to display.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyViewTemplate" aria-label="View EmptyViewTemplate property in API reference">EmptyViewTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Provides the template used to customize the layout and appearance of the EmptyView.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string" aria-label="View String type in API reference">string</a></td>
     <td>Identifies the column that displays the expand and collapse icon.</td>
 </tr>
@@ -211,7 +223,13 @@ documentation: ug
 </tr>
 
 <tr valign="top">
-    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SortingGestureType" aria-label="View SortingGestureType property in API reference">SortingGestureType</a></td>
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_StackedHeaderRows" aria-label="View StackedHeaderRows property in API reference">StackedHeaderRows</a></td>
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedHeaderRowCollection.html" aria-label="View TreeGridStackedHeaderRowCollection type in API reference">TreeGridStackedHeaderRowCollection</a></td>
+    <td>Holds the collection of stacked header rows that span across multiple columns.</td>
+</tr>
+
+<tr valign="top">
     <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSortingGestureType.html" aria-label="View TreeGridSortingGestureType type in API reference">TreeGridSortingGestureType</a></td>
     <td>Controls the gesture used to trigger sorting.</td>
 </tr>
