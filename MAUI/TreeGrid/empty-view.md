@@ -354,4 +354,3 @@ In this scenario, a `FilterItem` object is assigned to the `EmptyView` property,
 
 * [Data Binding in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/data-binding)
 * [Filtering in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/filtering)
-* [Stacked Headers in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/stacked-headers)

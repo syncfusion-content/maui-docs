@@ -212,4 +212,3 @@ treeGrid.View?.Refresh();
 
 * [Styling](https://help.syncfusion.com/maui/treegrid/styling)
 * [Column Sizing](https://help.syncfusion.com/maui/treegrid/column-sizing)
-* [Stacked Headers](https://help.syncfusion.com/maui/treegrid/stacked-headers)
