@@ -138,6 +138,72 @@ keywords: .net maui datapager, .net maui sfdatapager, syncfusion datapager, data
     <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=net-10.0" aria-label="View Boolean type in API reference">bool</a></td>
     <td>Turns on page-by-page loading so only the requested page data is loaded instead of the full collection.</td>
 </tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_FirstPageButtonTemplate" aria-label="View FirstPageButtonTemplate property in API reference">FirstPageButtonTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Replaces the default icon of the first page button with custom content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_LastPageButtonTemplate" aria-label="View LastPageButtonTemplate property in API reference">LastPageButtonTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Replaces the default icon of the last page button with custom content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToFirstPageCommand" aria-label="View NavigateToFirstPageCommand property in API reference">NavigateToFirstPageCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Command executed after navigation to the first page succeeds.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToLastPageCommand" aria-label="View NavigateToLastPageCommand property in API reference">NavigateToLastPageCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Command executed after navigation to the last page succeeds.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToNextPageCommand" aria-label="View NavigateToNextPageCommand property in API reference">NavigateToNextPageCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Command executed after navigation to the next page succeeds.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommand" aria-label="View NavigateToPageCommand property in API reference">NavigateToPageCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Command executed after navigation to a specific page succeeds. It receives NavigateToPageCommandParameter if set; otherwise the destination page index.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommandParameter" aria-label="View NavigateToPageCommandParameter property in API reference">NavigateToPageCommandParameter</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.object" aria-label="View Object type in API reference">object</a></td>
+    <td>Parameter passed to NavigateToPageCommand instead of the destination page index.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPreviousPageCommand" aria-label="View NavigateToPreviousPageCommand property in API reference">NavigateToPreviousPageCommand</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.icommand" aria-label="View ICommand type in API reference">ICommand</a></td>
+    <td>Command executed after navigation to the previous page succeeds.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NextPageButtonTemplate" aria-label="View NextPageButtonTemplate property in API reference">NextPageButtonTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Replaces the default icon of the next page button with custom content.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NumericButtonTemplate" aria-label="View NumericButtonTemplate property in API reference">NumericButtonTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Customizes the content of the numeric page buttons. The template binding context is a BindingContextHelper that exposes PageNumber.</td>
+</tr>
+
+<tr valign="top">
+    <td><a href="https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PreviousPageButtonTemplate" aria-label="View PreviousPageButtonTemplate property in API reference">PreviousPageButtonTemplate</a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate" aria-label="View DataTemplate type in API reference">DataTemplate</a></td>
+    <td>Replaces the default icon of the previous page button with custom content.</td>
+</tr>
 </table>
 
 ## Methods
