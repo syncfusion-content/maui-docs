@@ -438,3 +438,193 @@ grid.SetColumn(border, 1);
 this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
+
+## Navigation button templates
+
+The `SfDataPager` allows you to replace the default icons of the first, previous, next, and last page buttons with your own content using the following properties. Each property accepts a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) whose root element is a `View`.
+
+* [FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_FirstPageButtonTemplate) - Customizes the first page button.
+* [PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PreviousPageButtonTemplate) - Customizes the previous page button.
+* [NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NextPageButtonTemplate) - Customizes the next page button.
+* [LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_LastPageButtonTemplate) - Customizes the last page button.
+
+The default value of each property is `null`, which renders the built-in icon. The button itself, including its tap handling, enabled and disabled states, and background, is still provided by the pager. Only the content inside the button is replaced.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15"
+                           DisplayMode="FirstLastNumeric"
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.FirstPageButtonTemplate>
+                <DataTemplate>
+                    <Label Text="First" HorizontalOptions="Center" VerticalOptions="Center" />
+                </DataTemplate>
+            </pager:SfDataPager.FirstPageButtonTemplate>
+            <pager:SfDataPager.PreviousPageButtonTemplate>
+                <DataTemplate>
+                    <Label Text="&lt;" HorizontalOptions="Center" VerticalOptions="Center" />
+                </DataTemplate>
+            </pager:SfDataPager.PreviousPageButtonTemplate>
+            <pager:SfDataPager.NextPageButtonTemplate>
+                <DataTemplate>
+                    <Label Text="&gt;" HorizontalOptions="Center" VerticalOptions="Center" />
+                </DataTemplate>
+            </pager:SfDataPager.NextPageButtonTemplate>
+            <pager:SfDataPager.LastPageButtonTemplate>
+                <DataTemplate>
+                    <Label Text="Last" HorizontalOptions="Center" VerticalOptions="Center" />
+                </DataTemplate>
+            </pager:SfDataPager.LastPageButtonTemplate>
+        </pager:SfDataPager>
+    </Border>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.DisplayMode = DataPagerDisplayMode.FirstLastNumeric;
+dataPager.Source = viewModel.Orders;
+
+dataPager.FirstPageButtonTemplate = new DataTemplate(() => new Label
+{
+    Text = "First",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+dataPager.PreviousPageButtonTemplate = new DataTemplate(() => new Label
+{
+    Text = "<",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+dataPager.NextPageButtonTemplate = new DataTemplate(() => new Label
+{
+    Text = ">",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+dataPager.LastPageButtonTemplate = new DataTemplate(() => new Label
+{
+    Text = "Last",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+N> The navigation button templates are shown only for the buttons included in the current [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_DisplayMode). The pager does not set a binding context for the template content, so use fixed content such as a `Label`, `Image`, or `Path`. The icon color settings of [DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html) apply only to the built-in icons, not to template content.
+
+## Numeric button template
+
+The [NumericButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NumericButtonTemplate) property customizes the content of every numeric page button. The default value is `null`, which renders the built-in page number text.
+
+The `BindingContext` of the template content is a [BindingContextHelper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.BindingContextHelper.html) object. Its `PageNumber` property (`int`) holds the one-based page number shown by that button, so you can bind to it with `{Binding PageNumber}`. When the numeric buttons are recycled during scrolling, `PageNumber` is updated and the binding refreshes automatically.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name="viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                           PageSize="15"
+                           Source="{Binding Orders}">
+            <pager:SfDataPager.NumericButtonTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding PageNumber, StringFormat='P{0}'}"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </DataTemplate>
+            </pager:SfDataPager.NumericButtonTemplate>
+        </pager:SfDataPager>
+    </Border>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+dataPager.NumericButtonTemplate = new DataTemplate(() =>
+{
+    var label = new Label
+    {
+        FontAttributes = FontAttributes.Bold,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    label.SetBinding(Label.TextProperty, new Binding("PageNumber", stringFormat: "P{0}"));
+    return label;
+});
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+### Choosing a template based on the page number
+
+`NumericButtonTemplate` also accepts a `DataTemplateSelector`. The selector's `item` argument is the same `BindingContextHelper` object, so you can choose a template by page number. The template is re-evaluated when buttons are recycled.
+
+{% tabs %}
+{% highlight c# %}
+public class PageTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate? EvenPageTemplate { get; set; }
+    public DataTemplate? OddPageTemplate { get; set; }
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var context = (BindingContextHelper)item;
+        return context.PageNumber % 2 == 0 ? EvenPageTemplate : OddPageTemplate;
+    }
+}
+
+dataPager.NumericButtonTemplate = new PageTemplateSelector
+{
+    EvenPageTemplate = new DataTemplate(() => new Label { Text = "Even", TextColor = Colors.Green }),
+    OddPageTemplate = new DataTemplate(() => new Label { Text = "Odd", TextColor = Colors.Red })
+};
+{% endhighlight %}
+{% endtabs %}
+
+N> If the template (or the template returned by the selector) does not produce a `View`, the pager falls back to the built-in page number text. Ellipsis buttons are not affected by `NumericButtonTemplate`; their text is controlled by `AutoEllipsisText`. The `NumericButtonTextColor` and `NumericButtonSelectionTextColor` style settings apply only to the built-in text, so style the template content yourself if you need to distinguish the current page.
