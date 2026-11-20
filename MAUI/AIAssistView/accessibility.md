@@ -29,7 +29,7 @@ Settings names can vary by operating-system version and device.
 
 ## Keyboard Navigation
 
-AI AssistView implements the following editor and autocomplete interactions. These do not establish complete keyboard access to every element.
+AI AssistView implements the following editor and autocomplete interactions.
 
 <table>
 <tr><th>Platform / Context</th><th>Key / Action</th><th>Description</th></tr>
@@ -42,8 +42,6 @@ AI AssistView implements the following editor and autocomplete interactions. The
 <tr><td>Mac Catalyst autocomplete</td><td><kbd>Enter</kbd></td><td>Includes an explicit handler to commit the highlighted suggestion.</td></tr>
 <tr><td>Agent autocomplete during submission</td><td><kbd>Enter</kbd> / submission</td><td>Can commit the highlighted agent instead of sending the raw agent trigger text.</td></tr>
 </table>
-
-On Mac Catalyst, the autocomplete overlay can focus the list when displayed. A Down-arrow focus-transfer handler also exists. Do not assume focus remains in the editor until Down is pressed.
 
 ## Semantic Properties in Templates
 
@@ -132,4 +130,4 @@ AI AssistView assigns fixed or content-derived identifiers to the following buil
 
 ### Right-to-Left (RTL) Content
 
-Validate layout, reading order, and keyboard behavior in your application's RTL configuration. RTL layout does not establish directional-key inversion or localization of accessibility strings. Several descriptions and hints shown above are literal English strings
+The `SfAIAssistView` respects Right-to-Left (RTL) layouts when `FlowDirection="RightToLeft"` is enabled, mirroring supported UI elements and content alignment to provide a natural experience for RTL users. Verify that keyboard navigation and interaction behaviors continue to meet the expectations of users in RTL locales.
