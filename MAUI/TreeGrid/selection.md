@@ -53,6 +53,8 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="MAUI TreeGrid Selection" src="Images/selection/maui_treegrid_cellselection.png" width="404"/>
+
 N> `SelectionUnit.Cell` requires `NavigationMode` to be `Cell`. An `InvalidOperationException` is thrown if you set `SelectionUnit` to `Cell` while `NavigationMode` is `Row`, or set `NavigationMode` to `Row` while `SelectionUnit` is not `Row`.
 
 ## Current cell navigation
@@ -91,7 +93,7 @@ The [TreeGridSelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 </tr>
 <tr>
 <td>Extended</td>
-<td>Allows selection of multiple rows or cells using the <kbd>Ctrl</kbd> and <kbd>Shift</kbd> key modifiers, or by dragging the mouse. See <a href="#extended-selection" aria-label="Jump to details about extended row and cell selection">Extended selection</a>.</td>
+<td> Allows selecting multiple rows or cells. You can select multiple rows or cells in the SfTreeGrid by dragging the mouse or by using the key modifiers <kbd>Ctrl</kbd> and <kbd>Shift</kbd>. </td>
 </tr>
 </table>
 
@@ -132,15 +134,7 @@ private void TreeGrid_CurrentCellActivating(object? sender, TreeGridCurrentCellA
 {% endhighlight %}
 {% endtabs %}
 
-To prevent a column from receiving focus, set the [AllowFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_AllowFocus) property of the column to `false`.
-
-{% tabs %}
-{% highlight xaml %}
-<treeGrid:SfTreeGrid.Columns>
-    <treeGrid:TreeGridTextColumn MappingName="FirstName" AllowFocus="False" />
-</treeGrid:SfTreeGrid.Columns>
-{% endhighlight %}
-{% endtabs %}
+To prevent a column from receiving focus, see [Disable focus for a column](#disable-focus-for-a-column).
 
 ## Getting selected rows
 
@@ -174,40 +168,35 @@ TreeGridCellInfo? cellInfo = this.treeGrid.GetSelectedCellInfo(new RowColumnInde
 {% endhighlight %}
 {% endtabs %}
 
-The [TreeGridCellInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridCellInfo.html) class contains the following properties:
+## CurrentCell
 
-<table>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>Column</td>
-<td>Gets the <code>TreeGridColumn</code> that contains the selected cell.</td>
-</tr>
-<tr>
-<td>RowData</td>
-<td>Gets the underlying data object of the row that contains the selected cell.</td>
-</tr>
-<tr>
-<td>NodeEntry</td>
-<td>Gets the <code>TreeNode</code> of the row that contains the selected cell.</td>
-</tr>
-<tr>
-<td>RowIndex</td>
-<td>Gets the row index of the selected cell. The value is <code>-1</code> when the record is under a collapsed parent node.</td>
-</tr>
-<tr>
-<td>IsDataRow</td>
-<td>Gets a value indicating whether the selected cell belongs to a data row.</td>
-</tr>
-</table>
+The [CurrentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CurrentCell) property gets or sets the `RowColumnIndex` of the cell that currently has keyboard focus. The current cell is not always the same as a selected cell.
 
-You can also get the data object of a row from its row index using [GetRecordAtRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_GetRecordAtRowIndex_System_Int32_). The row index includes the header row.
+## CurrentRow
 
-## CurrentCell and CurrentRow
+The [CurrentRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CurrentRow) property holds the underlying data of the row that contains the current cell.
 
-The [CurrentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CurrentCell) property gets or sets the `RowColumnIndex` of the current cell, and `CurrentRow` provides the data object of the row that contains it. The current cell is the cell that has keyboard focus, which is not always the same as a selected cell. In multiple selection, `SelectedRow` holds the first selected record, whereas `CurrentRow` holds the record of the most recently activated cell.
+When `SelectionMode` is `Single`, `CurrentRow` and `SelectedRow` refer to the same record. When the selection mode is `Multiple`, `SingleDeselect`, or `Extended`, `CurrentRow` holds the record of the most recently activated cell, while `SelectedRow` holds the first record in the selection.
+
+Get the current row in the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanged) event by setting `SelectionMode` to `Multiple` or `SingleDeselect`. If `SelectionMode` is `Single`, the current item and selected item are the same.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        treeGrid.SelectionChanged += TreeGrid_SelectionChanged;
+    }
+
+    private void TreeGrid_SelectionChanged(object sender, TreeGridSelectionChangedEventArgs e)
+    {
+        var currentRow = this.treeGrid.CurrentRow;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Programmatic Selection
 
@@ -268,7 +257,7 @@ this.treeGrid.SelectCell(this.treeGrid.GetRecordAtRowIndex(3), this.treeGrid.Col
 {% endhighlight %}
 {% endtabs %}
 
-Select a range of cells using the [SelectCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectCells_System_Object_Syncfusion_Maui_TreeGrid_TreeGridColumn_System_Object_Syncfusion_Maui_TreeGrid_TreeGridColumn_) method. This is useful when the selection mode is `Multiple` or `Extended`.
+Select a range of cells using the `SelectCells` method. This is useful when the selection mode is `Multiple` or `Extended`.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -348,6 +337,8 @@ treeGrid.SelectionMode = TreeGridSelectionMode.Extended;
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="MAUI Tree Grid Extended selection" src="Images/selection/maui_treegrid_extendedselect.png" width="404"/>
+
 ### Mouse interactions
 
 <table>
@@ -378,6 +369,73 @@ treeGrid.SelectionMode = TreeGridSelectionMode.Extended;
 </table>
 
 N> Pointer-based range selection and dragging are available for mouse input on Windows and macOS.
+
+## Shift and ctrl Key Combinations
+
+When `SelectionMode` is `Extended`, you can select multiple rows or cells by holding <kbd>Shift</kbd> while pressing the navigation keys. Before navigation begins, the current cell is marked as the pressed (anchor) cell, and the selection includes all rows or cells between the anchor and the new current cell. When <kbd>Ctrl</kbd> is added, the current cell first jumps to the boundary (first or last row or column) and the selection extends up to it.
+
+<table>
+<tr>
+<th>Key Combinations</th>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>DownArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>UpArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>RightArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>LeftArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Home</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>End</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>PageDown</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>PageUp</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>DownArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>UpArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>RightArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>LeftArrow</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Home</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>PageDown</kbd></td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>PageUp</kbd></td>
+</tr>
+</table>
+
+N> When `SelectionUnit` is `Row`, <kbd>Shift</kbd> with the <kbd>Up</kbd> and <kbd>Down</kbd> keys extends the selection by rows. When `SelectionUnit` is `Cell`, the selection is extended as a rectangular range of cells.
+
+## Extended Selection Limitations
+
+`Extended` selection in [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.html) has the following limitations:
+
+- Drag selection using the mouse pointer is not supported on Android or iOS.
+- Drag selection cannot be used together with row drag-and-drop. Set [AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowDraggingRow) to `false` if you need drag-based selection.
 
 ## Keyboard behavior
 
@@ -433,10 +491,6 @@ Keyboard navigation works when `AllowKeyboardNavigation` is `true` and `Selectio
 <td>Selects all rows or cells. Subject to the <code>SelectAll</code> restriction described above.</td>
 </tr>
 <tr>
-<td><kbd>F2</kbd> / <kbd>Esc</kbd></td>
-<td>Begins editing the current cell / cancels editing.</td>
-</tr>
-<tr>
 <td><kbd>Delete</kbd></td>
 <td>Deletes the selected records when <code>AllowDeleting</code> is <code>true</code> (default).</td>
 </tr>
@@ -461,7 +515,7 @@ The following properties control when selection is applied.
 </tr>
 <tr>
 <td>AllowSelectionOnSecondaryTap</td>
-<td>true</td>
+<td>false</td>
 <td>Applies the selection on right click (Windows and macOS). When <code>false</code>, the selection is unchanged on right click.</td>
 </tr>
 <tr>
@@ -476,7 +530,7 @@ The following properties control when selection is applied.
 <treeGrid:SfTreeGrid x:Name="treeGrid"
                      SelectionMode="Single"
                      AllowSelectionOnPress="True"
-                     AllowSelectionOnSecondaryTap="False"
+                     AllowSelectionOnSecondaryTap="True"
                      AllowSelectionOnExpanderClick="False" />
 {% endhighlight %}
 {% endtabs %}
@@ -500,6 +554,42 @@ public partial class MainPage : ContentPage
         treeGrid.ClearSelection();
     }
 }
+{% endhighlight %}
+{% endtabs %}
+
+## Disable focus for a column
+
+By default, the current cell is focusable on every column. To disable current cell focus for a particular column, set the [TreeGridColumn.AllowFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumn.html#Syncfusion_Maui_TreeGrid_TreeGridColumn_AllowFocus) property to `false`.
+
+{% tabs %}
+{% highlight xaml %}
+<treeGrid:SfTreeGrid x:Name="treeGrid"
+                     SelectionMode="Single"
+                     NavigationMode="Cell"
+                     ItemsSource="{Binding PersonDetails}"
+                     ChildPropertyName="Children">
+    <treeGrid:SfTreeGrid.Columns>
+        <treeGrid:TreeGridTextColumn MappingName="FirstName"
+                                     AllowFocus="False"
+                                     HeaderText="First Name" />
+        <treeGrid:TreeGridTextColumn MappingName="LastName"
+                                     HeaderText="Last Name" />
+    </treeGrid:SfTreeGrid.Columns>
+</treeGrid:SfTreeGrid>
+{% endhighlight %}
+{% endtabs %}
+
+## Disable delete key functionality
+
+By default, the selected rows are deleted when the <kbd>Delete</kbd> key is pressed. Disable this by setting the [SfTreeGrid.AllowDeleting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowDeleting) property to `false`.
+
+{% tabs %}
+{% highlight xaml %}
+<treeGrid:SfTreeGrid SelectionMode="Single"
+                     NavigationMode="Cell"
+                     AllowDeleting="False"
+                     ItemsSource="{Binding PersonDetails}"
+                     ChildPropertyName="Children" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -537,8 +627,6 @@ The [TreeGridSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Sync
 
 - [AddedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridSelectionChangedEventArgs_AddedRows) : Gets the collection of items added to the selection.
 - [RemovedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridSelectionChangedEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridSelectionChangedEventArgs_RemovedRows) : Gets the collection of items removed from the selection.
-
-N> When `SelectionUnit` is `Cell`, the items in `AddedRows` and `RemovedRows` are `TreeGridCellInfo` objects; when it is `Row`, they are the underlying data objects of the rows.
 
 To get the selected item in the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_SelectionChanged) event:
 
@@ -596,7 +684,7 @@ treeGrid.DefaultStyle.SelectedRowTextColor = Colors.Black;
 
 ### Current Cell Border Styling
 
-The border drawn around the current cell can be customized using the [CurrentCellStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentCellStroke) (default `#6750A4`) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentCellBorderWidth) (default `2`) properties. When `NavigationMode` is `Row`, use [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentRowHighlightColor) (default `#79747E`) to customize the current row highlight.
+The border drawn around the current cell can be customized using the [CurrentCellStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentCellStroke) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentCellBorderWidth) properties. When `NavigationMode` is `Row`, use [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentRowHighlightColor) to customize the current row highlight.
 
 {% tabs %}
 {% highlight xaml %}
@@ -604,19 +692,38 @@ The border drawn around the current cell can be customized using the [CurrentCel
                      SelectionUnit="Cell"
                      SelectionMode="Extended">
     <treeGrid:SfTreeGrid.DefaultStyle>
-        <treeGrid:TreeGridStyle CurrentCellStroke="Red"
-                                CurrentCellBorderWidth="3"
-                                SelectionBackground="#FFE0B2"/>
+        <treeGrid:TreeGridStyle CurrentCellStroke="Black"
+                                CurrentCellBorderWidth="3"/>
     </treeGrid:SfTreeGrid.DefaultStyle>
 </treeGrid:SfTreeGrid>
 {% endhighlight %}
 
 {% highlight c# %}
-treeGrid.DefaultStyle.CurrentCellStroke = Colors.Red;
+treeGrid.DefaultStyle.CurrentCellStroke = Colors.Black;
 treeGrid.DefaultStyle.CurrentCellBorderWidth = 3;
-treeGrid.DefaultStyle.SelectionBackground = Color.FromArgb("#FFE0B2");
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="MAUI Tree Grid Extended selection" src="Images/selection/maui_treegrid_stroke.png" width="404"/>
+
+### Customize the current row highlight color
+
+The `SfTreeGrid` supports highlighting the current row when the `SelectionMode` is set to `Multiple`, and the `NavigationMode` is set to [Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridNavigationMode.html#Syncfusion_Maui_TreeGrid_TreeGridNavigationMode_Row). The color of the currently highlighted row can be customized using the [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_CurrentRowHighlightColor) property in the `TreeGridStyle`.
+
+{% tabs %}
+{% highlight xaml %}
+<treeGrid:SfTreeGrid ItemsSource="{Binding PersonDetails}"
+                     SelectionUnit="Row"
+                     NavigationMode="Row"
+                     SelectionMode="Multiple">
+    <treeGrid:SfTreeGrid.DefaultStyle>
+        <treeGrid:TreeGridStyle CurrentRowHighlightColor="Red"/>
+    </treeGrid:SfTreeGrid.DefaultStyle>
+</treeGrid:SfTreeGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Customize the current row highlight color in .NET MAUI Tree Grid" src="Images/selection/maui_treegrid_rowhighlight.png" width="404" />
 
 ## Binding Selection Properties
 
@@ -701,13 +808,3 @@ public class CustomRowSelectionController : TreeGridRowSelectionController
 treeGrid.SelectionController = new CustomRowSelectionController(treeGrid);
 {% endhighlight %}
 {% endtabs %}
-
-N> `ProcessKeyDown` is a `protected internal virtual` member of `TreeGridSelectionController`, so it is overridden with `protected override` from your application assembly.
-
-## Limitations
-
-* `SelectAll` and <kbd>Ctrl</kbd>+<kbd>A</kbd> select items only in `Multiple` mode.
-* `SelectionUnit.Cell` requires `NavigationMode.Cell`.
-* `SelectCell`, `SelectCells`, `GetSelectedCells`, and `GetSelectedCellInfo` work only when `SelectionUnit` is `Cell`.
-* The `SelectionUnit.Any` option available in the DataGrid is not supported in the TreeGrid.
-* The row index of a `TreeGridCellInfo` is `-1` when its record is under a collapsed node.
