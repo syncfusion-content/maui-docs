@@ -139,6 +139,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="TreeGrid with Default StackedHeader" src="Images/stacked-headers/defaultstackedheader.png" width="424"/>
+
 ## Adding child columns dynamically
 
 You can add child columns to an existing stacked header row at runtime by modifying the `ColumnMappingNames` property of the target `TreeGridStackedColumn`.
@@ -182,7 +184,9 @@ treeGrid.HeaderRowHeight = 60;
 {% endhighlight %}
 {% endtabs %}
 
-You can also customize the height of specific stacked header rows individually using the [SfTreeGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_QueryRowHeight) event.
+<img alt="TreeGrid with HeaderRowHeight" src="Images/stacked-headers/stackedheader-with-headerrowheight.png" width="424"/>
+
+You can also customize the height of specific stacked header rows individually using the [SfTreeGrid.QueryRowHeight]() event.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -190,15 +194,16 @@ treeGrid.QueryRowHeight += TreeGrid_QueryRowHeight;
 
 private void TreeGrid_QueryRowHeight(object? sender, TreeGridQueryRowHeightEventArgs e)
 {
-    // Stacked header rows occupy the top row indexes, above the column header row.
-    if (e.RowIndex < treeGrid.StackedHeaderRows.Count)
+    if (e.RowIndex < treeGrid.StackedHeaderRows.Count) // Customize Logic as required.
     {
-        e.Height = 55;
+        e.Height = 70;
         e.Handled = true;
     }
 }
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="TreeGrid with QueryRowHeight" src="Images/stacked-headers/stackedheader-with-queryrowheight.png" width="424"/>
 
 ## Styling stacked headers
 
@@ -216,16 +221,18 @@ You can customize the background color and text color of stacked header rows usi
                        ParentPropertyName="ID"
                        SelfRelationRootValue="-1">
     <syncfusion:SfTreeGrid.DefaultStyle>
-        <syncfusion:TreeGridStyle StackedHeaderRowBackground="#4750DD"
+        <syncfusion:TreeGridStyle StackedHeaderRowBackground="#5B91A3"
                                   StackedHeaderRowTextColor="White" />
     </syncfusion:SfTreeGrid.DefaultStyle>
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-treeGrid.DefaultStyle.StackedHeaderRowBackground = Color.FromArgb("#4750DD");
+treeGrid.DefaultStyle.StackedHeaderRowBackground = Color.FromArgb("#5B91A3");
 treeGrid.DefaultStyle.StackedHeaderRowTextColor = Colors.White;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="customize TreeGrid StackedHeaderRows with DefaultStyle" src="Images/stacked-headers/stackedheader-with-defaultstyle.png" width="424"/>
 
 ### Font customization
 
@@ -270,6 +277,145 @@ You can customize the appearance of stacked header cells by defining an implicit
 {% endhighlight %}
 {% endtabs %}
 
+### Customizing appearance using implicit styles
+ 
+You can customize the appearance of stacked header cells by defining an implicit [Style](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.style) that targets the [TreeGridStackedHeaderCell]().
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:TreeGridStackedHeaderCell">
+        <Setter Property="Background"
+                Value="#F2F4F7"/>
+        <Setter Property="TextColor"
+                Value="Black"/>
+        <Setter Property="FontAttributes"
+                Value="Bold"/>
+        <Setter Property="FontSize"
+                Value="14"/>
+        <Setter Property="FontFamily"
+                Value="Roboto-Medium"/>
+    </Style>
+</ContentPage.Resources>
+
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children">
+    <syncfusion:SfTreeGrid.StackedHeaderRows>
+        <syncfusion:TreeGridStackedHeaderRow>
+            <syncfusion:TreeGridStackedHeaderRow.Columns>
+                <syncfusion:TreeGridStackedColumn ColumnMappingNames="FirstName,LastName,EmployeeId,Salary"
+                                                  Text="Organization Overview"
+                                                  MappingName="OrganizationOverview"/>
+            </syncfusion:TreeGridStackedHeaderRow.Columns>
+        </syncfusion:TreeGridStackedHeaderRow>
+
+        <syncfusion:TreeGridStackedHeaderRow>
+            <syncfusion:TreeGridStackedHeaderRow.Columns>
+                <syncfusion:TreeGridStackedColumn ColumnMappingNames="FirstName,LastName"
+                                                  Text="Personal Details"
+                                                  MappingName="PersonalDetails"/>
+                <syncfusion:TreeGridStackedColumn ColumnMappingNames="EmployeeId,Salary"
+                                                  Text="Work Details"
+                                                  MappingName="WorkDetails"/>
+            </syncfusion:TreeGridStackedHeaderRow.Columns>
+        </syncfusion:TreeGridStackedHeaderRow>
+    </syncfusion:SfTreeGrid.StackedHeaderRows>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="TreeGrid StackedHeader with Implicit Styling" src="Images/stacked-headers/stackedheader-with-implicitstyling.png" width="424"/>
+ 
+### Conditional styling
+ 
+The `SfTreeGrid` allows you to conditionally customize the appearance of stacked header cells based on their values.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid"
+             xmlns:local="clr-namespace:YourAppNamespace"
+             x:Class="YourAppNamespace.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:EmployeeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:TreeGridHeaderCell">
+            <Setter Property="FontFamily"
+                    Value="Roboto-Medium"/>
+        </Style>
+        <ResourceDictionary>
+            <local:CellStyleConverter x:Key="cellStyleConverter"/>
+            <Style TargetType="syncfusion:TreeGridStackedHeaderCell">
+                <Setter Property="Background"
+                        Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=cellStyleConverter}}"/>
+                <Setter Property="FontFamily"
+                        Value="Roboto-Medium"/>
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <syncfusion:SfTreeGrid x:Name="treeGrid"
+                           ItemsSource="{Binding PersonDetails}"
+                           ChildPropertyName="Children">
+        <syncfusion:SfTreeGrid.StackedHeaderRows>
+            <syncfusion:TreeGridStackedHeaderRow>
+                <syncfusion:TreeGridStackedHeaderRow.Columns>
+                    <syncfusion:TreeGridStackedColumn ColumnMappingNames="FirstName,LastName,EmployeeId,Salary"
+                                                      Text="Organization Overview"
+                                                      MappingName="OrganizationOverview"/>
+                </syncfusion:TreeGridStackedHeaderRow.Columns>
+            </syncfusion:TreeGridStackedHeaderRow>
+
+            <syncfusion:TreeGridStackedHeaderRow>
+                <syncfusion:TreeGridStackedHeaderRow.Columns>
+                    <syncfusion:TreeGridStackedColumn ColumnMappingNames="FirstName,LastName"
+                                                      Text="Personal Details"
+                                                      MappingName="PersonalDetails"/>
+                    <syncfusion:TreeGridStackedColumn ColumnMappingNames="EmployeeId,Salary"
+                                                      Text="Work Details"
+                                                      MappingName="WorkDetails"/>
+                </syncfusion:TreeGridStackedHeaderRow.Columns>
+            </syncfusion:TreeGridStackedHeaderRow>
+        </syncfusion:SfTreeGrid.StackedHeaderRows>
+    </syncfusion:SfTreeGrid>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+//Custom style class
+public class CellStyleConverter : IValueConverter
+{
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        if (value is TreeGridStackedHeaderCell cell && cell.CellValue != null)
+        {
+            return cell.CellValue.ToString() switch
+            {
+                "Organization Overview" => Color.FromArgb("#BEBFC5"),
+                "Personal Details" => Color.FromArgb("#91A3B0"),
+                "Work Details" => Color.FromArgb("#E6E6FA"),
+                _ => Color.FromArgb("#FFFFFF")
+            };
+        }
+        return Color.FromArgb("#FFFFFF");
+    }
+
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="TreeGrid StackedHeader with Conditional Styling" src="Images/stacked-headers/stackedheader-with-conditionalstyling.png" width="424"/>
+
 ## Customizing stacked header with templates
 
 You can customize the content and layout of stacked header cells by using the [TreeGridStackedColumn.Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStackedColumn.html#Syncfusion_Maui_TreeGrid_TreeGridStackedColumn_Template) property. A `DataTemplateSelector` can also be assigned to this property. When `Template` is set, the `Text` value and the `DefaultStyle` stacked header font and text color settings are not applied to the cell content.
@@ -288,21 +434,24 @@ You can customize the content and layout of stacked header cells by using the [T
                                                   MappingName="PersonalDetails">
                     <syncfusion:TreeGridStackedColumn.Template>
                         <DataTemplate>
-                            <StackLayout Orientation="Horizontal"
-                                         HorizontalOptions="Center"
-                                         VerticalOptions="Center"
-                                         Spacing="6">
-                                <Label Text="&#xE7FD;"
-                                       FontFamily="MauiMaterialAssets.ttf"
-                                       FontSize="18"
-                                       TextColor="White"
-                                       VerticalOptions="Center" />
-                                <Label Text="Personal Details"
-                                       TextColor="White"
+                            <Grid BackgroundColor="#7d8597"
+                                  Padding="10"
+                                  ColumnDefinitions="40,*"
+                                  ColumnSpacing="20">
+                                <Image  Grid.Column="0"
+                                        Source="Image0.png"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        Margin="10,0,0,0"/>
+                                <Label Grid.Column="1"
+                                       Text="Work Details"
                                        FontAttributes="Bold"
-                                       FontSize="14"
-                                       VerticalOptions="Center" />
-                            </StackLayout>
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalOptions="Fill"
+                                       VerticalOptions="Center"/>
+                            </Grid>
                         </DataTemplate>
                     </syncfusion:TreeGridStackedColumn.Template>
                 </syncfusion:TreeGridStackedColumn>
@@ -321,6 +470,72 @@ You can customize the content and layout of stacked header cells by using the [T
 * **Expander Column**: The tree expander column can be included as a child column under a stacked header row.
 * **Sorting & Filtering**: Child columns under stacked headers retain full sorting and filtering capabilities.
 
-### Known Limitations:
-* Column dragging across stacked header boundaries is not supported.
-* Child columns specified in `ColumnMappingNames` must be contiguous to be visually grouped under a single continuous stacked header cell.
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+// Second level stacked header row
+var subStackedRow = new TreeGridStackedHeaderRow();
+
+subStackedRow.Columns.Add(new TreeGridStackedColumn()
+{
+    ColumnMappingNames = "FirstName,LastName",
+    Text = "Personal Details",
+    MappingName = "PersonalDetails",
+});
+
+// Create the stacked header template
+var workDetailsTemplate = new DataTemplate(() =>
+{
+    Grid grid = new Grid
+    {
+        BackgroundColor = Color.FromArgb("#7d8597"),
+        Padding = new Thickness(10),
+        ColumnSpacing = 20,
+        ColumnDefinitions =
+        {
+            new ColumnDefinition { Width = 40 },
+            new ColumnDefinition { Width = GridLength.Star }
+        }
+    };
+
+    Image image = new Image
+    {
+        Source = "Image0.png",
+        HeightRequest = 20,
+        WidthRequest = 20,
+        Margin = new Thickness(10, 0, 0, 0)
+    };
+    Grid.SetColumn(image, 0);
+
+    Label label = new Label
+    {
+        Text = "Work Details",
+        FontAttributes = FontAttributes.Bold,
+        TextColor = Colors.White,
+        HorizontalTextAlignment = TextAlignment.Start,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalOptions = LayoutOptions.Fill,
+        VerticalOptions = LayoutOptions.Center
+    };
+    Grid.SetColumn(label, 1);
+
+    grid.Children.Add(image);
+    grid.Children.Add(label);
+
+    return grid;
+});
+
+subStackedRow.Columns.Add(new TreeGridStackedColumn()
+{
+    ColumnMappingNames = "EmployeeId,Salary",
+    MappingName = "WorkDetails",
+    Template = workDetailsTemplate
+});
+
+treeGrid.StackedHeaderRows.Add(subStackedRow);
+
+this.Content = treeGrid;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="TreeGrid StackedHeader with Template" src="Images/stacked-headers/stackedheader-with-template.png" width="424"/>
+
