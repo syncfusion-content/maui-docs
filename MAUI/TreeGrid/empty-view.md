@@ -50,6 +50,8 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
+<img src="Images/emptyview/emptyview-as-string.png" width="404" alt="TreeGrid with emptyview as string">
+
 ## Display views when TreeGrid has no items
 
 The `EmptyView` property can also be set to any custom [.NET MAUI View](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view), such as a layout containing icons, labels, or buttons. This view is displayed whenever the `ItemsSource` is null or empty.
@@ -118,7 +120,9 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The `EmptyView` can be a single view (such as an `Image` or `Label`) or a layout container with multiple child controls. When a string is assigned, the TreeGrid displays it in a `Label` centered in the available area.
+<img src="Images/emptyview/emptyview-as-view.png" width="404" alt="TreeGrid with emptyview as view">
+
+> **Note:** The `EmptyView` can be a single view (such as an `Image` or `Label`) or a layout container that contains multiple child controls. When a string value is assigned to the EmptyView property, the TreeGrid displays it in a `Label` centered within the available area.
 
 ## Display a DataTemplate when TreeGrid has no items
 
@@ -168,7 +172,9 @@ this.Content = treeGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> Set `EmptyView` to a non-null value along with `EmptyViewTemplate`. The TreeGrid displays the empty view only when `EmptyView` is not null, even if `EmptyViewTemplate` is set.
+<img src="Images/emptyview/emptyview-with-emptyviewtemplate.png" width="404" alt="TreeGrid with emptyViewTemplate">
+
+N> Set the `EmptyView` property to a non-null value when using `EmptyViewTemplate`. The TreeGrid displays the empty view only when `EmptyView` is not `null`, even if an `EmptyViewTemplate` is assigned.
 
 ### Using DataTemplateSelector
 
@@ -199,7 +205,9 @@ treeGrid.EmptyViewTemplate = new EmptyViewTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-N> The selector runs when `EmptyViewTemplate` is assigned, not each time the empty view appears.
+<img src="Images/emptyview/emptyview-with-emptyviewtemplateselector.png" width="404" alt="TreeGrid with EmptyViewTemplateSelector">
+
+N> The `DataTemplateSelector` is evaluated when the `EmptyViewTemplate` property is assigned, not each time the empty view is displayed.
 
 ### Using EmptyViewTemplate with Custom Binding
 
@@ -323,7 +331,9 @@ public class FilterItem : BindableObject
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Place the `FilterItem.cs` file in your application's project directory or under a `Models` folder alongside your pages.
+<img src="Images/emptyview/emptyviewtemplate-with-custombinding.png" width="404" alt="TreeGrid EmptyViewTemplate with Custom Binding">
+
+> **Note:** Place the `FilterItem.cs` file in your app's main project directory or in a Models folder (e.g., `Models/FilterItem.cs`) alongside your XAML pages.
 
 In this scenario, a `FilterItem` object is assigned to the `EmptyView` property, and its `Filter` property is bound to the `SearchBar.Text` property. When filtering results in no visible tree nodes, the `EmptyViewTemplate` is rendered with the dynamic search term.
 
