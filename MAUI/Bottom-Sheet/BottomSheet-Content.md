@@ -11,7 +11,7 @@ documentation: UG
 
 * The main content of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) is always visible and can be set using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content) property.
 
-* The [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) content is viewable only when the sheet is in the FullExpanded, HalfExpanded, or Collapsed state. Its content can be set using the BottomSheet [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content) property.
+* The [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) content is viewable only when the sheet is in the FullExpanded, HalfExpanded, or Collapsed state. Its content can be set using the [BottomSheetContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_BottomSheetContent) property.
 
 {% tabs %}
 {% highlight xaml %}

@@ -387,7 +387,7 @@ private void OnListViewItemTapped(object? sender, ItemTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> Using [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content), place the main content inside the Bottom Sheet's [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content) property. Without using `Content`, place the main content outside the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html), ensuring that the Bottom Sheet is the last element in the Grid layout.
+N> Using [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content), place the main content inside the Bottom Sheet's 'Content' property. Without using `Content`, place the main content outside the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html), ensuring that the Bottom Sheet is the last element in the Grid layout.
 
 ![Getting Started with Bottom Sheet](images/gettingStarted.png)
 
