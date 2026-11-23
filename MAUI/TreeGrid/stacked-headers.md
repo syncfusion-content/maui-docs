@@ -470,6 +470,8 @@ You can customize the content and layout of stacked header cells by using the [T
 * **Expander Column**: The tree expander column can be included as a child column under a stacked header row.
 * **Sorting & Filtering**: Child columns under stacked headers retain full sorting and filtering capabilities.
 
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 // Second level stacked header row
 var subStackedRow = new TreeGridStackedHeaderRow();
 
