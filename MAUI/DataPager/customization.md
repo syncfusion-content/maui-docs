@@ -443,10 +443,10 @@ this.Content = grid;
 
 The `SfDataPager` allows you to replace the default icons of the first, previous, next, and last page buttons with your own content using the following properties. Each property accepts a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) whose root element is a `View`.
 
-* [FirstPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_FirstPageButtonTemplate) - Customizes the first page button.
-* [PreviousPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_PreviousPageButtonTemplate) - Customizes the previous page button.
-* [NextPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NextPageButtonTemplate) - Customizes the next page button.
-* [LastPageButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_LastPageButtonTemplate) - Customizes the last page button.
+* [FirstPageButtonTemplate]() - Customizes the first page button.
+* [PreviousPageButtonTemplate]() - Customizes the previous page button.
+* [NextPageButtonTemplate]() - Customizes the next page button.
+* [LastPageButtonTemplate]() - Customizes the last page button.
 
 The default value of each property is `null`, which renders the built-in icon. The button itself, including its tap handling, enabled and disabled states, and background, is still provided by the pager. Only the content inside the button is replaced.
 
@@ -464,7 +464,6 @@ The default value of each property is `null`, which renders the built-in icon. T
     <Border Grid.Row="1" Padding="5">
         <pager:SfDataPager x:Name="dataPager"
                            PageSize="15"
-                           DisplayMode="FirstLastNumeric"
                            Source="{Binding Orders}">
             <pager:SfDataPager.FirstPageButtonTemplate>
                 <DataTemplate>
@@ -494,7 +493,6 @@ The default value of each property is `null`, which renders the built-in icon. T
 SfDataPager dataPager = new SfDataPager();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataPager.PageSize = 15;
-dataPager.DisplayMode = DataPagerDisplayMode.FirstLastNumeric;
 dataPager.Source = viewModel.Orders;
 
 dataPager.FirstPageButtonTemplate = new DataTemplate(() => new Label
@@ -535,13 +533,16 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-N> The navigation button templates are shown only for the buttons included in the current [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_DisplayMode). The pager does not set a binding context for the template content, so use fixed content such as a `Label`, `Image`, or `Path`. The icon color settings of [DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html) apply only to the built-in icons, not to template content.
+
+<img alt="Navigation button templates .NET MAUI DataPager." src="Images\customization\net-maui-datapager-navigation-button-templates.png" width="404"/>
+
+N> The icon color settings of [DataPagerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.DataPagerStyle.html) apply only to the built-in icons, not to template content.
 
 ## Numeric button template
 
-The [NumericButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NumericButtonTemplate) property customizes the content of every numeric page button. The default value is `null`, which renders the built-in page number text.
+The [NumericButtonTemplate]() property customizes the content of every numeric page button. The default value is `null`, which renders the built-in page number text.
 
-The `BindingContext` of the template content is a [BindingContextHelper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.BindingContextHelper.html) object. Its `PageNumber` property (`int`) holds the one-based page number shown by that button, so you can bind to it with `{Binding PageNumber}`. When the numeric buttons are recycled during scrolling, `PageNumber` is updated and the binding refreshes automatically.
+The `BindingContext` of the template content is a [BindingContextHelper]() object. Its `PageNumber` property holds the one-based page number shown by that button, so you can bind to it with `{Binding PageNumber}`. When the numeric buttons are recycled during scrolling, `PageNumber` is updated and the binding refreshes automatically.
 
 {% tabs %}
 {% highlight xaml %}
@@ -561,9 +562,8 @@ The `BindingContext` of the template content is a [BindingContextHelper](https:/
             <pager:SfDataPager.NumericButtonTemplate>
                 <DataTemplate>
                     <Label Text="{Binding PageNumber, StringFormat='P{0}'}"
-                           FontAttributes="Bold"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           VerticalOptions="Center"/>
                 </DataTemplate>
             </pager:SfDataPager.NumericButtonTemplate>
         </pager:SfDataPager>
@@ -580,7 +580,6 @@ dataPager.NumericButtonTemplate = new DataTemplate(() =>
 {
     var label = new Label
     {
-        FontAttributes = FontAttributes.Bold,
         HorizontalOptions = LayoutOptions.Center,
         VerticalOptions = LayoutOptions.Center
     };
@@ -601,11 +600,52 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
+
+<img alt="Numeric button template in .NET MAUI DataPager." src="Images\customization\net-maui-datapager-numeric-button-template.png" width="404"/>
+
 ### Choosing a template based on the page number
 
 `NumericButtonTemplate` also accepts a `DataTemplateSelector`. The selector's `item` argument is the same `BindingContextHelper` object, so you can choose a template by page number. The template is re-evaluated when buttons are recycled.
 
 {% tabs %}
+{% highlight xaml %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="evenTemplate">
+            <Label
+                Text="Even",
+                TextColor="Green"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center" />
+        </DataTemplate>
+        <DataTemplate x:Key="oddTemplate">
+            <Label
+                Text="Odd"
+                TextColor="Red
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center" />
+        </DataTemplate>
+        <local:NumericButtonTemplateSelector x:Key="NumericButtonSelector"
+                                    EvenPageTemplate="{StaticResource evenTemplate}"
+                                    OddPageTemplate="{StaticResource oddTemplate}" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" Padding="5">
+        <pager:SfDataPager x:Name="dataPager"
+                   PageSize="10"
+                   Source="{Binding Orders}" 
+                   NumericButtonTemplate="{StaticResource NumericButtonSelector}">
+        </pager:SfDataPager>
+    </Border>
+</Grid>
+
+{% endhighlight %}
 {% highlight c# %}
 public class PageTemplateSelector : DataTemplateSelector
 {
@@ -621,8 +661,8 @@ public class PageTemplateSelector : DataTemplateSelector
 
 dataPager.NumericButtonTemplate = new PageTemplateSelector
 {
-    EvenPageTemplate = new DataTemplate(() => new Label { Text = "Even", TextColor = Colors.Green }),
-    OddPageTemplate = new DataTemplate(() => new Label { Text = "Odd", TextColor = Colors.Red })
+    EvenPageTemplate = new DataTemplate(() => new Label { Text = "Even", TextColor = Colors.Green, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center }),
+    OddPageTemplate = new DataTemplate(() => new Label { Text = "Odd", TextColor = Colors.Red, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center })
 };
 {% endhighlight %}
 {% endtabs %}
