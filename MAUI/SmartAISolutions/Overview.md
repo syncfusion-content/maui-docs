@@ -136,7 +136,7 @@ line-height: 1;
 <div><p class="category-topics">Chat</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Chat/Support-Reply-AI-Drafting" aria-label="Chat Support Reply AI Drafting"><span class="sf-home-icon sf-icon-ai-chat"></span>Support Reply AI Drafting</a>
+<a target="_self" href="/maui/Chat/support-reply-ai-draft" aria-label="Chat Support Reply AI Drafting"><span class="sf-home-icon sf-icon-ai-chat"></span>Support Reply AI Drafting</a>
 </div>
 
 <div><p class="category-topics">ComboBox</p></div>
