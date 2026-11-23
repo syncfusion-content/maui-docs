@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Support Reply AI Drafting in .NET MAUI Chat | Syncfusion®
-description: Learn how to draft support replies with AI in the Syncfusion® .NET MAUI Chat (SfChat) control, then review, edit, and send them.
+description: Learn how to generate AI-drafted support replies in the Syncfusion® .NET MAUI Chat (SfChat) control, and review, edit, and send them.
 platform: maui
 control: SfChat
 documentation: ug
@@ -9,21 +9,21 @@ documentation: ug
 
 # Support Reply AI Drafting in .NET MAUI Chat
 
-This article shows how to add AI reply drafting to a support conversation with the Syncfusion® [.NET MAUI Chat](https://help.syncfusion.com/maui/chat/overview) (`SfChat`) control.
-
-The agent selects a customer message and taps **Draft Reply**. The AI writes a reply into the chat composer. The agent can edit it, regenerate it, or discard it. The AI never sends anything. The agent sends the reply with the Send button.
-
-![AI-powered support reply drafting in .NET MAUI Chat](images/support-reply-ai-draft.gif)
+This article demonstrates how to draft support replies with AI in the Syncfusion® [.NET MAUI Chat](https://help.syncfusion.com/maui/chat/overview) (`SfChat`) control. The agent selects a customer message, and the AI places a draft reply in the chat composer. The agent reviews, edits, and sends it. The AI never sends a reply on its own.
 
 ## Prerequisites
 
-* Complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites).
-* Complete the [Chat getting started](/maui/chat/getting-started) steps.
+Before you start, complete the following:
+
+* The shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites).
+* The [Chat getting started](/maui/chat/getting-started) steps.
 * Install the `CommunityToolkit.Mvvm` NuGet package.
 
-## Step 1: Add the chat
+## Implementing AI reply drafting
 
-Bind `SfChat` to a view model. The built-in composer handles editing and sending. The `Suggestions` property shows the action chips.
+**Step 1: Add the chat**
+
+Bind `SfChat` to a view model. The built-in composer handles editing and sending, and the `Suggestions` property shows the workflow chips.
 
 {% tabs %}
 {% highlight xaml %}
@@ -40,9 +40,9 @@ Bind `SfChat` to a view model. The built-in composer handles editing and sending
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Load the conversation
+**Step 2: Load the conversation**
 
-`SfChat` shows `TextMessage` objects. Set the support agent as `CurrentUser`, and add the conversation to `Messages`.
+Set the support agent as `CurrentUser`, and add the customer and agent `TextMessage` objects to `Messages`.
 
 {% tabs %}
 {% highlight c# %}
@@ -61,19 +61,21 @@ public ObservableCollection<object> Messages { get; } = new()
 {% endhighlight %}
 {% endtabs %}
 
-In your app, load the messages from your own data source.
+**Step 3: Select a customer message**
 
-## Step 3: Select a customer message
+Use a [message template](/maui/chat/messages) to make customer messages tappable. Bind the tap to `SelectMessageCommand`, and show a **Draft Reply** button on the selected message that runs `DraftReplyCommand`.
 
-Use a [message template](/maui/chat/messages) so a customer message can be tapped. Bind the tap to a `SelectMessageCommand` in the view model.
+| Action | Result |
+|--------|--------|
+| Tap a customer message | Selects it. Only one message can be selected. |
+| Tap the selected message again | Clears the selection. |
+| Select another message while a draft exists | Asks for confirmation before discarding the draft. |
 
-* Only customer messages can be selected, one at a time.
-* Tap the selected message again to clear it.
-* If a draft exists, selecting another message asks for confirmation.
+N> Agent messages cannot be selected.
 
-## Step 4: Track the drafting state
+**Step 4: Track the workflow state**
 
-The view model tracks where the agent is in the workflow and shows the matching chips.
+Keep the selection, composer state, and chips in the view model.
 
 {% tabs %}
 {% highlight c# %}
@@ -101,17 +103,21 @@ public sealed partial class SupportChatViewModel : ObservableObject
 {% endhighlight %}
 {% endtabs %}
 
-| State | Chips shown |
-|-------|-------------|
-| Customer message selected | **Draft Reply** |
-| Draft ready | **Regenerate**, **Discard** |
-| First draft failed | **Retry** |
+Update the composer and chips for each state:
 
-While a draft is generating, the composer is locked and the progress text ("Drafting reply..." or "Regenerating reply...") appears inside the selected message.
+| State | Chips | Composer |
+|-------|-------|----------|
+| Customer message selected | None. **Draft Reply** appears on the selected message. | Read-only |
+| Drafting | None | Read-only |
+| Draft ready | **Regenerate**, **Discard** | Editable |
+| Regenerating | None | Read-only |
+| Draft failed | **Retry** | Read-only |
 
-## Step 5: Generate the draft
+While drafting or regenerating, the selected message shows "Drafting reply..." or "Regenerating reply...".
 
-Create a service that takes the selected message and the recent conversation, and returns a checked reply.
+**Step 5: Generate the draft**
+
+Define a service that takes the selected message and the recent conversation, and returns a validated reply.
 
 {% tabs %}
 {% highlight c# %}
@@ -130,17 +136,19 @@ public interface ISupportReplyService
 {% endhighlight %}
 {% endtabs %}
 
-The service sends the request to your AI service with a system prompt. The prompt should tell the model to:
+In the implementation, send the request to your AI service with a system prompt that applies these rules:
 
-* Write a professional reply based on the selected message and earlier messages.
-* Not repeat steps the customer already tried.
-* Not invent menus, links, account status, policies, or timelines.
-* Not ask for passwords, API keys, or authentication codes.
-* Return plain text under 1,000 characters.
+| Rule | Purpose |
+|------|---------|
+| Use only the selected message and earlier messages | Prevents invented details. |
+| Do not invent menus, links, account status, policies, or timelines | Keeps the reply accurate. |
+| Do not repeat steps the customer already tried | Keeps the reply relevant. |
+| Do not ask for passwords, API keys, or authentication codes | Protects customer data. |
+| Return plain text under 1,000 characters | Matches the validator. |
 
-Treat customer text as untrusted data, and tell the model not to follow instructions inside it.
+N> Treat customer text as untrusted data. Tell the model not to follow instructions inside it.
 
-When the reply comes back, place it in the composer for review:
+Place the validated reply in the composer:
 
 {% tabs %}
 {% highlight c# %}
@@ -155,20 +163,20 @@ if (result.IsValid && result.Response is not null)
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Check the reply
+**Step 6: Validate the reply**
 
-Check every reply before it reaches the composer. `SupportReplyValidator` rejects a reply that:
+`SupportReplyValidator` rejects a reply before it reaches the composer if it:
 
 * Is empty or longer than 1,000 characters.
-* Contains links.
+* Contains a link.
 * Mentions passwords, API keys, or authentication codes.
-* Claims something that did not happen, such as a completed verification, an escalation, a refund, or a guaranteed outcome.
+* Claims an action that did not happen, such as a verification, escalation, refund, or guaranteed outcome.
 
-If a reply is rejected, the agent sees an error and can retry.
+When a reply is rejected, the agent sees an error message and can retry.
 
-## Step 7: Handle the chips
+**Step 7: Handle the chips**
 
-Handle chip taps in `SuggestionItemSelected`. Cancel the default send and keep the chips visible, so the chip text never becomes message content.
+Handle the **Regenerate**, **Discard**, and **Retry** chips in `SuggestionItemSelected`. Cancel the default send and keep the chips visible, so the chip text does not become message content.
 
 {% tabs %}
 {% highlight c# %}
@@ -184,16 +192,15 @@ private async void OnSuggestionItemSelected(object? sender, SuggestionItemSelect
 {% endhighlight %}
 {% endtabs %}
 
-| Chip | What it does |
-|------|--------------|
-| **Draft Reply** | Generates the first draft. |
-| **Regenerate** | Asks "Replace draft?", then generates a new draft. If it fails, the previous draft stays. |
-| **Discard** | Clears the draft and the selection. |
-| **Retry** | Tries again after a failed first draft. |
+| Chip | Action |
+|------|--------|
+| **Regenerate** | Asks "Replace draft?", then generates a new draft. If it fails, the previous draft is kept. |
+| **Discard** | Asks "Discard draft?", then clears the draft and the selection. |
+| **Retry** | Repeats a failed first draft. |
 
-## Step 8: Send the reply
+**Step 8: Send the reply**
 
-The Send button runs `SendMessageCommand`. Mark the event as handled, then add the reviewed text as a support agent message.
+The Send button runs `SendMessageCommand`. Mark the event as handled, and add the reviewed text as a support agent message.
 
 {% tabs %}
 {% highlight c# %}
@@ -213,7 +220,7 @@ private void SendNativeMessage(object? args)
 {% endhighlight %}
 {% endtabs %}
 
-## Step 9: Register the services
+**Step 9: Register the services**
 
 Register the services in `MauiProgram.cs`.
 
@@ -230,10 +237,20 @@ builder.Services.AddTransient<SupportChatPage>();
 {% endhighlight %}
 {% endtabs %}
 
-## Change the reply tone
+## How it works
 
-To change the tone, edit the system prompt in `SupportReplyService`. Keep the 1,000-character limit, or the validator rejects the reply.
+1. The agent selects a customer message.
+2. **Draft Reply** sends the message and recent conversation to the AI service.
+3. The validator checks the reply, and the composer shows it.
+4. The agent edits it, regenerates it, or discards it.
+5. The Send button adds the reviewed reply to the conversation.
+
+## Output
+
+![AI-powered support reply drafting in .NET MAUI Chat](images/support-reply-ai-draft.gif)
 
 ## See also
 
-Get the complete sample from the [AI use-case demos](https://github.com/syncfusion/maui-ai-usecase-demos) repository.
+* [Suggestions in .NET MAUI Chat](/maui/chat/suggestions)
+* [Messages in .NET MAUI Chat](/maui/chat/messages)
+* [AI use-case demos](https://github.com/syncfusion/maui-ai-usecase-demos)
