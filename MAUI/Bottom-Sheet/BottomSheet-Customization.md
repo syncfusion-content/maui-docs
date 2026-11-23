@@ -9,11 +9,11 @@ documentation: UG
 
 # Customization in .NET MAUI Bottom Sheet
 
-A [Bottom Sheet]() consists of several elements that can be customized to enhance its appearance and functionality.
+A [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) consists of several elements that can be customized to enhance its appearance and functionality.
 
 ## Popup mode
 
-The [IsModal]() property controls whether background interaction is disabled when a Bottom Sheet is open. When set to `True`, a gray overlay blocks interaction with the background, and tapping it closes the sheet. When set to `False`, the overlay is invisible, allowing users to interact with the content behind the sheet.
+The [IsModal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_IsModal) property controls whether background interaction is disabled when a Bottom Sheet is open. When set to `True`, a gray overlay blocks interaction with the background, and tapping it closes the sheet. When set to `False`, the overlay is invisible, allowing users to interact with the content behind the sheet.
 
 {% tabs %}
 {% highlight xaml %}
@@ -39,14 +39,14 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ## State
 
-The state of the [Bottom Sheet]() can be controlled using the [State]() property. The default value is `Hidden`. This property accepts the following values:
+The state of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) can be controlled using the [State](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_State) property. The default value is [Hidden](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetState.html#Syncfusion_Maui_BottomSheet_BottomSheetState_Hidden). This property accepts the following values:
 
-* **FullExpanded** - The sheet will expand to cover the full screen.
-* **HalfExpanded** - The sheet will expand to cover half of the screen.
-* **Collapsed** - The sheet will remain collapsed at the bottom of the screen.
-* **Hidden** - The sheet will remain hidden.
+* [FullExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetState.html#Syncfusion_Maui_BottomSheet_BottomSheetState_FullExpanded) - The sheet will expand to cover the full screen.
+* [HalfExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetState.html#Syncfusion_Maui_BottomSheet_BottomSheetState_HalfExpanded) - The sheet will expand to cover half of the screen.
+* [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetState.html#Syncfusion_Maui_BottomSheet_BottomSheetState_Collapsed) - The sheet will remain collapsed at the bottom of the screen.
+* [Hidden](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetState.html#Syncfusion_Maui_BottomSheet_BottomSheetState_Hidden) - The sheet will remain hidden.
 
-The [State]() property works together with the [AllowedState]() property to control the allowed states of the Bottom Sheet.
+The [State](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_State) property works together with the [AllowedState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_AllowedState) property to control the allowed states of the Bottom Sheet.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -68,11 +68,11 @@ bottomSheet.State = BottomSheetState.FullExpanded;
 
 ## Allowed state
 
-The [Bottom Sheet]() allows controlling the transition between states using the [AllowedState]() property. The default value is `All`, which allows transitions between all available states. This property accepts the following values:
+The [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) allows controlling the transition between states using the [AllowedState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_AllowedState) property. The default value is [All](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetAllowedState.html#Syncfusion_Maui_BottomSheet_BottomSheetAllowedState_All), which allows transitions between all available states. This property accepts the following values:
 
-* **FullExpanded** - Allows transitions only between FullExpanded and Collapsed states.
-* **HalfExpanded** - Allows transitions only between HalfExpanded and Collapsed states.
-* **All** - Allows transitions between all available states (FullExpanded, HalfExpanded, Collapsed, and Hidden).
+* [FullExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetAllowedState.html#Syncfusion_Maui_BottomSheet_BottomSheetAllowedState_All) - Allows transitions only between FullExpanded and Collapsed states.
+* [HalfExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetAllowedState.html#Syncfusion_Maui_BottomSheet_BottomSheetAllowedState_HalfExpanded) - Allows transitions only between HalfExpanded and Collapsed states.
+* [All](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetAllowedState.html#Syncfusion_Maui_BottomSheet_BottomSheetAllowedState_All) - Allows transitions between all available states (FullExpanded, HalfExpanded, Collapsed, and Hidden).
 
 {% tabs %}	
 {% highlight xaml %}
@@ -95,7 +95,7 @@ bottomSheet.AllowedState = BottomSheetAllowedState.HalfExpanded;
 
 ## Overlay tap to collapse
 
-The [CollapseOnOverlayTap]() property enables the Bottom Sheet to collapse when the user taps on the overlay (outside the sheet). This enhances user interaction by allowing easy dismissal of the sheet without fully closing it.
+The [CollapseOnOverlayTap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_CollapseOnOverlayTap) property enables the Bottom Sheet to collapse when the user taps on the overlay (outside the sheet). This enhances user interaction by allowing easy dismissal of the sheet without fully closing it.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -119,7 +119,7 @@ bottomSheet.CollapseOnOverlayTap = true;
 
 ## Content padding
 
-The [ContentPadding]() property of the [Bottom Sheet]() adds space around the content, creating a gap between the Bottom Sheet content and the edges.
+The [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_ContentPadding) property of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) adds space around the content, creating a gap between the Bottom Sheet content and the edges.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -141,7 +141,7 @@ bottomSheet.ContentPadding = new Thickness(15);
 
 ## Background
 
-The [Background]() property allows you to customize the background color of the Bottom Sheet.
+The [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Background) property allows you to customize the background color of the Bottom Sheet.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -167,7 +167,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ## Corner radius
 
-The [CornerRadius]() property allows you to add a corner radius to the Bottom Sheet.
+The [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_CornerRadius) property allows you to add a corner radius to the Bottom Sheet.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -195,7 +195,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ### Full expanded height
 
-The [FullExpandedRatio]() property adjusts the height of the [Bottom Sheet]() when it is in the `FullExpanded` state. The default value is `1`. You can set a value between 0.1 and 1 to adjust the height.
+The [FullExpandedRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_FullExpandedRatio) property adjusts the height of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) when it is in the [FullExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_FullExpandedRatio) state. The default value is `1`. You can set a value between 0.1 and 1 to adjust the height.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -218,7 +218,7 @@ bottomSheet.State = BottomSheetState.FullExpanded;
 
 ### Half expanded height
 
-The [HalfExpandedRatio]() property adjusts the height of the [Bottom Sheet]() when it is in the `HalfExpanded` state. The default value is `0.5`. You can set a value between 0.1 and 0.9 to adjust the height.
+The [HalfExpandedRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_HalfExpandedRatio) property adjusts the height of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) when it is in the [HalfExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_HalfExpandedRatio) state. The default value is `0.5`. You can set a value between 0.1 and 0.9 to adjust the height.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -241,7 +241,7 @@ bottomSheet.State = BottomSheetState.HalfExpanded;
 
 ### Collapsed height
 
-The [CollapsedHeight]() property allows you to specify the height of the [Bottom Sheet]() when it is in the `Collapsed` state. The default value is `100`.
+The [CollapsedHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_CollapsedHeight) property allows you to specify the height of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) when it is in the [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_CollapsedHeight) state. The default value is `100`.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -263,12 +263,12 @@ bottomSheet.CollapsedHeight = 150;
 
 ## Adjust the width
 
-The [ContentWidthMode]() property allows you to adjust the width of the [Bottom Sheet](). The default value is `Full`.
+The [ContentWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_ContentWidthMode) property allows you to adjust the width of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html). The default value is [Full](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetContentWidthMode.html#Syncfusion_Maui_BottomSheet_BottomSheetContentWidthMode_Full).
 
-* **Full** - The sheet will occupy the entire screen width.
-* **Custom** - The sheet will adjust its width based on the value set in the [BottomSheetContentWidth]() property.
+* [Full](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetContentWidthMode.html#Syncfusion_Maui_BottomSheet_BottomSheetContentWidthMode_Full) - The sheet will occupy the entire screen width.
+* [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetContentWidthMode.html#Syncfusion_Maui_BottomSheet_BottomSheetContentWidthMode_Custom) - The sheet will adjust its width based on the value set in the [BottomSheetContentWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_BottomSheetContentWidth) property.
 
-The [BottomSheetContentWidth]() property allows you to adjust the width of the `Bottom Sheet` when it is in `Custom` content width mode. The default value is `300`.
+The [BottomSheetContentWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_BottomSheetContentWidth) property allows you to adjust the width of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) when it is in [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.BottomSheetContentWidthMode.html#Syncfusion_Maui_BottomSheet_BottomSheetContentWidthMode_Custom) content width mode. The default value is `300`.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -296,7 +296,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 ## Grabber customization
 
 ### Show grabber
-The [ShowGrabber]() property enables users to interact with the [Bottom Sheet]() by dragging it up and down. By default, the ShowGrabber property is set to `true`.
+The [ShowGrabber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_ShowGrabber) property enables users to interact with the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) by dragging it up and down. By default, the ShowGrabber property is set to `true`.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -320,7 +320,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ### Grabber width and Grabber height
 
-The [GrabberWidth]() and [GrabberHeight]() properties of the [Bottom Sheet]() specify the width and height of the grabber element. By default, the GrabberWidth property is set to `32`, and the GrabberHeight property is set to `4`.
+The [GrabberWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_GrabberWidth) and [GrabberHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_GrabberHeight) properties of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) specify the width and height of the grabber element. By default, the GrabberWidth property is set to `32`, and the GrabberHeight property is set to `4`.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -345,7 +345,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ### Grabber corner radius
 
-The [GrabberCornerRadius]() property allows you to customize the corner radius of the grabber element in the [Bottom Sheet](). By adjusting this property, you can create rounded corners for the grabber.
+The [GrabberCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_GrabberCornerRadius) property allows you to customize the corner radius of the grabber element in the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html). By adjusting this property, you can create rounded corners for the grabber.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -369,7 +369,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ### Grabber background
 
-The [GrabberBackground]() property allows you to customize the background color of the grabber in the [Bottom Sheet]().
+The [GrabberBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_GrabberBackground) property allows you to customize the background color of the grabber in the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html).
 
 {% tabs %}	
 {% highlight xaml %}
@@ -394,7 +394,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ### Grabber area height
 
-The [GrabberAreaHeight]() feature in the [Bottom Sheet]() control allows developers to adjust the height of the drag area, thus enhancing both usability and appearance.
+The [GrabberAreaHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_GrabberAreaHeight) feature in the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) control allows developers to adjust the height of the drag area, thus enhancing both usability and appearance.
 
 {% tabs %}	
 {% highlight xaml %}
@@ -418,7 +418,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet
 
 ## Animation duration
 
-The [AnimationDuration]() property in `Bottom Sheet` is used to control the duration of the animation when opening and closing the bottom sheet. It allows you to customize how fast or slow the transition occurs.
+The [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_AnimationDuration) property in [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) is used to control the duration of the animation when opening and closing the bottom sheet. It allows you to customize how fast or slow the transition occurs.
 
 {% tabs %}	
 {% highlight xaml %}

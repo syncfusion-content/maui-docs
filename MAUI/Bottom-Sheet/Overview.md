@@ -83,8 +83,8 @@ The following table summarizes the globalization support available in this contr
 
 ## See Also
 
-- [Getting Started]() shows a step‑by‑step guide to begin using the Bottom Sheet control.  
-- [Setting Bottom Sheet Content]() describes how to define and manage the content inside the sheet.
+- [Getting Started](https://help.syncfusion.com/maui/bottom-sheet/getting-started) shows a step‑by‑step guide to begin using the Bottom Sheet control.  
+- [Setting Bottom Sheet Content](https://help.syncfusion.com/maui/bottom-sheet/bottomsheet-content) describes how to define and manage the content inside the sheet.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.  
 
 ## Resources
