@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Bottom Sheet
 
-This section provides a comprehensive overview of how to get started with the [Bottom Sheet]() for .NET MAUI and illustrates how to configure the .NET MAUI Bottom Sheet in a real-time scenario. Follow the steps below to add the .NET MAUI Bottom Sheet to your project.
+This section provides a comprehensive overview of how to get started with the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) for .NET MAUI and illustrates how to configure the .NET MAUI Bottom Sheet in a real-time scenario. Follow the steps below to add the .NET MAUI Bottom Sheet to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI BottomSheet NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.BottomSheet]() and install the latest version.
+2. Search for [Syncfusion.Maui.BottomSheet](https://www.nuget.org/packages/Syncfusion.Maui.BottomSheet/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
@@ -387,7 +387,7 @@ private void OnListViewItemTapped(object? sender, ItemTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N> Using [Content](), place the main content inside the Bottom Sheet's `Content` property. Without using `Content`, place the main content outside the [Bottom Sheet](), ensuring that the Bottom Sheet is the last element in the Grid layout.
+N> Using [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content), place the main content inside the Bottom Sheet's [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content) property. Without using `Content`, place the main content outside the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html), ensuring that the Bottom Sheet is the last element in the Grid layout.
 
 ![Getting Started with Bottom Sheet](images/gettingStarted.png)
 

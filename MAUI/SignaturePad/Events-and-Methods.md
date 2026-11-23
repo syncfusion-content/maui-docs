@@ -191,7 +191,7 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 ### ExportStrokeData
 
-The `ExportStrokeData()` method exports the current signature as a JSON string containing all signature stroke information. The exported data can later be restored using the LoadFromStrokeData(string) method, enabling a complete save-and-load workflow.
+The [ExportStrokeData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ExportStrokeData) method exports the current signature as a JSON string containing all signature stroke information. The exported data can later be restored using the LoadFromStrokeData(string) method, enabling a complete save-and-load workflow.
 
 {% tabs %}
 
@@ -224,7 +224,7 @@ private void OnSaveClicked(object? sender, EventArgs e)
 
 ### LoadFromStrokeData
 
-The `LoadFromStrokeData()` method restores a signature from previously exported stroke data. It supports loading from either a JSON string or a stream and preserves the original stroke appearance and structure, allowing the signature to remain editable.
+The [LoadFromStrokeData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_LoadFromStrokeData_System_IO_Stream_) method restores a signature from previously exported stroke data. It supports loading from either a JSON string or a stream and preserves the original stroke appearance and structure, allowing the signature to remain editable.
 
 {% tabs %}
 

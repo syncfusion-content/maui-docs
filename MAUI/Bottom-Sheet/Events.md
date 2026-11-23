@@ -11,10 +11,10 @@ documentation: UG
 
 ## StateChanged event
 
-The `StateChanged` event is triggered when the [State]() property of the Bottom Sheet changes. This can occur either through user interaction, such as swiping the Bottom Sheet, or programmatically by setting the State property using XAML or C# code. The event's arguments are of type [StateChangedEventArgs]() and provide the following properties:
+The [StateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_StateChanged) event is triggered when the [State](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_State) property of the Bottom Sheet changes. This can occur either through user interaction, such as swiping the Bottom Sheet, or programmatically by setting the State property using XAML or C# code. The event's arguments are of type [StateChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.StateChangedEventArgs.html) and provide the following properties:
 
-* `NewValue` : Gets the current state of the Bottom Sheet.
-* `OldValue` : Gets the previous state of the Bottom Sheet.
+* [NewState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.StateChangedEventArgs.html#Syncfusion_Maui_BottomSheet_StateChangedEventArgs_NewState) : Gets the current state of the Bottom Sheet.
+* [OldState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.StateChangedEventArgs.html#Syncfusion_Maui_BottomSheet_StateChangedEventArgs_OldState) : Gets the previous state of the Bottom Sheet.
 
 {% tabs %}
 {% highlight xaml %}
