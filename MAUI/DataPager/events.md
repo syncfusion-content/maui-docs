@@ -129,18 +129,20 @@ private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataPager.Page
 
 ## Page navigation commands
 
-The `SfDataPager` exposes `ICommand` properties so that you can respond to successful page navigation from a ViewModel without code-behind. Each command is executed after the navigation (including the `PageChanging` and `PageChanged` events) completes successfully. A command is not executed when the navigation is canceled in `PageChanging`, when the first, previous, next, or last page does not exist, or when `CanExecute` returns `false`.
+The `SfDataPager` provides navigation commands that allow you to respond to successful page navigation from a ViewModel without using code-behind. Each command executes after page navigation completes successfully and after the `PageChanging` and `PageChanged` events are raised. A command is not executed if navigation is canceled in `PageChanging`, the target page does not exist (for example, the first, previous, next, or last page), or `CanExecute` returns `false`.
 
-| Property | Executed when | Command parameter |
-|----------|---------------|-------------------|
-| [NavigateToFirstPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToFirstPageCommand) | Navigation to the first page succeeds. | `null` |
-| [NavigateToPreviousPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPreviousPageCommand) | Navigation to the previous page succeeds. | `null` |
-| [NavigateToNextPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToNextPageCommand) | Navigation to the next page succeeds. | `null` |
-| [NavigateToLastPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToLastPageCommand) | Navigation to the last page succeeds. | `null` |
-| [NavigateToPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommand) | Navigation to a specific page succeeds, for example by tapping a numeric or ellipsis button or calling `MoveToPage`. | The value of `NavigateToPageCommandParameter` if set; otherwise the zero-based destination page index (`int`). |
-| [NavigateToPageCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommandParameter) | Not a command. An `object` passed to `NavigateToPageCommand` instead of the page index. | - |
+The following commands are available in `SfDataPager`.
 
-The commands run for both user interaction (tapping a button) and programmatic navigation using `MoveToFirstPage`, `MoveToPreviousPage`, `MoveToNextPage`, `MoveToLastPage`, and `MoveToPage`.
+| Property | Description | Command parameter |
+|----------|-------------|-------------------|
+| [NavigateToFirstPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToFirstPageCommand) | Executes when navigation to the first page completes successfully. | `null` |
+| [NavigateToPreviousPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPreviousPageCommand) | Executes when navigation to the previous page completes successfully. | `null` |
+| [NavigateToNextPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToNextPageCommand) | Executes when navigation to the next page completes successfully. | `null` |
+| [NavigateToLastPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToLastPageCommand) | Executes when navigation to the last page completes successfully. | `null` |
+| [NavigateToPageCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommand) | Executes when navigation to a specific page completes successfully through user interaction or by calling `MoveToPage`. | The value of `NavigateToPageCommandParameter` if set; otherwise, the zero-based destination page index (`int`). |
+| [NavigateToPageCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataPager.SfDataPager.html#Syncfusion_Maui_DataPager_SfDataPager_NavigateToPageCommandParameter) | Not a command. Specifies an `object` that is passed to `NavigateToPageCommand` instead of the destination page index. | - |
+
+These commands are executed for both user-initiated navigation (such as tapping a pager button) and programmatic navigation through `MoveToFirstPage`, `MoveToPreviousPage`, `MoveToNextPage`, `MoveToLastPage`, and `MoveToPage`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -150,21 +152,47 @@ The commands run for both user interaction (tapping a button) and programmatic n
 
 <Grid>
     <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
     </Grid.RowDefinitions>
-    <Border Grid.Row="1" Padding="5">
-        <pager:SfDataPager x:Name="dataPager"
-                           PageSize="15"
-                           Source="{Binding Orders}"
-                           NavigateToFirstPageCommand="{Binding FirstPageCommand}"
-                           NavigateToPreviousPageCommand="{Binding PreviousPageCommand}"
-                           NavigateToNextPageCommand="{Binding NextPageCommand}"
-                           NavigateToLastPageCommand="{Binding LastPageCommand}"
-                           NavigateToPageCommand="{Binding GoToPageCommand}" />
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                           PageSize = "15" 
+                           Source = "{Binding Orders}"
+                           NavigateToFirstPageCommand = "{Binding FirstPageCommand}"
+                           NavigateToPreviousPageCommand = "{Binding PreviousPageCommand}"
+                           NavigateToNextPageCommand = "{Binding NextPageCommand}"
+                           NavigateToLastPageCommand = "{Binding LastPageCommand}"
+                           NavigateToPageCommand = "{Binding GoToPageCommand}">
+        </pager:SfDataPager>
     </Border>
 </Grid>
 {% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+dataPager.NavigateToFirstPageCommand = viewModel.FirstPageCommand;
+dataPager.NavigateToPreviousPageCommand = viewModel.PreviousPageCommand;
+dataPager.NavigateToNextPageCommand = viewModel.NextPageCommand;
+dataPager.NavigateToLastPageCommand = viewModel.NavigateToLastPageCommand;
+dataPager.NavigateToPageCommand = viewModel.GoToPageCommand;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(border);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 public class OrderInfoViewModel
 {
@@ -185,14 +213,10 @@ public class OrderInfoViewModel
 
     public string Status { get; set; } = string.Empty;
 }
-
-// Code-behind equivalent
-dataPager.NavigateToNextPageCommand = viewModel.NextPageCommand;
-dataPager.NavigateToPageCommand = viewModel.GoToPageCommand;
 {% endhighlight %}
 {% endtabs %}
 
-Set `NavigateToPageCommandParameter` when the command needs a fixed value instead of the page index:
+Set `NavigateToPageCommandParameter` when `NavigateToPageCommand` should receive a fixed value instead of the destination page index:
 
 {% tabs %}
 {% highlight xaml %}
@@ -205,4 +229,4 @@ dataPager.NavigateToPageCommandParameter = "Orders";
 {% endhighlight %}
 {% endtabs %}
 
-N> The commands only observe navigation. They do not trigger it, so use `MoveToPage` and the related methods to navigate programmatically. The commands run after the `PageChanged` event, so the pager's `PageIndex` already reflects the new page.
+N> The navigation commands are notification mechanisms only and do not initiate navigation. To navigate programmatically, use `MoveToPage` or the related navigation methods. Because the commands execute after the `PageChanged` event, the `PageIndex` property already reflects the newly selected page.
