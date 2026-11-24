@@ -625,8 +625,8 @@ The [TreeGridHyperlinkColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
                        ChildPropertyName="Children"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfTreeGrid.Columns>
-        <syncfusion:TreeGridHyperlinkColumn HeaderText="Website"
-                                            MappingName="Website" />
+        <syncfusion:TreeGridHyperlinkColumn HeaderText="City"
+                                            MappingName="City" />
     </syncfusion:SfTreeGrid.Columns>
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
@@ -638,11 +638,13 @@ treeGrid.ChildPropertyName = "Children";
 treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 treeGrid.Columns.Add(new TreeGridHyperlinkColumn()
 {
-    MappingName = "Website",
-    HeaderText = "Website"
+    MappingName = "City",
+    HeaderText = "City"
 });
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="maui-treegrid-Hyperlink-column" src="Images\column-types\maui-treegrid-Hyperlink-column.png" width="404"/>
 
 ### Handling navigation
 
@@ -722,9 +724,14 @@ N> The link text is underlined and recolored while the pointer is over it or the
 
 ## TreeGridImageColumn
 
-The [TreeGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageColumn.html) derives from `TreeGridColumn`, so it inherits all of its properties. It displays an image as the cell content. The property bound through `MappingName` must be of type `ImageSource`. The default `CellPadding` of this column is `5`.
+The [TreeGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageColumn.html) derives from `TreeGridColumn`, so it inherits all of its properties. It displays an image as the cell content. The property bound through `MappingName` must be of type `ImageSource`.
 
-Images can be loaded from a file, an embedded resource, a stream or a URI, by supplying the corresponding `ImageSource` in the data model.
+It is possible to load images in any of the following four ways:
+
+  - **FromFile**: Required to specify the path of the file.
+  - **FromResource**: Required to set an image as an embedded resource.
+  - **FromStream**: Required to load an image from the byte[] array.
+  - **FromURI**: Required to set an image from a web service or website.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -733,8 +740,8 @@ Images can be loaded from a file, an embedded resource, a stream or a URI, by su
                        ChildPropertyName="Children"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfTreeGrid.Columns>
-        <syncfusion:TreeGridImageColumn HeaderText="Photo"
-                                        MappingName="Photo" />
+        <syncfusion:TreeGridImageColumn HeaderText="EmployeeImage"
+                                        MappingName="Image" />
     </syncfusion:SfTreeGrid.Columns>
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
@@ -758,6 +765,8 @@ public class EmployeeModel
 }
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="maui-treegrid-image-column" src="Images\column-types\maui-treegrid-image-column.png" width="404"/>
 
 ### Aspect
 
@@ -794,8 +803,3 @@ N> The image margin is taken from the column's `CellPadding`. Change `CellPaddin
 | `TreeGridImageColumn.Aspect` / `AspectProperty` | How the image is sized in the cell. Default `Aspect.AspectFit`. |
 | `TreeGridImageCellRenderer` | Renderer registered for the `Image` cell type. |
 | `SfTreeGridImage` | The `Image` control used to display the image in each cell. |
-
-### Limitations
-
-* The image cell is display-only. Editing is not supported.
-* The column does not load images from plain strings. Provide an `ImageSource` value, or use a converter or `DisplayBinding` that returns one.
