@@ -177,9 +177,9 @@ line-height: 1;
 .sf-icon-smart-datagrid:before { content: "\e743"; }
 .sf-icon-smart-scheduler:before { content: "\e744"; }
 .sf-icon-smart-text-editor:before { content: "\e745"; }
-.sf-icon-interacive-viewer:before { content: "\e72e"; }
+.sf-icon-interactive-viewer:before { content: "\e72e"; }
 .sf-icon-grid-splitter:before { content: "\e72d"; }
-.sf-icon-datapage:before { content: "\e72c"; }
+.sf-icon-data-page:before { content: "\e72c"; }
 .sf-icon-diagram:before { content: "\e729"; }
 .sf-icon-treegrid:before { content: "\e72f"; }
 
@@ -277,8 +277,8 @@ line-height: 1;
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="https://help.syncfusion.com/maui/datapager/overview">
-    <span class="sf-home-icon .sf-icon-datapage"></span>Datapager
+<a target="_self" href="https://help.syncfusion.com/maui/data-page/overview">
+    <span class="sf-home-icon .sf-icon-data-page"></span>Data Pager
 </a>
 </div>
 
@@ -532,7 +532,7 @@ line-height: 1;
 </div>
 <div class="controlanchorlink">
 <a target="_self" href="https://help.syncfusion.com/maui/interactive-viewer/overview">
-    <span class="sf-home-icon .sf-icon-interacive-viewer"></span>Interactive-Viewer
+    <span class="sf-home-icon .sf-icon-interactive-viewer"></span>Interactive Viewer
 </a>
 </div>
 <!--Miscellaneous-->
