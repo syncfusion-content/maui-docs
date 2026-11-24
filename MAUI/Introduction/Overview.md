@@ -177,6 +177,11 @@ line-height: 1;
 .sf-icon-smart-datagrid:before { content: "\e743"; }
 .sf-icon-smart-scheduler:before { content: "\e744"; }
 .sf-icon-smart-text-editor:before { content: "\e745"; }
+.sf-icon-interactive-viewer:before { content: "\e72e"; }
+.sf-icon-grid-splitter:before { content: "\e72d"; }
+.sf-icon-data-page:before { content: "\e72c"; }
+.sf-icon-diagram:before { content: "\e729"; }
+.sf-icon-treegrid:before { content: "\e72f"; }
 
 </style>
 
@@ -224,6 +229,18 @@ line-height: 1;
 </a>
 </div>
 
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/grid-splitter/overview">
+    <span class="sf-home-icon .sf-icon-grid-splitter"></span>Grid-Splitter
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/treegrid/overview">
+    <span class="sf-home-icon .sf-icon-treegrid"></span>DataGrid
+</a>
+</div>
+
 <!-- Calendars -->
 <div>
     <p class="category-topics">CALENDARS</p>
@@ -256,6 +273,12 @@ line-height: 1;
 <div class="controlanchorlink">
 <a target="_self" href="https://help.syncfusion.com/maui/dataform/overview">
     <span class="sf-home-icon sf-icon-data-form"></span>DataForm
+</a>
+</div>
+
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/data-page/overview">
+    <span class="sf-home-icon .sf-icon-data-page"></span>Data Pager
 </a>
 </div>
 
@@ -415,6 +438,11 @@ line-height: 1;
     </a>
 </div>
 <div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/diagram/overview">
+    <span class="sf-home-icon .sf-icon-diagram"></span>Diagram
+</a>
+</div>
+<div class="controlanchorlink">
     <a href="https://help.syncfusion.com/maui/funnel-charts/overview">
         <span class="sf-home-icon sf-icon-funnel-chart"></span>Funnel Charts
     </a>
@@ -501,6 +529,11 @@ line-height: 1;
     <a target="_self" href="https://help.syncfusion.com/maui/markdownviewer/overview">
         <span class="sf-home-icon sf-icon-markdown-viewer"></span>Markdown Viewer
     </a>
+</div>
+<div class="controlanchorlink">
+<a target="_self" href="https://help.syncfusion.com/maui/interactive-viewer/overview">
+    <span class="sf-home-icon .sf-icon-interactive-viewer"></span>Interactive Viewer
+</a>
 </div>
 <!--Miscellaneous-->
 <div>
