@@ -10,41 +10,30 @@ keywords : maui tree grid, maui treegrid, maui grid, grid maui, .net maui treegr
 
 # Empty View in .NET MAUI Tree Grid
 
-The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties. The empty view is displayed below the header row when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) is null or no rows are available to display, such as an empty collection or a filter that excludes every record. It is hidden as soon as at least one row is available.
+The [SfTreeGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html) provides options to display and customize an empty view when no data is available. The empty view is displayed below the header row when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) is `null` or when no rows are available for display, such as when the collection is empty or a filter excludes all records. The empty view is automatically hidden as soon as at least one row becomes available.
 
-* [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyView): An object that can be set to a string or view when `SfTreeGrid` has no items. The default value is null. The empty view is displayed only when this property is not null.
-* [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EmptyViewTemplate): A [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) used to customize the appearance and layout of the `EmptyView`. The default value is null. A [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) can also be assigned.
+* [EmptyView](): An object that can be set to a string or a view when the `SfTreeGrid` has no items to display. The default value is `null`. The empty view is displayed only when this property is not `null`. 
+* [EmptyViewTemplate](): A [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) used to customize the appearance and layout of the empty view. The default value is `null`. A [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector) can also be assigned.
 
-| Member | Type | Default | Description |
-|---|---|---|---|
-| `EmptyView` | `object` | `null` | Content displayed when the TreeGrid has no rows. Accepts a `string` or a `View`. Ignored when `EmptyViewTemplate` is set. |
-| `EmptyViewTemplate` | `DataTemplate` | `null` | Template used to create the empty view content. Takes precedence over `EmptyView`. |
-| `EmptyViewProperty` | `BindableProperty` | - | Identifies the `EmptyView` bindable property. |
-| `EmptyViewTemplateProperty` | `BindableProperty` | - | Identifies the `EmptyViewTemplate` bindable property. |
-
-N> The TreeGrid does not expose any events or methods for the empty view.
+N> The TreeGrid does not expose any events or methods related to the empty view.
 
 ## Display a string when TreeGrid has no items
 
-You can set the `EmptyView` property to a string that will be displayed when the `ItemsSource` property is null or when the bound collection contains no items.
+The `EmptyView` property can be set to a string that is displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is either empty or null.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfTreeGrid x:Name="treeGrid"
-                       ItemsSource="{Binding Employees}"
-                       ChildPropertyName="ReportsTo"
-                       ParentPropertyName="ID"
-                       SelfRelationRootValue="-1"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children"
                        EmptyView="No records found">
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfTreeGrid treeGrid = new SfTreeGrid();
-EmployeeViewModel viewModel = new EmployeeViewModel();
-treeGrid.ItemsSource = viewModel.Employees;
-treeGrid.ChildPropertyName = "ReportsTo";
-treeGrid.ParentPropertyName = "ID";
-treeGrid.SelfRelationRootValue = -1;
+EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.EmptyView = "No records found";
 this.Content = treeGrid;
 {% endhighlight %}
@@ -54,45 +43,41 @@ this.Content = treeGrid;
 
 ## Display views when TreeGrid has no items
 
-The `EmptyView` property can also be set to any custom [.NET MAUI View](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.view), such as a layout containing icons, labels, or buttons. This view is displayed whenever the `ItemsSource` is null or empty.
+The `EmptyView` property can also be set to any custom view, such as a layout containing icons, labels, or buttons. This view is displayed whenever the `ItemsSource` is null or contains no items.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfTreeGrid x:Name="treeGrid"
-                       ItemsSource="{Binding Employees}"
-                       ChildPropertyName="ReportsTo"
-                       ParentPropertyName="ID"
-                       SelfRelationRootValue="-1">
-    <syncfusion:SfTreeGrid.EmptyView>
-        <StackLayout HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Spacing="10">
-            <Label Text="&#xE7A4;"
-                   FontSize="28"
-                   TextColor="Gray"
-                   FontFamily="MauiMaterialAssets.ttf"
-                   HorizontalOptions="Center"/>
-            <Label Text="No records to display"
-                   FontSize="16"
-                   TextColor="Gray"
-                   HorizontalOptions="Center"/>
-        </StackLayout>
-    </syncfusion:SfTreeGrid.EmptyView>
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children">
+        <syncfusion:SfTreeGrid.EmptyView>
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="10">
+                        <Label Text="&#xE7A4;"
+                               FontSize="28"
+                               TextColor="Gray"
+                               FontFamily="MauiMaterialAssets.ttf"
+                               HorizontalOptions="Center"/>
+                        <Label Text="No records to display"
+                               FontSize="16"
+                               TextColor="Gray"
+                               HorizontalOptions="Center"/>
+                </StackLayout>
+        </syncfusion:SfTreeGrid.EmptyView>
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfTreeGrid treeGrid = new SfTreeGrid();
-EmployeeViewModel viewModel = new EmployeeViewModel();
-treeGrid.ItemsSource = viewModel.Employees;
-treeGrid.ChildPropertyName = "ReportsTo";
-treeGrid.ParentPropertyName = "ID";
-treeGrid.SelfRelationRootValue = -1;
+EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 
-StackLayout stackLayout = new StackLayout() 
-{ 
-    HorizontalOptions = LayoutOptions.Center, 
+StackLayout stackLayout = new StackLayout()
+{
+    HorizontalOptions = LayoutOptions.Center,
     VerticalOptions = LayoutOptions.Center,
-    Spacing = 10 
+    Spacing = 10
 };
 
 var iconLabel = new Label()
@@ -128,34 +113,30 @@ this.Content = treeGrid;
 
 ### Using EmptyViewTemplate
 
-Set the `EmptyViewTemplate` property to a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) to define the layout of the empty view. The template content is displayed instead of the `EmptyView` value.
+Users can set the `EmptyViewTemplate` property to a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) to define the appearance and layout of the empty view. When an EmptyViewTemplate is provided, its content is displayed instead of the value specified in the `EmptyView` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfTreeGrid x:Name="treeGrid"
-                       ItemsSource="{Binding Employees}"
-                       ChildPropertyName="ReportsTo"
-                       ParentPropertyName="ID"
-                       SelfRelationRootValue="-1"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children"
                        EmptyView="No records found">
-    <syncfusion:SfTreeGrid.EmptyViewTemplate>
-        <DataTemplate>
-            <Label Text="Records not found"
-                   TextColor="Gray"
-                   FontSize="18"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-        </DataTemplate>
-    </syncfusion:SfTreeGrid.EmptyViewTemplate>
+        <syncfusion:SfTreeGrid.EmptyViewTemplate>
+                <DataTemplate>
+                        <Label Text="Records not found"
+                               TextColor="Gray"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                </DataTemplate>
+        </syncfusion:SfTreeGrid.EmptyViewTemplate>
 </syncfusion:SfTreeGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfTreeGrid treeGrid = new SfTreeGrid();
-EmployeeViewModel viewModel = new EmployeeViewModel();
-treeGrid.ItemsSource = viewModel.Employees;
-treeGrid.ChildPropertyName = "ReportsTo";
-treeGrid.ParentPropertyName = "ID";
-treeGrid.SelfRelationRootValue = -1;
+EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 treeGrid.EmptyView = "No records found";
 treeGrid.EmptyViewTemplate = new DataTemplate(() =>
 {
@@ -178,7 +159,53 @@ N> Set the `EmptyView` property to a non-null value when using `EmptyViewTemplat
 
 ### Using DataTemplateSelector
 
-`EmptyViewTemplate` also accepts a `DataTemplateSelector`, so the template can be chosen at runtime. The TreeGrid passes its `ItemsSource` as the item and itself as the container to `OnSelectTemplate`.
+The `EmptyViewTemplate` property also supports a `DataTemplateSelector`, allowing the template to be selected dynamically at runtime. The TreeGrid passes its `ItemsSource` as the item and the TreeGrid instance as the container to the `OnSelectTemplate` method.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel/>
+</ContentPage.BindingContext>
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="BasicTemplate">
+            <Label Text="Records not found"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+        </DataTemplate>
+        <DataTemplate x:Key="AdvancedTemplate">
+            <Label Text="No data source is assigned"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children"
+                       EmptyView="No records found">
+        <syncfusion:SfTreeGrid.EmptyViewTemplate>
+                <local:EmptyViewTemplateSelector BasicTemplate="{StaticResource BasicTemplate}"
+                                                 AdvancedTemplate="{StaticResource AdvancedTemplate}"/>
+        </syncfusion:SfTreeGrid.EmptyViewTemplate>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfTreeGrid treeGrid = new SfTreeGrid();
+EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
+treeGrid.EmptyView = "No records found";
+treeGrid.EmptyViewTemplate = new EmptyViewTemplateSelector
+{
+    BasicTemplate = new DataTemplate(() => new Label { Text = "Records not found", HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }),
+    AdvancedTemplate = new DataTemplate(() => new Label { Text = "No data source is assigned", HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center })
+};
+this.Content = treeGrid;
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="EmptyViewTemplateSelector.cs" %}
@@ -188,20 +215,12 @@ public class EmptyViewTemplateSelector : DataTemplateSelector
 
     public DataTemplate? AdvancedTemplate { get; set; }
 
-    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
     {
         // item is the ItemsSource of the TreeGrid.
-        return item == null ? AdvancedTemplate! : BasicTemplate!;
+        return item == null ? AdvancedTemplate : BasicTemplate;
     }
 }
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-treeGrid.EmptyView = "No records found";
-treeGrid.EmptyViewTemplate = new EmptyViewTemplateSelector
-{
-    BasicTemplate = new DataTemplate(() => new Label { Text = "Records not found", HorizontalTextAlignment = TextAlignment.Center }),
-    AdvancedTemplate = new DataTemplate(() => new Label { Text = "No data source is assigned", HorizontalTextAlignment = TextAlignment.Center })
-};
 {% endhighlight %}
 {% endtabs %}
 
@@ -211,7 +230,7 @@ N> The `DataTemplateSelector` is evaluated when the `EmptyViewTemplate` property
 
 ### Using EmptyViewTemplate with Custom Binding
 
-For dynamic scenarios such as filtering or searching hierarchical data, you can set the `EmptyView` to a custom object and bind it to a dynamic property (e.g., search text). The `EmptyViewTemplate` then defines how this object is visually presented when no records match the criteria or when the data source is empty.
+For dynamic scenarios such as filtering or searching hierarchical data, you can set the `EmptyView` property to a custom object and bind it to dynamic data, such as search text. The `EmptyViewTemplate` property can then be used to define how the object is displayed when no records match the filter criteria or when the data source is empty.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -229,18 +248,16 @@ For dynamic scenarios such as filtering or searching hierarchical data, you can 
                    Margin="0,0,0,10"/>
 
         <syncfusion:SfTreeGrid x:Name="treeGrid"
-                               ItemsSource="{Binding Employees}"
-                               ChildPropertyName="ReportsTo"
-                               ParentPropertyName="ID"
-                               SelfRelationRootValue="-1">
+                               ItemsSource="{Binding PersonDetails}"
+                               ChildPropertyName="Children">
             <syncfusion:SfTreeGrid.EmptyView>
                 <local:FilterItem Filter="{Binding Source={x:Reference filterText}, Path=Text}"
                                   x:Name="filter"/>
             </syncfusion:SfTreeGrid.EmptyView>
             <syncfusion:SfTreeGrid.EmptyViewTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Source={x:Reference filterText}, Path=Text, StringFormat='No matching records found for &quot;{0}&quot;'}"
-                           TextColor="Gray"
+                    <Label Text="{Binding Source={x:Reference filterText}, Path=Text, StringFormat='{0} is not found'}"
+                           TextColor="Black"
                            HorizontalTextAlignment="Center"
                            VerticalOptions="Center"
                            FontSize="15"
@@ -265,11 +282,9 @@ var filterText = new SearchBar()
 
 // Initialize SfTreeGrid
 SfTreeGrid treeGrid = new SfTreeGrid();
-EmployeeViewModel viewModel = new EmployeeViewModel();
-treeGrid.ItemsSource = viewModel.Employees;
-treeGrid.ChildPropertyName = "ReportsTo";
-treeGrid.ParentPropertyName = "ID";
-treeGrid.SelfRelationRootValue = -1;
+EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+treeGrid.ItemsSource = employeeViewModel.PersonDetails;
+treeGrid.ChildPropertyName = "Children";
 
 // Define custom EmptyView object
 var filterItem = new FilterItem();
@@ -288,7 +303,7 @@ treeGrid.EmptyViewTemplate = new DataTemplate(() =>
 {
     var label = new Label
     {
-        TextColor = Colors.Gray,
+        TextColor = Colors.Black,
         HorizontalTextAlignment = TextAlignment.Center,
         VerticalOptions = LayoutOptions.Center,
         FontSize = 15,
@@ -300,7 +315,7 @@ treeGrid.EmptyViewTemplate = new DataTemplate(() =>
         new Binding(
             path: nameof(SearchBar.Text),
             source: filterText,
-            stringFormat: "No matching records found for \"{0}\""
+            stringFormat: "\"{0}\" is not found"
         )
     );
 
@@ -319,8 +334,7 @@ The `FilterItem` class defines a bindable property for the filter text:
 {% highlight c# tabtitle="FilterItem.cs" %}
 public class FilterItem : BindableObject
 {
-    public static readonly BindableProperty FilterProperty = 
-        BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
+    public static readonly BindableProperty FilterProperty = BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
 
     public string Filter
     {
@@ -335,32 +349,6 @@ public class FilterItem : BindableObject
 
 > **Note:** Place the `FilterItem.cs` file in your app's main project directory or in a Models folder (e.g., `Models/FilterItem.cs`) alongside your XAML pages.
 
-In this scenario, a `FilterItem` object is assigned to the `EmptyView` property, and its `Filter` property is bound to the `SearchBar.Text` property. When filtering results in no visible tree nodes, the `EmptyViewTemplate` is rendered with the dynamic search term.
+In this scenario, a `FilterItem` object is assigned to the `EmptyView` property, and its `Filter` property is bound to the `SearchBar.Text` property. When the `SearchBar.TextChanged` event is raised, the current search text is stored in the `Filter` property. If filtering results in no visible tree nodes, the `EmptyViewTemplate` is displayed and uses the bound Filter value to show a dynamic message based on the search term.
 
-## Behavior
-
-* **When the empty view appears:** It is shown when `ItemsSource` is null, when the bound collection has no items, or when filtering leaves no rows to display. Removing every root node at runtime also shows it.
-* **When the empty view disappears:** Adding a record to the collection, or clearing the filter so that rows are available, removes the empty view and the rows are displayed again.
-* **Header row:** The column header row and any stacked header rows stay visible. The empty view fills the area below them.
-* **Expand and collapse:** Collapsing or expanding nodes does not display the empty view while root nodes exist.
-* **Child nodes:** A node without children does not display the empty view. The state is based on the rows of the TreeGrid, not on the child collection of a single node.
-* **Precedence:** When both `EmptyView` and `EmptyViewTemplate` are set, the content created from `EmptyViewTemplate` is displayed.
-
-## Supported Combinations
-
-### Works With:
-* **Self-Relational Data Binding**: Displays the empty view when the data collection is null or empty.
-* **Nested Hierarchy Data Binding**: Displays the empty view when the root collection is null or empty. Empty child collections of individual nodes do not display it.
-* **Filtering**: Displays the empty view when the filter excludes every record.
-* **Stacked Headers**: The empty view is laid out below the column header and stacked header rows.
-* **Expand and Collapse**: Expanding or collapsing nodes does not change the empty view state while root nodes exist.
-
-### Known Limitations:
-* `EmptyView` must be non-null for the empty view to be displayed. Setting only `EmptyViewTemplate` does not display it.
-* If both `EmptyView` and `EmptyViewTemplate` are configured, `EmptyViewTemplate` takes precedence over `EmptyView`.
-* Setting `EmptyViewTemplate` to null does not refresh the displayed content. Assign `EmptyView` again to switch back to it.
-
-## See Also
-
-* [Data Binding in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/data-binding)
-* [Filtering in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/filtering)
+ **How FilterProperty works:** `BindableProperty.Create` enables property binding in .NET MAUI. The `FilterProperty` BindableProperty allows the `Filter` property to respond to changes from external bindings, such as `SearchBar.Text`, ensuring that the empty view content is updated automatically whenever the search text changes.
