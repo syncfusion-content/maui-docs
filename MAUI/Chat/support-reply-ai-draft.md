@@ -1,538 +1,813 @@
 ---
 layout: post
 title: Support Reply AI Drafting in .NET MAUI Chat | Syncfusion®
-description: Learn how to use Azure OpenAI to auto-draft professional support replies with the Syncfusion® .NET MAUI Chat control.
-platform: MAUI
+description: Learn how to implement AI-powered support reply drafting in the Syncfusion® .NET MAUI Chat (SfChat) control, where an agent selects a customer message, reviews an AI-generated draft, and sends it.
+platform: maui
 control: SfChat
 documentation: ug
 ---
 
 # Support Reply AI Drafting in .NET MAUI Chat
 
-This guide shows you how to build a support reply feature using the Syncfusion [.NET MAUI Chat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control (`SfChat`) and Azure OpenAI. The `SfChat` control displays the conversation history between support agents and customers. When your support team selects a customer message and taps **Draft**, Azure OpenAI generates a professional reply that agents can review, edit, or regenerate before sending it through the Chat control.
+This article demonstrates how to implement an AI-powered support reply drafting workflow in the Syncfusion® [.NET MAUI Chat](https://help.syncfusion.com/maui/chat/overview) (`SfChat`) control using Azure OpenAI.
 
-## What You'll Build
+In customer support scenarios, agents often need to compose responses to inquiries quickly while maintaining accuracy. With AI reply drafting, the agent selects a specific customer message within the conversation and taps **Draft Reply**. The application builds a prompt using the selected message and preceding conversation context, requests a draft from Azure OpenAI, and populates the response directly into the `SfChat` composer for review. The agent can edit, regenerate, discard, or send the reply. The AI assists the agent but never sends messages automatically.
 
-By the end, you'll have a working app with this complete workflow:
-
-1. Agent selects a customer message
-2. Agent taps the "Draft" button
-3. AI generates a professional reply
-4. Agent reviews, edits, or regenerates the draft
-5. Agent sends the final reply through the Chat control
-
-## Before You Start
-
-You should have:
-
-- A .NET MAUI project (or create one now)
-- Azure OpenAI configured (see Prerequisites below)
-- Basic C# and XAML knowledge
-
-If you don't have Azure OpenAI set up yet, complete the Prerequisites section first.
+![Support Reply AI Drafting in .NET MAUI Chat](images/support-reply-ai-draft.gif)
 
 ## Prerequisites
 
-Complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI (Microsoft's AI service) and your .NET MAUI application. Also complete the [Chat getting started](/maui/chat/getting-started) steps.
+Before implementing support reply drafting, ensure you have:
 
-## Setting Up Your Project
+1. Followed the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI.
+2. Completed the [SfChat getting started](/maui/chat/getting-started) guide.
+3. Installed the required NuGet packages:
+   * `Syncfusion.Maui.Chat`
+   * `Syncfusion.Maui.Core`
+   * `Azure.AI.OpenAI`
+   * `CommunityToolkit.Mvvm`
 
-### Step 1: Install the Required Packages
+## Implementing Support Reply AI Drafting
 
-Your app needs three NuGet packages:
+### Step 1: Define the Request and Response Models
 
-- **Syncfusion.Maui.Chat** - The Chat control for displaying conversations and messages
-- **Syncfusion.Maui.Core** - Base components that Chat depends on
-- **Azure.AI.OpenAI** - The client library to connect with Azure OpenAI
-
-Install the Azure OpenAI package:
+Create records to encapsulate the input data passed to the AI service and the structured validation response.
 
 {% tabs %}
-{% highlight powershell %}
-Install-Package Azure.AI.OpenAI -Version 2.1.0
-{% endhighlight %}
-{% highlight bash %}
-dotnet add package Azure.AI.OpenAI --version 2.1.0
+{% highlight c# %}
+namespace SupportReplyAIDraft.Models;
+
+public sealed record SupportReplyRequest(
+    string SelectedMessageText,
+    IReadOnlyList<string> RecentConversationContext);
+
+public sealed record SupportReplyResponse(
+    string Reply,
+    bool RequiresMoreInformation,
+    IReadOnlyList<string> RequestedInformation,
+    IReadOnlyList<string> Warnings);
+
+public sealed record SupportReplyValidationResult(
+    bool IsValid,
+    string? ErrorMessage,
+    SupportReplyResponse? Response)
+{
+    public static SupportReplyValidationResult Success(SupportReplyResponse response)
+        => new(true, null, response);
+
+    public static SupportReplyValidationResult Failure(string message)
+        => new(false, message, null);
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Build the Chat UI with AI Drafting
+### Step 2: Create the Conversation Service
 
-**Note:** Step 1 includes completing the prerequisites above.
+Create a service to manage the conversation history, identify customer messages, and build chronological context for the AI prompt:
 
-The `SfChat` control displays the conversation history between customer and agent. Below the Chat control, add a message composer where your support agent can see the AI-drafted reply and prepare to send it.
+{% tabs %}
+{% highlight c# %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Chat;
 
-The layout has three parts:
+namespace SupportReplyAIDraft.Services;
 
-1. **Chat messages** (`SfChat`) - Displays customer and agent messages
-2. **Text editor** (`Editor`) - Where the agent reviews or edits the AI-drafted reply
-3. **Action buttons** - **Draft** to generate the reply, **Send** to submit it
+public sealed class ConversationService
+{
+    private readonly Author _customerAuthor = new() { Name = "Alex Morgan" };
+    private readonly Author _supportAuthor = new() { Name = "Jordan Lee" };
 
-### Creating the Chat Interface
+    public Author SupportAuthor => _supportAuthor;
+
+    public ObservableCollection<object> CreateConversation()
+    {
+        return new ObservableCollection<object>
+        {
+            new TextMessage { Author = _customerAuthor, DateTime = DateTime.Today.AddHours(9).AddMinutes(12), Text = "Hello, I renewed my subscription yesterday, but the app still shows my license has expired." },
+            new TextMessage { Author = _supportAuthor, DateTime = DateTime.Today.AddHours(9).AddMinutes(15), Text = "Thanks for contacting support. Did the renewal complete successfully in your account?" },
+            new TextMessage { Author = _customerAuthor, DateTime = DateTime.Today.AddHours(9).AddMinutes(17), Text = "Yes, the renewal was successful and I received a confirmation email." },
+            new TextMessage { Author = _customerAuthor, DateTime = DateTime.Today.AddHours(9).AddMinutes(18), Text = "I restarted the application, but the expired-license message is still displayed. What should I do next?" }
+        };
+    }
+
+    public bool IsCustomerMessage(TextMessage message) =>
+        message.Author?.Name == _customerAuthor.Name;
+
+    public IReadOnlyList<string> BuildRecentContext(IEnumerable<object> conversation, TextMessage selectedMessage)
+    {
+        var list = conversation.OfType<TextMessage>().ToList();
+        var index = list.FindIndex(item => ReferenceEquals(item, selectedMessage));
+        if (index < 0) return Array.Empty<string>();
+
+        return list.Take(index + 1)
+            .Select(item => $"{item.Author?.Name ?? "User"} ({item.DateTime:h:mm tt}): {item.Text}")
+            .ToList();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Implement the AI Support Reply Service and Validator
+
+Create `ISupportReplyService` to request draft replies from Azure OpenAI using structured system instructions and context guardrails, and `SupportReplyValidator` to verify length and content safety:
+
+{% tabs %}
+{% highlight c# %}
+using Azure.AI.OpenAI;
+using OpenAI.Chat;
+using SupportReplyAIDraft.Models;
+
+namespace SupportReplyAIDraft.Services;
+
+public interface ISupportReplyService
+{
+    Task<SupportReplyValidationResult> DraftReplyAsync(SupportReplyRequest request, CancellationToken cancellationToken);
+}
+
+public sealed class SupportReplyService : ISupportReplyService
+{
+    private const string SystemPrompt = """
+        You are a senior customer-support specialist drafting the next response for a human agent to review, edit, and send.
+        - Write a natural, concise, professional reply to the selected customer message.
+        - Use only facts from the conversation context. Do not repeat troubleshooting steps already completed.
+        - Never invent product menus, URLs, account statuses, policies, or guarantees.
+        - Keep the reply under 1000 characters. Return only plain text.
+        """;
+
+    private readonly ChatClient _chatClient;
+    private readonly SupportReplyValidator _validator;
+
+    public SupportReplyService(ChatClient chatClient, SupportReplyValidator validator)
+    {
+        _chatClient = chatClient;
+        _validator = validator;
+    }
+
+    public async Task<SupportReplyValidationResult> DraftReplyAsync(SupportReplyRequest request, CancellationToken cancellationToken)
+    {
+        var messages = new List<ChatMessage>
+        {
+            new SystemChatMessage(SystemPrompt),
+            new UserChatMessage(BuildPrompt(request))
+        };
+
+        try
+        {
+            var completion = await _chatClient.CompleteChatAsync(messages, cancellationToken: cancellationToken);
+            var reply = completion.Value.Content[0].Text.Trim();
+            return _validator.Validate(reply);
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            throw;
+        }
+        catch (Exception)
+        {
+            return SupportReplyValidationResult.Failure("The AI service is currently unavailable.");
+        }
+    }
+
+    private static string BuildPrompt(SupportReplyRequest request)
+    {
+        var context = request.RecentConversationContext.Count == 0
+            ? "(No previous context)"
+            : string.Join(Environment.NewLine, request.RecentConversationContext);
+
+        return $"""
+            SELECTED CUSTOMER MESSAGE:
+            {request.SelectedMessageText}
+
+            CONVERSATION CONTEXT:
+            {context}
+
+            Draft a clear, actionable support reply for the agent to review.
+            """;
+    }
+}
+
+public sealed class SupportReplyValidator
+{
+    private const int MaxCharacterLimit = 1000;
+
+    public SupportReplyValidationResult Validate(string? replyText)
+    {
+        if (string.IsNullOrWhiteSpace(replyText))
+            return SupportReplyValidationResult.Failure("The AI service returned an empty response.");
+
+        var text = replyText.Trim();
+        if (text.Length > MaxCharacterLimit)
+            return SupportReplyValidationResult.Failure($"The generated reply exceeds the {MaxCharacterLimit}-character limit.");
+
+        return SupportReplyValidationResult.Success(new SupportReplyResponse(text, false, Array.Empty<string>(), Array.Empty<string>()));
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 4: Configure the Chat Suggestion Service
+
+Create `ChatSuggestionService` to build suggestion chips (**Regenerate**, **Discard**, **Retry**) displayed in `SfChat.Suggestions`:
+
+{% tabs %}
+{% highlight c# %}
+using System.Collections.ObjectModel;
+using Syncfusion.Maui.Chat;
+
+namespace SupportReplyAIDraft.Services;
+
+public interface IChatSuggestionService
+{
+    ChatSuggestions Create(params string[] items);
+}
+
+public sealed class ChatSuggestionService : IChatSuggestionService
+{
+    public ChatSuggestions Create(params string[] items)
+    {
+        return new ChatSuggestions
+        {
+            Items = new ObservableCollection<ISuggestion>(
+                items.Select(item => new Suggestion(item)))
+        };
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 5: Implement the ViewModel
+
+The `SupportChatViewModel` coordinates message selection, AI drafting, state transitions, suggestion chips, and message submission:
+
+{% tabs %}
+{% highlight c# %}
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Syncfusion.Maui.Chat;
+using SupportReplyAIDraft.Models;
+using SupportReplyAIDraft.Services;
+
+namespace SupportReplyAIDraft.ViewModels;
+
+public sealed partial class SupportChatViewModel : ObservableObject
+{
+    private readonly ConversationService _conversationService;
+    private readonly ISupportReplyService _replyService;
+    private readonly IChatSuggestionService _suggestionService;
+    private CancellationTokenSource? _generationCts;
+    private WorkflowState _workflowState = WorkflowState.Initial;
+
+    public SupportChatViewModel(
+        ConversationService conversationService,
+        ISupportReplyService replyService,
+        IChatSuggestionService suggestionService)
+    {
+        _conversationService = conversationService;
+        _replyService = replyService;
+        _suggestionService = suggestionService;
+
+        CurrentUser = _conversationService.SupportAuthor;
+        Messages = _conversationService.CreateConversation();
+        NativeSendCommand = new Command<object?>(SendNativeMessage);
+
+        TransitionTo(WorkflowState.Initial);
+    }
+
+    public ObservableCollection<object> Messages { get; }
+    public Author CurrentUser { get; }
+    public ICommand NativeSendCommand { get; }
+
+    [ObservableProperty] public partial TextMessage? SelectedMessage { get; set; }
+    [ObservableProperty] public partial ChatSuggestions? ChatSuggestions { get; set; }
+    [ObservableProperty] public partial string EditorText { get; set; } = string.Empty;
+    [ObservableProperty] public partial string ComposerPlaceholder { get; set; } = "Select a customer message to begin.";
+    [ObservableProperty] public partial bool IsComposerEnabled { get; set; }
+    [ObservableProperty] public partial bool IsComposerReadOnly { get; set; } = true;
+    [ObservableProperty] public partial bool IsDrafting { get; set; }
+    [ObservableProperty] public partial bool HasDraft { get; set; }
+    [ObservableProperty] public partial bool ShowReviewHint { get; set; }
+    [ObservableProperty] public partial bool ShowErrorMessage { get; set; }
+    [ObservableProperty] public partial string InlineMessage { get; set; } = string.Empty;
+    [ObservableProperty] public partial string ProgressMessage { get; set; } = string.Empty;
+
+    public bool CanDraftReply => _workflowState == WorkflowState.Selected && SelectedMessage is not null;
+    public bool IsDraftReplyVisible => CanDraftReply;
+
+    public Func<Task<bool>>? ConfirmRegenerateAsync { get; set; }
+    public Func<Task<bool>>? ConfirmSelectionChangeAsync { get; set; }
+    public event Action<TextMessage>? OutgoingMessageSent;
+
+    [RelayCommand]
+    private async Task SelectMessageAsync(TextMessage? message)
+    {
+        if (message is null || !_conversationService.IsCustomerMessage(message) || IsDrafting)
+            return;
+
+        if (ReferenceEquals(SelectedMessage, message))
+        {
+            SelectedMessage = null;
+            TransitionTo(WorkflowState.Initial);
+            return;
+        }
+
+        if (HasDraft && ConfirmSelectionChangeAsync is not null)
+        {
+            if (!await ConfirmSelectionChangeAsync()) return;
+        }
+
+        SelectedMessage = message;
+        TransitionTo(WorkflowState.Selected);
+    }
+
+    [RelayCommand(CanExecute = nameof(CanDraftReply))]
+    private async Task DraftReplyAsync(TextMessage? message)
+    {
+        if (SelectedMessage is null || IsDrafting) return;
+        await GenerateDraftAsync(WorkflowState.Drafting, preserveDraftOnFailure: false);
+    }
+
+    public async Task HandleSuggestionActionAsync(string? action)
+    {
+        if (string.IsNullOrWhiteSpace(action) || IsDrafting) return;
+
+        switch (action.Trim())
+        {
+            case "Discard":
+                _generationCts?.Cancel();
+                SelectedMessage = null;
+                TransitionTo(WorkflowState.Initial);
+                break;
+
+            case "Regenerate":
+                if (SelectedMessage is null || !HasDraft) return;
+                if (ConfirmRegenerateAsync is not null && !await ConfirmRegenerateAsync()) return;
+                await GenerateDraftAsync(WorkflowState.Regenerating, preserveDraftOnFailure: true);
+                break;
+
+            case "Retry":
+                if (SelectedMessage is not null)
+                    await GenerateDraftAsync(HasDraft ? WorkflowState.Regenerating : WorkflowState.Retrying, preserveDraftOnFailure: HasDraft);
+                break;
+        }
+    }
+
+    private async Task GenerateDraftAsync(WorkflowState state, bool preserveDraftOnFailure)
+    {
+        var preservedDraft = preserveDraftOnFailure ? EditorText : string.Empty;
+        _generationCts?.Cancel();
+        _generationCts = new CancellationTokenSource();
+        var token = _generationCts.Token;
+
+        TransitionTo(state, preservedDraft: preservedDraft);
+
+        var request = new SupportReplyRequest(
+            SelectedMessage!.Text,
+            _conversationService.BuildRecentContext(Messages, SelectedMessage));
+
+        try
+        {
+            var result = await _replyService.DraftReplyAsync(request, token);
+
+            if (result.IsValid && result.Response is not null)
+            {
+                TransitionTo(WorkflowState.Generated, generatedReply: result.Response.Reply);
+            }
+            else
+            {
+                TransitionTo(WorkflowState.Error, preserveDraft: preserveDraftOnFailure, preservedDraft: preservedDraft, errorMessage: result.ErrorMessage);
+            }
+        }
+        catch (OperationCanceledException) when (token.IsCancellationRequested) { }
+        catch
+        {
+            TransitionTo(WorkflowState.Error, preserveDraft: preserveDraftOnFailure, preservedDraft: preservedDraft, errorMessage: "Generation failed. Please try again.");
+        }
+    }
+
+    private void TransitionTo(WorkflowState state, string? generatedReply = null, bool preserveDraft = false, string preservedDraft = "", string? errorMessage = null)
+    {
+        _workflowState = state;
+
+        switch (state)
+        {
+            case WorkflowState.Initial:
+            case WorkflowState.Selected:
+            case WorkflowState.Sent:
+                IsDrafting = false;
+                HasDraft = false;
+                ShowReviewHint = false;
+                ShowErrorMessage = false;
+                ChatSuggestions = null;
+                IsComposerEnabled = false;
+                IsComposerReadOnly = true;
+                ComposerPlaceholder = "Select a customer message to begin.";
+                EditorText = string.Empty;
+                break;
+
+            case WorkflowState.Drafting:
+            case WorkflowState.Retrying:
+                IsDrafting = true;
+                ProgressMessage = state == WorkflowState.Drafting ? "Drafting reply..." : "Retrying draft...";
+                ChatSuggestions = null;
+                IsComposerEnabled = false;
+                IsComposerReadOnly = true;
+                EditorText = string.Empty;
+                break;
+
+            case WorkflowState.Regenerating:
+                IsDrafting = true;
+                ProgressMessage = "Regenerating reply...";
+                ChatSuggestions = null;
+                IsComposerEnabled = true;
+                IsComposerReadOnly = true;
+                EditorText = preservedDraft;
+                break;
+
+            case WorkflowState.Generated:
+                IsDrafting = false;
+                HasDraft = true;
+                ShowReviewHint = true;
+                ShowErrorMessage = false;
+                InlineMessage = "Review and edit before sending.";
+                ChatSuggestions = _suggestionService.Create("Regenerate", "Discard");
+                IsComposerEnabled = true;
+                IsComposerReadOnly = false;
+                ComposerPlaceholder = string.Empty;
+                EditorText = generatedReply ?? string.Empty;
+                break;
+
+            case WorkflowState.Error:
+                IsDrafting = false;
+                ShowErrorMessage = true;
+                ShowReviewHint = false;
+                InlineMessage = errorMessage ?? "Unable to draft reply.";
+
+                if (preserveDraft && !string.IsNullOrWhiteSpace(preservedDraft))
+                {
+                    HasDraft = true;
+                    ChatSuggestions = _suggestionService.Create("Regenerate", "Discard");
+                    IsComposerEnabled = true;
+                    IsComposerReadOnly = false;
+                    EditorText = preservedDraft;
+                }
+                else
+                {
+                    HasDraft = false;
+                    ChatSuggestions = _suggestionService.Create("Retry");
+                    IsComposerEnabled = false;
+                    IsComposerReadOnly = true;
+                    ComposerPlaceholder = "Unable to generate reply.";
+                    EditorText = string.Empty;
+                }
+                break;
+        }
+
+        DraftReplyCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(CanDraftReply));
+        OnPropertyChanged(nameof(IsDraftReplyVisible));
+    }
+
+    private void SendNativeMessage(object? args)
+    {
+        if (args is not SendMessageEventArgs sendArgs) return;
+        sendArgs.Handled = true;
+
+        if (IsDrafting || !IsComposerEnabled || IsComposerReadOnly) return;
+        var text = sendArgs.Message?.Text?.Trim() ?? string.Empty;
+        if (string.IsNullOrEmpty(text) || text != EditorText.Trim()) return;
+
+        var message = new TextMessage
+        {
+            Author = _conversationService.SupportAuthor,
+            DateTime = DateTime.Now,
+            Text = text
+        };
+
+        Messages.Add(message);
+        OutgoingMessageSent?.Invoke(message);
+        SelectedMessage = null;
+        TransitionTo(WorkflowState.Sent);
+    }
+
+    private enum WorkflowState { Initial, Selected, Drafting, Retrying, Regenerating, Generated, Error, Sent }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 6: Create the Message Templates and Selector
+
+Create a multi-value converter to identify the currently selected message:
+
+{% tabs %}
+{% highlight c# %}
+using System.Globalization;
+
+namespace SupportReplyAIDraft.Converters;
+
+public sealed class SelectedMessageMatchConverter : IMultiValueConverter
+{
+    public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+    {
+        return values.Length >= 2 && ReferenceEquals(values[0], values[1]);
+    }
+
+    public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) =>
+        throw new NotSupportedException();
+}
+{% endhighlight %}
+{% endtabs %}
+
+Define `CustomerMessageTemplateView.xaml` to display the customer message with selection highlight, the **Draft Reply** button, and progress indicators:
 
 {% tabs %}
 {% highlight xaml %}
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:views="clr-namespace:SupportReplyAIDraft.Views"
+             x:Class="SupportReplyAIDraft.Views.MessageTemplates.CustomerMessageTemplateView"
+             x:DataType="chat:TextMessage">
 
-<Grid RowDefinitions="*, Auto">
-    <!-- Chat Messages Display -->
-    <chat:SfChat x:Name="ChatControl"
+    <VerticalStackLayout Spacing="4" Margin="0,0,0,8" HorizontalOptions="Start">
+        <HorizontalStackLayout Spacing="8">
+            <Label Text="{Binding Author.Name}" FontAttributes="Bold" />
+            <Label Text="{Binding DateTime, StringFormat='{0:h:mm tt}'}" />
+        </HorizontalStackLayout>
+
+        <Border Padding="12" StrokeThickness="1" StrokeShape="RoundRectangle 8">
+            <Border.Triggers>
+                <DataTrigger TargetType="Border" Value="True">
+                    <DataTrigger.Binding>
+                        <MultiBinding Converter="{StaticResource SelectedMessageMatchConverter}">
+                            <Binding Path="." />
+                            <Binding Path="ViewModel.SelectedMessage"
+                                     Source="{RelativeSource AncestorType={x:Type views:SupportChatPage}}"
+                                     x:DataType="views:SupportChatPage" />
+                        </MultiBinding>
+                    </DataTrigger.Binding>
+                    <Setter Property="Stroke" Value="#0066CC" />
+                    <Setter Property="StrokeThickness" Value="2" />
+                </DataTrigger>
+            </Border.Triggers>
+
+            <VerticalStackLayout Spacing="8">
+                <!-- Message Text -->
+                <Label Text="{Binding Text}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type views:SupportChatPage}}, Path=SelectMessageCommand, x:DataType=views:SupportChatPage}"
+                            CommandParameter="{Binding .}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Draft Reply Button -->
+                <Button Text="✦ Draft Reply"
+                        IsEnabled="{Binding Source={RelativeSource AncestorType={x:Type views:SupportChatPage}}, Path=ViewModel.CanDraftReply, x:DataType=views:SupportChatPage}"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type views:SupportChatPage}}, Path=DraftReplyCommand, x:DataType=views:SupportChatPage}"
+                        CommandParameter="{Binding .}"
+                        IsVisible="False"
+                        BackgroundColor="Transparent"
+                        TextColor="#0066CC"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Value="True">
+                            <DataTrigger.Binding>
+                                <MultiBinding Converter="{StaticResource SelectedMessageMatchConverter}">
+                                    <Binding Path="." />
+                                    <Binding Path="ViewModel.SelectedMessage"
+                                             Source="{RelativeSource AncestorType={x:Type views:SupportChatPage}}"
+                                             x:DataType="views:SupportChatPage" />
+                                </MultiBinding>
+                            </DataTrigger.Binding>
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+                <!-- Progress Indicator -->
+                <HorizontalStackLayout Spacing="8"
+                                       IsVisible="{Binding Source={RelativeSource AncestorType={x:Type views:SupportChatPage}}, Path=ViewModel.IsDrafting, x:DataType=views:SupportChatPage}">
+                    <ActivityIndicator IsRunning="True" WidthRequest="16" HeightRequest="16" Color="#0066CC" />
+                    <Label Text="{Binding Source={RelativeSource AncestorType={x:Type views:SupportChatPage}}, Path=ViewModel.ProgressMessage, x:DataType=views:SupportChatPage}"
+                           FontSize="12" TextColor="#0066CC" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentView>
+{% endhighlight %}
+{% endtabs %}
+
+Create `SupportChatMessageTemplateSelector.cs` to apply `CustomerMessageTemplateView` for incoming customer messages and standard styling for agent messages:
+
+{% tabs %}
+{% highlight c# %}
+using Syncfusion.Maui.Chat;
+
+namespace SupportReplyAIDraft.Views.MessageTemplates;
+
+public sealed class SupportChatMessageTemplateSelector : ChatMessageTemplateSelector
+{
+    private readonly SfChat _chat;
+    private readonly DataTemplate _customerTemplate;
+    private readonly DataTemplate _agentTemplate;
+
+    public SupportChatMessageTemplateSelector(SfChat chat) : base(chat)
+    {
+        _chat = chat;
+        _customerTemplate = new DataTemplate(typeof(CustomerMessageTemplateView));
+        _agentTemplate = new DataTemplate(typeof(AgentMessageTemplateView));
+    }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        if (item is not TextMessage message) return _customerTemplate;
+
+        var isAgent = ReferenceEquals(message.Author, _chat.CurrentUser)
+            || string.Equals(message.Author?.Name, _chat.CurrentUser?.Name, StringComparison.Ordinal);
+
+        return isAgent ? _agentTemplate : _customerTemplate;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 7: Build the Chat Page UI
+
+In `SupportChatPage.xaml`, configure the `SfChat` control with message bindings, suggestions, and send command:
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:viewModels="clr-namespace:SupportReplyAIDraft.ViewModels"
+             x:Class="SupportReplyAIDraft.Views.SupportChatPage"
+             x:DataType="viewModels:SupportChatViewModel"
+             Title="Support Reply AI Draft">
+
+    <chat:SfChat x:Name="ConversationChat"
                  Messages="{Binding Messages}"
-                 ShowTypingIndicator="False"
-                 VerticalOptions="FillAndExpand" />
-
-    <!-- Message Composer -->
-    <Grid Grid.Row="1" Padding="10" ColumnDefinitions="*, Auto, Auto">
-        <Editor x:Name="ComposerEditor"
-                Placeholder="Type your reply..."
-                Text="{Binding ComposerText}"
-                IsReadOnly="{Binding IsComposerReadOnly}"
-                IsEnabled="{Binding IsComposerEnabled}"
-                MinimumHeightRequest="80"
-                MaximumHeightRequest="150" />
-
-        <Button Grid.Column="1"
-                Text="Draft"
-                Clicked="OnDraftReplyClicked"
-                Margin="5, 0"
-                Padding="15, 10" />
-
-        <Button Grid.Column="2"
-                Text="Send"
-                Clicked="OnSendReplyClicked"
-                Margin="5, 0"
-                Padding="15, 10" />
-    </Grid>
-</Grid>
-
+                 CurrentUser="{Binding CurrentUser}"
+                 Suggestions="{Binding ChatSuggestions}"
+                 SuggestionItemSelected="OnSuggestionItemSelected"
+                 SendMessageCommand="{Binding NativeSendCommand}"
+                 ShowMessageInputView="True"
+                 AllowMultilineInput="True"
+                 MessageSpacing="8" />
+</ContentPage>
 {% endhighlight %}
-{% endtabs %}
-
-## Understanding SfChat Messages
-
-The `SfChat` control displays messages using the `TextMessage` class. Each message has two required parts:
-
-- **`Text`** - The message content (for example, "How do I reset my password?")
-- **`Author`** - Who sent the message, including a name and optional avatar image
-
-The `SfChat` control stores all messages in a collection. When you add a message to this collection, `SfChat` automatically displays it in the conversation area. Customer messages appear on the left, and agent messages appear on the right.
-
-Example of creating a message for SfChat:
-
-{% tabs %}
 {% highlight c# %}
+using System.ComponentModel;
+using System.Windows.Input;
+using Syncfusion.Maui.Chat;
+using SupportReplyAIDraft.ViewModels;
+using SupportReplyAIDraft.Views.MessageTemplates;
 
-// Create a customer message
-var customerMessage = new TextMessage
+namespace SupportReplyAIDraft.Views;
+
+public partial class SupportChatPage : ContentPage
 {
-    Text = "How do I reset my password?",
-    Author = new Author 
-    { 
-        Name = "Customer",
-        Avatar = "customer.png"
-    }
-};
+    private bool _isUpdatingEditorText;
 
-// Create an agent reply
-var agentReply = new TextMessage
-{
-    Text = "Click Settings > Security > Change Password.",
-    Author = new Author 
-    { 
-        Name = "Support Agent",
-        Avatar = "agent.png"
-    }
-};
+    public SupportChatViewModel ViewModel { get; }
 
-// Add messages to the SfChat Messages collection
-chatControl.Messages.Add(customerMessage);
-chatControl.Messages.Add(agentReply);
+    public ICommand SelectMessageCommand => ViewModel.SelectMessageCommand;
+    public ICommand DraftReplyCommand => ViewModel.DraftReplyCommand;
 
-{% endhighlight %}
-{% endtabs %}
-
-## Step 3: Create the Message Data Model
-
-Build a view model that holds the messages displayed in `SfChat` and manages the drafted reply. The view model uses the MVVM (Model-View-ViewModel) pattern to keep the UI synchronized with your data.
-
-### Understanding the View Model and MVVM Pattern
-
-The view model implements `INotifyPropertyChanged`, a .NET pattern that notifies the UI when data changes. When you set a property like `ComposerText`, the `OnPropertyChanged()` method tells the UI to update its display. This synchronizes the `SfChat` control and Editor field with your underlying data.
-
-For this sample, the view model includes predefined customer messages to test the draft feature. In production, load actual customer messages from your system (a database, API, or message queue).
-
-Here's the view model with predefined messages:
-
-{% tabs %}
-{% highlight c# %}
-
-public class SupportViewModel : INotifyPropertyChanged
-{
-    private ObservableCollection<TextMessage> _messages;
-    private ObservableCollection<string> _predefinedMessages;
-    private string _selectedCustomerMessage;
-    private string _composerText;
-    private bool _isLoading;
-
-    // Messages displayed in SfChat
-    public ObservableCollection<TextMessage> Messages
+    public SupportChatPage(SupportChatViewModel viewModel)
     {
-        get => _messages;
-        set
+        ViewModel = viewModel;
+        InitializeComponent();
+        BindingContext = ViewModel;
+
+        ConversationChat.MessageTemplate = new SupportChatMessageTemplateSelector(ConversationChat);
+
+        ViewModel.ConfirmRegenerateAsync = () => DisplayAlertAsync(
+            "Replace draft?", "Regenerating will replace the current draft.", "Regenerate", "Cancel");
+
+        ViewModel.ConfirmSelectionChangeAsync = () => DisplayAlertAsync(
+            "Discard draft?", "Selecting another message will discard the current draft.", "Discard", "Cancel");
+
+        ViewModel.PropertyChanged += OnViewModelPropertyChanged;
+        ViewModel.OutgoingMessageSent += message => ConversationChat.ScrollToMessage(message);
+
+        Loaded += (_, _) =>
         {
-            _messages = value;
-            OnPropertyChanged();
-        }
-    }
-
-    // Customer messages available for drafting replies
-    public ObservableCollection<string> PredefinedMessages
-    {
-        get => _predefinedMessages;
-        set
-        {
-            _predefinedMessages = value;
-            OnPropertyChanged();
-        }
-    }
-
-    // Currently selected customer message for drafting
-    public string SelectedCustomerMessage
-    {
-        get => _selectedCustomerMessage;
-        set
-        {
-            _selectedCustomerMessage = value;
-            OnPropertyChanged();
-        }
-    }
-
-    // AI-drafted reply text in the composer
-    public string ComposerText
-    {
-        get => _composerText;
-        set
-        {
-            _composerText = value;
-            OnPropertyChanged();
-        }
-    }
-
-    // Indicates whether the AI is generating a reply
-    public bool IsLoading
-    {
-        get => _isLoading;
-        set
-        {
-            _isLoading = value;
-            OnPropertyChanged();
-        }
-    }
-
-    // Disables the composer while generating a draft
-    public bool IsComposerReadOnly => IsLoading;
-
-    // Disables the composer while generating a draft
-    public bool IsComposerEnabled => !IsLoading;
-
-    public SupportViewModel()
-    {
-        Messages = new ObservableCollection<TextMessage>();
-        PredefinedMessages = new ObservableCollection<string>
-        {
-            "License still shows as expired after renewal",
-            "How do I upgrade my subscription?",
-            "The application crashed on startup",
-            "How can I export my data?"
+            ConversationChat.Editor.TextChanged += OnEditorTextChanged;
+            UpdateComposerState();
         };
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    // Notifies the UI when a property changes
-    protected void OnPropertyChanged([CallerMemberName] string name = null)
+    private void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 4: Create the OpenAI Service
-
-The `OpenAIService` manages communication between your app and Azure OpenAI. It accepts a customer message, sends it to the AI with instructions about tone and style, and returns the generated reply.
-
-The service performs three steps:
-
-1. Creates a connection to Azure OpenAI using your endpoint and API key
-2. Sends a system prompt (instructions like "be professional and friendly") and the customer message
-3. Returns the AI-generated reply
-
-Here's the service implementation:
-
-{% tabs %}
-{% highlight c# %}
-
-public class OpenAIService
-{
-    private readonly AzureOpenAIClient _client;
-    private readonly string _deploymentName;
-
-    // Initializes the Azure OpenAI connection
-    public OpenAIService(string endpoint, string apiKey, string deploymentName)
-    {
-        _client = new AzureOpenAIClient(new Uri(endpoint), new AzureKeyCredential(apiKey));
-        _deploymentName = deploymentName;
-    }
-
-    // Generates a drafted reply for a customer message
-    public async Task<string> GetDraftReplyAsync(string customerMessage, CancellationToken cancellationToken = default)
-    {
-        // System prompt: Instructs the AI on tone, style, and behavior
-        var systemPrompt = "You are a helpful and professional customer support agent. Draft a clear, " +
-                          "concise, and empathetic reply to the customer's message. Keep the tone professional " +
-                          "yet friendly. The reply should address the customer's concern directly.";
-
-        // Build the messages for the AI
-        var messages = new List<ChatMessage>
+        if (e.PropertyName is nameof(SupportChatViewModel.ComposerPlaceholder)
+            or nameof(SupportChatViewModel.IsComposerEnabled)
+            or nameof(SupportChatViewModel.IsComposerReadOnly)
+            or nameof(SupportChatViewModel.EditorText))
         {
-            new SystemChatMessage(systemPrompt),
-            new UserChatMessage(customerMessage)
-        };
+            UpdateComposerState();
+        }
+    }
 
-        // Send the request to Azure OpenAI
-        ChatCompletion response = await _client
-            .GetChatClient(_deploymentName)
-            .CompleteChatAsync(messages, cancellationToken: cancellationToken);
+    private void UpdateComposerState()
+    {
+        if (ConversationChat.Editor is null) return;
 
-        // Return the generated reply
-        return response.Content[0].Text.Trim();
+        _isUpdatingEditorText = true;
+        try
+        {
+            ConversationChat.Editor.IsEnabled = ViewModel.IsComposerEnabled;
+            ConversationChat.Editor.IsReadOnly = ViewModel.IsComposerReadOnly;
+            ConversationChat.Editor.Placeholder = ViewModel.ComposerPlaceholder;
+
+            if (ConversationChat.Editor.Text != ViewModel.EditorText)
+                ConversationChat.Editor.Text = ViewModel.EditorText;
+        }
+        finally
+        {
+            _isUpdatingEditorText = false;
+        }
+    }
+
+    private void OnEditorTextChanged(object? sender, TextChangedEventArgs e)
+    {
+        if (!_isUpdatingEditorText)
+            ViewModel.EditorText = e.NewTextValue ?? string.Empty;
+    }
+
+    private async void OnSuggestionItemSelected(object? sender, SuggestionItemSelectedEventArgs e)
+    {
+        e.CancelSendMessage = true;
+        e.HideAfterSelection = false;
+        await ViewModel.HandleSuggestionActionAsync((e.SelectedItem as Suggestion)?.Text);
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-### Understanding Async/Await
+### Step 8: Register Services in MauiProgram
 
-The `GetDraftReplyAsync` method uses `async` and `await`. This pattern allows your app to wait for Azure OpenAI's response without blocking the UI. While the AI is generating a reply, your support agent can interact with the app normally. When the response arrives, the reply automatically appears in the composer.
-
-## Step 5: Generate the AI Draft
-
-Now you'll implement what happens when your support agent taps "Draft." The code sends the selected customer message to Azure OpenAI and displays the generated reply in the composer.
-
-Here's what happens behind the scenes:
-
-1. Agent taps "Draft"
-2. Your app checks if a customer message is selected
-3. Your app shows a loading indicator while waiting
-4. Azure OpenAI generates the reply
-5. The reply appears in the composer, ready to edit
-6. If something goes wrong, an error message appears
-
-Implement the draft button click handler:
+Register the services, ViewModel, and view in `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Maui.Core.Hosting;
+using SupportReplyAIDraft.Services;
+using SupportReplyAIDraft.ViewModels;
+using SupportReplyAIDraft.Views;
 
-private readonly OpenAIService _openAIService;
-
-private async void OnDraftReplyClicked(object sender, EventArgs e)
-{
-    // Validate that a customer message is selected
-    if (string.IsNullOrEmpty(ViewModel.SelectedCustomerMessage))
-    {
-        await DisplayAlert("Info", "Please select a customer message to draft a reply.", "OK");
-        return;
-    }
-
-    // Show a loading indicator
-    ViewModel.IsLoading = true;
-
-    try
-    {
-        // Call the OpenAI service to generate a reply
-        // Using 'await' waits for the response without freezing the UI
-        var draftReply = await _openAIService.GetDraftReplyAsync(
-            ViewModel.SelectedCustomerMessage);
-
-        // Display the AI-generated reply in the composer
-        ViewModel.ComposerText = draftReply;
-    }
-    catch (Exception ex)
-    {
-        // If something goes wrong, show an error message
-        await DisplayAlert("Error", $"Failed to generate draft: {ex.Message}", "OK");
-    }
-    finally
-    {
-        // Always hide the loading indicator
-        ViewModel.IsLoading = false;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 6: Let Agents Control the Draft
-
-Give your support team full control over the drafted reply. Agents may need to:
-
-- **Regenerate** – Request a different reply if the current one doesn't fit
-- **Discard** – Clear the draft and start over
-- **Send** – Submit the final reply to the `SfChat` control (after reviewing or editing)
-
-Implement these three actions:
-
-{% tabs %}
-{% highlight c# %}
-
-// Request a different draft reply from the AI
-private async void OnRegenerateDraftClicked(object sender, EventArgs e)
-{
-    if (string.IsNullOrEmpty(ViewModel.SelectedCustomerMessage))
-        return;
-
-    ViewModel.IsLoading = true;
-
-    try
-    {
-        var newDraft = await _openAIService.GetDraftReplyAsync(
-            ViewModel.SelectedCustomerMessage);
-        ViewModel.ComposerText = newDraft;
-    }
-    catch (Exception ex)
-    {
-        await DisplayAlert("Error", $"Failed to regenerate draft: {ex.Message}", "OK");
-    }
-    finally
-    {
-        ViewModel.IsLoading = false;
-    }
-}
-
-// Clear the draft and start over
-private void OnDiscardDraftClicked(object sender, EventArgs e)
-{
-    ViewModel.ComposerText = string.Empty;
-}
-
-// Add the reply to the SfChat control and clear the composer
-private async void OnSendReplyClicked(object sender, EventArgs e)
-{
-    if (string.IsNullOrEmpty(ViewModel.ComposerText))
-    {
-        await DisplayAlert("Info", "Please enter a reply before sending.", "OK");
-        return;
-    }
-
-    var message = new TextMessage
-    {
-        Text = ViewModel.ComposerText,
-        Author = new Author { Name = "Support Agent", Avatar = "agent.png" }
-    };
-
-    ViewModel.Messages.Add(message);
-    ViewModel.ComposerText = string.Empty;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Step 7: Register Services in Your App Startup
-
-Register the `OpenAIService` and `SupportViewModel` in your app startup (`MauiProgram.cs`) so the app can access them from any page. Dependency injection enables testing and decouples components.
-
-{% tabs %}
-{% highlight c# %}
+namespace SupportReplyAIDraft;
 
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
-        var builder = MauiApp.CreateBuilder()
+        var builder = MauiApp.CreateBuilder();
+        builder
             .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            })
-            // Register Syncfusion license
             .ConfigureSyncfusionCore();
 
-        // Register services (AddSingleton creates one instance for the app lifetime)
-        builder.Services.AddSingleton<OpenAIService>();
-        builder.Services.AddSingleton<SupportViewModel>();
-        builder.Services.AddSingleton<SupportPage>();
+        builder.Services.AddSingleton<ConversationService>();
+        builder.Services.AddSingleton<IChatSuggestionService, ChatSuggestionService>();
+        builder.Services.AddSingleton<SupportReplyValidator>();
+        builder.Services.AddSingleton<ISupportReplyService, SupportReplyService>();
+        builder.Services.AddTransient<SupportChatViewModel>();
+        builder.Services.AddTransient<SupportChatPage>();
 
         return builder.Build();
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-## Optional: Customize the AI Reply Tone
+N> Register the `ChatClient` configured with your Azure OpenAI credentials in dependency injection as described in the [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites).
 
-*This section is optional. Your app works fine with the default prompt in the `GetDraftReplyAsync` method.*
+## How It Works
 
-The AI generates replies based on the system prompt. Different prompts produce different tones and styles. Here are three examples for the `OpenAIService` class:
+1. **Message Selection**: The agent taps a customer message. `SelectMessageCommand` updates `SelectedMessage`, highlights the message bubble, and reveals the **Draft Reply** button.
+2. **Contextual AI Generation**: Tapping **Draft Reply** gathers the selected customer message and preceding conversation history into `SupportReplyRequest`. The AI service generates a draft using system prompt safety constraints.
+3. **Response Validation**: `SupportReplyValidator` verifies the reply is under 1000 characters and valid before displaying it.
+4. **Composer Integration**: The validated draft is placed into the `SfChat.Editor`, enabling the composer for agent review and manual edits.
+5. **Suggestion Actions**: Contextual chips appear above the composer:
+   * **Regenerate**: Generates a new draft after confirmation. If generation fails, the previous draft is preserved.
+   * **Discard**: Clears the current draft, composer, and selected message.
+   * **Retry**: Appears when a first draft fails, allowing the agent to re-attempt generation.
+6. **Human Verification & Sending**: The agent reviews the text and taps the native Send button. `SfChat.SendMessageCommand` posts the message to the conversation. The AI never sends a reply automatically.
 
-### For Technical Support
+## Output
 
-Use a professional, formal tone:
+The following illustration demonstrates the interactive AI reply drafting workflow in the .NET MAUI Chat control:
 
-{% tabs %}
-{% highlight c# %}
+![Support reply AI draft demonstration](images/support-reply-ai-draft.gif)
 
-// Replace the systemPrompt variable in GetDraftReplyAsync with this:
-var systemPrompt = "You are a professional technical support specialist. Provide clear, " +
-                  "technical, and accurate solutions to customer problems. Use formal language " +
-                  "and ensure the reply addresses the root cause of the issue.";
+You can download the complete working sample from [GitHub](https://github.com/syncfusion/maui-ai-usecase-demos/tree/master/AI%20Solutions/Chat/SupportReplyAIDraft).
 
-{% endhighlight %}
-{% endtabs %}
+## See Also
 
-### For General Customer Support
-
-Use a warm, empathetic tone:
-
-{% tabs %}
-{% highlight c# %}
-
-// Replace the systemPrompt variable in GetDraftReplyAsync with this:
-var systemPrompt = "You are a friendly and empathetic customer support agent. Respond warmly " +
-                  "to customer concerns, validate their feelings, and provide helpful solutions. " +
-                  "Keep the tone conversational yet professional.";
-
-{% endhighlight %}
-{% endtabs %}
-
-### For Billing Support
-
-Use a reassuring, solution-focused tone:
-
-{% tabs %}
-{% highlight c# %}
-
-// Replace the systemPrompt variable in GetDraftReplyAsync with this:
-var systemPrompt = "You are a knowledgeable billing support representative. Help customers " +
-                  "resolve their payment and subscription concerns with clarity. Always verify " +
-                  "account details and offer clear next steps to resolve issues quickly.";
-
-{% endhighlight %}
-{% endtabs %}
-
-### Tips for Creating Your Own Prompt
-
-Test different prompts to match your team's voice. Each prompt produces different reply quality and tone. To create a custom prompt:
-
-1. Start with a clear role: "You are a..." statement
-2. Specify the tone: "professional and friendly" or "empathetic and warm"
-3. Set constraints: "Keep replies under 150 words" or "Provide step-by-step instructions"
-4. Define guardrails: "Only suggest official solutions" or "Always offer to escalate"
-
-Test your prompts with real customer messages. Once you find what works best, update the `systemPrompt` variable in `GetDraftReplyAsync`.
-
-## Next Steps
-
-Find the complete, working sample in the [AI use-case demos repository](https://github.com/syncfusion/maui-ai-usecase-demos).
+* [SfChat Overview](/maui/chat/overview)
+* [SfChat Getting Started](/maui/chat/getting-started)
+* [SfChat Message Customization](/maui/chat/messages)
+* [SfChat Suggestion Chips](/maui/chat/suggestions)
+* [Azure OpenAI Integration Prerequisites](/maui/SmartAISolutions/Prerequisites)
