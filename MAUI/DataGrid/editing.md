@@ -68,6 +68,31 @@ this.Content = dataGrid;
 
 > **Note:** The `DataGridColumn.AllowEditing` property takes priority over `SfDataGrid.AllowEditing`.
 
+## Full row editing
+
+By default, the data grid edits one cell at a time. To allow users to edit all cells in a row, set the [SfDataGrid.AllowFullRowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowFullRowEditing) property to `true`. Full row editing works with the grid's editing support enabled.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       AllowFullRowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding Orders}"/>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.AllowFullRowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
 ## Entering into edit mode
 
 To enter edit mode, tap or double-tap the grid cell. Edit mode entry is controlled by the [SfDataGrid.EditTapAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EditTapAction) property. Supported values are:
