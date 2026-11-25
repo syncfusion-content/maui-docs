@@ -47,9 +47,6 @@ The default height of all data rows can be customized by using the `RowHeight` p
                        x:Name = "treeGrid"
                        RowHeight = "60" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
@@ -74,9 +71,6 @@ The height of the header row can be customized by using the `HeaderRowHeight` pr
                        x:Name = "treeGrid"
                        HeaderRowHeight = "70" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
@@ -101,9 +95,6 @@ Handle the `QueryRowHeight` event and assign the calculated height returned by `
                        x:Name = "treeGrid"
                        QueryRowHeight = "TreeGrid_QueryRowHeight" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
