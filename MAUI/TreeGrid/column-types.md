@@ -5,7 +5,7 @@ description: Learn all about column types in Syncfusion® .NET MAUI Tree Grid, i
 platform: MAUI
 control: SfTreeGrid
 documentation: UG
-keywords : maui tree grid, maui treegrid, tree grid maui, maui gridview, grid in maui, .net maui treegrid, .net maui tree grid, .net grid maui, .net maui column types, maui column types
+keywords : maui tree grid, maui treegrid, tree grid maui, maui gridview, grid in maui, .net maui treegrid, .net maui tree grid, .net grid maui, .net maui column types, maui column types, maui treegrid combobox column, maui treegrid picker column
 ---
 
 # Column Types in .NET MAUI Tree Grid
@@ -62,6 +62,18 @@ The table below outlines the available column types with their respective render
 <td>{{'[TreeGridImageCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridImageCellRenderer.html)'| markdownify }}</td>
 <td>Image</td>
 <td>Display images from an <code>ImageSource</code> property in each node.</td>
+</tr>
+<tr>
+<td>{{'[TreeGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxCellRenderer.html)'| markdownify }}</td>
+<td>ComboBox</td>
+<td>Display a value from a list of items and edit it using a combo box.</td>
+</tr>
+<tr>
+<td>{{'[TreeGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html)'| markdownify }}</td>
+<td>{{'[TreeGridPickerCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerCellRenderer.html)'| markdownify }}</td>
+<td>Picker</td>
+<td>Display a value from a list of items and edit it using a picker.</td>
 </tr>
 </table>
 
@@ -803,3 +815,215 @@ N> The image margin is taken from the column's `CellPadding`. Change `CellPaddin
 | `TreeGridImageColumn.Aspect` / `AspectProperty` | How the image is sized in the cell. Default `Aspect.AspectFit`. |
 | `TreeGridImageCellRenderer` | Renderer registered for the `Image` cell type. |
 | `SfTreeGridImage` | The `Image` control used to display the image in each cell. |
+
+## TreeGridComboBoxColumn
+
+The [TreeGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html) inherits all the properties of `TreeGridColumn`. It displays a value from a list of items in the cell and hosts a [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) in edit mode. Set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_ItemsSource) property to a collection of primitive types or user-defined types. To edit the column, set [SfTreeGrid.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowEditing) to `true`. By default, editing begins on a double tap, which can be changed using [SfTreeGrid.EditTapAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_EditTapAction).
+
+### Collection of primitive types
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding EmployeeCollection}"
+                       ChildPropertyName="Children"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfTreeGrid.Columns>
+        <syncfusion:TreeGridComboBoxColumn HeaderText="Department"
+                                           MappingName="Department"
+                                           ItemsSource="{Binding Departments}" />
+    </syncfusion:SfTreeGrid.Columns>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+EmployeeViewModel viewModel = new EmployeeViewModel();
+SfTreeGrid treeGrid = new SfTreeGrid();
+treeGrid.ItemsSource = viewModel.EmployeeCollection;
+treeGrid.ChildPropertyName = "Children";
+treeGrid.AllowEditing = true;
+treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+treeGrid.Columns.Add(new TreeGridComboBoxColumn()
+{
+    HeaderText = "Department",
+    MappingName = "Department",
+    ItemsSource = viewModel.Departments
+});
+{% endhighlight %}
+{% endtabs %}
+
+N> `Departments` is an `ObservableCollection<string>` in the view model. The column resolves its `ItemsSource` binding against the `BindingContext` of the `SfTreeGrid`.
+
+### Collection of user-defined types
+
+When `ItemsSource` contains custom objects, use the following properties:
+
+* [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_DisplayMemberPath): The property of the item whose value is shown in the cell and in the drop-down.
+* [ValueMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_ValueMemberPath): The property of the item that is compared with the `MappingName` value of the row, and written back to the `MappingName` property when an item is selected.
+
+The cell displays the `DisplayMemberPath` value of the item whose `ValueMemberPath` value equals the cell value. If no item matches, the cell is blank.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:TreeGridComboBoxColumn HeaderText="Department"
+                                   MappingName="DepartmentID"
+                                   ItemsSource="{Binding DepartmentCollection}"
+                                   DisplayMemberPath="DepartmentName"
+                                   ValueMemberPath="DepartmentID" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.Columns.Add(new TreeGridComboBoxColumn()
+{
+    HeaderText = "Department",
+    MappingName = "DepartmentID",
+    ItemsSource = viewModel.DepartmentCollection,
+    DisplayMemberPath = "DepartmentName",
+    ValueMemberPath = "DepartmentID"
+});
+{% endhighlight %}
+{% endtabs %}
+
+### Load different items for each row
+
+To load different items for each row, assign an [IItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.IItemsSourceSelector.html) to the [ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_ItemsSourceSelector) property. Implement its `GetItemsSource` method, which receives the row data object (`record`) and the binding context of the TreeGrid (`dataContext`).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+    <local:CitySelector x:Key="citySelector" />
+</ContentPage.Resources>
+
+<syncfusion:TreeGridComboBoxColumn HeaderText="City"
+                                   MappingName="City"
+                                   ItemsSourceSelector="{StaticResource citySelector}" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="CitySelector.cs" %}
+public class CitySelector : IItemsSourceSelector
+{
+    public IEnumerable GetItemsSource(object record, object dataContext)
+    {
+        var employee = record as EmployeeModel;
+        var viewModel = dataContext as EmployeeViewModel;
+
+        if (employee == null || viewModel == null)
+            return null;
+
+        // Returns the cities of the country of the current row.
+        viewModel.Cities.TryGetValue(employee.Country, out var cities);
+        return cities;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Editing and suggestions
+
+| Property | Default | Description |
+|---|---|---|
+| [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_IsEditableMode) | `false` | Allows typing text in the combo box. |
+| [SuggestionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_SuggestionMode) | `StartsWith` | Sets how suggestions are matched, using the `ComboBoxTextSearchMode` enum. |
+| [CanFilterSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_CanFilterSuggestions) | `false` | Filters the drop-down list as the user types. |
+| [ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_ShowClearButton) | `true` | Shows the clear button in the editor. |
+| [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridComboBoxColumn.html#Syncfusion_Maui_TreeGrid_TreeGridComboBoxColumn_DropDownWidth) | `-1` | Sets the width of the drop-down. |
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:TreeGridComboBoxColumn HeaderText="Department"
+                                   MappingName="Department"
+                                   ItemsSource="{Binding Departments}"
+                                   IsEditableMode="True"
+                                   SuggestionMode="Contains"
+                                   CanFilterSuggestions="True"
+                                   ShowClearButton="False"
+                                   DropDownWidth="200" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.Columns.Add(new TreeGridComboBoxColumn()
+{
+    HeaderText = "Department",
+    MappingName = "Department",
+    ItemsSource = viewModel.Departments,
+    IsEditableMode = true,
+    SuggestionMode = ComboBoxTextSearchMode.Contains,
+    CanFilterSuggestions = true,
+    ShowClearButton = false,
+    DropDownWidth = 200
+});
+{% endhighlight %}
+{% endtabs %}
+
+N> `ShowClearButton` applies to the editor when `IsEditableMode` is `true`, as in the DataGrid.
+
+When an item is selected in the drop-down, the [SfTreeGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CellValueChanged) and [SfTreeGrid.CurrentCellDropDownSelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_CurrentCellDropDownSelectionChanged) events are raised. The latter provides `CurrentCellDropDownSelectionChangedEventArgs` with `SelectedItem`, `SelectedIndex` and `RowColumnIndex`.
+
+## TreeGridPickerColumn
+
+The [TreeGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html) inherits all the properties of `TreeGridColumn`. It displays a value from a list of items in the cell and hosts a [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) in edit mode. Header and cell text are aligned to the start by default. The picker opens as a popup relative to the cell on desktop platforms, and as a dialog with **OK** and **Cancel** buttons on mobile platforms. Set `SfTreeGrid.AllowEditing` to `true` to edit the column.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.BindingContext>
+    <local:EmployeeViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding EmployeeCollection}"
+                       ChildPropertyName="Children"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfTreeGrid.Columns>
+        <syncfusion:TreeGridPickerColumn HeaderText="Country"
+                                         MappingName="Country"
+                                         ItemsSource="{Binding Countries}" />
+    </syncfusion:SfTreeGrid.Columns>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+treeGrid.AllowEditing = true;
+treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+treeGrid.Columns.Add(new TreeGridPickerColumn()
+{
+    HeaderText = "Country",
+    MappingName = "Country",
+    ItemsSource = viewModel.Countries
+});
+{% endhighlight %}
+{% endtabs %}
+
+### Properties
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html#Syncfusion_Maui_TreeGrid_TreeGridPickerColumn_ItemsSource) | `IEnumerable<object>` | `null` | The items shown in the picker. |
+| [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html#Syncfusion_Maui_TreeGrid_TreeGridPickerColumn_DisplayMemberPath) | `string` | `""` | The item property shown in the cell and in the picker. |
+| [ValueMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html#Syncfusion_Maui_TreeGrid_TreeGridPickerColumn_ValueMemberPath) | `string` | `""` | The item property that is matched with the `MappingName` value and written back on commit. When empty, the item itself is the value. |
+| [ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridPickerColumn.html#Syncfusion_Maui_TreeGrid_TreeGridPickerColumn_ItemsSourceSelector) | `IItemsSourceSelector` | `null` | Provides different items for each row. |
+
+`DisplayMemberPath`, `ValueMemberPath` and `ItemsSourceSelector` work in the same way as in the [TreeGridComboBoxColumn](#collection-of-user-defined-types).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:TreeGridPickerColumn HeaderText="Department"
+                                 MappingName="DepartmentID"
+                                 ItemsSource="{Binding DepartmentCollection}"
+                                 DisplayMemberPath="DepartmentName"
+                                 ValueMemberPath="DepartmentID" />
+{% endhighlight %}
+{% endtabs %}
+
+N> On mobile platforms, the value is written back only when **OK** is tapped, and **Cancel** discards the selection.
+
+### Differences from the DataGrid
+
+* The TreeGrid columns are `TreeGridComboBoxColumn` and `TreeGridPickerColumn`, and the renderers are `TreeGridComboBoxCellRenderer` and `TreeGridPickerCellRenderer`.
+* `IItemsSourceSelector` is in the `Syncfusion.Maui.TreeGrid` namespace. The `record` passed to it can be a data object from any level of the hierarchy.
+* Editing is enabled with `SfTreeGrid.AllowEditing` or `TreeGridColumn.AllowEditing`.
