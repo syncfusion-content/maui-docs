@@ -316,7 +316,111 @@ N>
 
 ### TextAlignment
 
-In order to set the TextAlignment of the header cell and data row cell , use the [DataGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderTextAlignment) and [DataGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTextAlignment) property. The default text alignment is based on the type of the columns. The header and data rows are right aligned for numeric, date columns and left aligned for text column.
+In order to set the TextAlignment of the header cell and data row cell , use the [DataGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderTextAlignment) and [DataGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTextAlignment) property. The default text alignment is based on the type of the columns. The header and data rows are right aligned for numeric, date columns and left aligned for text column. To align the text of the data cells vertically, refer to the [Vertical text alignment](#vertical-text-alignment) section.
+
+#### Vertical text alignment
+
+In order to set the vertical alignment of the text displayed in the data cells of a column, use the [DataGridColumn.VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_VerticalTextAlignment) property. It is useful when the row height is larger than the text, for example, when the `SfDataGrid.RowHeight` is increased or when the rows are auto-sized and some cells contain more lines of text than others. The property accepts the .NET MAUI `TextAlignment` enumeration values:
+
+| Value | Description |
+|-------|-------------|
+| `Start` | Aligns the text to the top of the cell. |
+| `Center` | Aligns the text to the vertical center of the cell. This is the default value. |
+| `End` | Aligns the text to the bottom of the cell. |
+
+The `VerticalTextAlignment` property is independent of `CellTextAlignment`, so you can combine both to position the text horizontally and vertically within the cell.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGenerateColumnsMode="None"
+                       RowHeight="70">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn MappingName="OrderID"
+                                          HeaderText="Order ID"
+                                          VerticalTextAlignment="Start" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                                       HeaderText="Customer ID"
+                                       VerticalTextAlignment="Center" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCountry"
+                                       HeaderText="Ship Country"
+                                       CellTextAlignment="End"
+                                       VerticalTextAlignment="End" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+dataGrid.RowHeight = 70;
+
+dataGrid.Columns.Add(new DataGridNumericColumn()
+{
+    MappingName = "OrderID",
+    HeaderText = "Order ID",
+    VerticalTextAlignment = TextAlignment.Start
+});
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "CustomerID",
+    HeaderText = "Customer ID",
+    VerticalTextAlignment = TextAlignment.Center
+});
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "ShipCountry",
+    HeaderText = "Ship Country",
+    CellTextAlignment = TextAlignment.End,
+    VerticalTextAlignment = TextAlignment.End
+});
+{% endhighlight %}
+{% endtabs %}
+
+The property can also be changed at runtime, and the cells of the column are realigned.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+dataGrid.Columns[0].VerticalTextAlignment = TextAlignment.End;
+{% endhighlight %}
+{% endtabs %}
+
+##### Applying vertical text alignment through CellStyle
+
+The vertical text alignment can also be applied through the [DataGridColumn.CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) by adding a setter for the [DataGridCell.VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html#Syncfusion_Maui_DataGrid_DataGridCell_VerticalTextAlignmentProperty) bindable property. The setter value can be a `TextAlignment` value or a binding. When the style contains this setter, it takes precedence over the `DataGridColumn.VerticalTextAlignment` value. When the style does not contain the setter, the column value is used.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:DataGridTextColumn MappingName="CustomerID"
+                               HeaderText="Customer ID">
+    <syncfusion:DataGridTextColumn.CellStyle>
+        <Style TargetType="syncfusion:DataGridCell">
+            <Setter Property="VerticalTextAlignment" Value="End" />
+        </Style>
+    </syncfusion:DataGridTextColumn.CellStyle>
+</syncfusion:DataGridTextColumn>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+DataGridTextColumn customerID = new DataGridTextColumn()
+{
+    MappingName = "CustomerID",
+    HeaderText = "Customer ID"
+};
+
+customerID.CellStyle = new Style(typeof(DataGridCell))
+{
+    Setters =
+    {
+        new Setter { Property = DataGridCell.VerticalTextAlignmentProperty, Value = TextAlignment.End }
+    }
+};
+
+dataGrid.Columns.Add(customerID);
+{% endhighlight %}
+{% endtabs %}
 
 ### Header customizations
 
