@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in .NET MAUI TreeGrid | Syncfusion®
-description: Learn how to configure and manage cell editing in Syncfusion® .NET MAUI TreeGrid (SfTreeGrid) with edit modes, events, programmatic editing, and IEditableObject support.
+description: Configure .NET MAUI TreeGrid cell editing, including edit modes, events, programmatic editing, and IEditableObject support.
 platform: MAUI
 control: SfTreeGrid
 documentation: ug

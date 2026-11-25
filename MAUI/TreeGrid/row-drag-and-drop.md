@@ -725,7 +725,7 @@ public class ProjectViewModel
 
 ## See also
 
-* [Column drag and drop in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/column-drag-and-drop)
+* [Column drag and drop in .NET MAUI Tree Grid](column-drag-and-drop.md)
 * [Selection in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/selection)
 * [Data binding in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/data-binding)
 * [Styling in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/styling)

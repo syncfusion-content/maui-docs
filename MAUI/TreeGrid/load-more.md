@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load More in .NET MAUI Tree Grid | Syncfusion®
-description: Learn how to load more data on demand in Syncfusion® .NET MAUI Tree Grid using the load more command, load more options, position, appearance and custom load more view.
+description: Load more data on demand in the .NET MAUI Tree Grid with command, placement, appearance, and custom view options.
 platform: MAUI
 control: SfTreeGrid
 documentation: ug

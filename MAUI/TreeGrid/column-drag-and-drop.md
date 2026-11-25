@@ -395,7 +395,7 @@ public partial class MainPage : ContentPage
 
 ## See also
 
-* [Row drag and drop in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/row-drag-and-drop)
+* [Row drag and drop in .NET MAUI Tree Grid](row-drag-and-drop.md)
 * [Columns in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/columns)
 * [Column sizing in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/column-sizing)
 * [Freeze panes in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/freeze-panes)

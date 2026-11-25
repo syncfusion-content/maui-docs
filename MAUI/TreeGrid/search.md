@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Search in .NET MAUI Tree Grid | Syncfusion®
-description: Learn how to search data in Syncfusion® .NET MAUI Tree Grid using the built-in search UI or programmatically, with highlighting, filtering, scope and customization.
+description: Search .NET MAUI Tree Grid data with built-in or programmatic search, highlighting, filtering, and scope options.
 platform: MAUI
 control: SfTreeGrid
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Resizing in .NET MAUI Tree Grid | Syncfusion®
-description: Learn how to resize columns in Syncfusion® .NET MAUI Tree Grid, including resizing modes, width constraints, the ColumnResizing event and indicator customization.
+description: Resize Tree Grid columns in .NET MAUI with resizing modes, width limits, events, and indicator customization.
 platform: MAUI
 control: SfTreeGrid
 documentation: ug
@@ -337,7 +337,7 @@ public class EmployeeViewModel
 * **Column width settings**: `MinimumWidth` and `MaximumWidth`.
 * **Right-to-left flow direction**: The resizing position and the indicator position are mirrored.
 * **Horizontal scrolling**: The horizontal scroll bar is refreshed after the resizing on Android.
-* **Column drag and drop**: A column drag does not start while a column is being resized. Refer to [Column drag and drop](https://help.syncfusion.com/maui/treegrid/column-drag-and-drop).
+* **Column drag and drop**: A column drag does not start while a column is being resized. Refer to [Column drag and drop](column-drag-and-drop.md).
 
 ### Known limitations
 
