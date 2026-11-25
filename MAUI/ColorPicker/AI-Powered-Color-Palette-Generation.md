@@ -25,7 +25,7 @@ Each palette recommendation contains a theme name, a match percentage, five hex 
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
-Before implementing palette generation, complete the shared [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [Color Picker getting started](https://help.syncfusion.com/maui/colorpicker/getting-started) steps.
+Before implementing palette generation, complete the shared [AI solution prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites) to configure Azure OpenAI and your .NET MAUI application. Also complete the [Color Picker getting started](https://help.syncfusion.com/maui/colorpicker/getting-started) steps.
 
 ## Implementing AI-Powered Color Palette Generation
 
@@ -173,39 +173,7 @@ var response = await aiService.GetResultsFromAI(prompt);
 
 If the response is empty or invalid, the service returns built-in fallback palettes so the page always has three palettes to display.
 
-**Step 4: Create the ViewModel**
-
-`MainViewModel` holds the prompt, the busy state, the status message, and the three generated palettes. The **Generate** button calls the service and updates these properties.
-
-The ViewModel exposes the following members:
-
-| Member | Description |
-|--------|-------------|
-| `UserPrompt` | The description entered by the user. |
-| `IsBusy` | Shows the busy indicator while the request runs. |
-| `StatusMessage` | Reports progress, the source of the palettes, or an input error. |
-| `FirstPalette`, `SecondPalette`, `ThirdPalette` | The three palettes, ordered by match percentage. |
-
-**Step 5: Register the dependencies**
-
-Register the services, ViewModel, and page in `MauiProgram.cs`. Also register the Syncfusion® core handlers with `ConfigureSyncfusionCore`.
-
-{% tabs %}
-{% highlight c# %}
-using Syncfusion.Maui.Core.Hosting;
-
-builder
-    .UseMauiApp<App>()
-    .ConfigureSyncfusionCore();
-
-builder.Services.AddSingleton<IAzureAIService, AzureAIService>();
-builder.Services.AddSingleton<SmartColorPaletteService>();
-builder.Services.AddSingleton<MainViewModel>();
-builder.Services.AddSingleton<MainPage>();
-{% endhighlight %}
-{% endtabs %}
-
-**Step 6: Add the Color Picker to the page**
+**Step 4: Add the Color Picker to the page**
 
 Add one inline Color Picker for each palette. Set `ColorMode` to `Palette` and size the grid to a single row of five cells, so that each picker shows only the five generated colors.
 
@@ -227,7 +195,7 @@ Add one inline Color Picker for each palette. Set `ColorMode` to `Palette` and s
 
 Repeat the same configuration for the second and third palettes. For more information about these properties, refer to [Inline rendering](https://help.syncfusion.com/maui/colorpicker/inline-rendering) and [Customization](https://help.syncfusion.com/maui/colorpicker/customization).
 
-**Step 7: Apply the palette to the Color Picker**
+**Step 5: Apply the palette to the Color Picker**
 
 Convert each hex value to a `Color`, and assign the collection to [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors). Then select the first color by default.
 
@@ -252,47 +220,15 @@ if (paletteColors.Count > 0)
 {% endhighlight %}
 {% endtabs %}
 
-## How It Works
-
-1. The user enters a description of the app or desired style, such as `A calm healthcare dashboard`.
-2. The user selects **Generate**.
-3. The app sends the description to Azure OpenAI.
-4. Azure OpenAI returns a JSON array of three palette recommendations.
-5. The app parses and validates the response. If the response is empty or invalid, the fallback palettes are used.
-6. Each palette is assigned to its own Color Picker as `PaletteColors`.
-7. The first color of each palette is selected by default.
-8. The user can pick any color from the generated palettes.
-
-A busy indicator and a status message are shown while the request runs.
-
 ## Output
 
 The generated palettes appear in inline Color Picker controls, each with its theme name and match percentage.
 
 ![AI-Powered Color Palette Generation in .NET MAUI Color Picker](Images/AIPalette/colorPalette.gif)
 
-## Troubleshooting
-
-### Palette generation failed
-
-If the default or fallback palettes are shown instead of AI-generated palettes:
-
-- Verify the Azure OpenAI connectivity and that the environment variables are set.
-- Check that the deployment is available.
-- Review the debug output for the raw AI response.
-- Confirm the response is a JSON array containing `themeName`, `matchPercentage`, `colors`, and `rationale`.
-
-### Color Picker not updating
-
-If the Color Picker does not show the generated colors:
-
-- Ensure `PaletteColors` is assigned an `ObservableCollection<Color>`.
-- Verify that the generated values are valid hex colors.
-- Confirm `ColorMode` is set to `Palette`.
-
 ## See Also
 
-- [AI solution prerequisites](/maui/SmartAISolutions/Prerequisites)
+- [AI solution prerequisites](https://help.syncfusion.com/maui/smartaisolutions/prerequisites)
 - [Color Picker getting started](https://help.syncfusion.com/maui/colorpicker/getting-started)
 - [Color Picker mode](https://help.syncfusion.com/maui/colorpicker/mode)
 - [Azure OpenAI overview](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai#ProductOverview)
