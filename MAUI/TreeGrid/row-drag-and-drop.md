@@ -599,21 +599,3 @@ this.Content = treeGrid;
 {% endtabs %}
 
 <img alt="Styling for Row Drag View" src="Images\row-drag-and-drop\maui-treegrid-row-drag-and-drop-styling.gif" width="404"/>
-
-## API reference
-
-| Member | Type | Description |
-|---|---|---|
-| [SfTreeGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowDraggingRow) | `bool` property, default `false` | Enables row drag and drop. |
-| [SfTreeGrid.AllowDraggingRowAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowDraggingRowAnimation) | `bool` property, default `false` | The dragged row itself moves with the pointer. |
-| [SfTreeGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_RowDragDropTemplate) | `DataTemplate?` property, default `null` | Custom drag view. |
-| [SfTreeGrid.RowDragDropController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_RowDragDropController) | `TreeGridRowDragDropController?` property | Controller that owns the row drag-and-drop behavior. |
-| [SfTreeGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_QueryRowDragging) | `EventHandler<TreeGridQueryRowDraggingEventArgs>` event | Raised at each stage of the drag operation. |
-| `AllowDraggingRowProperty`, `AllowDraggingRowAnimationProperty`, `RowDragDropTemplateProperty` | `BindableProperty` fields | Bindable property identifiers of the properties above. |
-| [TreeGridRowDragDropController](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridRowDragDropController.html) | class | `CanAutoExpand`, `AutoExpandDelay`, `IsDragging`, `DraggingNodes`, `TargetNode`, `DropPosition`, `DestinationParentNode`, `DropLevel`. |
-| [TreeGridQueryRowDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryRowDraggingEventArgs.html) | class | Event arguments of `QueryRowDragging`. |
-| [TreeGridDropPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDropPosition.html) | enum | `DropAbove`, `DropBelow`, `DropAsChild`. |
-| [TreeGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDragAction.html) | enum | `DragStarted`, `Dragging`, `DragEnded`. |
-| [TreeGridRowDragView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridRowDragView.html) | class | The view displayed while a row is dragged. It is created and managed by the TreeGrid. Use `RowDragDropTemplate` and the `DefaultStyle` properties to customize it. |
-| [TreeNode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeNode.html) | class | Represents a row in the hierarchy. Exposes `Item`, `Level`, `ParentNode`, `ChildNodes`, `HasChildNodes`, and `IsExpanded`. |
-| [TreeGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html) | class | `RowDragViewBackgroundColor`, `RowDragViewBorderColor`, `RowDragViewTextColor`, `RowDragViewBadgeBackgroundColor`, `RowDragViewBadgeTextColor`, `RowDraggingIndicatorLineColor`. |
