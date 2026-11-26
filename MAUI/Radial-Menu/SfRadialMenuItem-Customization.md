@@ -484,7 +484,7 @@ public partial class ViewModel : ObservableObject
             return;
         }
 
-        await page.DisplayAlert("Alert", message, "OK");
+        await page.DisplayAlertAsync("Alert", message, "OK");
     }
 }
 

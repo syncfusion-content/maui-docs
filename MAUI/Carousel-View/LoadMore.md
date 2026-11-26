@@ -336,8 +336,6 @@ The following image shows the custom LoadMore view rendered after the last carou
 
 Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMore) method to load the next set of items programmatically. The number of items loaded is determined by `LoadMoreItemsCount`.
 
-### XAML
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -361,9 +359,6 @@ Call the [LoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel
 </Grid>
 
 {% endhighlight %}
-
-### C#
-
 {% highlight C# %}
 
 CarouselViewModel carouselViewModel = new CarouselViewModel();

@@ -103,7 +103,7 @@ private void Carousel_SelectionChanged(object sender, SelectionChangedEventArgs 
     if (sender is SfCarousel sfCarousel)
     {
         int count = sfCarousel.SelectedIndex + 1;
-        this.DisplayAlert("SelectionChanged", "Carousel item " + count + " has been selected.", "OK");
+        this.DisplayAlertAsync("SelectionChanged", "Carousel item " + count + " has been selected.", "OK");
     }
 }
     

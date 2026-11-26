@@ -67,6 +67,9 @@ The [`DotsStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.S
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
    
 {% endhighlight %}
@@ -158,6 +161,9 @@ The [`SelectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rot
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -251,6 +257,9 @@ The [`UnselectedDotColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -349,6 +358,9 @@ The [`SelectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.M
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}
@@ -443,6 +455,9 @@ The [`UnselectedThumbnailStroke`](https://help.syncfusion.com/cr/maui/Syncfusion
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
 
 {% endhighlight %}
@@ -536,6 +551,9 @@ The [`NavigationStripPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.M
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 
@@ -632,6 +650,9 @@ The [`NavigationButtonIconColor`](https://help.syncfusion.com/cr/maui/Syncfusion
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}
@@ -724,6 +745,9 @@ The [`NavigationButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Sync
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 
@@ -817,6 +841,9 @@ Use the [`ShowNavigationButton`](https://help.syncfusion.com/cr/maui/Syncfusion.
             <Image Source="{Binding Image}" />
         </DataTemplate>
     </rotator:SfRotator.ItemTemplate>
+    <rotator:SfRotator.BindingContext>
+        <local:RotatorViewModel />
+    </rotator:SfRotator.BindingContext>
 </rotator:SfRotator>
     
 {% endhighlight %}

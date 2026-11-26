@@ -76,8 +76,12 @@ The following examples show how to apply the `DataTemplateViewModel` selector to
     <Grid >
         <rotator:SfRotator x:Name="sfRotator" 
                 ItemsSource="{Binding ImageCollection}" >
+            <rotator:SfRotator.BindingContext>
+                    <local:RotatorViewModel />
+            </rotator:SfRotator.BindingContext>
             <rotator:SfRotator.ItemTemplate>
-            <local:DataTemplateViewModel DefaultTemplate="{StaticResource DefaultTemplate}" SpecificTemplate="{StaticResource SpecificTemplate}"/>
+            <local:DataTemplateViewModel DefaultTemplate="{StaticResource DefaultTemplate}"
+                    SpecificTemplate="{StaticResource SpecificTemplate}"/>
             </rotator:SfRotator.ItemTemplate>
         </rotator:SfRotator>
     </Grid>
