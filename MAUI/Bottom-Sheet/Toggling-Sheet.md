@@ -17,7 +17,7 @@ The Bottom Sheet can be toggled using
 
 ## Opening and closing the sheet programmatically using property
 
-The [IsOpen]() property allows you to open or close the Bottom Sheet programmatically. By default, the `IsOpen` property is set to `false`.
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_IsOpen) property allows you to open or close the Bottom Sheet programmatically. By default, the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_IsOpen) property is set to `false`.
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ bottomSheet.IsOpen = true;
 
 ## Opening and closing sheet programmatically using method
 
-The [Show]() method is used to open the Bottom Sheet, and the [Close]() method is used to close the Bottom Sheet programmatically.
+The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Show) method is used to open the Bottom Sheet, and the [Close](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Close) method is used to close the Bottom Sheet programmatically.
 
 {% tabs %}
 
@@ -63,7 +63,7 @@ SfBottomSheet bottomSheet = new SfBottomSheet();
 {% endhighlight %}
 {% endtabs %}
 
-Using `Show` and `Close` methods,
+Using [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Show) and [Close](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Close) methods,
 
 {% highlight c# %}
 

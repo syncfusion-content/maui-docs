@@ -9,9 +9,9 @@ documentation: UG
 
 # Set Main Content and Bottom Sheet Content in .NET MAUI Bottom Sheet
 
-* The main content of the [Bottom Sheet]() is always visible and can be set using the [Content]() property.
+* The main content of the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) is always visible and can be set using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_Content) property.
 
-* The `Bottom Sheet` content is viewable only when the sheet is in the FullExpanded, HalfExpanded, or Collapsed state. Its content can be set using the [BottomSheetContent]() property.
+* The [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) content is viewable only when the sheet is in the FullExpanded, HalfExpanded, or Collapsed state. Its content can be set using the [BottomSheetContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_BottomSheetContent) property.
 
 {% tabs %}
 {% highlight xaml %}

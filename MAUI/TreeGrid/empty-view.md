@@ -352,4 +352,3 @@ In this scenario, a `FilterItem` object is assigned to the `EmptyView` property,
  **How FilterProperty works:** `BindableProperty.Create` enables property binding in .NET MAUI. The `FilterProperty` BindableProperty allows the `Filter` property to respond to changes from external bindings, such as `SearchBar.Text`, ensuring that the empty view content is updated automatically whenever the search text changes.
 
  <img src="Images/emptyview/emptyviewtemplate-with-custombinding.png" width="404" alt="TreeGrid EmptyViewTemplate with Custom Binding">
- 

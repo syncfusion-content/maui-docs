@@ -8,11 +8,11 @@ documentation: UG
 ---
 # Swiping in .NET MAUI Bottom Sheet
 
-The [Bottom Sheet]() supports swiping to expand the sheet.
+The [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html) supports swiping to expand the sheet.
 
 ## Enable swiping
 
-The [EnableSwiping]() property allows you to enable or disable swipe functionality in the [Bottom Sheet](). By default, the EnableSwiping property is set to `true`.
+The [EnableSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html#Syncfusion_Maui_BottomSheet_SfBottomSheet_EnableSwiping) property allows you to enable or disable swipe functionality in the [Bottom Sheet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.BottomSheet.SfBottomSheet.html). By default, the EnableSwiping property is set to `true`.
 
 {% tabs %}	
 {% highlight xaml %}

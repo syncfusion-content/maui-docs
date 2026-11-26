@@ -1268,3 +1268,16 @@ saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
 {% endtabs %}
 
 <img alt="MergedCells Exporting" src="Images/export-to-pdf/maui-datagrid-MergedCell.png" Width="404"/>
+
+## Exporting Multi-Row View
+
+The SfDataGrid can export records using the layout defined by its Multi-Row View. Enable this support by setting the [DataGridPdfExportingOption.CanExportMultiRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportMultiRowView) property to `true` before calling `ExportToPdf`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportMultiRowView = true;
+var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+{% endhighlight %}
+{% endtabs %}

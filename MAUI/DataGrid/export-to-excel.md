@@ -1166,3 +1166,16 @@ saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedo
 {% endtabs %}
 
 <img alt="MergedCells Exporting" src="Images/export-to-excel/maui-datagrid-MergedCell.png" Width="404"/>
+
+## Exporting Multi-Row View
+
+The SfDataGrid can export records using the layout defined by its Multi-Row View. Enable this support by setting the [DataGridExcelExportingOption.CanExportMultiRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportMultiRowView) property to `true` before calling `ExportToExcel`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+option.CanExportMultiRowView = true;
+var excelEngine = excelExport.ExportToExcel(this.dataGrid, option);
+{% endhighlight %}
+{% endtabs %}

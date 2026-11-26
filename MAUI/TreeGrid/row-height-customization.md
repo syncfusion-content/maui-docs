@@ -17,21 +17,6 @@ By default, data rows use the value specified by [SfTreeGrid.RowHeight](https://
 
 To automatically calculate row heights based on content, handle the [QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_QueryRowHeight) event and use the [GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryRowHeightEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__) method.
 
-## Public APIs
-
-| API | Type | Description |
-| --- | --- | --- |
-| [SfTreeGrid.RowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_RowHeight) | Property | Gets or sets the default height of data rows. |
-| [SfTreeGrid.HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_HeaderRowHeight) | Property | Gets or sets the height of the header row. |
-| [SfTreeGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_QueryRowHeight) | Event (`EventHandler<TreeGridQueryRowHeightEventArgs>`) | Occurs when the height of a row is queried. |
-| [TreeGridQueryRowHeightEventArgs.RowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryRowHeightEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridQueryRowHeightEventArgs_RowIndex) | `int` | Gets the row index whose height is queried. |
-| [TreeGridQueryRowHeightEventArgs.Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryRowHeightEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridQueryRowHeightEventArgs_Height) | `double` | Gets or sets the row height. |
-| [TreeGridQueryRowHeightEventArgs.Handled](https://help.syncfusion.com/cr/maui/System.ComponentModel.HandledEventArgs.html) | `bool` | Indicates whether the specified row height should be applied. |
-| [TreeGridQueryRowHeightEventArgs.GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryRowHeightEventArgs.html#Syncfusion_Maui_TreeGrid_TreeGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__) | Method | Returns the height required to display the content of the specified row. |
-| [TreeGridHelper.GetRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridHelper.html) | Extension Method | Returns the content-based height of a row. |
-
-N> There is no separate property to enable auto-fit row height. Auto-fit is achieved by handling the `QueryRowHeight` event.
-
 ## Set the Default Row Height
 
 The default height of all data rows can be customized by using the `RowHeight` property.
@@ -47,9 +32,6 @@ The default height of all data rows can be customized by using the `RowHeight` p
                        x:Name = "treeGrid"
                        RowHeight = "60" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
@@ -74,9 +56,6 @@ The height of the header row can be customized by using the `HeaderRowHeight` pr
                        x:Name = "treeGrid"
                        HeaderRowHeight = "70" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
@@ -101,9 +80,6 @@ Handle the `QueryRowHeight` event and assign the calculated height returned by `
                        x:Name = "treeGrid"
                        QueryRowHeight = "TreeGrid_QueryRowHeight" />
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 EmployeeInfoViewModel viewModel = new EmployeeInfoViewModel();
 SfTreeGrid treeGrid = new SfTreeGrid();
