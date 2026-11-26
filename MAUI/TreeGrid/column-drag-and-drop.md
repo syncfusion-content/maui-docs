@@ -26,7 +26,7 @@ treeGrid.AllowDraggingColumn = true;
 {% endhighlight %}
 {% endtabs %}
 
-N> The `syncfusion` prefix used in the XAML samples refers to `xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid"`.
+<img alt="TreeGrid column drag and drop" src="Images\column-drag-and-drop\maui-treegrid-column-drag-and-drop.gif" width="404"/>
 
 ## How column dragging works
 
@@ -34,7 +34,6 @@ N> The `syncfusion` prefix used in the XAML samples refers to `xmlns:syncfusion=
 * A drop indicator line is displayed at the position where the column will be placed. The indicator is not displayed when the column is over its own position, or immediately after it, because the drop does not change the column order.
 * When the drag view reaches the left or right edge of the TreeGrid, the grid scrolls horizontally and the drop indicator is updated while new columns scroll into view.
 * When the drag view is released, the column is moved to the new position in the [Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_Columns) collection. The drop is not applied when no drop indicator is displayed or when the drop is canceled in the `QueryColumnDragging` event.
-* Column dragging is not started while a column is being resized.
 * Right-to-left [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.visualelement.flowdirection) is supported.
 
 Since the TreeGrid displays hierarchical data, only the columns are reordered. The hierarchy of the rows, and the expand and collapse states of the nodes, are not changed by a column drag.
@@ -163,11 +162,11 @@ N> Frozen columns can be reordered among themselves and non-frozen columns can b
 
 The appearance of the column drag view and the drop indicator can be customized using the following properties of the [TreeGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html) class, which is available through the `SfTreeGrid.DefaultStyle` property.
 
-| Property | Type | Default | Description |
-|---|---|---|---|
-| [ColumnDraggingIndicatorLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDraggingIndicatorLineColor) | `Color` | `#735EAB` | Color of the drop indicator line. |
-| [ColumnDragViewBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDragViewBackgroundColor) | `Color` | `#FFFBFE` | Background color of the drag view. |
-| [ColumnDragViewTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDragViewTextColor) | `Color` | `#1C1B1F` | Text color of the drag view. |
+| Property | Type | Description |
+|---|---|---|
+| [ColumnDraggingIndicatorLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDraggingIndicatorLineColor) | `Color` | Color of the drop indicator line. |
+| [ColumnDragViewBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDragViewBackgroundColor) | `Color` | Background color of the drag view. |
+| [ColumnDragViewTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html#Syncfusion_Maui_TreeGrid_TreeGridStyle_ColumnDragViewTextColor) | `Color` | Text color of the drag view. |
 
 ### Customize the column drag and drop indicator color
 
@@ -186,6 +185,8 @@ The appearance of the column drag view and the drop indicator can be customized 
 treeGrid.DefaultStyle.ColumnDraggingIndicatorLineColor = Colors.DeepPink;
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="TreeGrid column drag indicator color" src="Images\column-drag-and-drop\maui-treegrid-column-drag-indicator-color.png" width="450"/>
 
 ### Customize the drag view text and background color
 
@@ -207,7 +208,7 @@ treeGrid.DefaultStyle.ColumnDragViewBackgroundColor = Color.FromArgb("#FFBF69");
 {% endhighlight %}
 {% endtabs %}
 
-N> `ColumnDragViewTextColor` is applied to the default drag view, which displays the header text of the column. When `ColumnDragDropTemplate` is set, the text color of the template content is used.
+<img alt="TreeGrid column drag view background and text color" src="Images\column-drag-and-drop\maui-treegrid-drag-view-background-and-text-color.png" width="450"/>
 
 ### Column drag-and-drop template
 
@@ -259,6 +260,8 @@ treeGrid.ColumnDragDropTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
+<img alt="Column drag and drop template" src="Images\column-drag-and-drop\maui-treegrid-column-drag-and-drop-template.gif" Width="404" />
+
 ## Cancel auto scrolling
 
 Auto-scrolling during column dragging can be disabled using the `CanAutoScroll` argument.
@@ -272,130 +275,3 @@ private void TreeGrid_QueryColumnDragging(object? sender, TreeGridQueryColumnDra
 }
 {% endhighlight %}
 {% endtabs %}
-
-## API reference
-
-| Member | Type | Description |
-|---|---|---|
-| [SfTreeGrid.AllowDraggingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_AllowDraggingColumn) | `bool` property, default `false` | Enables column drag and drop. |
-| [SfTreeGrid.ColumnDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_ColumnDragDropTemplate) | `DataTemplate` property, default `null` | Custom drag view. A `DataTemplateSelector` can also be assigned. |
-| [SfTreeGrid.QueryColumnDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.SfTreeGrid.html#Syncfusion_Maui_TreeGrid_SfTreeGrid_QueryColumnDragging) | `EventHandler<TreeGridQueryColumnDraggingEventArgs>` event | Raised at each stage of the drag operation. |
-| `AllowDraggingColumnProperty`, `ColumnDragDropTemplateProperty` | `BindableProperty` fields | Bindable property identifiers of the properties above. |
-| [TreeGridQueryColumnDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridQueryColumnDraggingEventArgs.html) | class | Event arguments of `QueryColumnDragging`. Derives from `CancelEventArgs`. |
-| [TreeGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridDragAction.html) | enum | `DragStarted`, `Dragging`, `DragEnded`. |
-| [TreeGridColumnDragView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridColumnDragView.html) | class | The view displayed while a column is dragged. It is created and managed by the TreeGrid. Use `ColumnDragDropTemplate` and the `DefaultStyle` properties to customize it. |
-| [TreeGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeGrid.TreeGridStyle.html) | class | `ColumnDraggingIndicatorLineColor`, `ColumnDragViewBackgroundColor`, `ColumnDragViewTextColor`. |
-
-## Complete example
-
-The following example enables column dragging, locks the `Name` column, customizes the indicator color, and logs each completed drop.
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TreeGridDragDrop"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid"
-             x:Class="TreeGridDragDrop.MainPage">
-
-    <ContentPage.BindingContext>
-        <local:ProjectViewModel />
-    </ContentPage.BindingContext>
-
-    <syncfusion:SfTreeGrid x:Name="treeGrid"
-                           ItemsSource="{Binding Projects}"
-                           ChildPropertyName="Tasks"
-                           AutoGenerateColumnsMode="None"
-                           ExpanderColumn="Name"
-                           AllowDraggingColumn="True">
-        <syncfusion:SfTreeGrid.DefaultStyle>
-            <syncfusion:TreeGridStyle ColumnDraggingIndicatorLineColor="DeepPink" />
-        </syncfusion:SfTreeGrid.DefaultStyle>
-        <syncfusion:SfTreeGrid.Columns>
-            <syncfusion:TreeGridTextColumn MappingName="Name" HeaderText="Name" />
-            <syncfusion:TreeGridTextColumn MappingName="Owner" HeaderText="Owner" />
-            <syncfusion:TreeGridTextColumn MappingName="Status" HeaderText="Status" />
-        </syncfusion:SfTreeGrid.Columns>
-    </syncfusion:SfTreeGrid>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# %}
-using Syncfusion.Maui.TreeGrid;
-
-namespace TreeGridDragDrop;
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        treeGrid.QueryColumnDragging += TreeGrid_QueryColumnDragging;
-    }
-
-    private void TreeGrid_QueryColumnDragging(object? sender, TreeGridQueryColumnDraggingEventArgs e)
-    {
-        switch (e.DraggingAction)
-        {
-            case TreeGridDragAction.DragStarted:
-                // The Name column cannot be dragged.
-                if (treeGrid.Columns[e.From].MappingName == "Name")
-                {
-                    e.Cancel = true;
-                }
-                break;
-
-            case TreeGridDragAction.Dragging:
-                // Other columns cannot be dropped before the Name column.
-                if (e.To == 0)
-                {
-                    e.Cancel = true;
-                }
-                break;
-
-            case TreeGridDragAction.DragEnded:
-                if (e.To == 0)
-                {
-                    e.Cancel = true;
-                    break;
-                }
-
-                System.Diagnostics.Debug.WriteLine(
-                    $"Column '{treeGrid.Columns[e.From].HeaderText}' moved from {e.From} to {e.To}.");
-                break;
-        }
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-## Supported combinations
-
-### Works with
-
-* **Right-to-left flow direction**: The drag position and auto-scrolling direction are mirrored.
-* **Horizontal scrolling**: The grid auto-scrolls horizontally while the drag view is near the left or right edge, unless `CanAutoScroll` is set to `false`.
-* **Custom drag view**: [ColumnDragDropTemplate](#column-drag-and-drop-template) and the `DefaultStyle` properties.
-
-### Does not work with
-
-* **Column resizing in progress**: A column drag does not start while a column is being resized.
-* **Non-header cells**: Only the header cells start a column drag.
-
-### Known limitations
-
-* Verification Required – Combination support not verified: column drag and drop together with frozen columns (`FrozenColumnCount`, `FooterFrozenColumnCount`), stacked headers, and the expander column. The source does not contain separate handling for these features, so test the behavior in your scenario and use `QueryColumnDragging` to cancel unwanted drops.
-* Dragging columns between two different TreeGrid controls is not supported.
-
-## Platform-specific considerations
-
-| Platform | Behavior |
-|---|---|
-| Android, iOS, and macOS | The drag starts by pressing the header cell and panning horizontally. The auto-scroll speed is adjusted for the platform. |
-| Windows | The drag starts by pressing and dragging the header cell. The pointer changes to a move cursor during the drag. |
-
-## See also
-
-* [Row drag and drop in .NET MAUI Tree Grid](row-drag-and-drop.md)
-* [Columns in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/columns)
-* [Column sizing in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/column-sizing)
-* [Freeze panes in .NET MAUI Tree Grid](https://help.syncfusion.com/maui/treegrid/freeze-panes)
