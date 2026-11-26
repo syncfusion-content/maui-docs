@@ -22,8 +22,8 @@ Run `sfdotnet new`, or select **Create a new project** from the main menu. The .
 2. **Project template:** The **.NET MAUI App** template is the only enabled project type and is recorded automatically.
 3. **Framework:** Select the .NET version.
 
-    * .NET 10 (`net10.0`), the default
-    * .NET 9 (`net9.0`)
+    * .NET 11 (`net11.0`), the default
+    * .NET 10 (`net10.0`)
 
 4. **Location and name:** Enter the parent directory and the project name. The default locations are `%USERPROFILE%\source\repos` on Windows and `~/Projects` on Linux and macOS. The suggested name is `SyncfusionMauiApp`, and the first available numeric suffix is used when the destination name collides.
 
@@ -82,15 +82,15 @@ The framework step selects the base .NET version. It does not select Android, iO
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sfdotnet new maui -n MyApp --target-framework net9.0
+sfdotnet new maui -n MyApp --target-framework net10.0
 {% endhighlight %}
 {% endtabs %}
 
-A .NET MAUI project declares multiple platform targets, such as `net10.0-android` and `net10.0-windows`. By default, builds run `dotnet build` for all configured targets. Use `--build-framework` to build one enabled target:
+A .NET MAUI project declares multiple platform targets, such as `net11.0-android` and `net11.0-windows`. By default, builds run `dotnet build` for all configured targets. Use `--build-framework` to build one enabled target:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-sfdotnet new maui -n MyApp --build-framework net10.0-android --post-action build
+sfdotnet new maui -n MyApp --build-framework net11.0-android --post-action build
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,11 +98,11 @@ sfdotnet new maui -n MyApp --build-framework net10.0-android --post-action build
 
 ## Run the created project
 
-A generated .NET MAUI project declares multiple platform targets, such as `net10.0-android` and `net10.0-windows`. Run the project with the target framework for your platform:
+A generated .NET MAUI project declares multiple platform targets, such as `net11.0-android` and `net11.0-windows`. Run the project with the target framework for your platform:
 
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
-dotnet run --project ./MyApp/MyApp.csproj -f net10.0-windows
+dotnet run --project ./MyApp/MyApp.csproj -f net11.0-windows
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,11 +114,11 @@ Native platform requirements still apply. Windows apps run on Windows, Mac Catal
 | --- | --- |
 | `-n`, `--name` | Project name. Required when prompting is unavailable |
 | `-p`, `--path` | Parent directory. Defaults to the current directory |
-| `-t`, `--target-framework` | The .NET target framework, such as `net10.0` |
+| `-t`, `--target-framework` | The .NET target framework, such as `net11.0` |
 | `--control` | One or more control IDs, or `empty`. Omit to create an empty project |
 | `--project-type` | The .NET MAUI project type: `app` |
 | `--post-action` | Post-create action: `generate` or `build`. Defaults to `build` for direct commands |
-| `--build-framework` | Build only this configured project target, such as `net10.0-android`. Defaults to all configured targets |
+| `--build-framework` | Build only this configured project target, such as `net11.0-android`. Defaults to all configured targets |
 | `--dry-run` | Preview the action without making changes |
 | `--force` | Allow supported overwrites. Edited control samples remain protected |
 | `--no-restore` | Skip `dotnet restore` after the action |
@@ -136,9 +136,10 @@ In a CLI-generated project, yes. In an ordinary project, the command adds the Nu
 
 **Which .NET versions are supported?**
 
-.NET 10 (`net10.0`) and .NET 9 (`net9.0`). Installed template and workload compatibility is checked separately during creation.
+.NET 11 (`net11.0`) and .NET 10 (`net10.0`). Installed template and workload compatibility is checked separately during creation.
 
 ## See also
 
 * [Manage packages in an existing project](/maui/dotnet-cli/manage-packages)
+* [License activation](/maui/dotnet-cli/licensing)
 * [Installing .NET MAUI NuGet packages](https://help.syncfusion.com/maui/installation/install-nuget-packages)

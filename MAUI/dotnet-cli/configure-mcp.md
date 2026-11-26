@@ -91,8 +91,8 @@ The MCP server runs as a .NET tool. The `--runner` option selects how the client
 
 | Runner | Behavior |
 | --- | --- |
-| `auto` (default) | Checks the .NET SDK selected in the workspace (including `global.json`). SDK 10 or later uses `dnx`; SDK 8/9 uses the local tool mode. |
-| `dnx` | Starts the server with `dnx Syncfusion.Maui.MCP --yes`. The package is downloaded when the client first starts the server. Requires .NET SDK 10 or later. |
+| `auto` (default) | Checks the .NET SDK selected in the workspace (including `global.json`). SDK 11 or later uses `dnx`; SDK 10 uses the local tool mode. |
+| `dnx` | Starts the server with `dnx Syncfusion.Maui.MCP --yes`. The package is downloaded when the client first starts the server. Requires .NET SDK 11 or later. |
 | `local` | Creates a local tool manifest at `.config/dotnet-tools.json` if one does not exist, installs the `Syncfusion.Maui.MCP` tool into it, and configures `dotnet tool run syncfusion-maui-mcp`. |
 
 N> When the local tool manifest already lists the MCP tool, the CLI restores the manifest's tools instead of reinstalling. This may also download other tools listed in that manifest. Run the client from the configured workspace so local-tool resolution uses that manifest.
@@ -142,4 +142,5 @@ No. Setup writes the client configuration and installs the required tool, but do
 ## See also
 
 * [AI skills installation](/maui/dotnet-cli/install-skills)
+* [License activation](/maui/dotnet-cli/licensing)
 * [Syncfusion<sup>®</sup> .NET MAUI AI coding assistant](https://help.syncfusion.com/maui/ai-coding-assistant/overview)
