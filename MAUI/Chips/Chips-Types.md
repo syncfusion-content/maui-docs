@@ -44,6 +44,9 @@ The `Input` [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
                WidthRequest="110"
                Completed="OnEntryCompleted" />
     </chip:SfChipGroup.InputView>
+    <chip:SfChipGroup.BindingContext>
+        <local:ViewModel/>
+    </chip:SfChipGroup.BindingContext>
 </chip:SfChipGroup>
 
 {% endhighlight %}
@@ -150,6 +153,9 @@ The `Choice` [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
                   DisplayMemberPath="Name"
                   HeightRequest="50"
                   ChipType="Choice">
+    <chip:SfChipGroup.BindingContext>
+        <local:ViewModel/>
+    </chip:SfChipGroup.BindingContext>
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
@@ -303,6 +309,9 @@ The `Filter` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
                   SelectionIndicatorColor="White"
                   ChipType="Filter"
                   DisplayMemberPath="Name">
+    <chip:SfChipGroup.BindingContext>
+        <local:ViewModel/>
+    </chip:SfChipGroup.BindingContext>
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
@@ -412,7 +421,11 @@ The `Action` [`ChipType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Co
                       ItemsSource="{Binding Employees}"
                       DisplayMemberPath="Name"
                       CloseButtonColor="Black"
-                      ChipType="Action" />
+                      ChipType="Action">
+        <chip:SfChipGroup.BindingContext>
+            <local:ViewModel/>
+        </chip:SfChipGroup.BindingContext>
+    </chip:SfChipGroup>
     <HorizontalStackLayout Margin="0,60,0,0" 
                            Spacing="10">
         <Label Text="Name:"
