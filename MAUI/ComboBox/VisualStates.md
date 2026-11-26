@@ -5,7 +5,7 @@ description: Learn about visual states support in the Syncfusion® .NET MAUI Com
 platform: maui
 control: SfComboBox
 documentation: ug
-keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu, .net maui combobox searching.
+keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui combobox VSM, Visual states.
 ---
 
 # Visual States in .NET MAUI ComboBox
