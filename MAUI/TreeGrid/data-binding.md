@@ -16,6 +16,7 @@ Below are the ways to bind the data source to SfTreeGrid:
 
 - Binding self-relational data
 - Binding nested collection
+- Binding dynamic data object
 
 ## Binding self-relational data
 
@@ -314,6 +315,101 @@ treeGrid.ItemsSource = employeeViewModel.EmployeeCollection;
 treeGrid.ChildPropertyName = "Children";
 {% endhighlight %}
 {% endtabs %}
+
+## Binding with dynamic data object
+
+The `SfTreeGrid` supports binding to [dynamic data objects](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject) such as [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject). The hierarchy is formed by the `ChildPropertyName` property, which refers to a member of the dynamic object that holds its child collection. The properties of the dynamic object are read and written through the public `TreeGridDynamicPropertiesProvider`, which the TreeGrid uses automatically when the data source is dynamic.
+
+### Example: ViewModel with dynamic objects
+
+{% tabs %}
+{% highlight c# %}
+using System.Collections.ObjectModel;
+using System.Dynamic;
+
+public class EmployeeViewModel
+{
+    public ObservableCollection<ExpandoObject> Employees { get; set; }
+
+    public EmployeeViewModel()
+    {
+        Employees = new ObservableCollection<ExpandoObject>();
+
+        dynamic manager = new ExpandoObject();
+        manager.EmployeeID = 1;
+        manager.EmployeeName = "James Smith";
+        manager.Salary = 2000000d;
+        manager.Children = new ObservableCollection<ExpandoObject>();
+
+        dynamic employee = new ExpandoObject();
+        employee.EmployeeID = 2;
+        employee.EmployeeName = "Michael Fuller";
+        employee.Salary = 1200000d;
+        employee.Children = new ObservableCollection<ExpandoObject>();
+
+        manager.Children.Add(employee);
+        Employees.Add(manager);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Auto-generated columns
+
+When `AutoGenerateColumnsMode` is not `None`, the TreeGrid creates a column for each member of the first dynamic item, based on the member's value type: `TreeGridCheckBoxColumn` for `bool`, `TreeGridDateColumn` for `DateTime`, `TreeGridNumericColumn` for numeric types, and `TreeGridTextColumn` for others. Members that hold a collection, such as the `Children` member, are not generated as columns.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding Employees}"
+                       ChildPropertyName="Children" />
+{% endhighlight %}
+
+{% highlight c# %}
+SfTreeGrid treeGrid = new SfTreeGrid();
+treeGrid.ItemsSource = viewModel.Employees;
+treeGrid.ChildPropertyName = "Children";
+{% endhighlight %}
+{% endtabs %}
+
+### Manually defined columns
+
+For manually defined columns, set the `MappingName` to the member name enclosed in square brackets, such as `[EmployeeName]`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding Employees}"
+                       ChildPropertyName="Children"
+                       ExpanderColumn="[EmployeeName]"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfTreeGrid.Columns>
+        <syncfusion:TreeGridNumericColumn MappingName="[EmployeeID]" HeaderText="Employee ID" />
+        <syncfusion:TreeGridTextColumn MappingName="[EmployeeName]" HeaderText="Employee Name" />
+        <syncfusion:TreeGridNumericColumn MappingName="[Salary]" HeaderText="Salary" />
+    </syncfusion:SfTreeGrid.Columns>
+</syncfusion:SfTreeGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+treeGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+treeGrid.ExpanderColumn = "[EmployeeName]";
+treeGrid.Columns.Add(new TreeGridNumericColumn() { MappingName = "[EmployeeID]", HeaderText = "Employee ID" });
+treeGrid.Columns.Add(new TreeGridTextColumn() { MappingName = "[EmployeeName]", HeaderText = "Employee Name" });
+treeGrid.Columns.Add(new TreeGridNumericColumn() { MappingName = "[Salary]", HeaderText = "Salary" });
+{% endhighlight %}
+{% endtabs %}
+
+N> The square brackets are removed by the TreeGrid when it reads or writes the value of the dynamic object, including for sorting.
+
+Verification Required – the combination of dynamic data with filtering, searching, editing and self-relational binding (`ParentPropertyName`) is not confirmed in the source.
+
+### Public API summary
+
+| API | Description |
+|---|---|
+| `TreeGridDynamicPropertiesProvider` | Reads and writes the values of dynamic objects. It derives from `TreeGridPropertiesProvider` and exposes `GetValue` and `SetValue` overloads. |
+| `TreeGridView.GetPropertyAccessProvider()` | Returns the provider used by the view, which is `TreeGridDynamicPropertiesProvider` for dynamic data. |
 
 ## Binding with IEnumerable
 
