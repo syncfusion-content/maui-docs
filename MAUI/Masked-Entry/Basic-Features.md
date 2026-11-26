@@ -604,7 +604,7 @@ public class CommandDemoViewModel
         var page = Application.Current?.Windows[0]?.Page;
         if (page is not null)
         {
-            await page.DisplayAlert("Alert", parameter, "OK");
+            await page.DisplayAlertAsync("Alert", parameter, "OK");
         }
     }
 }

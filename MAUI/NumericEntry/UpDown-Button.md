@@ -264,6 +264,38 @@ SfNumericEntry sfNumericEntry = new SfNumericEntry
 
 ![UpDown Order is DownThenUp in .NET MAUI Numeric Entry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
 
+## UpDown button size
+
+Customize the `Numeric UpDown` control button size by using the `UpDownButtonSize` property.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry HeightRequest="50"
+                         WidthRequest="200"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Value="123"
+                         UpDownButtonSize="35"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry SfNumericEntry = new SfNumericEntry()
+{
+    HeightRequest= 50,
+    WidthRequest = 200,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    Value = 123,
+    UpDownButtonSize = 35,
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDownButtonSize support in .NET MAUI Numeric UpDown](UpDownButton_images/UpDownButtonSize.png)
+
 
 ## UpDown button color
 
