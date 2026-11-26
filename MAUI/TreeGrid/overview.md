@@ -91,7 +91,7 @@ The following table summarizes the globalization support available in this contr
 
 ## See Also
 
-- [Getting Started]() shows a step-by-step guide to begin using the TreeGrid.
+- [Getting Started](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TreeGrid) shows a step-by-step guide to begin using the TreeGrid.
 - [UI Kit](https://www.syncfusion.com/demos/maui#maui-ui-control) provides interactive demos and ready-made UI examples.
 
 ## Resources
