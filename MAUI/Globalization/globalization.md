@@ -155,7 +155,16 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
-</tr> 
+</tr>
+
+<tr>
+<td><a href="/maui/bottom-sheet/overview" aria-label="Learn about Bottom Sheet control">Bottom Sheet</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr>
 
 <tr>
   <td><a href="/maui/barcode-generator/overview" aria-label="Learn about Barcode Generator control">Barcode Generator</a></td>
