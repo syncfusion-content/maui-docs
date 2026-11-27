@@ -167,6 +167,15 @@ Below is a summary of globalization capabilities supported by Syncfusion<sup>®<
 </tr>
 
 <tr>
+<td><a href="/maui/bottom-sheet/overview" aria-label="Learn about Bottom Sheet control">Bottom Sheet</a></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+<td><img src="../Images/full-support.svg" alt="full-support" width="16" /></td>
+</tr>
+
+<tr>
 <td><a href="/maui/busy-indicator/overview" aria-label="Learn about Busy Indicator control">Busy Indicator</a></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
 <td><img src="../Images/not-applicable.svg" alt="not-applicable" width="16" /></td>
