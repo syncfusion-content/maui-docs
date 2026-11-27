@@ -111,64 +111,64 @@ line-height: 1;
 <div><p class="category-topics">AIAssistView</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/AIAssistView/Context-Aware-Suggestions" aria-label="AIAssAIAssistView Context Aware Suggestions">
+<a target="_self" href="/maui/AIAssistView/Context-Aware-Suggestions" aria-label="AIAssAIAssistView Contextual Suggestions">
 <span ></span>Context Aware Suggestions</a>
 </div>
 
 <div><p class="category-topics">AutoComplete</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching" aria-label="AutoComplete Smart Searching">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Searching" aria-label="AutoComplete Advanced Search">
 <span class="sf-home-icon sf-icon-smart-search"></span>Smart Searching</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Filtering" aria-label="AutoComplete Smart Filtering">
+<a target="_self" href="/maui/Autocomplete/AI-Powered-Smart-Filtering" aria-label="AutoComplete Contextual Filtering">
 <span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
 </div>
 
 <div><p class="category-topics">Chips</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Chips/AI-Powered-Smart-Tags" aria-label="Chips AI-Powered Smart Tag Generation"><span class="sf-home-icon sf-icon-smart-chips"></span>AI-Powered Smart Tag Generation</a>
+<a target="_self" href="/maui/Chips/AI-Powered-Smart-Tags" aria-label="Chips Automatic Tag Generation"><span class="sf-home-icon sf-icon-smart-chips"></span>Automatic Tag Generation</a>
 </div>
 
 <div><p class="category-topics">ComboBox</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Searching" aria-label="ComboBox Smart Searching"><span class="sf-home-icon sf-icon-smart-combobox"></span>Smart Searching</a>
+<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Searching" aria-label="ComboBox Advanced Search"><span class="sf-home-icon sf-icon-smart-combobox"></span>Advanced Search</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Filtering" aria-label="ComboBox Smart Filtering"><span class="sf-home-icon sf-icon-context-filtering"></span>Smart Filtering</a>
+<a target="_self" href="/maui/ComboBox/AI-Powered-Smart-Filtering" aria-label="ComboBox Contextual Filtering"><span class="sf-home-icon sf-icon-context-filtering"></span>Contextual Filtering</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/ComboBox/AI-Powered-Selection" aria-label="ComboBox AI-Powered Smart Selection"><span class="sf-home-icon sf-icon-smart-combobox"></span>AI-Powered Smart Selection</a>
+<a target="_self" href="/maui/ComboBox/AI-Powered-Selection" aria-label="ComboBox Intelligent Selection"><span class="sf-home-icon sf-icon-smart-combobox"></span>Intelligent Selection</a>
 </div>
 
 <div><p class="category-topics">Cartesian Charts</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/cartesian-charts/AI-Powered-Data-Processing" aria-label="Cartesian Charts Data Cleaning and Preprocessing"><span class="sf-home-icon sf-icon-data-processing"></span>Data Cleaning and Preprocessing</a>
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Data-Processing" aria-label="Cartesian Charts Automated Data Preparation"><span class="sf-home-icon sf-icon-data-processing"></span>Automated Data Preparation</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" aria-label="Cartesian Charts Stock Forecasting"><span class="sf-home-icon sf-icon-stock-forecasting"></span>Stock Forecasting</a>
+<a target="_self" href="/maui/cartesian-charts/AI-Powered-Stock-forecasting-in-Candle-Chart" aria-label="Cartesian Charts Trend Forecasting"><span class="sf-home-icon sf-icon-stock-forecasting"></span>Trend Forecasting</a>
 </div>
 
 <div><p class="category-topics">DataForm</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/dataform/AI-Powered-Smart-Paste-DataForm" aria-label="DataForm Smart Paste"><span class="sf-home-icon sf-icon-smart-paste"></span>Smart Paste</a>
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-Paste-DataForm" aria-label="DataForm Data Import Assistant"><span class="sf-home-icon sf-icon-smart-paste"></span>Data Import Assistant</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm" aria-label="DataForm Smart Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Smart Data Entry</a>
+<a target="_self" href="/maui/dataform/AI-Powered-Smart-DataForm" aria-label="DataForm Assisted Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Assisted Data Entry</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/dataform/AI-Form-Generator" aria-label="DataForm AI Form Generator"><span ></span>AI Form Generator</a>
+<a target="_self" href="/maui/dataform/AI-Form-Generator" aria-label="DataForm Dynamic Form Generation"><span ></span>Dynamic Form Generation</a>
 </div>
 
 </td>
@@ -179,51 +179,51 @@ line-height: 1;
 <div><p class="category-topics">DataGrid</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/DataGrid/AI-driven-anomaly-detection" aria-label="DataGrid Anomaly Detection"><span class="sf-home-icon sf-icon-anomaly-detection"></span>Anomaly Detection</a>
+<a target="_self" href="/maui/DataGrid/AI-driven-anomaly-detection" aria-label="DataGrid Data Anomaly Detection"><span class="sf-home-icon sf-icon-anomaly-detection"></span>Data Anomaly Detection</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/DataGrid/AI-driven-predictive-data-entry" aria-label="DataGrid Predictive Data Entry"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Predictive Data Entry</a>
+<a target="_self" href="/maui/DataGrid/AI-driven-predictive-data-entry" aria-label="DataGrid Predictive Entry Suggestions"><span class="sf-home-icon sf-icon-smart-data-entry"></span>Predictive Entry Suggestions</a>
 </div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/DataGrid/AI-driven-duplicate-detection" aria-label="DataGrid AI-Driven Duplicate Detection"><span class="sf-home-icon sf-icon-duplicate-detection"></span>AI-Driven Duplicate Detection</a>
+<a target="_self" href="/maui/DataGrid/AI-driven-duplicate-detection" aria-label="DataGrid Duplicate Record Detection"><span class="sf-home-icon sf-icon-duplicate-detection"></span>Duplicate Record Detection</a>
 </div>
 
 <div><p class="category-topics">Kanban</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Kanban-Board/AI-Driven-Task-Prioritization-Engine" aria-label="Kanban Task Prioritization Engine"><span></span>Task Prioritization Engine</a>
+<a target="_self" href="/maui/Kanban-Board/AI-Driven-Task-Prioritization-Engine" aria-label="Kanban Task Prioritization"><span></span>Task Prioritization</a>
 </div>
 
 <div><p class="category-topics">ListView</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/ListView/AI-Driven-Intent-Grouping" aria-label="ListView Smart Intent Grouping"><span ></span>Smart Intent Grouping</a>
+<a target="_self" href="/maui/ListView/AI-Driven-Intent-Grouping" aria-label="ListView Intent-Based Grouping"><span ></span>Intent-Based Grouping</a>
 </div>
 
 <div><p class="category-topics">Maps</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Smart Location Search"><span class="sf-home-icon sf-icon-smart-location"></span>Smart Location Search</a>
+<a target="_self" href="/maui/Maps/AI-driven-smart-location-search" aria-label="Maps Location Discovery"><span class="sf-home-icon sf-icon-smart-location"></span>Location Discovery</a>
 </div>
 
 <div><p class="category-topics">Rating</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/Rating/AI-Powered-Rating-Feedback" aria-label="AI-Powered Rating Feedback"><span class="sf-home-icon sf-icon-smart-rating"></span>AI-Powered Rating Feedback</a>
+<a target="_self" href="/maui/Rating/AI-Powered-Rating-Feedback" aria-label="Feedback Analysis"><span class="sf-home-icon sf-icon-smart-rating"></span>Feedback Analysis</a>
 </div>
 
 <div><p class="category-topics">TreeView</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/TreeView/AI-powered-natural-language-file-search" aria-label="AI-Powered Natural Language File Search in .NET MAUI TreeView"><span class="sf-home-icon sf-icon-smart-search"></span>AI-Powered Natural Language File Search</a>
+<a target="_self" href="/maui/TreeView/AI-powered-natural-language-file-search" aria-label="Natural Language Search in .NET MAUI TreeView"><span class="sf-home-icon sf-icon-smart-search"></span>Natural Language Search</a>
 </div>
 
 <div><p class="category-topics">Rich Text Editor</p></div>
 
 <div class="controlanchorlink">
-<a target="_self" href="/maui/RichTextEditor/AI-Powered-Smart-Formatting" aria-label="Rich Text Editor Smart Formatting"><span class="sf-home-icon sf-icon-text-formatting"></span>Smart Formatting</a>
+<a target="_self" href="/maui/RichTextEditor/AI-Powered-Smart-Formatting" aria-label="Rich Text Editor Automatic Formatting"><span class="sf-home-icon sf-icon-text-formatting"></span>Automatic Formatting</a>
 </div>
 
 </td>
